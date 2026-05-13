@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unified GPU Table</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Unified GPU Table</p>
+          <h1>GPU 参数工作台</h1>
+        </div>
+        <div class="actions">
+          <button class="icon-button" id="importDataButton" type="button" title="导入 GPU 数据">导入</button>
+          <button class="icon-button" id="exportDataButton" type="button" title="导出当前数据">导出</button>
+          <button class="primary-button" id="refreshPriceButton" type="button">更新价格</button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="control-band">
+          <div class="search-block">
+            <label for="globalSearch">搜索</label>
+            <input id="globalSearch" type="search" placeholder="型号、架构、显存、接口、备注..." />
+          </div>
+          <div class="control">
+            <label for="segmentFilter">场景</label>
+            <select id="segmentFilter"></select>
+          </div>
+          <div class="control">
+            <label for="vendorFilter">厂商</label>
+            <select id="vendorFilter"></select>
+          </div>
+          <div class="control">
+            <label for="sortField">排序字段</label>
+            <select id="sortField"></select>
+          </div>
+          <button class="ghost-button" id="sortDirectionButton" type="button">降序</button>
+          <button class="ghost-button" id="resetFiltersButton" type="button">重置</button>
+        </section>
+
+        <section class="insight-grid" aria-label="统计概览">
+          <div class="metric">
+            <span>筛选结果</span>
+            <strong id="visibleCount">0</strong>
+          </div>
+          <div class="metric">
+            <span>最高显存</span>
+            <strong id="maxMemory">-</strong>
+          </div>
+          <div class="metric">
+            <span>最低 $/GB</span>
+            <strong id="bestPricePerGb">-</strong>
+          </div>
+          <div class="metric">
+            <span>价格更新时间</span>
+            <strong id="latestPriceDate">-</strong>
+          </div>
+        </section>
+
+        <section class="filters-panel">
+          <div class="panel-head">
+            <h2>字段筛选</h2>
+            <button class="text-button" id="addRuleButton" type="button">添加条件</button>
+          </div>
+          <div id="filterRules" class="rules"></div>
+        </section>
+
+        <section class="table-panel">
+          <div class="panel-head">
+            <h2>参数表</h2>
+            <div class="table-tools">
+              <button class="text-button" id="toggleColumnsButton" type="button">列设置</button>
+              <button class="text-button" id="compactToggleButton" type="button">紧凑模式</button>
+            </div>
+          </div>
+          <div class="column-picker" id="columnPicker" hidden></div>
+          <div class="table-wrap">
+            <table id="gpuTable">
+              <thead id="tableHead"></thead>
+              <tbody id="tableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <dialog id="priceDialog">
+      <form method="dialog" class="dialog-card">
+        <div class="panel-head">
+          <h2>更新价格</h2>
+          <button class="text-button" value="cancel" type="submit">关闭</button>
+        </div>
+        <p class="muted">
+          支持粘贴 JSON 数组，字段可用 id 或 model 匹配：priceUSD、currency、merchant、source、url、available。
+        </p>
+        <textarea id="pricePayload" spellcheck="false"></textarea>
+        <div class="dialog-actions">
+          <button class="ghost-button" id="loadLocalPriceButton" type="button">读取 data/prices.json</button>
+          <button class="primary-button" id="applyPriceButton" type="button">应用更新</button>
+        </div>
+        <pre id="priceResult" class="result-log"></pre>
+      </form>
+    </dialog>
+
+    <dialog id="importDialog">
+      <form method="dialog" class="dialog-card">
+        <div class="panel-head">
+          <h2>导入数据</h2>
+          <button class="text-button" value="cancel" type="submit">关闭</button>
+        </div>
+        <p class="muted">粘贴 GPU JSON 数组。字段会按统一模型合并；相同 id 会覆盖。</p>
+        <textarea id="importPayload" spellcheck="false"></textarea>
+        <div class="dialog-actions">
+          <button class="primary-button" id="applyImportButton" type="button">导入</button>
+        </div>
+        <pre id="importResult" class="result-log"></pre>
+      </form>
+    </dialog>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>

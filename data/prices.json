@@ -1,0 +1,30 @@
+[
+  {
+    "id": "nvidia-rtx-5090",
+    "priceUSD": 2399,
+    "merchant": "manual quote",
+    "source": "local data/prices.json",
+    "available": true
+  },
+  {
+    "id": "nvidia-rtx-4090",
+    "priceUSD": 1799,
+    "merchant": "manual quote",
+    "source": "local data/prices.json",
+    "available": true
+  },
+  {
+    "id": "amd-rx-7900-xtx",
+    "priceUSD": 879,
+    "merchant": "manual quote",
+    "source": "local data/prices.json",
+    "available": true
+  },
+  {
+    "id": "nvidia-rtx-3090",
+    "priceUSD": 760,
+    "merchant": "used market sample",
+    "source": "local data/prices.json",
+    "available": true
+  }
+]
