@@ -1,30 +1,135 @@
 [
   {
     "id": "nvidia-rtx-5090",
-    "priceUSD": 2399,
+    "priceUSD": 2450,
     "merchant": "manual quote",
-    "source": "local data/prices.json",
+    "source": "local",
+    "available": true
+  },
+  {
+    "id": "nvidia-rtx-5080",
+    "priceUSD": 1150,
+    "merchant": "manual quote",
+    "source": "local",
     "available": true
   },
   {
     "id": "nvidia-rtx-4090",
-    "priceUSD": 1799,
+    "priceUSD": 1850,
     "merchant": "manual quote",
-    "source": "local data/prices.json",
+    "source": "local",
     "available": true
   },
   {
-    "id": "amd-rx-7900-xtx",
-    "priceUSD": 879,
+    "id": "nvidia-rtx-4080-super",
+    "priceUSD": 1090,
     "merchant": "manual quote",
-    "source": "local data/prices.json",
+    "source": "local",
+    "available": true
+  },
+  {
+    "id": "nvidia-rtx-4070-ti-super",
+    "priceUSD": 850,
+    "merchant": "manual quote",
+    "source": "local",
+    "available": true
+  },
+  {
+    "id": "nvidia-rtx-4070-super",
+    "priceUSD": 620,
+    "merchant": "manual quote",
+    "source": "local",
+    "available": true
+  },
+  {
+    "id": "nvidia-rtx-4060-ti-16gb",
+    "priceUSD": 480,
+    "merchant": "manual quote",
+    "source": "local",
+    "available": true
+  },
+  {
+    "id": "nvidia-rtx-3090-ti",
+    "priceUSD": 950,
+    "merchant": "used",
+    "source": "local",
     "available": true
   },
   {
     "id": "nvidia-rtx-3090",
-    "priceUSD": 760,
-    "merchant": "used market sample",
-    "source": "local data/prices.json",
+    "priceUSD": 780,
+    "merchant": "used market",
+    "source": "local",
+    "available": true
+  },
+  {
+    "id": "nvidia-rtx-3060-12gb",
+    "priceUSD": 280,
+    "merchant": "manual quote",
+    "source": "local",
+    "available": true
+  },
+  {
+    "id": "amd-rx-7900-xtx",
+    "priceUSD": 900,
+    "merchant": "manual quote",
+    "source": "local",
+    "available": true
+  },
+  {
+    "id": "amd-rx-7900-xt",
+    "priceUSD": 720,
+    "merchant": "manual quote",
+    "source": "local",
+    "available": true
+  },
+  {
+    "id": "amd-rx-7800-xt",
+    "priceUSD": 510,
+    "merchant": "manual quote",
+    "source": "local",
+    "available": true
+  },
+  {
+    "id": "intel-arc-a770-16gb",
+    "priceUSD": 300,
+    "merchant": "manual quote",
+    "source": "local",
+    "available": true
+  },
+  {
+    "id": "nvidia-h100-sxm-80gb",
+    "priceUSD": 28500,
+    "merchant": "manual",
+    "source": "local",
+    "available": true
+  },
+  {
+    "id": "nvidia-a100-sxm4-80gb",
+    "priceUSD": 14500,
+    "merchant": "manual",
+    "source": "local",
+    "available": true
+  },
+  {
+    "id": "nvidia-l40s",
+    "priceUSD": 11500,
+    "merchant": "manual",
+    "source": "local",
+    "available": true
+  },
+  {
+    "id": "amd-instinct-mi300x",
+    "priceUSD": 17500,
+    "merchant": "manual",
+    "source": "local",
+    "available": true
+  },
+  {
+    "id": "nvidia-rtx-6000-ada",
+    "priceUSD": 6400,
+    "merchant": "manual",
+    "source": "local",
     "available": true
   }
 ]
