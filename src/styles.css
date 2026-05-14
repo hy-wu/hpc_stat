@@ -261,8 +261,7 @@ textarea:focus {
 
 .column-picker {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 8px;
+  gap: 12px;
   padding: 12px;
   margin-bottom: 12px;
   background: #f9fbfb;
@@ -270,17 +269,87 @@ textarea:focus {
   border-radius: 8px;
 }
 
-.column-picker label {
+.column-picker-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.column-picker-title,
+.column-picker-meta {
+  margin: 0;
+}
+
+.column-picker-title {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.column-picker-meta {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.column-picker-tools {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--ink);
-  font-weight: 650;
+  flex-wrap: wrap;
 }
 
-.column-picker input {
+.column-picker-tools button[disabled] {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.column-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 8px;
+}
+
+.column-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 650;
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.column-option:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.column-option:has(input:focus-visible),
+.column-option:has(input:checked) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px rgba(8, 127, 140, 0.14);
+}
+
+.column-option input {
   width: 16px;
   min-height: 16px;
+  accent-color: var(--accent);
+}
+
+.column-option span {
+  min-width: 0;
 }
 
 .table-wrap {
@@ -449,5 +518,10 @@ textarea {
   .actions button,
   .dialog-actions button {
     flex: 1;
+  }
+
+  .column-picker-tools,
+  .column-picker-tools button {
+    width: 100%;
   }
 }

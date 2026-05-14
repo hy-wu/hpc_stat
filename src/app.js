@@ -758,6 +758,8 @@ const state = {
   compact: false,
 };
 
+const defaultVisibleColumns = new Set(fieldDefs.filter((field) => field.visible).map((field) => field.key));
+
 const elements = {
   globalSearch: document.querySelector("#globalSearch"),
   segmentFilter: document.querySelector("#segmentFilter"),
@@ -796,6 +798,7 @@ init();
 function init() {
   renderSelectOptions();
   renderColumnPicker();
+  syncColumnPickerState();
   bindEvents();
   render();
 }
@@ -894,6 +897,32 @@ function bindEvents() {
 
   elements.toggleColumnsButton.addEventListener("click", () => {
     elements.columnPicker.hidden = !elements.columnPicker.hidden;
+    syncColumnPickerState();
+  });
+
+  elements.columnPicker.addEventListener("click", (event) => {
+    const action = event.target.closest("[data-column-action]")?.dataset.columnAction;
+    if (!action) return;
+    if (action === "select-all") {
+      state.visibleColumns = new Set(fieldDefs.map((field) => field.key));
+    }
+    if (action === "reset-default") {
+      state.visibleColumns = new Set(defaultVisibleColumns);
+    }
+    renderColumnPicker();
+    render();
+  });
+
+  elements.columnPicker.addEventListener("change", (event) => {
+    const input = event.target.closest("input[type='checkbox'][value]");
+    if (!input) return;
+    if (input.checked) {
+      state.visibleColumns.add(input.value);
+    } else {
+      state.visibleColumns.delete(input.value);
+    }
+    renderColumnPicker();
+    render();
   });
 
   elements.compactToggleButton.addEventListener("click", () => {
@@ -1101,27 +1130,41 @@ function renderRules() {
 }
 
 function renderColumnPicker() {
-  elements.columnPicker.innerHTML = fieldDefs
-    .map(
-      (field) => `
-        <label>
-          <input type="checkbox" value="${field.key}" ${state.visibleColumns.has(field.key) ? "checked" : ""} />
-          ${field.label}
-        </label>
-      `,
-    )
-    .join("");
+  const selectedCount = state.visibleColumns.size;
+  const allSelected = selectedCount === fieldDefs.length;
+  elements.columnPicker.innerHTML = `
+    <div class="column-picker-head">
+      <div>
+        <p class="column-picker-title">显示列</p>
+        <p class="column-picker-meta">已选 ${selectedCount} / ${fieldDefs.length}</p>
+      </div>
+      <div class="column-picker-tools">
+        <button class="ghost-button" type="button" data-column-action="select-all" ${allSelected ? "disabled" : ""}>
+          全选
+        </button>
+        <button class="text-button" type="button" data-column-action="reset-default">恢复默认</button>
+      </div>
+    </div>
+    <div class="column-picker-grid">
+      ${fieldDefs
+        .map(
+          (field) => `
+            <label class="column-option">
+              <input type="checkbox" value="${field.key}" ${state.visibleColumns.has(field.key) ? "checked" : ""} />
+              <span>${field.label}</span>
+            </label>
+          `,
+        )
+        .join("")}
+    </div>
+  `;
+  syncColumnPickerState();
+}
 
-  elements.columnPicker.querySelectorAll("input").forEach((input) => {
-    input.addEventListener("change", () => {
-      if (input.checked) {
-        state.visibleColumns.add(input.value);
-      } else {
-        state.visibleColumns.delete(input.value);
-      }
-      render();
-    });
-  });
+function syncColumnPickerState() {
+  const expanded = !elements.columnPicker.hidden;
+  elements.toggleColumnsButton.setAttribute("aria-expanded", String(expanded));
+  elements.toggleColumnsButton.textContent = `列设置 (${state.visibleColumns.size}/${fieldDefs.length})`;
 }
 
 function operatorOptions(selected) {
@@ -1146,7 +1189,9 @@ function formatCell(gpu, field) {
   if (field.key === "pricePerGb") return value ? `$${formatNumber(value)}` : "-";
   if (field.key === "priceUpdated") return formatPriceDate(value);
   if (field.type === "url" && value) {
-    return `<a class="source-link" href="${escapeAttr(value)}" target="_blank" rel="noreferrer">打开</a>`;
+    const safeUrl = sanitizeUrl(value);
+    if (!safeUrl) return "-";
+    return `<a class="source-link" href="${escapeAttr(safeUrl)}" target="_blank" rel="noreferrer">打开</a>`;
   }
   if (field.type === "number") return value === null || value === undefined ? "-" : formatNumber(value);
   return escapeHtml(value ?? "-");
@@ -1298,6 +1343,15 @@ function slugify(value) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
+}
+
+function sanitizeUrl(value) {
+  try {
+    const url = new URL(String(value));
+    return url.protocol === "http:" || url.protocol === "https:" ? url.toString() : null;
+  } catch {
+    return null;
+  }
 }
 
 function escapeHtml(value) {
