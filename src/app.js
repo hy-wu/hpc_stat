@@ -30,90 +30,46 @@ const fieldDefs = [
   { key: "notes", label: "备注", type: "text", visible: false },
 ];
 
-const derivedEfficiencyFields = [
+const specDetailFields = [
+  { key: "gpuDie", label: "GPU 芯片", type: "text", visible: true },
+  { key: "baseClockMHz", label: "基础频率 MHz", type: "number", visible: true },
+  { key: "boostClockMHz", label: "Boost MHz", type: "number", visible: true },
+  { key: "memoryClockGbps", label: "显存速率 Gbps", type: "number", visible: true },
+  { key: "fp64TFLOPS", label: "FP64 TFLOPS", type: "number", visible: true },
+  { key: "fp64Ratio", label: "FP64 比例", type: "text", visible: true },
+  { key: "tf32TFLOPS", label: "TF32 TFLOPS", type: "number", visible: true },
+  { key: "int4TOPS", label: "INT4 TOPS", type: "number", visible: true },
+  { key: "l1CacheKB", label: "L1/共享 KB", type: "number", visible: true },
+  { key: "l2CacheMB", label: "L2 MB", type: "number", visible: true },
+  { key: "l3CacheMB", label: "L3/Infinity MB", type: "number", visible: true },
+  { key: "rops", label: "ROPs", type: "number", visible: true },
+  { key: "tmus", label: "TMUs", type: "number", visible: true },
+  { key: "pixelRateGPixelS", label: "像素填充 GPixel/s", type: "number", visible: true },
+  { key: "textureRateGTexelS", label: "纹理填充 GTexel/s", type: "number", visible: true },
+  { key: "dieSizeMm2", label: "Die mm²", type: "number", visible: true },
+  { key: "transistorsBillion", label: "晶体管 B", type: "number", visible: true },
   {
-    key: "theoreticalFp32PerW",
-    label: "理论 FP32/W",
+    key: "fp32OpsPerClock",
+    label: "FP32/周期",
     type: "number",
     visible: true,
-    derived: true,
-    description: "峰值 FP32 TFLOPS / 标称功耗 W，非实测能效",
+    description: "架构级每周期 FP32 吞吐口径，跨厂商比较时需要看定义",
   },
   {
-    key: "theoreticalFp16PerW",
-    label: "理论 FP16/W",
-    type: "number",
+    key: "ipcNotes",
+    label: "IPC/周期口径",
+    type: "text",
     visible: true,
-    derived: true,
-    description: "峰值 FP16 TFLOPS / 标称功耗 W，非实测能效",
+    description: "记录 IPC、每 SM/CU/Xe 每周期吞吐或微架构测试口径",
   },
-  {
-    key: "theoreticalBf16PerW",
-    label: "理论 BF16/W",
-    type: "number",
-    visible: true,
-    derived: true,
-    description: "峰值 BF16 TFLOPS / 标称功耗 W，非实测能效",
-  },
-  {
-    key: "theoreticalFp8PerW",
-    label: "理论 FP8/W",
-    type: "number",
-    visible: true,
-    derived: true,
-    description: "峰值 FP8 TFLOPS / 标称功耗 W，非实测能效",
-  },
-  {
-    key: "theoreticalInt8PerW",
-    label: "理论 INT8/W",
-    type: "number",
-    visible: true,
-    derived: true,
-    description: "峰值 INT8 TOPS / 标称功耗 W，非实测能效",
-  },
-  {
-    key: "theoreticalBandwidthPerW",
-    label: "理论带宽/W",
-    type: "number",
-    visible: true,
-    derived: true,
-    description: "峰值显存带宽 GB/s / 标称功耗 W，非实测能效",
-  },
-];
-
-const acceptedEfficiencyFields = [
-  {
-    key: "officialEfficiencyValue",
-    label: "官方能效值",
-    type: "number",
-    visible: true,
-    description: "厂商或权威测试发布的能效数值，需结合单位、来源和口径解读",
-  },
-  { key: "officialEfficiencyUnit", label: "官方能效单位", type: "text", visible: true },
-  { key: "officialEfficiencyMetric", label: "官方能效口径", type: "text", visible: true },
-  {
-    key: "mlperfInferencePerW",
-    label: "MLPerf 推理/W",
-    type: "number",
-    visible: true,
-    description: "MLPerf Inference 或同口径系统级推理能效，通常依赖具体模型和系统配置",
-  },
-  {
-    key: "mlperfTrainingPerW",
-    label: "MLPerf 训练/W",
-    type: "number",
-    visible: true,
-    description: "MLPerf Training 或同口径系统级训练能效，通常依赖具体模型和系统配置",
-  },
-  { key: "efficiencySource", label: "能效来源", type: "url", visible: true },
-  { key: "efficiencyNotes", label: "能效口径", type: "text", visible: true },
+  { key: "computeCapability", label: "计算能力/API", type: "text", visible: true },
+  { key: "sparsitySupport", label: "稀疏加速", type: "text", visible: true },
 ];
 
 fieldDefs.splice(
   fieldDefs.findIndex((field) => field.key === "priceUSD"),
   0,
-  ...derivedEfficiencyFields,
-  ...acceptedEfficiencyFields,
+  ...specDetailFields,
 );
 fieldDefs.forEach((field) => {
   field.visible = field.key !== "notes";
@@ -1073,12 +1029,6 @@ function enrichGpuRow(gpu) {
   return {
     ...gpu,
     pricePerGb: computePricePerGb(gpu),
-    theoreticalFp32PerW: computeTheoreticalPerW(gpu.fp32TFLOPS, gpu.powerW),
-    theoreticalFp16PerW: computeTheoreticalPerW(gpu.fp16TFLOPS, gpu.powerW),
-    theoreticalBf16PerW: computeTheoreticalPerW(gpu.bf16TFLOPS, gpu.powerW),
-    theoreticalFp8PerW: computeTheoreticalPerW(gpu.fp8TFLOPS, gpu.powerW),
-    theoreticalInt8PerW: computeTheoreticalPerW(gpu.int8TOPS, gpu.powerW),
-    theoreticalBandwidthPerW: computeTheoreticalPerW(gpu.bandwidthGBs, gpu.powerW),
   };
 }
 
@@ -1317,11 +1267,6 @@ function sortMark(field) {
 function computePricePerGb(gpu) {
   if (!gpu.priceUSD || !gpu.vramGB) return null;
   return Number((gpu.priceUSD / gpu.vramGB).toFixed(2));
-}
-
-function computeTheoreticalPerW(value, powerW) {
-  if (!isUsableNumber(value) || !isUsableNumber(powerW) || Number(powerW) <= 0) return null;
-  return Number((Number(value) / Number(powerW)).toFixed(3));
 }
 
 function samplePricePayload() {
