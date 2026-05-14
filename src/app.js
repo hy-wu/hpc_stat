@@ -30,6 +30,20 @@ const fieldDefs = [
   { key: "notes", label: "备注", type: "text", visible: false },
 ];
 
+const derivedEfficiencyFields = [
+  { key: "fp32PerW", label: "FP32 TFLOPS/W", type: "number", visible: true, derived: true },
+  { key: "fp16PerW", label: "FP16 TFLOPS/W", type: "number", visible: true, derived: true },
+  { key: "bf16PerW", label: "BF16 TFLOPS/W", type: "number", visible: true, derived: true },
+  { key: "fp8PerW", label: "FP8 TFLOPS/W", type: "number", visible: true, derived: true },
+  { key: "int8PerW", label: "INT8 TOPS/W", type: "number", visible: true, derived: true },
+  { key: "bandwidthPerW", label: "GB/s/W", type: "number", visible: true, derived: true },
+];
+
+fieldDefs.splice(fieldDefs.findIndex((field) => field.key === "priceUSD"), 0, ...derivedEfficiencyFields);
+fieldDefs.forEach((field) => {
+  field.visible = field.key !== "notes";
+});
+
 const seedGpus = [
   {
     id: "nvidia-b200-sxm",
@@ -967,7 +981,7 @@ function render() {
 
 function getFilteredRows() {
   const filtered = state.gpus
-    .map((gpu) => ({ ...gpu, pricePerGb: computePricePerGb(gpu) }))
+    .map(enrichGpuRow)
     .filter(matchesGlobalSearch)
     .filter((gpu) => state.vendor === "all" || gpu.vendor === state.vendor)
     .filter((gpu) => state.segment === "all" || gpu.segment === state.segment)
@@ -975,6 +989,19 @@ function getFilteredRows() {
 
   const field = fieldDefs.find((item) => item.key === state.sortField);
   return filtered.sort((a, b) => compareValues(a[state.sortField], b[state.sortField], field?.type));
+}
+
+function enrichGpuRow(gpu) {
+  return {
+    ...gpu,
+    pricePerGb: computePricePerGb(gpu),
+    fp32PerW: computePerW(gpu.fp32TFLOPS, gpu.powerW),
+    fp16PerW: computePerW(gpu.fp16TFLOPS, gpu.powerW),
+    bf16PerW: computePerW(gpu.bf16TFLOPS, gpu.powerW),
+    fp8PerW: computePerW(gpu.fp8TFLOPS, gpu.powerW),
+    int8PerW: computePerW(gpu.int8TOPS, gpu.powerW),
+    bandwidthPerW: computePerW(gpu.bandwidthGBs, gpu.powerW),
+  };
 }
 
 function compareValues(a, b, type) {
@@ -1212,6 +1239,11 @@ function sortMark(field) {
 function computePricePerGb(gpu) {
   if (!gpu.priceUSD || !gpu.vramGB) return null;
   return Number((gpu.priceUSD / gpu.vramGB).toFixed(2));
+}
+
+function computePerW(value, powerW) {
+  if (!isUsableNumber(value) || !isUsableNumber(powerW) || Number(powerW) <= 0) return null;
+  return Number((Number(value) / Number(powerW)).toFixed(3));
 }
 
 function samplePricePayload() {
