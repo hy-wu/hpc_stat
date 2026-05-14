@@ -31,15 +31,90 @@ const fieldDefs = [
 ];
 
 const derivedEfficiencyFields = [
-  { key: "fp32PerW", label: "FP32 TFLOPS/W", type: "number", visible: true, derived: true },
-  { key: "fp16PerW", label: "FP16 TFLOPS/W", type: "number", visible: true, derived: true },
-  { key: "bf16PerW", label: "BF16 TFLOPS/W", type: "number", visible: true, derived: true },
-  { key: "fp8PerW", label: "FP8 TFLOPS/W", type: "number", visible: true, derived: true },
-  { key: "int8PerW", label: "INT8 TOPS/W", type: "number", visible: true, derived: true },
-  { key: "bandwidthPerW", label: "GB/s/W", type: "number", visible: true, derived: true },
+  {
+    key: "theoreticalFp32PerW",
+    label: "理论 FP32/W",
+    type: "number",
+    visible: true,
+    derived: true,
+    description: "峰值 FP32 TFLOPS / 标称功耗 W，非实测能效",
+  },
+  {
+    key: "theoreticalFp16PerW",
+    label: "理论 FP16/W",
+    type: "number",
+    visible: true,
+    derived: true,
+    description: "峰值 FP16 TFLOPS / 标称功耗 W，非实测能效",
+  },
+  {
+    key: "theoreticalBf16PerW",
+    label: "理论 BF16/W",
+    type: "number",
+    visible: true,
+    derived: true,
+    description: "峰值 BF16 TFLOPS / 标称功耗 W，非实测能效",
+  },
+  {
+    key: "theoreticalFp8PerW",
+    label: "理论 FP8/W",
+    type: "number",
+    visible: true,
+    derived: true,
+    description: "峰值 FP8 TFLOPS / 标称功耗 W，非实测能效",
+  },
+  {
+    key: "theoreticalInt8PerW",
+    label: "理论 INT8/W",
+    type: "number",
+    visible: true,
+    derived: true,
+    description: "峰值 INT8 TOPS / 标称功耗 W，非实测能效",
+  },
+  {
+    key: "theoreticalBandwidthPerW",
+    label: "理论带宽/W",
+    type: "number",
+    visible: true,
+    derived: true,
+    description: "峰值显存带宽 GB/s / 标称功耗 W，非实测能效",
+  },
 ];
 
-fieldDefs.splice(fieldDefs.findIndex((field) => field.key === "priceUSD"), 0, ...derivedEfficiencyFields);
+const acceptedEfficiencyFields = [
+  {
+    key: "officialEfficiencyValue",
+    label: "官方能效值",
+    type: "number",
+    visible: true,
+    description: "厂商或权威测试发布的能效数值，需结合单位、来源和口径解读",
+  },
+  { key: "officialEfficiencyUnit", label: "官方能效单位", type: "text", visible: true },
+  { key: "officialEfficiencyMetric", label: "官方能效口径", type: "text", visible: true },
+  {
+    key: "mlperfInferencePerW",
+    label: "MLPerf 推理/W",
+    type: "number",
+    visible: true,
+    description: "MLPerf Inference 或同口径系统级推理能效，通常依赖具体模型和系统配置",
+  },
+  {
+    key: "mlperfTrainingPerW",
+    label: "MLPerf 训练/W",
+    type: "number",
+    visible: true,
+    description: "MLPerf Training 或同口径系统级训练能效，通常依赖具体模型和系统配置",
+  },
+  { key: "efficiencySource", label: "能效来源", type: "url", visible: true },
+  { key: "efficiencyNotes", label: "能效口径", type: "text", visible: true },
+];
+
+fieldDefs.splice(
+  fieldDefs.findIndex((field) => field.key === "priceUSD"),
+  0,
+  ...derivedEfficiencyFields,
+  ...acceptedEfficiencyFields,
+);
 fieldDefs.forEach((field) => {
   field.visible = field.key !== "notes";
 });
@@ -847,7 +922,10 @@ function renderSelectOptions() {
   fillSelect(elements.segmentFilter, ["all", ...uniqueValues("segment")], "全部场景");
   fillSelect(elements.vendorFilter, ["all", ...uniqueValues("vendor")], "全部厂商");
   elements.sortField.innerHTML = fieldDefs
-    .map((field) => `<option value="${field.key}">${field.label}</option>`)
+    .map(
+      (field) =>
+        `<option value="${field.key}" title="${escapeAttr(field.description || field.label)}">${field.label}</option>`,
+    )
     .join("");
   elements.sortField.value = state.sortField;
 }
@@ -995,12 +1073,12 @@ function enrichGpuRow(gpu) {
   return {
     ...gpu,
     pricePerGb: computePricePerGb(gpu),
-    fp32PerW: computePerW(gpu.fp32TFLOPS, gpu.powerW),
-    fp16PerW: computePerW(gpu.fp16TFLOPS, gpu.powerW),
-    bf16PerW: computePerW(gpu.bf16TFLOPS, gpu.powerW),
-    fp8PerW: computePerW(gpu.fp8TFLOPS, gpu.powerW),
-    int8PerW: computePerW(gpu.int8TOPS, gpu.powerW),
-    bandwidthPerW: computePerW(gpu.bandwidthGBs, gpu.powerW),
+    theoreticalFp32PerW: computeTheoreticalPerW(gpu.fp32TFLOPS, gpu.powerW),
+    theoreticalFp16PerW: computeTheoreticalPerW(gpu.fp16TFLOPS, gpu.powerW),
+    theoreticalBf16PerW: computeTheoreticalPerW(gpu.bf16TFLOPS, gpu.powerW),
+    theoreticalFp8PerW: computeTheoreticalPerW(gpu.fp8TFLOPS, gpu.powerW),
+    theoreticalInt8PerW: computeTheoreticalPerW(gpu.int8TOPS, gpu.powerW),
+    theoreticalBandwidthPerW: computeTheoreticalPerW(gpu.bandwidthGBs, gpu.powerW),
   };
 }
 
@@ -1070,7 +1148,7 @@ function renderTable(rows) {
   elements.tableHead.innerHTML = `<tr>${columns
     .map(
       (field) =>
-        `<th><button type="button" data-sort="${field.key}">${field.label}${sortMark(field.key)}</button></th>`,
+        `<th><button type="button" data-sort="${field.key}" title="${escapeAttr(field.description || field.label)}">${field.label}${sortMark(field.key)}</button></th>`,
     )
     .join("")}</tr>`;
 
@@ -1176,7 +1254,7 @@ function renderColumnPicker() {
       ${fieldDefs
         .map(
           (field) => `
-            <label class="column-option">
+            <label class="column-option" title="${escapeAttr(field.description || field.label)}">
               <input type="checkbox" value="${field.key}" ${state.visibleColumns.has(field.key) ? "checked" : ""} />
               <span>${field.label}</span>
             </label>
@@ -1241,7 +1319,7 @@ function computePricePerGb(gpu) {
   return Number((gpu.priceUSD / gpu.vramGB).toFixed(2));
 }
 
-function computePerW(value, powerW) {
+function computeTheoreticalPerW(value, powerW) {
   if (!isUsableNumber(value) || !isUsableNumber(powerW) || Number(powerW) <= 0) return null;
   return Number((Number(value) / Number(powerW)).toFixed(3));
 }
