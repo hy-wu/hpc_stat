@@ -4,7 +4,7 @@
     { "key": "vendor", "label": "厂商", "type": "text", "visible": true },
     { "key": "multimodal", "label": "模态", "type": "text", "visible": true },
     { "key": "copilotMultiplier", "label": "Copilot 倍率", "type": "number", "visible": true },
-    { "key": "performance", "label": "能力/输入输出", "type": "text", "visible": true },
+    { "key": "performance", "label": "能力/输入输出", "type": "text", "visible": false },
     { "key": "params", "label": "参数量(B)", "type": "number", "visible": true },
     { "key": "paramsActive", "label": "激活量(B)", "type": "number", "visible": true },
     { "key": "pricing.official.in", "label": "官方 In ($)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true },

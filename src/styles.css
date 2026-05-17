@@ -128,9 +128,9 @@ h2 {
 }
 
 .workspace {
-  padding: 22px 32px 36px;
+  padding: 16px 32px 36px;
   display: grid;
-  gap: 18px;
+  gap: 12px;
 }
 
 .workspace > * {
@@ -149,9 +149,9 @@ h2 {
 .control-band {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
   align-items: end;
-  padding: 16px;
+  padding: 10px 14px;
 }
 
 .control,
@@ -205,8 +205,8 @@ textarea:focus {
 }
 
 .metric {
-  min-height: 86px;
-  padding: 14px 16px;
+  min-height: 52px;
+  padding: 8px 14px;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -215,19 +215,19 @@ textarea:focus {
 .metric span {
   display: block;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
 }
 
 .metric strong {
   display: block;
-  margin-top: 8px;
-  font-size: 24px;
+  margin-top: 4px;
+  font-size: 18px;
 }
 
 .filters-panel,
 .table-panel {
-  padding: 16px;
+  padding: 10px 14px;
 }
 
 .panel-head {
@@ -235,7 +235,7 @@ textarea:focus {
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .rules {
@@ -261,9 +261,9 @@ textarea:focus {
 
 .column-picker {
   display: grid;
-  gap: 12px;
-  padding: 12px;
-  margin-bottom: 12px;
+  gap: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
   background: #f9fbfb;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -316,14 +316,15 @@ textarea:focus {
 .column-option {
   display: flex;
   align-items: center;
-  gap: 8px;
-  min-height: 42px;
-  padding: 10px 12px;
+  gap: 6px;
+  min-height: 30px;
+  padding: 4px 10px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 6px;
   background: #fff;
   color: var(--ink);
   font-weight: 650;
+  font-size: 12px;
   transition:
     border-color 0.18s ease,
     background 0.18s ease,
@@ -487,8 +488,8 @@ tbody tr:hover {
 
 .column-picker-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 6px;
 }
 .fresh {
   color: var(--good);

@@ -20,6 +20,7 @@ const elements = {
   compactToggleButton: document.querySelector("#compactToggleButton"),
   columnPicker: document.querySelector("#columnPicker"),
   toggleColumnsButton: document.querySelector("#toggleColumnsButton"),
+  exportCsvButton: document.querySelector("#exportCsvButton"),
   visibleCount: document.querySelector("#visibleCount"),
   bestElo: document.querySelector("#bestElo"),
   bestHumanEval: document.querySelector("#bestHumanEval"),
@@ -70,6 +71,10 @@ function bindEvents() {
   elements.toggleColumnsButton.addEventListener("click", () => {
     elements.columnPicker.hidden = !elements.columnPicker.hidden;
   });
+
+  if (elements.exportCsvButton) {
+    elements.exportCsvButton.addEventListener("click", exportCsv);
+  }
 
   elements.columnPicker.addEventListener("click", (e) => {
     const action = e.target.closest("[data-column-action]")?.dataset.columnAction;
@@ -293,6 +298,37 @@ function getSourceTitle(row) {
 function getHeatmapColor(percent) {
   if (percent < 50) return `rgba(255, ${Math.floor(255 * (percent / 50))}, 0, 0.2)`;
   return `rgba(${Math.floor(255 * (1 - (percent - 50) / 50))}, 255, 0, 0.2)`;
+}
+
+function exportCsv() {
+  const activeFields = fieldDefs.filter(f => state.visibleColumns.has(f.key));
+  const sortFieldDef = fieldDefs.find(f => f.key === state.sortField);
+  const rows = state.models
+    .filter(m =>
+      !state.globalSearch ||
+      Object.values(m).some(v => String(v).toLowerCase().includes(state.globalSearch))
+    )
+    .sort((a, b) => compareRows(a, b, state.sortField, state.sortDirection, sortFieldDef));
+
+  const escape = v => {
+    const s = v === null || v === undefined ? "" : String(v);
+    return s.includes(",") || s.includes('"') || s.includes("\n")
+      ? `"${s.replace(/"/g, '""')}"`
+      : s;
+  };
+
+  const header = activeFields.map(f => escape(f.label)).join(",");
+  const body = rows.map(r =>
+    activeFields.map(f => escape(getNestedValue(r, f.key))).join(",")
+  ).join("\n");
+
+  const blob = new Blob(["\uFEFF" + header + "\n" + body], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `llm-models-${new Date().toISOString().slice(0, 10)}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
 }
 
 init();
