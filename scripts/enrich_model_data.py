@@ -26,10 +26,13 @@ from pydantic import BaseModel, Field, ValidationError
 
 ROOT = Path(__file__).resolve().parents[1]
 MODELS_PATH = ROOT / "data" / "models.json"
+MODEL_OVERRIDES_PATH = ROOT / "data" / "model-overrides.json"
+MODEL_FIELDS_PATH = ROOT / "data" / "model-fields.json"
 MODELS_HTML_PATH = ROOT / "models.html"
 MODELS_JS_PATH = ROOT / "src" / "models.js"
 REFERENCE_PATH = ROOT / "REFERENCE_SOURCES.md"
 CACHE_DIR = ROOT / ".cache" / "model-sources"
+DEFAULT_OPENROUTER_TARGET = 150
 
 SOURCE_URLS = {
     "openrouter_api": "https://openrouter.ai/api/v1/models",
@@ -66,6 +69,29 @@ OPENROUTER_VENDOR_PREFIXES = {
     "Google": "google",
     "Meta": "meta-llama",
     "DeepSeek": "deepseek",
+}
+
+OPENROUTER_VENDOR_NAMES = {
+    "01-ai": "01.AI",
+    "ai21": "AI21",
+    "alibaba": "Alibaba",
+    "amazon": "Amazon",
+    "anthropic": "Anthropic",
+    "baidu": "Baidu",
+    "bytedance-seed": "ByteDance",
+    "cohere": "Cohere",
+    "deepseek": "DeepSeek",
+    "google": "Google",
+    "meta-llama": "Meta",
+    "microsoft": "Microsoft",
+    "mistralai": "Mistral",
+    "moonshotai": "Moonshot AI",
+    "nvidia": "NVIDIA",
+    "openai": "OpenAI",
+    "perplexity": "Perplexity",
+    "qwen": "Alibaba",
+    "x-ai": "xAI",
+    "z-ai": "Zhipu AI",
 }
 
 REMOVED_MODEL_IDS = {
@@ -172,6 +198,9 @@ class ReferenceSource:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Verify and enrich data/models.json")
     parser.add_argument("--write", action="store_true", help="write verified patches back to data/models.json")
+    parser.add_argument("--generate-openrouter", action="store_true", help="generate broad model rows from OpenRouter before enrichment")
+    parser.add_argument("--target-count", type=int, default=DEFAULT_OPENROUTER_TARGET, help="target model count when --generate-openrouter is used")
+    parser.add_argument("--min-model-count", type=int, default=0, help="fail validation if fewer model rows are present")
     parser.add_argument("--verify-only", action="store_true", help="skip enrichment and only validate data/page wiring")
     parser.add_argument("--online", action="store_true", help="include online source string checks in the report")
     parser.add_argument("--deepseek", action="store_true", help="use DeepSeek as a fallback extractor for unstructured pages")
@@ -182,7 +211,7 @@ def main() -> int:
     parser.add_argument("--output", type=Path, help="write a JSON report to this path")
     args = parser.parse_args()
 
-    models = json.loads(MODELS_PATH.read_text(encoding="utf-8"))
+    models = load_models(args)
     reference_sources = parse_reference_sources(REFERENCE_PATH)
     session = requests.Session()
     session.headers.update(
@@ -203,15 +232,19 @@ def main() -> int:
         "errors": [],
     }
 
-    try:
-        source_texts = fetch_sources(session, args, reference_sources, report)
-        report["sources"] = {key: {"url": source.url, "chars": len(source.text)} for key, source in source_texts.items()}
-    except requests.RequestException as exc:
-        report["errors"].append({"stage": "fetch_sources", "error": str(exc)})
-        source_texts = {}
+    source_texts: dict[str, SourceText] = {}
+    if not args.verify_only or args.online:
+        try:
+            source_texts = fetch_sources(session, args, reference_sources, report)
+            report["sources"] = {key: {"url": source.url, "chars": len(source.text)} for key, source in source_texts.items()}
+        except requests.RequestException as exc:
+            report["errors"].append({"stage": "fetch_sources", "error": str(exc)})
 
     patches: list[ExtractedModel] = []
     if not args.verify_only:
+        if args.generate_openrouter:
+            models = generate_openrouter_catalog(models, session, args, report)
+            report["modelCount"] = len(models)
         patches.extend(extract_openrouter_prices(models, session, args, report))
         patches.extend(extract_official_prices(source_texts))
         patches.extend(extract_caisi_evals(source_texts))
@@ -230,7 +263,8 @@ def main() -> int:
         MODELS_PATH.write_text(json.dumps(models, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         report["wrote"] = str(MODELS_PATH)
 
-    validation = validate_models(models, source_texts if args.online else {})
+    min_model_count = args.min_model_count or (args.target_count if args.generate_openrouter else 0)
+    validation = validate_models(models, source_texts if args.online else {}, min_model_count)
     report["validation"] = validation
     if validation["errors"]:
         report["errors"].append({"stage": "validate_models", "errors": validation["errors"]})
@@ -329,6 +363,166 @@ def fetch_text(session: requests.Session, key: str, url: str, args: argparse.Nam
     return text
 
 
+def load_models(args: argparse.Namespace) -> list[dict[str, Any]]:
+    source_path = MODEL_OVERRIDES_PATH if args.generate_openrouter and MODEL_OVERRIDES_PATH.exists() else MODELS_PATH
+    return json.loads(source_path.read_text(encoding="utf-8"))
+
+
+def fetch_openrouter_items(session: requests.Session, args: argparse.Namespace, report: dict[str, Any]) -> list[dict[str, Any]]:
+    try:
+        raw = fetch_text(session, "openrouter_api", SOURCE_URLS["openrouter_api"], args)
+        payload = json.loads(raw)
+    except Exception as exc:
+        report["errors"].append({"stage": "openrouter_api", "error": str(exc)})
+        return []
+    return [item for item in payload.get("data", []) if isinstance(item, dict) and item.get("id")]
+
+
+def generate_openrouter_catalog(
+    base_models: list[dict[str, Any]],
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> list[dict[str, Any]]:
+    items = fetch_openrouter_items(session, args, report)
+    by_id = {item["id"]: item for item in items}
+    existing_models = json.loads(json.dumps(base_models, ensure_ascii=False))
+    existing_ids = {model["id"] for model in existing_models}
+    existing_openrouter_ids = {
+        alias
+        for aliases in discover_openrouter_aliases(existing_models, by_id).values()
+        for alias in aliases
+    }
+
+    generated: list[dict[str, Any]] = []
+    for item in items:
+        if len(existing_models) + len(generated) >= args.target_count:
+            break
+        model_id = item["id"]
+        if not is_importable_openrouter_item(item):
+            continue
+        if model_id in existing_openrouter_ids or model_id in existing_ids:
+            continue
+        generated_model = openrouter_item_to_model(item)
+        if generated_model["id"] in existing_ids:
+            continue
+        generated.append(generated_model)
+        existing_ids.add(generated_model["id"])
+
+    report["openrouterGeneration"] = {
+        "sourceRows": len(items),
+        "targetCount": args.target_count,
+        "baseRows": len(base_models),
+        "generatedRows": len(generated),
+        "finalRows": len(existing_models) + len(generated),
+    }
+    return existing_models + generated
+
+
+def is_importable_openrouter_item(item: dict[str, Any]) -> bool:
+    model_id = item.get("id", "")
+    pricing = item.get("pricing") or {}
+    architecture = item.get("architecture") or {}
+    input_modalities = set(architecture.get("input_modalities") or [])
+    if model_id.startswith("~") or model_id.endswith(":free"):
+        return False
+    if model_id == "openrouter/free":
+        return False
+    if not pricing.get("prompt") or not pricing.get("completion"):
+        return False
+    return "text" in input_modalities
+
+
+def openrouter_item_to_model(item: dict[str, Any]) -> dict[str, Any]:
+    model_id = item["id"]
+    pricing = item.get("pricing") or {}
+    architecture = item.get("architecture") or {}
+    input_modalities = set(architecture.get("input_modalities") or [])
+    output_modalities = set(architecture.get("output_modalities") or [])
+    openrouter_pricing: dict[str, float] = {}
+    fields = ["name", "vendor", "multimodal", "performance"]
+
+    prompt = per_million(pricing.get("prompt"))
+    completion = per_million(pricing.get("completion"))
+    cache_hit = per_million(pricing.get("input_cache_read"))
+    if prompt is not None:
+        openrouter_pricing["in"] = prompt
+        fields.append("pricing.openrouter.in")
+    if cache_hit is not None:
+        openrouter_pricing["hit"] = cache_hit
+        fields.append("pricing.openrouter.hit")
+    if completion is not None:
+        openrouter_pricing["out"] = completion
+        fields.append("pricing.openrouter.out")
+
+    context = item.get("context_length")
+    if context:
+        fields.append("contextWindow")
+
+    model = {
+        "id": model_id,
+        "openrouterId": model_id,
+        "name": clean_openrouter_model_name(item),
+        "vendor": openrouter_vendor_name(model_id),
+        "multimodal": modality_label(input_modalities),
+        "copilotMultiplier": None,
+        "performance": architecture.get("modality") or modality_label(input_modalities | output_modalities),
+        "arenaElo": None,
+        "mmlu": None,
+        "humanEval": None,
+        "gsm8k": None,
+        "gpqa": None,
+        "math": None,
+        "evals": {},
+        "contextWindow": compact_tokens(context) if context else None,
+        "pricing": {"openrouter": openrouter_pricing},
+        "verification": {
+            "status": "verified",
+            "checkedAt": date.today().isoformat(),
+            "verifiedFields": sorted(fields),
+            "sources": [{"label": "OpenRouter models API", "url": SOURCE_URLS["openrouter_api"]}],
+        },
+    }
+    description = first_sentence(item.get("description"))
+    if description:
+        model["notes"] = description
+    return model
+
+
+def clean_openrouter_model_name(item: dict[str, Any]) -> str:
+    name = item.get("name") or item.get("id", "")
+    return re.sub(r"^[^:]{1,40}:\s*", "", name).strip() or item.get("id", "")
+
+
+def openrouter_vendor_name(model_id: str) -> str:
+    prefix = model_id.split("/", 1)[0]
+    if prefix in OPENROUTER_VENDOR_NAMES:
+        return OPENROUTER_VENDOR_NAMES[prefix]
+    return " ".join(part.capitalize() for part in re.split(r"[-_]+", prefix) if part) or prefix
+
+
+def modality_label(modalities: set[str]) -> str:
+    if "image" in modalities:
+        return "Vision"
+    if "audio" in modalities:
+        return "Audio"
+    if "file" in modalities:
+        return "File"
+    if "text" in modalities:
+        return "Text"
+    return ", ".join(sorted(modalities)) or "Text"
+
+
+def first_sentence(value: Any) -> str | None:
+    if not value:
+        return None
+    text = re.sub(r"\s+", " ", str(value)).strip()
+    match = re.match(r"(.{1,220}?[.!?])(?:\s|$)", text)
+    if match:
+        return match.group(1)
+    return text[:220].rstrip()
+
+
 def html_to_text(html: str) -> str:
     soup = BeautifulSoup(html, "html.parser")
     for tag in soup(["script", "style", "noscript", "svg"]):
@@ -342,14 +536,7 @@ def extract_openrouter_prices(
     args: argparse.Namespace,
     report: dict[str, Any],
 ) -> list[ExtractedModel]:
-    try:
-        raw = fetch_text(session, "openrouter_api", SOURCE_URLS["openrouter_api"], args)
-        payload = json.loads(raw)
-    except Exception as exc:
-        report["errors"].append({"stage": "openrouter_api", "error": str(exc)})
-        return []
-
-    by_id = {item.get("id"): item for item in payload.get("data", [])}
+    by_id = {item["id"]: item for item in fetch_openrouter_items(session, args, report)}
     aliases = discover_openrouter_aliases(models, by_id)
     patches: list[ExtractedModel] = []
     for model_id, model_aliases in aliases.items():
@@ -359,6 +546,7 @@ def extract_openrouter_prices(
         pricing = item.get("pricing") or {}
         prompt = per_million(pricing.get("prompt"))
         completion = per_million(pricing.get("completion"))
+        cache_hit = per_million(pricing.get("input_cache_read"))
         context = item.get("context_length")
         architecture = item.get("architecture") or {}
         input_modalities = set(architecture.get("input_modalities") or [])
@@ -367,6 +555,9 @@ def extract_openrouter_prices(
         if prompt is not None:
             patch["pricing"]["openrouter"]["in"] = prompt
             fields.append("pricing.openrouter.in")
+        if cache_hit is not None:
+            patch["pricing"]["openrouter"]["hit"] = cache_hit
+            fields.append("pricing.openrouter.hit")
         if completion is not None:
             patch["pricing"]["openrouter"]["out"] = completion
             fields.append("pricing.openrouter.out")
@@ -853,6 +1044,9 @@ def per_million(value: Any) -> float | None:
         number = float(value)
     except (TypeError, ValueError):
         return None
+    if number < 0:
+        # OpenRouter uses -1 as a sentinel for "unknown / variable pricing"
+        return None
     return round(number * 1_000_000, 6)
 
 
@@ -888,6 +1082,7 @@ def summarize_report(report: dict[str, Any]) -> dict[str, Any]:
         "referenceSourceCount": report["referenceSourceCount"],
         "sourceCount": len(report["sources"]),
         "patchCount": len(report["patches"]),
+        "openrouterGeneration": report.get("openrouterGeneration"),
         "validationErrorCount": len(report.get("validation", {}).get("errors", [])),
         "pageErrorCount": len(report.get("page", {}).get("errors", [])),
         "errors": report["errors"],
@@ -896,8 +1091,13 @@ def summarize_report(report: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def validate_models(models: list[dict[str, Any]], online_sources: dict[str, SourceText]) -> dict[str, Any]:
+def validate_models(
+    models: list[dict[str, Any]],
+    online_sources: dict[str, SourceText],
+    min_model_count: int = 0,
+) -> dict[str, Any]:
     ids = [model.get("id") for model in models]
+    row_count_error = len(models) < min_model_count
     duplicate_ids = sorted({model_id for model_id in ids if ids.count(model_id) > 1})
     blocked_ids = sorted(model_id for model_id in ids if model_id in REMOVED_MODEL_IDS)
     missing_verification = sorted(
@@ -921,9 +1121,12 @@ def validate_models(models: list[dict[str, Any]], online_sources: dict[str, Sour
         model.get("id", "<missing-id>")
         for model in models
         if model.get("id") not in CATALOG_CHECKS and model.get("id") not in SCREENSHOT_VERIFIED_IDS
+        and not has_verification_source(model, "OpenRouter models API")
     )
     online_checks = run_online_catalog_checks(online_sources) if online_sources else []
     errors = []
+    if row_count_error:
+        errors.append({"kind": "belowMinModelCount", "actual": len(models), "minimum": min_model_count})
     if duplicate_ids:
         errors.append({"kind": "duplicateIds", "items": duplicate_ids})
     if blocked_ids:
@@ -938,6 +1141,8 @@ def validate_models(models: list[dict[str, Any]], online_sources: dict[str, Sour
         errors.append({"kind": "missingCatalogChecks", "items": missing_catalog_checks})
     return {
         "duplicateIds": duplicate_ids,
+        "minModelCount": min_model_count,
+        "modelCount": len(models),
         "blockedIdsPresent": blocked_ids,
         "missingVerification": missing_verification,
         "missingVerificationSources": missing_sources,
@@ -946,6 +1151,10 @@ def validate_models(models: list[dict[str, Any]], online_sources: dict[str, Sour
         "onlineChecks": online_checks,
         "errors": errors,
     }
+
+
+def has_verification_source(model: dict[str, Any], label: str) -> bool:
+    return any(source.get("label") == label for source in model.get("verification", {}).get("sources", []))
 
 
 def run_online_catalog_checks(sources: dict[str, SourceText]) -> list[dict[str, Any]]:
@@ -972,7 +1181,7 @@ def run_online_catalog_checks(sources: dict[str, SourceText]) -> list[dict[str, 
 def validate_page_data(models: list[dict[str, Any]]) -> dict[str, Any]:
     html = MODELS_HTML_PATH.read_text(encoding="utf-8")
     js = MODELS_JS_PATH.read_text(encoding="utf-8")
-    field_defs = extract_field_defs(js)
+    field_defs = load_field_defs(js)
     visible_fields = [field for field in field_defs if field["visible"]]
     coverage = {
         field["key"]: sum(1 for model in models if get_nested(model, field["key"]) is not None)
@@ -984,6 +1193,8 @@ def validate_page_data(models: list[dict[str, Any]]) -> dict[str, Any]:
         errors.append({"kind": "missingModelsScript", "path": str(MODELS_HTML_PATH)})
     if 'fetch("data/models.json")' not in js and "fetch('data/models.json')" not in js:
         errors.append({"kind": "missingModelsJsonFetch", "path": str(MODELS_JS_PATH)})
+    if MODEL_FIELDS_PATH.exists() and 'fetch("data/model-fields.json")' not in js and "fetch('data/model-fields.json')" not in js:
+        errors.append({"kind": "missingModelFieldsFetch", "path": str(MODELS_JS_PATH)})
     if visible_empty_columns:
         errors.append({"kind": "visibleEmptyColumns", "items": visible_empty_columns})
     return {
@@ -994,6 +1205,13 @@ def validate_page_data(models: list[dict[str, Any]]) -> dict[str, Any]:
         "visibleEmptyColumns": visible_empty_columns,
         "errors": errors,
     }
+
+
+def load_field_defs(js: str) -> list[dict[str, Any]]:
+    if MODEL_FIELDS_PATH.exists():
+        payload = json.loads(MODEL_FIELDS_PATH.read_text(encoding="utf-8"))
+        return payload.get("fields", [])
+    return extract_field_defs(js)
 
 
 def extract_field_defs(js: str) -> list[dict[str, Any]]:

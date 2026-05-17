@@ -26,12 +26,13 @@
       },
       "openrouter": {
         "in": 5.0,
-        "out": 25.0
+        "out": 25.0,
+        "hit": 0.5
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
@@ -43,6 +44,7 @@
         "pricing.official.hit",
         "pricing.official.in",
         "pricing.official.out",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -102,12 +104,13 @@
       },
       "openrouter": {
         "in": 3.0,
-        "out": 15.0
+        "out": 15.0,
+        "hit": 0.3
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
@@ -119,6 +122,7 @@
         "pricing.official.hit",
         "pricing.official.in",
         "pricing.official.out",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -174,12 +178,13 @@
       },
       "openrouter": {
         "in": 3.0,
-        "out": 15.0
+        "out": 15.0,
+        "hit": 0.3
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
@@ -190,6 +195,7 @@
         "pricing.official.hit",
         "pricing.official.in",
         "pricing.official.out",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out"
       ],
@@ -244,12 +250,13 @@
       },
       "openrouter": {
         "in": 1.0,
-        "out": 5.0
+        "out": 5.0,
+        "hit": 0.1
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
@@ -261,6 +268,7 @@
         "pricing.official.hit",
         "pricing.official.in",
         "pricing.official.out",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -323,12 +331,13 @@
       },
       "openrouter": {
         "in": 5.0,
-        "out": 30.0
+        "out": 30.0,
+        "hit": 0.5
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
@@ -346,6 +355,7 @@
         "pricing.official.hit",
         "pricing.official.in",
         "pricing.official.out",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -413,12 +423,13 @@
       },
       "openrouter": {
         "in": 2.5,
-        "out": 15.0
+        "out": 15.0,
+        "hit": 0.25
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
@@ -433,6 +444,7 @@
         "pricing.official.hit",
         "pricing.official.in",
         "pricing.official.out",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -499,12 +511,13 @@
       },
       "openrouter": {
         "in": 0.75,
-        "out": 4.5
+        "out": 4.5,
+        "hit": 0.075
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
@@ -522,6 +535,7 @@
         "pricing.official.hit",
         "pricing.official.in",
         "pricing.official.out",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -577,7 +591,8 @@
       },
       "openrouter": {
         "in": 1.75,
-        "out": 14.0
+        "out": 14.0,
+        "hit": 0.175
       },
       "cursor": {
         "in": 1.75,
@@ -586,7 +601,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
@@ -598,6 +613,7 @@
         "pricing.official.hit",
         "pricing.official.in",
         "pricing.official.out",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out"
       ],
@@ -639,18 +655,20 @@
     "pricing": {
       "openrouter": {
         "in": 1.75,
-        "out": 14.0
+        "out": 14.0,
+        "hit": 0.175
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
         "multimodal",
         "name",
         "performance",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out"
       ],
@@ -684,18 +702,20 @@
     "pricing": {
       "openrouter": {
         "in": 1.75,
-        "out": 14.0
+        "out": 14.0,
+        "hit": 0.175
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
         "multimodal",
         "name",
         "performance",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out"
       ],
@@ -729,18 +749,20 @@
     "pricing": {
       "openrouter": {
         "in": 0.25,
-        "out": 2.0
+        "out": 2.0,
+        "hit": 0.025
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
         "multimodal",
         "name",
         "performance",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out"
       ],
@@ -774,17 +796,19 @@
     "pricing": {
       "openrouter": {
         "in": 2.0,
-        "out": 8.0
+        "out": 8.0,
+        "hit": 0.5
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
         "multimodal",
         "name",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out"
       ],
@@ -835,12 +859,13 @@
       },
       "openrouter": {
         "in": 0.435,
-        "out": 0.87
+        "out": 0.87,
+        "hit": 0.003625
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "evals.caisiElo",
@@ -860,6 +885,7 @@
         "pricing.official.hit",
         "pricing.official.in",
         "pricing.official.out",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -918,12 +944,13 @@
       },
       "openrouter": {
         "in": 0.112,
-        "out": 0.224
+        "out": 0.224,
+        "hit": 0.022
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
@@ -937,6 +964,7 @@
         "pricing.official.hit",
         "pricing.official.in",
         "pricing.official.out",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -988,12 +1016,13 @@
       },
       "openrouter": {
         "in": 1.25,
-        "out": 10.0
+        "out": 10.0,
+        "hit": 0.125
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -1004,6 +1033,7 @@
         "pricing.official.hit",
         "pricing.official.in",
         "pricing.official.out",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -1052,12 +1082,13 @@
       },
       "openrouter": {
         "in": 0.3,
-        "out": 2.5
+        "out": 2.5,
+        "hit": 0.03
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -1068,6 +1099,7 @@
         "pricing.official.hit",
         "pricing.official.in",
         "pricing.official.out",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -1111,7 +1143,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -1156,7 +1188,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-17",
+      "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -1177,5 +1209,5815 @@
         }
       ]
     }
+  },
+  {
+    "id": "anthropic/claude-opus-4.7-fast",
+    "openrouterId": "anthropic/claude-opus-4.7-fast",
+    "name": "Claude Opus 4.7 (Fast)",
+    "vendor": "Anthropic",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1M",
+    "pricing": {
+      "openrouter": {
+        "in": 30.0,
+        "hit": 3.0,
+        "out": 150.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Fast-mode variant of [Opus 4.7](/anthropic/claude-opus-4.7) - identical capabilities with higher output speed at premium 6x pricing."
+  },
+  {
+    "id": "perceptron/perceptron-mk1",
+    "openrouterId": "perceptron/perceptron-mk1",
+    "name": "Perceptron Mk1",
+    "vendor": "Perceptron",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "33K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.15,
+        "out": 1.5
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Perceptron Mk1 (Mark One) is Perceptron's highest-quality vision-language model for video and embodied reasoning.** It accepts image and video inputs paired with natural language queries, and produces detailed visual und"
+  },
+  {
+    "id": "inclusionai/ring-2.6-1t",
+    "openrouterId": "inclusionai/ring-2.6-1t",
+    "name": "Ring-2.6-1T",
+    "vendor": "Inclusionai",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.075,
+        "hit": 0.015,
+        "out": 0.625
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Ring-2.6-1T is a 1T-parameter-scale thinking model with 63B active parameters, built for real-world agent workflows that require both strong capability and operational efficiency."
+  },
+  {
+    "id": "google/gemini-3.1-flash-lite",
+    "openrouterId": "google/gemini-3.1-flash-lite",
+    "name": "Gemini 3.1 Flash Lite",
+    "vendor": "Google",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file+audio+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1.0M",
+    "pricing": {
+      "openrouter": {
+        "in": 0.25,
+        "hit": 0.025,
+        "out": 1.5
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Gemini 3.1 Flash Lite is Google’s GA high-efficiency multimodal model optimized for low-latency, high-volume workloads."
+  },
+  {
+    "id": "openai/gpt-chat-latest",
+    "openrouterId": "openai/gpt-chat-latest",
+    "name": "GPT Chat Latest",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "400K",
+    "pricing": {
+      "openrouter": {
+        "in": 5.0,
+        "hit": 0.5,
+        "out": 30.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GPT Chat Latest points to OpenAI's stable API alias `chat-latest` that always resolves to the latest Instant chat model used in ChatGPT."
+  },
+  {
+    "id": "x-ai/grok-4.3",
+    "openrouterId": "x-ai/grok-4.3",
+    "name": "Grok 4.3",
+    "vendor": "xAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1M",
+    "pricing": {
+      "openrouter": {
+        "in": 1.25,
+        "hit": 0.2,
+        "out": 2.5
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Grok 4.3 is a reasoning model from xAI."
+  },
+  {
+    "id": "ibm-granite/granite-4.1-8b",
+    "openrouterId": "ibm-granite/granite-4.1-8b",
+    "name": "Granite 4.1 8B",
+    "vendor": "Ibm Granite",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "131K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.05,
+        "hit": 0.05,
+        "out": 0.1
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Granite 4.1 8B is a dense, decoder-only 8-billion-parameter language model from IBM, part of the Granite 4.1 family."
+  },
+  {
+    "id": "mistralai/mistral-medium-3-5",
+    "openrouterId": "mistralai/mistral-medium-3-5",
+    "name": "Mistral Medium 3.5",
+    "vendor": "Mistral",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 1.5,
+        "out": 7.5
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Mistral Medium 3.5 is a dense 128B instruction-following model from Mistral AI."
+  },
+  {
+    "id": "openrouter/owl-alpha",
+    "openrouterId": "openrouter/owl-alpha",
+    "name": "Owl Alpha",
+    "vendor": "Openrouter",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1.0M",
+    "pricing": {
+      "openrouter": {
+        "in": 0.0,
+        "out": 0.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Owl Alpha is a high-performance foundation model designed for agentic workloads."
+  },
+  {
+    "id": "qwen/qwen3.5-plus-20260420",
+    "openrouterId": "qwen/qwen3.5-plus-20260420",
+    "name": "Qwen3.5 Plus 2026-04-20",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1M",
+    "pricing": {
+      "openrouter": {
+        "in": 0.3,
+        "out": 1.8
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Qwen3.5 Plus (April 2026) is a large-scale multimodal language model from Alibaba."
+  },
+  {
+    "id": "qwen/qwen3.6-flash",
+    "openrouterId": "qwen/qwen3.6-flash",
+    "name": "Qwen3.6 Flash",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1M",
+    "pricing": {
+      "openrouter": {
+        "in": 0.1875,
+        "out": 1.125
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Qwen3.6 Flash is a fast, efficient language model from Alibaba's Qwen 3.6 series."
+  },
+  {
+    "id": "qwen/qwen3.6-35b-a3b",
+    "openrouterId": "qwen/qwen3.6-35b-a3b",
+    "name": "Qwen3.6 35B A3B",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.15,
+        "hit": 0.05,
+        "out": 1.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token."
+  },
+  {
+    "id": "qwen/qwen3.6-max-preview",
+    "openrouterId": "qwen/qwen3.6-max-preview",
+    "name": "Qwen3.6 Max Preview",
+    "vendor": "Alibaba",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 1.04,
+        "out": 6.24
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Qwen3.6-Max-Preview is a proprietary frontier model from Alibaba Cloud built on a sparse mixture-of-experts architecture with approximately 1 trillion total parameters."
+  },
+  {
+    "id": "qwen/qwen3.6-27b",
+    "openrouterId": "qwen/qwen3.6-27b",
+    "name": "Qwen3.6 27B",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.32,
+        "out": 3.2
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026."
+  },
+  {
+    "id": "openai/gpt-5.5-pro",
+    "openrouterId": "openai/gpt-5.5-pro",
+    "name": "GPT-5.5 Pro",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1.1M",
+    "pricing": {
+      "openrouter": {
+        "in": 30.0,
+        "out": 180.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GPT-5.5 Pro is OpenAI’s high-capability model optimized for deep reasoning and accuracy on complex, high-stakes workloads."
+  },
+  {
+    "id": "inclusionai/ling-2.6-1t",
+    "openrouterId": "inclusionai/ling-2.6-1t",
+    "name": "Ling-2.6-1T",
+    "vendor": "Inclusionai",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.3,
+        "hit": 0.06,
+        "out": 2.5
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Ling-2.6-1T is an instant (instruct) model from inclusionAI and the company’s trillion-parameter flagship, designed for real-world agents that require fast execution and high efficiency at scale."
+  },
+  {
+    "id": "tencent/hy3-preview",
+    "openrouterId": "tencent/hy3-preview",
+    "name": "Hy3 preview",
+    "vendor": "Tencent",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.066,
+        "hit": 0.029,
+        "out": 0.26
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use."
+  },
+  {
+    "id": "xiaomi/mimo-v2.5-pro",
+    "openrouterId": "xiaomi/mimo-v2.5-pro",
+    "name": "MiMo-V2.5-Pro",
+    "vendor": "Xiaomi",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1.0M",
+    "pricing": {
+      "openrouter": {
+        "in": 1.0,
+        "hit": 0.2,
+        "out": 3.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as ClawEval, GDPVal, and"
+  },
+  {
+    "id": "xiaomi/mimo-v2.5",
+    "openrouterId": "xiaomi/mimo-v2.5",
+    "name": "MiMo-V2.5",
+    "vendor": "Xiaomi",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+audio+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1.0M",
+    "pricing": {
+      "openrouter": {
+        "in": 0.4,
+        "hit": 0.08,
+        "out": 2.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "MiMo-V2.5 is a native omnimodal model by Xiaomi."
+  },
+  {
+    "id": "openai/gpt-5.4-image-2",
+    "openrouterId": "openai/gpt-5.4-image-2",
+    "name": "GPT-5.4 Image 2",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text+image",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "272K",
+    "pricing": {
+      "openrouter": {
+        "in": 8.0,
+        "hit": 2.0,
+        "out": 15.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "[GPT-5.4](https://openrouter.ai/openai/gpt-5.4) Image 2 combines OpenAI's GPT-5.4 model with state-of-the-art image generation capabilities from GPT Image 2."
+  },
+  {
+    "id": "inclusionai/ling-2.6-flash",
+    "openrouterId": "inclusionai/ling-2.6-flash",
+    "name": "Ling-2.6-flash",
+    "vendor": "Inclusionai",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.01,
+        "hit": 0.002,
+        "out": 0.03
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Ling-2.6-flash is an instant (instruct) model from inclusionAI with 104B total parameters and 7.4B active parameters, designed for real-world agents that require fast responses, strong execution, and high token efficienc"
+  },
+  {
+    "id": "openrouter/pareto-code",
+    "openrouterId": "openrouter/pareto-code",
+    "name": "Pareto Code Router",
+    "vendor": "Openrouter",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "2M",
+    "pricing": {
+      "openrouter": {}
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "The Pareto Router maintains a tiered shortlist of strong coding models, ranked by [Artificial Analysis](https://artificialanalysis.ai/) coding percentiles."
+  },
+  {
+    "id": "baidu/qianfan-ocr-fast",
+    "openrouterId": "baidu/qianfan-ocr-fast",
+    "name": "Qianfan-OCR-Fast",
+    "vendor": "Baidu",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "66K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.68,
+        "out": 2.81
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Qianfan-OCR-Fast is a domain-specific multimodal large model purpose-built for OCR."
+  },
+  {
+    "id": "moonshotai/kimi-k2.6",
+    "openrouterId": "moonshotai/kimi-k2.6",
+    "name": "Kimi K2.6",
+    "vendor": "Moonshot AI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.73,
+        "hit": 0.25,
+        "out": 3.49
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration."
+  },
+  {
+    "id": "anthropic/claude-opus-4.6-fast",
+    "openrouterId": "anthropic/claude-opus-4.6-fast",
+    "name": "Claude Opus 4.6 (Fast)",
+    "vendor": "Anthropic",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1M",
+    "pricing": {
+      "openrouter": {
+        "in": 30.0,
+        "hit": 3.0,
+        "out": 150.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Fast-mode variant of [Opus 4.6](/anthropic/claude-opus-4.6) - identical capabilities with higher output speed at premium 6x pricing."
+  },
+  {
+    "id": "z-ai/glm-5.1",
+    "openrouterId": "z-ai/glm-5.1",
+    "name": "GLM 5.1",
+    "vendor": "Zhipu AI",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "203K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.98,
+        "hit": 0.182,
+        "out": 3.08
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks."
+  },
+  {
+    "id": "google/gemma-4-26b-a4b-it",
+    "openrouterId": "google/gemma-4-26b-a4b-it",
+    "name": "Gemma 4 26B A4B",
+    "vendor": "Google",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.07,
+        "out": 0.34
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind."
+  },
+  {
+    "id": "google/gemma-4-31b-it",
+    "openrouterId": "google/gemma-4-31b-it",
+    "name": "Gemma 4 31B",
+    "vendor": "Google",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.12,
+        "out": 0.37
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output."
+  },
+  {
+    "id": "qwen/qwen3.6-plus",
+    "openrouterId": "qwen/qwen3.6-plus",
+    "name": "Qwen3.6 Plus",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1M",
+    "pricing": {
+      "openrouter": {
+        "in": 0.325,
+        "out": 1.95
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference."
+  },
+  {
+    "id": "z-ai/glm-5v-turbo",
+    "openrouterId": "z-ai/glm-5v-turbo",
+    "name": "GLM 5V Turbo",
+    "vendor": "Zhipu AI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "203K",
+    "pricing": {
+      "openrouter": {
+        "in": 1.2,
+        "hit": 0.24,
+        "out": 4.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GLM-5V-Turbo is Z.ai’s first native multimodal agent foundation model, built for vision-based coding and agent-driven tasks."
+  },
+  {
+    "id": "arcee-ai/trinity-large-thinking",
+    "openrouterId": "arcee-ai/trinity-large-thinking",
+    "name": "Trinity Large Thinking",
+    "vendor": "Arcee Ai",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.22,
+        "hit": 0.06,
+        "out": 0.85
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI."
+  },
+  {
+    "id": "x-ai/grok-4.20-multi-agent",
+    "openrouterId": "x-ai/grok-4.20-multi-agent",
+    "name": "Grok 4.20 Multi-Agent",
+    "vendor": "xAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "2M",
+    "pricing": {
+      "openrouter": {
+        "in": 2.0,
+        "hit": 0.2,
+        "out": 6.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Grok 4.20 Multi-Agent is a variant of xAI’s Grok 4.20 designed for collaborative, agent-based workflows."
+  },
+  {
+    "id": "x-ai/grok-4.20",
+    "openrouterId": "x-ai/grok-4.20",
+    "name": "Grok 4.20",
+    "vendor": "xAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "2M",
+    "pricing": {
+      "openrouter": {
+        "in": 1.25,
+        "hit": 0.2,
+        "out": 2.5
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Grok 4.20 is a reasoning model from xAI with industry-leading speed and agentic tool calling capabilities."
+  },
+  {
+    "id": "google/lyria-3-pro-preview",
+    "openrouterId": "google/lyria-3-pro-preview",
+    "name": "Lyria 3 Pro Preview",
+    "vendor": "Google",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text+audio",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1.0M",
+    "pricing": {
+      "openrouter": {
+        "in": 0.0,
+        "out": 0.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Full-length songs are priced at $0.08 per song."
+  },
+  {
+    "id": "google/lyria-3-clip-preview",
+    "openrouterId": "google/lyria-3-clip-preview",
+    "name": "Lyria 3 Clip Preview",
+    "vendor": "Google",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text+audio",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1.0M",
+    "pricing": {
+      "openrouter": {
+        "in": 0.0,
+        "out": 0.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "30 second duration clips are priced at $0.04 per clip."
+  },
+  {
+    "id": "kwaipilot/kat-coder-pro-v2",
+    "openrouterId": "kwaipilot/kat-coder-pro-v2",
+    "name": "KAT-Coder-Pro V2",
+    "vendor": "Kwaipilot",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "256K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.3,
+        "hit": 0.06,
+        "out": 1.2
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "KAT-Coder-Pro V2 is the latest high-performance model in KwaiKAT’s KAT-Coder series, designed for complex enterprise-grade software engineering and SaaS integration."
+  },
+  {
+    "id": "rekaai/reka-edge",
+    "openrouterId": "rekaai/reka-edge",
+    "name": "Reka Edge",
+    "vendor": "Rekaai",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "16K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.1,
+        "out": 0.1
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Reka Edge is an extremely efficient 7B multimodal vision-language model that accepts image/video+text inputs and generates text outputs."
+  },
+  {
+    "id": "xiaomi/mimo-v2-omni",
+    "openrouterId": "xiaomi/mimo-v2-omni",
+    "name": "MiMo-V2-Omni",
+    "vendor": "Xiaomi",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+audio+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.4,
+        "hit": 0.08,
+        "out": 2.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "MiMo-V2-Omni is a frontier omni-modal model that natively processes image, video, and audio inputs within a unified architecture."
+  },
+  {
+    "id": "xiaomi/mimo-v2-pro",
+    "openrouterId": "xiaomi/mimo-v2-pro",
+    "name": "MiMo-V2-Pro",
+    "vendor": "Xiaomi",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1.0M",
+    "pricing": {
+      "openrouter": {
+        "in": 1.0,
+        "hit": 0.2,
+        "out": 3.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "MiMo-V2-Pro is Xiaomi's flagship foundation model, featuring over 1T total parameters and a 1M context length, deeply optimized for agentic scenarios."
+  },
+  {
+    "id": "minimax/minimax-m2.7",
+    "openrouterId": "minimax/minimax-m2.7",
+    "name": "MiniMax M2.7",
+    "vendor": "Minimax",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "205K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.279,
+        "out": 1.2
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement."
+  },
+  {
+    "id": "openai/gpt-5.4-nano",
+    "openrouterId": "openai/gpt-5.4-nano",
+    "name": "GPT-5.4 Nano",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "400K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.2,
+        "hit": 0.02,
+        "out": 1.25
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks."
+  },
+  {
+    "id": "mistralai/mistral-small-2603",
+    "openrouterId": "mistralai/mistral-small-2603",
+    "name": "Mistral Small 4",
+    "vendor": "Mistral",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.15,
+        "hit": 0.015,
+        "out": 0.6
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system."
+  },
+  {
+    "id": "z-ai/glm-5-turbo",
+    "openrouterId": "z-ai/glm-5-turbo",
+    "name": "GLM 5 Turbo",
+    "vendor": "Zhipu AI",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "203K",
+    "pricing": {
+      "openrouter": {
+        "in": 1.2,
+        "hit": 0.24,
+        "out": 4.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GLM-5 Turbo is a new model from Z.ai designed for fast inference and strong performance in agent-driven environments such as OpenClaw scenarios."
+  },
+  {
+    "id": "nvidia/nemotron-3-super-120b-a12b",
+    "openrouterId": "nvidia/nemotron-3-super-120b-a12b",
+    "name": "Nemotron 3 Super",
+    "vendor": "NVIDIA",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1M",
+    "pricing": {
+      "openrouter": {
+        "in": 0.1,
+        "out": 0.5
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications."
+  },
+  {
+    "id": "bytedance-seed/seed-2.0-lite",
+    "openrouterId": "bytedance-seed/seed-2.0-lite",
+    "name": "Seed-2.0-Lite",
+    "vendor": "ByteDance",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.25,
+        "out": 2.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Seed-2.0-Lite is a versatile, cost‑efficient enterprise workhorse that delivers strong multimodal and agent capabilities while offering noticeably lower latency, making it a practical default choice for most production w"
+  },
+  {
+    "id": "qwen/qwen3.5-9b",
+    "openrouterId": "qwen/qwen3.5-9b",
+    "name": "Qwen3.5-9B",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.04,
+        "out": 0.15
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture."
+  },
+  {
+    "id": "openai/gpt-5.4-pro",
+    "openrouterId": "openai/gpt-5.4-pro",
+    "name": "GPT-5.4 Pro",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1.1M",
+    "pricing": {
+      "openrouter": {
+        "in": 30.0,
+        "out": 180.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GPT-5.4 Pro is OpenAI's most advanced model, building on GPT-5.4's unified architecture with enhanced reasoning capabilities for complex, high-stakes tasks."
+  },
+  {
+    "id": "inception/mercury-2",
+    "openrouterId": "inception/mercury-2",
+    "name": "Mercury 2",
+    "vendor": "Inception",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "128K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.25,
+        "hit": 0.025,
+        "out": 0.75
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Mercury 2 is an extremely fast reasoning LLM, and the first reasoning diffusion LLM (dLLM)."
+  },
+  {
+    "id": "openai/gpt-5.3-chat",
+    "openrouterId": "openai/gpt-5.3-chat",
+    "name": "GPT-5.3 Chat",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "128K",
+    "pricing": {
+      "openrouter": {
+        "in": 1.75,
+        "hit": 0.175,
+        "out": 14.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GPT-5.3 Chat is an update to ChatGPT's most-used model that makes everyday conversations smoother, more useful, and more directly helpful."
+  },
+  {
+    "id": "google/gemini-3.1-flash-lite-preview",
+    "openrouterId": "google/gemini-3.1-flash-lite-preview",
+    "name": "Gemini 3.1 Flash Lite Preview",
+    "vendor": "Google",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file+audio+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1.0M",
+    "pricing": {
+      "openrouter": {
+        "in": 0.25,
+        "hit": 0.025,
+        "out": 1.5
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Gemini 3.1 Flash Lite Preview is Google's high-efficiency model optimized for high-volume use cases."
+  },
+  {
+    "id": "bytedance-seed/seed-2.0-mini",
+    "openrouterId": "bytedance-seed/seed-2.0-mini",
+    "name": "Seed-2.0-Mini",
+    "vendor": "ByteDance",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.1,
+        "out": 0.4
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Seed-2.0-mini targets latency-sensitive, high-concurrency, and cost-sensitive scenarios, emphasizing fast response and flexible inference deployment."
+  },
+  {
+    "id": "google/gemini-3.1-flash-image-preview",
+    "openrouterId": "google/gemini-3.1-flash-image-preview",
+    "name": "Nano Banana 2 (Gemini 3.1 Flash Image Preview)",
+    "vendor": "Google",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text+image",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "131K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.5,
+        "out": 3.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Gemini 3.1 Flash Image Preview, a.k.a."
+  },
+  {
+    "id": "qwen/qwen3.5-35b-a3b",
+    "openrouterId": "qwen/qwen3.5-35b-a3b",
+    "name": "Qwen3.5-35B-A3B",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.14,
+        "hit": 0.05,
+        "out": 1.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency."
+  },
+  {
+    "id": "qwen/qwen3.5-27b",
+    "openrouterId": "qwen/qwen3.5-27b",
+    "name": "Qwen3.5-27B",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.195,
+        "out": 1.56
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "The Qwen3.5 27B native vision-language Dense model incorporates a linear attention mechanism, delivering fast response times while balancing inference speed and performance."
+  },
+  {
+    "id": "qwen/qwen3.5-122b-a10b",
+    "openrouterId": "qwen/qwen3.5-122b-a10b",
+    "name": "Qwen3.5-122B-A10B",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.26,
+        "out": 2.08
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "The Qwen3.5 122B-A10B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency."
+  },
+  {
+    "id": "qwen/qwen3.5-flash-02-23",
+    "openrouterId": "qwen/qwen3.5-flash-02-23",
+    "name": "Qwen3.5-Flash",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1M",
+    "pricing": {
+      "openrouter": {
+        "in": 0.065,
+        "out": 0.26
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "The Qwen3.5 native vision-language Flash models are built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency."
+  },
+  {
+    "id": "liquid/lfm-2-24b-a2b",
+    "openrouterId": "liquid/lfm-2-24b-a2b",
+    "name": "LFM2-24B-A2B",
+    "vendor": "Liquid",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "128K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.03,
+        "out": 0.12
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "LFM2-24B-A2B is the largest model in the LFM2 family of hybrid architectures designed for efficient on-device deployment."
+  },
+  {
+    "id": "google/gemini-3.1-pro-preview-customtools",
+    "openrouterId": "google/gemini-3.1-pro-preview-customtools",
+    "name": "Gemini 3.1 Pro Preview Custom Tools",
+    "vendor": "Google",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file+audio+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1.0M",
+    "pricing": {
+      "openrouter": {
+        "in": 2.0,
+        "hit": 0.2,
+        "out": 12.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Gemini 3.1 Pro Preview Custom Tools is a variant of Gemini 3.1 Pro that improves tool selection behavior by preventing overuse of a general bash tool when more efficient third-party..."
+  },
+  {
+    "id": "aion-labs/aion-2.0",
+    "openrouterId": "aion-labs/aion-2.0",
+    "name": "Aion-2.0",
+    "vendor": "Aion Labs",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "131K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.8,
+        "hit": 0.2,
+        "out": 1.6
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Aion-2.0 is a variant of DeepSeek V3.2 optimized for immersive roleplaying and storytelling."
+  },
+  {
+    "id": "google/gemini-3.1-pro-preview",
+    "openrouterId": "google/gemini-3.1-pro-preview",
+    "name": "Gemini 3.1 Pro Preview",
+    "vendor": "Google",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file+audio+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1.0M",
+    "pricing": {
+      "openrouter": {
+        "in": 2.0,
+        "hit": 0.2,
+        "out": 12.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Gemini 3.1 Pro Preview is Google’s frontier reasoning model, delivering enhanced software engineering performance, improved agentic reliability, and more efficient token usage across complex workflows."
+  },
+  {
+    "id": "qwen/qwen3.5-plus-02-15",
+    "openrouterId": "qwen/qwen3.5-plus-02-15",
+    "name": "Qwen3.5 Plus 2026-02-15",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1M",
+    "pricing": {
+      "openrouter": {
+        "in": 0.26,
+        "out": 1.56
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "The Qwen3.5 native vision-language series Plus models are built on a hybrid architecture that integrates linear attention mechanisms with sparse mixture-of-experts models, achieving higher inference efficiency."
+  },
+  {
+    "id": "qwen/qwen3.5-397b-a17b",
+    "openrouterId": "qwen/qwen3.5-397b-a17b",
+    "name": "Qwen3.5 397B A17B",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.39,
+        "hit": 0.195,
+        "out": 2.34
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency."
+  },
+  {
+    "id": "minimax/minimax-m2.5",
+    "openrouterId": "minimax/minimax-m2.5",
+    "name": "MiniMax M2.5",
+    "vendor": "Minimax",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "205K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.15,
+        "out": 1.15
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity."
+  },
+  {
+    "id": "z-ai/glm-5",
+    "openrouterId": "z-ai/glm-5",
+    "name": "GLM 5",
+    "vendor": "Zhipu AI",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "203K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.6,
+        "hit": 0.12,
+        "out": 1.92
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows."
+  },
+  {
+    "id": "qwen/qwen3-max-thinking",
+    "openrouterId": "qwen/qwen3-max-thinking",
+    "name": "Qwen3 Max Thinking",
+    "vendor": "Alibaba",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.78,
+        "out": 3.9
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Qwen3-Max-Thinking is the flagship reasoning model in the Qwen3 series, designed for high-stakes cognitive tasks that require deep, multi-step reasoning."
+  },
+  {
+    "id": "anthropic/claude-opus-4.6",
+    "openrouterId": "anthropic/claude-opus-4.6",
+    "name": "Claude Opus 4.6",
+    "vendor": "Anthropic",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1M",
+    "pricing": {
+      "openrouter": {
+        "in": 5.0,
+        "hit": 0.5,
+        "out": 25.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Opus 4.6 is Anthropic’s strongest model for coding and long-running professional tasks."
+  },
+  {
+    "id": "qwen/qwen3-coder-next",
+    "openrouterId": "qwen/qwen3-coder-next",
+    "name": "Qwen3 Coder Next",
+    "vendor": "Alibaba",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.11,
+        "hit": 0.07,
+        "out": 0.8
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Qwen3-Coder-Next is an open-weight causal language model optimized for coding agents and local development workflows."
+  },
+  {
+    "id": "stepfun/step-3.5-flash",
+    "openrouterId": "stepfun/step-3.5-flash",
+    "name": "Step 3.5 Flash",
+    "vendor": "Stepfun",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.1,
+        "out": 0.3
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Step 3.5 Flash is StepFun's most capable open-source foundation model."
+  },
+  {
+    "id": "arcee-ai/trinity-large-preview",
+    "openrouterId": "arcee-ai/trinity-large-preview",
+    "name": "Trinity Large Preview",
+    "vendor": "Arcee Ai",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "131K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.15,
+        "out": 0.45
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Trinity-Large-Preview is a frontier-scale open-weight language model from Arcee, built as a 400B-parameter sparse Mixture-of-Experts with 13B active parameters per token using 4-of-256 expert routing."
+  },
+  {
+    "id": "moonshotai/kimi-k2.5",
+    "openrouterId": "moonshotai/kimi-k2.5",
+    "name": "Kimi K2.5",
+    "vendor": "Moonshot AI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.4,
+        "hit": 0.09,
+        "out": 1.9
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm."
+  },
+  {
+    "id": "upstage/solar-pro-3",
+    "openrouterId": "upstage/solar-pro-3",
+    "name": "Solar Pro 3",
+    "vendor": "Upstage",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "128K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.15,
+        "hit": 0.015,
+        "out": 0.6
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Solar Pro 3 is Upstage's powerful Mixture-of-Experts (MoE) language model."
+  },
+  {
+    "id": "minimax/minimax-m2-her",
+    "openrouterId": "minimax/minimax-m2-her",
+    "name": "MiniMax M2-her",
+    "vendor": "Minimax",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "66K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.3,
+        "hit": 0.03,
+        "out": 1.2
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "MiniMax M2-her is a dialogue-first large language model built for immersive roleplay, character-driven chat, and expressive multi-turn conversations."
+  },
+  {
+    "id": "writer/palmyra-x5",
+    "openrouterId": "writer/palmyra-x5",
+    "name": "Palmyra X5",
+    "vendor": "Writer",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1.0M",
+    "pricing": {
+      "openrouter": {
+        "in": 0.6,
+        "out": 6.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Palmyra X5 is Writer's most advanced model, purpose-built for building and scaling AI agents across the enterprise."
+  },
+  {
+    "id": "openai/gpt-audio",
+    "openrouterId": "openai/gpt-audio",
+    "name": "GPT Audio",
+    "vendor": "OpenAI",
+    "multimodal": "Audio",
+    "copilotMultiplier": null,
+    "performance": "text+audio->text+audio",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "128K",
+    "pricing": {
+      "openrouter": {
+        "in": 2.5,
+        "out": 10.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "The gpt-audio model is OpenAI's first generally available audio model."
+  },
+  {
+    "id": "openai/gpt-audio-mini",
+    "openrouterId": "openai/gpt-audio-mini",
+    "name": "GPT Audio Mini",
+    "vendor": "OpenAI",
+    "multimodal": "Audio",
+    "copilotMultiplier": null,
+    "performance": "text+audio->text+audio",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "128K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.6,
+        "out": 2.4
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "A cost-efficient version of GPT Audio."
+  },
+  {
+    "id": "z-ai/glm-4.7-flash",
+    "openrouterId": "z-ai/glm-4.7-flash",
+    "name": "GLM 4.7 Flash",
+    "vendor": "Zhipu AI",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "203K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.06,
+        "hit": 0.01,
+        "out": 0.4
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "As a 30B-class SOTA model, GLM-4.7-Flash offers a new option that balances performance and efficiency."
+  },
+  {
+    "id": "bytedance-seed/seed-1.6-flash",
+    "openrouterId": "bytedance-seed/seed-1.6-flash",
+    "name": "Seed 1.6 Flash",
+    "vendor": "ByteDance",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.075,
+        "out": 0.3
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Seed 1.6 Flash is an ultra-fast multimodal deep thinking model by ByteDance Seed, supporting both text and visual understanding."
+  },
+  {
+    "id": "bytedance-seed/seed-1.6",
+    "openrouterId": "bytedance-seed/seed-1.6",
+    "name": "Seed 1.6",
+    "vendor": "ByteDance",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.25,
+        "out": 2.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Seed 1.6 is a general-purpose model released by the ByteDance Seed team."
+  },
+  {
+    "id": "minimax/minimax-m2.1",
+    "openrouterId": "minimax/minimax-m2.1",
+    "name": "MiniMax M2.1",
+    "vendor": "Minimax",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "205K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.29,
+        "hit": 0.03,
+        "out": 0.95
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "MiniMax-M2.1 is a lightweight, state-of-the-art large language model optimized for coding, agentic workflows, and modern application development."
+  },
+  {
+    "id": "z-ai/glm-4.7",
+    "openrouterId": "z-ai/glm-4.7",
+    "name": "GLM 4.7",
+    "vendor": "Zhipu AI",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "203K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.4,
+        "hit": 0.08,
+        "out": 1.75
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GLM-4.7 is Z.ai’s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution."
+  },
+  {
+    "id": "google/gemini-3-flash-preview",
+    "openrouterId": "google/gemini-3-flash-preview",
+    "name": "Gemini 3 Flash Preview",
+    "vendor": "Google",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file+audio+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1.0M",
+    "pricing": {
+      "openrouter": {
+        "in": 0.5,
+        "hit": 0.05,
+        "out": 3.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Gemini 3 Flash Preview is a high speed, high value thinking model designed for agentic workflows, multi turn chat, and coding assistance."
+  },
+  {
+    "id": "xiaomi/mimo-v2-flash",
+    "openrouterId": "xiaomi/mimo-v2-flash",
+    "name": "MiMo-V2-Flash",
+    "vendor": "Xiaomi",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.1,
+        "hit": 0.01,
+        "out": 0.3
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "MiMo-V2-Flash is an open-source foundation language model developed by Xiaomi."
+  },
+  {
+    "id": "nvidia/nemotron-3-nano-30b-a3b",
+    "openrouterId": "nvidia/nemotron-3-nano-30b-a3b",
+    "name": "Nemotron 3 Nano 30B A3B",
+    "vendor": "NVIDIA",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.05,
+        "out": 0.2
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems."
+  },
+  {
+    "id": "openai/gpt-5.2-chat",
+    "openrouterId": "openai/gpt-5.2-chat",
+    "name": "GPT-5.2 Chat",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "128K",
+    "pricing": {
+      "openrouter": {
+        "in": 1.75,
+        "hit": 0.175,
+        "out": 14.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GPT-5.2 Chat (AKA Instant) is the fast, lightweight member of the 5.2 family, optimized for low-latency chat while retaining strong general intelligence."
+  },
+  {
+    "id": "openai/gpt-5.2-pro",
+    "openrouterId": "openai/gpt-5.2-pro",
+    "name": "GPT-5.2 Pro",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "400K",
+    "pricing": {
+      "openrouter": {
+        "in": 21.0,
+        "out": 168.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GPT-5.2 Pro is OpenAI’s most advanced model, offering major improvements in agentic coding and long context performance over GPT-5 Pro."
+  },
+  {
+    "id": "mistralai/devstral-2512",
+    "openrouterId": "mistralai/devstral-2512",
+    "name": "Devstral 2 2512",
+    "vendor": "Mistral",
+    "multimodal": "File",
+    "copilotMultiplier": null,
+    "performance": "text+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.4,
+        "hit": 0.04,
+        "out": 2.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Devstral 2 is a state-of-the-art open-source model by Mistral AI specializing in agentic coding."
+  },
+  {
+    "id": "relace/relace-search",
+    "openrouterId": "relace/relace-search",
+    "name": "Relace Search",
+    "vendor": "Relace",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "256K",
+    "pricing": {
+      "openrouter": {
+        "in": 1.0,
+        "out": 3.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "The relace-search model uses 4-12 `view_file` and `grep` tools in parallel to explore a codebase and return relevant files to the user request."
+  },
+  {
+    "id": "z-ai/glm-4.6v",
+    "openrouterId": "z-ai/glm-4.6v",
+    "name": "GLM 4.6V",
+    "vendor": "Zhipu AI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "131K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.3,
+        "hit": 0.05,
+        "out": 0.9
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GLM-4.6V is a large multimodal model designed for high-fidelity visual understanding and long-context reasoning across images, documents, and mixed media."
+  },
+  {
+    "id": "nex-agi/deepseek-v3.1-nex-n1",
+    "openrouterId": "nex-agi/deepseek-v3.1-nex-n1",
+    "name": "DeepSeek V3.1 Nex N1",
+    "vendor": "Nex Agi",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "131K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.135,
+        "out": 0.5
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "DeepSeek V3.1 Nex-N1 is the flagship release of the Nex-N1 series — a post-trained model designed to highlight agent autonomy, tool use, and real-world productivity."
+  },
+  {
+    "id": "essentialai/rnj-1-instruct",
+    "openrouterId": "essentialai/rnj-1-instruct",
+    "name": "Rnj 1 Instruct",
+    "vendor": "Essentialai",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "33K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.15,
+        "out": 0.15
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Rnj-1 is an 8B-parameter, dense, open-weight model family developed by Essential AI and trained from scratch with a focus on programming, math, and scientific reasoning."
+  },
+  {
+    "id": "openrouter/bodybuilder",
+    "openrouterId": "openrouter/bodybuilder",
+    "name": "Body Builder (beta)",
+    "vendor": "Openrouter",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "128K",
+    "pricing": {
+      "openrouter": {}
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Transform your natural language requests into structured OpenRouter API request objects."
+  },
+  {
+    "id": "openai/gpt-5.1-codex-max",
+    "openrouterId": "openai/gpt-5.1-codex-max",
+    "name": "GPT-5.1-Codex-Max",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "400K",
+    "pricing": {
+      "openrouter": {
+        "in": 1.25,
+        "hit": 0.125,
+        "out": 10.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GPT-5.1-Codex-Max is OpenAI’s latest agentic coding model, designed for long-running, high-context software development tasks."
+  },
+  {
+    "id": "amazon/nova-2-lite-v1",
+    "openrouterId": "amazon/nova-2-lite-v1",
+    "name": "Nova 2 Lite",
+    "vendor": "Amazon",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file+video->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1M",
+    "pricing": {
+      "openrouter": {
+        "in": 0.3,
+        "out": 2.5
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Nova 2 Lite is a fast, cost-effective reasoning model for everyday workloads that can process text, images, and videos to generate text."
+  },
+  {
+    "id": "mistralai/ministral-14b-2512",
+    "openrouterId": "mistralai/ministral-14b-2512",
+    "name": "Ministral 3 14B 2512",
+    "vendor": "Mistral",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.2,
+        "hit": 0.02,
+        "out": 0.2
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "The largest model in the Ministral 3 family, Ministral 3 14B offers frontier capabilities and performance comparable to its larger Mistral Small 3.2 24B counterpart."
+  },
+  {
+    "id": "mistralai/ministral-8b-2512",
+    "openrouterId": "mistralai/ministral-8b-2512",
+    "name": "Ministral 3 8B 2512",
+    "vendor": "Mistral",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.15,
+        "hit": 0.015,
+        "out": 0.15
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities."
+  },
+  {
+    "id": "mistralai/ministral-3b-2512",
+    "openrouterId": "mistralai/ministral-3b-2512",
+    "name": "Ministral 3 3B 2512",
+    "vendor": "Mistral",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "131K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.1,
+        "hit": 0.01,
+        "out": 0.1
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "The smallest model in the Ministral 3 family, Ministral 3 3B is a powerful, efficient tiny language model with vision capabilities."
+  },
+  {
+    "id": "mistralai/mistral-large-2512",
+    "openrouterId": "mistralai/mistral-large-2512",
+    "name": "Mistral Large 3 2512",
+    "vendor": "Mistral",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.5,
+        "hit": 0.05,
+        "out": 1.5
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license."
+  },
+  {
+    "id": "arcee-ai/trinity-mini",
+    "openrouterId": "arcee-ai/trinity-mini",
+    "name": "Trinity Mini",
+    "vendor": "Arcee Ai",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "131K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.045,
+        "out": 0.15
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Trinity Mini is a 26B-parameter (3B active) sparse mixture-of-experts language model featuring 128 experts with 8 active per token."
+  },
+  {
+    "id": "deepseek/deepseek-v3.2-speciale",
+    "openrouterId": "deepseek/deepseek-v3.2-speciale",
+    "name": "DeepSeek V3.2 Speciale",
+    "vendor": "DeepSeek",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "164K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.287,
+        "hit": 0.058,
+        "out": 0.431
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "DeepSeek-V3.2-Speciale is a high-compute variant of DeepSeek-V3.2 optimized for maximum reasoning and agentic performance."
+  },
+  {
+    "id": "deepseek/deepseek-v3.2",
+    "openrouterId": "deepseek/deepseek-v3.2",
+    "name": "DeepSeek V3.2",
+    "vendor": "DeepSeek",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "131K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.252,
+        "hit": 0.0252,
+        "out": 0.378
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance."
+  },
+  {
+    "id": "prime-intellect/intellect-3",
+    "openrouterId": "prime-intellect/intellect-3",
+    "name": "INTELLECT-3",
+    "vendor": "Prime Intellect",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "131K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.2,
+        "out": 1.1
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "INTELLECT-3 is a 106B-parameter Mixture-of-Experts model (12B active) post-trained from GLM-4.5-Air-Base using supervised fine-tuning (SFT) followed by large-scale reinforcement learning (RL)."
+  },
+  {
+    "id": "anthropic/claude-opus-4.5",
+    "openrouterId": "anthropic/claude-opus-4.5",
+    "name": "Claude Opus 4.5",
+    "vendor": "Anthropic",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "200K",
+    "pricing": {
+      "openrouter": {
+        "in": 5.0,
+        "hit": 0.5,
+        "out": 25.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Claude Opus 4.5 is Anthropic’s frontier reasoning model optimized for complex software engineering, agentic workflows, and long-horizon computer use."
+  },
+  {
+    "id": "allenai/olmo-3-32b-think",
+    "openrouterId": "allenai/olmo-3-32b-think",
+    "name": "Olmo 3 32B Think",
+    "vendor": "Allenai",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "66K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.15,
+        "out": 0.5
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Olmo 3 32B Think is a large-scale, 32-billion-parameter model purpose-built for deep reasoning, complex logic chains and advanced instruction-following scenarios."
+  },
+  {
+    "id": "google/gemini-3-pro-image-preview",
+    "openrouterId": "google/gemini-3-pro-image-preview",
+    "name": "Nano Banana Pro (Gemini 3 Pro Image Preview)",
+    "vendor": "Google",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text+image",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "66K",
+    "pricing": {
+      "openrouter": {
+        "in": 2.0,
+        "hit": 0.2,
+        "out": 12.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Nano Banana Pro is Google’s most advanced image-generation and editing model, built on Gemini 3 Pro."
+  },
+  {
+    "id": "deepcogito/cogito-v2.1-671b",
+    "openrouterId": "deepcogito/cogito-v2.1-671b",
+    "name": "Cogito v2.1 671B",
+    "vendor": "Deepcogito",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "128K",
+    "pricing": {
+      "openrouter": {
+        "in": 1.25,
+        "out": 1.25
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Cogito v2.1 671B MoE represents one of the strongest open models globally, matching performance of frontier closed and open models."
+  },
+  {
+    "id": "openai/gpt-5.1",
+    "openrouterId": "openai/gpt-5.1",
+    "name": "GPT-5.1",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "400K",
+    "pricing": {
+      "openrouter": {
+        "in": 1.25,
+        "hit": 0.13,
+        "out": 10.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GPT-5.1 is the latest frontier-grade model in the GPT-5 series, offering stronger general-purpose reasoning, improved instruction adherence, and a more natural conversational style compared to GPT-5."
+  },
+  {
+    "id": "openai/gpt-5.1-chat",
+    "openrouterId": "openai/gpt-5.1-chat",
+    "name": "GPT-5.1 Chat",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "128K",
+    "pricing": {
+      "openrouter": {
+        "in": 1.25,
+        "hit": 0.125,
+        "out": 10.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GPT-5.1 Chat (AKA Instant is the fast, lightweight member of the 5.1 family, optimized for low-latency chat while retaining strong general intelligence."
+  },
+  {
+    "id": "openai/gpt-5.1-codex",
+    "openrouterId": "openai/gpt-5.1-codex",
+    "name": "GPT-5.1-Codex",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "400K",
+    "pricing": {
+      "openrouter": {
+        "in": 1.25,
+        "hit": 0.125,
+        "out": 10.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GPT-5.1-Codex is a specialized version of GPT-5.1 optimized for software engineering and coding workflows."
+  },
+  {
+    "id": "openai/gpt-5.1-codex-mini",
+    "openrouterId": "openai/gpt-5.1-codex-mini",
+    "name": "GPT-5.1-Codex-Mini",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "400K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.25,
+        "hit": 0.03,
+        "out": 2.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GPT-5.1-Codex-Mini is a smaller and faster version of GPT-5.1-Codex"
+  },
+  {
+    "id": "moonshotai/kimi-k2-thinking",
+    "openrouterId": "moonshotai/kimi-k2-thinking",
+    "name": "Kimi K2 Thinking",
+    "vendor": "Moonshot AI",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.6,
+        "out": 2.5
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Kimi K2 Thinking is Moonshot AI’s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning."
+  },
+  {
+    "id": "amazon/nova-premier-v1",
+    "openrouterId": "amazon/nova-premier-v1",
+    "name": "Nova Premier 1.0",
+    "vendor": "Amazon",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1M",
+    "pricing": {
+      "openrouter": {
+        "in": 2.5,
+        "hit": 0.625,
+        "out": 12.5
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Amazon Nova Premier is the most capable of Amazon’s multimodal models for complex reasoning tasks and for use as the best teacher for distilling custom models."
+  },
+  {
+    "id": "perplexity/sonar-pro-search",
+    "openrouterId": "perplexity/sonar-pro-search",
+    "name": "Sonar Pro Search",
+    "vendor": "Perplexity",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "200K",
+    "pricing": {
+      "openrouter": {
+        "in": 3.0,
+        "out": 15.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Exclusively available on the OpenRouter API, Sonar Pro's new Pro Search mode is Perplexity's most advanced agentic search system."
+  },
+  {
+    "id": "mistralai/voxtral-small-24b-2507",
+    "openrouterId": "mistralai/voxtral-small-24b-2507",
+    "name": "Voxtral Small 24B 2507",
+    "vendor": "Mistral",
+    "multimodal": "Audio",
+    "copilotMultiplier": null,
+    "performance": "text+file+audio->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "32K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.1,
+        "hit": 0.01,
+        "out": 0.3
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Voxtral Small is an enhancement of Mistral Small 3, incorporating state-of-the-art audio input capabilities while retaining best-in-class text performance."
+  },
+  {
+    "id": "openai/gpt-oss-safeguard-20b",
+    "openrouterId": "openai/gpt-oss-safeguard-20b",
+    "name": "gpt-oss-safeguard-20b",
+    "vendor": "OpenAI",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "131K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.075,
+        "hit": 0.037,
+        "out": 0.3
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "gpt-oss-safeguard-20b is a safety reasoning model from OpenAI built upon gpt-oss-20b."
+  },
+  {
+    "id": "minimax/minimax-m2",
+    "openrouterId": "minimax/minimax-m2",
+    "name": "MiniMax M2",
+    "vendor": "Minimax",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "205K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.255,
+        "hit": 0.03,
+        "out": 1.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "MiniMax-M2 is a compact, high-efficiency large language model optimized for end-to-end coding and agentic workflows."
+  },
+  {
+    "id": "qwen/qwen3-vl-32b-instruct",
+    "openrouterId": "qwen/qwen3-vl-32b-instruct",
+    "name": "Qwen3 VL 32B Instruct",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.104,
+        "out": 0.416
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Qwen3-VL-32B-Instruct is a large-scale multimodal vision-language model designed for high-precision understanding and reasoning across text, images, and video."
+  },
+  {
+    "id": "ibm-granite/granite-4.0-h-micro",
+    "openrouterId": "ibm-granite/granite-4.0-h-micro",
+    "name": "Granite 4.0 Micro",
+    "vendor": "Ibm Granite",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "131K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.017,
+        "out": 0.112
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Granite-4.0-H-Micro is a 3B parameter from the Granite 4 family of models."
+  },
+  {
+    "id": "microsoft/phi-4-mini-instruct",
+    "openrouterId": "microsoft/phi-4-mini-instruct",
+    "name": "Phi 4 Mini Instruct",
+    "vendor": "Microsoft",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "131K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.08,
+        "hit": 0.08,
+        "out": 0.35
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Phi-4-mini-instruct is a lightweight open model built upon synthetic data and filtered publicly available websites - with a focus on high-quality, reasoning dense data."
+  },
+  {
+    "id": "openai/gpt-5-image-mini",
+    "openrouterId": "openai/gpt-5-image-mini",
+    "name": "GPT-5 Image Mini",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text+image",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "400K",
+    "pricing": {
+      "openrouter": {
+        "in": 2.5,
+        "hit": 0.25,
+        "out": 2.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GPT-5 Image Mini combines OpenAI's advanced language capabilities, powered by [GPT-5 Mini](https://openrouter.ai/openai/gpt-5-mini), with GPT Image 1 Mini for efficient image generation."
+  },
+  {
+    "id": "qwen/qwen3-vl-8b-thinking",
+    "openrouterId": "qwen/qwen3-vl-8b-thinking",
+    "name": "Qwen3 VL 8B Thinking",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "256K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.117,
+        "out": 1.365
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Qwen3-VL-8B-Thinking is the reasoning-optimized variant of the Qwen3-VL-8B multimodal model, designed for advanced visual and textual reasoning across complex scenes, documents, and temporal sequences."
+  },
+  {
+    "id": "qwen/qwen3-vl-8b-instruct",
+    "openrouterId": "qwen/qwen3-vl-8b-instruct",
+    "name": "Qwen3 VL 8B Instruct",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "256K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.08,
+        "out": 0.5
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Qwen3-VL-8B-Instruct is a multimodal vision-language model from the Qwen3-VL series, built for high-fidelity understanding and reasoning across text, images, and video."
+  },
+  {
+    "id": "openai/gpt-5-image",
+    "openrouterId": "openai/gpt-5-image",
+    "name": "GPT-5 Image",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text+image",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "400K",
+    "pricing": {
+      "openrouter": {
+        "in": 10.0,
+        "hit": 1.25,
+        "out": 10.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "[GPT-5](https://openrouter.ai/openai/gpt-5) Image combines OpenAI's GPT-5 model with state-of-the-art image generation capabilities."
+  },
+  {
+    "id": "openai/o3-deep-research",
+    "openrouterId": "openai/o3-deep-research",
+    "name": "o3 Deep Research",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "200K",
+    "pricing": {
+      "openrouter": {
+        "in": 10.0,
+        "hit": 2.5,
+        "out": 40.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "o3-deep-research is OpenAI's advanced model for deep research, designed to tackle complex, multi-step research tasks."
+  },
+  {
+    "id": "openai/o4-mini-deep-research",
+    "openrouterId": "openai/o4-mini-deep-research",
+    "name": "o4 Mini Deep Research",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "200K",
+    "pricing": {
+      "openrouter": {
+        "in": 2.0,
+        "hit": 0.5,
+        "out": 8.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "o4-mini-deep-research is OpenAI's faster, more affordable deep research model—ideal for tackling complex, multi-step research tasks."
+  },
+  {
+    "id": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+    "openrouterId": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+    "name": "Llama 3.3 Nemotron Super 49B V1.5",
+    "vendor": "NVIDIA",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "131K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.1,
+        "out": 0.4
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Llama-3.3-Nemotron-Super-49B-v1.5 is a 49B-parameter, English-centric reasoning/chat model derived from Meta’s Llama-3.3-70B-Instruct with a 128K context."
+  },
+  {
+    "id": "baidu/ernie-4.5-21b-a3b-thinking",
+    "openrouterId": "baidu/ernie-4.5-21b-a3b-thinking",
+    "name": "ERNIE 4.5 21B A3B Thinking",
+    "vendor": "Baidu",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "131K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.07,
+        "out": 0.28
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "ERNIE-4.5-21B-A3B-Thinking is Baidu's upgraded lightweight MoE model, refined to boost reasoning depth and quality for top-tier performance in logical puzzles, math, science, coding, text generation, and expert-level aca"
+  },
+  {
+    "id": "google/gemini-2.5-flash-image",
+    "openrouterId": "google/gemini-2.5-flash-image",
+    "name": "Nano Banana (Gemini 2.5 Flash Image)",
+    "vendor": "Google",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text+image",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "33K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.3,
+        "hit": 0.03,
+        "out": 2.5
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Gemini 2.5 Flash Image, a.k.a."
+  },
+  {
+    "id": "qwen/qwen3-vl-30b-a3b-thinking",
+    "openrouterId": "qwen/qwen3-vl-30b-a3b-thinking",
+    "name": "Qwen3 VL 30B A3B Thinking",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "131K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.13,
+        "out": 1.56
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Qwen3-VL-30B-A3B-Thinking is a multimodal model that unifies strong text generation with visual understanding for images and videos."
+  },
+  {
+    "id": "qwen/qwen3-vl-30b-a3b-instruct",
+    "openrouterId": "qwen/qwen3-vl-30b-a3b-instruct",
+    "name": "Qwen3 VL 30B A3B Instruct",
+    "vendor": "Alibaba",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "262K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.13,
+        "out": 0.52
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Qwen3-VL-30B-A3B-Instruct is a multimodal model that unifies strong text generation with visual understanding for images and videos."
+  },
+  {
+    "id": "openai/gpt-5-pro",
+    "openrouterId": "openai/gpt-5-pro",
+    "name": "GPT-5 Pro",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "text+image+file->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "400K",
+    "pricing": {
+      "openrouter": {
+        "in": 15.0,
+        "out": 120.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "GPT-5 Pro is OpenAI’s most advanced model, offering major improvements in reasoning, code quality, and user experience."
+  },
+  {
+    "id": "z-ai/glm-4.6",
+    "openrouterId": "z-ai/glm-4.6",
+    "name": "GLM 4.6",
+    "vendor": "Zhipu AI",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "203K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.43,
+        "hit": 0.08,
+        "out": 1.74
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex..."
+  },
+  {
+    "id": "deepseek/deepseek-v3.2-exp",
+    "openrouterId": "deepseek/deepseek-v3.2-exp",
+    "name": "DeepSeek V3.2 Exp",
+    "vendor": "DeepSeek",
+    "multimodal": "Text",
+    "copilotMultiplier": null,
+    "performance": "text->text",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "164K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.27,
+        "out": 0.41
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-18",
+      "verifiedFields": [
+        "contextWindow",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
+      ],
+      "sources": [
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    },
+    "notes": "DeepSeek-V3.2-Exp is an experimental large language model released by DeepSeek as an intermediate step between V3.1 and future architectures."
   }
 ]

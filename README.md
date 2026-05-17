@@ -32,19 +32,23 @@ http://localhost:4173
 
 评测数据不要混用口径：旧的 `MMLU`、`HumanEval`、`GSM8K`、`MATH` 字段只填同名 benchmark；`MMLU-Pro`、`GPQA-Diamond`、`SWE-Bench Verified`、`Terminal-Bench` 等现代评测写入 `evals.*` 字段。
 
-更新模型数据统一跑 Python 富化脚本。它会读取 `REFERENCE_SOURCES.md` 中维护的参考链接，并抓 OpenRouter API、官方定价页、NIST/CAISI、HuggingFace 模型卡等来源；能结构化解析的绝不交给 LLM。脚本会同时做数据一致性校验和 `models.html` 默认列填充检查：
+更新模型数据统一跑 Python 富化脚本。`data/model-overrides.json` 保存人工维护的精选模型、官方价格、评测和备注；脚本会用这些 curated overrides 作为基底，再从 OpenRouter 生成浏览器读取的 `data/models.json`。能结构化解析的来源绝不交给 LLM。
+
+生成宽表数据时运行：
 
 ```powershell
-python scripts\enrich_model_data.py --write --online --output .cache\model-enrich-report.json
+python scripts\enrich_model_data.py --generate-openrouter --target-count 150 --min-model-count 150 --write --online --output .cache\model-enrich-report.json
 ```
 
-只做校验、不写回时运行：
+只做离线一致性校验、不写回时运行：
 
 ```powershell
-python scripts\enrich_model_data.py --verify-only --online --output .cache\model-verify-report.json
+python scripts\enrich_model_data.py --verify-only --min-model-count 150 --output .cache\model-verify-report.json
 ```
 
-如果页面文本不够结构化，可显式增加 `--deepseek`。脚本只从 `.env` 读取 `DEEPSEEK_API_KEY`，不会把 key 写入源码或输出；提示词要求 DeepSeek 只按给定来源文本抽取，找不到字段就返回 null。旧的 Node 校验脚本已弃用。
+需要在线核验官方页面字符串时再加 `--online`。如果页面文本不够结构化，可显式增加 `--deepseek`；脚本只从 `.env` 读取 `DEEPSEEK_API_KEY`，不会把 key 写入源码或输出。旧的 Node 校验脚本已弃用。
+
+`data/model-fields.json` 定义 LLM 表格字段、默认显示列和厂商链接，`src/models.js` 只负责加载配置和渲染。
 
 ## 价格更新格式
 

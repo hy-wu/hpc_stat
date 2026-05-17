@@ -1,49 +1,6 @@
-const fieldDefs = [
-  { key: "name", label: "模型名称", type: "text", visible: true },
-  { key: "vendor", label: "厂商", type: "text", visible: true },
-  { key: "multimodal", label: "多模态", type: "text", visible: true },
-  { key: "copilotMultiplier", label: "Copilot 倍率", type: "number", visible: true },
-  { key: "performance", label: "性能定位", type: "text", visible: true },
-  { key: "arenaElo", label: "Arena Elo", type: "number", visible: false, heatmap: true },
-  { key: "mmlu", label: "MMLU", type: "number", visible: false, heatmap: true },
-  { key: "humanEval", label: "HumanEval", type: "number", visible: false, heatmap: true },
-  { key: "gsm8k", label: "GSM8K", type: "number", visible: false, heatmap: true },
-  { key: "gpqa", label: "GPQA", type: "number", visible: false, heatmap: true },
-  { key: "math", label: "MATH", type: "number", visible: false, heatmap: true },
-  { key: "evals.caisiElo", label: "CAISI Elo", type: "number", visible: true, heatmap: true, source: "https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro" },
-  { key: "evals.caisiSweBenchVerified", label: "SWE Verified (CAISI)", type: "number", visible: true, heatmap: true },
-  { key: "evals.caisiGpqaDiamond", label: "GPQA-Diamond (CAISI)", type: "number", visible: true, heatmap: true },
-  { key: "evals.caisiOtisAime2025", label: "OTIS-AIME 2025", type: "number", visible: true, heatmap: true },
-  { key: "evals.caisiPumac2024", label: "PUMaC 2024", type: "number", visible: false, heatmap: true },
-  { key: "evals.caisiSmt2025", label: "SMT 2025", type: "number", visible: false, heatmap: true },
-  { key: "evals.mmluPro", label: "MMLU-Pro", type: "number", visible: true, heatmap: true, source: "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" },
-  { key: "evals.gpqaDiamond", label: "GPQA-Diamond", type: "number", visible: false, heatmap: true },
-  { key: "evals.liveCodeBench", label: "LiveCodeBench", type: "number", visible: false, heatmap: true },
-  { key: "evals.terminalBench", label: "Terminal-Bench 2.0", type: "number", visible: false, heatmap: true },
-  { key: "evals.reportedSweBenchVerified", label: "SWE Verified (report)", type: "number", visible: false, heatmap: true },
-  { key: "contextWindow", label: "上下文", type: "text", visible: true },
-  // OpenRouter (Moved to front as requested)
-  { key: "pricing.openrouter.in", label: "OpenRouter In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://openrouter.ai/models" },
-  { key: "pricing.openrouter.out", label: "OpenRouter Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  // Official (Now merged with DeepSeek official data in the backend logic)
-  { key: "pricing.official.in", label: "官方 In", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  { key: "pricing.official.hit", label: "官方 In(Hit)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  { key: "pricing.official.out", label: "官方 Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  // Copilot
-  { key: "pricing.copilot.in", label: "Copilot In", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
-  { key: "pricing.copilot.out", label: "Copilot Out", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
-  // Cursor
-  { key: "pricing.cursor.in", label: "Cursor In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://cursor.com/cn/docs/models-and-pricing" },
-  { key: "pricing.cursor.out", label: "Cursor Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  // SiliconFlow
-  { key: "pricing.siliconflow.in", label: "硅基流动 In", type: "number", visible: false, heatmap: true, inverseHeatmap: true, source: "https://siliconflow.cn/pricing" },
-  { key: "pricing.siliconflow.hit", label: "硅基流动 In(Hit)", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
-  { key: "pricing.siliconflow.out", label: "硅基流动 Out", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
-  // Nvidia
-  { key: "pricing.nvidia.in", label: "Nvidia In", type: "number", visible: false, heatmap: true, inverseHeatmap: true, source: "https://www.nvidia.com/en-us/ai-data-science/generative-ai/nim/" },
-  { key: "pricing.nvidia.out", label: "Nvidia Out", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
-  { key: "notes", label: "备注", type: "text", visible: false },
-];
+let fieldDefs = [];
+let vendorLinks = {};
+let defaultVisibleColumns = new Set();
 
 const state = {
   models: [],
@@ -67,27 +24,19 @@ const elements = {
   bestHumanEval: document.querySelector("#bestHumanEval"),
 };
 
-const defaultVisibleColumns = new Set(fieldDefs.filter(f => f.visible).map(f => f.key));
-
-// Official price sources mapping by vendor
-const vendorLinks = {
-  "Anthropic": "https://www.anthropic.com/pricing",
-  "OpenAI": "https://openai.com/api/pricing",
-  "DeepSeek": "https://api-docs.deepseek.com/quick_start/pricing",
-  "Google": "https://ai.google.dev/pricing",
-  "Meta": "https://llama.meta.com/",
-  "Alibaba": "https://help.aliyun.com/zh/dashcope/developer-reference/model-pricing",
-  "Mistral": "https://mistral.ai/technology/#pricing",
-  "01.AI": "https://platform.lingyiwanwu.com/pricing",
-  "Zhipu AI": "https://open.bigmodel.cn/pricing"
-};
-
 async function init() {
   try {
-    const response = await fetch("data/models.json");
-    const rawData = await response.json();
+    const [modelsResponse, fieldsResponse] = await Promise.all([
+      fetch("data/models.json"),
+      fetch("data/model-fields.json"),
+    ]);
+    const rawData = await modelsResponse.json();
+    const fieldConfig = await fieldsResponse.json();
+    fieldDefs = fieldConfig.fields || [];
+    vendorLinks = fieldConfig.vendorLinks || {};
+    defaultVisibleColumns = new Set(fieldDefs.filter(f => f.visible).map(f => f.key));
+    state.visibleColumns = new Set(defaultVisibleColumns);
 
-    // Logic to merge deepseek_official into official columns for the UI
     state.models = rawData.map(m => {
       const model = {...m};
       if (model.pricing?.deepseek_official) {
