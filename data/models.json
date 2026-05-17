@@ -6,12 +6,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 0.33,
     "performance": "Fast",
-    "arenaElo": 1245,
-    "mmlu": 82.5,
-    "humanEval": 78.2,
-    "gsm8k": 85.1,
-    "gpqa": 42.1,
-    "math": 68.5,
+    "arenaElo": 1245, "mmlu": 82.5, "humanEval": 78.2, "gsm8k": 85.1, "gpqa": 42.1, "math": 68.5,
     "contextWindow": "200K",
     "pricing": {
       "official": {"in": 1.0, "hit": 0.1, "out": 5.0},
@@ -19,8 +14,7 @@
       "cursor": {"in": 1.0, "out": 5.0},
       "openrouter": {"in": 1.1, "out": 5.5},
       "nvidia": {"in": 0.9, "out": 4.5},
-      "siliconflow": {"in": 1.0, "hit": 0.1, "out": 5.0},
-      "deepseek_official": {"in": null, "hit": null, "out": null}
+      "siliconflow": {"in": 1.0, "hit": 0.1, "out": 5.0}
     },
     "notes": "Optimized for speed and high-volume routing."
   },
@@ -31,12 +25,7 @@
     "multimodal": "Vision/Audio",
     "copilotMultiplier": 15.0,
     "performance": "Ultra-High",
-    "arenaElo": 1385,
-    "mmlu": 94.8,
-    "humanEval": 92.5,
-    "gsm8k": 97.2,
-    "gpqa": 78.5,
-    "math": 94.2,
+    "arenaElo": 1385, "mmlu": 94.8, "humanEval": 92.5, "gsm8k": 97.2, "gpqa": 78.5, "math": 94.2,
     "contextWindow": "1M",
     "pricing": {
       "official": {"in": 45.0, "hit": 4.5, "out": 225.0},
@@ -44,8 +33,7 @@
       "cursor": {"in": 45.0, "out": 225.0},
       "openrouter": {"in": 48.0, "out": 240.0},
       "nvidia": {"in": 42.0, "out": 210.0},
-      "siliconflow": {"in": 46.0, "hit": 4.6, "out": 230.0},
-      "deepseek_official": {"in": null, "hit": null, "out": null}
+      "siliconflow": {"in": 46.0, "hit": 4.6, "out": 230.0}
     },
     "notes": "State-of-the-art reasoning for complex agents."
   },
@@ -56,12 +44,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 1.0,
     "performance": "Medium · High",
-    "arenaElo": 1315,
-    "mmlu": 89.2,
-    "humanEval": 88.5,
-    "gsm8k": 92.0,
-    "gpqa": 58.2,
-    "math": 84.5,
+    "arenaElo": 1315, "mmlu": 89.2, "humanEval": 88.5, "gsm8k": 92.0, "gpqa": 58.2, "math": 84.5,
     "contextWindow": "1M",
     "pricing": {
       "official": {"in": 3.0, "hit": 0.3, "out": 15.0},
@@ -69,110 +52,8 @@
       "cursor": {"in": 3.0, "out": 15.0},
       "openrouter": {"in": 2.8, "out": 14.0},
       "nvidia": {"in": 2.5, "out": 12.0},
-      "siliconflow": {"in": 2.8, "hit": 0.28, "out": 14.0},
-      "deepseek_official": {"in": null, "hit": null, "out": null}
-    },
-    "notes": "Current flagship workhorse."
-  },
-  {
-    "id": "gpt-5.5",
-    "name": "GPT-5.5",
-    "vendor": "OpenAI",
-    "multimodal": "Omni",
-    "copilotMultiplier": 7.5,
-    "performance": "High",
-    "arenaElo": 1365,
-    "mmlu": 93.5,
-    "humanEval": 91.0,
-    "gsm8k": 96.5,
-    "gpqa": 72.8,
-    "math": 92.1,
-    "contextWindow": "1M",
-    "pricing": {
-      "official": {"in": 22.5, "hit": 2.25, "out": 112.5},
-      "copilot": {"in": 22.5, "out": 112.5},
-      "cursor": {"in": 22.5, "out": 112.5},
-      "openrouter": {"in": 24.0, "out": 120.0},
-      "nvidia": {"in": 20.0, "out": 100.0},
-      "siliconflow": {"in": 23.5, "hit": 2.35, "out": 115.0},
-      "deepseek_official": {"in": null, "hit": null, "out": null}
-    },
-    "notes": "Omnimodal flagship."
-  },
-  {
-    "id": "deepseek-v4-pro",
-    "name": "DeepSeek V4 Pro",
-    "vendor": "DeepSeek",
-    "multimodal": "Vision/Reasoning",
-    "copilotMultiplier": null,
-    "performance": "High (SOTA Domestic)",
-    "arenaElo": 1345,
-    "mmlu": 92.2,
-    "humanEval": 90.5,
-    "gsm8k": 95.1,
-    "gpqa": 70.2,
-    "math": 91.5,
-    "contextWindow": "1M",
-    "pricing": {
-      "official": {"in": 1.74, "hit": 0.04, "out": 3.48},
-      "copilot": {"in": null, "out": null},
-      "cursor": {"in": 1.74, "out": 3.48},
-      "openrouter": {"in": 1.9, "out": 3.8},
-      "nvidia": {"in": 1.7, "out": 3.4},
-      "siliconflow": {"in": 1.74, "hit": 0.03, "out": 3.48},
-      "deepseek_official": {"in": 0.44, "hit": 0.01, "out": 0.87}
-    },
-    "notes": "Domestic champion."
-  },
-  {
-    "id": "deepseek-v4-flash",
-    "name": "DeepSeek V4 Flash",
-    "vendor": "DeepSeek",
-    "multimodal": "Vision",
-    "copilotMultiplier": null,
-    "performance": "Extreme Speed",
-    "arenaElo": 1230,
-    "mmlu": 81.5,
-    "humanEval": 76.0,
-    "gsm8k": 84.2,
-    "gpqa": 38.5,
-    "math": 65.2,
-    "contextWindow": "1M",
-    "pricing": {
-      "official": {"in": 0.14, "hit": 0.003, "out": 0.28},
-      "copilot": {"in": null, "out": null},
-      "cursor": {"in": 0.14, "out": 0.28},
-      "openrouter": {"in": 0.15, "out": 0.30},
-      "nvidia": {"in": 0.14, "out": 0.28},
-      "siliconflow": {"in": 0.14, "hit": 0.002, "out": 0.28},
-      "deepseek_official": {"in": 0.14, "hit": 0.002, "out": 0.28}
-    },
-    "notes": "Cost-per-token leader."
-  },
-  {
-    "id": "gpt-5.3-codex",
-    "name": "GPT-5.3-Codex",
-    "vendor": "OpenAI",
-    "multimodal": "Vision",
-    "copilotMultiplier": 1.0,
-    "performance": "High · High",
-    "arenaElo": 1295,
-    "mmlu": 86.0,
-    "humanEval": 94.2,
-    "gsm8k": 88.5,
-    "gpqa": 48.2,
-    "math": 88.4,
-    "contextWindow": "400K",
-    "pricing": {
-      "official": {"in": 3.0, "hit": 0.3, "out": 15.0},
-      "copilot": {"in": 3.0, "out": 15.0},
-      "cursor": {"in": 3.0, "out": 15.0},
-      "openrouter": {"in": 2.9, "out": 14.5},
-      "nvidia": {"in": 2.6, "out": 13.0},
-      "siliconflow": {"in": 3.2, "hit": 0.32, "out": 16.0},
-      "deepseek_official": {"in": null, "hit": null, "out": null}
-    },
-    "notes": "SOTA for coding."
+      "siliconflow": {"in": 2.8, "hit": 0.28, "out": 14.0}
+    }
   },
   {
     "id": "claude-sonnet-4.5",
@@ -181,23 +62,71 @@
     "multimodal": "Vision",
     "copilotMultiplier": 1.0,
     "performance": "Medium",
-    "arenaElo": 1280,
-    "mmlu": 88.0,
-    "humanEval": 86.5,
-    "gsm8k": 90.2,
-    "gpqa": 52.4,
-    "math": 78.9,
+    "arenaElo": 1280, "mmlu": 88.0, "humanEval": 86.5, "gsm8k": 90.2, "gpqa": 52.4, "math": 78.9,
     "contextWindow": "500K",
     "pricing": {
       "official": {"in": 3.0, "hit": 0.3, "out": 15.0},
-      "copilot": {"in": 3.0, "out": 15.0},
-      "cursor": {"in": 3.0, "out": 15.0},
-      "openrouter": {"in": 3.2, "out": 16.0},
-      "nvidia": {"in": 2.8, "out": 14.0},
-      "siliconflow": {"in": 3.1, "hit": 0.31, "out": 15.5},
-      "deepseek_official": {"in": null, "hit": null, "out": null}
-    },
-    "notes": "Initial v4 Sonnet."
+      "copilot": {"in": 3.0, "out": 15.0}
+    }
+  },
+  {
+    "id": "gpt-5.5",
+    "name": "GPT-5.5",
+    "vendor": "OpenAI",
+    "multimodal": "Omni",
+    "copilotMultiplier": 7.5,
+    "performance": "High",
+    "arenaElo": 1365, "mmlu": 93.5, "humanEval": 91.0, "gsm8k": 96.5, "gpqa": 72.8, "math": 92.1,
+    "contextWindow": "1M",
+    "pricing": {
+      "official": {"in": 22.5, "hit": 2.25, "out": 112.5},
+      "copilot": {"in": 22.5, "out": 112.5},
+      "cursor": {"in": 22.5, "out": 112.5},
+      "openrouter": {"in": 24.0, "out": 120.0},
+      "nvidia": {"in": 20.0, "out": 100.0}
+    }
+  },
+  {
+    "id": "gpt-5.4",
+    "name": "GPT-5.4",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": 1.0,
+    "performance": "High",
+    "arenaElo": 1330, "mmlu": 91.5, "humanEval": 89.0, "gsm8k": 94.0, "gpqa": 64.5, "math": 86.5,
+    "contextWindow": "512K",
+    "pricing": {
+      "official": {"in": 3.0, "hit": 0.3, "out": 15.0},
+      "copilot": {"in": 3.0, "out": 15.0}
+    }
+  },
+  {
+    "id": "gpt-5.3-codex",
+    "name": "GPT-5.3-Codex",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": 1.0,
+    "performance": "High · High",
+    "arenaElo": 1295, "mmlu": 86.0, "humanEval": 94.2, "gsm8k": 88.5, "gpqa": 48.2, "math": 88.4,
+    "contextWindow": "400K",
+    "pricing": {
+      "official": {"in": 3.0, "hit": 0.3, "out": 15.0},
+      "copilot": {"in": 3.0, "out": 15.0}
+    }
+  },
+  {
+    "id": "gpt-5.2-codex",
+    "name": "GPT-5.2-Codex",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": 1.0,
+    "performance": "High",
+    "arenaElo": 1260, "mmlu": 84.5, "humanEval": 92.0, "gsm8k": 86.5, "gpqa": 45.8, "math": 82.1,
+    "contextWindow": "200K",
+    "pricing": {
+      "official": {"in": 3.0, "hit": 0.3, "out": 15.0},
+      "copilot": {"in": 3.0, "out": 15.0}
+    }
   },
   {
     "id": "gpt-5.2",
@@ -206,23 +135,12 @@
     "multimodal": "Vision",
     "copilotMultiplier": 1.0,
     "performance": "Medium",
-    "arenaElo": 1275,
-    "mmlu": 87.5,
-    "humanEval": 85.2,
-    "gsm8k": 89.8,
-    "gpqa": 50.1,
-    "math": 76.2,
+    "arenaElo": 1275, "mmlu": 87.5, "humanEval": 85.2, "gsm8k": 89.8, "gpqa": 50.1, "math": 76.2,
     "contextWindow": "200K",
     "pricing": {
       "official": {"in": 3.0, "hit": 0.3, "out": 15.0},
-      "copilot": {"in": 3.0, "out": 15.0},
-      "cursor": {"in": 3.0, "out": 15.0},
-      "openrouter": {"in": 3.3, "out": 16.5},
-      "nvidia": {"in": 2.9, "out": 14.5},
-      "siliconflow": {"in": 3.2, "hit": 0.32, "out": 16.0},
-      "deepseek_official": {"in": null, "hit": null, "out": null}
-    },
-    "notes": "Standard Pro tier."
+      "copilot": {"in": 3.0, "out": 15.0}
+    }
   },
   {
     "id": "gpt-5.4-mini",
@@ -231,23 +149,12 @@
     "multimodal": "Vision",
     "copilotMultiplier": 0.33,
     "performance": "High",
-    "arenaElo": 1255,
-    "mmlu": 84.5,
-    "humanEval": 82.0,
-    "gsm8k": 87.0,
-    "gpqa": 43.4,
-    "math": 72.8,
+    "arenaElo": 1255, "mmlu": 84.5, "humanEval": 82.0, "gsm8k": 87.0, "gpqa": 43.4, "math": 72.8,
     "contextWindow": "128K",
     "pricing": {
       "official": {"in": 1.0, "hit": 0.1, "out": 5.0},
-      "copilot": {"in": 1.0, "out": 5.0},
-      "cursor": {"in": 1.0, "out": 5.0},
-      "openrouter": {"in": 1.1, "out": 5.5},
-      "nvidia": {"in": 0.8, "out": 4.0},
-      "siliconflow": {"in": 1.1, "hit": 0.11, "out": 5.5},
-      "deepseek_official": {"in": null, "hit": null, "out": null}
-    },
-    "notes": "Small model efficiency leader."
+      "copilot": {"in": 1.0, "out": 5.0}
+    }
   },
   {
     "id": "gpt-5-mini",
@@ -256,23 +163,9 @@
     "multimodal": "Text",
     "copilotMultiplier": 0.0,
     "performance": "Medium · Low",
-    "arenaElo": 1235,
-    "mmlu": 83.2,
-    "humanEval": 80.5,
-    "gsm8k": 85.0,
-    "gpqa": 40.2,
-    "math": 70.5,
+    "arenaElo": 1235, "mmlu": 83.2, "humanEval": 80.5, "gsm8k": 85.0, "gpqa": 40.2, "math": 70.5,
     "contextWindow": "128K",
-    "pricing": {
-      "official": {"in": 0.0, "out": 0.0},
-      "copilot": {"in": 0.0, "out": 0.0},
-      "cursor": {"in": 0.0, "out": 0.0},
-      "openrouter": {"in": 0.1, "out": 0.2},
-      "nvidia": {"in": 0.0, "out": 0.0},
-      "siliconflow": {"in": 0.0, "out": 0.0},
-      "deepseek_official": {"in": null, "hit": null, "out": null}
-    },
-    "notes": "Free tier."
+    "pricing": { "official": {"in": 0.0, "out": 0.0}, "copilot": {"in": 0.0, "out": 0.0} }
   },
   {
     "id": "gpt-4.1",
@@ -281,22 +174,127 @@
     "multimodal": "Vision",
     "copilotMultiplier": 0.0,
     "performance": "0x",
-    "arenaElo": 1210,
-    "mmlu": 81.0,
-    "humanEval": 75.0,
-    "gsm8k": 82.0,
-    "gpqa": 35.5,
-    "math": 62.0,
+    "arenaElo": 1210, "mmlu": 81.0, "humanEval": 75.0, "gsm8k": 82.0, "gpqa": 35.5, "math": 62.0,
+    "pricing": { "official": {"in": 0.0, "out": 0.0}, "copilot": {"in": 0.0, "out": 0.0} }
+  },
+  {
+    "id": "deepseek-v4-pro",
+    "name": "DeepSeek V4 Pro",
+    "vendor": "DeepSeek",
+    "multimodal": "Vision/Reasoning",
+    "arenaElo": 1345, "mmlu": 92.2, "humanEval": 90.5, "gsm8k": 95.1, "gpqa": 70.2, "math": 91.5,
+    "contextWindow": "1M",
+    "pricing": {
+      "official": {"in": 1.74, "hit": 0.04, "out": 3.48},
+      "deepseek_official": {"in": 0.44, "hit": 0.01, "out": 0.87},
+      "siliconflow": {"in": 1.74, "hit": 0.03, "out": 3.48}
+    }
+  },
+  {
+    "id": "deepseek-v4-flash",
+    "name": "DeepSeek V4 Flash",
+    "vendor": "DeepSeek",
+    "multimodal": "Vision",
+    "arenaElo": 1230, "mmlu": 81.5, "humanEval": 76.0, "gsm8k": 84.2, "gpqa": 38.5, "math": 65.2,
+    "contextWindow": "1M",
+    "pricing": {
+      "official": {"in": 0.14, "hit": 0.003, "out": 0.28},
+      "deepseek_official": {"in": 0.14, "hit": 0.002, "out": 0.28},
+      "siliconflow": {"in": 0.14, "hit": 0.002, "out": 0.28}
+    }
+  },
+  {
+    "id": "qwen-3.0-ultra",
+    "name": "Qwen 3.0 Ultra",
+    "vendor": "Alibaba",
+    "multimodal": "Omni",
+    "arenaElo": 1372, "mmlu": 94.1, "humanEval": 91.8, "gsm8k": 96.2, "gpqa": 75.1, "math": 93.5,
+    "contextWindow": "1M",
+    "pricing": {
+      "official": {"in": 2.5, "hit": 0.25, "out": 7.5},
+      "siliconflow": {"in": 2.4, "hit": 0.24, "out": 7.2}
+    }
+  },
+  {
+    "id": "gemini-2.5-ultra",
+    "name": "Gemini 2.5 Ultra",
+    "vendor": "Google",
+    "multimodal": "Omni",
+    "arenaElo": 1368, "mmlu": 93.8, "humanEval": 90.2, "gsm8k": 95.8, "gpqa": 76.2, "math": 92.8,
+    "contextWindow": "2M",
+    "pricing": {
+      "official": {"in": 15.0, "hit": 1.5, "out": 45.0}
+    }
+  },
+  {
+    "id": "gemini-2.5-pro",
+    "name": "Gemini 2.5 Pro",
+    "vendor": "Google",
+    "multimodal": "Omni",
+    "arenaElo": 1320, "mmlu": 90.1, "humanEval": 87.5, "gsm8k": 91.2, "gpqa": 62.5, "math": 85.1,
+    "contextWindow": "2M",
+    "pricing": {
+      "official": {"in": 3.5, "hit": 0.35, "out": 10.5}
+    }
+  },
+  {
+    "id": "llama-4-500b",
+    "name": "Llama 4 500B",
+    "vendor": "Meta",
+    "multimodal": "Vision",
+    "arenaElo": 1355, "mmlu": 92.5, "humanEval": 89.5, "gsm8k": 94.5, "gpqa": 68.5, "math": 89.2,
+    "contextWindow": "512K",
+    "pricing": {
+      "openrouter": {"in": 0.8, "out": 2.4},
+      "nvidia": {"in": 0.75, "out": 2.25},
+      "siliconflow": {"in": 0.78, "out": 2.3}
+    }
+  },
+  {
+    "id": "llama-4-100b",
+    "name": "Llama 4 100B",
+    "vendor": "Meta",
+    "multimodal": "Vision",
+    "arenaElo": 1305, "mmlu": 88.5, "humanEval": 85.1, "gsm8k": 90.1, "gpqa": 55.2, "math": 82.5,
+    "contextWindow": "512K",
+    "pricing": {
+      "openrouter": {"in": 0.3, "out": 0.9},
+      "nvidia": {"in": 0.28, "out": 0.84}
+    }
+  },
+  {
+    "id": "mistral-large-3",
+    "name": "Mistral Large 3",
+    "vendor": "Mistral",
+    "multimodal": "Vision",
+    "arenaElo": 1312, "mmlu": 89.5, "humanEval": 87.2, "gsm8k": 91.5, "gpqa": 60.1, "math": 84.2,
+    "contextWindow": "256K",
+    "pricing": {
+      "official": {"in": 2.0, "out": 6.0},
+      "openrouter": {"in": 2.1, "out": 6.3}
+    }
+  },
+  {
+    "id": "yi-2.0-lightning",
+    "name": "Yi 2.0 Lightning",
+    "vendor": "01.AI",
+    "multimodal": "Vision",
+    "arenaElo": 1285, "mmlu": 87.2, "humanEval": 84.5, "gsm8k": 89.2, "gpqa": 48.5, "math": 76.5,
     "contextWindow": "128K",
     "pricing": {
-      "official": {"in": 0.0, "out": 0.0},
-      "copilot": {"in": 0.0, "out": 0.0},
-      "cursor": {"in": 0.0, "out": 0.0},
-      "openrouter": {"in": 0.1, "out": 0.1},
-      "nvidia": {"in": 0.0, "out": 0.0},
-      "siliconflow": {"in": 0.0, "out": 0.0},
-      "deepseek_official": {"in": null, "hit": null, "out": null}
-    },
-    "notes": "Legacy free model."
+      "official": {"in": 0.25, "out": 0.75},
+      "siliconflow": {"in": 0.24, "out": 0.72}
+    }
+  },
+  {
+    "id": "glm-5-9b",
+    "name": "GLM-5 9B",
+    "vendor": "Zhipu AI",
+    "multimodal": "Omni",
+    "arenaElo": 1240, "mmlu": 80.5, "humanEval": 75.1, "gsm8k": 82.1, "gpqa": 35.2, "math": 68.1,
+    "contextWindow": "1M",
+    "pricing": {
+      "official": {"in": 0.0, "out": 0.0}
+    }
   }
 ]
