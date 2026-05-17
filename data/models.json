@@ -6,7 +6,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 15.0,
     "performance": "Most capable Claude model",
-    "arenaElo": null,
+    "arenaElo": 1559.3,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -39,6 +39,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "copilotMultiplier",
         "evals.browseComp",
@@ -106,6 +107,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     }
@@ -117,7 +122,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 1.0,
     "performance": "Medium",
-    "arenaElo": null,
+    "arenaElo": 1556.6,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -150,6 +155,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "copilotMultiplier",
         "evals.browseComp",
@@ -213,6 +219,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     }
@@ -224,7 +234,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 1.0,
     "performance": null,
-    "arenaElo": null,
+    "arenaElo": 1453.4,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -256,6 +266,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "copilotMultiplier",
         "evals.aime2025",
@@ -312,6 +323,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     }
@@ -323,7 +338,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 0.33,
     "performance": "Fastest Claude model",
-    "arenaElo": null,
+    "arenaElo": 1320.3,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -356,6 +371,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "copilotMultiplier",
         "evals.aime2025",
@@ -419,6 +435,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     }
@@ -430,7 +450,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 7.5,
     "performance": "High",
-    "arenaElo": null,
+    "arenaElo": 1289.6,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -468,6 +488,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "copilotMultiplier",
         "evals.browseComp",
@@ -540,6 +561,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     }
@@ -551,7 +576,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 1.0,
     "performance": "High",
-    "arenaElo": null,
+    "arenaElo": 1435.2,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -585,6 +610,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "copilotMultiplier",
         "evals.browseComp",
@@ -649,6 +675,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     }
@@ -660,7 +690,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 0.33,
     "performance": "High",
-    "arenaElo": null,
+    "arenaElo": 1257.1,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -697,6 +727,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "copilotMultiplier",
         "evals.caisiElo",
@@ -760,6 +791,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     }
@@ -848,7 +883,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 1.0,
     "performance": "High",
-    "arenaElo": null,
+    "arenaElo": 1334.4,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -875,6 +910,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "copilotMultiplier",
         "multimodal",
@@ -908,6 +944,10 @@
         {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     }
@@ -919,7 +959,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 1.0,
     "performance": "Medium",
-    "arenaElo": null,
+    "arenaElo": 1404.3,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -952,6 +992,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "copilotMultiplier",
         "evals.aime2025",
@@ -1010,6 +1051,10 @@
         {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     }
@@ -1021,7 +1066,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 0.0,
     "performance": "Medium",
-    "arenaElo": null,
+    "arenaElo": 1182.1,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1052,6 +1097,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "copilotMultiplier",
         "evals.aime2025",
@@ -1100,6 +1146,10 @@
         {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     }
@@ -1111,7 +1161,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 0.0,
     "performance": null,
-    "arenaElo": null,
+    "arenaElo": 1214.5,
     "mmlu": 90.2,
     "humanEval": null,
     "gsm8k": null,
@@ -1145,6 +1195,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "copilotMultiplier",
         "evals.aime2024",
@@ -1212,6 +1263,10 @@
         {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     }
@@ -1223,7 +1278,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "Thinking/non-thinking modes",
-    "arenaElo": null,
+    "arenaElo": 1459.2,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1259,6 +1314,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.caisiElo",
         "evals.caisiGpqaDiamond",
@@ -1302,6 +1358,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -1314,7 +1374,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "Thinking/non-thinking modes",
-    "arenaElo": null,
+    "arenaElo": 1434.4,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1344,6 +1404,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.liveCodeBench",
@@ -1377,6 +1438,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     }
@@ -1388,7 +1453,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "Complex reasoning/coding",
-    "arenaElo": null,
+    "arenaElo": 1275.8,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1423,6 +1488,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.aime2024",
         "evals.aime2025",
@@ -1487,6 +1553,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -1499,7 +1569,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "Hybrid reasoning",
-    "arenaElo": null,
+    "arenaElo": 1213.8,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1534,6 +1604,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.aime2024",
         "evals.aime2025",
@@ -1598,6 +1669,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     }
@@ -1609,7 +1684,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "17B active / 400B total MoE",
-    "arenaElo": null,
+    "arenaElo": 1147.4,
     "mmlu": 85.5,
     "humanEval": null,
     "gsm8k": null,
@@ -1631,6 +1706,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.liveCodeBench",
@@ -1676,6 +1752,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     }
@@ -1687,7 +1767,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "17B active / 109B total MoE",
-    "arenaElo": null,
+    "arenaElo": 1128.4,
     "mmlu": 79.6,
     "humanEval": null,
     "gsm8k": null,
@@ -1709,6 +1789,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.liveCodeBench",
@@ -1754,6 +1835,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     }
@@ -1944,7 +2029,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": null,
+    "arenaElo": 1278.8,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1963,6 +2048,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
@@ -1976,6 +2062,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -1989,7 +2079,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image->text",
-    "arenaElo": null,
+    "arenaElo": 1395.9,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -2012,6 +2102,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
@@ -2035,6 +2126,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -2048,7 +2143,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1199.5,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -2067,6 +2162,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
@@ -2080,6 +2176,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -2339,7 +2439,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1491.3,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -2357,6 +2457,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
@@ -2369,6 +2470,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -2610,7 +2715,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1472.3,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -2629,6 +2734,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
@@ -2642,6 +2748,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -2655,7 +2765,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+audio+video->text",
-    "arenaElo": null,
+    "arenaElo": 1439.3,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -2674,6 +2784,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
@@ -2687,6 +2798,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -2871,7 +2986,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image->text",
-    "arenaElo": null,
+    "arenaElo": 1518.5,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -2900,6 +3015,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.browseComp",
         "evals.gpqaDiamond",
@@ -2948,6 +3064,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -3006,7 +3126,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1531.9,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3033,6 +3153,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.browseComp",
         "evals.gpqaDiamond",
@@ -3071,6 +3192,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -3084,7 +3209,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": null,
+    "arenaElo": 1242.5,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3114,6 +3239,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.hle",
@@ -3157,6 +3283,10 @@
         {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -3170,7 +3300,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": null,
+    "arenaElo": 1252.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3200,6 +3330,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.hle",
@@ -3243,6 +3374,10 @@
         {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -3256,7 +3391,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": null,
+    "arenaElo": 1467.2,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3284,6 +3419,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.hle",
@@ -3331,6 +3467,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -3344,7 +3484,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": null,
+    "arenaElo": 1229.4,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3363,6 +3503,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
@@ -3376,6 +3517,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -3389,7 +3534,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1245.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3408,6 +3553,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
@@ -3421,6 +3567,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -3698,7 +3848,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+audio+video->text",
-    "arenaElo": null,
+    "arenaElo": 1210.1,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3719,6 +3869,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.reportedSweBenchVerified",
         "multimodal",
@@ -3737,6 +3888,10 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -3750,7 +3905,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1432.9,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3771,6 +3926,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.reportedSweBenchVerified",
         "multimodal",
@@ -3789,6 +3945,10 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -3802,7 +3962,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1407.2,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3824,6 +3984,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
@@ -3846,6 +4007,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -3859,7 +4024,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": null,
+    "arenaElo": 1200.8,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3889,6 +4054,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.hle",
@@ -3928,6 +4094,10 @@
         {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -4341,7 +4511,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1165.3,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4368,6 +4538,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.aime2025",
         "evals.gpqaDiamond",
@@ -4406,6 +4577,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -4419,7 +4594,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": null,
+    "arenaElo": 1449.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4446,6 +4621,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
@@ -4475,6 +4651,10 @@
         {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -4488,7 +4668,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file+audio+video->text",
-    "arenaElo": null,
+    "arenaElo": 1328.8,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4519,6 +4699,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.hle",
@@ -4563,6 +4744,10 @@
         {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -4662,7 +4847,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": null,
+    "arenaElo": 1249.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4692,6 +4877,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.browseComp",
         "evals.gpqaDiamond",
@@ -4745,6 +4931,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -4758,7 +4948,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": null,
+    "arenaElo": 1223.8,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4787,6 +4977,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.browseComp",
         "evals.gpqaDiamond",
@@ -4839,6 +5030,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -4852,7 +5047,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": null,
+    "arenaElo": 1223.8,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4881,6 +5076,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.browseComp",
         "evals.gpqaDiamond",
@@ -4933,6 +5129,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -4946,7 +5146,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": null,
+    "arenaElo": 1236.9,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4964,6 +5164,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
@@ -4976,6 +5177,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -5122,7 +5327,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file+audio+video->text",
-    "arenaElo": null,
+    "arenaElo": 1488.9,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5154,6 +5359,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.browseComp",
         "evals.gpqaDiamond",
@@ -5203,6 +5409,10 @@
         {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -5259,7 +5469,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": null,
+    "arenaElo": 1241.2,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5289,6 +5499,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.browseComp",
         "evals.gpqaDiamond",
@@ -5342,6 +5553,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -5355,7 +5570,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1382.1,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5380,6 +5595,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.browseComp",
         "evals.reportedSweBenchVerified",
@@ -5412,6 +5628,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -5425,7 +5645,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1435.4,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5451,6 +5671,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.browseComp",
         "evals.reportedSweBenchVerified",
@@ -5484,6 +5705,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -5540,7 +5765,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": null,
+    "arenaElo": 1497.8,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5573,6 +5798,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -5627,6 +5853,10 @@
         {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -5685,7 +5915,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1395.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5711,6 +5941,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -5748,6 +5979,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -5761,7 +5996,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1375.7,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5779,6 +6014,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
@@ -5791,6 +6027,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -5804,7 +6044,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image->text",
-    "arenaElo": null,
+    "arenaElo": 1439.8,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5835,6 +6075,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -5889,6 +6130,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -6121,7 +6366,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1368.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6146,6 +6391,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -6188,6 +6434,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -6287,7 +6537,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1391.6,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6319,6 +6569,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -6382,6 +6633,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -6395,7 +6650,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1440.1,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6426,6 +6681,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -6484,6 +6740,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -6497,7 +6757,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file+audio+video->text",
-    "arenaElo": null,
+    "arenaElo": 1270.1,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6530,6 +6790,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.aime2025",
         "evals.gpqaDiamond",
@@ -6584,6 +6845,10 @@
         {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -6988,7 +7253,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": null,
+    "arenaElo": 1164.6,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7007,6 +7272,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
@@ -7020,6 +7286,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -7202,7 +7472,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file+video->text",
-    "arenaElo": null,
+    "arenaElo": 1337.2,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7220,6 +7490,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
@@ -7232,6 +7503,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -7532,7 +7807,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1332.1,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7563,6 +7838,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -7621,6 +7897,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -7634,7 +7914,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1356.6,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7652,6 +7932,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
@@ -7664,6 +7945,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -7677,7 +7962,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": null,
+    "arenaElo": 1467.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7707,6 +7992,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.reportedSweBenchVerified",
@@ -7746,6 +8032,10 @@
         {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -7890,7 +8180,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": null,
+    "arenaElo": 1344.5,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7921,6 +8211,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.aime2025",
         "evals.gpqaDiamond",
@@ -7965,6 +8256,10 @@
         {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -8023,7 +8318,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image->text",
-    "arenaElo": null,
+    "arenaElo": 1329.3,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -8052,6 +8347,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.reportedSweBenchVerified",
         "multimodal",
@@ -8086,6 +8382,10 @@
         {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -8099,7 +8399,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image->text",
-    "arenaElo": null,
+    "arenaElo": 1239.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -8120,6 +8420,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.aime2025",
         "multimodal",
@@ -8138,6 +8439,10 @@
         {
           "label": "ZeroEval AIME 2025 leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -8151,7 +8456,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1329.6,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -8174,6 +8479,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
@@ -8193,6 +8499,10 @@
         {
           "label": "Moonshot K2 pricing",
           "url": "https://platform.kimi.ai/docs/pricing/chat-k2.md"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -8384,7 +8694,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1304.6,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -8416,6 +8726,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -8479,6 +8790,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -9351,7 +9666,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1355.1,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -9377,6 +9692,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -9424,6 +9740,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },
@@ -9437,7 +9757,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1286.6,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -9465,6 +9785,7 @@
       "status": "verified",
       "checkedAt": "2026-05-18",
       "verifiedFields": [
+        "arenaElo",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -9526,6 +9847,10 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://lmarena.ai/leaderboard"
         }
       ]
     },

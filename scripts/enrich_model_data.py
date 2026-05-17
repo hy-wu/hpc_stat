@@ -55,7 +55,24 @@ RAW_SOURCE_URLS = {
     "zeroeval_models_list": "https://api.zeroeval.com/leaderboard/models/list",
     # LLM-Stats serves its full model catalog as a Next.js RSC payload
     "llm_stats_rsc": "https://llm-stats.com/",
+    # Chatbot Arena leaderboard (lmarena.ai) — embeds Elo ratings in Next.js RSC payload
+    "lmarena_leaderboard": "https://lmarena.ai/leaderboard",
 }
+
+# Arena model name → our model ID; covers cases where normalization alone is insufficient.
+# E.g. "gpt-5.2-chat-latest" (no suffix strips) or renamed/aliased entries.
+ARENA_ELO_ALIASES: dict[str, str] = {
+    "gpt-5.2-chat-latest": "openai/gpt-chat-latest",
+    "gpt-5.2-chat-latest-20260210": "openai/gpt-chat-latest",
+    "gpt-5.2-chat-latest-20250706": "openai/gpt-chat-latest",
+    # Llama 4 uses full architecture names in Arena
+    "llama-4-maverick-17b-128e-instruct": "llama-4-maverick",
+    "llama-4-scout-17b-16e-instruct": "llama-4-scout",
+}
+
+# Suffixes that indicate a special variant; Arena entries with these are used only as
+# fallback when no base-model entry matched the same model ID.
+_ARENA_VARIANT_SUFFIXES = ("-thinking", "-turbo", "-high", "-low", "-mini-high")
 
 ZEROEVAL_BENCHMARKS = {
     "gpqa": {
@@ -363,6 +380,7 @@ def main() -> int:
         patches.extend(extract_caisi_evals(source_texts))
         patches.extend(extract_zeroeval_benchmark_evals(models, session, args, report))
         patches.extend(extract_llm_stats_data(models, session, args, report))
+        patches.extend(extract_arena_elo_data(models, session, args, report))
         patches.extend(extract_deepseek_reported_evals(source_texts))
         patches.extend(extract_meta_model_details(source_texts))
         patches.extend(extract_cursor_prices_from_provider_prices(models, patches))
@@ -1194,6 +1212,127 @@ def extract_llm_stats_data(
             )
         )
 
+    return patches
+
+
+def extract_arena_elo_data(
+    models: list[dict[str, Any]],
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> list[ExtractedModel]:
+    """Fetch Chatbot Arena Elo ratings from lmarena.ai/leaderboard.
+
+    The page is a Next.js app that embeds leaderboard data in a large RSC script tag.
+    Each entry has rank, modelDisplayName, and rating (Elo score).
+    We match Arena display names to our model IDs via normalized key lookup,
+    explicit ARENA_ELO_ALIASES, and a second pass with variant-suffix fallback.
+    """
+    source_url = RAW_SOURCE_URLS["lmarena_leaderboard"]
+    cache_key = "lmarena_leaderboard"
+
+    cache_path = CACHE_DIR / f"{cache_key}.txt"
+    if not args.no_cache and not args.refresh_cache and cache_path.exists():
+        raw_text = cache_path.read_text(encoding="utf-8")
+        report.setdefault("cacheHits", []).append(cache_key)
+    elif not args.online and not args.refresh_cache:
+        report.setdefault("sourceWarnings", []).append({"key": cache_key, "url": source_url, "error": "Cache miss - run with --online to fetch"})
+        return []
+    else:
+        try:
+            resp = session.get(source_url, timeout=30, headers={"Accept": "text/html,*/*"})
+            resp.raise_for_status()
+            raw_text = resp.text
+            if not args.no_cache:
+                CACHE_DIR.mkdir(parents=True, exist_ok=True)
+                cache_path.write_text(raw_text, encoding="utf-8")
+        except Exception as exc:
+            report.setdefault("errors", []).append(f"lmarena_leaderboard fetch error: {exc}")
+            return []
+
+    # Locate the large RSC script containing the leaderboard payload.
+    # It is the script that includes both "arenaSlug" and "rating" and is >100 KB.
+    leaderboard_script = ""
+    for sc in re.findall(r"<script[^>]*>(.*?)</script>", raw_text, re.DOTALL):
+        sc = sc.strip()
+        if len(sc) > 100_000 and "arenaSlug" in sc and "rating" in sc:
+            leaderboard_script = sc
+            break
+
+    if not leaderboard_script:
+        report.setdefault("sourceWarnings", []).append({"key": cache_key, "url": source_url, "error": "leaderboard RSC script not found"})
+        return []
+
+    # The script is: self.__next_f.push([1,"<escaped JSON>"]).
+    # Unescape the inner JSON string.
+    match = re.search(r'self\.__next_f\.push\(\[1,"(.+)"\]\)\s*$', leaderboard_script, re.DOTALL)
+    if not match:
+        report.setdefault("sourceWarnings", []).append({"key": cache_key, "url": source_url, "error": "RSC push wrapper not found"})
+        return []
+
+    decoded = match.group(1).replace('\\"', '"').replace('\\\\', '\\').replace('\\n', '\n').replace('\\t', '\t')
+
+    # Extract entries: {rank, rankUpper, rankLower, modelDisplayName, rating, ...}
+    entries = re.findall(
+        r'"rank":(\d+),"rankUpper":\d+,"rankLower":\d+,"modelDisplayName":"([^"]+)","rating":([\d.]+)',
+        decoded,
+    )
+    report["arenaEloEntries"] = len(entries)
+    if not entries:
+        return []
+
+    model_index = build_model_lookup_index(models)
+    patches: list[ExtractedModel] = []
+
+    # arena_best: model_id → {"name", "rank", "score", "is_variant"}
+    # We prefer: base > variant; within same type, prefer lowest rank (= highest score).
+    arena_best: dict[str, dict[str, Any]] = {}
+
+    for rank_str, display_name, rating_str in entries:
+        rank = int(rank_str)
+        score = round(float(rating_str), 1)
+        name_lower = display_name.lower()
+        is_variant = any(name_lower.endswith(sfx) for sfx in _ARENA_VARIANT_SUFFIXES)
+        entry_data: dict[str, Any] = {"name": display_name, "rank": rank, "score": score, "is_variant": is_variant}
+
+        # Resolve model_id: explicit alias → direct match → variant-suffix-stripped match.
+        model_id: str | None = ARENA_ELO_ALIASES.get(name_lower)
+        if not model_id:
+            model_id = match_external_model(model_index, name_lower, None)
+        if not model_id and is_variant:
+            for sfx in _ARENA_VARIANT_SUFFIXES:
+                if name_lower.endswith(sfx):
+                    stripped = name_lower[: -len(sfx)]
+                    model_id = match_external_model(model_index, stripped, None)
+                    if model_id:
+                        break
+
+        if not model_id:
+            continue
+
+        existing = arena_best.get(model_id)
+        if existing is None:
+            arena_best[model_id] = entry_data
+        elif is_variant and not existing["is_variant"]:
+            pass  # base entry already recorded — keep it
+        elif not is_variant and existing["is_variant"]:
+            arena_best[model_id] = entry_data  # prefer base over variant
+        elif rank < existing["rank"]:
+            arena_best[model_id] = entry_data  # same type — prefer higher score
+
+    for model_id, entry in arena_best.items():
+        patches.append(
+            ExtractedModel(
+                model_id=model_id,
+                source_label="Chatbot Arena leaderboard",
+                source_url=source_url,
+                verified_fields=["arenaElo"],
+                patch={"arenaElo": entry["score"]},
+                evidence=[f"rank={entry['rank']} modelDisplayName={entry['name']!r} rating={entry['score']}"],
+            )
+        )
+
+    report["arenaEloMatched"] = len(patches)
     return patches
 
 
