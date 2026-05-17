@@ -331,6 +331,14 @@ CATALOG_CHECKS = {
 }
 
 
+# CNY prices from https://api-docs.deepseek.com/zh-cn/quick_start/pricing (2026-05-18)
+# deepseek-v4-pro shown at 2.5折 (25% of regular): ¥3/12/6/24 (hit/in/out regular)
+DEEPSEEK_CNY_PRICING: dict[str, dict[str, float]] = {
+    "deepseek-v4-flash": {"hit": 0.02, "in": 1.0, "out": 2.0},
+    "deepseek-v4-pro": {"hit": 0.025, "in": 3.0, "out": 6.0},
+}
+
+
 class ExtractedModel(BaseModel):
     model_id: str
     source_label: str
@@ -359,6 +367,27 @@ class ReferenceSource:
 class ModelMatcher:
     generic_index: dict[str, list[str]]
     explicit_alias_index: dict[str, str]
+
+
+def enrich_official_cny(models: list[dict[str, Any]]) -> int:
+    """Populate pricing.officialCny from Zhipu (GLM) and DeepSeek CNY pricing.
+
+    - GLM models (vendor == "Zhipu AI"): copy from existing pricing.zhipu
+    - DeepSeek models: use hardcoded CNY prices from DEEPSEEK_CNY_PRICING
+
+    Returns the count of models updated.
+    """
+    count = 0
+    for model in models:
+        short = model.get("id", "").split("/")[-1]
+        pricing = model.setdefault("pricing", {})
+        if short in DEEPSEEK_CNY_PRICING:
+            pricing["officialCny"] = dict(DEEPSEEK_CNY_PRICING[short])
+            count += 1
+        elif pricing.get("zhipu") and model.get("vendor") == "Zhipu AI":
+            pricing["officialCny"] = dict(pricing["zhipu"])
+            count += 1
+    return count
 
 
 def enrich_model_params(models: list[dict[str, Any]]) -> dict[str, int]:
@@ -460,6 +489,8 @@ def main() -> int:
         apply_patches(models, merged_by_model)
         params_coverage = enrich_model_params(models)
         report["paramsCoverage"] = params_coverage
+        cny_count = enrich_official_cny(models)
+        report["officialCnyCount"] = cny_count
         MODELS_PATH.write_text(json.dumps(models, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         report["wrote"] = str(MODELS_PATH)
 
