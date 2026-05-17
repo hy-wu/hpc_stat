@@ -29,7 +29,15 @@
             <label for="globalSearch">搜索模型</label>
             <input id="globalSearch" type="search" placeholder="名称、厂商、性能标签..." />
           </div>
+          <button class="text-button" id="toggleColumnsButton" type="button">列设置</button>
           <button class="text-button" id="compactToggleButton" type="button">紧凑模式</button>
+        </section>
+
+        <section class="filters-panel" id="columnPicker" hidden>
+          <div class="panel-head">
+            <h2>选择显示列</h2>
+          </div>
+          <div class="column-picker-grid"></div>
         </section>
 
         <section class="insight-grid" aria-label="统计概览">
@@ -49,7 +57,7 @@
 
         <section class="table-panel">
           <div class="panel-head">
-            <h2>（GitHub Copilot）模型评分与价格表 (2026)</h2>
+            <h2>模型评分与价格表 (2026)</h2>
           </div>
           <div class="table-wrap">
             <table id="gpuTable"> <!-- Reusing ID for CSS -->

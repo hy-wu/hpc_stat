@@ -2,6 +2,7 @@ const fieldDefs = [
   { key: "name", label: "模型名称", type: "text", visible: true },
   { key: "vendor", label: "厂商", type: "text", visible: true },
   { key: "multimodal", label: "多模态", type: "text", visible: true },
+  { key: "copilotMultiplier", label: "Copilot 倍率", type: "number", visible: true },
   { key: "performance", label: "性能定位", type: "text", visible: true },
   { key: "arenaElo", label: "Arena Elo", type: "number", visible: true, heatmap: true },
   { key: "mmlu", label: "MMLU", type: "number", visible: true, heatmap: true },
@@ -10,29 +11,29 @@ const fieldDefs = [
   { key: "gpqa", label: "GPQA", type: "number", visible: true, heatmap: true },
   { key: "math", label: "MATH", type: "number", visible: true, heatmap: true },
   { key: "contextWindow", label: "上下文", type: "text", visible: true },
-  // Copilot Pricing
-  { key: "pricing.copilot.in", label: "Copilot In ($/1M)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  { key: "pricing.copilot.out", label: "Copilot Out ($/1M)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  // Official API
-  { key: "pricing.official.in", label: "官方 In ($/1M)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  { key: "pricing.official.out", label: "官方 Out ($/1M)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  // Domestic Platform (SiliconFlow / DeepSeek)
-  { key: "pricing.domestic.in", label: "国内平台 In", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  { key: "pricing.domestic.out", label: "国内平台 Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  // Relay / Relay Aggregators
-  { key: "pricing.relay.in", label: "中转平台 In", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  { key: "pricing.relay.out", label: "中转平台 Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  // OpenRouter
-  { key: "pricing.openrouter.in", label: "OpenRouter In", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
-  { key: "pricing.openrouter.out", label: "OpenRouter Out", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
-  // Nvidia
-  { key: "pricing.nvidia.in", label: "Nvidia In", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
-  { key: "pricing.nvidia.out", label: "Nvidia Out", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
+  // Copilot
+  { key: "pricing.copilot.in", label: "Copilot In", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.copilot.out", label: "Copilot Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  // Official
+  { key: "pricing.official.in", label: "官方 In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://openai.com/api/pricing" },
+  { key: "pricing.official.out", label: "官方 Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  // Cursor
+  { key: "pricing.cursor.fast", label: "Cursor Fast", type: "number", visible: true, source: "https://cursor.com/cn/docs/models-and-pricing" },
+  // DeepSeek Official
+  { key: "pricing.deepseek_official.in", label: "DeepSeek In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://api-docs.deepseek.com/quick_start/pricing" },
+  { key: "pricing.deepseek_official.out", label: "DeepSeek Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  // SiliconFlow
+  { key: "pricing.siliconflow.in", label: "硅基流动 In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://siliconflow.cn/pricing" },
+  { key: "pricing.siliconflow.out", label: "硅基流动 Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  // Others (Default Hidden)
+  { key: "pricing.openrouter.in", label: "OpenRouter In", type: "number", visible: false, heatmap: true, inverseHeatmap: true, source: "https://openrouter.ai/models" },
+  { key: "pricing.nvidia.in", label: "Nvidia In", type: "number", visible: false, heatmap: true, inverseHeatmap: true, source: "https://www.nvidia.com/en-us/ai-data-science/generative-ai/nim/" },
+  { key: "notes", label: "备注", type: "text", visible: false },
 ];
 
 const state = {
   models: [],
-  visibleColumns: new Set(fieldDefs.filter(f => f.visible).map((f) => f.key)),
+  visibleColumns: new Set(fieldDefs.filter(f => f.visible).map(f => f.key)),
   sortField: "arenaElo",
   sortDirection: "desc",
   globalSearch: "",
@@ -45,6 +46,8 @@ const elements = {
   tableBody: document.querySelector("#tableBody"),
   gpuTable: document.querySelector("#gpuTable"),
   compactToggleButton: document.querySelector("#compactToggleButton"),
+  columnPicker: document.querySelector("#columnPicker"),
+  toggleColumnsButton: document.querySelector("#toggleColumnsButton"),
   visibleCount: document.querySelector("#visibleCount"),
   bestElo: document.querySelector("#bestElo"),
   bestHumanEval: document.querySelector("#bestHumanEval"),
@@ -54,6 +57,7 @@ async function init() {
   try {
     const response = await fetch("data/models.json");
     state.models = await response.json();
+    renderColumnPicker();
     bindEvents();
     render();
   } catch (err) {
@@ -72,6 +76,26 @@ function bindEvents() {
     elements.gpuTable.classList.toggle("compact", state.compact);
     elements.compactToggleButton.textContent = state.compact ? "标准模式" : "紧凑模式";
   });
+
+  elements.toggleColumnsButton.addEventListener("click", () => {
+    elements.columnPicker.hidden = !elements.columnPicker.hidden;
+  });
+
+  elements.columnPicker.addEventListener("change", (e) => {
+    const key = e.target.value;
+    if (e.target.checked) state.visibleColumns.add(key);
+    else state.visibleColumns.delete(key);
+    render();
+  });
+}
+
+function renderColumnPicker() {
+  elements.columnPicker.innerHTML = fieldDefs.map(f => `
+    <label class="column-option">
+      <input type="checkbox" value="${f.key}" ${state.visibleColumns.has(f.key) ? 'checked' : ''}>
+      <span>${f.label}</span>
+    </label>
+  `).join('');
 }
 
 function render() {
@@ -112,21 +136,21 @@ function renderTable(rows) {
   fieldDefs.forEach(f => {
     if (f.heatmap) {
       const values = state.models.map(m => getNestedValue(m, f.key)).filter(v => typeof v === 'number');
-      stats[f.key] = {
-        min: Math.min(...values),
-        max: Math.max(...values)
-      };
+      stats[f.key] = { min: Math.min(...values), max: Math.max(...values) };
     }
   });
 
-  elements.tableHead.innerHTML = `<tr>${fieldDefs
-    .filter(f => state.visibleColumns.has(f.key))
-    .map(f => `<th><button data-sort="${f.key}">${f.label}${state.sortField === f.key ? (state.sortDirection === 'asc' ? ' ↑' : ' ↓') : ''}</button></th>`)
+  const activeFields = fieldDefs.filter(f => state.visibleColumns.has(f.key));
+
+  elements.tableHead.innerHTML = `<tr>${activeFields
+    .map(f => `<th>
+      <button data-sort="${f.key}">${f.label}${state.sortField === f.key ? (state.sortDirection === 'asc' ? ' ↑' : ' ↓') : ''}</button>
+      ${f.source ? `<a href="${f.source}" target="_blank" class="source-icon" title="查看价格来源">🔗</a>` : ''}
+    </th>`)
     .join("")}</tr>`;
 
   elements.tableBody.innerHTML = rows
-    .map(r => `<tr>${fieldDefs
-      .filter(f => state.visibleColumns.has(f.key))
+    .map(r => `<tr>${activeFields
       .map(f => `<td>${formatCell(r, f, stats[f.key])}</td>`)
       .join("")}</tr>`)
     .join("");
@@ -151,10 +175,8 @@ function formatCell(row, field, stat) {
 
   if (field.heatmap && typeof val === "number") {
     const lengthPercent = (val - stat.min) / (stat.max - stat.min || 1) * 100;
-    // For benchmarks: High = Green (100). For price: High = Red (0).
     let colorPercent = lengthPercent;
     if (field.inverseHeatmap) colorPercent = 100 - lengthPercent; 
-    
     const color = getHeatmapColor(colorPercent);
     return `
       <div class="heatmap-container mini">
@@ -164,19 +186,15 @@ function formatCell(row, field, stat) {
     `;
   }
 
-  if (field.key === "multimodal") {
-    return `<span class="tag multimodal">${val}</span>`;
-  }
+  if (field.key === "multimodal") return `<span class="tag multimodal">${val}</span>`;
+  if (field.key === "copilotMultiplier") return val === 0 ? "Free" : `${val}x`;
 
   return val;
 }
 
 function getHeatmapColor(percent) {
-  if (percent < 50) {
-    return `rgba(255, ${Math.floor(255 * (percent / 50))}, 0, 0.2)`;
-  } else {
-    return `rgba(${Math.floor(255 * (1 - (percent - 50) / 50))}, 255, 0, 0.2)`;
-  }
+  if (percent < 50) return `rgba(255, ${Math.floor(255 * (percent / 50))}, 0, 0.2)`;
+  return `rgba(${Math.floor(255 * (1 - (percent - 50) / 50))}, 255, 0, 0.2)`;
 }
 
 init();

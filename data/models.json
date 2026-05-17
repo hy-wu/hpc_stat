@@ -4,7 +4,7 @@
     "name": "Claude Haiku 4.5",
     "vendor": "Anthropic",
     "multimodal": "Vision",
-    "multiplier": 0.33,
+    "copilotMultiplier": 0.33,
     "performance": "Fast",
     "arenaElo": 1245,
     "mmlu": 82.5,
@@ -14,21 +14,22 @@
     "math": 68.5,
     "contextWindow": "200K",
     "pricing": {
-      "copilot": {"in": 1.0, "out": 5.0},
       "official": {"in": 1.0, "out": 5.0},
+      "copilot": {"in": 1.0, "out": 5.0},
+      "cursor": {"fast": 2000, "premium": 0},
       "openrouter": {"in": 1.1, "out": 5.5},
       "nvidia": {"in": 0.9, "out": 4.5},
-      "domestic": {"in": 1.0, "out": 5.0},
-      "relay": {"in": 0.8, "out": 4.0}
+      "siliconflow": {"in": 1.0, "out": 5.0},
+      "deepseek_official": {"in": null, "out": null}
     },
-    "notes": "Optimized for speed and routing."
+    "notes": "Optimized for speed and high-volume routing."
   },
   {
     "id": "claude-opus-4.7",
     "name": "Claude Opus 4.7",
     "vendor": "Anthropic",
     "multimodal": "Vision/Audio",
-    "multiplier": 15.0,
+    "copilotMultiplier": 15.0,
     "performance": "Ultra-High",
     "arenaElo": 1385,
     "mmlu": 94.8,
@@ -38,21 +39,22 @@
     "math": 94.2,
     "contextWindow": "1M",
     "pricing": {
-      "copilot": {"in": 45.0, "out": 225.0},
       "official": {"in": 45.0, "out": 225.0},
+      "copilot": {"in": 45.0, "out": 225.0},
+      "cursor": {"fast": 10, "premium": 1},
       "openrouter": {"in": 48.0, "out": 240.0},
       "nvidia": {"in": 42.0, "out": 210.0},
-      "domestic": {"in": 46.0, "out": 230.0},
-      "relay": {"in": 40.0, "out": 200.0}
+      "siliconflow": {"in": 46.0, "out": 230.0},
+      "deepseek_official": {"in": null, "out": null}
     },
-    "notes": "State-of-the-art reasoning."
+    "notes": "State-of-the-art reasoning for complex agents."
   },
   {
     "id": "claude-sonnet-4.6",
     "name": "Claude Sonnet 4.6",
     "vendor": "Anthropic",
     "multimodal": "Vision",
-    "multiplier": 1.0,
+    "copilotMultiplier": 1.0,
     "performance": "Medium · High",
     "arenaElo": 1315,
     "mmlu": 89.2,
@@ -62,117 +64,22 @@
     "math": 84.5,
     "contextWindow": "1M",
     "pricing": {
-      "copilot": {"in": 3.0, "out": 15.0},
       "official": {"in": 3.0, "out": 15.0},
+      "copilot": {"in": 3.0, "out": 15.0},
+      "cursor": {"fast": 500, "premium": 1},
       "openrouter": {"in": 2.8, "out": 14.0},
       "nvidia": {"in": 2.5, "out": 12.0},
-      "domestic": {"in": 3.1, "out": 15.5},
-      "relay": {"in": 2.4, "out": 12.0}
+      "siliconflow": {"in": 2.8, "out": 14.0},
+      "deepseek_official": {"in": null, "out": null}
     },
-    "notes": "Current flagship workhorse."
-  },
-  {
-    "id": "gpt-5.5",
-    "name": "GPT-5.5",
-    "vendor": "OpenAI",
-    "multimodal": "Omni",
-    "multiplier": 7.5,
-    "performance": "High",
-    "arenaElo": 1365,
-    "mmlu": 93.5,
-    "humanEval": 91.0,
-    "gsm8k": 96.5,
-    "gpqa": 72.8,
-    "math": 92.1,
-    "contextWindow": "1M",
-    "pricing": {
-      "copilot": {"in": 22.5, "out": 112.5},
-      "official": {"in": 22.5, "out": 112.5},
-      "openrouter": {"in": 24.0, "out": 120.0},
-      "nvidia": {"in": 20.0, "out": 100.0},
-      "domestic": {"in": 23.5, "out": 115.0},
-      "relay": {"in": 18.0, "out": 90.0}
-    },
-    "notes": "Omnimodal flagship."
-  },
-  {
-    "id": "deepseek-v4-pro",
-    "name": "DeepSeek V4 Pro",
-    "vendor": "DeepSeek",
-    "multimodal": "Vision/Reasoning",
-    "multiplier": 0.58,
-    "performance": "High (SOTA Domestic)",
-    "arenaElo": 1345,
-    "mmlu": 92.2,
-    "humanEval": 90.5,
-    "gsm8k": 95.1,
-    "gpqa": 70.2,
-    "math": 91.5,
-    "contextWindow": "1M",
-    "pricing": {
-      "copilot": {"in": 1.74, "out": 3.48},
-      "official": {"in": 1.74, "out": 3.48},
-      "openrouter": {"in": 1.9, "out": 3.8},
-      "nvidia": {"in": 1.7, "out": 3.4},
-      "domestic": {"in": 0.44, "out": 0.87},
-      "relay": {"in": 0.4, "out": 0.8}
-    },
-    "notes": "Domestic champion with aggressive pricing."
-  },
-  {
-    "id": "deepseek-v4-flash",
-    "name": "DeepSeek V4 Flash",
-    "vendor": "DeepSeek",
-    "multimodal": "Vision",
-    "multiplier": 0.05,
-    "performance": "Extreme Speed",
-    "arenaElo": 1230,
-    "mmlu": 81.5,
-    "humanEval": 76.0,
-    "gsm8k": 84.2,
-    "gpqa": 38.5,
-    "math": 65.2,
-    "contextWindow": "1M",
-    "pricing": {
-      "copilot": {"in": 0.14, "out": 0.28},
-      "official": {"in": 0.14, "out": 0.28},
-      "openrouter": {"in": 0.15, "out": 0.30},
-      "nvidia": {"in": 0.14, "out": 0.28},
-      "domestic": {"in": 0.12, "out": 0.24},
-      "relay": {"in": 0.1, "out": 0.2}
-    },
-    "notes": "Industry leader in cost-per-token."
-  },
-  {
-    "id": "gpt-5.3-codex",
-    "name": "GPT-5.3-Codex",
-    "vendor": "OpenAI",
-    "multimodal": "Vision",
-    "multiplier": 1.0,
-    "performance": "High (Coding)",
-    "arenaElo": 1295,
-    "mmlu": 86.0,
-    "humanEval": 94.2,
-    "gsm8k": 88.5,
-    "gpqa": 48.2,
-    "math": 88.4,
-    "contextWindow": "400K",
-    "pricing": {
-      "copilot": {"in": 3.0, "out": 15.0},
-      "official": {"in": 3.0, "out": 15.0},
-      "openrouter": {"in": 2.9, "out": 14.5},
-      "nvidia": {"in": 2.6, "out": 13.0},
-      "domestic": {"in": 3.2, "out": 16.0},
-      "relay": {"in": 2.5, "out": 12.5}
-    },
-    "notes": "SOTA coding specialist."
+    "notes": "Current flagship workhorse for main tasks."
   },
   {
     "id": "claude-sonnet-4.5",
     "name": "Claude Sonnet 4.5",
     "vendor": "Anthropic",
     "multimodal": "Vision",
-    "multiplier": 1.0,
+    "copilotMultiplier": 1.0,
     "performance": "Medium",
     "arenaElo": 1280,
     "mmlu": 88.0,
@@ -182,21 +89,122 @@
     "math": 78.9,
     "contextWindow": "500K",
     "pricing": {
-      "copilot": {"in": 3.0, "out": 15.0},
       "official": {"in": 3.0, "out": 15.0},
+      "copilot": {"in": 3.0, "out": 15.0},
+      "cursor": {"fast": 500, "premium": 1},
       "openrouter": {"in": 3.2, "out": 16.0},
       "nvidia": {"in": 2.8, "out": 14.0},
-      "domestic": {"in": 3.1, "out": 15.5},
-      "relay": {"in": 2.6, "out": 13.0}
+      "siliconflow": {"in": 3.0, "out": 15.0},
+      "deepseek_official": {"in": null, "out": null}
     },
-    "notes": "Initial v4 Sonnet."
+    "notes": "The initial v4 Sonnet release."
+  },
+  {
+    "id": "gpt-5.5",
+    "name": "GPT-5.5",
+    "vendor": "OpenAI",
+    "multimodal": "Omni",
+    "copilotMultiplier": 7.5,
+    "performance": "High",
+    "arenaElo": 1365,
+    "mmlu": 93.5,
+    "humanEval": 91.0,
+    "gsm8k": 96.5,
+    "gpqa": 72.8,
+    "math": 92.1,
+    "contextWindow": "1M",
+    "pricing": {
+      "official": {"in": 22.5, "out": 112.5},
+      "copilot": {"in": 22.5, "out": 112.5},
+      "cursor": {"fast": 100, "premium": 1},
+      "openrouter": {"in": 24.0, "out": 120.0},
+      "nvidia": {"in": 20.0, "out": 100.0},
+      "siliconflow": {"in": 23.5, "out": 115.0},
+      "deepseek_official": {"in": null, "out": null}
+    },
+    "notes": "Natively omnimodal flagship model."
+  },
+  {
+    "id": "gpt-5.4",
+    "name": "GPT-5.4",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": 1.0,
+    "performance": "High",
+    "arenaElo": 1330,
+    "mmlu": 91.5,
+    "humanEval": 89.0,
+    "gsm8k": 94.0,
+    "gpqa": 64.5,
+    "math": 86.5,
+    "contextWindow": "512K",
+    "pricing": {
+      "official": {"in": 3.0, "out": 15.0},
+      "copilot": {"in": 3.0, "out": 15.0},
+      "cursor": {"fast": 500, "premium": 1},
+      "openrouter": {"in": 3.4, "out": 17.0},
+      "nvidia": {"in": 2.8, "out": 14.0},
+      "siliconflow": {"in": 3.2, "out": 16.0},
+      "deepseek_official": {"in": null, "out": null}
+    },
+    "notes": "High performance general reasoning model."
+  },
+  {
+    "id": "gpt-5.3-codex",
+    "name": "GPT-5.3-Codex",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": 1.0,
+    "performance": "High · High",
+    "arenaElo": 1295,
+    "mmlu": 86.0,
+    "humanEval": 94.2,
+    "gsm8k": 88.5,
+    "gpqa": 48.2,
+    "math": 88.4,
+    "contextWindow": "400K",
+    "pricing": {
+      "official": {"in": 3.0, "out": 15.0},
+      "copilot": {"in": 3.0, "out": 15.0},
+      "cursor": {"fast": 500, "premium": 1},
+      "openrouter": {"in": 2.9, "out": 14.5},
+      "nvidia": {"in": 2.6, "out": 13.0},
+      "siliconflow": {"in": 3.2, "out": 16.0},
+      "deepseek_official": {"in": null, "out": null}
+    },
+    "notes": "Current SOTA for coding precision."
+  },
+  {
+    "id": "gpt-5.2-codex",
+    "name": "GPT-5.2-Codex",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": 1.0,
+    "performance": "High",
+    "arenaElo": 1260,
+    "mmlu": 84.5,
+    "humanEval": 92.0,
+    "gsm8k": 86.5,
+    "gpqa": 45.8,
+    "math": 82.1,
+    "contextWindow": "200K",
+    "pricing": {
+      "official": {"in": 3.0, "out": 15.0},
+      "copilot": {"in": 3.0, "out": 15.0},
+      "cursor": {"fast": 500, "premium": 1},
+      "openrouter": {"in": 3.1, "out": 15.5},
+      "nvidia": {"in": 2.7, "out": 13.5},
+      "siliconflow": {"in": 3.2, "out": 16.0},
+      "deepseek_official": {"in": null, "out": null}
+    },
+    "notes": "Previous generation coding specialist."
   },
   {
     "id": "gpt-5.2",
     "name": "GPT-5.2",
     "vendor": "OpenAI",
     "multimodal": "Vision",
-    "multiplier": 1.0,
+    "copilotMultiplier": 1.0,
     "performance": "Medium",
     "arenaElo": 1275,
     "mmlu": 87.5,
@@ -206,22 +214,23 @@
     "math": 76.2,
     "contextWindow": "200K",
     "pricing": {
-      "copilot": {"in": 3.0, "out": 15.0},
       "official": {"in": 3.0, "out": 15.0},
+      "copilot": {"in": 3.0, "out": 15.0},
+      "cursor": {"fast": 500, "premium": 1},
       "openrouter": {"in": 3.3, "out": 16.5},
       "nvidia": {"in": 2.9, "out": 14.5},
-      "domestic": {"in": 3.2, "out": 16.0},
-      "relay": {"in": 2.7, "out": 13.5}
+      "siliconflow": {"in": 3.2, "out": 16.0},
+      "deepseek_official": {"in": null, "out": null}
     },
-    "notes": "Professional tier."
+    "notes": "Standard professional tier model."
   },
   {
     "id": "gpt-5.4-mini",
     "name": "GPT-5.4 mini",
     "vendor": "OpenAI",
     "multimodal": "Vision",
-    "multiplier": 0.33,
-    "performance": "High (Efficiency)",
+    "copilotMultiplier": 0.33,
+    "performance": "High",
     "arenaElo": 1255,
     "mmlu": 84.5,
     "humanEval": 82.0,
@@ -230,21 +239,22 @@
     "math": 72.8,
     "contextWindow": "128K",
     "pricing": {
-      "copilot": {"in": 1.0, "out": 5.0},
       "official": {"in": 1.0, "out": 5.0},
+      "copilot": {"in": 1.0, "out": 5.0},
+      "cursor": {"fast": 2000, "premium": 0},
       "openrouter": {"in": 1.1, "out": 5.5},
       "nvidia": {"in": 0.8, "out": 4.0},
-      "domestic": {"in": 1.1, "out": 5.5},
-      "relay": {"in": 0.9, "out": 4.5}
+      "siliconflow": {"in": 1.1, "out": 5.5},
+      "deepseek_official": {"in": null, "out": null}
     },
-    "notes": "Efficiency leader."
+    "notes": "Best-in-class small model performance."
   },
   {
     "id": "gpt-5-mini",
     "name": "GPT-5 mini",
     "vendor": "OpenAI",
     "multimodal": "Text",
-    "multiplier": 0.0,
+    "copilotMultiplier": 0.0,
     "performance": "Medium · Low",
     "arenaElo": 1235,
     "mmlu": 83.2,
@@ -254,22 +264,23 @@
     "math": 70.5,
     "contextWindow": "128K",
     "pricing": {
-      "copilot": {"in": 0.0, "out": 0.0},
       "official": {"in": 0.0, "out": 0.0},
+      "copilot": {"in": 0.0, "out": 0.0},
+      "cursor": {"fast": 2000, "premium": 0},
       "openrouter": {"in": 0.1, "out": 0.2},
       "nvidia": {"in": 0.0, "out": 0.0},
-      "domestic": {"in": 0.0, "out": 0.0},
-      "relay": {"in": 0.05, "out": 0.1}
+      "siliconflow": {"in": 0.0, "out": 0.0},
+      "deepseek_official": {"in": null, "out": null}
     },
-    "notes": "Free tier."
+    "notes": "Free tier optimized version."
   },
   {
     "id": "gpt-4.1",
     "name": "GPT-4.1",
     "vendor": "OpenAI",
     "multimodal": "Vision",
-    "multiplier": 0.0,
-    "performance": "Legacy",
+    "copilotMultiplier": 0.0,
+    "performance": "0x",
     "arenaElo": 1210,
     "mmlu": 81.0,
     "humanEval": 75.0,
@@ -278,13 +289,89 @@
     "math": 62.0,
     "contextWindow": "128K",
     "pricing": {
-      "copilot": {"in": 0.0, "out": 0.0},
       "official": {"in": 0.0, "out": 0.0},
+      "copilot": {"in": 0.0, "out": 0.0},
+      "cursor": {"fast": 2000, "premium": 0},
       "openrouter": {"in": 0.1, "out": 0.1},
       "nvidia": {"in": 0.0, "out": 0.0},
-      "domestic": {"in": 0.0, "out": 0.0},
-      "relay": {"in": 0.05, "out": 0.05}
+      "siliconflow": {"in": 0.0, "out": 0.0},
+      "deepseek_official": {"in": null, "out": null}
     },
-    "notes": "Legacy free model."
+    "notes": "Widely available free tier legacy model."
+  },
+  {
+    "id": "deepseek-v4-pro",
+    "name": "DeepSeek V4 Pro",
+    "vendor": "DeepSeek",
+    "multimodal": "Vision/Reasoning",
+    "copilotMultiplier": null,
+    "performance": "High (SOTA Domestic)",
+    "arenaElo": 1345,
+    "mmlu": 92.2,
+    "humanEval": 90.5,
+    "gsm8k": 95.1,
+    "gpqa": 70.2,
+    "math": 91.5,
+    "contextWindow": "1M",
+    "pricing": {
+      "official": {"in": 1.74, "out": 3.48},
+      "copilot": {"in": null, "out": null},
+      "cursor": {"fast": 500, "premium": 1},
+      "openrouter": {"in": 1.9, "out": 3.8},
+      "nvidia": {"in": 1.7, "out": 3.4},
+      "siliconflow": {"in": 1.74, "out": 3.48},
+      "deepseek_official": {"in": 0.44, "out": 0.87}
+    },
+    "notes": "Domestic champion with aggressive pricing."
+  },
+  {
+    "id": "deepseek-v4-flash",
+    "name": "DeepSeek V4 Flash",
+    "vendor": "DeepSeek",
+    "multimodal": "Vision",
+    "copilotMultiplier": null,
+    "performance": "Extreme Speed",
+    "arenaElo": 1230,
+    "mmlu": 81.5,
+    "humanEval": 76.0,
+    "gsm8k": 84.2,
+    "gpqa": 38.5,
+    "math": 65.2,
+    "contextWindow": "1M",
+    "pricing": {
+      "official": {"in": 0.14, "out": 0.28},
+      "copilot": {"in": null, "out": null},
+      "cursor": {"fast": 2000, "premium": 0},
+      "openrouter": {"in": 0.15, "out": 0.30},
+      "nvidia": {"in": 0.14, "out": 0.28},
+      "siliconflow": {"in": 0.14, "out": 0.28},
+      "deepseek_official": {"in": 0.14, "out": 0.28}
+    },
+    "notes": "Industry leader in cost-per-token."
+  },
+  {
+    "id": "qwen-2.5-max",
+    "name": "Qwen 2.5 Max",
+    "vendor": "Alibaba",
+    "multimodal": "Omni",
+    "copilotMultiplier": null,
+    "performance": "SOTA Domestic",
+    "arenaElo": 1335,
+    "mmlu": 90.5,
+    "humanEval": 88.2,
+    "gsm8k": 93.5,
+    "gpqa": 65.1,
+    "math": 87.2,
+    "contextWindow": "128K",
+    "pricing": {
+      "official": {"in": 0.28, "out": 0.84},
+      "copilot": {"in": null, "out": null},
+      "cursor": {"fast": 500, "premium": 1},
+      "openrouter": {"in": 0.30, "out": 0.90},
+      "nvidia": {"in": 0.28, "out": 0.84},
+      "siliconflow": {"in": 0.28, "out": 0.84},
+      "deepseek_official": {"in": null, "out": null}
+    },
+    "notes": "Alibaba's top-tier open-weight challenger."
   }
 ]
