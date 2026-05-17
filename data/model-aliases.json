@@ -20,6 +20,9 @@
   "anthropic/claude-opus-4.6-fast": [
     "Claude Opus 4.6 Fast"
   ],
+  "perplexity/sonar-pro-search": [
+    "Sonar Pro"
+  ],
   "deepseek-v4-pro": [
     "DeepSeek-V4-Pro-Max"
   ],
