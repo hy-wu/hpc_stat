@@ -399,8 +399,9 @@ th:first-child {
 td:first-child {
   position: sticky;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   background: var(--panel);
+  box-shadow: 2px 0 4px rgba(0,0,0,0.06);
 }
 
 tbody tr:hover td:first-child {
