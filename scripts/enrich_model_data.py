@@ -48,6 +48,59 @@ SOURCE_URLS = {
     "meta_llama_4": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
 }
 
+RAW_SOURCE_URLS = {
+    "moonshot_k26_pricing": "https://platform.kimi.ai/docs/pricing/chat-k26.md",
+    "moonshot_k25_pricing": "https://platform.kimi.ai/docs/pricing/chat-k25.md",
+    "moonshot_k2_pricing": "https://platform.kimi.ai/docs/pricing/chat-k2.md",
+    "zeroeval_models_list": "https://api.zeroeval.com/leaderboard/models/list",
+}
+
+ZEROEVAL_BENCHMARKS = {
+    "gpqa": {
+        "field": "gpqaDiamond",
+        "label": "ZeroEval GPQA Diamond leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details",
+    },
+    "mmlu-pro": {
+        "field": "mmluPro",
+        "label": "ZeroEval MMLU-Pro leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details",
+    },
+    "livecodebench": {
+        "field": "liveCodeBench",
+        "label": "ZeroEval LiveCodeBench leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details",
+    },
+    "swe-bench-verified": {
+        "field": "reportedSweBenchVerified",
+        "label": "ZeroEval SWE-Bench Verified leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details",
+    },
+    "terminal-bench": {
+        "field": "terminalBench",
+        "label": "ZeroEval Terminal-Bench leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details",
+    },
+}
+
+MOONSHOT_PRICING_MODELS = {
+    "moonshotai/kimi-k2.6": {
+        "source_key": "moonshot_k26_pricing",
+        "source_label": "Moonshot Kimi K2.6 pricing",
+        "lookup": "kimi-k2.6",
+    },
+    "moonshotai/kimi-k2.5": {
+        "source_key": "moonshot_k25_pricing",
+        "source_label": "Moonshot Kimi K2.5 pricing",
+        "lookup": "kimi-k2.5",
+    },
+    "moonshotai/kimi-k2-thinking": {
+        "source_key": "moonshot_k2_pricing",
+        "source_label": "Moonshot K2 pricing",
+        "lookup": "kimi-k2-thinking",
+    },
+}
+
 OPENROUTER_ALIASES = {
     "claude-opus-4.7": ["anthropic/claude-opus-4.7"],
     "claude-sonnet-4.6": ["anthropic/claude-sonnet-4.6"],
@@ -246,8 +299,9 @@ def main() -> int:
             models = generate_openrouter_catalog(models, session, args, report)
             report["modelCount"] = len(models)
         patches.extend(extract_openrouter_prices(models, session, args, report))
-        patches.extend(extract_official_prices(source_texts))
+        patches.extend(extract_official_prices(models, source_texts, session, args, report))
         patches.extend(extract_caisi_evals(source_texts))
+        patches.extend(extract_zeroeval_benchmark_evals(models, session, args, report))
         patches.extend(extract_deepseek_reported_evals(source_texts))
         patches.extend(extract_meta_model_details(source_texts))
         patches.extend(extract_cursor_prices_from_provider_prices(models, patches))
@@ -630,12 +684,28 @@ def normalize_model_key(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", value)
 
 
-def extract_official_prices(sources: dict[str, SourceText]) -> list[ExtractedModel]:
-    patches: list[ExtractedModel] = []
+def extract_official_prices(
+    models: list[dict[str, Any]],
+    sources: dict[str, SourceText],
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> list[ExtractedModel]:
+    patches = extract_zeroeval_catalog_prices(models, session, args, report)
     openai = sources.get("openai_pricing")
     if openai:
-        for model_id in ["gpt-5.5", "gpt-5.4", "gpt-5.4-mini", "gpt-5.3-codex"]:
-            row = find_openai_price(openai.text, model_id)
+        openai_names = {
+            "gpt-5.5": ["gpt-5.5"],
+            "gpt-5.4": ["gpt-5.4"],
+            "gpt-5.4-mini": ["gpt-5.4-mini", "gpt-5.4 mini"],
+            "gpt-5.3-codex": ["gpt-5.3-codex"],
+            "gpt-5.2-codex": ["gpt-5.2-codex"],
+            "gpt-5.2": ["gpt-5.2"],
+            "gpt-5-mini": ["gpt-5-mini", "gpt-5 mini"],
+            "gpt-4.1": ["gpt-4.1"],
+        }
+        for model_id, names in openai_names.items():
+            row = next((find_openai_price(openai.text, name) for name in names if find_openai_price(openai.text, name)), None)
             if row:
                 patches.append(price_patch(model_id, "OpenAI pricing", openai.url, row))
 
@@ -668,6 +738,17 @@ def extract_official_prices(sources: dict[str, SourceText]) -> list[ExtractedMod
             row = find_gemini_price(gemini.text, title)
             if row:
                 patches.append(price_patch(model_id, "Gemini API pricing", gemini.url, row))
+
+    for model_id, config in MOONSHOT_PRICING_MODELS.items():
+        url = RAW_SOURCE_URLS[config["source_key"]]
+        try:
+            text = fetch_text(session, config["source_key"], url, args)
+        except requests.RequestException as exc:
+            report.setdefault("sourceWarnings", []).append({"key": config["source_key"], "url": url, "error": str(exc)})
+            continue
+        row = find_moonshot_price(text, config["lookup"])
+        if row:
+            patches.append(price_patch(model_id, config["source_label"], url, row))
     return patches
 
 
@@ -749,6 +830,17 @@ def find_gemini_price(text: str, title: str) -> dict[str, float] | None:
     return row
 
 
+def find_moonshot_price(text: str, model_name: str) -> dict[str, float] | None:
+    pattern = re.compile(
+        rf'\["{re.escape(model_name)}",\s*"[^"]+",\s*<>{{"\$"}}(\d+(?:\.\d+)?)</>,\s*<>{{"\$"}}(\d+(?:\.\d+)?)</>,\s*<>{{"\$"}}(\d+(?:\.\d+)?)</>',
+        re.IGNORECASE,
+    )
+    match = pattern.search(text)
+    if not match:
+        return None
+    return {"hit": float(match.group(1)), "in": float(match.group(2)), "out": float(match.group(3))}
+
+
 def price_patch(model_id: str, source_label: str, source_url: str, row: dict[str, float]) -> ExtractedModel:
     fields = [f"pricing.official.{key}" for key in row]
     return ExtractedModel(
@@ -804,6 +896,90 @@ def extract_caisi_evals(sources: dict[str, SourceText]) -> list[ExtractedModel]:
         for model_id, values in table.items()
         if "CAISI Evaluation of DeepSeek V4 Pro" in source.text
     ]
+
+
+def extract_zeroeval_catalog_prices(
+    models: list[dict[str, Any]],
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> list[ExtractedModel]:
+    payload = fetch_json_source(session, "zeroeval_models_list", RAW_SOURCE_URLS["zeroeval_models_list"], args, report)
+    if not isinstance(payload, list):
+        return []
+    model_index = build_model_lookup_index(models)
+    patches: list[ExtractedModel] = []
+    for organization in payload:
+        for item in organization.get("models", []):
+            if not isinstance(item, dict):
+                continue
+            model_id = match_external_model(model_index, item.get("model_id"), item.get("name"))
+            if not model_id:
+                continue
+            patch: dict[str, Any] = {}
+            fields: list[str] = []
+            pricing_patch: dict[str, float] = {}
+            if item.get("inputPrice") is not None:
+                pricing_patch["in"] = float(item["inputPrice"])
+                fields.append("pricing.official.in")
+            if item.get("outputPrice") is not None:
+                pricing_patch["out"] = float(item["outputPrice"])
+                fields.append("pricing.official.out")
+            if pricing_patch:
+                patch.setdefault("pricing", {})["official"] = pricing_patch
+            if item.get("context_window"):
+                patch["contextWindow"] = compact_tokens(item["context_window"])
+                fields.append("contextWindow")
+            if not fields:
+                continue
+            patches.append(
+                ExtractedModel(
+                    model_id=model_id,
+                    source_label="LLM Stats model catalog",
+                    source_url=RAW_SOURCE_URLS["zeroeval_models_list"],
+                    verified_fields=fields,
+                    patch=patch,
+                    evidence=[json.dumps({key: item.get(key) for key in ["model_id", "name", "inputPrice", "outputPrice", "context_window"]}, ensure_ascii=False, sort_keys=True)],
+                )
+            )
+    return patches
+
+
+def extract_zeroeval_benchmark_evals(
+    models: list[dict[str, Any]],
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> list[ExtractedModel]:
+    model_index = build_model_lookup_index(models)
+    patches: list[ExtractedModel] = []
+    for key, benchmark in ZEROEVAL_BENCHMARKS.items():
+        payload = fetch_json_source(session, f"zeroeval_{key}", benchmark["url"], args, report)
+        if not isinstance(payload, dict):
+            continue
+        for item in payload.get("models", []):
+            if not isinstance(item, dict) or item.get("score") is None:
+                continue
+            model_id = match_external_model(model_index, item.get("model_id"), item.get("model_name"))
+            if not model_id:
+                continue
+            try:
+                score = float(item["score"])
+            except (TypeError, ValueError):
+                continue
+            value = round(score * 100, 1) if score <= 1.0 else round(score, 1)
+            field = benchmark["field"]
+            patches.append(
+                ExtractedModel(
+                    model_id=model_id,
+                    source_label=benchmark["label"],
+                    source_url=benchmark["url"],
+                    verified_fields=[f"evals.{field}"],
+                    patch={"evals": {field: value}},
+                    evidence=[json.dumps({key: item.get(key) for key in ["model_id", "model_name", "score", "rank", "provider_id"]}, ensure_ascii=False, sort_keys=True)],
+                )
+            )
+    return patches
 
 
 def extract_deepseek_reported_evals(sources: dict[str, SourceText]) -> list[ExtractedModel]:
@@ -871,8 +1047,61 @@ def extract_cursor_prices_from_provider_prices(
                 patch={"pricing": {"cursor": {"in": official["in"], "out": official["out"]}}},
                 evidence=["Cursor docs state plans include usage at model API rates."],
             )
-        )
+    )
     return patches
+
+
+def fetch_json_source(
+    session: requests.Session,
+    key: str,
+    url: str,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> Any:
+    try:
+        return json.loads(fetch_text(session, key, url, args))
+    except (json.JSONDecodeError, requests.RequestException) as exc:
+        report.setdefault("sourceWarnings", []).append({"key": key, "url": url, "error": str(exc)})
+        return None
+
+
+def build_model_lookup_index(models: list[dict[str, Any]]) -> dict[str, list[str]]:
+    index: dict[str, list[str]] = {}
+    for model in models:
+        model_id = model.get("id")
+        if not model_id:
+            continue
+        for key in model_lookup_keys(model.get("id"), model.get("name"), model.get("openrouterId")):
+            index.setdefault(key, []).append(model_id)
+    return {key: dedupe_aliases(values) for key, values in index.items()}
+
+
+def model_lookup_keys(*values: Any) -> set[str]:
+    keys: set[str] = set()
+    for value in values:
+        if not value:
+            continue
+        candidate = str(value).strip()
+        variants = {
+            candidate,
+            candidate.split("/", 1)[-1],
+            re.sub(r"[-_]?20\d{2}(?:[-_]?\d{2}){2}$", "", candidate),
+            re.sub(r"[-_](latest|preview)$", "", candidate, flags=re.IGNORECASE),
+        }
+        for variant in variants:
+            key = normalize_model_key(variant)
+            if key:
+                keys.add(key)
+    return keys
+
+
+def match_external_model(model_index: dict[str, list[str]], external_id: Any, external_name: Any) -> str | None:
+    for value in [external_id, external_name]:
+        for key in model_lookup_keys(value):
+            matches = model_index.get(key) or []
+            if len(matches) == 1:
+                return matches[0]
+    return None
 
 
 def extract_with_deepseek(
