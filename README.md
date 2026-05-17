@@ -26,6 +26,22 @@ python -m http.server 4173
 http://localhost:4173
 ```
 
+## LLM 数据核验
+
+`models.html` 只把 `data/models.json` 中 `verification.verifiedFields` 标记过的字段加粗；没有来源或未核验的字段会以灰色显示。更新模型数据后先运行：
+
+```powershell
+node scripts\verify-model-data.mjs
+```
+
+需要抓官方页面做字符串校验时可运行：
+
+```powershell
+node scripts\verify-model-data.mjs --online
+```
+
+如果页面结构难以解析，可显式增加 `--deepseek`。脚本只从 `.env` 读取 `DEEPSEEK_API_KEY`，不会把 key 写入源码或输出；提示词要求 DeepSeek 只按来源文本判断，找不到字段时返回未核验。
+
 ## 价格更新格式
 
 ```json

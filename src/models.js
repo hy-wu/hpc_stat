@@ -29,16 +29,16 @@ const fieldDefs = [
   { key: "pricing.siliconflow.hit", label: "硅基流动 In(Hit)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   { key: "pricing.siliconflow.out", label: "硅基流动 Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   // Nvidia
-  { key: "pricing.nvidia.in", label: "Nvidia In", type: "number", visible: false, heatmap: true, inverseHeatmap: true, source: "https://www.nvidia.com/en-us/ai-data-science/generative-ai/nim/" },
-  { key: "pricing.nvidia.out", label: "Nvidia Out", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.nvidia.in", label: "Nvidia In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://www.nvidia.com/en-us/ai-data-science/generative-ai/nim/" },
+  { key: "pricing.nvidia.out", label: "Nvidia Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   { key: "notes", label: "备注", type: "text", visible: false },
 ];
 
 const state = {
   models: [],
   visibleColumns: new Set(fieldDefs.filter(f => f.visible).map(f => f.key)),
-  sortField: "arenaElo",
-  sortDirection: "desc",
+  sortField: "name",
+  sortDirection: "asc",
   globalSearch: "",
   compact: false,
 };
@@ -75,13 +75,14 @@ async function init() {
   try {
     const response = await fetch("data/models.json");
     const rawData = await response.json();
-    
+
     // Logic to merge deepseek_official into official columns for the UI
     state.models = rawData.map(m => {
       const model = {...m};
-      if (model.pricing.deepseek_official) {
+      if (model.pricing?.deepseek_official) {
         model.pricing.official = model.pricing.deepseek_official;
       }
+      if (!model.pricing) model.pricing = {};
       return model;
     });
 
@@ -176,12 +177,12 @@ function getNestedValue(obj, path) {
 function renderSummary(rows) {
   if (elements.visibleCount) elements.visibleCount.textContent = rows.length;
   if (elements.bestElo) {
-    const maxVal = Math.max(...rows.map(r => r.arenaElo || 0));
-    elements.bestElo.textContent = maxVal > 0 ? maxVal : "-";
+    const verifiedCount = rows.filter(r => r.verification?.status === "verified").length;
+    elements.bestElo.textContent = `${verifiedCount}/${rows.length}`;
   }
   if (elements.bestHumanEval) {
-    const maxVal = Math.max(...rows.map(r => r.humanEval || 0));
-    elements.bestHumanEval.textContent = maxVal > 0 ? `${maxVal}%` : "-";
+    const priceCount = rows.filter(r => getNestedValue(r, "pricing.official.in") && getNestedValue(r, "pricing.official.out")).length;
+    elements.bestHumanEval.textContent = `${priceCount}/${rows.length}`;
   }
 }
 
@@ -225,11 +226,18 @@ function renderTable(rows) {
 
 function formatCell(row, field, stat) {
   const val = getNestedValue(row, field.key);
-  if (val === null || val === undefined) return "-";
+  const verified = isVerifiedField(row, field.key);
+  const sourceTitle = getSourceTitle(row);
+  const className = verified ? "verified-cell" : "unverified-cell";
+  if (val === null || val === undefined) {
+    return `<span class="unverified-cell" title="未核验或暂无数据">-</span>`;
+  }
 
   if (field.key === "vendor") {
     const link = vendorLinks[val];
-    return link ? `<a href="${link}" target="_blank" class="vendor-link" title="前往官网定价">${val}</a>` : val;
+    return link
+      ? `<a href="${link}" target="_blank" class="vendor-link ${className}" title="${sourceTitle || "前往官网定价"}">${val}</a>`
+      : `<span class="${className}" title="${sourceTitle}">${val}</span>`;
   }
 
   if (field.heatmap && typeof val === "number") {
@@ -238,17 +246,28 @@ function formatCell(row, field, stat) {
     if (field.inverseHeatmap) colorPercent = 100 - lengthPercent; 
     const color = getHeatmapColor(colorPercent);
     return `
-      <div class="heatmap-container mini">
+      <div class="heatmap-container mini ${className}" title="${verified ? sourceTitle : "未核验"}">
         <div class="heatmap-bar" style="width: ${lengthPercent}%; background: ${color}"></div>
         <span class="heatmap-value">${typeof val === 'number' && field.key.includes('pricing') ? val.toFixed(3) : val}</span>
       </div>
     `;
   }
 
-  if (field.key === "multimodal") return `<span class="tag multimodal">${val}</span>`;
-  if (field.key === "copilotMultiplier") return val === null ? "-" : (val === 0 ? "Free" : `${val}x`);
+  if (field.key === "multimodal") return `<span class="tag multimodal ${className}" title="${sourceTitle}">${val}</span>`;
+  if (field.key === "copilotMultiplier") return val === null ? "-" : `<span class="${className}" title="${sourceTitle}">${val === 0 ? "Free" : `${val}x`}</span>`;
 
-  return val;
+  return `<span class="${className}" title="${verified ? sourceTitle : "未核验"}">${val}</span>`;
+}
+
+function isVerifiedField(row, key) {
+  const fields = row.verification?.verifiedFields;
+  return Array.isArray(fields) && fields.includes(key);
+}
+
+function getSourceTitle(row) {
+  const sources = row.verification?.sources;
+  if (!Array.isArray(sources) || sources.length === 0) return "";
+  return sources.map(source => source.label).join(" / ");
 }
 
 function getHeatmapColor(percent) {
