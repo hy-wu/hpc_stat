@@ -11,36 +11,32 @@ const fieldDefs = [
   { key: "gpqa", label: "GPQA", type: "number", visible: true, heatmap: true },
   { key: "math", label: "MATH", type: "number", visible: true, heatmap: true },
   { key: "contextWindow", label: "上下文", type: "text", visible: true },
+  // OpenRouter (Moved to front as requested)
+  { key: "pricing.openrouter.in", label: "OpenRouter In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://openrouter.ai/models" },
+  { key: "pricing.openrouter.out", label: "OpenRouter Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  // Official (Now merged with DeepSeek official data in the backend logic)
+  { key: "pricing.official.in", label: "官方 In", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.official.hit", label: "官方 In(Hit)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.official.out", label: "官方 Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   // Copilot
   { key: "pricing.copilot.in", label: "Copilot In", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   { key: "pricing.copilot.out", label: "Copilot Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  // Official
-  { key: "pricing.official.in", label: "官方 In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://openai.com/api/pricing" },
-  { key: "pricing.official.hit", label: "官方 In(Hit)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  { key: "pricing.official.out", label: "官方 Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   // Cursor
   { key: "pricing.cursor.in", label: "Cursor In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://cursor.com/cn/docs/models-and-pricing" },
   { key: "pricing.cursor.out", label: "Cursor Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  // DeepSeek Official
-  { key: "pricing.deepseek_official.in", label: "DeepSeek In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://api-docs.deepseek.com/quick_start/pricing" },
-  { key: "pricing.deepseek_official.hit", label: "DeepSeek In(Hit)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  { key: "pricing.deepseek_official.out", label: "DeepSeek Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   // SiliconFlow
   { key: "pricing.siliconflow.in", label: "硅基流动 In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://siliconflow.cn/pricing" },
   { key: "pricing.siliconflow.hit", label: "硅基流动 In(Hit)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   { key: "pricing.siliconflow.out", label: "硅基流动 Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  // OpenRouter
-  { key: "pricing.openrouter.in", label: "OpenRouter In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://openrouter.ai/models" },
-  { key: "pricing.openrouter.out", label: "OpenRouter Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   // Nvidia
-  { key: "pricing.nvidia.in", label: "Nvidia In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://www.nvidia.com/en-us/ai-data-science/generative-ai/nim/" },
-  { key: "pricing.nvidia.out", label: "Nvidia Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.nvidia.in", label: "Nvidia In", type: "number", visible: false, heatmap: true, inverseHeatmap: true, source: "https://www.nvidia.com/en-us/ai-data-science/generative-ai/nim/" },
+  { key: "pricing.nvidia.out", label: "Nvidia Out", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
   { key: "notes", label: "备注", type: "text", visible: false },
 ];
 
 const state = {
   models: [],
-  visibleColumns: new Set(fieldDefs.filter(f => f.key !== 'notes').map(f => f.key)),
+  visibleColumns: new Set(fieldDefs.filter(f => f.visible).map(f => f.key)),
   sortField: "arenaElo",
   sortDirection: "desc",
   globalSearch: "",
@@ -60,12 +56,35 @@ const elements = {
   bestHumanEval: document.querySelector("#bestHumanEval"),
 };
 
-const defaultVisibleColumns = new Set(fieldDefs.filter(f => f.key !== 'notes').map(f => f.key));
+const defaultVisibleColumns = new Set(fieldDefs.filter(f => f.visible).map(f => f.key));
+
+// Official price sources mapping by vendor
+const vendorLinks = {
+  "Anthropic": "https://www.anthropic.com/pricing",
+  "OpenAI": "https://openai.com/api/pricing",
+  "DeepSeek": "https://api-docs.deepseek.com/quick_start/pricing",
+  "Google": "https://ai.google.dev/pricing",
+  "Meta": "https://llama.meta.com/",
+  "Alibaba": "https://help.aliyun.com/zh/dashcope/developer-reference/model-pricing",
+  "Mistral": "https://mistral.ai/technology/#pricing",
+  "01.AI": "https://platform.lingyiwanwu.com/pricing",
+  "Zhipu AI": "https://open.bigmodel.cn/pricing"
+};
 
 async function init() {
   try {
     const response = await fetch("data/models.json");
-    state.models = await response.json();
+    const rawData = await response.json();
+    
+    // Logic to merge deepseek_official into official columns for the UI
+    state.models = rawData.map(m => {
+      const model = {...m};
+      if (model.pricing.deepseek_official) {
+        model.pricing.official = model.pricing.deepseek_official;
+      }
+      return model;
+    });
+
     renderColumnPicker();
     bindEvents();
     render();
@@ -180,7 +199,7 @@ function renderTable(rows) {
   elements.tableHead.innerHTML = `<tr>${activeFields
     .map(f => `<th>
       <button data-sort="${f.key}">${f.label}${state.sortField === f.key ? (state.sortDirection === 'asc' ? ' ↑' : ' ↓') : ''}</button>
-      ${f.source ? `<a href="${f.source}" target="_blank" class="source-icon" title="查看价格来源">🔗</a>` : ''}
+      ${f.source ? `<a href="${f.source}" target="_blank" class="source-icon" title="查看平台定价">🔗</a>` : ''}
     </th>`)
     .join("")}</tr>`;
 
@@ -207,6 +226,11 @@ function renderTable(rows) {
 function formatCell(row, field, stat) {
   const val = getNestedValue(row, field.key);
   if (val === null || val === undefined) return "-";
+
+  if (field.key === "vendor") {
+    const link = vendorLinks[val];
+    return link ? `<a href="${link}" target="_blank" class="vendor-link" title="前往官网定价">${val}</a>` : val;
+  }
 
   if (field.heatmap && typeof val === "number") {
     const lengthPercent = (val - stat.min) / (stat.max - stat.min || 1) * 100;
