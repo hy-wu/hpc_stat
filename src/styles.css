@@ -32,10 +32,13 @@ body {
 }
 
 button,
-input,
 select,
 textarea {
   font: inherit;
+}
+
+input {
+  font-size: small;
 }
 
 button {
@@ -103,6 +106,10 @@ h2 {
   font-weight: 700;
 }
 
+.ghost-button {
+  min-height: 24px;
+}
+
 .primary-button {
   background: var(--accent);
   border-color: var(--accent);
@@ -157,7 +164,7 @@ h2 {
 .control,
 .search-block {
   display: grid;
-  gap: 6px;
+  gap: 3px;
   min-width: 0;
 }
 
@@ -187,7 +194,7 @@ textarea {
   border-radius: 8px;
   background: #fff;
   color: var(--ink);
-  min-height: 38px;
+  min-height: 28px;
   padding: 8px 10px;
 }
 
@@ -201,11 +208,11 @@ textarea:focus {
 .insight-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  gap: 1rem;
 }
 
 .metric {
-  min-height: 52px;
+  min-height: 40px;
   padding: 8px 14px;
   background: var(--panel);
   border: 1px solid var(--line);
