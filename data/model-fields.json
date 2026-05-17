@@ -66,9 +66,9 @@
     { "key": "math", "label": "MATH", "type": "number", "visible": false, "heatmap": true },
     { "key": "pricing.copilot.in", "label": "Copilot In", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true },
     { "key": "pricing.copilot.out", "label": "Copilot Out", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.siliconflow.in", "label": "硅基流动 In (¥)", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true, "source": "https://siliconflow.cn/pricing" },
+    { "key": "pricing.siliconflow.in", "label": "硅基流动 In (¥)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true, "source": "https://siliconflow.cn/pricing" },
     { "key": "pricing.siliconflow.hit", "label": "硅基流动 In(Hit) (¥)", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.siliconflow.out", "label": "硅基流动 Out (¥)", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true },
+    { "key": "pricing.siliconflow.out", "label": "硅基流动 Out (¥)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true },
     { "key": "pricing.nvidia.in", "label": "NVIDIA In", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true, "source": "https://www.nvidia.com/en-us/ai-data-science/generative-ai/nim/" },
     { "key": "pricing.nvidia.out", "label": "NVIDIA Out", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true },
     { "key": "notes", "label": "备注", "type": "text", "visible": false }

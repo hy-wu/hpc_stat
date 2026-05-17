@@ -33,6 +33,7 @@ MODEL_ALIASES_PATH = ROOT / "data" / "model-aliases.json"
 SIDEBAR_DATA_DIR = ROOT / "data" / "byGeminiSidebar"
 SIDEBAR_GPQA_PATH = SIDEBAR_DATA_DIR / "GPQAselfReported.md"
 SIDEBAR_LLM_STATS_PATH = SIDEBAR_DATA_DIR / "llmStat.md"
+SIDEBAR_SILICONFLOW_PATH = SIDEBAR_DATA_DIR / "硅基流动.md"
 MODELS_HTML_PATH = ROOT / "models.html"
 MODELS_JS_PATH = ROOT / "src" / "models.js"
 REFERENCE_PATH = ROOT / "REFERENCE_SOURCES.md"
@@ -1975,6 +1976,64 @@ def extract_sidebar_snapshot_data(
             seen_diff_keys.add(key)
             deduped.append(item)
         sidebar_report["largeDiffs"] = deduped
+
+    if SIDEBAR_SILICONFLOW_PATH.exists():
+        sf_rows = 0
+        sf_matched = 0
+        sf_prices: dict[str, dict[str, float]] = {}
+        for table in parse_markdown_tables(SIDEBAR_SILICONFLOW_PATH.read_text(encoding="utf-8")):
+            for row in table:
+                # Extract model name from the backtick-formatted cell, e.g. `Pro/Qwen/Qwen3.6-27B`
+                raw_name = row.get("模型名称") or ""
+                # Strip backticks
+                raw_name = raw_name.strip("`").strip()
+                if not raw_name:
+                    continue
+                # Only keep chat (对话) models; skip embedding, image gen, voice, etc.
+                func = (row.get("模型功能") or "").strip()
+                if func != "对话":
+                    continue
+                sf_rows += 1
+                # Strip leading "Pro/" path segment for matching
+                name_for_match = re.sub(r"^Pro/", "", raw_name)
+                # Use only the last path segment (model name) for matching
+                model_short = name_for_match.split("/")[-1]
+
+                raw_in = row.get("输入价格 (每M Tokens)") or row.get("输入价格") or ""
+                raw_out = row.get("输出价格 (每M Tokens)") or row.get("输出价格") or ""
+                price_in = extract_first_number(raw_in.replace("￥", "").replace(",", ""))
+                price_out = extract_first_number(raw_out.replace("￥", "").replace(",", ""))
+                # ￥ 0 → free (0.0), not missing
+                if price_in is None and re.search(r"[0-9]", raw_in) is None and raw_in.strip():
+                    price_in = 0.0
+                if price_out is None and re.search(r"[0-9]", raw_out) is None and raw_out.strip():
+                    price_out = 0.0
+
+                keep_min_prices(sf_prices.setdefault(model_short, {}), {"in": price_in, "out": price_out})
+
+        sf_source_url = "https://siliconflow.cn/pricing"
+        for model_short, prices in sf_prices.items():
+            model_id = match_external_model(matcher, model_short, None)
+            if not model_id:
+                continue
+            sf_matched += 1
+            verified_fields = [f"pricing.siliconflow.{k}" for k in prices]
+            patches.append(
+                ExtractedModel(
+                    model_id=model_id,
+                    source_label="硅基流动 pricing snapshot",
+                    source_url=sf_source_url,
+                    verified_fields=verified_fields,
+                    patch={"pricing": {"siliconflow": prices}},
+                    evidence=[f"硅基流动.md: {model_short} → in={prices.get('in')}, out={prices.get('out')}"],
+                )
+            )
+
+        sidebar_report["siliconflowSnapshot"] = {
+            "chatRows": sf_rows,
+            "uniqueModels": len(sf_prices),
+            "matchedModels": sf_matched,
+        }
 
     if sidebar_report:
         report["sidebarSnapshots"] = sidebar_report
