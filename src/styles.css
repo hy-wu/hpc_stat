@@ -451,9 +451,68 @@ tbody tr:hover {
   color: var(--good);
 }
 
+.compact {
+  font-size: 11px;
+}
+
 .compact th,
 .compact td {
-  padding: 6px 9px;
+  padding: 4px 6px;
+}
+
+.compact .heatmap-container.mini {
+  height: 18px;
+  min-width: 80px;
+}
+
+.compact .tag {
+  font-size: 10px;
+  min-height: 18px;
+  padding: 0 6px;
+}
+
+/* Pricing Grid Styles */
+.price-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.p-in, .p-out {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.p-in { color: var(--accent-strong); }
+.p-out { color: var(--ink); }
+
+.platform-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.p-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 2px;
+}
+
+.p-name {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.p-price {
+  font-family: monospace;
+}
+
+.tag.multimodal {
+  background: #f0f4ff;
+  color: #3b82f6;
+  border: 1px solid #dbeafe;
 }
 
 dialog {
