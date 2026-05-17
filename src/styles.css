@@ -383,12 +383,28 @@ td {
 th {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   background: #eef5f6;
   color: #26363d;
   font-size: 12px;
   font-weight: 850;
   white-space: normal;
+}
+
+th:first-child {
+  left: 0;
+  z-index: 3;
+}
+
+td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--panel);
+}
+
+tbody tr:hover td:first-child {
+  background: #f7fbfb;
 }
 
 th button {
