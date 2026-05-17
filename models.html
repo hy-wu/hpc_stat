@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Copilot - LLM Model Comparison 2026</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">GitHub Copilot · AI Intelligence</p>
+          <h1>大语言模型性能/价格榜单</h1>
+        </div>
+        <div class="actions">
+           <a href="index.html" class="ghost-button">返回 GPU 工作台</a>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <nav class="nav-tabs">
+          <a href="index.html" class="nav-link">GPU 参数</a>
+          <a href="models.html" class="nav-link active">LLM 模型</a>
+        </nav>
+
+        <section class="control-band">
+          <div class="search-block">
+            <label for="globalSearch">搜索模型</label>
+            <input id="globalSearch" type="search" placeholder="名称、厂商、性能标签..." />
+          </div>
+          <button class="text-button" id="compactToggleButton" type="button">紧凑模式</button>
+        </section>
+
+        <section class="insight-grid" aria-label="统计概览">
+          <div class="metric">
+            <span>对比模型</span>
+            <strong id="visibleCount">0</strong>
+          </div>
+          <div class="metric">
+            <span>最高 Arena Elo</span>
+            <strong id="bestElo">-</strong>
+          </div>
+          <div class="metric">
+            <span>最高 HumanEval</span>
+            <strong id="bestHumanEval">-</strong>
+          </div>
+        </section>
+
+        <section class="table-panel">
+          <div class="panel-head">
+            <h2>（GitHub Copilot）模型评分与价格表 (2026)</h2>
+          </div>
+          <div class="table-wrap">
+            <table id="gpuTable"> <!-- Reusing ID for CSS -->
+              <thead id="tableHead"></thead>
+              <tbody id="tableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="src/models.js"></script>
+  </body>
+</html>
