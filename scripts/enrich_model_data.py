@@ -53,6 +53,8 @@ RAW_SOURCE_URLS = {
     "moonshot_k25_pricing": "https://platform.kimi.ai/docs/pricing/chat-k25.md",
     "moonshot_k2_pricing": "https://platform.kimi.ai/docs/pricing/chat-k2.md",
     "zeroeval_models_list": "https://api.zeroeval.com/leaderboard/models/list",
+    # LLM-Stats serves its full model catalog as a Next.js RSC payload
+    "llm_stats_rsc": "https://llm-stats.com/",
 }
 
 ZEROEVAL_BENCHMARKS = {
@@ -80,6 +82,62 @@ ZEROEVAL_BENCHMARKS = {
         "field": "terminalBench",
         "label": "ZeroEval Terminal-Bench leaderboard",
         "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details",
+    },
+    # New benchmarks — popular ones with high model coverage in ZeroEval
+    "aime-2025": {
+        "field": "aime2025",
+        "label": "ZeroEval AIME 2025 leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details",
+    },
+    "aime-2024": {
+        "field": "aime2024",
+        "label": "ZeroEval AIME 2024 leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2024/details",
+    },
+    "humanity%27s-last-exam": {
+        "field": "hle",
+        "label": "ZeroEval Humanity's Last Exam leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details",
+    },
+    "simpleqa": {
+        "field": "simpleQA",
+        "label": "ZeroEval SimpleQA leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/simpleqa/details",
+    },
+    "browsecomp": {
+        "field": "browseComp",
+        "label": "ZeroEval BrowseComp leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details",
+    },
+    "ifeval": {
+        "field": "ifEval",
+        "label": "ZeroEval IFEval leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/ifeval/details",
+    },
+    # Root-level fields (root=True → write directly to model root, not under evals.*)
+    "mmlu": {
+        "field": "mmlu",
+        "root": True,
+        "label": "ZeroEval MMLU leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu/details",
+    },
+    "humaneval": {
+        "field": "humanEval",
+        "root": True,
+        "label": "ZeroEval HumanEval leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/humaneval/details",
+    },
+    "gsm8k": {
+        "field": "gsm8k",
+        "root": True,
+        "label": "ZeroEval GSM8k leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/gsm8k/details",
+    },
+    "math": {
+        "field": "math",
+        "root": True,
+        "label": "ZeroEval MATH leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/math/details",
     },
 }
 
@@ -302,6 +360,7 @@ def main() -> int:
         patches.extend(extract_official_prices(models, source_texts, session, args, report))
         patches.extend(extract_caisi_evals(source_texts))
         patches.extend(extract_zeroeval_benchmark_evals(models, session, args, report))
+        patches.extend(extract_llm_stats_data(models, session, args, report))
         patches.extend(extract_deepseek_reported_evals(source_texts))
         patches.extend(extract_meta_model_details(source_texts))
         patches.extend(extract_cursor_prices_from_provider_prices(models, patches))
@@ -969,16 +1028,164 @@ def extract_zeroeval_benchmark_evals(
                 continue
             value = round(score * 100, 1) if score <= 1.0 else round(score, 1)
             field = benchmark["field"]
+            root = benchmark.get("root", False)
+            if root:
+                vfields = [field]
+                patch_data: dict[str, Any] = {field: value}
+            else:
+                vfields = [f"evals.{field}"]
+                patch_data = {"evals": {field: value}}
             patches.append(
                 ExtractedModel(
                     model_id=model_id,
                     source_label=benchmark["label"],
                     source_url=benchmark["url"],
-                    verified_fields=[f"evals.{field}"],
-                    patch={"evals": {field: value}},
+                    verified_fields=vfields,
+                    patch=patch_data,
                     evidence=[json.dumps({key: item.get(key) for key in ["model_id", "model_name", "score", "rank", "provider_id"]}, ensure_ascii=False, sort_keys=True)],
                 )
             )
+    return patches
+
+
+def extract_llm_stats_data(
+    models: list[dict[str, Any]],
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> list[ExtractedModel]:
+    """Parse the LLM-Stats RSC payload to extract pricing and benchmark data.
+
+    LLM-Stats.com embeds a full model catalog in its Next.js RSC response with
+    fields: model_id, gpqa_score, swe_bench_verified_score, hle_score,
+    input_price, output_price, context.  We use it as a secondary source to
+    fill gaps where ZeroEval or official pages don't provide data.
+    """
+    source_url = RAW_SOURCE_URLS["llm_stats_rsc"]
+    cache_key = "llm_stats_rsc"
+
+    # Fetch the RSC payload
+    cache_path = CACHE_DIR / f"{cache_key}.txt"
+    if not args.no_cache and not args.refresh_cache and cache_path.exists():
+        raw_text = cache_path.read_text(encoding="utf-8")
+        report.setdefault("cacheHits", []).append(cache_key)
+    else:
+        try:
+            resp = session.get(
+                source_url,
+                timeout=30,
+                headers={"Next-Router-Prefetch": "1", "RSC": "1", "Accept": "text/x-component"},
+            )
+            resp.raise_for_status()
+            raw_text = resp.text
+            if not args.no_cache:
+                CACHE_DIR.mkdir(parents=True, exist_ok=True)
+                cache_path.write_text(raw_text, encoding="utf-8")
+        except Exception as exc:
+            report.setdefault("errors", []).append(f"llm_stats_rsc fetch error: {exc}")
+            return []
+
+    # Parse model objects from RSC text
+    llm_stats_models: list[dict[str, Any]] = []
+    i = 0
+    while True:
+        idx = raw_text.find('{"model_id":', i)
+        if idx < 0:
+            break
+        depth = 0
+        j = idx
+        while j < len(raw_text):
+            ch = raw_text[j]
+            if ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    obj_str = raw_text[idx : j + 1]
+                    try:
+                        obj = json.loads(obj_str)
+                        if isinstance(obj, dict) and (
+                            obj.get("gpqa_score") is not None or obj.get("input_price") is not None
+                        ):
+                            llm_stats_models.append(obj)
+                    except (json.JSONDecodeError, ValueError):
+                        pass
+                    break
+            j += 1
+        i = idx + 1
+
+    # Deduplicate by model_id
+    seen_ids: set[str] = set()
+    unique_models: list[dict[str, Any]] = []
+    for m in llm_stats_models:
+        mid = m.get("model_id")
+        if mid and mid not in seen_ids:
+            seen_ids.add(mid)
+            unique_models.append(m)
+
+    report["llmStatsModelCount"] = len(unique_models)
+
+    model_index = build_model_lookup_index(models)
+    patches: list[ExtractedModel] = []
+
+    for item in unique_models:
+        mid_raw = item.get("model_id", "")
+        model_id = match_external_model(model_index, mid_raw, item.get("name"))
+        if not model_id:
+            continue
+
+        # Field mappings: llm-stats field → (our path, scale factor)
+        field_map: list[tuple[str, str, float]] = [
+            ("gpqa_score", "evals.gpqaDiamond", 100.0),
+            ("swe_bench_verified_score", "evals.reportedSweBenchVerified", 100.0),
+            ("hle_score", "evals.hle", 100.0),
+        ]
+        pricing_map: list[tuple[str, str]] = [
+            ("input_price", "in"),
+            ("output_price", "out"),
+        ]
+
+        verified_fields: list[str] = []
+        patch: dict[str, Any] = {}
+
+        for src_field, our_path, scale in field_map:
+            raw_val = item.get(src_field)
+            if raw_val is None:
+                continue
+            try:
+                val = round(float(raw_val) * scale, 1)
+            except (TypeError, ValueError):
+                continue
+            set_nested(patch, our_path, val)
+            verified_fields.append(our_path)
+
+        pricing_patch: dict[str, float] = {}
+        for src_field, price_key in pricing_map:
+            raw_val = item.get(src_field)
+            if raw_val is not None:
+                try:
+                    pricing_patch[price_key] = float(raw_val)
+                    verified_fields.append(f"pricing.official.{price_key}")
+                except (TypeError, ValueError):
+                    pass
+        if pricing_patch:
+            patch.setdefault("pricing", {})["official"] = pricing_patch
+
+        if not verified_fields:
+            continue
+
+        evidence_keys = ["model_id", "name", "gpqa_score", "swe_bench_verified_score", "hle_score", "input_price", "output_price"]
+        patches.append(
+            ExtractedModel(
+                model_id=model_id,
+                source_label="LLM-Stats model catalog",
+                source_url=source_url,
+                verified_fields=verified_fields,
+                patch=patch,
+                evidence=[json.dumps({k: item.get(k) for k in evidence_keys}, ensure_ascii=False, sort_keys=True)],
+            )
+        )
+
     return patches
 
 

@@ -13,7 +13,9 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "browseComp": 79.3,
       "gpqaDiamond": 94.2,
+      "hle": 54.7,
       "reportedSweBenchVerified": 87.6
     },
     "contextWindow": "1M",
@@ -39,7 +41,9 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
@@ -90,6 +94,18 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     }
@@ -108,7 +124,9 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "browseComp": 74.7,
       "gpqaDiamond": 89.9,
+      "hle": 49.0,
       "reportedSweBenchVerified": 79.6
     },
     "contextWindow": "200K",
@@ -134,7 +152,9 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
@@ -181,6 +201,18 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     }
@@ -199,6 +231,7 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 87.0,
       "gpqaDiamond": 83.4,
       "terminalBench": 50.0
     },
@@ -225,6 +258,7 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "evals.aime2025",
         "evals.gpqaDiamond",
         "evals.terminalBench",
         "multimodal",
@@ -270,6 +304,14 @@
         {
           "label": "ZeroEval Terminal-Bench leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     }
@@ -288,6 +330,7 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 80.7,
       "gpqaDiamond": 73.0,
       "reportedSweBenchVerified": 73.3,
       "terminalBench": 41.0
@@ -315,6 +358,7 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "evals.aime2025",
         "evals.gpqaDiamond",
         "evals.reportedSweBenchVerified",
         "evals.terminalBench",
@@ -367,6 +411,14 @@
         {
           "label": "ZeroEval Terminal-Bench leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     }
@@ -391,7 +443,9 @@
       "caisiOtisAime2025": 100,
       "caisiPumac2024": 96,
       "caisiSmt2025": 99,
-      "gpqaDiamond": 93.6
+      "browseComp": 84.4,
+      "gpqaDiamond": 93.6,
+      "hle": 52.2
     },
     "contextWindow": "1.1M",
     "pricing": {
@@ -416,6 +470,7 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "evals.browseComp",
         "evals.caisiElo",
         "evals.caisiGpqaDiamond",
         "evals.caisiOtisAime2025",
@@ -423,6 +478,7 @@
         "evals.caisiSmt2025",
         "evals.caisiSweBenchVerified",
         "evals.gpqaDiamond",
+        "evals.hle",
         "multimodal",
         "name",
         "performance",
@@ -472,6 +528,18 @@
         {
           "label": "ZeroEval GPQA Diamond leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     }
@@ -492,7 +560,9 @@
     "evals": {
       "mmluPro": 87.5,
       "gpqaDiamond": 93.0,
-      "terminalBench": 75.1
+      "terminalBench": 75.1,
+      "browseComp": 82.7,
+      "hle": 39.8
     },
     "contextWindow": "1M",
     "pricing": {
@@ -517,7 +587,9 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.mmluPro",
         "evals.terminalBench",
         "multimodal",
@@ -565,6 +637,18 @@
         {
           "label": "ZeroEval GPQA Diamond leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     }
@@ -589,7 +673,8 @@
       "caisiOtisAime2025": 90,
       "caisiPumac2024": 93,
       "caisiSmt2025": 92,
-      "gpqaDiamond": 88.0
+      "gpqaDiamond": 88.0,
+      "hle": 28.2
     },
     "contextWindow": "400K",
     "pricing": {
@@ -621,6 +706,7 @@
         "evals.caisiSmt2025",
         "evals.caisiSweBenchVerified",
         "evals.gpqaDiamond",
+        "evals.hle",
         "multimodal",
         "name",
         "performance",
@@ -666,6 +752,14 @@
         {
           "label": "ZeroEval GPQA Diamond leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     }
@@ -739,6 +833,10 @@
         {
           "label": "LLM Stats model catalog",
           "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     }
@@ -804,6 +902,10 @@
           "url": "https://api.zeroeval.com/leaderboard/models/list"
         },
         {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
         }
@@ -824,7 +926,10 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 100.0,
+      "browseComp": 65.8,
       "gpqaDiamond": 92.4,
+      "hle": 34.5,
       "reportedSweBenchVerified": 80.0
     },
     "contextWindow": "400K",
@@ -849,7 +954,10 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "evals.aime2025",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
@@ -884,6 +992,22 @@
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         },
         {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
         }
@@ -904,7 +1028,9 @@
     "gpqa": null,
     "math": null,
     "evals": {
-      "gpqaDiamond": 82.3
+      "aime2025": 91.1,
+      "gpqaDiamond": 82.3,
+      "hle": 16.7
     },
     "contextWindow": "400K",
     "pricing": {
@@ -928,7 +1054,9 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "evals.aime2025",
         "evals.gpqaDiamond",
+        "evals.hle",
         "multimodal",
         "name",
         "performance",
@@ -958,6 +1086,18 @@
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
         },
         {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
         }
@@ -972,13 +1112,17 @@
     "copilotMultiplier": 0.0,
     "performance": null,
     "arenaElo": null,
-    "mmlu": null,
+    "mmlu": 90.2,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2024": 48.1,
+      "aime2025": 46.4,
       "gpqaDiamond": 66.3,
+      "hle": 5.4,
+      "ifEval": 87.4,
       "reportedSweBenchVerified": 54.6
     },
     "contextWindow": "1.0M",
@@ -1003,8 +1147,13 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "evals.aime2024",
+        "evals.aime2025",
         "evals.gpqaDiamond",
+        "evals.hle",
+        "evals.ifEval",
         "evals.reportedSweBenchVerified",
+        "mmlu",
         "multimodal",
         "name",
         "pricing.cursor.in",
@@ -1035,6 +1184,30 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval AIME 2024 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2024/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval IFEval leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/ifeval/details"
+        },
+        {
+          "label": "ZeroEval MMLU leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         },
         {
           "label": "Cursor models/pricing",
@@ -1222,8 +1395,12 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2024": 92.0,
+      "aime2025": 83.0,
       "gpqaDiamond": 83.0,
-      "reportedSweBenchVerified": 63.2
+      "hle": 17.8,
+      "reportedSweBenchVerified": 63.2,
+      "simpleQA": 50.8
     },
     "contextWindow": "1.0M",
     "pricing": {
@@ -1247,8 +1424,12 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2024",
+        "evals.aime2025",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.reportedSweBenchVerified",
+        "evals.simpleQA",
         "multimodal",
         "name",
         "performance",
@@ -1286,6 +1467,26 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval AIME 2024 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2024/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval SimpleQA leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/simpleqa/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -1305,8 +1506,12 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2024": 88.0,
+      "aime2025": 72.0,
       "gpqaDiamond": 82.8,
-      "reportedSweBenchVerified": 60.4
+      "hle": 11.0,
+      "reportedSweBenchVerified": 60.4,
+      "simpleQA": 26.9
     },
     "contextWindow": "1.0M",
     "pricing": {
@@ -1330,8 +1535,12 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2024",
+        "evals.aime2025",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.reportedSweBenchVerified",
+        "evals.simpleQA",
         "multimodal",
         "name",
         "performance",
@@ -1369,6 +1578,26 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval AIME 2024 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2024/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval SimpleQA leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/simpleqa/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     }
@@ -1381,11 +1610,11 @@
     "copilotMultiplier": null,
     "performance": "17B active / 400B total MoE",
     "arenaElo": null,
-    "mmlu": null,
+    "mmlu": 85.5,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
-    "math": null,
+    "math": 61.2,
     "evals": {
       "gpqaDiamond": 69.8,
       "liveCodeBench": 43.4,
@@ -1406,6 +1635,8 @@
         "evals.gpqaDiamond",
         "evals.liveCodeBench",
         "evals.mmluPro",
+        "math",
+        "mmlu",
         "multimodal",
         "name",
         "performance",
@@ -1433,6 +1664,18 @@
         {
           "label": "ZeroEval LiveCodeBench leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
+        },
+        {
+          "label": "ZeroEval MMLU leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu/details"
+        },
+        {
+          "label": "ZeroEval MATH leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/math/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     }
@@ -1445,11 +1688,11 @@
     "copilotMultiplier": null,
     "performance": "17B active / 109B total MoE",
     "arenaElo": null,
-    "mmlu": null,
+    "mmlu": 79.6,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
-    "math": null,
+    "math": 50.3,
     "evals": {
       "gpqaDiamond": 57.2,
       "liveCodeBench": 32.8,
@@ -1470,6 +1713,8 @@
         "evals.gpqaDiamond",
         "evals.liveCodeBench",
         "evals.mmluPro",
+        "math",
+        "mmlu",
         "multimodal",
         "name",
         "performance",
@@ -1497,6 +1742,18 @@
         {
           "label": "ZeroEval LiveCodeBench leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
+        },
+        {
+          "label": "ZeroEval MMLU leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu/details"
+        },
+        {
+          "label": "ZeroEval MATH leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/math/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     }
@@ -1774,6 +2031,10 @@
         {
           "label": "LLM Stats model catalog",
           "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -2012,6 +2273,7 @@
     "math": null,
     "evals": {
       "gpqaDiamond": 86.0,
+      "hle": 21.4,
       "mmluPro": 85.2,
       "reportedSweBenchVerified": 73.4
     },
@@ -2029,6 +2291,7 @@
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
         "multimodal",
@@ -2055,6 +2318,14 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -2119,6 +2390,7 @@
     "math": null,
     "evals": {
       "gpqaDiamond": 87.8,
+      "hle": 24.0,
       "mmluPro": 86.2,
       "reportedSweBenchVerified": 77.2
     },
@@ -2139,6 +2411,7 @@
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
         "multimodal",
@@ -2170,6 +2443,14 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -2189,7 +2470,10 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "browseComp": 90.1,
+      "hle": 57.2
+    },
     "contextWindow": "1.1M",
     "pricing": {
       "openrouter": {
@@ -2202,6 +2486,8 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.browseComp",
+        "evals.hle",
         "multimodal",
         "name",
         "performance",
@@ -2213,6 +2499,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
         }
       ]
     },
@@ -2584,7 +2878,9 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "browseComp": 86.3,
       "gpqaDiamond": 90.5,
+      "hle": 36.4,
       "reportedSweBenchVerified": 80.2
     },
     "contextWindow": "262K",
@@ -2605,7 +2901,9 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
@@ -2638,6 +2936,18 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -2703,7 +3013,9 @@
     "gpqa": null,
     "math": null,
     "evals": {
-      "gpqaDiamond": 86.2
+      "browseComp": 79.3,
+      "gpqaDiamond": 86.2,
+      "hle": 52.3
     },
     "contextWindow": "200K",
     "pricing": {
@@ -2722,7 +3034,9 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "multimodal",
         "name",
         "performance",
@@ -2745,6 +3059,18 @@
         {
           "label": "ZeroEval GPQA Diamond leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -2766,6 +3092,7 @@
     "math": null,
     "evals": {
       "gpqaDiamond": 82.3,
+      "hle": 17.2,
       "mmluPro": 82.6
     },
     "contextWindow": "262K",
@@ -2789,6 +3116,7 @@
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.mmluPro",
         "multimodal",
         "name",
@@ -2817,6 +3145,14 @@
         {
           "label": "ZeroEval MMLU-Pro leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         },
         {
           "label": "Cursor models/pricing",
@@ -2842,6 +3178,7 @@
     "math": null,
     "evals": {
       "gpqaDiamond": 84.3,
+      "hle": 26.5,
       "mmluPro": 85.2
     },
     "contextWindow": "262K",
@@ -2865,6 +3202,7 @@
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.mmluPro",
         "multimodal",
         "name",
@@ -2895,6 +3233,14 @@
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
         },
         {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
         }
@@ -2918,6 +3264,8 @@
     "math": null,
     "evals": {
       "gpqaDiamond": 90.4,
+      "hle": 28.8,
+      "ifEval": 94.3,
       "mmluPro": 88.5,
       "reportedSweBenchVerified": 78.8
     },
@@ -2938,6 +3286,8 @@
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
+        "evals.hle",
+        "evals.ifEval",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
         "multimodal",
@@ -2969,6 +3319,18 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval IFEval leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/ifeval/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -3480,6 +3842,10 @@
         {
           "label": "LLM Stats model catalog",
           "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -3500,7 +3866,8 @@
     "gpqa": null,
     "math": null,
     "evals": {
-      "gpqaDiamond": 82.8
+      "gpqaDiamond": 82.8,
+      "hle": 24.3
     },
     "contextWindow": "400K",
     "pricing": {
@@ -3524,6 +3891,7 @@
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
+        "evals.hle",
         "multimodal",
         "name",
         "performance",
@@ -3550,6 +3918,14 @@
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
         },
         {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
         }
@@ -3572,6 +3948,7 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 83.8,
       "gpqaDiamond": 71.2,
       "liveCodeBench": 63.6,
       "mmluPro": 78.0
@@ -3593,6 +3970,7 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
         "evals.gpqaDiamond",
         "evals.liveCodeBench",
         "evals.mmluPro",
@@ -3626,6 +4004,14 @@
         {
           "label": "ZeroEval LiveCodeBench leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -3691,7 +4077,10 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 90.2,
+      "browseComp": 31.3,
       "gpqaDiamond": 82.7,
+      "hle": 22.8,
       "liveCodeBench": 81.2,
       "mmluPro": 83.7,
       "reportedSweBenchVerified": 53.7,
@@ -3709,7 +4098,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.liveCodeBench",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
@@ -3745,6 +4137,22 @@
         {
           "label": "ZeroEval Terminal-Bench leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -3765,6 +4173,7 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 93.0,
       "gpqaDiamond": 85.1,
       "reportedSweBenchVerified": 73.5
     },
@@ -3780,6 +4189,7 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
         "evals.gpqaDiamond",
         "evals.reportedSweBenchVerified",
         "multimodal",
@@ -3801,6 +4211,14 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -3822,6 +4240,7 @@
     "math": null,
     "evals": {
       "gpqaDiamond": 81.7,
+      "ifEval": 91.5,
       "mmluPro": 82.5
     },
     "contextWindow": "262K",
@@ -3837,6 +4256,7 @@
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
+        "evals.ifEval",
         "evals.mmluPro",
         "multimodal",
         "name",
@@ -3857,6 +4277,14 @@
         {
           "label": "ZeroEval MMLU-Pro leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval IFEval leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/ifeval/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -3920,6 +4348,7 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 91.1,
       "gpqaDiamond": 74.0,
       "liveCodeBench": 67.0
     },
@@ -3940,6 +4369,7 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
         "evals.gpqaDiamond",
         "evals.liveCodeBench",
         "multimodal",
@@ -3968,6 +4398,14 @@
         {
           "label": "ZeroEval LiveCodeBench leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -4031,6 +4469,10 @@
           "url": "https://api.zeroeval.com/leaderboard/models/list"
         },
         {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
         }
@@ -4053,7 +4495,9 @@
     "gpqa": null,
     "math": null,
     "evals": {
-      "gpqaDiamond": 86.9
+      "gpqaDiamond": 86.9,
+      "hle": 16.0,
+      "simpleQA": 43.3
     },
     "contextWindow": "1M",
     "pricing": {
@@ -4077,6 +4521,8 @@
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
+        "evals.hle",
+        "evals.simpleQA",
         "multimodal",
         "name",
         "performance",
@@ -4101,6 +4547,18 @@
         {
           "label": "ZeroEval GPQA Diamond leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval SimpleQA leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/simpleqa/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         },
         {
           "label": "Cursor models/pricing",
@@ -4211,7 +4669,10 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "browseComp": 61.0,
       "gpqaDiamond": 84.2,
+      "hle": 47.4,
+      "ifEval": 91.9,
       "mmluPro": 85.3,
       "reportedSweBenchVerified": 69.2
     },
@@ -4232,7 +4693,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
+        "evals.ifEval",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
         "multimodal",
@@ -4265,6 +4729,22 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "ZeroEval IFEval leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/ifeval/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -4285,7 +4765,10 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "browseComp": 61.0,
       "gpqaDiamond": 85.5,
+      "hle": 48.5,
+      "ifEval": 95.0,
       "mmluPro": 86.1,
       "reportedSweBenchVerified": 72.4
     },
@@ -4305,7 +4788,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
+        "evals.ifEval",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
         "multimodal",
@@ -4337,6 +4823,22 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "ZeroEval IFEval leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/ifeval/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -4357,7 +4859,10 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "browseComp": 63.8,
       "gpqaDiamond": 86.6,
+      "hle": 47.5,
+      "ifEval": 93.4,
       "mmluPro": 86.7,
       "reportedSweBenchVerified": 72.0
     },
@@ -4377,7 +4882,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
+        "evals.ifEval",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
         "multimodal",
@@ -4409,6 +4917,22 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "ZeroEval IFEval leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/ifeval/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -4605,7 +5129,9 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "browseComp": 85.9,
       "gpqaDiamond": 94.3,
+      "hle": 51.4,
       "reportedSweBenchVerified": 80.6
     },
     "contextWindow": "1.0M",
@@ -4629,7 +5155,9 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
@@ -4659,6 +5187,18 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         },
         {
           "label": "Cursor models/pricing",
@@ -4726,7 +5266,10 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "browseComp": 69.0,
       "gpqaDiamond": 88.4,
+      "hle": 28.7,
+      "ifEval": 92.6,
       "mmluPro": 87.8,
       "reportedSweBenchVerified": 76.4
     },
@@ -4747,7 +5290,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
+        "evals.ifEval",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
         "multimodal",
@@ -4780,6 +5326,22 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "ZeroEval IFEval leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/ifeval/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -4800,6 +5362,7 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "browseComp": 76.3,
       "reportedSweBenchVerified": 80.2
     },
     "contextWindow": "1M",
@@ -4818,6 +5381,7 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.browseComp",
         "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
@@ -4840,6 +5404,14 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -4860,6 +5432,7 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "browseComp": 75.9,
       "reportedSweBenchVerified": 77.8
     },
     "contextWindow": "200K",
@@ -4879,6 +5452,7 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.browseComp",
         "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
@@ -4902,6 +5476,14 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -4965,7 +5547,10 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 99.8,
+      "browseComp": 84.0,
       "gpqaDiamond": 91.3,
+      "hle": 53.1,
       "reportedSweBenchVerified": 80.8
     },
     "contextWindow": "1M",
@@ -4989,7 +5574,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
@@ -5019,6 +5607,22 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         },
         {
           "label": "Cursor models/pricing",
@@ -5088,6 +5692,8 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 97.3,
+      "browseComp": 69.0,
       "reportedSweBenchVerified": 74.4
     },
     "contextWindow": "66K",
@@ -5106,6 +5712,8 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
+        "evals.browseComp",
         "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
@@ -5128,6 +5736,18 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -5191,7 +5811,10 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 96.1,
+      "browseComp": 74.9,
       "gpqaDiamond": 87.6,
+      "hle": 50.2,
       "mmluPro": 87.1,
       "reportedSweBenchVerified": 76.8
     },
@@ -5213,7 +5836,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
         "multimodal",
@@ -5247,6 +5873,22 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -5486,7 +6128,10 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 91.6,
+      "browseComp": 42.8,
       "gpqaDiamond": 75.2,
+      "hle": 14.4,
       "reportedSweBenchVerified": 59.2
     },
     "contextWindow": "203K",
@@ -5502,7 +6147,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
@@ -5524,6 +6172,22 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -5630,7 +6294,10 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 81.0,
+      "browseComp": 62.0,
       "gpqaDiamond": 81.0,
+      "hle": 22.0,
       "liveCodeBench": 78.0,
       "mmluPro": 88.0,
       "reportedSweBenchVerified": 67.0,
@@ -5653,7 +6320,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.liveCodeBench",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
@@ -5696,6 +6366,22 @@
         {
           "label": "ZeroEval Terminal-Bench leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -5716,7 +6402,10 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 95.7,
+      "browseComp": 52.0,
       "gpqaDiamond": 85.7,
+      "hle": 42.8,
       "mmluPro": 84.3,
       "reportedSweBenchVerified": 73.8,
       "terminalBench": 33.3
@@ -5738,7 +6427,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
         "evals.terminalBench",
@@ -5776,6 +6468,22 @@
         {
           "label": "ZeroEval Terminal-Bench leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -5796,8 +6504,11 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 99.7,
       "gpqaDiamond": 90.4,
-      "reportedSweBenchVerified": 78.0
+      "hle": 43.5,
+      "reportedSweBenchVerified": 78.0,
+      "simpleQA": 68.7
     },
     "contextWindow": "1M",
     "pricing": {
@@ -5820,8 +6531,11 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.reportedSweBenchVerified",
+        "evals.simpleQA",
         "multimodal",
         "name",
         "performance",
@@ -5852,6 +6566,22 @@
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         },
         {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval SimpleQA leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/simpleqa/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
         }
@@ -5874,7 +6604,10 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 94.1,
+      "browseComp": 58.3,
       "gpqaDiamond": 83.7,
+      "hle": 22.1,
       "mmluPro": 84.9,
       "reportedSweBenchVerified": 73.4,
       "terminalBench": 30.5
@@ -5892,7 +6625,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
         "evals.terminalBench",
@@ -5924,6 +6660,22 @@
         {
           "label": "ZeroEval Terminal-Bench leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -5944,7 +6696,9 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 99.2,
       "gpqaDiamond": 75.0,
+      "hle": 15.5,
       "mmluPro": 78.3,
       "reportedSweBenchVerified": 38.8,
       "terminalBench": 8.5
@@ -5965,7 +6719,9 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
         "evals.terminalBench",
@@ -6002,6 +6758,18 @@
         {
           "label": "ZeroEval Terminal-Bench leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -6067,7 +6835,10 @@
     "gpqa": null,
     "math": null,
     "evals": {
-      "gpqaDiamond": 93.2
+      "aime2025": 100.0,
+      "browseComp": 77.9,
+      "gpqaDiamond": 93.2,
+      "hle": 36.6
     },
     "contextWindow": "400K",
     "pricing": {
@@ -6081,7 +6852,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "multimodal",
         "name",
         "performance",
@@ -6097,6 +6871,22 @@
         {
           "label": "ZeroEval GPQA Diamond leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -6685,6 +7475,8 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 96.0,
+      "hle": 30.6,
       "reportedSweBenchVerified": 73.1
     },
     "contextWindow": "164K",
@@ -6700,6 +7492,8 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
+        "evals.hle",
         "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
@@ -6717,6 +7511,14 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
         }
       ]
     },
@@ -6737,7 +7539,10 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 93.1,
+      "browseComp": 51.4,
       "gpqaDiamond": 82.4,
+      "hle": 40.8,
       "liveCodeBench": 83.3,
       "mmluPro": 85.0,
       "reportedSweBenchVerified": 73.1
@@ -6759,7 +7564,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.liveCodeBench",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
@@ -6797,6 +7605,22 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -6914,6 +7738,10 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         },
         {
           "label": "Cursor models/pricing",
@@ -7069,6 +7897,7 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 94.0,
       "gpqaDiamond": 88.1,
       "reportedSweBenchVerified": 76.3
     },
@@ -7093,6 +7922,7 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
         "evals.gpqaDiamond",
         "evals.reportedSweBenchVerified",
         "multimodal",
@@ -7123,6 +7953,14 @@
         {
           "label": "ZeroEval SWE-Bench Verified leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         },
         {
           "label": "Cursor models/pricing",
@@ -7242,6 +8080,10 @@
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         },
         {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
         }
@@ -7263,7 +8105,9 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "aime2025": 42.1
+    },
     "contextWindow": "400K",
     "pricing": {
       "openrouter": {
@@ -7277,6 +8121,7 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
         "multimodal",
         "name",
         "performance",
@@ -7289,6 +8134,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
         }
       ]
     },
@@ -7542,7 +8391,10 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 78.0,
+      "browseComp": 44.0,
       "gpqaDiamond": 78.0,
+      "hle": 12.5,
       "liveCodeBench": 83.0,
       "mmluPro": 82.0,
       "reportedSweBenchVerified": 69.4,
@@ -7565,7 +8417,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.liveCodeBench",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
@@ -7608,6 +8463,22 @@
         {
           "label": "ZeroEval Terminal-Bench leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -7622,13 +8493,15 @@
     "copilotMultiplier": null,
     "performance": "text+image->text",
     "arenaElo": null,
-    "mmlu": null,
+    "mmlu": 86.4,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 66.2,
       "gpqaDiamond": 68.9,
+      "ifEval": 84.7,
       "mmluPro": 78.6
     },
     "contextWindow": "262K",
@@ -7643,8 +8516,11 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
         "evals.gpqaDiamond",
+        "evals.ifEval",
         "evals.mmluPro",
+        "mmlu",
         "multimodal",
         "name",
         "performance",
@@ -7664,6 +8540,22 @@
         {
           "label": "ZeroEval MMLU-Pro leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval IFEval leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/ifeval/details"
+        },
+        {
+          "label": "ZeroEval MMLU leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -7811,14 +8703,17 @@
     "copilotMultiplier": null,
     "performance": "text+image->text",
     "arenaElo": null,
-    "mmlu": null,
+    "mmlu": 85.2,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 80.3,
       "gpqaDiamond": 69.9,
-      "mmluPro": 77.3
+      "ifEval": 83.2,
+      "mmluPro": 77.3,
+      "simpleQA": 49.6
     },
     "contextWindow": "262K",
     "pricing": {
@@ -7836,8 +8731,12 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
         "evals.gpqaDiamond",
+        "evals.ifEval",
         "evals.mmluPro",
+        "evals.simpleQA",
+        "mmlu",
         "multimodal",
         "name",
         "performance",
@@ -7863,6 +8762,26 @@
         {
           "label": "ZeroEval MMLU-Pro leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval SimpleQA leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/simpleqa/details"
+        },
+        {
+          "label": "ZeroEval IFEval leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/ifeval/details"
+        },
+        {
+          "label": "ZeroEval MMLU leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -7877,12 +8796,14 @@
     "copilotMultiplier": null,
     "performance": "text+image->text",
     "arenaElo": null,
-    "mmlu": null,
+    "mmlu": 80.7,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 45.9,
+      "ifEval": 83.7,
       "mmluPro": 71.6
     },
     "contextWindow": "131K",
@@ -7901,7 +8822,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
+        "evals.ifEval",
         "evals.mmluPro",
+        "mmlu",
         "multimodal",
         "name",
         "performance",
@@ -7923,6 +8847,22 @@
         {
           "label": "ZeroEval MMLU-Pro leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval IFEval leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/ifeval/details"
+        },
+        {
+          "label": "ZeroEval MMLU leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -8203,14 +9143,17 @@
     "copilotMultiplier": null,
     "performance": "text+image->text",
     "arenaElo": null,
-    "mmlu": null,
+    "mmlu": 87.6,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 83.1,
       "gpqaDiamond": 74.4,
-      "mmluPro": 80.5
+      "ifEval": 81.7,
+      "mmluPro": 80.5,
+      "simpleQA": 23.9
     },
     "contextWindow": "131K",
     "pricing": {
@@ -8224,8 +9167,12 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
         "evals.gpqaDiamond",
+        "evals.ifEval",
         "evals.mmluPro",
+        "evals.simpleQA",
+        "mmlu",
         "multimodal",
         "name",
         "performance",
@@ -8245,6 +9192,26 @@
         {
           "label": "ZeroEval MMLU-Pro leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval SimpleQA leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/simpleqa/details"
+        },
+        {
+          "label": "ZeroEval IFEval leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/ifeval/details"
+        },
+        {
+          "label": "ZeroEval MMLU leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -8259,14 +9226,17 @@
     "copilotMultiplier": null,
     "performance": "text+image->text",
     "arenaElo": null,
-    "mmlu": null,
+    "mmlu": 85.0,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 69.3,
       "gpqaDiamond": 70.4,
-      "mmluPro": 77.8
+      "ifEval": 85.8,
+      "mmluPro": 77.8,
+      "simpleQA": 27.0
     },
     "contextWindow": "262K",
     "pricing": {
@@ -8280,8 +9250,12 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
         "evals.gpqaDiamond",
+        "evals.ifEval",
         "evals.mmluPro",
+        "evals.simpleQA",
+        "mmlu",
         "multimodal",
         "name",
         "performance",
@@ -8301,6 +9275,26 @@
         {
           "label": "ZeroEval MMLU-Pro leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval SimpleQA leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/simpleqa/details"
+        },
+        {
+          "label": "ZeroEval IFEval leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/ifeval/details"
+        },
+        {
+          "label": "ZeroEval MMLU leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -8364,7 +9358,10 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 93.9,
+      "browseComp": 45.1,
       "gpqaDiamond": 81.0,
+      "hle": 17.2,
       "reportedSweBenchVerified": 68.0,
       "terminalBench": 40.5
     },
@@ -8381,7 +9378,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.reportedSweBenchVerified",
         "evals.terminalBench",
         "multimodal",
@@ -8408,6 +9408,22 @@
         {
           "label": "ZeroEval Terminal-Bench leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -8428,10 +9444,14 @@
     "gpqa": null,
     "math": null,
     "evals": {
+      "aime2025": 89.3,
+      "browseComp": 40.1,
       "gpqaDiamond": 79.9,
+      "hle": 19.8,
       "liveCodeBench": 74.1,
       "mmluPro": 85.0,
       "reportedSweBenchVerified": 67.8,
+      "simpleQA": 97.1,
       "terminalBench": 37.7
     },
     "contextWindow": "164K",
@@ -8446,10 +9466,14 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.liveCodeBench",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
+        "evals.simpleQA",
         "evals.terminalBench",
         "multimodal",
         "name",
@@ -8482,6 +9506,26 @@
         {
           "label": "ZeroEval Terminal-Bench leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval SimpleQA leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/simpleqa/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
