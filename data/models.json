@@ -17,9 +17,11 @@
       "copilot": {"in": 1.0, "out": 5.0},
       "official": {"in": 1.0, "out": 5.0},
       "openrouter": {"in": 1.1, "out": 5.5},
-      "nvidia": {"in": 0.9, "out": 4.5}
+      "nvidia": {"in": 0.9, "out": 4.5},
+      "domestic": {"in": 1.0, "out": 5.0},
+      "relay": {"in": 0.8, "out": 4.0}
     },
-    "notes": "Optimized for speed and high-volume routing."
+    "notes": "Optimized for speed and routing."
   },
   {
     "id": "claude-opus-4.7",
@@ -39,31 +41,11 @@
       "copilot": {"in": 45.0, "out": 225.0},
       "official": {"in": 45.0, "out": 225.0},
       "openrouter": {"in": 48.0, "out": 240.0},
-      "nvidia": {"in": 42.0, "out": 210.0}
+      "nvidia": {"in": 42.0, "out": 210.0},
+      "domestic": {"in": 46.0, "out": 230.0},
+      "relay": {"in": 40.0, "out": 200.0}
     },
-    "notes": "State-of-the-art reasoning for complex agents."
-  },
-  {
-    "id": "claude-sonnet-4.5",
-    "name": "Claude Sonnet 4.5",
-    "vendor": "Anthropic",
-    "multimodal": "Vision",
-    "multiplier": 1.0,
-    "performance": "Medium",
-    "arenaElo": 1280,
-    "mmlu": 88.0,
-    "humanEval": 86.5,
-    "gsm8k": 90.2,
-    "gpqa": 52.4,
-    "math": 78.9,
-    "contextWindow": "500K",
-    "pricing": {
-      "copilot": {"in": 3.0, "out": 15.0},
-      "official": {"in": 3.0, "out": 15.0},
-      "openrouter": {"in": 3.2, "out": 16.0},
-      "nvidia": {"in": 2.8, "out": 14.0}
-    },
-    "notes": "The initial v4 Sonnet release."
+    "notes": "State-of-the-art reasoning."
   },
   {
     "id": "claude-sonnet-4.6",
@@ -83,163 +65,11 @@
       "copilot": {"in": 3.0, "out": 15.0},
       "official": {"in": 3.0, "out": 15.0},
       "openrouter": {"in": 2.8, "out": 14.0},
-      "nvidia": {"in": 2.5, "out": 12.0}
+      "nvidia": {"in": 2.5, "out": 12.0},
+      "domestic": {"in": 3.1, "out": 15.5},
+      "relay": {"in": 2.4, "out": 12.0}
     },
     "notes": "Current flagship workhorse."
-  },
-  {
-    "id": "gpt-4.1",
-    "name": "GPT-4.1",
-    "vendor": "OpenAI",
-    "multimodal": "Vision",
-    "multiplier": 0.0,
-    "performance": "Legacy",
-    "arenaElo": 1210,
-    "mmlu": 81.0,
-    "humanEval": 75.0,
-    "gsm8k": 82.0,
-    "gpqa": 35.5,
-    "math": 62.0,
-    "contextWindow": "128K",
-    "pricing": {
-      "copilot": {"in": 0.0, "out": 0.0},
-      "official": {"in": 0.0, "out": 0.0},
-      "openrouter": {"in": 0.1, "out": 0.1},
-      "nvidia": {"in": 0.0, "out": 0.0}
-    },
-    "notes": "Free tier legacy model."
-  },
-  {
-    "id": "gpt-5-mini",
-    "name": "GPT-5 mini",
-    "vendor": "OpenAI",
-    "multimodal": "Text",
-    "multiplier": 0.0,
-    "performance": "Medium · Low",
-    "arenaElo": 1235,
-    "mmlu": 83.2,
-    "humanEval": 80.5,
-    "gsm8k": 85.0,
-    "gpqa": 40.2,
-    "math": 70.5,
-    "contextWindow": "128K",
-    "pricing": {
-      "copilot": {"in": 0.0, "out": 0.0},
-      "official": {"in": 0.0, "out": 0.0},
-      "openrouter": {"in": 0.1, "out": 0.2},
-      "nvidia": {"in": 0.0, "out": 0.0}
-    },
-    "notes": "Free tier v5 engine."
-  },
-  {
-    "id": "gpt-5.2",
-    "name": "GPT-5.2",
-    "vendor": "OpenAI",
-    "multimodal": "Vision",
-    "multiplier": 1.0,
-    "performance": "Medium",
-    "arenaElo": 1275,
-    "mmlu": 87.5,
-    "humanEval": 85.2,
-    "gsm8k": 89.8,
-    "gpqa": 50.1,
-    "math": 76.2,
-    "contextWindow": "200K",
-    "pricing": {
-      "copilot": {"in": 3.0, "out": 15.0},
-      "official": {"in": 3.0, "out": 15.0},
-      "openrouter": {"in": 3.3, "out": 16.5},
-      "nvidia": {"in": 2.9, "out": 14.5}
-    },
-    "notes": "Standard professional tier."
-  },
-  {
-    "id": "gpt-5.2-codex",
-    "name": "GPT-5.2-Codex",
-    "vendor": "OpenAI",
-    "multimodal": "Vision",
-    "multiplier": 1.0,
-    "performance": "High (Coding)",
-    "arenaElo": 1260,
-    "mmlu": 84.5,
-    "humanEval": 92.0,
-    "gsm8k": 86.5,
-    "gpqa": 45.8,
-    "math": 82.1,
-    "contextWindow": "200K",
-    "pricing": {
-      "copilot": {"in": 3.0, "out": 15.0},
-      "official": {"in": 3.0, "out": 15.0},
-      "openrouter": {"in": 3.1, "out": 15.5},
-      "nvidia": {"in": 2.7, "out": 13.5}
-    },
-    "notes": "Legacy coding specialist."
-  },
-  {
-    "id": "gpt-5.3-codex",
-    "name": "GPT-5.3-Codex",
-    "vendor": "OpenAI",
-    "multimodal": "Vision",
-    "multiplier": 1.0,
-    "performance": "High (Coding)",
-    "arenaElo": 1295,
-    "mmlu": 86.0,
-    "humanEval": 94.2,
-    "gsm8k": 88.5,
-    "gpqa": 48.2,
-    "math": 88.4,
-    "contextWindow": "400K",
-    "pricing": {
-      "copilot": {"in": 3.0, "out": 15.0},
-      "official": {"in": 3.0, "out": 15.0},
-      "openrouter": {"in": 2.9, "out": 14.5},
-      "nvidia": {"in": 2.6, "out": 13.0}
-    },
-    "notes": "SOTA for coding precision."
-  },
-  {
-    "id": "gpt-5.4",
-    "name": "GPT-5.4",
-    "vendor": "OpenAI",
-    "multimodal": "Vision",
-    "multiplier": 1.0,
-    "performance": "High",
-    "arenaElo": 1330,
-    "mmlu": 91.5,
-    "humanEval": 89.0,
-    "gsm8k": 94.0,
-    "gpqa": 64.5,
-    "math": 86.5,
-    "contextWindow": "512K",
-    "pricing": {
-      "copilot": {"in": 3.0, "out": 15.0},
-      "official": {"in": 3.0, "out": 15.0},
-      "openrouter": {"in": 3.4, "out": 17.0},
-      "nvidia": {"in": 2.8, "out": 14.0}
-    },
-    "notes": "High performance general model."
-  },
-  {
-    "id": "gpt-5.4-mini",
-    "name": "GPT-5.4 mini",
-    "vendor": "OpenAI",
-    "multimodal": "Vision",
-    "multiplier": 0.33,
-    "performance": "High (Efficiency)",
-    "arenaElo": 1255,
-    "mmlu": 84.5,
-    "humanEval": 82.0,
-    "gsm8k": 87.0,
-    "gpqa": 43.4,
-    "math": 72.8,
-    "contextWindow": "128K",
-    "pricing": {
-      "copilot": {"in": 1.0, "out": 5.0},
-      "official": {"in": 1.0, "out": 5.0},
-      "openrouter": {"in": 1.1, "out": 5.5},
-      "nvidia": {"in": 0.8, "out": 4.0}
-    },
-    "notes": "Small model efficiency leader."
   },
   {
     "id": "gpt-5.5",
@@ -259,8 +89,202 @@
       "copilot": {"in": 22.5, "out": 112.5},
       "official": {"in": 22.5, "out": 112.5},
       "openrouter": {"in": 24.0, "out": 120.0},
-      "nvidia": {"in": 20.0, "out": 100.0}
+      "nvidia": {"in": 20.0, "out": 100.0},
+      "domestic": {"in": 23.5, "out": 115.0},
+      "relay": {"in": 18.0, "out": 90.0}
     },
     "notes": "Omnimodal flagship."
+  },
+  {
+    "id": "deepseek-v4-pro",
+    "name": "DeepSeek V4 Pro",
+    "vendor": "DeepSeek",
+    "multimodal": "Vision/Reasoning",
+    "multiplier": 0.58,
+    "performance": "High (SOTA Domestic)",
+    "arenaElo": 1345,
+    "mmlu": 92.2,
+    "humanEval": 90.5,
+    "gsm8k": 95.1,
+    "gpqa": 70.2,
+    "math": 91.5,
+    "contextWindow": "1M",
+    "pricing": {
+      "copilot": {"in": 1.74, "out": 3.48},
+      "official": {"in": 1.74, "out": 3.48},
+      "openrouter": {"in": 1.9, "out": 3.8},
+      "nvidia": {"in": 1.7, "out": 3.4},
+      "domestic": {"in": 0.44, "out": 0.87},
+      "relay": {"in": 0.4, "out": 0.8}
+    },
+    "notes": "Domestic champion with aggressive pricing."
+  },
+  {
+    "id": "deepseek-v4-flash",
+    "name": "DeepSeek V4 Flash",
+    "vendor": "DeepSeek",
+    "multimodal": "Vision",
+    "multiplier": 0.05,
+    "performance": "Extreme Speed",
+    "arenaElo": 1230,
+    "mmlu": 81.5,
+    "humanEval": 76.0,
+    "gsm8k": 84.2,
+    "gpqa": 38.5,
+    "math": 65.2,
+    "contextWindow": "1M",
+    "pricing": {
+      "copilot": {"in": 0.14, "out": 0.28},
+      "official": {"in": 0.14, "out": 0.28},
+      "openrouter": {"in": 0.15, "out": 0.30},
+      "nvidia": {"in": 0.14, "out": 0.28},
+      "domestic": {"in": 0.12, "out": 0.24},
+      "relay": {"in": 0.1, "out": 0.2}
+    },
+    "notes": "Industry leader in cost-per-token."
+  },
+  {
+    "id": "gpt-5.3-codex",
+    "name": "GPT-5.3-Codex",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "multiplier": 1.0,
+    "performance": "High (Coding)",
+    "arenaElo": 1295,
+    "mmlu": 86.0,
+    "humanEval": 94.2,
+    "gsm8k": 88.5,
+    "gpqa": 48.2,
+    "math": 88.4,
+    "contextWindow": "400K",
+    "pricing": {
+      "copilot": {"in": 3.0, "out": 15.0},
+      "official": {"in": 3.0, "out": 15.0},
+      "openrouter": {"in": 2.9, "out": 14.5},
+      "nvidia": {"in": 2.6, "out": 13.0},
+      "domestic": {"in": 3.2, "out": 16.0},
+      "relay": {"in": 2.5, "out": 12.5}
+    },
+    "notes": "SOTA coding specialist."
+  },
+  {
+    "id": "claude-sonnet-4.5",
+    "name": "Claude Sonnet 4.5",
+    "vendor": "Anthropic",
+    "multimodal": "Vision",
+    "multiplier": 1.0,
+    "performance": "Medium",
+    "arenaElo": 1280,
+    "mmlu": 88.0,
+    "humanEval": 86.5,
+    "gsm8k": 90.2,
+    "gpqa": 52.4,
+    "math": 78.9,
+    "contextWindow": "500K",
+    "pricing": {
+      "copilot": {"in": 3.0, "out": 15.0},
+      "official": {"in": 3.0, "out": 15.0},
+      "openrouter": {"in": 3.2, "out": 16.0},
+      "nvidia": {"in": 2.8, "out": 14.0},
+      "domestic": {"in": 3.1, "out": 15.5},
+      "relay": {"in": 2.6, "out": 13.0}
+    },
+    "notes": "Initial v4 Sonnet."
+  },
+  {
+    "id": "gpt-5.2",
+    "name": "GPT-5.2",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "multiplier": 1.0,
+    "performance": "Medium",
+    "arenaElo": 1275,
+    "mmlu": 87.5,
+    "humanEval": 85.2,
+    "gsm8k": 89.8,
+    "gpqa": 50.1,
+    "math": 76.2,
+    "contextWindow": "200K",
+    "pricing": {
+      "copilot": {"in": 3.0, "out": 15.0},
+      "official": {"in": 3.0, "out": 15.0},
+      "openrouter": {"in": 3.3, "out": 16.5},
+      "nvidia": {"in": 2.9, "out": 14.5},
+      "domestic": {"in": 3.2, "out": 16.0},
+      "relay": {"in": 2.7, "out": 13.5}
+    },
+    "notes": "Professional tier."
+  },
+  {
+    "id": "gpt-5.4-mini",
+    "name": "GPT-5.4 mini",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "multiplier": 0.33,
+    "performance": "High (Efficiency)",
+    "arenaElo": 1255,
+    "mmlu": 84.5,
+    "humanEval": 82.0,
+    "gsm8k": 87.0,
+    "gpqa": 43.4,
+    "math": 72.8,
+    "contextWindow": "128K",
+    "pricing": {
+      "copilot": {"in": 1.0, "out": 5.0},
+      "official": {"in": 1.0, "out": 5.0},
+      "openrouter": {"in": 1.1, "out": 5.5},
+      "nvidia": {"in": 0.8, "out": 4.0},
+      "domestic": {"in": 1.1, "out": 5.5},
+      "relay": {"in": 0.9, "out": 4.5}
+    },
+    "notes": "Efficiency leader."
+  },
+  {
+    "id": "gpt-5-mini",
+    "name": "GPT-5 mini",
+    "vendor": "OpenAI",
+    "multimodal": "Text",
+    "multiplier": 0.0,
+    "performance": "Medium · Low",
+    "arenaElo": 1235,
+    "mmlu": 83.2,
+    "humanEval": 80.5,
+    "gsm8k": 85.0,
+    "gpqa": 40.2,
+    "math": 70.5,
+    "contextWindow": "128K",
+    "pricing": {
+      "copilot": {"in": 0.0, "out": 0.0},
+      "official": {"in": 0.0, "out": 0.0},
+      "openrouter": {"in": 0.1, "out": 0.2},
+      "nvidia": {"in": 0.0, "out": 0.0},
+      "domestic": {"in": 0.0, "out": 0.0},
+      "relay": {"in": 0.05, "out": 0.1}
+    },
+    "notes": "Free tier."
+  },
+  {
+    "id": "gpt-4.1",
+    "name": "GPT-4.1",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "multiplier": 0.0,
+    "performance": "Legacy",
+    "arenaElo": 1210,
+    "mmlu": 81.0,
+    "humanEval": 75.0,
+    "gsm8k": 82.0,
+    "gpqa": 35.5,
+    "math": 62.0,
+    "contextWindow": "128K",
+    "pricing": {
+      "copilot": {"in": 0.0, "out": 0.0},
+      "official": {"in": 0.0, "out": 0.0},
+      "openrouter": {"in": 0.1, "out": 0.1},
+      "nvidia": {"in": 0.0, "out": 0.0},
+      "domestic": {"in": 0.0, "out": 0.0},
+      "relay": {"in": 0.05, "out": 0.05}
+    },
+    "notes": "Legacy free model."
   }
 ]

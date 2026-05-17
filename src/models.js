@@ -16,17 +16,23 @@ const fieldDefs = [
   // Official API
   { key: "pricing.official.in", label: "官方 In ($/1M)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   { key: "pricing.official.out", label: "官方 Out ($/1M)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  // Domestic Platform (SiliconFlow / DeepSeek)
+  { key: "pricing.domestic.in", label: "国内平台 In", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.domestic.out", label: "国内平台 Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  // Relay / Relay Aggregators
+  { key: "pricing.relay.in", label: "中转平台 In", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.relay.out", label: "中转平台 Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   // OpenRouter
-  { key: "pricing.openrouter.in", label: "OpenRouter In", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  { key: "pricing.openrouter.out", label: "OpenRouter Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.openrouter.in", label: "OpenRouter In", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.openrouter.out", label: "OpenRouter Out", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
   // Nvidia
-  { key: "pricing.nvidia.in", label: "Nvidia In", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  { key: "pricing.nvidia.out", label: "Nvidia Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.nvidia.in", label: "Nvidia In", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.nvidia.out", label: "Nvidia Out", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
 ];
 
 const state = {
   models: [],
-  visibleColumns: new Set(fieldDefs.map((f) => f.key)),
+  visibleColumns: new Set(fieldDefs.filter(f => f.visible).map((f) => f.key)),
   sortField: "arenaElo",
   sortDirection: "desc",
   globalSearch: "",
