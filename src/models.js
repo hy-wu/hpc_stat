@@ -16,24 +16,31 @@ const fieldDefs = [
   { key: "pricing.copilot.out", label: "Copilot Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   // Official
   { key: "pricing.official.in", label: "官方 In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://openai.com/api/pricing" },
+  { key: "pricing.official.hit", label: "官方 In(Hit)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   { key: "pricing.official.out", label: "官方 Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   // Cursor
-  { key: "pricing.cursor.fast", label: "Cursor Fast", type: "number", visible: true, source: "https://cursor.com/cn/docs/models-and-pricing" },
+  { key: "pricing.cursor.in", label: "Cursor In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://cursor.com/cn/docs/models-and-pricing" },
+  { key: "pricing.cursor.out", label: "Cursor Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   // DeepSeek Official
   { key: "pricing.deepseek_official.in", label: "DeepSeek In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://api-docs.deepseek.com/quick_start/pricing" },
+  { key: "pricing.deepseek_official.hit", label: "DeepSeek In(Hit)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   { key: "pricing.deepseek_official.out", label: "DeepSeek Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   // SiliconFlow
   { key: "pricing.siliconflow.in", label: "硅基流动 In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://siliconflow.cn/pricing" },
+  { key: "pricing.siliconflow.hit", label: "硅基流动 In(Hit)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   { key: "pricing.siliconflow.out", label: "硅基流动 Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  // Others (Default Hidden)
-  { key: "pricing.openrouter.in", label: "OpenRouter In", type: "number", visible: false, heatmap: true, inverseHeatmap: true, source: "https://openrouter.ai/models" },
-  { key: "pricing.nvidia.in", label: "Nvidia In", type: "number", visible: false, heatmap: true, inverseHeatmap: true, source: "https://www.nvidia.com/en-us/ai-data-science/generative-ai/nim/" },
+  // OpenRouter
+  { key: "pricing.openrouter.in", label: "OpenRouter In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://openrouter.ai/models" },
+  { key: "pricing.openrouter.out", label: "OpenRouter Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  // Nvidia
+  { key: "pricing.nvidia.in", label: "Nvidia In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://www.nvidia.com/en-us/ai-data-science/generative-ai/nim/" },
+  { key: "pricing.nvidia.out", label: "Nvidia Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   { key: "notes", label: "备注", type: "text", visible: false },
 ];
 
 const state = {
   models: [],
-  visibleColumns: new Set(fieldDefs.filter(f => f.visible).map(f => f.key)),
+  visibleColumns: new Set(fieldDefs.filter(f => f.key !== 'notes').map(f => f.key)),
   sortField: "arenaElo",
   sortDirection: "desc",
   globalSearch: "",
@@ -52,6 +59,8 @@ const elements = {
   bestElo: document.querySelector("#bestElo"),
   bestHumanEval: document.querySelector("#bestHumanEval"),
 };
+
+const defaultVisibleColumns = new Set(fieldDefs.filter(f => f.key !== 'notes').map(f => f.key));
 
 async function init() {
   try {
@@ -81,21 +90,47 @@ function bindEvents() {
     elements.columnPicker.hidden = !elements.columnPicker.hidden;
   });
 
+  elements.columnPicker.addEventListener("click", (e) => {
+    const action = e.target.closest("[data-column-action]")?.dataset.columnAction;
+    if (!action) return;
+    if (action === "select-all") state.visibleColumns = new Set(fieldDefs.map(f => f.key));
+    if (action === "reset-default") state.visibleColumns = new Set(defaultVisibleColumns);
+    renderColumnPicker();
+    render();
+  });
+
   elements.columnPicker.addEventListener("change", (e) => {
+    if (e.target.type !== 'checkbox') return;
     const key = e.target.value;
     if (e.target.checked) state.visibleColumns.add(key);
     else state.visibleColumns.delete(key);
+    renderColumnPicker();
     render();
   });
 }
 
 function renderColumnPicker() {
-  elements.columnPicker.innerHTML = fieldDefs.map(f => `
-    <label class="column-option">
-      <input type="checkbox" value="${f.key}" ${state.visibleColumns.has(f.key) ? 'checked' : ''}>
-      <span>${f.label}</span>
-    </label>
-  `).join('');
+  const selectedCount = state.visibleColumns.size;
+  elements.columnPicker.innerHTML = `
+    <div class="column-picker-head">
+      <div>
+        <p class="column-picker-title">显示列</p>
+        <p class="column-picker-meta">已选 ${selectedCount} / ${fieldDefs.length}</p>
+      </div>
+      <div class="column-picker-tools">
+        <button class="ghost-button" type="button" data-column-action="select-all">全选</button>
+        <button class="text-button" type="button" data-column-action="reset-default">恢复默认</button>
+      </div>
+    </div>
+    <div class="column-picker-grid">
+      ${fieldDefs.map(f => `
+        <label class="column-option">
+          <input type="checkbox" value="${f.key}" ${state.visibleColumns.has(f.key) ? 'checked' : ''}>
+          <span>${f.label}</span>
+        </label>
+      `).join('')}
+    </div>
+  `;
 }
 
 function render() {
@@ -181,13 +216,13 @@ function formatCell(row, field, stat) {
     return `
       <div class="heatmap-container mini">
         <div class="heatmap-bar" style="width: ${lengthPercent}%; background: ${color}"></div>
-        <span class="heatmap-value">${typeof val === 'number' && field.key.includes('pricing') ? val.toFixed(2) : val}</span>
+        <span class="heatmap-value">${typeof val === 'number' && field.key.includes('pricing') ? val.toFixed(3) : val}</span>
       </div>
     `;
   }
 
   if (field.key === "multimodal") return `<span class="tag multimodal">${val}</span>`;
-  if (field.key === "copilotMultiplier") return val === 0 ? "Free" : `${val}x`;
+  if (field.key === "copilotMultiplier") return val === null ? "-" : (val === 0 ? "Free" : `${val}x`);
 
   return val;
 }
