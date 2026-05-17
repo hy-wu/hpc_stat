@@ -313,14 +313,16 @@ def main() -> int:
     parser.add_argument("--target-count", type=int, default=DEFAULT_OPENROUTER_TARGET, help="target model count when --generate-openrouter is used")
     parser.add_argument("--min-model-count", type=int, default=0, help="fail validation if fewer model rows are present")
     parser.add_argument("--verify-only", action="store_true", help="skip enrichment and only validate data/page wiring")
-    parser.add_argument("--online", action="store_true", help="include online source string checks in the report")
+    parser.add_argument("--online", action="store_true", help="allow network fetches for sources missing from the local cache")
     parser.add_argument("--deepseek", action="store_true", help="use DeepSeek as a fallback extractor for unstructured pages")
     parser.add_argument("--no-cache", action="store_true", help="do not read cached source responses")
-    parser.add_argument("--refresh-cache", action="store_true", help="refetch sources even if cache exists")
+    parser.add_argument("--refresh-cache", action="store_true", help="refetch sources even if cache exists; implies --online")
     parser.add_argument("--fetch-reference-sources", action="store_true", help="also fetch every URL listed in REFERENCE_SOURCES.md")
     parser.add_argument("--skip-page-check", action="store_true", help="skip static models.html/src/models.js data-fill checks")
     parser.add_argument("--output", type=Path, help="write a JSON report to this path")
     args = parser.parse_args()
+    if args.refresh_cache:
+        args.online = True
 
     models = load_models(args)
     reference_sources = parse_reference_sources(REFERENCE_PATH)
@@ -469,10 +471,13 @@ def fetch_text(session: requests.Session, key: str, url: str, args: argparse.Nam
     cache_path = CACHE_DIR / f"{key}.txt"
     if cache_path.exists() and not args.no_cache and not args.refresh_cache:
         return cache_path.read_text(encoding="utf-8")
+    if not args.online and not args.refresh_cache:
+        raise requests.RequestException(f"Cache miss for '{key}' - run with --online to fetch")
     response = session.get(url, timeout=30)
     response.raise_for_status()
     text = response.text
-    cache_path.write_text(text, encoding="utf-8")
+    if not args.no_cache:
+        cache_path.write_text(text, encoding="utf-8")
     return text
 
 
@@ -1069,6 +1074,9 @@ def extract_llm_stats_data(
     if not args.no_cache and not args.refresh_cache and cache_path.exists():
         raw_text = cache_path.read_text(encoding="utf-8")
         report.setdefault("cacheHits", []).append(cache_key)
+    elif not args.online and not args.refresh_cache:
+        report.setdefault("sourceWarnings", []).append({"key": cache_key, "url": source_url, "error": "Cache miss - run with --online to fetch"})
+        return []
     else:
         try:
             resp = session.get(

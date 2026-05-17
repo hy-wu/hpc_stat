@@ -1,6 +1,7 @@
 let fieldDefs = [];
 let vendorLinks = {};
 let defaultVisibleColumns = new Set();
+const sortCollator = new Intl.Collator("zh-Hans-CN", { numeric: true, sensitivity: "base" });
 
 const state = {
   models: [],
@@ -114,24 +115,83 @@ function renderColumnPicker() {
 }
 
 function render() {
+  const sortFieldDef = fieldDefs.find(f => f.key === state.sortField);
   const filtered = state.models
     .filter(m => 
       !state.globalSearch || 
       Object.values(m).some(v => String(v).toLowerCase().includes(state.globalSearch))
     )
-    .sort((a, b) => {
-      const va = getNestedValue(a, state.sortField);
-      const vb = getNestedValue(b, state.sortField);
-      const res = (va < vb ? -1 : va > vb ? 1 : 0);
-      return state.sortDirection === "asc" ? res : -res;
-    });
+    .sort((a, b) => compareRows(a, b, state.sortField, state.sortDirection, sortFieldDef));
 
   renderSummary(filtered);
   renderTable(filtered);
 }
 
 function getNestedValue(obj, path) {
-  return path.split('.').reduce((acc, part) => acc && acc[part], obj);
+  return path.split('.').reduce((acc, part) => acc == null ? undefined : acc[part], obj);
+}
+
+function compareRows(a, b, sortField, sortDirection, fieldDef) {
+  const va = getSortValue(getNestedValue(a, sortField), fieldDef);
+  const vb = getSortValue(getNestedValue(b, sortField), fieldDef);
+  const aMissing = va.missing;
+  const bMissing = vb.missing;
+
+  if (aMissing || bMissing) {
+    if (aMissing !== bMissing) return aMissing ? 1 : -1;
+    return compareTieBreakers(a, b);
+  }
+
+  const res = compareSortValues(va, vb);
+  if (res !== 0) return sortDirection === "asc" ? res : -res;
+  return compareTieBreakers(a, b);
+}
+
+function getSortValue(value, fieldDef) {
+  if (value === null || value === undefined || value === "" || (typeof value === "number" && Number.isNaN(value))) {
+    return { missing: true, kind: "missing", value: null };
+  }
+
+  if (fieldDef?.type === "number") {
+    const numeric = Number(value);
+    return Number.isFinite(numeric)
+      ? { missing: false, kind: "number", value: numeric }
+      : { missing: false, kind: "text", value: String(value) };
+  }
+
+  if (fieldDef?.key === "contextWindow") {
+    const tokens = String(value).trim().match(/^(\d+(?:\.\d+)?)([KMB])?$/i);
+    if (tokens) {
+      const multiplier = { K: 1_000, M: 1_000_000, B: 1_000_000_000 }[tokens[2]?.toUpperCase()] || 1;
+      return { missing: false, kind: "number", value: Number(tokens[1]) * multiplier };
+    }
+  }
+
+  if (typeof value === "boolean") {
+    return { missing: false, kind: "number", value: Number(value) };
+  }
+
+  if (typeof value === "number") {
+    return { missing: false, kind: "number", value };
+  }
+
+  return { missing: false, kind: "text", value: String(value) };
+}
+
+function compareSortValues(a, b) {
+  if (a.kind === "number" && b.kind === "number") {
+    return a.value - b.value;
+  }
+
+  if (a.kind !== b.kind) {
+    return a.kind === "number" ? -1 : 1;
+  }
+
+  return sortCollator.compare(String(a.value), String(b.value));
+}
+
+function compareTieBreakers(a, b) {
+  return sortCollator.compare(String(a.name || a.id || ""), String(b.name || b.id || ""));
 }
 
 function renderSummary(rows) {
