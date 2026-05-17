@@ -141,12 +141,15 @@ function formatCell(row, field, stat) {
   if (val === null || val === undefined) return "-";
 
   if (field.heatmap && typeof val === "number") {
-    let percent = (val - stat.min) / (stat.max - stat.min || 1) * 100;
-    if (field.inverseHeatmap) percent = 100 - percent; // For price, lower is better
-    const color = getHeatmapColor(percent);
+    const lengthPercent = (val - stat.min) / (stat.max - stat.min || 1) * 100;
+    // For benchmarks: High = Green (100). For price: High = Red (0).
+    let colorPercent = lengthPercent;
+    if (field.inverseHeatmap) colorPercent = 100 - lengthPercent; 
+    
+    const color = getHeatmapColor(colorPercent);
     return `
       <div class="heatmap-container mini">
-        <div class="heatmap-bar" style="width: ${percent}%; background: ${color}"></div>
+        <div class="heatmap-bar" style="width: ${lengthPercent}%; background: ${color}"></div>
         <span class="heatmap-value">${typeof val === 'number' && field.key.includes('pricing') ? val.toFixed(2) : val}</span>
       </div>
     `;
