@@ -3,13 +3,22 @@ const fieldDefs = [
   { key: "vendor", label: "厂商", type: "text", visible: true },
   { key: "multimodal", label: "多模态", type: "text", visible: true },
   { key: "performance", label: "性能定位", type: "text", visible: true },
-  { key: "multiplier", label: "价格倍率", type: "number", visible: true },
   { key: "arenaElo", label: "Arena Elo", type: "number", visible: true, heatmap: true },
   { key: "mmlu", label: "MMLU", type: "number", visible: true, heatmap: true },
   { key: "humanEval", label: "HumanEval", type: "number", visible: true, heatmap: true },
   { key: "contextWindow", label: "上下文", type: "text", visible: true },
-  { key: "officialPrice", label: "官方 API ($/1M)", type: "object", visible: true, priceGrid: true },
-  { key: "otherPlatforms", label: "第三方平台价格", type: "array", visible: true, platformGrid: true },
+  // Copilot Pricing
+  { key: "pricing.copilot.in", label: "Copilot In ($/1M)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.copilot.out", label: "Copilot Out ($/1M)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  // Official API
+  { key: "pricing.official.in", label: "官方 In ($/1M)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.official.out", label: "官方 Out ($/1M)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  // OpenRouter
+  { key: "pricing.openrouter.in", label: "OpenRouter In", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.openrouter.out", label: "OpenRouter Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  // Nvidia
+  { key: "pricing.nvidia.in", label: "Nvidia In", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.nvidia.out", label: "Nvidia Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
 ];
 
 const state = {
@@ -63,14 +72,18 @@ function render() {
       Object.values(m).some(v => String(v).toLowerCase().includes(state.globalSearch))
     )
     .sort((a, b) => {
-      const va = a[state.sortField];
-      const vb = b[state.sortField];
+      const va = getNestedValue(a, state.sortField);
+      const vb = getNestedValue(b, state.sortField);
       const res = (va < vb ? -1 : va > vb ? 1 : 0);
       return state.sortDirection === "asc" ? res : -res;
     });
 
   renderSummary(filtered);
   renderTable(filtered);
+}
+
+function getNestedValue(obj, path) {
+  return path.split('.').reduce((acc, part) => acc && acc[part], obj);
 }
 
 function renderSummary(rows) {
@@ -86,10 +99,14 @@ function renderSummary(rows) {
 }
 
 function renderTable(rows) {
-  const maxValues = {};
+  const stats = {};
   fieldDefs.forEach(f => {
     if (f.heatmap) {
-      maxValues[f.key] = Math.max(...state.models.map(m => m[f.key] || 0));
+      const values = state.models.map(m => getNestedValue(m, f.key)).filter(v => typeof v === 'number');
+      stats[f.key] = {
+        min: Math.min(...values),
+        max: Math.max(...values)
+      };
     }
   });
 
@@ -101,7 +118,7 @@ function renderTable(rows) {
   elements.tableBody.innerHTML = rows
     .map(r => `<tr>${fieldDefs
       .filter(f => state.visibleColumns.has(f.key))
-      .map(f => `<td>${formatCell(r, f, maxValues[f.key])}</td>`)
+      .map(f => `<td>${formatCell(r, f, stats[f.key])}</td>`)
       .join("")}</tr>`)
     .join("");
 
@@ -119,39 +136,18 @@ function renderTable(rows) {
   });
 }
 
-function formatCell(row, field, maxVal) {
-  const val = row[field.key];
+function formatCell(row, field, stat) {
+  const val = getNestedValue(row, field.key);
   if (val === null || val === undefined) return "-";
 
   if (field.heatmap && typeof val === "number") {
-    const percent = Math.min(100, (val / maxVal) * 100);
+    let percent = (val - stat.min) / (stat.max - stat.min || 1) * 100;
+    if (field.inverseHeatmap) percent = 100 - percent; // For price, lower is better
     const color = getHeatmapColor(percent);
     return `
       <div class="heatmap-container mini">
         <div class="heatmap-bar" style="width: ${percent}%; background: ${color}"></div>
-        <span class="heatmap-value">${val}</span>
-      </div>
-    `;
-  }
-
-  if (field.priceGrid) {
-    return `
-      <div class="price-grid">
-        <span class="p-in">In: $${val.in}</span>
-        <span class="p-out">Out: $${val.out}</span>
-      </div>
-    `;
-  }
-
-  if (field.platformGrid && Array.isArray(val)) {
-    return `
-      <div class="platform-stack">
-        ${val.map(p => `
-          <div class="p-item">
-            <span class="p-name">${p.name}</span>
-            <span class="p-price">$${p.in}/$${p.out}</span>
-          </div>
-        `).join('')}
+        <span class="heatmap-value">${typeof val === 'number' && field.key.includes('pricing') ? val.toFixed(2) : val}</span>
       </div>
     `;
   }
@@ -165,9 +161,9 @@ function formatCell(row, field, maxVal) {
 
 function getHeatmapColor(percent) {
   if (percent < 50) {
-    return `rgba(255, ${Math.floor(255 * (percent / 50))}, 0, 0.15)`;
+    return `rgba(255, ${Math.floor(255 * (percent / 50))}, 0, 0.2)`;
   } else {
-    return `rgba(${Math.floor(255 * (1 - (percent - 50) / 50))}, 255, 0, 0.15)`;
+    return `rgba(${Math.floor(255 * (1 - (percent - 50) / 50))}, 255, 0, 0.2)`;
   }
 }
 

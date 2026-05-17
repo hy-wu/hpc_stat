@@ -10,11 +10,12 @@
     "mmlu": 82.5,
     "humanEval": 78.2,
     "contextWindow": "200K",
-    "officialPrice": {"in": 1.0, "out": 5.0},
-    "otherPlatforms": [
-      {"name": "AWS Bedrock", "in": 1.0, "out": 5.0},
-      {"name": "OpenRouter", "in": 1.1, "out": 5.5}
-    ],
+    "pricing": {
+      "copilot": {"in": 1.0, "out": 5.0},
+      "official": {"in": 1.0, "out": 5.0},
+      "openrouter": {"in": 1.1, "out": 5.5},
+      "nvidia": {"in": 0.9, "out": 4.5}
+    },
     "notes": "Optimized for speed and high-volume routing."
   },
   {
@@ -28,12 +29,32 @@
     "mmlu": 94.8,
     "humanEval": 92.5,
     "contextWindow": "1M",
-    "officialPrice": {"in": 45.0, "out": 225.0},
-    "otherPlatforms": [
-      {"name": "AWS Bedrock", "in": 45.0, "out": 225.0},
-      {"name": "Azure AI", "in": 48.0, "out": 240.0}
-    ],
+    "pricing": {
+      "copilot": {"in": 45.0, "out": 225.0},
+      "official": {"in": 45.0, "out": 225.0},
+      "openrouter": {"in": 48.0, "out": 240.0},
+      "nvidia": {"in": 42.0, "out": 210.0}
+    },
     "notes": "State-of-the-art reasoning for complex agents."
+  },
+  {
+    "id": "claude-sonnet-4.5",
+    "name": "Claude Sonnet 4.5",
+    "vendor": "Anthropic",
+    "multimodal": "Vision",
+    "multiplier": 1.0,
+    "performance": "Medium",
+    "arenaElo": 1280,
+    "mmlu": 88.0,
+    "humanEval": 86.5,
+    "contextWindow": "500K",
+    "pricing": {
+      "copilot": {"in": 3.0, "out": 15.0},
+      "official": {"in": 3.0, "out": 15.0},
+      "openrouter": {"in": 3.2, "out": 16.0},
+      "nvidia": {"in": 2.8, "out": 14.0}
+    },
+    "notes": "The initial v4 Sonnet release."
   },
   {
     "id": "claude-sonnet-4.6",
@@ -46,46 +67,164 @@
     "mmlu": 89.2,
     "humanEval": 88.5,
     "contextWindow": "1M",
-    "officialPrice": {"in": 3.0, "out": 15.0},
-    "otherPlatforms": [
-      {"name": "DeepInfra", "in": 2.5, "out": 12.0},
-      {"name": "OpenRouter", "in": 2.8, "out": 14.0}
-    ],
+    "pricing": {
+      "copilot": {"in": 3.0, "out": 15.0},
+      "official": {"in": 3.0, "out": 15.0},
+      "openrouter": {"in": 2.8, "out": 14.0},
+      "nvidia": {"in": 2.5, "out": 12.0}
+    },
     "notes": "Current flagship workhorse."
   },
   {
-    "id": "gpt-5.5",
-    "name": "GPT-5.5",
+    "id": "gpt-4.1",
+    "name": "GPT-4.1",
     "vendor": "OpenAI",
-    "multimodal": "Omni (V/A/Vid)",
-    "multiplier": 7.5,
-    "performance": "High",
-    "arenaElo": 1365,
-    "mmlu": 93.5,
-    "humanEval": 91.0,
-    "contextWindow": "1M",
-    "officialPrice": {"in": 22.5, "out": 112.5},
-    "otherPlatforms": [
-      {"name": "Azure OpenAI", "in": 22.5, "out": 112.5},
-      {"name": "OpenRouter", "in": 25.0, "out": 125.0}
-    ],
-    "notes": "Natively omnimodal flagship model."
+    "multimodal": "Vision",
+    "multiplier": 0.0,
+    "performance": "Legacy",
+    "arenaElo": 1210,
+    "mmlu": 81.0,
+    "humanEval": 75.0,
+    "contextWindow": "128K",
+    "pricing": {
+      "copilot": {"in": 0.0, "out": 0.0},
+      "official": {"in": 0.0, "out": 0.0},
+      "openrouter": {"in": 0.1, "out": 0.1},
+      "nvidia": {"in": 0.0, "out": 0.0}
+    },
+    "notes": "Free tier legacy model."
+  },
+  {
+    "id": "gpt-5-mini",
+    "name": "GPT-5 mini",
+    "vendor": "OpenAI",
+    "multimodal": "Text",
+    "multiplier": 0.0,
+    "performance": "Medium · Low",
+    "arenaElo": 1235,
+    "mmlu": 83.2,
+    "humanEval": 80.5,
+    "contextWindow": "128K",
+    "pricing": {
+      "copilot": {"in": 0.0, "out": 0.0},
+      "official": {"in": 0.0, "out": 0.0},
+      "openrouter": {"in": 0.1, "out": 0.2},
+      "nvidia": {"in": 0.0, "out": 0.0}
+    },
+    "notes": "Free tier v5 engine."
+  },
+  {
+    "id": "gpt-5.2",
+    "name": "GPT-5.2",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "multiplier": 1.0,
+    "performance": "Medium",
+    "arenaElo": 1275,
+    "mmlu": 87.5,
+    "humanEval": 85.2,
+    "contextWindow": "200K",
+    "pricing": {
+      "copilot": {"in": 3.0, "out": 15.0},
+      "official": {"in": 3.0, "out": 15.0},
+      "openrouter": {"in": 3.3, "out": 16.5},
+      "nvidia": {"in": 2.9, "out": 14.5}
+    },
+    "notes": "Standard professional tier."
+  },
+  {
+    "id": "gpt-5.2-codex",
+    "name": "GPT-5.2-Codex",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "multiplier": 1.0,
+    "performance": "High (Coding)",
+    "arenaElo": 1260,
+    "mmlu": 84.5,
+    "humanEval": 92.0,
+    "contextWindow": "200K",
+    "pricing": {
+      "copilot": {"in": 3.0, "out": 15.0},
+      "official": {"in": 3.0, "out": 15.0},
+      "openrouter": {"in": 3.1, "out": 15.5},
+      "nvidia": {"in": 2.7, "out": 13.5}
+    },
+    "notes": "Legacy coding specialist."
   },
   {
     "id": "gpt-5.3-codex",
     "name": "GPT-5.3-Codex",
     "vendor": "OpenAI",
-    "multimodal": "Text/Vision",
+    "multimodal": "Vision",
     "multiplier": 1.0,
     "performance": "High (Coding)",
     "arenaElo": 1295,
     "mmlu": 86.0,
     "humanEval": 94.2,
     "contextWindow": "400K",
-    "officialPrice": {"in": 3.0, "out": 15.0},
-    "otherPlatforms": [
-      {"name": "Azure OpenAI", "in": 3.0, "out": 15.0}
-    ],
-    "notes": "Current state-of-the-art for coding."
+    "pricing": {
+      "copilot": {"in": 3.0, "out": 15.0},
+      "official": {"in": 3.0, "out": 15.0},
+      "openrouter": {"in": 2.9, "out": 14.5},
+      "nvidia": {"in": 2.6, "out": 13.0}
+    },
+    "notes": "SOTA for coding precision."
+  },
+  {
+    "id": "gpt-5.4",
+    "name": "GPT-5.4",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "multiplier": 1.0,
+    "performance": "High",
+    "arenaElo": 1330,
+    "mmlu": 91.5,
+    "humanEval": 89.0,
+    "contextWindow": "512K",
+    "pricing": {
+      "copilot": {"in": 3.0, "out": 15.0},
+      "official": {"in": 3.0, "out": 15.0},
+      "openrouter": {"in": 3.4, "out": 17.0},
+      "nvidia": {"in": 2.8, "out": 14.0}
+    },
+    "notes": "High performance general model."
+  },
+  {
+    "id": "gpt-5.4-mini",
+    "name": "GPT-5.4 mini",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "multiplier": 0.33,
+    "performance": "High (Efficiency)",
+    "arenaElo": 1255,
+    "mmlu": 84.5,
+    "humanEval": 82.0,
+    "contextWindow": "128K",
+    "pricing": {
+      "copilot": {"in": 1.0, "out": 5.0},
+      "official": {"in": 1.0, "out": 5.0},
+      "openrouter": {"in": 1.1, "out": 5.5},
+      "nvidia": {"in": 0.8, "out": 4.0}
+    },
+    "notes": "Small model efficiency leader."
+  },
+  {
+    "id": "gpt-5.5",
+    "name": "GPT-5.5",
+    "vendor": "OpenAI",
+    "multimodal": "Omni",
+    "multiplier": 7.5,
+    "performance": "High",
+    "arenaElo": 1365,
+    "mmlu": 93.5,
+    "humanEval": 91.0,
+    "contextWindow": "1M",
+    "pricing": {
+      "copilot": {"in": 22.5, "out": 112.5},
+      "official": {"in": 22.5, "out": 112.5},
+      "openrouter": {"in": 24.0, "out": 120.0},
+      "nvidia": {"in": 20.0, "out": 100.0}
+    },
+    "notes": "Omnimodal flagship."
   }
 ]
