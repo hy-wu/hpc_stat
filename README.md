@@ -28,19 +28,23 @@ http://localhost:4173
 
 ## LLM 数据核验
 
-`models.html` 只把 `data/models.json` 中 `verification.verifiedFields` 标记过的字段加粗；没有来源或未核验的字段会以灰色显示。更新模型数据后先运行：
+`models.html` 只把 `data/models.json` 中 `verification.verifiedFields` 标记过的字段加粗；没有来源或未核验的字段会以灰色显示。来源可以是官方页面、公开评测页，也可以是人工提供的截图/采购单等明确证据，但要在 `verification.sources` 中写清楚。
+
+评测数据不要混用口径：旧的 `MMLU`、`HumanEval`、`GSM8K`、`MATH` 字段只填同名 benchmark；`MMLU-Pro`、`GPQA-Diamond`、`SWE-Bench Verified`、`Terminal-Bench` 等现代评测写入 `evals.*` 字段。
+
+更新模型数据统一跑 Python 富化脚本。它会读取 `REFERENCE_SOURCES.md` 中维护的参考链接，并抓 OpenRouter API、官方定价页、NIST/CAISI、HuggingFace 模型卡等来源；能结构化解析的绝不交给 LLM。脚本会同时做数据一致性校验和 `models.html` 默认列填充检查：
 
 ```powershell
-node scripts\verify-model-data.mjs
+python scripts\enrich_model_data.py --write --online --output .cache\model-enrich-report.json
 ```
 
-需要抓官方页面做字符串校验时可运行：
+只做校验、不写回时运行：
 
 ```powershell
-node scripts\verify-model-data.mjs --online
+python scripts\enrich_model_data.py --verify-only --online --output .cache\model-verify-report.json
 ```
 
-如果页面结构难以解析，可显式增加 `--deepseek`。脚本只从 `.env` 读取 `DEEPSEEK_API_KEY`，不会把 key 写入源码或输出；提示词要求 DeepSeek 只按来源文本判断，找不到字段时返回未核验。
+如果页面文本不够结构化，可显式增加 `--deepseek`。脚本只从 `.env` 读取 `DEEPSEEK_API_KEY`，不会把 key 写入源码或输出；提示词要求 DeepSeek 只按给定来源文本抽取，找不到字段就返回 null。旧的 Node 校验脚本已弃用。
 
 ## 价格更新格式
 

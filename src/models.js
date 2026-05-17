@@ -4,12 +4,23 @@ const fieldDefs = [
   { key: "multimodal", label: "多模态", type: "text", visible: true },
   { key: "copilotMultiplier", label: "Copilot 倍率", type: "number", visible: true },
   { key: "performance", label: "性能定位", type: "text", visible: true },
-  { key: "arenaElo", label: "Arena Elo", type: "number", visible: true, heatmap: true },
-  { key: "mmlu", label: "MMLU", type: "number", visible: true, heatmap: true },
-  { key: "humanEval", label: "HumanEval", type: "number", visible: true, heatmap: true },
-  { key: "gsm8k", label: "GSM8K", type: "number", visible: true, heatmap: true },
-  { key: "gpqa", label: "GPQA", type: "number", visible: true, heatmap: true },
-  { key: "math", label: "MATH", type: "number", visible: true, heatmap: true },
+  { key: "arenaElo", label: "Arena Elo", type: "number", visible: false, heatmap: true },
+  { key: "mmlu", label: "MMLU", type: "number", visible: false, heatmap: true },
+  { key: "humanEval", label: "HumanEval", type: "number", visible: false, heatmap: true },
+  { key: "gsm8k", label: "GSM8K", type: "number", visible: false, heatmap: true },
+  { key: "gpqa", label: "GPQA", type: "number", visible: false, heatmap: true },
+  { key: "math", label: "MATH", type: "number", visible: false, heatmap: true },
+  { key: "evals.caisiElo", label: "CAISI Elo", type: "number", visible: true, heatmap: true, source: "https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro" },
+  { key: "evals.caisiSweBenchVerified", label: "SWE Verified (CAISI)", type: "number", visible: true, heatmap: true },
+  { key: "evals.caisiGpqaDiamond", label: "GPQA-Diamond (CAISI)", type: "number", visible: true, heatmap: true },
+  { key: "evals.caisiOtisAime2025", label: "OTIS-AIME 2025", type: "number", visible: true, heatmap: true },
+  { key: "evals.caisiPumac2024", label: "PUMaC 2024", type: "number", visible: false, heatmap: true },
+  { key: "evals.caisiSmt2025", label: "SMT 2025", type: "number", visible: false, heatmap: true },
+  { key: "evals.mmluPro", label: "MMLU-Pro", type: "number", visible: true, heatmap: true, source: "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" },
+  { key: "evals.gpqaDiamond", label: "GPQA-Diamond", type: "number", visible: false, heatmap: true },
+  { key: "evals.liveCodeBench", label: "LiveCodeBench", type: "number", visible: false, heatmap: true },
+  { key: "evals.terminalBench", label: "Terminal-Bench 2.0", type: "number", visible: false, heatmap: true },
+  { key: "evals.reportedSweBenchVerified", label: "SWE Verified (report)", type: "number", visible: false, heatmap: true },
   { key: "contextWindow", label: "上下文", type: "text", visible: true },
   // OpenRouter (Moved to front as requested)
   { key: "pricing.openrouter.in", label: "OpenRouter In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://openrouter.ai/models" },
@@ -19,18 +30,18 @@ const fieldDefs = [
   { key: "pricing.official.hit", label: "官方 In(Hit)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   { key: "pricing.official.out", label: "官方 Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   // Copilot
-  { key: "pricing.copilot.in", label: "Copilot In", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  { key: "pricing.copilot.out", label: "Copilot Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.copilot.in", label: "Copilot In", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.copilot.out", label: "Copilot Out", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
   // Cursor
   { key: "pricing.cursor.in", label: "Cursor In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://cursor.com/cn/docs/models-and-pricing" },
   { key: "pricing.cursor.out", label: "Cursor Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   // SiliconFlow
-  { key: "pricing.siliconflow.in", label: "硅基流动 In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://siliconflow.cn/pricing" },
-  { key: "pricing.siliconflow.hit", label: "硅基流动 In(Hit)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
-  { key: "pricing.siliconflow.out", label: "硅基流动 Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.siliconflow.in", label: "硅基流动 In", type: "number", visible: false, heatmap: true, inverseHeatmap: true, source: "https://siliconflow.cn/pricing" },
+  { key: "pricing.siliconflow.hit", label: "硅基流动 In(Hit)", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.siliconflow.out", label: "硅基流动 Out", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
   // Nvidia
-  { key: "pricing.nvidia.in", label: "Nvidia In", type: "number", visible: true, heatmap: true, inverseHeatmap: true, source: "https://www.nvidia.com/en-us/ai-data-science/generative-ai/nim/" },
-  { key: "pricing.nvidia.out", label: "Nvidia Out", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "pricing.nvidia.in", label: "Nvidia In", type: "number", visible: false, heatmap: true, inverseHeatmap: true, source: "https://www.nvidia.com/en-us/ai-data-science/generative-ai/nim/" },
+  { key: "pricing.nvidia.out", label: "Nvidia Out", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
   { key: "notes", label: "备注", type: "text", visible: false },
 ];
 
@@ -254,7 +265,7 @@ function formatCell(row, field, stat) {
   }
 
   if (field.key === "multimodal") return `<span class="tag multimodal ${className}" title="${sourceTitle}">${val}</span>`;
-  if (field.key === "copilotMultiplier") return val === null ? "-" : `<span class="${className}" title="${sourceTitle}">${val === 0 ? "Free" : `${val}x`}</span>`;
+  if (field.key === "copilotMultiplier") return val === null ? "-" : `<span class="${className}" title="${sourceTitle}">${val}x</span>`;
 
   return `<span class="${className}" title="${verified ? sourceTitle : "未核验"}">${val}</span>`;
 }

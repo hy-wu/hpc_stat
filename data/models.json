@@ -4,7 +4,7 @@
     "name": "Claude Opus 4.7",
     "vendor": "Anthropic",
     "multimodal": "Vision",
-    "copilotMultiplier": null,
+    "copilotMultiplier": 15.0,
     "performance": "Most capable Claude model",
     "arenaElo": null,
     "mmlu": null,
@@ -12,24 +12,66 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
+    "evals": {},
     "contextWindow": "1M",
     "pricing": {
-      "official": { "in": 5.0, "out": 25.0 }
+      "official": {
+        "in": 5.0,
+        "hit": 0.5,
+        "out": 25.0
+      },
+      "cursor": {
+        "in": 5.0,
+        "out": 25.0
+      },
+      "openrouter": {
+        "in": 5.0,
+        "out": 25.0
+      }
     },
     "verification": {
       "status": "verified",
       "checkedAt": "2026-05-17",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "multimodal",
-        "performance",
         "contextWindow",
+        "copilotMultiplier",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.hit",
         "pricing.official.in",
-        "pricing.official.out"
+        "pricing.official.out",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
       ],
       "sources": [
-        { "label": "Anthropic models overview", "url": "https://platform.claude.com/docs/en/about-claude/models/overview" }
+        {
+          "label": "Anthropic models/pricing",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "OpenRouter model page",
+          "url": "https://openrouter.ai/anthropic/claude-opus-4.7"
+        },
+        {
+          "label": "User-provided Copilot model menu screenshot",
+          "url": ""
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Anthropic pricing",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        }
       ]
     }
   },
@@ -38,32 +80,140 @@
     "name": "Claude Sonnet 4.6",
     "vendor": "Anthropic",
     "multimodal": "Vision",
-    "copilotMultiplier": null,
-    "performance": "Speed/intelligence balanced",
+    "copilotMultiplier": 1.0,
+    "performance": "Medium",
     "arenaElo": null,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
+    "evals": {},
     "contextWindow": "1M",
     "pricing": {
-      "official": { "in": 3.0, "out": 15.0 }
+      "official": {
+        "in": 3.0,
+        "hit": 0.3,
+        "out": 15.0
+      },
+      "cursor": {
+        "in": 3.0,
+        "out": 15.0
+      },
+      "openrouter": {
+        "in": 3.0,
+        "out": 15.0
+      }
     },
     "verification": {
       "status": "verified",
       "checkedAt": "2026-05-17",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "multimodal",
-        "performance",
         "contextWindow",
+        "copilotMultiplier",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.hit",
         "pricing.official.in",
-        "pricing.official.out"
+        "pricing.official.out",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
       ],
       "sources": [
-        { "label": "Anthropic models overview", "url": "https://platform.claude.com/docs/en/about-claude/models/overview" }
+        {
+          "label": "Anthropic models/pricing",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided Copilot model menu screenshot",
+          "url": ""
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Anthropic pricing",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4.5",
+    "name": "Claude Sonnet 4.5",
+    "vendor": "Anthropic",
+    "multimodal": "Vision",
+    "copilotMultiplier": 1.0,
+    "performance": null,
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1M",
+    "pricing": {
+      "official": {
+        "in": 3.0,
+        "hit": 0.3,
+        "out": 15.0
+      },
+      "cursor": {
+        "in": 3.0,
+        "out": 15.0
+      },
+      "openrouter": {
+        "in": 3.0,
+        "out": 15.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-17",
+      "verifiedFields": [
+        "contextWindow",
+        "copilotMultiplier",
+        "multimodal",
+        "name",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.hit",
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic models/pricing",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided Copilot model menu screenshot",
+          "url": ""
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Anthropic pricing",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        }
       ]
     }
   },
@@ -72,7 +222,7 @@
     "name": "Claude Haiku 4.5",
     "vendor": "Anthropic",
     "multimodal": "Vision",
-    "copilotMultiplier": null,
+    "copilotMultiplier": 0.33,
     "performance": "Fastest Claude model",
     "arenaElo": null,
     "mmlu": null,
@@ -80,24 +230,62 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
+    "evals": {},
     "contextWindow": "200K",
     "pricing": {
-      "official": { "in": 1.0, "out": 5.0 }
+      "official": {
+        "in": 1.0,
+        "hit": 0.1,
+        "out": 5.0
+      },
+      "cursor": {
+        "in": 1.0,
+        "out": 5.0
+      },
+      "openrouter": {
+        "in": 1.0,
+        "out": 5.0
+      }
     },
     "verification": {
       "status": "verified",
       "checkedAt": "2026-05-17",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "multimodal",
-        "performance",
         "contextWindow",
+        "copilotMultiplier",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.hit",
         "pricing.official.in",
-        "pricing.official.out"
+        "pricing.official.out",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
       ],
       "sources": [
-        { "label": "Anthropic models overview", "url": "https://platform.claude.com/docs/en/about-claude/models/overview" }
+        {
+          "label": "Anthropic models/pricing",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided Copilot model menu screenshot",
+          "url": ""
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Anthropic pricing",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        }
       ]
     }
   },
@@ -106,34 +294,91 @@
     "name": "GPT-5.5",
     "vendor": "OpenAI",
     "multimodal": "Vision",
-    "copilotMultiplier": null,
-    "performance": "Flagship reasoning/coding",
+    "copilotMultiplier": 7.5,
+    "performance": "High",
     "arenaElo": null,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "contextWindow": "1M",
+    "evals": {
+      "caisiElo": 1260,
+      "caisiSweBenchVerified": 81,
+      "caisiGpqaDiamond": 96,
+      "caisiOtisAime2025": 100,
+      "caisiPumac2024": 96,
+      "caisiSmt2025": 99
+    },
+    "contextWindow": "1.1M",
     "pricing": {
-      "official": { "in": 5.0, "hit": 0.5, "out": 30.0 }
+      "official": {
+        "in": 5.0,
+        "hit": 0.5,
+        "out": 30.0
+      },
+      "cursor": {
+        "in": 5.0,
+        "out": 30.0
+      },
+      "openrouter": {
+        "in": 5.0,
+        "out": 30.0
+      }
     },
     "verification": {
       "status": "verified",
       "checkedAt": "2026-05-17",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "multimodal",
-        "performance",
         "contextWindow",
-        "pricing.official.in",
+        "copilotMultiplier",
+        "evals.caisiElo",
+        "evals.caisiGpqaDiamond",
+        "evals.caisiOtisAime2025",
+        "evals.caisiPumac2024",
+        "evals.caisiSmt2025",
+        "evals.caisiSweBenchVerified",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
         "pricing.official.hit",
-        "pricing.official.out"
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
       ],
       "sources": [
-        { "label": "OpenAI models", "url": "https://developers.openai.com/api/docs/models" },
-        { "label": "OpenAI pricing", "url": "https://developers.openai.com/api/docs/pricing" }
+        {
+          "label": "OpenAI models",
+          "url": "https://developers.openai.com/api/docs/models"
+        },
+        {
+          "label": "OpenAI pricing",
+          "url": "https://developers.openai.com/api/docs/pricing"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "OpenRouter model page",
+          "url": "https://openrouter.ai/models/openai/gpt-5.5"
+        },
+        {
+          "label": "NIST CAISI evaluation",
+          "url": "https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro"
+        },
+        {
+          "label": "User-provided Copilot model menu screenshot",
+          "url": ""
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
       ]
     }
   },
@@ -142,34 +387,81 @@
     "name": "GPT-5.4",
     "vendor": "OpenAI",
     "multimodal": "Vision",
-    "copilotMultiplier": null,
-    "performance": "Affordable reasoning/coding",
+    "copilotMultiplier": 1.0,
+    "performance": "High",
     "arenaElo": null,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "contextWindow": "1M",
+    "evals": {
+      "mmluPro": 87.5,
+      "gpqaDiamond": 93.0,
+      "terminalBench": 75.1
+    },
+    "contextWindow": "1.1M",
     "pricing": {
-      "official": { "in": 2.5, "hit": 0.25, "out": 15.0 }
+      "official": {
+        "in": 2.5,
+        "hit": 0.25,
+        "out": 15.0
+      },
+      "cursor": {
+        "in": 2.5,
+        "out": 15.0
+      },
+      "openrouter": {
+        "in": 2.5,
+        "out": 15.0
+      }
     },
     "verification": {
       "status": "verified",
       "checkedAt": "2026-05-17",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "multimodal",
-        "performance",
         "contextWindow",
-        "pricing.official.in",
+        "copilotMultiplier",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
+        "evals.terminalBench",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
         "pricing.official.hit",
-        "pricing.official.out"
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
       ],
       "sources": [
-        { "label": "OpenAI models", "url": "https://developers.openai.com/api/docs/models" },
-        { "label": "OpenAI pricing", "url": "https://developers.openai.com/api/docs/pricing" }
+        {
+          "label": "OpenAI models",
+          "url": "https://developers.openai.com/api/docs/models"
+        },
+        {
+          "label": "OpenAI pricing",
+          "url": "https://developers.openai.com/api/docs/pricing"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "DeepSeek V4 Pro model card benchmark table",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+        },
+        {
+          "label": "User-provided Copilot model menu screenshot",
+          "url": ""
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
       ]
     }
   },
@@ -178,34 +470,333 @@
     "name": "GPT-5.4 mini",
     "vendor": "OpenAI",
     "multimodal": "Vision",
-    "copilotMultiplier": null,
-    "performance": "Lower latency/cost",
+    "copilotMultiplier": 0.33,
+    "performance": "High",
     "arenaElo": null,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
+    "evals": {
+      "caisiElo": 749,
+      "caisiSweBenchVerified": 73,
+      "caisiGpqaDiamond": 87,
+      "caisiOtisAime2025": 90,
+      "caisiPumac2024": 93,
+      "caisiSmt2025": 92
+    },
     "contextWindow": "400K",
     "pricing": {
-      "official": { "in": 0.75, "hit": 0.075, "out": 4.5 }
+      "official": {
+        "in": 0.75,
+        "hit": 0.075,
+        "out": 4.5
+      },
+      "cursor": {
+        "in": 0.75,
+        "out": 4.5
+      },
+      "openrouter": {
+        "in": 0.75,
+        "out": 4.5
+      }
     },
     "verification": {
       "status": "verified",
       "checkedAt": "2026-05-17",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "multimodal",
-        "performance",
         "contextWindow",
-        "pricing.official.in",
+        "copilotMultiplier",
+        "evals.caisiElo",
+        "evals.caisiGpqaDiamond",
+        "evals.caisiOtisAime2025",
+        "evals.caisiPumac2024",
+        "evals.caisiSmt2025",
+        "evals.caisiSweBenchVerified",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
         "pricing.official.hit",
-        "pricing.official.out"
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
       ],
       "sources": [
-        { "label": "OpenAI models", "url": "https://developers.openai.com/api/docs/models" },
-        { "label": "OpenAI pricing", "url": "https://developers.openai.com/api/docs/pricing" }
+        {
+          "label": "OpenAI models",
+          "url": "https://developers.openai.com/api/docs/models"
+        },
+        {
+          "label": "OpenAI pricing",
+          "url": "https://developers.openai.com/api/docs/pricing"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "NIST CAISI evaluation",
+          "url": "https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro"
+        },
+        {
+          "label": "User-provided Copilot model menu screenshot",
+          "url": ""
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5.3-codex",
+    "name": "GPT-5.3-Codex",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": 1.0,
+    "performance": "High",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "400K",
+    "pricing": {
+      "official": {
+        "in": 1.75,
+        "hit": 0.175,
+        "out": 14.0
+      },
+      "openrouter": {
+        "in": 1.75,
+        "out": 14.0
+      },
+      "cursor": {
+        "in": 1.75,
+        "out": 14.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-17",
+      "verifiedFields": [
+        "contextWindow",
+        "copilotMultiplier",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.hit",
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI pricing",
+          "url": "https://developers.openai.com/api/docs/pricing"
+        },
+        {
+          "label": "User-provided Copilot model menu screenshot",
+          "url": ""
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5.2-codex",
+    "name": "GPT-5.2-Codex",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": 1.0,
+    "performance": "High",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "400K",
+    "pricing": {
+      "openrouter": {
+        "in": 1.75,
+        "out": 14.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-17",
+      "verifiedFields": [
+        "contextWindow",
+        "copilotMultiplier",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out"
+      ],
+      "sources": [
+        {
+          "label": "User-provided Copilot model menu screenshot",
+          "url": ""
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5.2",
+    "name": "GPT-5.2",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": 1.0,
+    "performance": "Medium",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "400K",
+    "pricing": {
+      "openrouter": {
+        "in": 1.75,
+        "out": 14.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-17",
+      "verifiedFields": [
+        "contextWindow",
+        "copilotMultiplier",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out"
+      ],
+      "sources": [
+        {
+          "label": "User-provided Copilot model menu screenshot",
+          "url": ""
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-mini",
+    "name": "GPT-5 mini",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": 0.0,
+    "performance": "Medium",
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "400K",
+    "pricing": {
+      "openrouter": {
+        "in": 0.25,
+        "out": 2.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-17",
+      "verifiedFields": [
+        "contextWindow",
+        "copilotMultiplier",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out"
+      ],
+      "sources": [
+        {
+          "label": "User-provided Copilot model menu screenshot",
+          "url": ""
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4.1",
+    "name": "GPT-4.1",
+    "vendor": "OpenAI",
+    "multimodal": "Vision",
+    "copilotMultiplier": 0.0,
+    "performance": null,
+    "arenaElo": null,
+    "mmlu": null,
+    "humanEval": null,
+    "gsm8k": null,
+    "gpqa": null,
+    "math": null,
+    "evals": {},
+    "contextWindow": "1.0M",
+    "pricing": {
+      "openrouter": {
+        "in": 2.0,
+        "out": 8.0
+      }
+    },
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-05-17",
+      "verifiedFields": [
+        "contextWindow",
+        "copilotMultiplier",
+        "multimodal",
+        "name",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out"
+      ],
+      "sources": [
+        {
+          "label": "User-provided Copilot model menu screenshot",
+          "url": ""
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
       ]
     }
   },
@@ -222,24 +813,78 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "contextWindow": "1M",
+    "evals": {
+      "caisiElo": 800,
+      "caisiSweBenchVerified": 74,
+      "caisiGpqaDiamond": 90,
+      "caisiOtisAime2025": 97,
+      "caisiPumac2024": 96,
+      "caisiSmt2025": 96,
+      "mmluPro": 87.5,
+      "gpqaDiamond": 90.1,
+      "liveCodeBench": 93.5,
+      "terminalBench": 67.9,
+      "reportedSweBenchVerified": 80.6
+    },
+    "contextWindow": "1.0M",
     "pricing": {
-      "official": { "in": 0.435, "hit": 0.003625, "out": 0.87 }
+      "official": {
+        "in": 0.435,
+        "hit": 0.003625,
+        "out": 0.87
+      },
+      "openrouter": {
+        "in": 0.435,
+        "out": 0.87
+      }
     },
     "verification": {
       "status": "verified",
       "checkedAt": "2026-05-17",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "performance",
         "contextWindow",
-        "pricing.official.in",
+        "evals.caisiElo",
+        "evals.caisiGpqaDiamond",
+        "evals.caisiOtisAime2025",
+        "evals.caisiPumac2024",
+        "evals.caisiSmt2025",
+        "evals.caisiSweBenchVerified",
+        "evals.gpqaDiamond",
+        "evals.liveCodeBench",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
+        "evals.terminalBench",
+        "multimodal",
+        "name",
+        "performance",
         "pricing.official.hit",
-        "pricing.official.out"
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
       ],
       "sources": [
-        { "label": "DeepSeek models and pricing", "url": "https://api-docs.deepseek.com/quick_start/pricing" }
+        {
+          "label": "DeepSeek models and pricing",
+          "url": "https://api-docs.deepseek.com/quick_start/pricing"
+        },
+        {
+          "label": "NIST CAISI evaluation",
+          "url": "https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro"
+        },
+        {
+          "label": "DeepSeek V4 Pro model card benchmark table",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+        },
+        {
+          "label": "DeepSeek pricing",
+          "url": "https://api-docs.deepseek.com/quick_start/pricing"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
       ]
     },
     "notes": "Official discounted price valid on the checked date; DeepSeek states the discount runs until 2026-05-31 15:59 UTC."
@@ -257,24 +902,62 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "contextWindow": "1M",
+    "evals": {
+      "mmluPro": 86.2,
+      "gpqaDiamond": 88.1,
+      "liveCodeBench": 91.6,
+      "terminalBench": 56.9,
+      "reportedSweBenchVerified": 79.0
+    },
+    "contextWindow": "1.0M",
     "pricing": {
-      "official": { "in": 0.14, "hit": 0.0028, "out": 0.28 }
+      "official": {
+        "in": 0.14,
+        "hit": 0.0028,
+        "out": 0.28
+      },
+      "openrouter": {
+        "in": 0.112,
+        "out": 0.224
+      }
     },
     "verification": {
       "status": "verified",
       "checkedAt": "2026-05-17",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "performance",
         "contextWindow",
-        "pricing.official.in",
+        "evals.gpqaDiamond",
+        "evals.liveCodeBench",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
+        "evals.terminalBench",
+        "multimodal",
+        "name",
+        "performance",
         "pricing.official.hit",
-        "pricing.official.out"
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
       ],
       "sources": [
-        { "label": "DeepSeek models and pricing", "url": "https://api-docs.deepseek.com/quick_start/pricing" }
+        {
+          "label": "DeepSeek models and pricing",
+          "url": "https://api-docs.deepseek.com/quick_start/pricing"
+        },
+        {
+          "label": "DeepSeek V4 Pro model card benchmark table",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+        },
+        {
+          "label": "DeepSeek pricing",
+          "url": "https://api-docs.deepseek.com/quick_start/pricing"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
       ]
     }
   },
@@ -291,25 +974,53 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "contextWindow": "1M",
+    "evals": {},
+    "contextWindow": "1.0M",
     "pricing": {
-      "official": { "in": 1.25, "hit": 0.125, "out": 10.0 }
+      "official": {
+        "in": 1.25,
+        "hit": 0.125,
+        "out": 10.0
+      },
+      "cursor": {
+        "in": 1.25,
+        "out": 10.0
+      },
+      "openrouter": {
+        "in": 1.25,
+        "out": 10.0
+      }
     },
     "verification": {
       "status": "verified",
       "checkedAt": "2026-05-17",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "multimodal",
-        "performance",
         "contextWindow",
-        "pricing.official.in",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
         "pricing.official.hit",
-        "pricing.official.out"
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
       ],
       "sources": [
-        { "label": "Gemini API pricing", "url": "https://ai.google.dev/gemini-api/docs/pricing" }
+        {
+          "label": "Gemini API pricing",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
       ]
     },
     "notes": "Pricing shown is Google's standard <=200K prompt tier; larger prompts use the higher tier."
@@ -327,25 +1038,53 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "contextWindow": "1M",
+    "evals": {},
+    "contextWindow": "1.0M",
     "pricing": {
-      "official": { "in": 0.3, "hit": 0.03, "out": 2.5 }
+      "official": {
+        "in": 0.3,
+        "hit": 0.03,
+        "out": 2.5
+      },
+      "cursor": {
+        "in": 0.3,
+        "out": 2.5
+      },
+      "openrouter": {
+        "in": 0.3,
+        "out": 2.5
+      }
     },
     "verification": {
       "status": "verified",
       "checkedAt": "2026-05-17",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "multimodal",
-        "performance",
         "contextWindow",
-        "pricing.official.in",
+        "multimodal",
+        "name",
+        "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
         "pricing.official.hit",
-        "pricing.official.out"
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
       ],
       "sources": [
-        { "label": "Gemini API pricing", "url": "https://ai.google.dev/gemini-api/docs/pricing" }
+        {
+          "label": "Gemini API pricing",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
       ]
     }
   },
@@ -362,20 +1101,35 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
+    "evals": {},
     "contextWindow": "1M",
-    "pricing": {},
+    "pricing": {
+      "openrouter": {
+        "in": 0.15,
+        "out": 0.6
+      }
+    },
     "verification": {
       "status": "verified",
       "checkedAt": "2026-05-17",
       "verifiedFields": [
-        "name",
-        "vendor",
+        "contextWindow",
         "multimodal",
+        "name",
         "performance",
-        "contextWindow"
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
       ],
       "sources": [
-        { "label": "Meta Llama 4 announcement", "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/" }
+        {
+          "label": "Meta Llama 4 announcement",
+          "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
       ]
     }
   },
@@ -392,20 +1146,35 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
+    "evals": {},
     "contextWindow": "10M",
-    "pricing": {},
+    "pricing": {
+      "openrouter": {
+        "in": 0.08,
+        "out": 0.3
+      }
+    },
     "verification": {
       "status": "verified",
       "checkedAt": "2026-05-17",
       "verifiedFields": [
-        "name",
-        "vendor",
+        "contextWindow",
         "multimodal",
+        "name",
         "performance",
-        "contextWindow"
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
       ],
       "sources": [
-        { "label": "Meta Llama 4 announcement", "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/" }
+        {
+          "label": "Meta Llama 4 announcement",
+          "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        }
       ]
     }
   }
