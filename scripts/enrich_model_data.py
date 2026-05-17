@@ -28,6 +28,10 @@ ROOT = Path(__file__).resolve().parents[1]
 MODELS_PATH = ROOT / "data" / "models.json"
 MODEL_OVERRIDES_PATH = ROOT / "data" / "model-overrides.json"
 MODEL_FIELDS_PATH = ROOT / "data" / "model-fields.json"
+MODEL_ALIASES_PATH = ROOT / "data" / "model-aliases.json"
+SIDEBAR_DATA_DIR = ROOT / "data" / "byGeminiSidebar"
+SIDEBAR_GPQA_PATH = SIDEBAR_DATA_DIR / "GPQAselfReported.md"
+SIDEBAR_LLM_STATS_PATH = SIDEBAR_DATA_DIR / "llmStat.md"
 MODELS_HTML_PATH = ROOT / "models.html"
 MODELS_JS_PATH = ROOT / "src" / "models.js"
 REFERENCE_PATH = ROOT / "REFERENCE_SOURCES.md"
@@ -323,6 +327,12 @@ class ReferenceSource:
     section: str
 
 
+@dataclass(frozen=True)
+class ModelMatcher:
+    generic_index: dict[str, list[str]]
+    explicit_alias_index: dict[str, str]
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Verify and enrich data/models.json")
     parser.add_argument("--write", action="store_true", help="write verified patches back to data/models.json")
@@ -380,6 +390,7 @@ def main() -> int:
         patches.extend(extract_caisi_evals(source_texts))
         patches.extend(extract_zeroeval_benchmark_evals(models, session, args, report))
         patches.extend(extract_llm_stats_data(models, session, args, report))
+        patches.extend(extract_sidebar_snapshot_data(models, report))
         patches.extend(extract_arena_elo_data(models, session, args, report))
         patches.extend(extract_deepseek_reported_evals(source_texts))
         patches.extend(extract_meta_model_details(source_texts))
@@ -502,6 +513,18 @@ def fetch_text(session: requests.Session, key: str, url: str, args: argparse.Nam
 def load_models(args: argparse.Namespace) -> list[dict[str, Any]]:
     source_path = MODEL_OVERRIDES_PATH if args.generate_openrouter and MODEL_OVERRIDES_PATH.exists() else MODELS_PATH
     return json.loads(source_path.read_text(encoding="utf-8"))
+
+
+def load_model_aliases() -> dict[str, list[str]]:
+    if not MODEL_ALIASES_PATH.exists():
+        return {}
+    payload = json.loads(MODEL_ALIASES_PATH.read_text(encoding="utf-8"))
+    aliases: dict[str, list[str]] = {}
+    for model_id, values in payload.items():
+        if not isinstance(model_id, str) or not isinstance(values, list):
+            continue
+        aliases[model_id] = [str(value).strip() for value in values if str(value).strip()]
+    return aliases
 
 
 def fetch_openrouter_items(session: requests.Session, args: argparse.Namespace, report: dict[str, Any]) -> list[dict[str, Any]]:
@@ -673,7 +696,7 @@ def extract_openrouter_prices(
     report: dict[str, Any],
 ) -> list[ExtractedModel]:
     by_id = {item["id"]: item for item in fetch_openrouter_items(session, args, report)}
-    aliases = discover_openrouter_aliases(models, by_id)
+    aliases = discover_openrouter_aliases(models, by_id, load_model_aliases())
     patches: list[ExtractedModel] = []
     for model_id, model_aliases in aliases.items():
         item = next((by_id[alias] for alias in model_aliases if alias in by_id), None)
@@ -720,7 +743,11 @@ def extract_openrouter_prices(
     return patches
 
 
-def discover_openrouter_aliases(models: list[dict[str, Any]], by_id: dict[str, Any]) -> dict[str, list[str]]:
+def discover_openrouter_aliases(
+    models: list[dict[str, Any]],
+    by_id: dict[str, Any],
+    alias_map: dict[str, list[str]],
+) -> dict[str, list[str]]:
     aliases = {model_id: list(values) for model_id, values in OPENROUTER_ALIASES.items()}
     normalized_index = {normalize_model_key(model_id): model_id for model_id in by_id}
     for model in models:
@@ -728,6 +755,7 @@ def discover_openrouter_aliases(models: list[dict[str, Any]], by_id: dict[str, A
         if not model_id:
             continue
         candidates = list(aliases.get(model_id, []))
+        candidates.extend(alias_map.get(model_id, []))
         vendor_prefix = OPENROUTER_VENDOR_PREFIXES.get(model.get("vendor"))
         if vendor_prefix:
             candidates.extend(
@@ -764,6 +792,89 @@ def normalize_model_key(value: str) -> str:
     value = value.split("/", 1)[-1]
     value = value.removesuffix(":free")
     return re.sub(r"[^a-z0-9]+", "", value)
+
+
+def is_markdown_table_separator(line: str) -> bool:
+    stripped = line.strip()
+    return stripped.startswith("|") and not set(stripped.replace("|", "").replace("-", "").replace(":", "").replace(" ", ""))
+
+
+def parse_markdown_tables(text: str) -> list[list[dict[str, str]]]:
+    lines = text.splitlines()
+    tables: list[list[dict[str, str]]] = []
+    i = 0
+    while i < len(lines):
+        if not lines[i].lstrip().startswith("|") or i + 1 >= len(lines) or not is_markdown_table_separator(lines[i + 1]):
+            i += 1
+            continue
+        header = [cell.strip() for cell in lines[i].strip().strip("|").split("|")]
+        rows: list[dict[str, str]] = []
+        j = i + 2
+        while j < len(lines) and lines[j].lstrip().startswith("|"):
+            cells = [cell.strip() for cell in lines[j].strip().strip("|").split("|")]
+            if len(cells) < len(header):
+                cells.extend([""] * (len(header) - len(cells)))
+            rows.append(dict(zip(header, cells[: len(header)])))
+            j += 1
+        if rows:
+            tables.append(rows)
+        i = j
+    return tables
+
+
+def clean_markdown_cell(value: Any) -> str | None:
+    if value is None:
+        return None
+    text = str(value).strip()
+    if text in {"", "-", "—", "–"}:
+        return None
+    text = re.sub(r"\*\*([^*]+)\*\*", r"\1", text)
+    return text.strip()
+
+
+def parse_markdown_link(value: Any) -> tuple[str | None, str | None]:
+    text = clean_markdown_cell(value)
+    if not text:
+        return None, None
+    match = re.search(r"\[([^\]]+)\]\(([^)]+)\)", text)
+    if match:
+        return match.group(1).strip(), match.group(2).strip()
+    return text, None
+
+
+def parse_sidebar_number(value: Any) -> float | None:
+    text = clean_markdown_cell(value)
+    if not text:
+        return None
+    match = re.search(r"-?\d+(?:,\d{3})*(?:\.\d+)?", text.replace("−", "-"))
+    if not match:
+        return None
+    try:
+        return float(match.group(0).replace(",", ""))
+    except ValueError:
+        return None
+
+
+def parse_sidebar_context_tokens(value: Any) -> int | None:
+    text = clean_markdown_cell(value)
+    if not text:
+        return None
+    normalized = text.replace(" ", "")
+    match = re.match(r"(\d+(?:\.\d+)?)([kKmM])$", normalized)
+    if not match:
+        return None
+    amount = float(match.group(1))
+    suffix = match.group(2).lower()
+    multiplier = 1_000 if suffix == "k" else 1_000_000
+    return int(round(amount * multiplier))
+
+
+def format_context_window(token_count: int) -> str:
+    if token_count >= 1_000_000:
+        value = round(token_count / 100_000) / 10
+        return f"{int(value)}M" if value.is_integer() else f"{value:.1f}M"
+    rounded_k = int(round(token_count / 1_000))
+    return f"{rounded_k}K"
 
 
 def extract_official_prices(
@@ -989,13 +1100,13 @@ def extract_zeroeval_catalog_prices(
     payload = fetch_json_source(session, "zeroeval_models_list", RAW_SOURCE_URLS["zeroeval_models_list"], args, report)
     if not isinstance(payload, list):
         return []
-    model_index = build_model_lookup_index(models)
+    matcher = build_model_matcher(models)
     patches: list[ExtractedModel] = []
     for organization in payload:
         for item in organization.get("models", []):
             if not isinstance(item, dict):
                 continue
-            model_id = match_external_model(model_index, item.get("model_id"), item.get("name"))
+            model_id = match_external_model(matcher, item.get("model_id"), item.get("name"))
             if not model_id:
                 continue
             patch: dict[str, Any] = {}
@@ -1033,7 +1144,7 @@ def extract_zeroeval_benchmark_evals(
     args: argparse.Namespace,
     report: dict[str, Any],
 ) -> list[ExtractedModel]:
-    model_index = build_model_lookup_index(models)
+    matcher = build_model_matcher(models)
     patches: list[ExtractedModel] = []
     for key, benchmark in ZEROEVAL_BENCHMARKS.items():
         payload = fetch_json_source(session, f"zeroeval_{key}", benchmark["url"], args, report)
@@ -1042,7 +1153,7 @@ def extract_zeroeval_benchmark_evals(
         for item in payload.get("models", []):
             if not isinstance(item, dict) or item.get("score") is None:
                 continue
-            model_id = match_external_model(model_index, item.get("model_id"), item.get("model_name"))
+            model_id = match_external_model(matcher, item.get("model_id"), item.get("model_name"))
             if not model_id:
                 continue
             try:
@@ -1151,12 +1262,12 @@ def extract_llm_stats_data(
 
     report["llmStatsModelCount"] = len(unique_models)
 
-    model_index = build_model_lookup_index(models)
+    matcher = build_model_matcher(models)
     patches: list[ExtractedModel] = []
 
     for item in unique_models:
         mid_raw = item.get("model_id", "")
-        model_id = match_external_model(model_index, mid_raw, item.get("name"))
+        model_id = match_external_model(matcher, mid_raw, item.get("name"))
         if not model_id:
             continue
 
@@ -1212,6 +1323,203 @@ def extract_llm_stats_data(
             )
         )
 
+    return patches
+
+
+def extract_sidebar_snapshot_data(
+    models: list[dict[str, Any]],
+    report: dict[str, Any],
+) -> list[ExtractedModel]:
+    """Load structured data from user-provided LLM-Stats sidebar snapshots."""
+    if not SIDEBAR_DATA_DIR.exists():
+        return []
+
+    matcher = build_model_matcher(models)
+    models_by_id = {model["id"]: model for model in models}
+    patches: list[ExtractedModel] = []
+    sidebar_report: dict[str, Any] = {}
+    source_url = RAW_SOURCE_URLS["llm_stats_rsc"]
+
+    def match_sidebar_model(display_name: str | None) -> str | None:
+        if not display_name:
+            return None
+        return match_external_model(matcher, display_name, None)
+
+    large_diffs: list[dict[str, Any]] = []
+
+    if SIDEBAR_GPQA_PATH.exists():
+        gpqa_rows = 0
+        gpqa_matched = 0
+        gpqa_consistent = 0
+        for table in parse_markdown_tables(SIDEBAR_GPQA_PATH.read_text(encoding="utf-8")):
+            for row in table:
+                name, _ = parse_markdown_link(row.get("Model"))
+                if not name:
+                    continue
+                gpqa_rows += 1
+                model_id = match_sidebar_model(name)
+                if not model_id:
+                    continue
+                gpqa_matched += 1
+                model = models_by_id[model_id]
+
+                sidebar_gpqa = parse_sidebar_number(row.get("Score"))
+                if sidebar_gpqa is not None:
+                    sidebar_gpqa = round(sidebar_gpqa * 100, 1) if sidebar_gpqa <= 1.5 else round(sidebar_gpqa, 1)
+                    current_gpqa = get_nested(model, "evals.gpqaDiamond")
+                    if current_gpqa is not None:
+                        if abs(float(current_gpqa) - sidebar_gpqa) < 2:
+                            gpqa_consistent += 1
+                        elif abs(float(current_gpqa) - sidebar_gpqa) >= 5:
+                            large_diffs.append(
+                                {
+                                    "field": "evals.gpqaDiamond",
+                                    "modelId": model_id,
+                                    "modelName": name,
+                                    "current": current_gpqa,
+                                    "sidebar": sidebar_gpqa,
+                                    "snapshot": str(SIDEBAR_GPQA_PATH.relative_to(ROOT)),
+                                }
+                            )
+
+                current_context = parse_sidebar_context_tokens(model.get("contextWindow"))
+                sidebar_context = parse_sidebar_context_tokens(row.get("Context Window") or row.get("Context"))
+                if current_context and sidebar_context:
+                    smaller = min(current_context, sidebar_context)
+                    if smaller and max(current_context, sidebar_context) / smaller >= 2:
+                        large_diffs.append(
+                            {
+                                "field": "contextWindow",
+                                "modelId": model_id,
+                                "modelName": name,
+                                "current": model.get("contextWindow"),
+                                "sidebar": format_context_window(sidebar_context),
+                                "snapshot": str(SIDEBAR_GPQA_PATH.relative_to(ROOT)),
+                            }
+                        )
+
+        sidebar_report["gpqaSnapshot"] = {
+            "rows": gpqa_rows,
+            "matchedModels": gpqa_matched,
+            "consistentWithCurrentGpqa": gpqa_consistent,
+            "newFieldsApplied": 0,
+        }
+
+    if SIDEBAR_LLM_STATS_PATH.exists():
+        raw_records: dict[str, list[dict[str, Any]]] = {}
+        llm_tables = parse_markdown_tables(SIDEBAR_LLM_STATS_PATH.read_text(encoding="utf-8"))
+        for table in llm_tables:
+            for row in table:
+                name, url = parse_markdown_link(row.get("Model"))
+                if not name:
+                    continue
+                raw_records.setdefault(name, []).append(
+                    {
+                        "name": name,
+                        "url": url,
+                        "codeArena": parse_sidebar_number(row.get("Code Arena")),
+                        "reasoning": parse_sidebar_number(row.get("Reasoning")),
+                        "math": parse_sidebar_number(row.get("Math")),
+                        "coding": parse_sidebar_number(row.get("Coding")),
+                        "search": parse_sidebar_number(row.get("Search")),
+                        "writing": parse_sidebar_number(row.get("Writing")),
+                        "vision": parse_sidebar_number(row.get("Vision")),
+                        "tools": parse_sidebar_number(row.get("Tools")),
+                        "longCtx": parse_sidebar_number(row.get("Long Ctx")),
+                        "speed": parse_sidebar_number(row.get("Speed")),
+                    }
+                )
+
+        sidebar_field_map = {
+            "codeArena": "llmStats.codeArena",
+            "reasoning": "llmStats.reasoning",
+            "math": "llmStats.math",
+            "coding": "llmStats.coding",
+            "search": "llmStats.search",
+            "writing": "llmStats.writing",
+            "vision": "llmStats.vision",
+            "tools": "llmStats.tools",
+            "longCtx": "llmStats.longCtx",
+            "speed": "llmStats.speed",
+        }
+        field_counts = {path: 0 for path in sidebar_field_map.values()}
+        llm_conflicts: list[dict[str, Any]] = []
+        llm_matched = 0
+
+        for name, records in raw_records.items():
+            merged_record: dict[str, Any] = {"name": name}
+            conflicts: dict[str, list[float]] = {}
+            for record in records:
+                for key, value in record.items():
+                    if key in {"name", "url"}:
+                        if value and key not in merged_record:
+                            merged_record[key] = value
+                        continue
+                    if value is None:
+                        continue
+                    existing = merged_record.get(key)
+                    if existing is None or existing == value:
+                        merged_record[key] = value
+                        continue
+                    values = {float(existing), float(value)}
+                    if key in conflicts:
+                        values.update(conflicts[key])
+                    conflicts[key] = sorted(values)
+            if conflicts:
+                llm_conflicts.append({"modelName": name, "conflicts": conflicts})
+                continue
+
+            model_id = match_sidebar_model(name)
+            if not model_id:
+                continue
+            llm_matched += 1
+
+            verified_fields: list[str] = []
+            patch: dict[str, Any] = {}
+            for record_key, field_path in sidebar_field_map.items():
+                value = merged_record.get(record_key)
+                if value is None:
+                    continue
+                set_nested(patch, field_path, value)
+                verified_fields.append(field_path)
+                field_counts[field_path] += 1
+
+            if not verified_fields:
+                continue
+
+            patches.append(
+                ExtractedModel(
+                    model_id=model_id,
+                    source_label="User-provided LLM-Stats explorer snapshot",
+                    source_url=source_url,
+                    verified_fields=verified_fields,
+                    patch=patch,
+                    evidence=[json.dumps({k: v for k, v in merged_record.items() if v is not None}, ensure_ascii=False, sort_keys=True)],
+                )
+            )
+
+        sidebar_report["llmStatsSnapshot"] = {
+            "rows": sum(len(records) for records in raw_records.values()),
+            "uniqueModels": len(raw_records),
+            "matchedModels": llm_matched,
+            "patchedModels": len(patches),
+            "fieldCoverage": {key: value for key, value in field_counts.items() if value},
+            "conflicts": llm_conflicts,
+        }
+
+    if large_diffs:
+        deduped: list[dict[str, Any]] = []
+        seen_diff_keys: set[tuple[Any, ...]] = set()
+        for item in large_diffs:
+            key = (item["field"], item["modelId"], item["current"], item["sidebar"], item["snapshot"])
+            if key in seen_diff_keys:
+                continue
+            seen_diff_keys.add(key)
+            deduped.append(item)
+        sidebar_report["largeDiffs"] = deduped
+
+    if sidebar_report:
+        report["sidebarSnapshots"] = sidebar_report
     return patches
 
 
@@ -1281,7 +1589,7 @@ def extract_arena_elo_data(
     if not entries:
         return []
 
-    model_index = build_model_lookup_index(models)
+    matcher = build_model_matcher(models)
     patches: list[ExtractedModel] = []
 
     # arena_best: model_id → {"name", "rank", "score", "is_variant"}
@@ -1298,12 +1606,12 @@ def extract_arena_elo_data(
         # Resolve model_id: explicit alias → direct match → variant-suffix-stripped match.
         model_id: str | None = ARENA_ELO_ALIASES.get(name_lower)
         if not model_id:
-            model_id = match_external_model(model_index, name_lower, None)
+            model_id = match_external_model(matcher, name_lower, None)
         if not model_id and is_variant:
             for sfx in _ARENA_VARIANT_SUFFIXES:
                 if name_lower.endswith(sfx):
                     stripped = name_lower[: -len(sfx)]
-                    model_id = match_external_model(model_index, stripped, None)
+                    model_id = match_external_model(matcher, stripped, None)
                     if model_id:
                         break
 
@@ -1419,15 +1727,38 @@ def fetch_json_source(
         return None
 
 
-def build_model_lookup_index(models: list[dict[str, Any]]) -> dict[str, list[str]]:
-    index: dict[str, list[str]] = {}
+def iter_model_match_candidates(model: dict[str, Any], alias_map: dict[str, list[str]]) -> list[str]:
+    model_id = model.get("id")
+    values: list[str] = []
+    for candidate in [model.get("id"), model.get("name"), model.get("openrouterId"), *(alias_map.get(model_id, []) if model_id else [])]:
+        if candidate:
+            values.append(str(candidate))
+    return dedupe_aliases(values)
+
+
+def build_model_matcher(models: list[dict[str, Any]]) -> ModelMatcher:
+    alias_map = load_model_aliases()
+    generic_index: dict[str, list[str]] = {}
+    explicit_alias_index: dict[str, list[str]] = {}
     for model in models:
         model_id = model.get("id")
         if not model_id:
             continue
-        for key in model_lookup_keys(model.get("id"), model.get("name"), model.get("openrouterId")):
-            index.setdefault(key, []).append(model_id)
-    return {key: dedupe_aliases(values) for key, values in index.items()}
+        for candidate in iter_model_match_candidates(model, alias_map):
+            for key in model_lookup_keys(candidate):
+                generic_index.setdefault(key, []).append(model_id)
+            if candidate in alias_map.get(model_id, []):
+                explicit_key = normalize_model_key(candidate)
+                if explicit_key:
+                    explicit_alias_index.setdefault(explicit_key, []).append(model_id)
+    return ModelMatcher(
+        generic_index={key: dedupe_aliases(values) for key, values in generic_index.items()},
+        explicit_alias_index={
+            key: values[0]
+            for key, values in ((key, dedupe_aliases(value_list)) for key, value_list in explicit_alias_index.items())
+            if len(values) == 1
+        },
+    )
 
 
 def model_lookup_keys(*values: Any) -> set[str]:
@@ -1441,6 +1772,7 @@ def model_lookup_keys(*values: Any) -> set[str]:
             candidate.split("/", 1)[-1],
             re.sub(r"[-_]?20\d{2}(?:[-_]?\d{2}){2}$", "", candidate),
             re.sub(r"[-_](latest|preview)$", "", candidate, flags=re.IGNORECASE),
+            re.sub(r"(?:[-_\s]+|\s*\()(latest|preview)\)?$", "", candidate, flags=re.IGNORECASE),
         }
         for variant in variants:
             key = normalize_model_key(variant)
@@ -1449,10 +1781,14 @@ def model_lookup_keys(*values: Any) -> set[str]:
     return keys
 
 
-def match_external_model(model_index: dict[str, list[str]], external_id: Any, external_name: Any) -> str | None:
+def match_external_model(matcher: ModelMatcher, external_id: Any, external_name: Any) -> str | None:
     for value in [external_id, external_name]:
+        explicit_key = normalize_model_key(str(value)) if value else ""
+        explicit = matcher.explicit_alias_index.get(explicit_key)
+        if explicit:
+            return explicit
         for key in model_lookup_keys(value):
-            matches = model_index.get(key) or []
+            matches = matcher.generic_index.get(key) or []
             if len(matches) == 1:
                 return matches[0]
     return None

@@ -46,6 +46,15 @@
         "evals.gpqaDiamond",
         "evals.hle",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.longCtx",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
         "multimodal",
         "name",
         "performance",
@@ -111,8 +120,31 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
+    },
+    "llmStats": {
+      "codeArena": 1872.0,
+      "coding": 51.6,
+      "longCtx": 26.4,
+      "math": 52.2,
+      "reasoning": 62.6,
+      "search": 31.4,
+      "speed": 52.0,
+      "tools": 39.6,
+      "vision": 44.5
     }
   },
   {
@@ -162,6 +194,16 @@
         "evals.gpqaDiamond",
         "evals.hle",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.longCtx",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -223,8 +265,32 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
+    },
+    "llmStats": {
+      "codeArena": 1629.0,
+      "coding": 37.7,
+      "longCtx": 26.3,
+      "math": 44.2,
+      "reasoning": 52.6,
+      "search": 24.8,
+      "speed": 142.0,
+      "tools": 29.9,
+      "vision": 33.9,
+      "writing": 35.6
     }
   },
   {
@@ -272,6 +338,15 @@
         "evals.aime2025",
         "evals.gpqaDiamond",
         "evals.terminalBench",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.longCtx",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
+        "llmStats.writing",
         "multimodal",
         "name",
         "pricing.cursor.in",
@@ -327,8 +402,31 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
+    },
+    "llmStats": {
+      "codeArena": 1163.0,
+      "coding": 32.0,
+      "longCtx": 19.0,
+      "math": 33.3,
+      "reasoning": 40.5,
+      "speed": 125.0,
+      "tools": 33.8,
+      "vision": 19.2,
+      "writing": 35.3
     }
   },
   {
@@ -378,6 +476,12 @@
         "evals.gpqaDiamond",
         "evals.reportedSweBenchVerified",
         "evals.terminalBench",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -439,8 +543,28 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
+    },
+    "llmStats": {
+      "codeArena": 857.0,
+      "coding": 25.8,
+      "math": 21.3,
+      "reasoning": 35.9,
+      "speed": 114.0,
+      "writing": 25.3
     }
   },
   {
@@ -500,6 +624,16 @@
         "evals.caisiSweBenchVerified",
         "evals.gpqaDiamond",
         "evals.hle",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.longCtx",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -565,8 +699,32 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
+    },
+    "llmStats": {
+      "codeArena": 1848.0,
+      "coding": 53.1,
+      "longCtx": 30.6,
+      "math": 48.6,
+      "reasoning": 62.9,
+      "search": 35.6,
+      "speed": 41.0,
+      "tools": 40.4,
+      "vision": 46.8,
+      "writing": 30.8
     }
   },
   {
@@ -618,6 +776,16 @@
         "evals.hle",
         "evals.mmluPro",
         "evals.terminalBench",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.longCtx",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -679,8 +847,36 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+        },
+        {
+          "label": "DeepSeek V4 Pro model card benchmark table",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
+    },
+    "llmStats": {
+      "codeArena": 1724.0,
+      "coding": 44.3,
+      "longCtx": 27.4,
+      "math": 47.3,
+      "reasoning": 57.9,
+      "search": 32.0,
+      "speed": 217.0,
+      "tools": 36.3,
+      "vision": 38.1,
+      "writing": 35.5
     }
   },
   {
@@ -738,6 +934,12 @@
         "evals.caisiSweBenchVerified",
         "evals.gpqaDiamond",
         "evals.hle",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -795,8 +997,28 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
+    },
+    "llmStats": {
+      "codeArena": 841.0,
+      "coding": 35.4,
+      "math": 36.4,
+      "reasoning": 46.1,
+      "speed": 451.0,
+      "writing": 22.2
     }
   },
   {
@@ -836,6 +1058,12 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.reasoning",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
         "multimodal",
         "name",
         "performance",
@@ -872,8 +1100,24 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
+    },
+    "llmStats": {
+      "codeArena": 1327.0,
+      "coding": 43.9,
+      "reasoning": 56.1,
+      "speed": 230.0,
+      "tools": 37.2,
+      "vision": 28.0
     }
   },
   {
@@ -913,6 +1157,11 @@
         "arenaElo",
         "contextWindow",
         "copilotMultiplier",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.reasoning",
+        "llmStats.speed",
+        "llmStats.tools",
         "multimodal",
         "name",
         "performance",
@@ -948,8 +1197,27 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
+    },
+    "llmStats": {
+      "codeArena": 1177.0,
+      "coding": 40.2,
+      "reasoning": 52.7,
+      "speed": 262.0,
+      "tools": 27.6
     }
   },
   {
@@ -1000,6 +1268,15 @@
         "evals.gpqaDiamond",
         "evals.hle",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -1055,8 +1332,31 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
+    },
+    "llmStats": {
+      "codeArena": 1512.0,
+      "coding": 35.7,
+      "math": 50.4,
+      "reasoning": 54.0,
+      "search": 26.1,
+      "speed": 98.0,
+      "tools": 28.7,
+      "vision": 35.7,
+      "writing": 33.1
     }
   },
   {
@@ -1103,6 +1403,11 @@
         "evals.aime2025",
         "evals.gpqaDiamond",
         "evals.hle",
+        "llmStats.codeArena",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
+        "llmStats.vision",
         "multimodal",
         "name",
         "performance",
@@ -1150,8 +1455,27 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
+    },
+    "llmStats": {
+      "codeArena": 1114.0,
+      "math": 33.3,
+      "reasoning": 36.9,
+      "speed": 89.0,
+      "vision": 12.8
     }
   },
   {
@@ -1204,6 +1528,12 @@
         "evals.hle",
         "evals.ifEval",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
+        "llmStats.writing",
         "mmlu",
         "multimodal",
         "name",
@@ -1267,8 +1597,28 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
+    },
+    "llmStats": {
+      "codeArena": 715.0,
+      "coding": 8.2,
+      "math": 20.3,
+      "reasoning": 21.7,
+      "speed": 317.0,
+      "writing": 10.7
     }
   },
   {
@@ -1295,14 +1645,17 @@
       "gpqaDiamond": 90.1,
       "liveCodeBench": 93.5,
       "terminalBench": 67.9,
-      "reportedSweBenchVerified": 80.6
+      "reportedSweBenchVerified": 80.6,
+      "browseComp": 83.4,
+      "hle": 48.2,
+      "simpleQA": 57.9
     },
     "contextWindow": "1.0M",
     "pricing": {
       "official": {
-        "in": 0.435,
+        "in": 1.74,
         "hit": 0.003625,
-        "out": 0.87
+        "out": 3.48
       },
       "openrouter": {
         "in": 0.435,
@@ -1316,6 +1669,7 @@
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
+        "evals.browseComp",
         "evals.caisiElo",
         "evals.caisiGpqaDiamond",
         "evals.caisiOtisAime2025",
@@ -1323,10 +1677,21 @@
         "evals.caisiSmt2025",
         "evals.caisiSweBenchVerified",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.liveCodeBench",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
+        "evals.simpleQA",
         "evals.terminalBench",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.longCtx",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
         "multimodal",
         "name",
         "performance",
@@ -1362,10 +1727,69 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval LiveCodeBench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval SimpleQA leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/simpleqa/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+        },
+        {
+          "label": "DeepSeek V4 Pro model card benchmark table",
+          "url": ""
         }
       ]
     },
-    "notes": "Official discounted price valid on the checked date; DeepSeek states the discount runs until 2026-05-31 15:59 UTC."
+    "notes": "Official discounted price valid on the checked date; DeepSeek states the discount runs until 2026-05-31 15:59 UTC.",
+    "llmStats": {
+      "codeArena": 1260.0,
+      "coding": 45.0,
+      "longCtx": 20.0,
+      "math": 53.8,
+      "reasoning": 57.7,
+      "search": 33.5,
+      "speed": 81.0,
+      "tools": 35.2,
+      "vision": 33.6
+    }
   },
   {
     "id": "deepseek-v4-flash",
@@ -1385,7 +1809,10 @@
       "gpqaDiamond": 88.1,
       "liveCodeBench": 91.6,
       "terminalBench": 56.9,
-      "reportedSweBenchVerified": 79.0
+      "reportedSweBenchVerified": 79.0,
+      "browseComp": 73.2,
+      "hle": 45.1,
+      "simpleQA": 34.1
     },
     "contextWindow": "1.0M",
     "pricing": {
@@ -1406,11 +1833,23 @@
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
+        "evals.browseComp",
         "evals.gpqaDiamond",
+        "evals.hle",
         "evals.liveCodeBench",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
+        "evals.simpleQA",
         "evals.terminalBench",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.longCtx",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
         "multimodal",
         "name",
         "performance",
@@ -1442,8 +1881,67 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval LiveCodeBench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval SimpleQA leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/simpleqa/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+        },
+        {
+          "label": "DeepSeek V4 Pro model card benchmark table",
+          "url": ""
         }
       ]
+    },
+    "llmStats": {
+      "codeArena": 1226.0,
+      "coding": 38.8,
+      "longCtx": 7.9,
+      "math": 51.5,
+      "reasoning": 52.3,
+      "search": 23.9,
+      "speed": 162.0,
+      "tools": 28.3,
+      "vision": 31.0
     }
   },
   {
@@ -1496,6 +1994,11 @@
         "evals.hle",
         "evals.reportedSweBenchVerified",
         "evals.simpleQA",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
         "multimodal",
         "name",
         "performance",
@@ -1557,10 +2060,29 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
     },
-    "notes": "Pricing shown is Google's standard <=200K prompt tier; larger prompts use the higher tier."
+    "notes": "Pricing shown is Google's standard <=200K prompt tier; larger prompts use the higher tier.",
+    "llmStats": {
+      "codeArena": 943.0,
+      "coding": 17.4,
+      "math": 31.7,
+      "reasoning": 35.5,
+      "speed": 272.0
+    }
   },
   {
     "id": "gemini-2.5-flash",
@@ -1612,6 +2134,11 @@
         "evals.hle",
         "evals.reportedSweBenchVerified",
         "evals.simpleQA",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
         "multimodal",
         "name",
         "performance",
@@ -1673,8 +2200,27 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
+    },
+    "llmStats": {
+      "codeArena": 841.0,
+      "coding": 12.4,
+      "math": 23.3,
+      "reasoning": 28.9,
+      "speed": 463.0
     }
   },
   {
@@ -2004,6 +2550,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "llmStats.codeArena",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
         "multimodal",
         "name",
         "performance",
@@ -2016,10 +2566,20 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
-    "notes": "Gemini 3.1 Flash Lite is Google’s GA high-efficiency multimodal model optimized for low-latency, high-volume workloads."
+    "notes": "Gemini 3.1 Flash Lite is Google’s GA high-efficiency multimodal model optimized for low-latency, high-volume workloads.",
+    "llmStats": {
+      "codeArena": 860.0,
+      "math": 32.1,
+      "reasoning": 42.0,
+      "speed": 373.0
+    }
   },
   {
     "id": "openai/gpt-chat-latest",
@@ -2104,6 +2664,8 @@
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
+        "llmStats.codeArena",
+        "llmStats.speed",
         "multimodal",
         "name",
         "performance",
@@ -2130,10 +2692,22 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "Grok 4.3 is a reasoning model from xAI."
+    "notes": "Grok 4.3 is a reasoning model from xAI.",
+    "llmStats": {
+      "codeArena": 420.0,
+      "speed": 209.0
+    }
   },
   {
     "id": "ibm-granite/granite-4.1-8b",
@@ -2519,6 +3093,11 @@
         "evals.hle",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
         "multimodal",
         "name",
         "performance",
@@ -2556,10 +3135,21 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
         }
       ]
     },
-    "notes": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026."
+    "notes": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026.",
+    "llmStats": {
+      "codeArena": 841.0,
+      "coding": 35.5,
+      "math": 43.2,
+      "reasoning": 46.4,
+      "speed": 119.0
+    }
   },
   {
     "id": "openai/gpt-5.5-pro",
@@ -3021,6 +3611,14 @@
         "evals.gpqaDiamond",
         "evals.hle",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
         "multimodal",
         "name",
         "performance",
@@ -3068,10 +3666,28 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration."
+    "notes": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration.",
+    "llmStats": {
+      "codeArena": 1492.0,
+      "coding": 45.6,
+      "math": 50.7,
+      "reasoning": 59.1,
+      "search": 38.0,
+      "speed": 194.0,
+      "tools": 33.4,
+      "vision": 38.0
+    }
   },
   {
     "id": "anthropic/claude-opus-4.6-fast",
@@ -3158,6 +3774,14 @@
         "evals.browseComp",
         "evals.gpqaDiamond",
         "evals.hle",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
         "multimodal",
         "name",
         "performance",
@@ -3196,10 +3820,28 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks."
+    "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks.",
+    "llmStats": {
+      "codeArena": 1458.0,
+      "coding": 45.1,
+      "math": 47.2,
+      "reasoning": 55.0,
+      "search": 30.1,
+      "speed": 247.0,
+      "tools": 30.6,
+      "vision": 39.5
+    }
   },
   {
     "id": "google/gemma-4-26b-a4b-it",
@@ -3244,6 +3886,13 @@
         "evals.gpqaDiamond",
         "evals.hle",
         "evals.mmluPro",
+        "llmStats.codeArena",
+        "llmStats.longCtx",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
         "multimodal",
         "name",
         "performance",
@@ -3287,10 +3936,31 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
     },
-    "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind."
+    "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind.",
+    "llmStats": {
+      "codeArena": 1251.0,
+      "longCtx": 15.9,
+      "math": 33.1,
+      "reasoning": 36.7,
+      "speed": 111.0,
+      "tools": 18.4,
+      "vision": 21.1
+    }
   },
   {
     "id": "google/gemma-4-31b-it",
@@ -3335,6 +4005,10 @@
         "evals.gpqaDiamond",
         "evals.hle",
         "evals.mmluPro",
+        "llmStats.codeArena",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
         "multimodal",
         "name",
         "performance",
@@ -3378,10 +4052,28 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
     },
-    "notes": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output."
+    "notes": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output.",
+    "llmStats": {
+      "codeArena": 1062.0,
+      "math": 39.9,
+      "reasoning": 45.2,
+      "speed": 115.0
+    }
   },
   {
     "id": "qwen/qwen3.6-plus",
@@ -3426,6 +4118,15 @@
         "evals.ifEval",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.longCtx",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
         "multimodal",
         "name",
         "performance",
@@ -3471,10 +4172,29 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference."
+    "notes": "Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference.",
+    "llmStats": {
+      "codeArena": 1111.0,
+      "coding": 43.3,
+      "longCtx": 37.3,
+      "math": 49.8,
+      "reasoning": 52.9,
+      "search": 25.2,
+      "speed": 79.0,
+      "tools": 31.0,
+      "vision": 36.1
+    }
   },
   {
     "id": "z-ai/glm-5v-turbo",
@@ -3872,6 +4592,9 @@
         "arenaElo",
         "contextWindow",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.reasoning",
         "multimodal",
         "name",
         "performance",
@@ -3892,10 +4615,19 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
-    "notes": "MiMo-V2-Omni is a frontier omni-modal model that natively processes image, video, and audio inputs within a unified architecture."
+    "notes": "MiMo-V2-Omni is a frontier omni-modal model that natively processes image, video, and audio inputs within a unified architecture.",
+    "llmStats": {
+      "codeArena": 191.0,
+      "coding": 28.6,
+      "reasoning": 45.5
+    }
   },
   {
     "id": "xiaomi/mimo-v2-pro",
@@ -3929,6 +4661,11 @@
         "arenaElo",
         "contextWindow",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -3949,10 +4686,21 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
-    "notes": "MiMo-V2-Pro is Xiaomi's flagship foundation model, featuring over 1T total parameters and a 1M context length, deeply optimized for agentic scenarios."
+    "notes": "MiMo-V2-Pro is Xiaomi's flagship foundation model, featuring over 1T total parameters and a 1M context length, deeply optimized for agentic scenarios.",
+    "llmStats": {
+      "codeArena": 215.0,
+      "coding": 35.4,
+      "reasoning": 52.0,
+      "search": 33.1,
+      "writing": 28.4
+    }
   },
   {
     "id": "minimax/minimax-m2.7",
@@ -3986,6 +4734,10 @@
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.reasoning",
+        "llmStats.speed",
         "multimodal",
         "name",
         "performance",
@@ -4011,10 +4763,24 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement."
+    "notes": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement.",
+    "llmStats": {
+      "codeArena": 878.0,
+      "coding": 40.1,
+      "reasoning": 53.9,
+      "speed": 243.0
+    }
   },
   {
     "id": "openai/gpt-5.4-nano",
@@ -4058,6 +4824,12 @@
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.hle",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -4098,10 +4870,30 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
     },
-    "notes": "GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks."
+    "notes": "GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks.",
+    "llmStats": {
+      "codeArena": 727.0,
+      "coding": 24.1,
+      "math": 33.4,
+      "reasoning": 40.1,
+      "speed": 518.0,
+      "writing": 20.9
+    }
   },
   {
     "id": "mistralai/mistral-small-2603",
@@ -4144,6 +4936,11 @@
         "evals.gpqaDiamond",
         "evals.liveCodeBench",
         "evals.mmluPro",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
         "multimodal",
         "name",
         "performance",
@@ -4182,10 +4979,21 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
         }
       ]
     },
-    "notes": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system."
+    "notes": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system.",
+    "llmStats": {
+      "codeArena": 176.0,
+      "coding": 16.1,
+      "math": 24.6,
+      "reasoning": 24.1,
+      "speed": 577.0
+    }
   },
   {
     "id": "z-ai/glm-5-turbo",
@@ -4543,6 +5351,12 @@
         "evals.aime2025",
         "evals.gpqaDiamond",
         "evals.liveCodeBench",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -4581,10 +5395,26 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "Mercury 2 is an extremely fast reasoning LLM, and the first reasoning diffusion LLM (dLLM)."
+    "notes": "Mercury 2 is an extremely fast reasoning LLM, and the first reasoning diffusion LLM (dLLM).",
+    "llmStats": {
+      "codeArena": 248.0,
+      "coding": 19.2,
+      "math": 31.7,
+      "reasoning": 29.5,
+      "speed": 657.0,
+      "writing": 7.3
+    }
   },
   {
     "id": "openai/gpt-5.3-chat",
@@ -4623,6 +5453,8 @@
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
+        "llmStats.codeArena",
+        "llmStats.speed",
         "multimodal",
         "name",
         "performance",
@@ -4655,10 +5487,26 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
     },
-    "notes": "GPT-5.3 Chat is an update to ChatGPT's most-used model that makes everyday conversations smoother, more useful, and more directly helpful."
+    "notes": "GPT-5.3 Chat is an update to ChatGPT's most-used model that makes everyday conversations smoother, more useful, and more directly helpful.",
+    "llmStats": {
+      "codeArena": 590.0,
+      "speed": 276.0
+    }
   },
   {
     "id": "google/gemini-3.1-flash-lite-preview",
@@ -4885,6 +5733,13 @@
         "evals.ifEval",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -4935,10 +5790,27 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency."
+    "notes": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency.",
+    "llmStats": {
+      "codeArena": 549.0,
+      "coding": 16.8,
+      "math": 38.7,
+      "reasoning": 39.0,
+      "search": 17.8,
+      "speed": 165.0,
+      "writing": 18.8
+    }
   },
   {
     "id": "qwen/qwen3.5-27b",
@@ -4985,6 +5857,13 @@
         "evals.ifEval",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -5034,10 +5913,27 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "The Qwen3.5 27B native vision-language Dense model incorporates a linear attention mechanism, delivering fast response times while balancing inference speed and performance."
+    "notes": "The Qwen3.5 27B native vision-language Dense model incorporates a linear attention mechanism, delivering fast response times while balancing inference speed and performance.",
+    "llmStats": {
+      "codeArena": 734.0,
+      "coding": 22.1,
+      "math": 42.6,
+      "reasoning": 42.6,
+      "search": 20.5,
+      "speed": 69.0,
+      "writing": 22.3
+    }
   },
   {
     "id": "qwen/qwen3.5-122b-a10b",
@@ -5084,6 +5980,13 @@
         "evals.ifEval",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -5133,10 +6036,27 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "The Qwen3.5 122B-A10B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency."
+    "notes": "The Qwen3.5 122B-A10B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency.",
+    "llmStats": {
+      "codeArena": 698.0,
+      "coding": 26.6,
+      "math": 44.4,
+      "reasoning": 43.4,
+      "search": 22.2,
+      "speed": 104.0,
+      "writing": 24.3
+    }
   },
   {
     "id": "qwen/qwen3.5-flash-02-23",
@@ -5365,6 +6285,15 @@
         "evals.gpqaDiamond",
         "evals.hle",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.longCtx",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
         "multimodal",
         "name",
         "performance",
@@ -5413,10 +6342,33 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
     },
-    "notes": "Gemini 3.1 Pro Preview is Google’s frontier reasoning model, delivering enhanced software engineering performance, improved agentic reliability, and more efficient token usage across complex workflows."
+    "notes": "Gemini 3.1 Pro Preview is Google’s frontier reasoning model, delivering enhanced software engineering performance, improved agentic reliability, and more efficient token usage across complex workflows.",
+    "llmStats": {
+      "codeArena": 2125.0,
+      "coding": 44.1,
+      "longCtx": 13.2,
+      "math": 54.8,
+      "reasoning": 59.0,
+      "search": 37.0,
+      "speed": 157.0,
+      "tools": 34.1,
+      "vision": 41.0
+    }
   },
   {
     "id": "qwen/qwen3.5-plus-02-15",
@@ -5507,6 +6459,16 @@
         "evals.ifEval",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.longCtx",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -5557,10 +6519,30 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency."
+    "notes": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency.",
+    "llmStats": {
+      "codeArena": 1192.0,
+      "coding": 31.0,
+      "longCtx": 38.8,
+      "math": 46.7,
+      "reasoning": 49.4,
+      "search": 25.8,
+      "speed": 57.0,
+      "tools": 22.8,
+      "vision": 29.0,
+      "writing": 28.7
+    }
   },
   {
     "id": "minimax/minimax-m2.5",
@@ -5599,6 +6581,11 @@
         "contextWindow",
         "evals.browseComp",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
         "multimodal",
         "name",
         "performance",
@@ -5632,10 +6619,25 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity."
+    "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity.",
+    "llmStats": {
+      "codeArena": 936.0,
+      "coding": 38.9,
+      "reasoning": 53.1,
+      "search": 27.0,
+      "speed": 559.0
+    }
   },
   {
     "id": "z-ai/glm-5",
@@ -5675,6 +6677,12 @@
         "contextWindow",
         "evals.browseComp",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.tools",
         "multimodal",
         "name",
         "performance",
@@ -5709,10 +6717,26 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows."
+    "notes": "GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows.",
+    "llmStats": {
+      "codeArena": 1581.0,
+      "coding": 37.3,
+      "reasoning": 52.1,
+      "search": 26.5,
+      "speed": 299.0,
+      "tools": 26.7
+    }
   },
   {
     "id": "qwen/qwen3-max-thinking",
@@ -5805,6 +6829,16 @@
         "evals.gpqaDiamond",
         "evals.hle",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.longCtx",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -5857,10 +6891,34 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
     },
-    "notes": "Opus 4.6 is Anthropic’s strongest model for coding and long-running professional tasks."
+    "notes": "Opus 4.6 is Anthropic’s strongest model for coding and long-running professional tasks.",
+    "llmStats": {
+      "codeArena": 2032.0,
+      "coding": 45.6,
+      "longCtx": 36.7,
+      "math": 52.4,
+      "reasoning": 59.9,
+      "search": 38.7,
+      "speed": 82.0,
+      "tools": 35.1,
+      "vision": 36.5,
+      "writing": 44.6
+    }
   },
   {
     "id": "qwen/qwen3-coder-next",
@@ -5946,6 +7004,12 @@
         "evals.aime2025",
         "evals.browseComp",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
         "multimodal",
         "name",
         "performance",
@@ -5983,10 +7047,26 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "Step 3.5 Flash is StepFun's most capable open-source foundation model."
+    "notes": "Step 3.5 Flash is StepFun's most capable open-source foundation model.",
+    "llmStats": {
+      "codeArena": 565.0,
+      "coding": 28.9,
+      "math": 47.1,
+      "reasoning": 49.8,
+      "search": 22.4,
+      "speed": 259.0
+    }
   },
   {
     "id": "arcee-ai/trinity-large-preview",
@@ -6083,6 +7163,14 @@
         "evals.hle",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.longCtx",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.tools",
+        "llmStats.vision",
         "multimodal",
         "name",
         "performance",
@@ -6134,10 +7222,28 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm."
+    "notes": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm.",
+    "llmStats": {
+      "codeArena": 1462.0,
+      "coding": 32.5,
+      "longCtx": 38.3,
+      "math": 47.9,
+      "reasoning": 50.4,
+      "search": 30.4,
+      "tools": 14.6,
+      "vision": 35.9
+    }
   },
   {
     "id": "upstage/solar-pro-3",
@@ -6398,6 +7504,12 @@
         "evals.gpqaDiamond",
         "evals.hle",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
         "multimodal",
         "name",
         "performance",
@@ -6438,10 +7550,26 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "As a 30B-class SOTA model, GLM-4.7-Flash offers a new option that balances performance and efficiency."
+    "notes": "As a 30B-class SOTA model, GLM-4.7-Flash offers a new option that balances performance and efficiency.",
+    "llmStats": {
+      "codeArena": 759.0,
+      "coding": 9.0,
+      "math": 29.3,
+      "reasoning": 32.0,
+      "search": 3.9,
+      "speed": 38.0
+    }
   },
   {
     "id": "bytedance-seed/seed-1.6-flash",
@@ -6579,6 +7707,13 @@
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
         "evals.terminalBench",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -6637,10 +7772,27 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "MiniMax-M2.1 is a lightweight, state-of-the-art large language model optimized for coding, agentic workflows, and modern application development."
+    "notes": "MiniMax-M2.1 is a lightweight, state-of-the-art large language model optimized for coding, agentic workflows, and modern application development.",
+    "llmStats": {
+      "codeArena": 908.0,
+      "coding": 27.6,
+      "math": 36.7,
+      "reasoning": 41.6,
+      "search": 19.1,
+      "speed": 395.0,
+      "writing": 18.2
+    }
   },
   {
     "id": "z-ai/glm-4.7",
@@ -6690,6 +7842,12 @@
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
         "evals.terminalBench",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
         "multimodal",
         "name",
         "performance",
@@ -6744,10 +7902,26 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "GLM-4.7 is Z.ai’s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution."
+    "notes": "GLM-4.7 is Z.ai’s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution.",
+    "llmStats": {
+      "codeArena": 1064.0,
+      "coding": 23.2,
+      "math": 44.1,
+      "reasoning": 44.2,
+      "search": 16.8,
+      "speed": 61.0
+    }
   },
   {
     "id": "google/gemini-3-flash-preview",
@@ -6797,6 +7971,14 @@
         "evals.hle",
         "evals.reportedSweBenchVerified",
         "evals.simpleQA",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.longCtx",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
         "multimodal",
         "name",
         "performance",
@@ -6849,10 +8031,32 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
     },
-    "notes": "Gemini 3 Flash Preview is a high speed, high value thinking model designed for agentic workflows, multi turn chat, and coding assistance."
+    "notes": "Gemini 3 Flash Preview is a high speed, high value thinking model designed for agentic workflows, multi turn chat, and coding assistance.",
+    "llmStats": {
+      "codeArena": 1703.0,
+      "coding": 31.5,
+      "longCtx": 5.3,
+      "math": 50.7,
+      "reasoning": 49.5,
+      "speed": 600.0,
+      "tools": 24.1,
+      "vision": 34.1
+    }
   },
   {
     "id": "xiaomi/mimo-v2-flash",
@@ -6897,6 +8101,11 @@
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
         "evals.terminalBench",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
         "multimodal",
         "name",
         "performance",
@@ -6941,10 +8150,21 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
         }
       ]
     },
-    "notes": "MiMo-V2-Flash is an open-source foundation language model developed by Xiaomi."
+    "notes": "MiMo-V2-Flash is an open-source foundation language model developed by Xiaomi.",
+    "llmStats": {
+      "codeArena": 793.0,
+      "coding": 23.6,
+      "math": 38.1,
+      "reasoning": 38.7,
+      "search": 15.9
+    }
   },
   {
     "id": "nvidia/nemotron-3-nano-30b-a3b",
@@ -6990,6 +8210,12 @@
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
         "evals.terminalBench",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -7035,10 +8261,22 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
         }
       ]
     },
-    "notes": "NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems."
+    "notes": "NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems.",
+    "llmStats": {
+      "codeArena": 222.0,
+      "coding": 2.9,
+      "math": 28.1,
+      "reasoning": 24.7,
+      "speed": 61.0,
+      "writing": 5.5
+    }
   },
   {
     "id": "openai/gpt-5.2-chat",
@@ -7770,6 +9008,10 @@
         "evals.aime2025",
         "evals.hle",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
         "multimodal",
         "name",
         "performance",
@@ -7794,10 +9036,20 @@
         {
           "label": "ZeroEval Humanity's Last Exam leaderboard",
           "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
-    "notes": "DeepSeek-V3.2-Speciale is a high-compute variant of DeepSeek-V3.2 optimized for maximum reasoning and agentic performance."
+    "notes": "DeepSeek-V3.2-Speciale is a high-compute variant of DeepSeek-V3.2 optimized for maximum reasoning and agentic performance.",
+    "llmStats": {
+      "codeArena": 832.0,
+      "coding": 23.5,
+      "math": 46.2,
+      "reasoning": 43.0
+    }
   },
   {
     "id": "deepseek/deepseek-v3.2",
@@ -7847,6 +9099,12 @@
         "evals.liveCodeBench",
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
         "multimodal",
         "name",
         "performance",
@@ -7901,10 +9159,26 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance."
+    "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance.",
+    "llmStats": {
+      "codeArena": 464.0,
+      "coding": 28.8,
+      "math": 39.1,
+      "reasoning": 42.3,
+      "search": 13.7,
+      "speed": 53.0
+    }
   },
   {
     "id": "prime-intellect/intellect-3",
@@ -7996,6 +9270,14 @@
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -8036,10 +9318,32 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
     },
-    "notes": "Claude Opus 4.5 is Anthropic’s frontier reasoning model optimized for complex software engineering, agentic workflows, and long-horizon computer use."
+    "notes": "Claude Opus 4.5 is Anthropic’s frontier reasoning model optimized for complex software engineering, agentic workflows, and long-horizon computer use.",
+    "llmStats": {
+      "codeArena": 1614.0,
+      "coding": 41.0,
+      "math": 42.0,
+      "reasoning": 54.4,
+      "speed": 174.0,
+      "tools": 30.8,
+      "vision": 29.9,
+      "writing": 35.6
+    }
   },
   {
     "id": "allenai/olmo-3-32b-think",
@@ -8216,6 +9520,15 @@
         "evals.aime2025",
         "evals.gpqaDiamond",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.tools",
+        "llmStats.vision",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -8260,10 +9573,33 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
     },
-    "notes": "GPT-5.1 is the latest frontier-grade model in the GPT-5 series, offering stronger general-purpose reasoning, improved instruction adherence, and a more natural conversational style compared to GPT-5."
+    "notes": "GPT-5.1 is the latest frontier-grade model in the GPT-5 series, offering stronger general-purpose reasoning, improved instruction adherence, and a more natural conversational style compared to GPT-5.",
+    "llmStats": {
+      "codeArena": 1174.0,
+      "coding": 31.8,
+      "math": 41.5,
+      "reasoning": 48.1,
+      "search": 22.2,
+      "speed": 478.0,
+      "tools": 25.3,
+      "vision": 35.1,
+      "writing": 28.4
+    }
   },
   {
     "id": "openai/gpt-5.1-chat",
@@ -8350,6 +9686,10 @@
         "arenaElo",
         "contextWindow",
         "evals.reportedSweBenchVerified",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.reasoning",
+        "llmStats.speed",
         "multimodal",
         "name",
         "performance",
@@ -8386,10 +9726,28 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ]
     },
-    "notes": "GPT-5.1-Codex is a specialized version of GPT-5.1 optimized for software engineering and coding workflows."
+    "notes": "GPT-5.1-Codex is a specialized version of GPT-5.1 optimized for software engineering and coding workflows.",
+    "llmStats": {
+      "codeArena": 696.0,
+      "coding": 29.4,
+      "reasoning": 43.3,
+      "speed": 329.0
+    }
   },
   {
     "id": "openai/gpt-5.1-codex-mini",
@@ -8423,6 +9781,9 @@
         "arenaElo",
         "contextWindow",
         "evals.aime2025",
+        "llmStats.codeArena",
+        "llmStats.math",
+        "llmStats.reasoning",
         "multimodal",
         "name",
         "performance",
@@ -8443,10 +9804,19 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
-    "notes": "GPT-5.1-Codex-Mini is a smaller and faster version of GPT-5.1-Codex"
+    "notes": "GPT-5.1-Codex-Mini is a smaller and faster version of GPT-5.1-Codex",
+    "llmStats": {
+      "codeArena": 210.0,
+      "math": 0.9,
+      "reasoning": 0.6
+    }
   },
   {
     "id": "moonshotai/kimi-k2-thinking",
@@ -8736,6 +10106,13 @@
         "evals.mmluPro",
         "evals.reportedSweBenchVerified",
         "evals.terminalBench",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.writing",
         "multimodal",
         "name",
         "performance",
@@ -8794,10 +10171,27 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "MiniMax-M2 is a compact, high-efficiency large language model optimized for end-to-end coding and agentic workflows."
+    "notes": "MiniMax-M2 is a compact, high-efficiency large language model optimized for end-to-end coding and agentic workflows.",
+    "llmStats": {
+      "codeArena": 857.0,
+      "coding": 23.9,
+      "math": 25.9,
+      "reasoning": 34.3,
+      "search": 5.3,
+      "speed": 368.0,
+      "writing": 19.1
+    }
   },
   {
     "id": "qwen/qwen3-vl-32b-instruct",
@@ -9051,6 +10445,11 @@
         "evals.ifEval",
         "evals.mmluPro",
         "evals.simpleQA",
+        "llmStats.codeArena",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
+        "llmStats.writing",
         "mmlu",
         "multimodal",
         "name",
@@ -9097,10 +10496,21 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
         }
       ]
     },
-    "notes": "Qwen3-VL-8B-Thinking is the reasoning-optimized variant of the Qwen3-VL-8B multimodal model, designed for advanced visual and textual reasoning across complex scenes, documents, and temporal sequences."
+    "notes": "Qwen3-VL-8B-Thinking is the reasoning-optimized variant of the Qwen3-VL-8B multimodal model, designed for advanced visual and textual reasoning across complex scenes, documents, and temporal sequences.",
+    "llmStats": {
+      "codeArena": 241.0,
+      "math": 22.0,
+      "reasoning": 18.8,
+      "speed": 146.0,
+      "writing": 15.2
+    }
   },
   {
     "id": "qwen/qwen3-vl-8b-instruct",
@@ -9140,6 +10550,11 @@
         "evals.aime2025",
         "evals.ifEval",
         "evals.mmluPro",
+        "llmStats.codeArena",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.speed",
+        "llmStats.writing",
         "mmlu",
         "multimodal",
         "name",
@@ -9178,10 +10593,21 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
         }
       ]
     },
-    "notes": "Qwen3-VL-8B-Instruct is a multimodal vision-language model from the Qwen3-VL series, built for high-fidelity understanding and reasoning across text, images, and video."
+    "notes": "Qwen3-VL-8B-Instruct is a multimodal vision-language model from the Qwen3-VL series, built for high-fidelity understanding and reasoning across text, images, and video.",
+    "llmStats": {
+      "codeArena": 48.0,
+      "math": 13.8,
+      "reasoning": 12.2,
+      "speed": 203.0,
+      "writing": 12.0
+    }
   },
   {
     "id": "openai/gpt-5-image",
@@ -9700,6 +11126,13 @@
         "evals.hle",
         "evals.reportedSweBenchVerified",
         "evals.terminalBench",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
+        "llmStats.speed",
+        "llmStats.vision",
         "multimodal",
         "name",
         "performance",
@@ -9744,10 +11177,27 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex..."
+    "notes": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
+    "llmStats": {
+      "codeArena": 1144.0,
+      "coding": 20.5,
+      "math": 34.5,
+      "reasoning": 38.3,
+      "search": 7.4,
+      "speed": 104.0,
+      "vision": 13.5
+    }
   },
   {
     "id": "deepseek/deepseek-v3.2-exp",
@@ -9796,6 +11246,11 @@
         "evals.reportedSweBenchVerified",
         "evals.simpleQA",
         "evals.terminalBench",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.search",
         "multimodal",
         "name",
         "performance",
@@ -9851,9 +11306,24 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": ""
         }
       ]
     },
-    "notes": "DeepSeek-V3.2-Exp is an experimental large language model released by DeepSeek as an intermediate step between V3.1 and future architectures."
+    "notes": "DeepSeek-V3.2-Exp is an experimental large language model released by DeepSeek as an intermediate step between V3.1 and future architectures.",
+    "llmStats": {
+      "codeArena": 750.0,
+      "coding": 22.3,
+      "math": 33.7,
+      "reasoning": 36.2,
+      "search": 1.9
+    }
   }
 ]
