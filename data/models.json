@@ -12,7 +12,10 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 94.2,
+      "reportedSweBenchVerified": 87.6
+    },
     "contextWindow": "1M",
     "pricing": {
       "official": {
@@ -36,6 +39,8 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
@@ -73,6 +78,18 @@
         {
           "label": "Anthropic pricing",
           "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     }
@@ -90,8 +107,11 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
-    "contextWindow": "1M",
+    "evals": {
+      "gpqaDiamond": 89.9,
+      "reportedSweBenchVerified": 79.6
+    },
+    "contextWindow": "200K",
     "pricing": {
       "official": {
         "in": 3.0,
@@ -114,6 +134,8 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
@@ -147,6 +169,18 @@
         {
           "label": "Anthropic pricing",
           "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     }
@@ -164,8 +198,11 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
-    "contextWindow": "1M",
+    "evals": {
+      "gpqaDiamond": 83.4,
+      "terminalBench": 50.0
+    },
+    "contextWindow": "200K",
     "pricing": {
       "official": {
         "in": 3.0,
@@ -188,6 +225,8 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "evals.gpqaDiamond",
+        "evals.terminalBench",
         "multimodal",
         "name",
         "pricing.cursor.in",
@@ -219,6 +258,18 @@
         {
           "label": "Anthropic pricing",
           "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval Terminal-Bench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
         }
       ]
     }
@@ -236,7 +287,11 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 73.0,
+      "reportedSweBenchVerified": 73.3,
+      "terminalBench": 41.0
+    },
     "contextWindow": "200K",
     "pricing": {
       "official": {
@@ -260,6 +315,9 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
+        "evals.terminalBench",
         "multimodal",
         "name",
         "performance",
@@ -293,6 +351,22 @@
         {
           "label": "Anthropic pricing",
           "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Terminal-Bench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
         }
       ]
     }
@@ -316,7 +390,8 @@
       "caisiGpqaDiamond": 96,
       "caisiOtisAime2025": 100,
       "caisiPumac2024": 96,
-      "caisiSmt2025": 99
+      "caisiSmt2025": 99,
+      "gpqaDiamond": 93.6
     },
     "contextWindow": "1.1M",
     "pricing": {
@@ -347,6 +422,7 @@
         "evals.caisiPumac2024",
         "evals.caisiSmt2025",
         "evals.caisiSweBenchVerified",
+        "evals.gpqaDiamond",
         "multimodal",
         "name",
         "performance",
@@ -388,6 +464,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
         }
       ]
     }
@@ -410,7 +494,7 @@
       "gpqaDiamond": 93.0,
       "terminalBench": 75.1
     },
-    "contextWindow": "1.1M",
+    "contextWindow": "1M",
     "pricing": {
       "official": {
         "in": 2.5,
@@ -473,6 +557,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
         }
       ]
     }
@@ -496,7 +588,8 @@
       "caisiGpqaDiamond": 87,
       "caisiOtisAime2025": 90,
       "caisiPumac2024": 93,
-      "caisiSmt2025": 92
+      "caisiSmt2025": 92,
+      "gpqaDiamond": 88.0
     },
     "contextWindow": "400K",
     "pricing": {
@@ -527,6 +620,7 @@
         "evals.caisiPumac2024",
         "evals.caisiSmt2025",
         "evals.caisiSweBenchVerified",
+        "evals.gpqaDiamond",
         "multimodal",
         "name",
         "performance",
@@ -564,6 +658,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
         }
       ]
     }
@@ -633,6 +735,10 @@
         {
           "label": "Cursor models/pricing",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
         }
       ]
     }
@@ -657,6 +763,14 @@
         "in": 1.75,
         "out": 14.0,
         "hit": 0.175
+      },
+      "cursor": {
+        "in": 1.75,
+        "out": 14.0
+      },
+      "official": {
+        "in": 1.75,
+        "out": 14.0
       }
     },
     "verification": {
@@ -668,6 +782,10 @@
         "multimodal",
         "name",
         "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out"
@@ -680,6 +798,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     }
@@ -697,13 +823,24 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 92.4,
+      "reportedSweBenchVerified": 80.0
+    },
     "contextWindow": "400K",
     "pricing": {
       "openrouter": {
         "in": 1.75,
         "out": 14.0,
         "hit": 0.175
+      },
+      "cursor": {
+        "in": 1.75,
+        "out": 14.0
+      },
+      "official": {
+        "in": 1.75,
+        "out": 14.0
       }
     },
     "verification": {
@@ -712,9 +849,15 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out"
@@ -727,6 +870,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     }
@@ -744,13 +903,23 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 82.3
+    },
     "contextWindow": "400K",
     "pricing": {
       "openrouter": {
         "in": 0.25,
         "out": 2.0,
         "hit": 0.025
+      },
+      "cursor": {
+        "in": 0.25,
+        "out": 2.0
+      },
+      "official": {
+        "in": 0.25,
+        "out": 2.0
       }
     },
     "verification": {
@@ -759,9 +928,14 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "evals.gpqaDiamond",
         "multimodal",
         "name",
         "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out"
@@ -774,6 +948,18 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     }
@@ -791,13 +977,24 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 66.3,
+      "reportedSweBenchVerified": 54.6
+    },
     "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
         "in": 2.0,
         "out": 8.0,
         "hit": 0.5
+      },
+      "cursor": {
+        "in": 2.0,
+        "out": 8.0
+      },
+      "official": {
+        "in": 2.0,
+        "out": 8.0
       }
     },
     "verification": {
@@ -806,8 +1003,14 @@
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out"
@@ -820,6 +1023,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     }
@@ -1002,7 +1221,10 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 83.0,
+      "reportedSweBenchVerified": 63.2
+    },
     "contextWindow": "1.0M",
     "pricing": {
       "official": {
@@ -1025,6 +1247,8 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
@@ -1050,6 +1274,18 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -1068,7 +1304,10 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 82.8,
+      "reportedSweBenchVerified": 60.4
+    },
     "contextWindow": "1.0M",
     "pricing": {
       "official": {
@@ -1091,6 +1330,8 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
@@ -1116,6 +1357,18 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     }
@@ -1133,7 +1386,11 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 69.8,
+      "liveCodeBench": 43.4,
+      "mmluPro": 80.5
+    },
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
@@ -1146,6 +1403,9 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.liveCodeBench",
+        "evals.mmluPro",
         "multimodal",
         "name",
         "performance",
@@ -1161,6 +1421,18 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval LiveCodeBench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
         }
       ]
     }
@@ -1178,7 +1450,11 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 57.2,
+      "liveCodeBench": 32.8,
+      "mmluPro": 74.3
+    },
     "contextWindow": "10M",
     "pricing": {
       "openrouter": {
@@ -1191,6 +1467,9 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.liveCodeBench",
+        "evals.mmluPro",
         "multimodal",
         "name",
         "performance",
@@ -1206,6 +1485,18 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval LiveCodeBench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
         }
       ]
     }
@@ -1454,6 +1745,10 @@
         "in": 1.25,
         "hit": 0.2,
         "out": 2.5
+      },
+      "official": {
+        "in": 1.25,
+        "out": 2.5
       }
     },
     "verification": {
@@ -1464,6 +1759,8 @@
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -1473,6 +1770,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
         }
       ]
     },
@@ -1709,7 +2010,11 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 86.0,
+      "mmluPro": 85.2,
+      "reportedSweBenchVerified": 73.4
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
@@ -1723,6 +2028,9 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
@@ -1735,6 +2043,18 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -1797,12 +2117,20 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 87.8,
+      "mmluPro": 86.2,
+      "reportedSweBenchVerified": 77.2
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
         "in": 0.32,
         "out": 3.2
+      },
+      "official": {
+        "in": 0.6,
+        "out": 3.6
       }
     },
     "verification": {
@@ -1810,9 +2138,14 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -1821,6 +2154,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -2234,13 +2583,21 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 90.5,
+      "reportedSweBenchVerified": 80.2
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
         "in": 0.73,
         "hit": 0.25,
         "out": 3.49
+      },
+      "official": {
+        "hit": 0.16,
+        "in": 0.95,
+        "out": 4.0
       }
     },
     "verification": {
@@ -2248,9 +2605,14 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.hit",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -2260,6 +2622,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "Moonshot Kimi K2.6 pricing",
+          "url": "https://platform.kimi.ai/docs/pricing/chat-k26.md"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -2324,13 +2702,19 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
-    "contextWindow": "203K",
+    "evals": {
+      "gpqaDiamond": 86.2
+    },
+    "contextWindow": "200K",
     "pricing": {
       "openrouter": {
         "in": 0.98,
         "hit": 0.182,
         "out": 3.08
+      },
+      "official": {
+        "in": 1.4,
+        "out": 4.4
       }
     },
     "verification": {
@@ -2338,9 +2722,12 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -2350,6 +2737,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
         }
       ]
     },
@@ -2369,12 +2764,23 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 82.3,
+      "mmluPro": 82.6
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
         "in": 0.07,
         "out": 0.34
+      },
+      "cursor": {
+        "in": 0.13,
+        "out": 0.4
+      },
+      "official": {
+        "in": 0.13,
+        "out": 0.4
       }
     },
     "verification": {
@@ -2382,9 +2788,15 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
         "multimodal",
         "name",
         "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -2393,6 +2805,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -2412,12 +2840,23 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 84.3,
+      "mmluPro": 85.2
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
         "in": 0.12,
         "out": 0.37
+      },
+      "cursor": {
+        "in": 0.14,
+        "out": 0.4
+      },
+      "official": {
+        "in": 0.14,
+        "out": 0.4
       }
     },
     "verification": {
@@ -2425,9 +2864,15 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
         "multimodal",
         "name",
         "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -2436,6 +2881,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -2455,12 +2916,20 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 90.4,
+      "mmluPro": 88.5,
+      "reportedSweBenchVerified": 78.8
+    },
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
         "in": 0.325,
         "out": 1.95
+      },
+      "official": {
+        "in": 0.5,
+        "out": 3.0
       }
     },
     "verification": {
@@ -2468,9 +2937,14 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -2479,6 +2953,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -2852,7 +3342,9 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "reportedSweBenchVerified": 74.8
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
@@ -2866,6 +3358,7 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
@@ -2878,6 +3371,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -2897,7 +3394,9 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "reportedSweBenchVerified": 78.0
+    },
     "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
@@ -2911,6 +3410,7 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
@@ -2923,6 +3423,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -2943,10 +3447,14 @@
     "gpqa": null,
     "math": null,
     "evals": {},
-    "contextWindow": "205K",
+    "contextWindow": "197K",
     "pricing": {
       "openrouter": {
         "in": 0.279,
+        "out": 1.2
+      },
+      "official": {
+        "in": 0.3,
         "out": 1.2
       }
     },
@@ -2958,6 +3466,8 @@
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -2966,6 +3476,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
         }
       ]
     },
@@ -2985,12 +3499,22 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 82.8
+    },
     "contextWindow": "400K",
     "pricing": {
       "openrouter": {
         "in": 0.2,
         "hit": 0.02,
+        "out": 1.25
+      },
+      "cursor": {
+        "in": 0.2,
+        "out": 1.25
+      },
+      "official": {
+        "in": 0.2,
         "out": 1.25
       }
     },
@@ -2999,9 +3523,14 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
         "multimodal",
         "name",
         "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -3011,6 +3540,18 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -3030,12 +3571,20 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
-    "contextWindow": "262K",
+    "evals": {
+      "gpqaDiamond": 71.2,
+      "liveCodeBench": 63.6,
+      "mmluPro": 78.0
+    },
+    "contextWindow": "256K",
     "pricing": {
       "openrouter": {
         "in": 0.15,
         "hit": 0.015,
+        "out": 0.6
+      },
+      "official": {
+        "in": 0.15,
         "out": 0.6
       }
     },
@@ -3044,9 +3593,14 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.liveCodeBench",
+        "evals.mmluPro",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -3056,6 +3610,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval LiveCodeBench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
         }
       ]
     },
@@ -3120,7 +3690,13 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 82.7,
+      "liveCodeBench": 81.2,
+      "mmluPro": 83.7,
+      "reportedSweBenchVerified": 53.7,
+      "terminalBench": 25.8
+    },
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
@@ -3133,6 +3709,11 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.liveCodeBench",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
+        "evals.terminalBench",
         "multimodal",
         "name",
         "performance",
@@ -3144,6 +3725,26 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval LiveCodeBench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Terminal-Bench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
         }
       ]
     },
@@ -3163,7 +3764,10 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 85.1,
+      "reportedSweBenchVerified": 73.5
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
@@ -3176,6 +3780,8 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
@@ -3187,6 +3793,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -3206,7 +3820,10 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 81.7,
+      "mmluPro": 82.5
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
@@ -3219,6 +3836,8 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
         "multimodal",
         "name",
         "performance",
@@ -3230,6 +3849,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
         }
       ]
     },
@@ -3292,12 +3919,19 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 74.0,
+      "liveCodeBench": 67.0
+    },
     "contextWindow": "128K",
     "pricing": {
       "openrouter": {
         "in": 0.25,
         "hit": 0.025,
+        "out": 0.75
+      },
+      "official": {
+        "in": 0.25,
         "out": 0.75
       }
     },
@@ -3306,9 +3940,13 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.liveCodeBench",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -3318,6 +3956,18 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval LiveCodeBench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
         }
       ]
     },
@@ -3344,6 +3994,14 @@
         "in": 1.75,
         "hit": 0.175,
         "out": 14.0
+      },
+      "cursor": {
+        "in": 1.75,
+        "out": 14.0
+      },
+      "official": {
+        "in": 1.75,
+        "out": 14.0
       }
     },
     "verification": {
@@ -3354,6 +4012,10 @@
         "multimodal",
         "name",
         "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -3363,6 +4025,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -3382,12 +4052,22 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
-    "contextWindow": "1.0M",
+    "evals": {
+      "gpqaDiamond": 86.9
+    },
+    "contextWindow": "1M",
     "pricing": {
       "openrouter": {
         "in": 0.25,
         "hit": 0.025,
+        "out": 1.5
+      },
+      "cursor": {
+        "in": 0.25,
+        "out": 1.5
+      },
+      "official": {
+        "in": 0.25,
         "out": 1.5
       }
     },
@@ -3396,9 +4076,14 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
         "multimodal",
         "name",
         "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -3408,6 +4093,18 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -3513,13 +4210,21 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 84.2,
+      "mmluPro": 85.3,
+      "reportedSweBenchVerified": 69.2
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
         "in": 0.14,
         "hit": 0.05,
         "out": 1.0
+      },
+      "official": {
+        "in": 0.25,
+        "out": 2.0
       }
     },
     "verification": {
@@ -3527,9 +4232,14 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -3539,6 +4249,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -3558,12 +4284,20 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 85.5,
+      "mmluPro": 86.1,
+      "reportedSweBenchVerified": 72.4
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
         "in": 0.195,
         "out": 1.56
+      },
+      "official": {
+        "in": 0.3,
+        "out": 2.4
       }
     },
     "verification": {
@@ -3571,9 +4305,14 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -3582,6 +4321,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -3601,12 +4356,20 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 86.6,
+      "mmluPro": 86.7,
+      "reportedSweBenchVerified": 72.0
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
         "in": 0.26,
         "out": 2.08
+      },
+      "official": {
+        "in": 0.4,
+        "out": 3.2
       }
     },
     "verification": {
@@ -3614,9 +4377,14 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -3625,6 +4393,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -3820,13 +4604,24 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 94.3,
+      "reportedSweBenchVerified": 80.6
+    },
     "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
         "in": 2.0,
         "hit": 0.2,
         "out": 12.0
+      },
+      "cursor": {
+        "in": 2.5,
+        "out": 15.0
+      },
+      "official": {
+        "in": 2.5,
+        "out": 15.0
       }
     },
     "verification": {
@@ -3834,9 +4629,15 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -3846,6 +4647,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -3908,13 +4725,21 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 88.4,
+      "mmluPro": 87.8,
+      "reportedSweBenchVerified": 76.4
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
         "in": 0.39,
         "hit": 0.195,
         "out": 2.34
+      },
+      "official": {
+        "in": 0.6,
+        "out": 3.6
       }
     },
     "verification": {
@@ -3922,9 +4747,14 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -3934,6 +4764,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -3953,12 +4799,18 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
-    "contextWindow": "205K",
+    "evals": {
+      "reportedSweBenchVerified": 80.2
+    },
+    "contextWindow": "1M",
     "pricing": {
       "openrouter": {
         "in": 0.15,
         "out": 1.15
+      },
+      "official": {
+        "in": 0.3,
+        "out": 1.2
       }
     },
     "verification": {
@@ -3966,9 +4818,12 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -3977,6 +4832,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -3996,13 +4859,19 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
-    "contextWindow": "203K",
+    "evals": {
+      "reportedSweBenchVerified": 77.8
+    },
+    "contextWindow": "200K",
     "pricing": {
       "openrouter": {
         "in": 0.6,
         "hit": 0.12,
         "out": 1.92
+      },
+      "official": {
+        "in": 1.0,
+        "out": 3.2
       }
     },
     "verification": {
@@ -4010,9 +4879,12 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -4022,6 +4894,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -4084,12 +4964,23 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 91.3,
+      "reportedSweBenchVerified": 80.8
+    },
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
         "in": 5.0,
         "hit": 0.5,
+        "out": 25.0
+      },
+      "cursor": {
+        "in": 5.0,
+        "out": 25.0
+      },
+      "official": {
+        "in": 5.0,
         "out": 25.0
       }
     },
@@ -4098,9 +4989,15 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -4110,6 +5007,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -4174,12 +5087,18 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
-    "contextWindow": "262K",
+    "evals": {
+      "reportedSweBenchVerified": 74.4
+    },
+    "contextWindow": "66K",
     "pricing": {
       "openrouter": {
         "in": 0.1,
         "out": 0.3
+      },
+      "official": {
+        "in": 0.1,
+        "out": 0.4
       }
     },
     "verification": {
@@ -4187,9 +5106,12 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -4198,6 +5120,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -4260,13 +5190,22 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 87.6,
+      "mmluPro": 87.1,
+      "reportedSweBenchVerified": 76.8
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
         "in": 0.4,
         "hit": 0.09,
         "out": 1.9
+      },
+      "official": {
+        "hit": 0.1,
+        "in": 0.6,
+        "out": 3.0
       }
     },
     "verification": {
@@ -4274,9 +5213,15 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.hit",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -4286,6 +5231,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Moonshot Kimi K2.5 pricing",
+          "url": "https://platform.kimi.ai/docs/pricing/chat-k25.md"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -4524,7 +5485,10 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 75.2,
+      "reportedSweBenchVerified": 59.2
+    },
     "contextWindow": "203K",
     "pricing": {
       "openrouter": {
@@ -4538,6 +5502,8 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
@@ -4550,6 +5516,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -4655,13 +5629,23 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
-    "contextWindow": "205K",
+    "evals": {
+      "gpqaDiamond": 81.0,
+      "liveCodeBench": 78.0,
+      "mmluPro": 88.0,
+      "reportedSweBenchVerified": 67.0,
+      "terminalBench": 47.9
+    },
+    "contextWindow": "1M",
     "pricing": {
       "openrouter": {
         "in": 0.29,
         "hit": 0.03,
         "out": 0.95
+      },
+      "official": {
+        "in": 0.3,
+        "out": 1.2
       }
     },
     "verification": {
@@ -4669,9 +5653,16 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.liveCodeBench",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
+        "evals.terminalBench",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -4681,6 +5672,30 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval LiveCodeBench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Terminal-Bench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
         }
       ]
     },
@@ -4700,13 +5715,22 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
-    "contextWindow": "203K",
+    "evals": {
+      "gpqaDiamond": 85.7,
+      "mmluPro": 84.3,
+      "reportedSweBenchVerified": 73.8,
+      "terminalBench": 33.3
+    },
+    "contextWindow": "205K",
     "pricing": {
       "openrouter": {
         "in": 0.4,
         "hit": 0.08,
         "out": 1.75
+      },
+      "official": {
+        "in": 0.6,
+        "out": 2.2
       }
     },
     "verification": {
@@ -4714,9 +5738,15 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
+        "evals.terminalBench",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -4726,6 +5756,26 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Terminal-Bench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
         }
       ]
     },
@@ -4745,12 +5795,23 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
-    "contextWindow": "1.0M",
+    "evals": {
+      "gpqaDiamond": 90.4,
+      "reportedSweBenchVerified": 78.0
+    },
+    "contextWindow": "1M",
     "pricing": {
       "openrouter": {
         "in": 0.5,
         "hit": 0.05,
+        "out": 3.0
+      },
+      "cursor": {
+        "in": 0.5,
+        "out": 3.0
+      },
+      "official": {
+        "in": 0.5,
         "out": 3.0
       }
     },
@@ -4759,9 +5820,15 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -4771,6 +5838,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -4790,7 +5873,12 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 83.7,
+      "mmluPro": 84.9,
+      "reportedSweBenchVerified": 73.4,
+      "terminalBench": 30.5
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
@@ -4804,6 +5892,10 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
+        "evals.terminalBench",
         "multimodal",
         "name",
         "performance",
@@ -4816,6 +5908,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Terminal-Bench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
         }
       ]
     },
@@ -4835,12 +5943,21 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 75.0,
+      "mmluPro": 78.3,
+      "reportedSweBenchVerified": 38.8,
+      "terminalBench": 8.5
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
         "in": 0.05,
         "out": 0.2
+      },
+      "official": {
+        "in": 0.06,
+        "out": 0.24
       }
     },
     "verification": {
@@ -4848,9 +5965,15 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
+        "evals.terminalBench",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -4859,6 +5982,26 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Terminal-Bench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
         }
       ]
     },
@@ -4923,7 +6066,9 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 93.2
+    },
     "contextWindow": "400K",
     "pricing": {
       "openrouter": {
@@ -4936,6 +6081,7 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
         "multimodal",
         "name",
         "performance",
@@ -4947,6 +6093,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
         }
       ]
     },
@@ -5534,7 +6684,9 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "reportedSweBenchVerified": 73.1
+    },
     "contextWindow": "164K",
     "pricing": {
       "openrouter": {
@@ -5548,6 +6700,7 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
@@ -5560,6 +6713,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -5579,13 +6736,22 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
-    "contextWindow": "131K",
+    "evals": {
+      "gpqaDiamond": 82.4,
+      "liveCodeBench": 83.3,
+      "mmluPro": 85.0,
+      "reportedSweBenchVerified": 73.1
+    },
+    "contextWindow": "164K",
     "pricing": {
       "openrouter": {
         "in": 0.252,
         "hit": 0.0252,
         "out": 0.378
+      },
+      "official": {
+        "in": 0.26,
+        "out": 0.38
       }
     },
     "verification": {
@@ -5593,9 +6759,15 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.liveCodeBench",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -5605,6 +6777,26 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval LiveCodeBench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
         }
       ]
     },
@@ -5667,12 +6859,23 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 87.0,
+      "reportedSweBenchVerified": 80.9
+    },
     "contextWindow": "200K",
     "pricing": {
       "openrouter": {
         "in": 5.0,
         "hit": 0.5,
+        "out": 25.0
+      },
+      "cursor": {
+        "in": 5.0,
+        "out": 25.0
+      },
+      "official": {
+        "in": 5.0,
         "out": 25.0
       }
     },
@@ -5681,9 +6884,15 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -5693,6 +6902,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -5843,12 +7068,23 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 88.1,
+      "reportedSweBenchVerified": 76.3
+    },
     "contextWindow": "400K",
     "pricing": {
       "openrouter": {
         "in": 1.25,
         "hit": 0.13,
+        "out": 10.0
+      },
+      "cursor": {
+        "in": 1.25,
+        "out": 10.0
+      },
+      "official": {
+        "in": 1.25,
         "out": 10.0
       }
     },
@@ -5857,9 +7093,15 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -5869,6 +7111,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -5933,12 +7191,22 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "reportedSweBenchVerified": 73.7
+    },
     "contextWindow": "400K",
     "pricing": {
       "openrouter": {
         "in": 1.25,
         "hit": 0.125,
+        "out": 10.0
+      },
+      "cursor": {
+        "in": 1.25,
+        "out": 10.0
+      },
+      "official": {
+        "in": 1.25,
         "out": 10.0
       }
     },
@@ -5947,9 +7215,14 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -5959,6 +7232,18 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -6029,6 +7314,11 @@
       "openrouter": {
         "in": 0.6,
         "out": 2.5
+      },
+      "official": {
+        "hit": 0.15,
+        "in": 0.6,
+        "out": 2.5
       }
     },
     "verification": {
@@ -6039,6 +7329,9 @@
         "multimodal",
         "name",
         "performance",
+        "pricing.official.hit",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -6047,6 +7340,10 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Moonshot K2 pricing",
+          "url": "https://platform.kimi.ai/docs/pricing/chat-k2.md"
         }
       ]
     },
@@ -6244,13 +7541,23 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 78.0,
+      "liveCodeBench": 83.0,
+      "mmluPro": 82.0,
+      "reportedSweBenchVerified": 69.4,
+      "terminalBench": 46.3
+    },
     "contextWindow": "205K",
     "pricing": {
       "openrouter": {
         "in": 0.255,
         "hit": 0.03,
         "out": 1.0
+      },
+      "official": {
+        "in": 0.3,
+        "out": 1.2
       }
     },
     "verification": {
@@ -6258,9 +7565,16 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.liveCodeBench",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
+        "evals.terminalBench",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -6270,6 +7584,30 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval LiveCodeBench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Terminal-Bench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
         }
       ]
     },
@@ -6289,7 +7627,10 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 68.9,
+      "mmluPro": 78.6
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
@@ -6302,6 +7643,8 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
         "multimodal",
         "name",
         "performance",
@@ -6313,6 +7656,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
         }
       ]
     },
@@ -6465,12 +7816,19 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
-    "contextWindow": "256K",
+    "evals": {
+      "gpqaDiamond": 69.9,
+      "mmluPro": 77.3
+    },
+    "contextWindow": "262K",
     "pricing": {
       "openrouter": {
         "in": 0.117,
         "out": 1.365
+      },
+      "official": {
+        "in": 0.18,
+        "out": 2.09
       }
     },
     "verification": {
@@ -6478,9 +7836,13 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -6489,6 +7851,18 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
         }
       ]
     },
@@ -6508,10 +7882,16 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
-    "contextWindow": "256K",
+    "evals": {
+      "mmluPro": 71.6
+    },
+    "contextWindow": "131K",
     "pricing": {
       "openrouter": {
+        "in": 0.08,
+        "out": 0.5
+      },
+      "official": {
         "in": 0.08,
         "out": 0.5
       }
@@ -6521,9 +7901,12 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.mmluPro",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -6532,6 +7915,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
         }
       ]
     },
@@ -6817,7 +8208,10 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 74.4,
+      "mmluPro": 80.5
+    },
     "contextWindow": "131K",
     "pricing": {
       "openrouter": {
@@ -6830,6 +8224,8 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
         "multimodal",
         "name",
         "performance",
@@ -6841,6 +8237,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
         }
       ]
     },
@@ -6860,7 +8264,10 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 70.4,
+      "mmluPro": 77.8
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
@@ -6873,6 +8280,8 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.mmluPro",
         "multimodal",
         "name",
         "performance",
@@ -6884,6 +8293,14 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
         }
       ]
     },
@@ -6946,7 +8363,11 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 81.0,
+      "reportedSweBenchVerified": 68.0,
+      "terminalBench": 40.5
+    },
     "contextWindow": "203K",
     "pricing": {
       "openrouter": {
@@ -6960,6 +8381,9 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
+        "evals.terminalBench",
         "multimodal",
         "name",
         "performance",
@@ -6972,6 +8396,18 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Terminal-Bench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
         }
       ]
     },
@@ -6991,7 +8427,13 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "gpqaDiamond": 79.9,
+      "liveCodeBench": 74.1,
+      "mmluPro": 85.0,
+      "reportedSweBenchVerified": 67.8,
+      "terminalBench": 37.7
+    },
     "contextWindow": "164K",
     "pricing": {
       "openrouter": {
@@ -7004,6 +8446,11 @@
       "checkedAt": "2026-05-18",
       "verifiedFields": [
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.liveCodeBench",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
+        "evals.terminalBench",
         "multimodal",
         "name",
         "performance",
@@ -7015,6 +8462,26 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval LiveCodeBench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Terminal-Bench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
         }
       ]
     },
