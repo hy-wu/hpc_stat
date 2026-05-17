@@ -18,6 +18,7 @@ from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
 from typing import Any, Iterable
+from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
@@ -61,6 +62,12 @@ RAW_SOURCE_URLS = {
     "llm_stats_rsc": "https://llm-stats.com/",
     # Chatbot Arena leaderboard (lmarena.ai) — embeds Elo ratings in Next.js RSC payload
     "lmarena_leaderboard": "https://lmarena.ai/leaderboard",
+    "aliyun_pricing": "https://help.aliyun.com/zh/model-studio/model-pricing",
+    "baidu_qianfan_pricing": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+    "tencent_hunyuan_pricing": "https://cloud.tencent.com.cn/document/product/1823/130055",
+    "zhipu_pricing": "https://open.bigmodel.cn/pricing",
+    "groq_pricing": "https://groq.com/pricing/",
+    "perplexity_pricing": "https://docs.perplexity.ai/getting-started/pricing",
 }
 
 # Arena model name → our model ID; covers cases where normalization alone is insufficient.
@@ -77,6 +84,26 @@ ARENA_ELO_ALIASES: dict[str, str] = {
 # Suffixes that indicate a special variant; Arena entries with these are used only as
 # fallback when no base-model entry matched the same model ID.
 _ARENA_VARIANT_SUFFIXES = ("-thinking", "-turbo", "-high", "-low", "-mini-high")
+
+# Known model parameter counts (total_B, active_B or None) for models whose size
+# is not encoded in their ID. All values are in billions.
+# Key = model short name (last segment after "/").
+KNOWN_PARAMS_OVERRIDE: dict[str, tuple[float, float | None]] = {
+    "llama-4-maverick": (400.0, 17.0),
+    "llama-4-scout": (109.0, 17.0),
+    "mistral-large-2512": (123.0, None),
+    "mistral-small-2603": (24.0, None),   # Mistral Small 3
+    "devstral-2512": (24.0, None),         # Devstral (Mistral Small 3 base)
+    "phi-4-mini-instruct": (3.8, None),    # Microsoft Phi-4 Mini
+    "reka-edge": (7.0, None),
+    "intellect-3": (32.0, None),
+    "deepseek-v3.2": (671.0, 37.0),
+    "deepseek-v3.2-speciale": (671.0, 37.0),
+    "deepseek-v3.2-exp": (671.0, 37.0),
+    "deepseek-v3.1-nex-n1": (671.0, 37.0),  # DeepSeek V3.1 derivative
+    "cogito-v2.1-671b": (671.0, 37.0),        # DeepSeek V3 architecture
+    "gpt-oss-safeguard-20b": (20.0, None),
+}
 
 ZEROEVAL_BENCHMARKS = {
     "gpqa": {
@@ -333,6 +360,31 @@ class ModelMatcher:
     explicit_alias_index: dict[str, str]
 
 
+def enrich_model_params(models: list[dict[str, Any]]) -> dict[str, int]:
+    """Directly set params/paramsActive on each model using name extraction + overrides.
+
+    Priority: KNOWN_PARAMS_OVERRIDE (hard-coded) > extract_params_from_id (regex).
+    Returns coverage counts: {"params": N, "paramsActive": M}.
+    """
+    counts = {"params": 0, "paramsActive": 0}
+    for model in models:
+        model_id = model.get("id", "")
+        short_name = model_id.split("/")[-1]
+
+        if short_name in KNOWN_PARAMS_OVERRIDE:
+            total_b, active_b = KNOWN_PARAMS_OVERRIDE[short_name]
+        else:
+            total_b, active_b = extract_params_from_id(model_id)
+
+        if total_b is not None:
+            model["params"] = total_b
+            counts["params"] += 1
+        if active_b is not None:
+            model["paramsActive"] = active_b
+            counts["paramsActive"] += 1
+    return counts
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Verify and enrich data/models.json")
     parser.add_argument("--write", action="store_true", help="write verified patches back to data/models.json")
@@ -387,6 +439,7 @@ def main() -> int:
             report["modelCount"] = len(models)
         patches.extend(extract_openrouter_prices(models, session, args, report))
         patches.extend(extract_official_prices(models, source_texts, session, args, report))
+        patches.extend(extract_platform_prices(models, session, args, report))
         patches.extend(extract_caisi_evals(source_texts))
         patches.extend(extract_zeroeval_benchmark_evals(models, session, args, report))
         patches.extend(extract_llm_stats_data(models, session, args, report))
@@ -404,6 +457,8 @@ def main() -> int:
 
     if args.write:
         apply_patches(models, merged_by_model)
+        params_coverage = enrich_model_params(models)
+        report["paramsCoverage"] = params_coverage
         MODELS_PATH.write_text(json.dumps(models, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         report["wrote"] = str(MODELS_PATH)
 
@@ -1044,6 +1099,409 @@ def price_patch(model_id: str, source_label: str, source_url: str, row: dict[str
         patch={"pricing": {"official": row}},
         evidence=[json.dumps(row, sort_keys=True)],
     )
+
+
+def platform_price_patch(
+    model_id: str,
+    provider_key: str,
+    source_label: str,
+    source_url: str,
+    row: dict[str, float],
+) -> ExtractedModel:
+    fields = [f"pricing.{provider_key}.{key}" for key in row]
+    return ExtractedModel(
+        model_id=model_id,
+        source_label=source_label,
+        source_url=source_url,
+        verified_fields=fields,
+        patch={"pricing": {provider_key: row}},
+        evidence=[json.dumps(row, sort_keys=True)],
+    )
+
+
+def fetch_optional_source_text(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+    key: str,
+    url: str,
+) -> SourceText | None:
+    try:
+        return SourceText(label=key, url=url, text=fetch_text(session, key, url, args))
+    except requests.RequestException as exc:
+        report.setdefault("sourceWarnings", []).append({"key": key, "url": url, "error": str(exc)})
+        return None
+
+
+def extract_money_value(value: str | None) -> float | None:
+    if not value:
+        return None
+    match = re.search(r"([0-9]+(?:\.[0-9]+)?)\s*(?:元|\$)", value.replace(",", ""))
+    if match:
+        return float(match.group(1))
+    return None
+
+
+def extract_plain_number(value: str | None) -> float | None:
+    if not value:
+        return None
+    match = re.fullmatch(r"\s*([0-9]+(?:\.[0-9]+)?)\s*", value.replace(",", ""))
+    if not match:
+        return None
+    return float(match.group(1))
+
+
+def extract_first_number(value: str | None) -> float | None:
+    if not value:
+        return None
+    match = re.search(r"([0-9]+(?:\.[0-9]+)?)", value.replace(",", ""))
+    if not match:
+        return None
+    return float(match.group(1))
+
+
+def extract_price_or_free(value: str | None) -> float | None:
+    """Like extract_first_number but returns 0.0 for non-empty fields with no number.
+
+    Handles garbled "免费" (free) text in JS bundles: when the field has content
+    but no numeric digits, it almost certainly means the price is 0 (free).
+    """
+    if value is None:
+        return None
+    match = re.search(r"([0-9]+(?:\.[0-9]+)?)", value.replace(",", ""))
+    if match:
+        return float(match.group(1))
+    # Non-empty text with no number → treat as free (0.0)
+    if re.search(r"[^\s\"\',\[\]]", value):
+        return 0.0
+    return None
+
+
+def extract_params_from_id(model_id: str) -> tuple[float | None, float | None]:
+    """Extract (total_B, active_B) from model ID by parsing size suffixes like '35b-a3b'.
+
+    Returns (None, None) if no numeric parameter size is encoded in the name.
+    active_B is only set when a MoE suffix like '-a3b' is present.
+    """
+    name = model_id.lower().split("/")[-1]
+    # MoE pattern: e.g., 35b-a3b, 120b-a12b, 26b-a4b
+    moe = re.search(r"[_\-](\d+(?:\.\d+)?)b[_\-]a(\d+(?:\.\d+)?)b(?:[_\-]|$)", name)
+    if moe:
+        return float(moe.group(1)), float(moe.group(2))
+    # Dense pattern: e.g., 8b, 671b, 3.8b (at a word boundary after separator)
+    dense = re.search(r"[_\-](\d+(?:\.\d+)?)b(?:[_\-]|$)", name)
+    if dense:
+        return float(dense.group(1)), None
+    return None, None
+
+
+def expand_html_table(table: BeautifulSoup) -> list[list[str]]:
+    rows: list[list[str]] = []
+    pending: dict[int, tuple[int, str]] = {}
+
+    for tr in table.find_all("tr"):
+        row: list[str] = []
+        col = 0
+
+        def consume_pending() -> None:
+            nonlocal col
+            while col in pending:
+                remaining, text = pending[col]
+                row.append(text)
+                if remaining <= 1:
+                    del pending[col]
+                else:
+                    pending[col] = (remaining - 1, text)
+                col += 1
+
+        consume_pending()
+        for cell in tr.find_all(["th", "td"]):
+            consume_pending()
+            text = re.sub(r"\s+", " ", cell.get_text(" ", strip=True)).strip()
+            rowspan = max(1, int(cell.get("rowspan", 1) or 1))
+            colspan = max(1, int(cell.get("colspan", 1) or 1))
+            for _ in range(colspan):
+                row.append(text)
+                if rowspan > 1:
+                    pending[col] = (rowspan - 1, text)
+                col += 1
+        consume_pending()
+        if any(row):
+            rows.append(row)
+
+    width = max((len(row) for row in rows), default=0)
+    return [row + [""] * (width - len(row)) for row in rows]
+
+
+def keep_min_prices(target: dict[str, float], values: dict[str, float | None]) -> None:
+    for key, value in values.items():
+        if value is None:
+            continue
+        current = target.get(key)
+        if current is None or value < current:
+            target[key] = value
+
+
+def extract_aliyun_model_name(value: str) -> str | None:
+    text = re.sub(r"\s+", " ", value).strip()
+    text = re.split(r"\s+(?:当前能力等同于|Batch|上下文缓存|限时|免费额度|说明|支持)", text, maxsplit=1)[0]
+    match = re.match(r"([A-Za-z0-9][A-Za-z0-9._/-]*(?:\s+[A-Za-z0-9][A-Za-z0-9._/-]*)?)", text)
+    if not match:
+        return None
+    candidate = match.group(1).strip()
+    if len(candidate) < 3 or candidate.lower() in {"model", "token"}:
+        return None
+    return candidate
+
+
+def extract_aliyun_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    source = fetch_optional_source_text(session, args, report, "aliyun_pricing", RAW_SOURCE_URLS["aliyun_pricing"])
+    if not source:
+        return {}
+    soup = BeautifulSoup(source.text, "html.parser")
+    prices: dict[str, dict[str, float]] = {}
+    for table in soup.find_all("table"):
+        rows = expand_html_table(table)
+        if len(rows) < 2:
+            continue
+        header = " ".join(rows[0])
+        if "输入单价" not in header or "输出单价" not in header:
+            continue
+        for row in rows[1:]:
+            model_name = extract_aliyun_model_name(row[0] if row else "")
+            if not model_name:
+                continue
+            money_values = [value for value in (extract_money_value(cell) for cell in row[1:]) if value is not None]
+            if len(money_values) < 2:
+                continue
+            keep_min_prices(prices.setdefault(model_name, {}), {"in": money_values[0], "out": money_values[-1]})
+    return prices
+
+
+def extract_tencent_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    source = fetch_optional_source_text(
+        session, args, report, "tencent_hunyuan_pricing", RAW_SOURCE_URLS["tencent_hunyuan_pricing"]
+    )
+    if not source:
+        return {}
+    soup = BeautifulSoup(source.text, "html.parser")
+    prices: dict[str, dict[str, float]] = {}
+    for table in soup.find_all("table"):
+        rows = [
+            [re.sub(r"\s+", " ", cell.get_text(" ", strip=True)).replace("\ufeff", "").strip() for cell in tr.find_all(["th", "td"])]
+            for tr in table.find_all("tr")
+        ]
+        if len(rows) < 2:
+            continue
+        header = " ".join(rows[0])
+        if "推理输入" not in header or "推理输出" not in header:
+            continue
+        current_model_name: str | None = None
+        for row in rows[1:]:
+            if len(row) < 5:
+                continue
+            model_name = re.sub(r"\s+", " ", row[0]).strip() or current_model_name
+            if not model_name or "模型名称" in model_name:
+                continue
+            current_model_name = model_name
+            keep_min_prices(
+                prices.setdefault(model_name, {}),
+                {
+                    "in": extract_plain_number(row[2]),
+                    "out": extract_plain_number(row[3]),
+                    "hit": extract_plain_number(row[4]),
+                },
+            )
+    return prices
+
+
+def extract_baidu_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    source = fetch_optional_source_text(
+        session, args, report, "baidu_qianfan_pricing", RAW_SOURCE_URLS["baidu_qianfan_pricing"]
+    )
+    if not source:
+        return {}
+    soup = BeautifulSoup(source.text, "html.parser")
+    prices: dict[str, dict[str, float]] = {}
+    for table in soup.find_all("table"):
+        rows = [
+            [re.sub(r"\s+", " ", cell.get_text(" ", strip=True)).replace("\ufeff", "").strip() for cell in tr.find_all(["th", "td"])]
+            for tr in table.find_all("tr")
+        ]
+        if len(rows) < 2:
+            continue
+        header = " ".join(rows[0]) + " " + " ".join(rows[1] if len(rows) > 1 else [])
+        if "在线推理" not in header or "元/千tokens" not in header:
+            continue
+        current_model_name: str | None = None
+        for row in rows[1:]:
+            if not row:
+                continue
+            if len(row) >= 9:
+                current_model_name = re.sub(r"\s+", " ", row[0]).strip()
+                sub_name = re.sub(r"\s+", " ", row[3]).strip()
+                online_price = extract_plain_number(row[4])
+                model_name = current_model_name
+            elif current_model_name and len(row) >= 5:
+                model_name = current_model_name
+                sub_name = re.sub(r"\s+", " ", row[0]).strip()
+                online_price = extract_plain_number(row[1])
+            else:
+                continue
+            if not model_name or not sub_name or online_price is None:
+                continue
+            value = online_price * 1000
+            model_prices = prices.setdefault(model_name, {})
+            if "输入" in sub_name:
+                keep_min_prices(model_prices, {"in": value})
+            elif "输出" in sub_name:
+                keep_min_prices(model_prices, {"out": value})
+            elif "缓存命中" in sub_name:
+                keep_min_prices(model_prices, {"hit": value})
+    return prices
+
+
+def extract_zhipu_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    page = fetch_optional_source_text(session, args, report, "zhipu_pricing", RAW_SOURCE_URLS["zhipu_pricing"])
+    if not page:
+        return {}
+    bundle_match = re.search(r"/js/app\.[a-z0-9]+\.js", page.text)
+    if not bundle_match:
+        report.setdefault("sourceWarnings", []).append(
+            {"key": "zhipu_pricing", "url": RAW_SOURCE_URLS["zhipu_pricing"], "error": "bundle not found"}
+        )
+        return {}
+    bundle_url = urljoin(RAW_SOURCE_URLS["zhipu_pricing"], bundle_match.group(0))
+    bundle = fetch_optional_source_text(session, args, report, "zhipu_pricing_bundle", bundle_url)
+    if not bundle:
+        return {}
+    prices: dict[str, dict[str, float]] = {}
+    pattern = re.compile(
+        r'name:"(?P<name>[^"]+)"[^{}]{0,800}?inPrice:\[(?P<in>[^\]]*)\][^{}]{0,400}?outPrice:\[(?P<out>[^\]]*)\](?:[^{}]{0,400}?hit:\[(?P<hit>[^\]]*)\])?',
+        re.S,
+    )
+    for match in pattern.finditer(bundle.text):
+        model_name = match.group("name").strip()
+        keep_min_prices(
+            prices.setdefault(model_name, {}),
+            {
+                "in": extract_price_or_free(match.group("in")),
+                "out": extract_price_or_free(match.group("out")),
+                "hit": extract_first_number(match.group("hit")),  # cache-hit is never free
+            },
+        )
+    return prices
+
+
+def simplify_groq_model_name(value: str) -> str:
+    value = re.sub(r"\s+\([^)]*\)", "", value)
+    value = re.sub(r"\s+\d+k\b", "", value, flags=re.I)
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def extract_groq_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    source = fetch_optional_source_text(session, args, report, "groq_pricing", RAW_SOURCE_URLS["groq_pricing"])
+    if not source:
+        return {}
+    text = html_to_text(source.text)
+    prices: dict[str, dict[str, float]] = {}
+    pattern = re.compile(
+        r"(?P<name>.+?)\s+Current Speed\s+[0-9,]+\s+TPS\s+Input Token Price \(Per Million Tokens\)\s+\$(?P<in>[0-9.]+).*?Output Token Price \(Per Million Tokens\)\s+\$(?P<out>[0-9.]+)",
+        re.S,
+    )
+    for part in text.split("AI Model ")[1:]:
+        match = pattern.search(part)
+        if not match:
+            continue
+        model_name = simplify_groq_model_name(match.group("name"))
+        keep_min_prices(
+            prices.setdefault(model_name, {}),
+            {"in": float(match.group("in")), "out": float(match.group("out"))},
+        )
+    return prices
+
+
+def extract_perplexity_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    source = fetch_optional_source_text(
+        session, args, report, "perplexity_pricing", RAW_SOURCE_URLS["perplexity_pricing"]
+    )
+    if not source:
+        return {}
+    text = html_to_text(source.text)
+    token_pricing_start = text.find("Token Pricing")
+    token_pricing_end = text.find("Request Pricing by Search Context Size")
+    if token_pricing_start >= 0 and token_pricing_end > token_pricing_start:
+        text = text[token_pricing_start:token_pricing_end]
+    prices: dict[str, dict[str, float]] = {}
+    pattern = re.compile(r"(Sonar(?: Pro| Reasoning Pro| Deep Research)?)\s+\$(\d+(?:\.\d+)?)\s+\$(\d+(?:\.\d+)?)")
+    for match in pattern.finditer(text):
+        model_name = match.group(1).strip()
+        keep_min_prices(
+            prices.setdefault(model_name, {}),
+            {"in": float(match.group(2)), "out": float(match.group(3))},
+        )
+    return prices
+
+
+def extract_platform_prices(
+    models: list[dict[str, Any]],
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> list[ExtractedModel]:
+    matcher = build_model_matcher(models)
+    providers = [
+        ("aliyun", "阿里云 Model Studio 定价", RAW_SOURCE_URLS["aliyun_pricing"], extract_aliyun_prices),
+        ("tencent", "腾讯混元定价", RAW_SOURCE_URLS["tencent_hunyuan_pricing"], extract_tencent_prices),
+        ("baidu", "百度千帆大模型定价", RAW_SOURCE_URLS["baidu_qianfan_pricing"], extract_baidu_prices),
+        ("zhipu", "智谱开放平台定价", RAW_SOURCE_URLS["zhipu_pricing"], extract_zhipu_prices),
+        ("groq", "Groq pricing", RAW_SOURCE_URLS["groq_pricing"], extract_groq_prices),
+        ("perplexity", "Perplexity pricing", RAW_SOURCE_URLS["perplexity_pricing"], extract_perplexity_prices),
+    ]
+    patches: list[ExtractedModel] = []
+    coverage: dict[str, Any] = {}
+    for provider_key, source_label, source_url, extractor in providers:
+        rows = extractor(session, args, report)
+        matched = 0
+        unmatched: list[str] = []
+        for external_name, row in rows.items():
+            model_id = match_external_model(matcher, external_name, external_name)
+            if not model_id:
+                unmatched.append(external_name)
+                continue
+            matched += 1
+            patches.append(platform_price_patch(model_id, provider_key, source_label, source_url, row))
+        coverage[provider_key] = {
+            "sourceRows": len(rows),
+            "matchedModels": matched,
+            "unmatchedExamples": unmatched[:10],
+        }
+    report["platformPricing"] = coverage
+    return patches
 
 
 def extract_caisi_evals(sources: dict[str, SourceText]) -> list[ExtractedModel]:
