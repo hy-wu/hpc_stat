@@ -32,10 +32,13 @@ body {
 }
 
 button,
-input,
 select,
 textarea {
   font: inherit;
+}
+
+input {
+  font-size: small;
 }
 
 button {
@@ -73,8 +76,8 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(26px, 4vw, 38px);
-  line-height: 1.05;
+  font-size: clamp(20px, 3vw, 28px);
+  line-height: 1.1;
 }
 
 h2 {
@@ -103,6 +106,10 @@ h2 {
   font-weight: 700;
 }
 
+.ghost-button {
+  min-height: 24px;
+}
+
 .primary-button {
   background: var(--accent);
   border-color: var(--accent);
@@ -128,9 +135,9 @@ h2 {
 }
 
 .workspace {
-  padding: 22px 32px 36px;
+  padding: 16px 32px 36px;
   display: grid;
-  gap: 18px;
+  gap: 12px;
 }
 
 .workspace > * {
@@ -149,15 +156,15 @@ h2 {
 .control-band {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
   align-items: end;
-  padding: 16px;
+  padding: 10px 14px;
 }
 
 .control,
 .search-block {
   display: grid;
-  gap: 6px;
+  gap: 3px;
   min-width: 0;
 }
 
@@ -187,7 +194,7 @@ textarea {
   border-radius: 8px;
   background: #fff;
   color: var(--ink);
-  min-height: 38px;
+  min-height: 28px;
   padding: 8px 10px;
 }
 
@@ -201,12 +208,12 @@ textarea:focus {
 .insight-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  gap: 1rem;
 }
 
 .metric {
-  min-height: 86px;
-  padding: 14px 16px;
+  min-height: 40px;
+  padding: 8px 14px;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -215,19 +222,19 @@ textarea:focus {
 .metric span {
   display: block;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
 }
 
 .metric strong {
   display: block;
-  margin-top: 8px;
-  font-size: 24px;
+  margin-top: 4px;
+  font-size: 18px;
 }
 
 .filters-panel,
 .table-panel {
-  padding: 16px;
+  padding: 10px 14px;
 }
 
 .panel-head {
@@ -235,7 +242,7 @@ textarea:focus {
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .rules {
@@ -261,9 +268,9 @@ textarea:focus {
 
 .column-picker {
   display: grid;
-  gap: 12px;
-  padding: 12px;
-  margin-bottom: 12px;
+  gap: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
   background: #f9fbfb;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -316,14 +323,15 @@ textarea:focus {
 .column-option {
   display: flex;
   align-items: center;
-  gap: 8px;
-  min-height: 42px;
-  padding: 10px 12px;
+  gap: 6px;
+  min-height: 30px;
+  padding: 4px 10px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 6px;
   background: #fff;
   color: var(--ink);
   font-weight: 650;
+  font-size: 12px;
   transition:
     border-color 0.18s ease,
     background 0.18s ease,
@@ -383,12 +391,29 @@ td {
 th {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   background: #eef5f6;
   color: #26363d;
   font-size: 12px;
   font-weight: 850;
   white-space: normal;
+}
+
+th:first-child {
+  left: 0;
+  z-index: 3;
+}
+
+td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: var(--panel);
+  box-shadow: 2px 0 4px rgba(0,0,0,0.06);
+}
+
+tbody tr:hover td:first-child {
+  background: #f7fbfb;
 }
 
 th button {
@@ -421,6 +446,16 @@ tbody tr:hover {
   font-weight: 800;
 }
 
+.verified-cell {
+  font-weight: 800;
+}
+
+.unverified-cell {
+  color: var(--muted);
+  font-weight: 500;
+  opacity: 0.72;
+}
+
 .tag {
   display: inline-flex;
   align-items: center;
@@ -447,13 +482,94 @@ tbody tr:hover {
   color: var(--warn);
 }
 
+.source-icon {
+  text-decoration: none;
+  font-size: 10px;
+  margin-left: 4px;
+  opacity: 0.6;
+}
+
+.source-icon:hover {
+  opacity: 1;
+}
+
+.column-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 6px;
+}
 .fresh {
   color: var(--good);
 }
 
+.compact {
+  font-size: 11px;
+}
+
 .compact th,
 .compact td {
-  padding: 6px 9px;
+  padding: 4px 6px;
+}
+
+.compact .heatmap-container.mini {
+  height: 18px;
+  min-width: 80px;
+}
+
+.compact .tag {
+  font-size: 10px;
+  min-height: 18px;
+  padding: 0 6px;
+}
+
+/* Pricing Grid Styles */
+.price-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.p-in, .p-out {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.p-in { color: var(--accent-strong); }
+.p-out { color: var(--ink); }
+
+.platform-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.p-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 2px;
+}
+
+.p-name {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.p-price {
+  font-family: monospace;
+}
+
+.tag.multimodal {
+  background: #f0f4ff;
+  color: #3b82f6;
+  border: 1px solid #dbeafe;
+}
+
+.tag.unverified-cell {
+  background: #eef2f3;
+  color: var(--muted);
+  border-color: var(--line);
 }
 
 dialog {
@@ -517,25 +633,59 @@ textarea {
   }
 }
 
-@media (max-width: 620px) {
-  .control-band,
-  .insight-grid {
-    grid-template-columns: 1fr;
-  }
+.nav-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
 
-  .actions,
-  .table-tools,
-  .dialog-actions {
-    width: 100%;
-  }
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 16px;
+  text-decoration: none;
+  color: var(--muted);
+  border-bottom: 2px solid transparent;
+  font-size: 14px;
+  font-weight: 800;
+  transition: all 0.2s;
+}
 
-  .actions button,
-  .dialog-actions button {
-    flex: 1;
-  }
+.nav-link:hover {
+  color: var(--accent);
+}
 
-  .column-picker-tools,
-  .column-picker-tools button {
-    width: 100%;
-  }
+.heatmap-container,
+.price-bar-container {
+  position: relative;
+  width: 100%;
+  min-width: 120px;
+  height: 24px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.heatmap-bar,
+.price-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 0;
+  transition: width 0.3s ease;
+}
+
+.heatmap-value,
+.price-value {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  color: #000;
+  text-shadow: 0 0 2px rgba(255,255,255,0.8);
 }
