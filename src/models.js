@@ -6,6 +6,9 @@ const fieldDefs = [
   { key: "arenaElo", label: "Arena Elo", type: "number", visible: true, heatmap: true },
   { key: "mmlu", label: "MMLU", type: "number", visible: true, heatmap: true },
   { key: "humanEval", label: "HumanEval", type: "number", visible: true, heatmap: true },
+  { key: "gsm8k", label: "GSM8K", type: "number", visible: true, heatmap: true },
+  { key: "gpqa", label: "GPQA", type: "number", visible: true, heatmap: true },
+  { key: "math", label: "MATH", type: "number", visible: true, heatmap: true },
   { key: "contextWindow", label: "上下文", type: "text", visible: true },
   // Copilot Pricing
   { key: "pricing.copilot.in", label: "Copilot In ($/1M)", type: "number", visible: true, heatmap: true, inverseHeatmap: true },

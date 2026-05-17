@@ -9,6 +9,9 @@
     "arenaElo": 1245,
     "mmlu": 82.5,
     "humanEval": 78.2,
+    "gsm8k": 85.1,
+    "gpqa": 42.1,
+    "math": 68.5,
     "contextWindow": "200K",
     "pricing": {
       "copilot": {"in": 1.0, "out": 5.0},
@@ -28,6 +31,9 @@
     "arenaElo": 1385,
     "mmlu": 94.8,
     "humanEval": 92.5,
+    "gsm8k": 97.2,
+    "gpqa": 78.5,
+    "math": 94.2,
     "contextWindow": "1M",
     "pricing": {
       "copilot": {"in": 45.0, "out": 225.0},
@@ -47,6 +53,9 @@
     "arenaElo": 1280,
     "mmlu": 88.0,
     "humanEval": 86.5,
+    "gsm8k": 90.2,
+    "gpqa": 52.4,
+    "math": 78.9,
     "contextWindow": "500K",
     "pricing": {
       "copilot": {"in": 3.0, "out": 15.0},
@@ -66,6 +75,9 @@
     "arenaElo": 1315,
     "mmlu": 89.2,
     "humanEval": 88.5,
+    "gsm8k": 92.0,
+    "gpqa": 58.2,
+    "math": 84.5,
     "contextWindow": "1M",
     "pricing": {
       "copilot": {"in": 3.0, "out": 15.0},
@@ -85,6 +97,9 @@
     "arenaElo": 1210,
     "mmlu": 81.0,
     "humanEval": 75.0,
+    "gsm8k": 82.0,
+    "gpqa": 35.5,
+    "math": 62.0,
     "contextWindow": "128K",
     "pricing": {
       "copilot": {"in": 0.0, "out": 0.0},
@@ -104,6 +119,9 @@
     "arenaElo": 1235,
     "mmlu": 83.2,
     "humanEval": 80.5,
+    "gsm8k": 85.0,
+    "gpqa": 40.2,
+    "math": 70.5,
     "contextWindow": "128K",
     "pricing": {
       "copilot": {"in": 0.0, "out": 0.0},
@@ -123,6 +141,9 @@
     "arenaElo": 1275,
     "mmlu": 87.5,
     "humanEval": 85.2,
+    "gsm8k": 89.8,
+    "gpqa": 50.1,
+    "math": 76.2,
     "contextWindow": "200K",
     "pricing": {
       "copilot": {"in": 3.0, "out": 15.0},
@@ -142,6 +163,9 @@
     "arenaElo": 1260,
     "mmlu": 84.5,
     "humanEval": 92.0,
+    "gsm8k": 86.5,
+    "gpqa": 45.8,
+    "math": 82.1,
     "contextWindow": "200K",
     "pricing": {
       "copilot": {"in": 3.0, "out": 15.0},
@@ -161,6 +185,9 @@
     "arenaElo": 1295,
     "mmlu": 86.0,
     "humanEval": 94.2,
+    "gsm8k": 88.5,
+    "gpqa": 48.2,
+    "math": 88.4,
     "contextWindow": "400K",
     "pricing": {
       "copilot": {"in": 3.0, "out": 15.0},
@@ -180,6 +207,9 @@
     "arenaElo": 1330,
     "mmlu": 91.5,
     "humanEval": 89.0,
+    "gsm8k": 94.0,
+    "gpqa": 64.5,
+    "math": 86.5,
     "contextWindow": "512K",
     "pricing": {
       "copilot": {"in": 3.0, "out": 15.0},
@@ -199,6 +229,9 @@
     "arenaElo": 1255,
     "mmlu": 84.5,
     "humanEval": 82.0,
+    "gsm8k": 87.0,
+    "gpqa": 43.4,
+    "math": 72.8,
     "contextWindow": "128K",
     "pricing": {
       "copilot": {"in": 1.0, "out": 5.0},
@@ -218,6 +251,9 @@
     "arenaElo": 1365,
     "mmlu": 93.5,
     "humanEval": 91.0,
+    "gsm8k": 96.5,
+    "gpqa": 72.8,
+    "math": 92.1,
     "contextWindow": "1M",
     "pricing": {
       "copilot": {"in": 22.5, "out": 112.5},
