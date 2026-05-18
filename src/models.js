@@ -1,6 +1,7 @@
 let fieldDefs = [];
 let vendorLinks = {};
 let defaultVisibleColumns = new Set();
+const sortCollator = new Intl.Collator("zh-Hans-CN", { numeric: true, sensitivity: "base" });
 
 const state = {
   models: [],
@@ -19,6 +20,7 @@ const elements = {
   compactToggleButton: document.querySelector("#compactToggleButton"),
   columnPicker: document.querySelector("#columnPicker"),
   toggleColumnsButton: document.querySelector("#toggleColumnsButton"),
+  exportCsvButton: document.querySelector("#exportCsvButton"),
   visibleCount: document.querySelector("#visibleCount"),
   bestElo: document.querySelector("#bestElo"),
   bestHumanEval: document.querySelector("#bestHumanEval"),
@@ -70,6 +72,10 @@ function bindEvents() {
     elements.columnPicker.hidden = !elements.columnPicker.hidden;
   });
 
+  if (elements.exportCsvButton) {
+    elements.exportCsvButton.addEventListener("click", exportCsv);
+  }
+
   elements.columnPicker.addEventListener("click", (e) => {
     const action = e.target.closest("[data-column-action]")?.dataset.columnAction;
     if (!action) return;
@@ -94,8 +100,8 @@ function renderColumnPicker() {
   elements.columnPicker.innerHTML = `
     <div class="column-picker-head">
       <div>
-        <p class="column-picker-title">显示列</p>
-        <p class="column-picker-meta">已选 ${selectedCount} / ${fieldDefs.length}</p>
+        <span class="column-picker-title">显示列</span>
+        <span class="column-picker-meta">已选 ${selectedCount} / ${fieldDefs.length}</span>
       </div>
       <div class="column-picker-tools">
         <button class="ghost-button" type="button" data-column-action="select-all">全选</button>
@@ -114,24 +120,83 @@ function renderColumnPicker() {
 }
 
 function render() {
+  const sortFieldDef = fieldDefs.find(f => f.key === state.sortField);
   const filtered = state.models
     .filter(m => 
       !state.globalSearch || 
       Object.values(m).some(v => String(v).toLowerCase().includes(state.globalSearch))
     )
-    .sort((a, b) => {
-      const va = getNestedValue(a, state.sortField);
-      const vb = getNestedValue(b, state.sortField);
-      const res = (va < vb ? -1 : va > vb ? 1 : 0);
-      return state.sortDirection === "asc" ? res : -res;
-    });
+    .sort((a, b) => compareRows(a, b, state.sortField, state.sortDirection, sortFieldDef));
 
   renderSummary(filtered);
   renderTable(filtered);
 }
 
 function getNestedValue(obj, path) {
-  return path.split('.').reduce((acc, part) => acc && acc[part], obj);
+  return path.split('.').reduce((acc, part) => acc == null ? undefined : acc[part], obj);
+}
+
+function compareRows(a, b, sortField, sortDirection, fieldDef) {
+  const va = getSortValue(getNestedValue(a, sortField), fieldDef);
+  const vb = getSortValue(getNestedValue(b, sortField), fieldDef);
+  const aMissing = va.missing;
+  const bMissing = vb.missing;
+
+  if (aMissing || bMissing) {
+    if (aMissing !== bMissing) return aMissing ? 1 : -1;
+    return compareTieBreakers(a, b);
+  }
+
+  const res = compareSortValues(va, vb);
+  if (res !== 0) return sortDirection === "asc" ? res : -res;
+  return compareTieBreakers(a, b);
+}
+
+function getSortValue(value, fieldDef) {
+  if (value === null || value === undefined || value === "" || (typeof value === "number" && Number.isNaN(value))) {
+    return { missing: true, kind: "missing", value: null };
+  }
+
+  if (fieldDef?.type === "number") {
+    const numeric = Number(value);
+    return Number.isFinite(numeric)
+      ? { missing: false, kind: "number", value: numeric }
+      : { missing: false, kind: "text", value: String(value) };
+  }
+
+  if (fieldDef?.key === "contextWindow") {
+    const tokens = String(value).trim().match(/^(\d+(?:\.\d+)?)([KMB])?$/i);
+    if (tokens) {
+      const multiplier = { K: 1_000, M: 1_000_000, B: 1_000_000_000 }[tokens[2]?.toUpperCase()] || 1;
+      return { missing: false, kind: "number", value: Number(tokens[1]) * multiplier };
+    }
+  }
+
+  if (typeof value === "boolean") {
+    return { missing: false, kind: "number", value: Number(value) };
+  }
+
+  if (typeof value === "number") {
+    return { missing: false, kind: "number", value };
+  }
+
+  return { missing: false, kind: "text", value: String(value) };
+}
+
+function compareSortValues(a, b) {
+  if (a.kind === "number" && b.kind === "number") {
+    return a.value - b.value;
+  }
+
+  if (a.kind !== b.kind) {
+    return a.kind === "number" ? -1 : 1;
+  }
+
+  return sortCollator.compare(String(a.value), String(b.value));
+}
+
+function compareTieBreakers(a, b) {
+  return sortCollator.compare(String(a.name || a.id || ""), String(b.name || b.id || ""));
 }
 
 function renderSummary(rows) {
@@ -233,6 +298,37 @@ function getSourceTitle(row) {
 function getHeatmapColor(percent) {
   if (percent < 50) return `rgba(255, ${Math.floor(255 * (percent / 50))}, 0, 0.2)`;
   return `rgba(${Math.floor(255 * (1 - (percent - 50) / 50))}, 255, 0, 0.2)`;
+}
+
+function exportCsv() {
+  const activeFields = fieldDefs.filter(f => state.visibleColumns.has(f.key));
+  const sortFieldDef = fieldDefs.find(f => f.key === state.sortField);
+  const rows = state.models
+    .filter(m =>
+      !state.globalSearch ||
+      Object.values(m).some(v => String(v).toLowerCase().includes(state.globalSearch))
+    )
+    .sort((a, b) => compareRows(a, b, state.sortField, state.sortDirection, sortFieldDef));
+
+  const escape = v => {
+    const s = v === null || v === undefined ? "" : String(v);
+    return s.includes(",") || s.includes('"') || s.includes("\n")
+      ? `"${s.replace(/"/g, '""')}"`
+      : s;
+  };
+
+  const header = activeFields.map(f => escape(f.label)).join(",");
+  const body = rows.map(r =>
+    activeFields.map(f => escape(getNestedValue(r, f.key))).join(",")
+  ).join("\n");
+
+  const blob = new Blob(["\uFEFF" + header + "\n" + body], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `llm-models-${new Date().toISOString().slice(0, 10)}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
 }
 
 init();

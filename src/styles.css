@@ -32,16 +32,20 @@ body {
 }
 
 button,
-input,
 select,
 textarea {
   font: inherit;
+}
+
+input {
+  font-size: small;
 }
 
 button {
   cursor: pointer;
 }
 
+/* ---- Topbar: single row with brand | nav | actions ---- */
 .app-shell {
   min-height: 100vh;
   overflow-x: hidden;
@@ -50,20 +54,26 @@ button {
 .topbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 28px 32px 20px;
+  gap: 20px;
+  padding: 8px 24px;
   border-bottom: 1px solid var(--line);
   background: #fbfcfc;
 }
 
+.topbar-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
 .eyebrow {
-  margin: 0 0 4px;
+  margin: 0;
   color: var(--accent);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 h1,
@@ -73,12 +83,13 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(20px, 3vw, 28px);
-  line-height: 1.1;
+  font-size: 17px;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 h2 {
-  font-size: 17px;
+  font-size: 14px;
 }
 
 .actions,
@@ -86,21 +97,51 @@ h2 {
 .dialog-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
+  margin-left: auto;
 }
+
+/* Nav tabs inline in topbar */
+.nav-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: var(--muted);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.15s;
+}
+
+.nav-link:hover { color: var(--accent); background: var(--accent-soft); }
+.nav-link.active { color: var(--accent-strong); background: var(--accent-soft); }
 
 .primary-button,
 .ghost-button,
 .icon-button,
 .text-button {
-  min-height: 38px;
-  border-radius: 8px;
+  min-height: 28px;
+  border-radius: 6px;
   border: 1px solid var(--line);
   background: var(--panel);
   color: var(--ink);
-  padding: 0 14px;
+  padding: 0 10px;
+  font-size: 12px;
   font-weight: 700;
+}
+
+.ghost-button {
+  min-height: 24px;
 }
 
 .primary-button {
@@ -128,17 +169,29 @@ h2 {
 }
 
 .workspace {
-  padding: 22px 32px 36px;
+  padding: 8px 24px 20px;
   display: grid;
-  gap: 18px;
+  gap: 8px;
 }
 
 .workspace > * {
   min-width: 0;
 }
 
-.control-band,
-.filters-panel,
+/* Unified filter card: wraps control-band + insight-grid + filters-panel-inner */
+.filter-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 0;
+}
+
+.filter-card > * + * {
+  border-top: 1px solid var(--line);
+}
+
 .table-panel {
   background: var(--panel);
   border: 1px solid var(--line);
@@ -149,34 +202,35 @@ h2 {
 .control-band {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 6px;
   align-items: end;
-  padding: 16px;
+  padding: 8px 12px;
 }
 
 .control,
 .search-block {
   display: grid;
-  gap: 6px;
+  gap: 2px;
   min-width: 0;
 }
 
 .search-block {
-  flex: 2 1 380px;
+  flex: 2 1 320px;
 }
 
 .control {
-  flex: 1 1 170px;
+  flex: 1 1 120px;
 }
 
 .control-band > button {
   flex: 0 0 auto;
+  align-self: end;
 }
 
 label {
   color: var(--muted);
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 11px;
+  font-weight: 700;
 }
 
 input,
@@ -184,11 +238,12 @@ select,
 textarea {
   width: 100%;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 6px;
   background: #fff;
   color: var(--ink);
-  min-height: 38px;
-  padding: 8px 10px;
+  min-height: 26px;
+  padding: 3px 8px;
+  font-size: 13px;
 }
 
 input:focus,
@@ -198,44 +253,50 @@ textarea:focus {
   border-color: var(--accent);
 }
 
+/* Stats bar inside filter card */
 .insight-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  gap: 0;
 }
 
 .metric {
-  min-height: 86px;
-  padding: 14px 16px;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 8px;
+  padding: 5px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.metric + .metric {
+  border-left: 1px solid var(--line);
 }
 
 .metric span {
-  display: block;
   color: var(--muted);
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .metric strong {
-  display: block;
-  margin-top: 8px;
-  font-size: 24px;
+  font-size: 14px;
 }
 
-.filters-panel,
+/* Filters section inside filter card */
+.filters-panel-inner {
+  padding: 6px 12px;
+}
+
 .table-panel {
-  padding: 16px;
+  padding: 8px 12px;
 }
 
 .panel-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
-  margin-bottom: 14px;
+  gap: 10px;
+  margin-bottom: 6px;
 }
 
 .rules {
@@ -246,9 +307,9 @@ textarea:focus {
 .rule {
   display: grid;
   grid-template-columns: minmax(180px, 1fr) minmax(140px, 0.65fr) minmax(160px, 1fr) auto;
-  gap: 10px;
+  gap: 6px;
   align-items: end;
-  padding: 10px;
+  padding: 0px 12px 6px 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #f9fbfb;
@@ -261,9 +322,9 @@ textarea:focus {
 
 .column-picker {
   display: grid;
-  gap: 12px;
-  padding: 12px;
-  margin-bottom: 12px;
+  gap: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
   background: #f9fbfb;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -316,14 +377,15 @@ textarea:focus {
 .column-option {
   display: flex;
   align-items: center;
-  gap: 8px;
-  min-height: 42px;
-  padding: 10px 12px;
+  gap: 6px;
+  min-height: 30px;
+  padding: 4px 10px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 6px;
   background: #fff;
   color: var(--ink);
   font-weight: 650;
+  font-size: 12px;
   transition:
     border-color 0.18s ease,
     background 0.18s ease,
@@ -383,12 +445,29 @@ td {
 th {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   background: #eef5f6;
   color: #26363d;
   font-size: 12px;
   font-weight: 850;
   white-space: normal;
+}
+
+th:first-child {
+  left: 0;
+  z-index: 3;
+}
+
+td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: var(--panel);
+  box-shadow: 2px 0 4px rgba(0,0,0,0.06);
+}
+
+tbody tr:hover td:first-child {
+  background: #f7fbfb;
 }
 
 th button {
@@ -470,8 +549,8 @@ tbody tr:hover {
 
 .column-picker-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 6px;
 }
 .fresh {
   color: var(--good);
@@ -590,13 +669,15 @@ textarea {
 
 @media (max-width: 980px) {
   .topbar {
-    align-items: flex-start;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
   }
+
+  .topbar .actions { margin-left: 0; }
 
   .workspace,
   .topbar {
-    padding-inline: 18px;
+    padding-inline: 12px;
   }
 
   .insight-grid {
@@ -606,30 +687,6 @@ textarea {
   .rule {
     grid-template-columns: 1fr;
   }
-}
-
-.nav-tabs {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 8px;
-  border-bottom: 1px solid var(--line);
-}
-
-.nav-link {
-  display: inline-flex;
-  align-items: center;
-  min-height: 42px;
-  padding: 0 16px;
-  text-decoration: none;
-  color: var(--muted);
-  border-bottom: 2px solid transparent;
-  font-size: 14px;
-  font-weight: 800;
-  transition: all 0.2s;
-}
-
-.nav-link:hover {
-  color: var(--accent);
 }
 
 .heatmap-container,
@@ -664,3 +721,57 @@ textarea {
   color: #000;
   text-shadow: 0 0 2px rgba(255,255,255,0.8);
 }
+
+/* ============================================================
+   Colored tags: vendor / segment / acceleratorType / architecture
+   ============================================================ */
+
+/* -- Vendor tags: logo + text -- */
+.tag.vendor-tag { gap: 5px; padding-left: 5px; }
+.vendor-logo { width: 1em; height: 1em; vertical-align: middle; flex-shrink: 0; object-fit: contain; }
+.tag.vendor-nvidia  { background: #e6f4d7; color: #2d6a00; }
+.tag.vendor-amd     { background: #fde8e8; color: #9b0000; }
+.tag.vendor-intel   { background: #ddeeff; color: #003d8f; }
+.tag.vendor-google  { background: #e8eeff; color: #1a3a9c; }
+.tag.vendor-apple   { background: #ebebeb; color: #1a1a1a; }
+.tag.vendor-huawei  { background: #fde8ee; color: #8b0021; }
+
+/* -- Segment tags -- */
+.tag.seg-data-center       { background: #dbeafe; color: #1d4ed8; }
+.tag.seg-cloud-accelerator { background: #e0e7ff; color: #3730a3; }
+.tag.seg-workstation       { background: #ede9fe; color: #5b21b6; }
+.tag.seg-desktop           { background: #d1fae5; color: #065f46; }
+.tag.seg-integrated        { background: #cffafe; color: #164e63; }
+.tag.seg-inference         { background: #dcfce7; color: #14532d; }
+.tag.seg-fpga              { background: #ffedd5; color: #9a3412; }
+.tag.seg-mining            { background: #f3f4f6; color: #374151; }
+.tag.seg-many-core-cpu     { background: #fef9c3; color: #713f12; }
+
+/* -- Accelerator type tags -- */
+.tag.type-gpu           { background: #d1fae5; color: #065f46; }
+.tag.type-tpu           { background: #dbeafe; color: #1d4ed8; }
+.tag.type-npu           { background: #fde8ee; color: #8b0021; }
+.tag.type-fpga          { background: #ffedd5; color: #9a3412; }
+.tag.type-many-core-cpu { background: #fef9c3; color: #713f12; }
+
+/* -- Architecture tags -- */
+.tag.arch-blackwell { background: #d1fae5; color: #064e3b; }
+.tag.arch-ada       { background: #ccfbf1; color: #134e4a; }
+.tag.arch-hopper    { background: #ede9fe; color: #4c1d95; }
+.tag.arch-ampere    { background: #dbeafe; color: #1e3a8a; }
+.tag.arch-turing    { background: #e0f2fe; color: #0c4a6e; }
+.tag.arch-volta     { background: #f1f5f9; color: #334155; }
+.tag.arch-pascal    { background: #f1f5f9; color: #334155; }
+.tag.arch-rdna4     { background: #fee2e2; color: #7f1d1d; }
+.tag.arch-rdna3     { background: #fecaca; color: #7f1d1d; }
+.tag.arch-rdna2     { background: #fee2e2; color: #7f1d1d; }
+.tag.arch-gcn       { background: #fde8e8; color: #7f1d1d; }
+.tag.arch-cdna      { background: #fce7f3; color: #831843; }
+.tag.arch-tpu-chip  { background: #dbeafe; color: #1d4ed8; }
+.tag.arch-ascend    { background: #fde8ee; color: #8b0021; }
+.tag.arch-kni       { background: #ddeeff; color: #003d8f; }
+.tag.arch-xe2       { background: #e0f2fe; color: #075985; }
+.tag.arch-xe        { background: #ddeeff; color: #003d8f; }
+.tag.arch-versal    { background: #ede9fe; color: #5b21b6; }
+.tag.arch-stratix   { background: #ddeeff; color: #003d8f; }
+.tag.arch-apple-gpu { background: #f5f5f5; color: #1a1a1a; }

@@ -18,6 +18,7 @@ from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
 from typing import Any, Iterable
+from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
@@ -28,6 +29,11 @@ ROOT = Path(__file__).resolve().parents[1]
 MODELS_PATH = ROOT / "data" / "models.json"
 MODEL_OVERRIDES_PATH = ROOT / "data" / "model-overrides.json"
 MODEL_FIELDS_PATH = ROOT / "data" / "model-fields.json"
+MODEL_ALIASES_PATH = ROOT / "data" / "model-aliases.json"
+SIDEBAR_DATA_DIR = ROOT / "data" / "byGeminiSidebar"
+SIDEBAR_GPQA_PATH = SIDEBAR_DATA_DIR / "GPQAselfReported.md"
+SIDEBAR_LLM_STATS_PATH = SIDEBAR_DATA_DIR / "llmStat.md"
+SIDEBAR_SILICONFLOW_PATH = SIDEBAR_DATA_DIR / "硅基流动.md"
 MODELS_HTML_PATH = ROOT / "models.html"
 MODELS_JS_PATH = ROOT / "src" / "models.js"
 REFERENCE_PATH = ROOT / "REFERENCE_SOURCES.md"
@@ -53,6 +59,51 @@ RAW_SOURCE_URLS = {
     "moonshot_k25_pricing": "https://platform.kimi.ai/docs/pricing/chat-k25.md",
     "moonshot_k2_pricing": "https://platform.kimi.ai/docs/pricing/chat-k2.md",
     "zeroeval_models_list": "https://api.zeroeval.com/leaderboard/models/list",
+    # LLM-Stats serves its full model catalog as a Next.js RSC payload
+    "llm_stats_rsc": "https://llm-stats.com/",
+    # Chatbot Arena leaderboard (lmarena.ai) — embeds Elo ratings in Next.js RSC payload
+    "lmarena_leaderboard": "https://lmarena.ai/leaderboard",
+    "aliyun_pricing": "https://help.aliyun.com/zh/model-studio/model-pricing",
+    "baidu_qianfan_pricing": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+    "tencent_hunyuan_pricing": "https://cloud.tencent.com.cn/document/product/1823/130055",
+    "zhipu_pricing": "https://open.bigmodel.cn/pricing",
+    "groq_pricing": "https://groq.com/pricing/",
+    "perplexity_pricing": "https://docs.perplexity.ai/getting-started/pricing",
+}
+
+# Arena model name → our model ID; covers cases where normalization alone is insufficient.
+# E.g. "gpt-5.2-chat-latest" (no suffix strips) or renamed/aliased entries.
+ARENA_ELO_ALIASES: dict[str, str] = {
+    "gpt-5.2-chat-latest": "openai/gpt-chat-latest",
+    "gpt-5.2-chat-latest-20260210": "openai/gpt-chat-latest",
+    "gpt-5.2-chat-latest-20250706": "openai/gpt-chat-latest",
+    # Llama 4 uses full architecture names in Arena
+    "llama-4-maverick-17b-128e-instruct": "llama-4-maverick",
+    "llama-4-scout-17b-16e-instruct": "llama-4-scout",
+}
+
+# Suffixes that indicate a special variant; Arena entries with these are used only as
+# fallback when no base-model entry matched the same model ID.
+_ARENA_VARIANT_SUFFIXES = ("-thinking", "-turbo", "-high", "-low", "-mini-high")
+
+# Known model parameter counts (total_B, active_B or None) for models whose size
+# is not encoded in their ID. All values are in billions.
+# Key = model short name (last segment after "/").
+KNOWN_PARAMS_OVERRIDE: dict[str, tuple[float, float | None]] = {
+    "llama-4-maverick": (400.0, 17.0),
+    "llama-4-scout": (109.0, 17.0),
+    "mistral-large-2512": (123.0, None),
+    "mistral-small-2603": (24.0, None),   # Mistral Small 3
+    "devstral-2512": (24.0, None),         # Devstral (Mistral Small 3 base)
+    "phi-4-mini-instruct": (3.8, None),    # Microsoft Phi-4 Mini
+    "reka-edge": (7.0, None),
+    "intellect-3": (32.0, None),
+    "deepseek-v3.2": (671.0, 37.0),
+    "deepseek-v3.2-speciale": (671.0, 37.0),
+    "deepseek-v3.2-exp": (671.0, 37.0),
+    "deepseek-v3.1-nex-n1": (671.0, 37.0),  # DeepSeek V3.1 derivative
+    "cogito-v2.1-671b": (671.0, 37.0),        # DeepSeek V3 architecture
+    "gpt-oss-safeguard-20b": (20.0, None),
 }
 
 ZEROEVAL_BENCHMARKS = {
@@ -80,6 +131,62 @@ ZEROEVAL_BENCHMARKS = {
         "field": "terminalBench",
         "label": "ZeroEval Terminal-Bench leaderboard",
         "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details",
+    },
+    # New benchmarks — popular ones with high model coverage in ZeroEval
+    "aime-2025": {
+        "field": "aime2025",
+        "label": "ZeroEval AIME 2025 leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details",
+    },
+    "aime-2024": {
+        "field": "aime2024",
+        "label": "ZeroEval AIME 2024 leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2024/details",
+    },
+    "humanity%27s-last-exam": {
+        "field": "hle",
+        "label": "ZeroEval Humanity's Last Exam leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details",
+    },
+    "simpleqa": {
+        "field": "simpleQA",
+        "label": "ZeroEval SimpleQA leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/simpleqa/details",
+    },
+    "browsecomp": {
+        "field": "browseComp",
+        "label": "ZeroEval BrowseComp leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details",
+    },
+    "ifeval": {
+        "field": "ifEval",
+        "label": "ZeroEval IFEval leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/ifeval/details",
+    },
+    # Root-level fields (root=True → write directly to model root, not under evals.*)
+    "mmlu": {
+        "field": "mmlu",
+        "root": True,
+        "label": "ZeroEval MMLU leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu/details",
+    },
+    "humaneval": {
+        "field": "humanEval",
+        "root": True,
+        "label": "ZeroEval HumanEval leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/humaneval/details",
+    },
+    "gsm8k": {
+        "field": "gsm8k",
+        "root": True,
+        "label": "ZeroEval GSM8k leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/gsm8k/details",
+    },
+    "math": {
+        "field": "math",
+        "root": True,
+        "label": "ZeroEval MATH leaderboard",
+        "url": "https://api.zeroeval.com/leaderboard/benchmarks/math/details",
     },
 }
 
@@ -224,6 +331,14 @@ CATALOG_CHECKS = {
 }
 
 
+# CNY prices from https://api-docs.deepseek.com/zh-cn/quick_start/pricing (2026-05-18)
+# deepseek-v4-pro shown at 2.5折 (25% of regular): ¥3/12/6/24 (hit/in/out regular)
+DEEPSEEK_CNY_PRICING: dict[str, dict[str, float]] = {
+    "deepseek-v4-flash": {"hit": 0.02, "in": 1.0, "out": 2.0},
+    "deepseek-v4-pro": {"hit": 0.025, "in": 3.0, "out": 6.0},
+}
+
+
 class ExtractedModel(BaseModel):
     model_id: str
     source_label: str
@@ -248,6 +363,58 @@ class ReferenceSource:
     section: str
 
 
+@dataclass(frozen=True)
+class ModelMatcher:
+    generic_index: dict[str, list[str]]
+    explicit_alias_index: dict[str, str]
+
+
+def enrich_official_cny(models: list[dict[str, Any]]) -> int:
+    """Populate pricing.officialCny from Zhipu (GLM) and DeepSeek CNY pricing.
+
+    - GLM models (vendor == "Zhipu AI"): copy from existing pricing.zhipu
+    - DeepSeek models: use hardcoded CNY prices from DEEPSEEK_CNY_PRICING
+
+    Returns the count of models updated.
+    """
+    count = 0
+    for model in models:
+        short = model.get("id", "").split("/")[-1]
+        pricing = model.setdefault("pricing", {})
+        if short in DEEPSEEK_CNY_PRICING:
+            pricing["officialCny"] = dict(DEEPSEEK_CNY_PRICING[short])
+            count += 1
+        elif pricing.get("zhipu") and model.get("vendor") == "Zhipu AI":
+            pricing["officialCny"] = dict(pricing["zhipu"])
+            count += 1
+    return count
+
+
+def enrich_model_params(models: list[dict[str, Any]]) -> dict[str, int]:
+    """Directly set params/paramsActive on each model using name extraction + overrides.
+
+    Priority: KNOWN_PARAMS_OVERRIDE (hard-coded) > extract_params_from_id (regex).
+    Returns coverage counts: {"params": N, "paramsActive": M}.
+    """
+    counts = {"params": 0, "paramsActive": 0}
+    for model in models:
+        model_id = model.get("id", "")
+        short_name = model_id.split("/")[-1]
+
+        if short_name in KNOWN_PARAMS_OVERRIDE:
+            total_b, active_b = KNOWN_PARAMS_OVERRIDE[short_name]
+        else:
+            total_b, active_b = extract_params_from_id(model_id)
+
+        if total_b is not None:
+            model["params"] = total_b
+            counts["params"] += 1
+        if active_b is not None:
+            model["paramsActive"] = active_b
+            counts["paramsActive"] += 1
+    return counts
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Verify and enrich data/models.json")
     parser.add_argument("--write", action="store_true", help="write verified patches back to data/models.json")
@@ -255,14 +422,16 @@ def main() -> int:
     parser.add_argument("--target-count", type=int, default=DEFAULT_OPENROUTER_TARGET, help="target model count when --generate-openrouter is used")
     parser.add_argument("--min-model-count", type=int, default=0, help="fail validation if fewer model rows are present")
     parser.add_argument("--verify-only", action="store_true", help="skip enrichment and only validate data/page wiring")
-    parser.add_argument("--online", action="store_true", help="include online source string checks in the report")
+    parser.add_argument("--online", action="store_true", help="allow network fetches for sources missing from the local cache")
     parser.add_argument("--deepseek", action="store_true", help="use DeepSeek as a fallback extractor for unstructured pages")
     parser.add_argument("--no-cache", action="store_true", help="do not read cached source responses")
-    parser.add_argument("--refresh-cache", action="store_true", help="refetch sources even if cache exists")
+    parser.add_argument("--refresh-cache", action="store_true", help="refetch sources even if cache exists; implies --online")
     parser.add_argument("--fetch-reference-sources", action="store_true", help="also fetch every URL listed in REFERENCE_SOURCES.md")
     parser.add_argument("--skip-page-check", action="store_true", help="skip static models.html/src/models.js data-fill checks")
     parser.add_argument("--output", type=Path, help="write a JSON report to this path")
     args = parser.parse_args()
+    if args.refresh_cache:
+        args.online = True
 
     models = load_models(args)
     reference_sources = parse_reference_sources(REFERENCE_PATH)
@@ -300,8 +469,12 @@ def main() -> int:
             report["modelCount"] = len(models)
         patches.extend(extract_openrouter_prices(models, session, args, report))
         patches.extend(extract_official_prices(models, source_texts, session, args, report))
+        patches.extend(extract_platform_prices(models, session, args, report))
         patches.extend(extract_caisi_evals(source_texts))
         patches.extend(extract_zeroeval_benchmark_evals(models, session, args, report))
+        patches.extend(extract_llm_stats_data(models, session, args, report))
+        patches.extend(extract_sidebar_snapshot_data(models, report))
+        patches.extend(extract_arena_elo_data(models, session, args, report))
         patches.extend(extract_deepseek_reported_evals(source_texts))
         patches.extend(extract_meta_model_details(source_texts))
         patches.extend(extract_cursor_prices_from_provider_prices(models, patches))
@@ -314,6 +487,10 @@ def main() -> int:
 
     if args.write:
         apply_patches(models, merged_by_model)
+        params_coverage = enrich_model_params(models)
+        report["paramsCoverage"] = params_coverage
+        cny_count = enrich_official_cny(models)
+        report["officialCnyCount"] = cny_count
         MODELS_PATH.write_text(json.dumps(models, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         report["wrote"] = str(MODELS_PATH)
 
@@ -410,16 +587,31 @@ def fetch_text(session: requests.Session, key: str, url: str, args: argparse.Nam
     cache_path = CACHE_DIR / f"{key}.txt"
     if cache_path.exists() and not args.no_cache and not args.refresh_cache:
         return cache_path.read_text(encoding="utf-8")
+    if not args.online and not args.refresh_cache:
+        raise requests.RequestException(f"Cache miss for '{key}' - run with --online to fetch")
     response = session.get(url, timeout=30)
     response.raise_for_status()
     text = response.text
-    cache_path.write_text(text, encoding="utf-8")
+    if not args.no_cache:
+        cache_path.write_text(text, encoding="utf-8")
     return text
 
 
 def load_models(args: argparse.Namespace) -> list[dict[str, Any]]:
     source_path = MODEL_OVERRIDES_PATH if args.generate_openrouter and MODEL_OVERRIDES_PATH.exists() else MODELS_PATH
     return json.loads(source_path.read_text(encoding="utf-8"))
+
+
+def load_model_aliases() -> dict[str, list[str]]:
+    if not MODEL_ALIASES_PATH.exists():
+        return {}
+    payload = json.loads(MODEL_ALIASES_PATH.read_text(encoding="utf-8"))
+    aliases: dict[str, list[str]] = {}
+    for model_id, values in payload.items():
+        if not isinstance(model_id, str) or not isinstance(values, list):
+            continue
+        aliases[model_id] = [str(value).strip() for value in values if str(value).strip()]
+    return aliases
 
 
 def fetch_openrouter_items(session: requests.Session, args: argparse.Namespace, report: dict[str, Any]) -> list[dict[str, Any]]:
@@ -591,7 +783,7 @@ def extract_openrouter_prices(
     report: dict[str, Any],
 ) -> list[ExtractedModel]:
     by_id = {item["id"]: item for item in fetch_openrouter_items(session, args, report)}
-    aliases = discover_openrouter_aliases(models, by_id)
+    aliases = discover_openrouter_aliases(models, by_id, load_model_aliases())
     patches: list[ExtractedModel] = []
     for model_id, model_aliases in aliases.items():
         item = next((by_id[alias] for alias in model_aliases if alias in by_id), None)
@@ -638,7 +830,11 @@ def extract_openrouter_prices(
     return patches
 
 
-def discover_openrouter_aliases(models: list[dict[str, Any]], by_id: dict[str, Any]) -> dict[str, list[str]]:
+def discover_openrouter_aliases(
+    models: list[dict[str, Any]],
+    by_id: dict[str, Any],
+    alias_map: dict[str, list[str]],
+) -> dict[str, list[str]]:
     aliases = {model_id: list(values) for model_id, values in OPENROUTER_ALIASES.items()}
     normalized_index = {normalize_model_key(model_id): model_id for model_id in by_id}
     for model in models:
@@ -646,6 +842,7 @@ def discover_openrouter_aliases(models: list[dict[str, Any]], by_id: dict[str, A
         if not model_id:
             continue
         candidates = list(aliases.get(model_id, []))
+        candidates.extend(alias_map.get(model_id, []))
         vendor_prefix = OPENROUTER_VENDOR_PREFIXES.get(model.get("vendor"))
         if vendor_prefix:
             candidates.extend(
@@ -682,6 +879,89 @@ def normalize_model_key(value: str) -> str:
     value = value.split("/", 1)[-1]
     value = value.removesuffix(":free")
     return re.sub(r"[^a-z0-9]+", "", value)
+
+
+def is_markdown_table_separator(line: str) -> bool:
+    stripped = line.strip()
+    return stripped.startswith("|") and not set(stripped.replace("|", "").replace("-", "").replace(":", "").replace(" ", ""))
+
+
+def parse_markdown_tables(text: str) -> list[list[dict[str, str]]]:
+    lines = text.splitlines()
+    tables: list[list[dict[str, str]]] = []
+    i = 0
+    while i < len(lines):
+        if not lines[i].lstrip().startswith("|") or i + 1 >= len(lines) or not is_markdown_table_separator(lines[i + 1]):
+            i += 1
+            continue
+        header = [cell.strip() for cell in lines[i].strip().strip("|").split("|")]
+        rows: list[dict[str, str]] = []
+        j = i + 2
+        while j < len(lines) and lines[j].lstrip().startswith("|"):
+            cells = [cell.strip() for cell in lines[j].strip().strip("|").split("|")]
+            if len(cells) < len(header):
+                cells.extend([""] * (len(header) - len(cells)))
+            rows.append(dict(zip(header, cells[: len(header)])))
+            j += 1
+        if rows:
+            tables.append(rows)
+        i = j
+    return tables
+
+
+def clean_markdown_cell(value: Any) -> str | None:
+    if value is None:
+        return None
+    text = str(value).strip()
+    if text in {"", "-", "—", "–"}:
+        return None
+    text = re.sub(r"\*\*([^*]+)\*\*", r"\1", text)
+    return text.strip()
+
+
+def parse_markdown_link(value: Any) -> tuple[str | None, str | None]:
+    text = clean_markdown_cell(value)
+    if not text:
+        return None, None
+    match = re.search(r"\[([^\]]+)\]\(([^)]+)\)", text)
+    if match:
+        return match.group(1).strip(), match.group(2).strip()
+    return text, None
+
+
+def parse_sidebar_number(value: Any) -> float | None:
+    text = clean_markdown_cell(value)
+    if not text:
+        return None
+    match = re.search(r"-?\d+(?:,\d{3})*(?:\.\d+)?", text.replace("−", "-"))
+    if not match:
+        return None
+    try:
+        return float(match.group(0).replace(",", ""))
+    except ValueError:
+        return None
+
+
+def parse_sidebar_context_tokens(value: Any) -> int | None:
+    text = clean_markdown_cell(value)
+    if not text:
+        return None
+    normalized = text.replace(" ", "")
+    match = re.match(r"(\d+(?:\.\d+)?)([kKmM])$", normalized)
+    if not match:
+        return None
+    amount = float(match.group(1))
+    suffix = match.group(2).lower()
+    multiplier = 1_000 if suffix == "k" else 1_000_000
+    return int(round(amount * multiplier))
+
+
+def format_context_window(token_count: int) -> str:
+    if token_count >= 1_000_000:
+        value = round(token_count / 100_000) / 10
+        return f"{int(value)}M" if value.is_integer() else f"{value:.1f}M"
+    rounded_k = int(round(token_count / 1_000))
+    return f"{rounded_k}K"
 
 
 def extract_official_prices(
@@ -853,6 +1133,409 @@ def price_patch(model_id: str, source_label: str, source_url: str, row: dict[str
     )
 
 
+def platform_price_patch(
+    model_id: str,
+    provider_key: str,
+    source_label: str,
+    source_url: str,
+    row: dict[str, float],
+) -> ExtractedModel:
+    fields = [f"pricing.{provider_key}.{key}" for key in row]
+    return ExtractedModel(
+        model_id=model_id,
+        source_label=source_label,
+        source_url=source_url,
+        verified_fields=fields,
+        patch={"pricing": {provider_key: row}},
+        evidence=[json.dumps(row, sort_keys=True)],
+    )
+
+
+def fetch_optional_source_text(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+    key: str,
+    url: str,
+) -> SourceText | None:
+    try:
+        return SourceText(label=key, url=url, text=fetch_text(session, key, url, args))
+    except requests.RequestException as exc:
+        report.setdefault("sourceWarnings", []).append({"key": key, "url": url, "error": str(exc)})
+        return None
+
+
+def extract_money_value(value: str | None) -> float | None:
+    if not value:
+        return None
+    match = re.search(r"([0-9]+(?:\.[0-9]+)?)\s*(?:元|\$)", value.replace(",", ""))
+    if match:
+        return float(match.group(1))
+    return None
+
+
+def extract_plain_number(value: str | None) -> float | None:
+    if not value:
+        return None
+    match = re.fullmatch(r"\s*([0-9]+(?:\.[0-9]+)?)\s*", value.replace(",", ""))
+    if not match:
+        return None
+    return float(match.group(1))
+
+
+def extract_first_number(value: str | None) -> float | None:
+    if not value:
+        return None
+    match = re.search(r"([0-9]+(?:\.[0-9]+)?)", value.replace(",", ""))
+    if not match:
+        return None
+    return float(match.group(1))
+
+
+def extract_price_or_free(value: str | None) -> float | None:
+    """Like extract_first_number but returns 0.0 for non-empty fields with no number.
+
+    Handles garbled "免费" (free) text in JS bundles: when the field has content
+    but no numeric digits, it almost certainly means the price is 0 (free).
+    """
+    if value is None:
+        return None
+    match = re.search(r"([0-9]+(?:\.[0-9]+)?)", value.replace(",", ""))
+    if match:
+        return float(match.group(1))
+    # Non-empty text with no number → treat as free (0.0)
+    if re.search(r"[^\s\"\',\[\]]", value):
+        return 0.0
+    return None
+
+
+def extract_params_from_id(model_id: str) -> tuple[float | None, float | None]:
+    """Extract (total_B, active_B) from model ID by parsing size suffixes like '35b-a3b'.
+
+    Returns (None, None) if no numeric parameter size is encoded in the name.
+    active_B is only set when a MoE suffix like '-a3b' is present.
+    """
+    name = model_id.lower().split("/")[-1]
+    # MoE pattern: e.g., 35b-a3b, 120b-a12b, 26b-a4b
+    moe = re.search(r"[_\-](\d+(?:\.\d+)?)b[_\-]a(\d+(?:\.\d+)?)b(?:[_\-]|$)", name)
+    if moe:
+        return float(moe.group(1)), float(moe.group(2))
+    # Dense pattern: e.g., 8b, 671b, 3.8b (at a word boundary after separator)
+    dense = re.search(r"[_\-](\d+(?:\.\d+)?)b(?:[_\-]|$)", name)
+    if dense:
+        return float(dense.group(1)), None
+    return None, None
+
+
+def expand_html_table(table: BeautifulSoup) -> list[list[str]]:
+    rows: list[list[str]] = []
+    pending: dict[int, tuple[int, str]] = {}
+
+    for tr in table.find_all("tr"):
+        row: list[str] = []
+        col = 0
+
+        def consume_pending() -> None:
+            nonlocal col
+            while col in pending:
+                remaining, text = pending[col]
+                row.append(text)
+                if remaining <= 1:
+                    del pending[col]
+                else:
+                    pending[col] = (remaining - 1, text)
+                col += 1
+
+        consume_pending()
+        for cell in tr.find_all(["th", "td"]):
+            consume_pending()
+            text = re.sub(r"\s+", " ", cell.get_text(" ", strip=True)).strip()
+            rowspan = max(1, int(cell.get("rowspan", 1) or 1))
+            colspan = max(1, int(cell.get("colspan", 1) or 1))
+            for _ in range(colspan):
+                row.append(text)
+                if rowspan > 1:
+                    pending[col] = (rowspan - 1, text)
+                col += 1
+        consume_pending()
+        if any(row):
+            rows.append(row)
+
+    width = max((len(row) for row in rows), default=0)
+    return [row + [""] * (width - len(row)) for row in rows]
+
+
+def keep_min_prices(target: dict[str, float], values: dict[str, float | None]) -> None:
+    for key, value in values.items():
+        if value is None:
+            continue
+        current = target.get(key)
+        if current is None or value < current:
+            target[key] = value
+
+
+def extract_aliyun_model_name(value: str) -> str | None:
+    text = re.sub(r"\s+", " ", value).strip()
+    text = re.split(r"\s+(?:当前能力等同于|Batch|上下文缓存|限时|免费额度|说明|支持)", text, maxsplit=1)[0]
+    match = re.match(r"([A-Za-z0-9][A-Za-z0-9._/-]*(?:\s+[A-Za-z0-9][A-Za-z0-9._/-]*)?)", text)
+    if not match:
+        return None
+    candidate = match.group(1).strip()
+    if len(candidate) < 3 or candidate.lower() in {"model", "token"}:
+        return None
+    return candidate
+
+
+def extract_aliyun_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    source = fetch_optional_source_text(session, args, report, "aliyun_pricing", RAW_SOURCE_URLS["aliyun_pricing"])
+    if not source:
+        return {}
+    soup = BeautifulSoup(source.text, "html.parser")
+    prices: dict[str, dict[str, float]] = {}
+    for table in soup.find_all("table"):
+        rows = expand_html_table(table)
+        if len(rows) < 2:
+            continue
+        header = " ".join(rows[0])
+        if "输入单价" not in header or "输出单价" not in header:
+            continue
+        for row in rows[1:]:
+            model_name = extract_aliyun_model_name(row[0] if row else "")
+            if not model_name:
+                continue
+            money_values = [value for value in (extract_money_value(cell) for cell in row[1:]) if value is not None]
+            if len(money_values) < 2:
+                continue
+            keep_min_prices(prices.setdefault(model_name, {}), {"in": money_values[0], "out": money_values[-1]})
+    return prices
+
+
+def extract_tencent_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    source = fetch_optional_source_text(
+        session, args, report, "tencent_hunyuan_pricing", RAW_SOURCE_URLS["tencent_hunyuan_pricing"]
+    )
+    if not source:
+        return {}
+    soup = BeautifulSoup(source.text, "html.parser")
+    prices: dict[str, dict[str, float]] = {}
+    for table in soup.find_all("table"):
+        rows = [
+            [re.sub(r"\s+", " ", cell.get_text(" ", strip=True)).replace("\ufeff", "").strip() for cell in tr.find_all(["th", "td"])]
+            for tr in table.find_all("tr")
+        ]
+        if len(rows) < 2:
+            continue
+        header = " ".join(rows[0])
+        if "推理输入" not in header or "推理输出" not in header:
+            continue
+        current_model_name: str | None = None
+        for row in rows[1:]:
+            if len(row) < 5:
+                continue
+            model_name = re.sub(r"\s+", " ", row[0]).strip() or current_model_name
+            if not model_name or "模型名称" in model_name:
+                continue
+            current_model_name = model_name
+            keep_min_prices(
+                prices.setdefault(model_name, {}),
+                {
+                    "in": extract_plain_number(row[2]),
+                    "out": extract_plain_number(row[3]),
+                    "hit": extract_plain_number(row[4]),
+                },
+            )
+    return prices
+
+
+def extract_baidu_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    source = fetch_optional_source_text(
+        session, args, report, "baidu_qianfan_pricing", RAW_SOURCE_URLS["baidu_qianfan_pricing"]
+    )
+    if not source:
+        return {}
+    soup = BeautifulSoup(source.text, "html.parser")
+    prices: dict[str, dict[str, float]] = {}
+    for table in soup.find_all("table"):
+        rows = [
+            [re.sub(r"\s+", " ", cell.get_text(" ", strip=True)).replace("\ufeff", "").strip() for cell in tr.find_all(["th", "td"])]
+            for tr in table.find_all("tr")
+        ]
+        if len(rows) < 2:
+            continue
+        header = " ".join(rows[0]) + " " + " ".join(rows[1] if len(rows) > 1 else [])
+        if "在线推理" not in header or "元/千tokens" not in header:
+            continue
+        current_model_name: str | None = None
+        for row in rows[1:]:
+            if not row:
+                continue
+            if len(row) >= 9:
+                current_model_name = re.sub(r"\s+", " ", row[0]).strip()
+                sub_name = re.sub(r"\s+", " ", row[3]).strip()
+                online_price = extract_plain_number(row[4])
+                model_name = current_model_name
+            elif current_model_name and len(row) >= 5:
+                model_name = current_model_name
+                sub_name = re.sub(r"\s+", " ", row[0]).strip()
+                online_price = extract_plain_number(row[1])
+            else:
+                continue
+            if not model_name or not sub_name or online_price is None:
+                continue
+            value = online_price * 1000
+            model_prices = prices.setdefault(model_name, {})
+            if "输入" in sub_name:
+                keep_min_prices(model_prices, {"in": value})
+            elif "输出" in sub_name:
+                keep_min_prices(model_prices, {"out": value})
+            elif "缓存命中" in sub_name:
+                keep_min_prices(model_prices, {"hit": value})
+    return prices
+
+
+def extract_zhipu_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    page = fetch_optional_source_text(session, args, report, "zhipu_pricing", RAW_SOURCE_URLS["zhipu_pricing"])
+    if not page:
+        return {}
+    bundle_match = re.search(r"/js/app\.[a-z0-9]+\.js", page.text)
+    if not bundle_match:
+        report.setdefault("sourceWarnings", []).append(
+            {"key": "zhipu_pricing", "url": RAW_SOURCE_URLS["zhipu_pricing"], "error": "bundle not found"}
+        )
+        return {}
+    bundle_url = urljoin(RAW_SOURCE_URLS["zhipu_pricing"], bundle_match.group(0))
+    bundle = fetch_optional_source_text(session, args, report, "zhipu_pricing_bundle", bundle_url)
+    if not bundle:
+        return {}
+    prices: dict[str, dict[str, float]] = {}
+    pattern = re.compile(
+        r'name:"(?P<name>[^"]+)"[^{}]{0,800}?inPrice:\[(?P<in>[^\]]*)\][^{}]{0,400}?outPrice:\[(?P<out>[^\]]*)\](?:[^{}]{0,400}?hit:\[(?P<hit>[^\]]*)\])?',
+        re.S,
+    )
+    for match in pattern.finditer(bundle.text):
+        model_name = match.group("name").strip()
+        keep_min_prices(
+            prices.setdefault(model_name, {}),
+            {
+                "in": extract_price_or_free(match.group("in")),
+                "out": extract_price_or_free(match.group("out")),
+                "hit": extract_first_number(match.group("hit")),  # cache-hit is never free
+            },
+        )
+    return prices
+
+
+def simplify_groq_model_name(value: str) -> str:
+    value = re.sub(r"\s+\([^)]*\)", "", value)
+    value = re.sub(r"\s+\d+k\b", "", value, flags=re.I)
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def extract_groq_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    source = fetch_optional_source_text(session, args, report, "groq_pricing", RAW_SOURCE_URLS["groq_pricing"])
+    if not source:
+        return {}
+    text = html_to_text(source.text)
+    prices: dict[str, dict[str, float]] = {}
+    pattern = re.compile(
+        r"(?P<name>.+?)\s+Current Speed\s+[0-9,]+\s+TPS\s+Input Token Price \(Per Million Tokens\)\s+\$(?P<in>[0-9.]+).*?Output Token Price \(Per Million Tokens\)\s+\$(?P<out>[0-9.]+)",
+        re.S,
+    )
+    for part in text.split("AI Model ")[1:]:
+        match = pattern.search(part)
+        if not match:
+            continue
+        model_name = simplify_groq_model_name(match.group("name"))
+        keep_min_prices(
+            prices.setdefault(model_name, {}),
+            {"in": float(match.group("in")), "out": float(match.group("out"))},
+        )
+    return prices
+
+
+def extract_perplexity_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    source = fetch_optional_source_text(
+        session, args, report, "perplexity_pricing", RAW_SOURCE_URLS["perplexity_pricing"]
+    )
+    if not source:
+        return {}
+    text = html_to_text(source.text)
+    token_pricing_start = text.find("Token Pricing")
+    token_pricing_end = text.find("Request Pricing by Search Context Size")
+    if token_pricing_start >= 0 and token_pricing_end > token_pricing_start:
+        text = text[token_pricing_start:token_pricing_end]
+    prices: dict[str, dict[str, float]] = {}
+    pattern = re.compile(r"(Sonar(?: Pro| Reasoning Pro| Deep Research)?)\s+\$(\d+(?:\.\d+)?)\s+\$(\d+(?:\.\d+)?)")
+    for match in pattern.finditer(text):
+        model_name = match.group(1).strip()
+        keep_min_prices(
+            prices.setdefault(model_name, {}),
+            {"in": float(match.group(2)), "out": float(match.group(3))},
+        )
+    return prices
+
+
+def extract_platform_prices(
+    models: list[dict[str, Any]],
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> list[ExtractedModel]:
+    matcher = build_model_matcher(models)
+    providers = [
+        ("aliyun", "阿里云 Model Studio 定价", RAW_SOURCE_URLS["aliyun_pricing"], extract_aliyun_prices),
+        ("tencent", "腾讯混元定价", RAW_SOURCE_URLS["tencent_hunyuan_pricing"], extract_tencent_prices),
+        ("baidu", "百度千帆大模型定价", RAW_SOURCE_URLS["baidu_qianfan_pricing"], extract_baidu_prices),
+        ("zhipu", "智谱开放平台定价", RAW_SOURCE_URLS["zhipu_pricing"], extract_zhipu_prices),
+        ("groq", "Groq pricing", RAW_SOURCE_URLS["groq_pricing"], extract_groq_prices),
+        ("perplexity", "Perplexity pricing", RAW_SOURCE_URLS["perplexity_pricing"], extract_perplexity_prices),
+    ]
+    patches: list[ExtractedModel] = []
+    coverage: dict[str, Any] = {}
+    for provider_key, source_label, source_url, extractor in providers:
+        rows = extractor(session, args, report)
+        matched = 0
+        unmatched: list[str] = []
+        for external_name, row in rows.items():
+            model_id = match_external_model(matcher, external_name, external_name)
+            if not model_id:
+                unmatched.append(external_name)
+                continue
+            matched += 1
+            patches.append(platform_price_patch(model_id, provider_key, source_label, source_url, row))
+        coverage[provider_key] = {
+            "sourceRows": len(rows),
+            "matchedModels": matched,
+            "unmatchedExamples": unmatched[:10],
+        }
+    report["platformPricing"] = coverage
+    return patches
+
+
 def extract_caisi_evals(sources: dict[str, SourceText]) -> list[ExtractedModel]:
     source = sources.get("nist_caisi")
     if not source:
@@ -907,13 +1590,13 @@ def extract_zeroeval_catalog_prices(
     payload = fetch_json_source(session, "zeroeval_models_list", RAW_SOURCE_URLS["zeroeval_models_list"], args, report)
     if not isinstance(payload, list):
         return []
-    model_index = build_model_lookup_index(models)
+    matcher = build_model_matcher(models)
     patches: list[ExtractedModel] = []
     for organization in payload:
         for item in organization.get("models", []):
             if not isinstance(item, dict):
                 continue
-            model_id = match_external_model(model_index, item.get("model_id"), item.get("name"))
+            model_id = match_external_model(matcher, item.get("model_id"), item.get("name"))
             if not model_id:
                 continue
             patch: dict[str, Any] = {}
@@ -951,7 +1634,7 @@ def extract_zeroeval_benchmark_evals(
     args: argparse.Namespace,
     report: dict[str, Any],
 ) -> list[ExtractedModel]:
-    model_index = build_model_lookup_index(models)
+    matcher = build_model_matcher(models)
     patches: list[ExtractedModel] = []
     for key, benchmark in ZEROEVAL_BENCHMARKS.items():
         payload = fetch_json_source(session, f"zeroeval_{key}", benchmark["url"], args, report)
@@ -960,7 +1643,7 @@ def extract_zeroeval_benchmark_evals(
         for item in payload.get("models", []):
             if not isinstance(item, dict) or item.get("score") is None:
                 continue
-            model_id = match_external_model(model_index, item.get("model_id"), item.get("model_name"))
+            model_id = match_external_model(matcher, item.get("model_id"), item.get("model_name"))
             if not model_id:
                 continue
             try:
@@ -969,16 +1652,543 @@ def extract_zeroeval_benchmark_evals(
                 continue
             value = round(score * 100, 1) if score <= 1.0 else round(score, 1)
             field = benchmark["field"]
+            root = benchmark.get("root", False)
+            if root:
+                vfields = [field]
+                patch_data: dict[str, Any] = {field: value}
+            else:
+                vfields = [f"evals.{field}"]
+                patch_data = {"evals": {field: value}}
             patches.append(
                 ExtractedModel(
                     model_id=model_id,
                     source_label=benchmark["label"],
                     source_url=benchmark["url"],
-                    verified_fields=[f"evals.{field}"],
-                    patch={"evals": {field: value}},
+                    verified_fields=vfields,
+                    patch=patch_data,
                     evidence=[json.dumps({key: item.get(key) for key in ["model_id", "model_name", "score", "rank", "provider_id"]}, ensure_ascii=False, sort_keys=True)],
                 )
             )
+    return patches
+
+
+def extract_llm_stats_data(
+    models: list[dict[str, Any]],
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> list[ExtractedModel]:
+    """Parse the LLM-Stats RSC payload to extract pricing and benchmark data.
+
+    LLM-Stats.com embeds a full model catalog in its Next.js RSC response with
+    fields: model_id, gpqa_score, swe_bench_verified_score, hle_score,
+    input_price, output_price, context.  We use it as a secondary source to
+    fill gaps where ZeroEval or official pages don't provide data.
+    """
+    source_url = RAW_SOURCE_URLS["llm_stats_rsc"]
+    cache_key = "llm_stats_rsc"
+
+    # Fetch the RSC payload
+    cache_path = CACHE_DIR / f"{cache_key}.txt"
+    if not args.no_cache and not args.refresh_cache and cache_path.exists():
+        raw_text = cache_path.read_text(encoding="utf-8")
+        report.setdefault("cacheHits", []).append(cache_key)
+    elif not args.online and not args.refresh_cache:
+        report.setdefault("sourceWarnings", []).append({"key": cache_key, "url": source_url, "error": "Cache miss - run with --online to fetch"})
+        return []
+    else:
+        try:
+            resp = session.get(
+                source_url,
+                timeout=30,
+                headers={"Next-Router-Prefetch": "1", "RSC": "1", "Accept": "text/x-component"},
+            )
+            resp.raise_for_status()
+            raw_text = resp.text
+            if not args.no_cache:
+                CACHE_DIR.mkdir(parents=True, exist_ok=True)
+                cache_path.write_text(raw_text, encoding="utf-8")
+        except Exception as exc:
+            report.setdefault("errors", []).append(f"llm_stats_rsc fetch error: {exc}")
+            return []
+
+    # Parse model objects from RSC text
+    llm_stats_models: list[dict[str, Any]] = []
+    i = 0
+    while True:
+        idx = raw_text.find('{"model_id":', i)
+        if idx < 0:
+            break
+        depth = 0
+        j = idx
+        while j < len(raw_text):
+            ch = raw_text[j]
+            if ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    obj_str = raw_text[idx : j + 1]
+                    try:
+                        obj = json.loads(obj_str)
+                        if isinstance(obj, dict) and (
+                            obj.get("gpqa_score") is not None or obj.get("input_price") is not None
+                        ):
+                            llm_stats_models.append(obj)
+                    except (json.JSONDecodeError, ValueError):
+                        pass
+                    break
+            j += 1
+        i = idx + 1
+
+    # Deduplicate by model_id
+    seen_ids: set[str] = set()
+    unique_models: list[dict[str, Any]] = []
+    for m in llm_stats_models:
+        mid = m.get("model_id")
+        if mid and mid not in seen_ids:
+            seen_ids.add(mid)
+            unique_models.append(m)
+
+    report["llmStatsModelCount"] = len(unique_models)
+
+    matcher = build_model_matcher(models)
+    patches: list[ExtractedModel] = []
+
+    for item in unique_models:
+        mid_raw = item.get("model_id", "")
+        model_id = match_external_model(matcher, mid_raw, item.get("name"))
+        if not model_id:
+            continue
+
+        # Field mappings: llm-stats field → (our path, scale factor)
+        field_map: list[tuple[str, str, float]] = [
+            ("gpqa_score", "evals.gpqaDiamond", 100.0),
+            ("swe_bench_verified_score", "evals.reportedSweBenchVerified", 100.0),
+            ("hle_score", "evals.hle", 100.0),
+        ]
+        pricing_map: list[tuple[str, str]] = [
+            ("input_price", "in"),
+            ("output_price", "out"),
+        ]
+
+        verified_fields: list[str] = []
+        patch: dict[str, Any] = {}
+
+        for src_field, our_path, scale in field_map:
+            raw_val = item.get(src_field)
+            if raw_val is None:
+                continue
+            try:
+                val = round(float(raw_val) * scale, 1)
+            except (TypeError, ValueError):
+                continue
+            set_nested(patch, our_path, val)
+            verified_fields.append(our_path)
+
+        pricing_patch: dict[str, float] = {}
+        for src_field, price_key in pricing_map:
+            raw_val = item.get(src_field)
+            if raw_val is not None:
+                try:
+                    pricing_patch[price_key] = float(raw_val)
+                    verified_fields.append(f"pricing.official.{price_key}")
+                except (TypeError, ValueError):
+                    pass
+        if pricing_patch:
+            patch.setdefault("pricing", {})["official"] = pricing_patch
+
+        if not verified_fields:
+            continue
+
+        evidence_keys = ["model_id", "name", "gpqa_score", "swe_bench_verified_score", "hle_score", "input_price", "output_price"]
+        patches.append(
+            ExtractedModel(
+                model_id=model_id,
+                source_label="LLM-Stats model catalog",
+                source_url=source_url,
+                verified_fields=verified_fields,
+                patch=patch,
+                evidence=[json.dumps({k: item.get(k) for k in evidence_keys}, ensure_ascii=False, sort_keys=True)],
+            )
+        )
+
+    return patches
+
+
+def extract_sidebar_snapshot_data(
+    models: list[dict[str, Any]],
+    report: dict[str, Any],
+) -> list[ExtractedModel]:
+    """Load structured data from user-provided LLM-Stats sidebar snapshots."""
+    if not SIDEBAR_DATA_DIR.exists():
+        return []
+
+    matcher = build_model_matcher(models)
+    models_by_id = {model["id"]: model for model in models}
+    patches: list[ExtractedModel] = []
+    sidebar_report: dict[str, Any] = {}
+    source_url = RAW_SOURCE_URLS["llm_stats_rsc"]
+
+    def match_sidebar_model(display_name: str | None) -> str | None:
+        if not display_name:
+            return None
+        return match_external_model(matcher, display_name, None)
+
+    large_diffs: list[dict[str, Any]] = []
+
+    if SIDEBAR_GPQA_PATH.exists():
+        gpqa_rows = 0
+        gpqa_matched = 0
+        gpqa_consistent = 0
+        for table in parse_markdown_tables(SIDEBAR_GPQA_PATH.read_text(encoding="utf-8")):
+            for row in table:
+                name, _ = parse_markdown_link(row.get("Model"))
+                if not name:
+                    continue
+                gpqa_rows += 1
+                model_id = match_sidebar_model(name)
+                if not model_id:
+                    continue
+                gpqa_matched += 1
+                model = models_by_id[model_id]
+
+                sidebar_gpqa = parse_sidebar_number(row.get("Score"))
+                if sidebar_gpqa is not None:
+                    sidebar_gpqa = round(sidebar_gpqa * 100, 1) if sidebar_gpqa <= 1.5 else round(sidebar_gpqa, 1)
+                    current_gpqa = get_nested(model, "evals.gpqaDiamond")
+                    if current_gpqa is not None:
+                        if abs(float(current_gpqa) - sidebar_gpqa) < 2:
+                            gpqa_consistent += 1
+                        elif abs(float(current_gpqa) - sidebar_gpqa) >= 5:
+                            large_diffs.append(
+                                {
+                                    "field": "evals.gpqaDiamond",
+                                    "modelId": model_id,
+                                    "modelName": name,
+                                    "current": current_gpqa,
+                                    "sidebar": sidebar_gpqa,
+                                    "snapshot": str(SIDEBAR_GPQA_PATH.relative_to(ROOT)),
+                                }
+                            )
+
+                current_context = parse_sidebar_context_tokens(model.get("contextWindow"))
+                sidebar_context = parse_sidebar_context_tokens(row.get("Context Window") or row.get("Context"))
+                if current_context and sidebar_context:
+                    smaller = min(current_context, sidebar_context)
+                    if smaller and max(current_context, sidebar_context) / smaller >= 2:
+                        large_diffs.append(
+                            {
+                                "field": "contextWindow",
+                                "modelId": model_id,
+                                "modelName": name,
+                                "current": model.get("contextWindow"),
+                                "sidebar": format_context_window(sidebar_context),
+                                "snapshot": str(SIDEBAR_GPQA_PATH.relative_to(ROOT)),
+                            }
+                        )
+
+        sidebar_report["gpqaSnapshot"] = {
+            "rows": gpqa_rows,
+            "matchedModels": gpqa_matched,
+            "consistentWithCurrentGpqa": gpqa_consistent,
+            "newFieldsApplied": 0,
+        }
+
+    if SIDEBAR_LLM_STATS_PATH.exists():
+        raw_records: dict[str, list[dict[str, Any]]] = {}
+        llm_tables = parse_markdown_tables(SIDEBAR_LLM_STATS_PATH.read_text(encoding="utf-8"))
+        for table in llm_tables:
+            for row in table:
+                name, url = parse_markdown_link(row.get("Model"))
+                if not name:
+                    continue
+                raw_records.setdefault(name, []).append(
+                    {
+                        "name": name,
+                        "url": url,
+                        "codeArena": parse_sidebar_number(row.get("Code Arena")),
+                        "reasoning": parse_sidebar_number(row.get("Reasoning")),
+                        "math": parse_sidebar_number(row.get("Math")),
+                        "coding": parse_sidebar_number(row.get("Coding")),
+                        "search": parse_sidebar_number(row.get("Search")),
+                        "writing": parse_sidebar_number(row.get("Writing")),
+                        "vision": parse_sidebar_number(row.get("Vision")),
+                        "tools": parse_sidebar_number(row.get("Tools")),
+                        "longCtx": parse_sidebar_number(row.get("Long Ctx")),
+                        "speed": parse_sidebar_number(row.get("Speed")),
+                    }
+                )
+
+        sidebar_field_map = {
+            "codeArena": "llmStats.codeArena",
+            "reasoning": "llmStats.reasoning",
+            "math": "llmStats.math",
+            "coding": "llmStats.coding",
+            "search": "llmStats.search",
+            "writing": "llmStats.writing",
+            "vision": "llmStats.vision",
+            "tools": "llmStats.tools",
+            "longCtx": "llmStats.longCtx",
+            "speed": "llmStats.speed",
+        }
+        field_counts = {path: 0 for path in sidebar_field_map.values()}
+        llm_conflicts: list[dict[str, Any]] = []
+        llm_matched = 0
+
+        for name, records in raw_records.items():
+            merged_record: dict[str, Any] = {"name": name}
+            conflicts: dict[str, list[float]] = {}
+            for record in records:
+                for key, value in record.items():
+                    if key in {"name", "url"}:
+                        if value and key not in merged_record:
+                            merged_record[key] = value
+                        continue
+                    if value is None:
+                        continue
+                    existing = merged_record.get(key)
+                    if existing is None or existing == value:
+                        merged_record[key] = value
+                        continue
+                    values = {float(existing), float(value)}
+                    if key in conflicts:
+                        values.update(conflicts[key])
+                    conflicts[key] = sorted(values)
+            if conflicts:
+                llm_conflicts.append({"modelName": name, "conflicts": conflicts})
+                continue
+
+            model_id = match_sidebar_model(name)
+            if not model_id:
+                continue
+            llm_matched += 1
+
+            verified_fields: list[str] = []
+            patch: dict[str, Any] = {}
+            for record_key, field_path in sidebar_field_map.items():
+                value = merged_record.get(record_key)
+                if value is None:
+                    continue
+                set_nested(patch, field_path, value)
+                verified_fields.append(field_path)
+                field_counts[field_path] += 1
+
+            if not verified_fields:
+                continue
+
+            patches.append(
+                ExtractedModel(
+                    model_id=model_id,
+                    source_label="User-provided LLM-Stats explorer snapshot",
+                    source_url=source_url,
+                    verified_fields=verified_fields,
+                    patch=patch,
+                    evidence=[json.dumps({k: v for k, v in merged_record.items() if v is not None}, ensure_ascii=False, sort_keys=True)],
+                )
+            )
+
+        sidebar_report["llmStatsSnapshot"] = {
+            "rows": sum(len(records) for records in raw_records.values()),
+            "uniqueModels": len(raw_records),
+            "matchedModels": llm_matched,
+            "patchedModels": len(patches),
+            "fieldCoverage": {key: value for key, value in field_counts.items() if value},
+            "conflicts": llm_conflicts,
+        }
+
+    if large_diffs:
+        deduped: list[dict[str, Any]] = []
+        seen_diff_keys: set[tuple[Any, ...]] = set()
+        for item in large_diffs:
+            key = (item["field"], item["modelId"], item["current"], item["sidebar"], item["snapshot"])
+            if key in seen_diff_keys:
+                continue
+            seen_diff_keys.add(key)
+            deduped.append(item)
+        sidebar_report["largeDiffs"] = deduped
+
+    if SIDEBAR_SILICONFLOW_PATH.exists():
+        sf_rows = 0
+        sf_matched = 0
+        sf_prices: dict[str, dict[str, float]] = {}
+        for table in parse_markdown_tables(SIDEBAR_SILICONFLOW_PATH.read_text(encoding="utf-8")):
+            for row in table:
+                # Extract model name from the backtick-formatted cell, e.g. `Pro/Qwen/Qwen3.6-27B`
+                raw_name = row.get("模型名称") or ""
+                # Strip backticks
+                raw_name = raw_name.strip("`").strip()
+                if not raw_name:
+                    continue
+                # Only keep chat (对话) models; skip embedding, image gen, voice, etc.
+                func = (row.get("模型功能") or "").strip()
+                if func != "对话":
+                    continue
+                sf_rows += 1
+                # Strip leading "Pro/" path segment for matching
+                name_for_match = re.sub(r"^Pro/", "", raw_name)
+                # Use only the last path segment (model name) for matching
+                model_short = name_for_match.split("/")[-1]
+
+                raw_in = row.get("输入价格 (每M Tokens)") or row.get("输入价格") or ""
+                raw_out = row.get("输出价格 (每M Tokens)") or row.get("输出价格") or ""
+                price_in = extract_first_number(raw_in.replace("￥", "").replace(",", ""))
+                price_out = extract_first_number(raw_out.replace("￥", "").replace(",", ""))
+                # ￥ 0 → free (0.0), not missing
+                if price_in is None and re.search(r"[0-9]", raw_in) is None and raw_in.strip():
+                    price_in = 0.0
+                if price_out is None and re.search(r"[0-9]", raw_out) is None and raw_out.strip():
+                    price_out = 0.0
+
+                keep_min_prices(sf_prices.setdefault(model_short, {}), {"in": price_in, "out": price_out})
+
+        sf_source_url = "https://siliconflow.cn/pricing"
+        for model_short, prices in sf_prices.items():
+            model_id = match_external_model(matcher, model_short, None)
+            if not model_id:
+                continue
+            sf_matched += 1
+            verified_fields = [f"pricing.siliconflow.{k}" for k in prices]
+            patches.append(
+                ExtractedModel(
+                    model_id=model_id,
+                    source_label="硅基流动 pricing snapshot",
+                    source_url=sf_source_url,
+                    verified_fields=verified_fields,
+                    patch={"pricing": {"siliconflow": prices}},
+                    evidence=[f"硅基流动.md: {model_short} → in={prices.get('in')}, out={prices.get('out')}"],
+                )
+            )
+
+        sidebar_report["siliconflowSnapshot"] = {
+            "chatRows": sf_rows,
+            "uniqueModels": len(sf_prices),
+            "matchedModels": sf_matched,
+        }
+
+    if sidebar_report:
+        report["sidebarSnapshots"] = sidebar_report
+    return patches
+
+
+def extract_arena_elo_data(
+    models: list[dict[str, Any]],
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> list[ExtractedModel]:
+    """Fetch Chatbot Arena Elo ratings from lmarena.ai/leaderboard.
+
+    The page is a Next.js app that embeds leaderboard data in a large RSC script tag.
+    Each entry has rank, modelDisplayName, and rating (Elo score).
+    We match Arena display names to our model IDs via normalized key lookup,
+    explicit ARENA_ELO_ALIASES, and a second pass with variant-suffix fallback.
+    """
+    source_url = RAW_SOURCE_URLS["lmarena_leaderboard"]
+    cache_key = "lmarena_leaderboard"
+
+    cache_path = CACHE_DIR / f"{cache_key}.txt"
+    if not args.no_cache and not args.refresh_cache and cache_path.exists():
+        raw_text = cache_path.read_text(encoding="utf-8")
+        report.setdefault("cacheHits", []).append(cache_key)
+    elif not args.online and not args.refresh_cache:
+        report.setdefault("sourceWarnings", []).append({"key": cache_key, "url": source_url, "error": "Cache miss - run with --online to fetch"})
+        return []
+    else:
+        try:
+            resp = session.get(source_url, timeout=30, headers={"Accept": "text/html,*/*"})
+            resp.raise_for_status()
+            raw_text = resp.text
+            if not args.no_cache:
+                CACHE_DIR.mkdir(parents=True, exist_ok=True)
+                cache_path.write_text(raw_text, encoding="utf-8")
+        except Exception as exc:
+            report.setdefault("errors", []).append(f"lmarena_leaderboard fetch error: {exc}")
+            return []
+
+    # Locate the large RSC script containing the leaderboard payload.
+    # It is the script that includes both "arenaSlug" and "rating" and is >100 KB.
+    leaderboard_script = ""
+    for sc in re.findall(r"<script[^>]*>(.*?)</script>", raw_text, re.DOTALL):
+        sc = sc.strip()
+        if len(sc) > 100_000 and "arenaSlug" in sc and "rating" in sc:
+            leaderboard_script = sc
+            break
+
+    if not leaderboard_script:
+        report.setdefault("sourceWarnings", []).append({"key": cache_key, "url": source_url, "error": "leaderboard RSC script not found"})
+        return []
+
+    # The script is: self.__next_f.push([1,"<escaped JSON>"]).
+    # Unescape the inner JSON string.
+    match = re.search(r'self\.__next_f\.push\(\[1,"(.+)"\]\)\s*$', leaderboard_script, re.DOTALL)
+    if not match:
+        report.setdefault("sourceWarnings", []).append({"key": cache_key, "url": source_url, "error": "RSC push wrapper not found"})
+        return []
+
+    decoded = match.group(1).replace('\\"', '"').replace('\\\\', '\\').replace('\\n', '\n').replace('\\t', '\t')
+
+    # Extract entries: {rank, rankUpper, rankLower, modelDisplayName, rating, ...}
+    entries = re.findall(
+        r'"rank":(\d+),"rankUpper":\d+,"rankLower":\d+,"modelDisplayName":"([^"]+)","rating":([\d.]+)',
+        decoded,
+    )
+    report["arenaEloEntries"] = len(entries)
+    if not entries:
+        return []
+
+    matcher = build_model_matcher(models)
+    patches: list[ExtractedModel] = []
+
+    # arena_best: model_id → {"name", "rank", "score", "is_variant"}
+    # We prefer: base > variant; within same type, prefer lowest rank (= highest score).
+    arena_best: dict[str, dict[str, Any]] = {}
+
+    for rank_str, display_name, rating_str in entries:
+        rank = int(rank_str)
+        score = round(float(rating_str), 1)
+        name_lower = display_name.lower()
+        is_variant = any(name_lower.endswith(sfx) for sfx in _ARENA_VARIANT_SUFFIXES)
+        entry_data: dict[str, Any] = {"name": display_name, "rank": rank, "score": score, "is_variant": is_variant}
+
+        # Resolve model_id: explicit alias → direct match → variant-suffix-stripped match.
+        model_id: str | None = ARENA_ELO_ALIASES.get(name_lower)
+        if not model_id:
+            model_id = match_external_model(matcher, name_lower, None)
+        if not model_id and is_variant:
+            for sfx in _ARENA_VARIANT_SUFFIXES:
+                if name_lower.endswith(sfx):
+                    stripped = name_lower[: -len(sfx)]
+                    model_id = match_external_model(matcher, stripped, None)
+                    if model_id:
+                        break
+
+        if not model_id:
+            continue
+
+        existing = arena_best.get(model_id)
+        if existing is None:
+            arena_best[model_id] = entry_data
+        elif is_variant and not existing["is_variant"]:
+            pass  # base entry already recorded — keep it
+        elif not is_variant and existing["is_variant"]:
+            arena_best[model_id] = entry_data  # prefer base over variant
+        elif rank < existing["rank"]:
+            arena_best[model_id] = entry_data  # same type — prefer higher score
+
+    for model_id, entry in arena_best.items():
+        patches.append(
+            ExtractedModel(
+                model_id=model_id,
+                source_label="Chatbot Arena leaderboard",
+                source_url=source_url,
+                verified_fields=["arenaElo"],
+                patch={"arenaElo": entry["score"]},
+                evidence=[f"rank={entry['rank']} modelDisplayName={entry['name']!r} rating={entry['score']}"],
+            )
+        )
+
+    report["arenaEloMatched"] = len(patches)
     return patches
 
 
@@ -1065,15 +2275,38 @@ def fetch_json_source(
         return None
 
 
-def build_model_lookup_index(models: list[dict[str, Any]]) -> dict[str, list[str]]:
-    index: dict[str, list[str]] = {}
+def iter_model_match_candidates(model: dict[str, Any], alias_map: dict[str, list[str]]) -> list[str]:
+    model_id = model.get("id")
+    values: list[str] = []
+    for candidate in [model.get("id"), model.get("name"), model.get("openrouterId"), *(alias_map.get(model_id, []) if model_id else [])]:
+        if candidate:
+            values.append(str(candidate))
+    return dedupe_aliases(values)
+
+
+def build_model_matcher(models: list[dict[str, Any]]) -> ModelMatcher:
+    alias_map = load_model_aliases()
+    generic_index: dict[str, list[str]] = {}
+    explicit_alias_index: dict[str, list[str]] = {}
     for model in models:
         model_id = model.get("id")
         if not model_id:
             continue
-        for key in model_lookup_keys(model.get("id"), model.get("name"), model.get("openrouterId")):
-            index.setdefault(key, []).append(model_id)
-    return {key: dedupe_aliases(values) for key, values in index.items()}
+        for candidate in iter_model_match_candidates(model, alias_map):
+            for key in model_lookup_keys(candidate):
+                generic_index.setdefault(key, []).append(model_id)
+            if candidate in alias_map.get(model_id, []):
+                explicit_key = normalize_model_key(candidate)
+                if explicit_key:
+                    explicit_alias_index.setdefault(explicit_key, []).append(model_id)
+    return ModelMatcher(
+        generic_index={key: dedupe_aliases(values) for key, values in generic_index.items()},
+        explicit_alias_index={
+            key: values[0]
+            for key, values in ((key, dedupe_aliases(value_list)) for key, value_list in explicit_alias_index.items())
+            if len(values) == 1
+        },
+    )
 
 
 def model_lookup_keys(*values: Any) -> set[str]:
@@ -1087,6 +2320,7 @@ def model_lookup_keys(*values: Any) -> set[str]:
             candidate.split("/", 1)[-1],
             re.sub(r"[-_]?20\d{2}(?:[-_]?\d{2}){2}$", "", candidate),
             re.sub(r"[-_](latest|preview)$", "", candidate, flags=re.IGNORECASE),
+            re.sub(r"(?:[-_\s]+|\s*\()(latest|preview)\)?$", "", candidate, flags=re.IGNORECASE),
         }
         for variant in variants:
             key = normalize_model_key(variant)
@@ -1095,10 +2329,14 @@ def model_lookup_keys(*values: Any) -> set[str]:
     return keys
 
 
-def match_external_model(model_index: dict[str, list[str]], external_id: Any, external_name: Any) -> str | None:
+def match_external_model(matcher: ModelMatcher, external_id: Any, external_name: Any) -> str | None:
     for value in [external_id, external_name]:
+        explicit_key = normalize_model_key(str(value)) if value else ""
+        explicit = matcher.explicit_alias_index.get(explicit_key)
+        if explicit:
+            return explicit
         for key in model_lookup_keys(value):
-            matches = model_index.get(key) or []
+            matches = matcher.generic_index.get(key) or []
             if len(matches) == 1:
                 return matches[0]
     return None
