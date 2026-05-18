@@ -2033,6 +2033,7 @@ const specDetailsById = {
     computeCapability: "ROCm gfx803 / GCN 4.0",
     ipcNotes: "GCN 4.0；64 SP/CU；2 FP32 ops/clk per SP",
   },
+};
 
 const xianyuCnyById = {
   // Data Center
