@@ -4,17 +4,20 @@ const fieldDefs = [
   { key: "segment", label: "场景", type: "text", visible: true },
   { key: "architecture", label: "架构", type: "text", visible: true },
   { key: "releaseDate", label: "发布", type: "date", visible: true },
-  { key: "vramGB", label: "显存 GB", type: "number", visible: true },
+  { key: "vramGB", label: "显存 GB", type: "number", visible: true, heatmap: true },
   { key: "memoryType", label: "显存类型", type: "text", visible: true },
-  { key: "bandwidthGBs", label: "带宽 GB/s", type: "number", visible: true },
-  { key: "fp32TFLOPS", label: "FP32 TFLOPS", type: "number", visible: true },
-  { key: "fp16TFLOPS", label: "FP16 TFLOPS", type: "number", visible: true },
-  { key: "bf16TFLOPS", label: "BF16 TFLOPS", type: "number", visible: true },
-  { key: "fp8TFLOPS", label: "FP8 TFLOPS", type: "number", visible: true },
-  { key: "int8TOPS", label: "INT8 TOPS", type: "number", visible: true },
-  { key: "powerW", label: "功耗 W", type: "number", visible: true },
-  { key: "priceUSD", label: "价格 USD", type: "number", visible: true },
-  { key: "pricePerGb", label: "$/GB", type: "number", visible: true, derived: true },
+  { key: "bandwidthGBs", label: "带宽 GB/s", type: "number", visible: true, heatmap: true },
+  { key: "fp32TFLOPS", label: "FP32 TFLOPS", type: "number", visible: true, heatmap: true },
+  { key: "fp16TFLOPS", label: "FP16 TFLOPS", type: "number", visible: true, heatmap: true },
+  { key: "bf16TFLOPS", label: "BF16 TFLOPS", type: "number", visible: true, heatmap: true },
+  { key: "fp8TFLOPS", label: "FP8 TFLOPS", type: "number", visible: true, heatmap: true },
+  { key: "int8TOPS", label: "INT8 TOPS", type: "number", visible: true, heatmap: true },
+  { key: "powerW", label: "功耗 W", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "priceUSD", label: "价格 USD", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "pricePerGb", label: "$/GB", type: "number", visible: true, derived: true, heatmap: true, inverseHeatmap: true },
+  { key: "fp16PerWatt", label: "FP16/W", type: "number", visible: true, derived: true, heatmap: true, description: "FP16 TFLOPS 每瓦功耗效率（越高越好）" },
+  { key: "fp16PerDollar", label: "FP16/$", type: "number", visible: true, derived: true, heatmap: true, description: "FP16 TFLOPS 每美元性价比（越高越好）" },
+  { key: "bwPerDollar", label: "带宽/$", type: "number", visible: true, derived: true, heatmap: true, description: "内存带宽 GB/s 每美元性价比（越高越好）" },
   { key: "priceUpdated", label: "价格日期", type: "date", visible: true },
   { key: "cudaCores", label: "CUDA/SP", type: "number", visible: false },
   { key: "tensorCores", label: "Tensor/XMX", type: "number", visible: false },
@@ -24,7 +27,7 @@ const fieldDefs = [
   { key: "memoryBusBit", label: "位宽 bit", type: "number", visible: false },
   { key: "pcie", label: "PCIe", type: "text", visible: false },
   { key: "nvlinkGBs", label: "互联 GB/s", type: "number", visible: false },
-  { key: "msrpUSD", label: "MSRP USD", type: "number", visible: false },
+  { key: "msrpUSD", label: "MSRP USD", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
   { key: "merchant", label: "价格商家", type: "text", visible: false },
   { key: "source", label: "来源", type: "url", visible: false },
   { key: "notes", label: "备注", type: "text", visible: false },
@@ -32,13 +35,13 @@ const fieldDefs = [
 
 const specDetailFields = [
   { key: "gpuDie", label: "GPU 芯片", type: "text", visible: true },
-  { key: "baseClockMHz", label: "基础频率 MHz", type: "number", visible: true },
-  { key: "boostClockMHz", label: "Boost MHz", type: "number", visible: true },
-  { key: "memoryClockGbps", label: "显存速率 Gbps", type: "number", visible: true },
-  { key: "fp64TFLOPS", label: "FP64 TFLOPS", type: "number", visible: true },
+  { key: "baseClockMHz", label: "基础频率 MHz", type: "number", visible: true, heatmap: true },
+  { key: "boostClockMHz", label: "Boost MHz", type: "number", visible: true, heatmap: true },
+  { key: "memoryClockGbps", label: "显存速率 Gbps", type: "number", visible: true, heatmap: true },
+  { key: "fp64TFLOPS", label: "FP64 TFLOPS", type: "number", visible: true, heatmap: true },
   { key: "fp64Ratio", label: "FP64 比例", type: "text", visible: true },
-  { key: "tf32TFLOPS", label: "TF32 TFLOPS", type: "number", visible: true },
-  { key: "int4TOPS", label: "INT4 TOPS", type: "number", visible: true },
+  { key: "tf32TFLOPS", label: "TF32 TFLOPS", type: "number", visible: true, heatmap: true },
+  { key: "int4TOPS", label: "INT4 TOPS", type: "number", visible: true, heatmap: true },
   { key: "l1CacheKB", label: "L1/共享 KB", type: "number", visible: true },
   { key: "l2CacheMB", label: "L2 MB", type: "number", visible: true },
   { key: "l3CacheMB", label: "L3/Infinity MB", type: "number", visible: true },
@@ -46,8 +49,8 @@ const specDetailFields = [
   { key: "tmus", label: "TMUs", type: "number", visible: true },
   { key: "pixelRateGPixelS", label: "像素填充 GPixel/s", type: "number", visible: true },
   { key: "textureRateGTexelS", label: "纹理填充 GTexel/s", type: "number", visible: true },
-  { key: "dieSizeMm2", label: "Die mm²", type: "number", visible: true },
-  { key: "transistorsBillion", label: "晶体管 B", type: "number", visible: true },
+  { key: "dieSizeMm2", label: "Die mm²", type: "number", visible: true, heatmap: true },
+  { key: "transistorsBillion", label: "晶体管 B", type: "number", visible: true, heatmap: true },
   {
     key: "fp32OpsPerClock",
     label: "FP32/周期",
@@ -111,6 +114,9 @@ const fieldOrder = [
   "tf32TFLOPS",
   "fp8TFLOPS",
   "int8TOPS",
+  "fp16PerWatt",
+  "fp16PerDollar",
+  "bwPerDollar",
   "int4TOPS",
   "rops",
   "tmus",
@@ -126,8 +132,16 @@ const fieldOrder = [
 ];
 const fieldRank = new Map(fieldOrder.map((key, index) => [key, index]));
 fieldDefs.sort((a, b) => (fieldRank.get(a.key) ?? 999) - (fieldRank.get(b.key) ?? 999));
+
+const defaultVisibleKeys = new Set([
+  "model", "vendor", "segment", "architecture", "releaseDate",
+  "vramGB", "memoryType", "bandwidthGBs",
+  "fp32TFLOPS", "fp16TFLOPS", "bf16TFLOPS", "fp8TFLOPS", "int8TOPS",
+  "powerW", "priceUSD", "pricePerGb", "fp16PerWatt", "fp16PerDollar",
+  "priceUpdated",
+]);
 fieldDefs.forEach((field) => {
-  field.visible = field.key !== "notes";
+  field.visible = defaultVisibleKeys.has(field.key);
 });
 
 const seedGpus = [
@@ -409,6 +423,68 @@ const seedGpus = [
     merchant: "manual",
     source: "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5080/",
     notes: "High-end Blackwell desktop card.",
+  },
+  {
+    id: "nvidia-rtx-5070-ti",
+    model: "NVIDIA GeForce RTX 5070 Ti",
+    vendor: "NVIDIA",
+    segment: "Desktop",
+    architecture: "Blackwell",
+    releaseDate: "2025-02-20",
+    processNode: "TSMC 4NP",
+    cudaCores: 8960,
+    tensorCores: 280,
+    rtCores: 70,
+    computeUnits: 70,
+    vramGB: 16,
+    memoryType: "GDDR7",
+    memoryBusBit: 256,
+    bandwidthGBs: 896,
+    fp32TFLOPS: 44.1,
+    fp16TFLOPS: 706,
+    bf16TFLOPS: 706,
+    fp8TFLOPS: 1411,
+    int8TOPS: 1411,
+    powerW: 300,
+    pcie: "PCIe 5.0 x16",
+    nvlinkGBs: null,
+    msrpUSD: 749,
+    priceUSD: 870,
+    priceUpdated: "2026-05-12",
+    merchant: "manual",
+    source: "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-ti/",
+    notes: "Blackwell mid-high; strong BW for local inference.",
+  },
+  {
+    id: "nvidia-rtx-5070",
+    model: "NVIDIA GeForce RTX 5070",
+    vendor: "NVIDIA",
+    segment: "Desktop",
+    architecture: "Blackwell",
+    releaseDate: "2025-03-05",
+    processNode: "TSMC 4NP",
+    cudaCores: 6144,
+    tensorCores: 192,
+    rtCores: 48,
+    computeUnits: 48,
+    vramGB: 12,
+    memoryType: "GDDR7",
+    memoryBusBit: 192,
+    bandwidthGBs: 672,
+    fp32TFLOPS: 30.8,
+    fp16TFLOPS: 492,
+    bf16TFLOPS: 492,
+    fp8TFLOPS: 985,
+    int8TOPS: 985,
+    powerW: 250,
+    pcie: "PCIe 5.0 x16",
+    nvlinkGBs: null,
+    msrpUSD: 549,
+    priceUSD: 620,
+    priceUpdated: "2026-05-12",
+    merchant: "manual",
+    source: "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070/",
+    notes: "Blackwell mid-range; good FP8 for quantized LLMs.",
   },
   {
     id: "nvidia-rtx-4090",
@@ -752,6 +828,37 @@ const seedGpus = [
     notes: "Solid 16GB mid-range.",
   },
   {
+    id: "amd-rx-9070-xt",
+    model: "AMD Radeon RX 9070 XT",
+    vendor: "AMD",
+    segment: "Desktop",
+    architecture: "RDNA 4",
+    releaseDate: "2025-03-27",
+    processNode: "TSMC N4P",
+    cudaCores: 4096,
+    tensorCores: null,
+    rtCores: 64,
+    computeUnits: 64,
+    vramGB: 16,
+    memoryType: "GDDR6",
+    memoryBusBit: 256,
+    bandwidthGBs: 640,
+    fp32TFLOPS: 48.7,
+    fp16TFLOPS: 97.4,
+    bf16TFLOPS: null,
+    fp8TFLOPS: null,
+    int8TOPS: 771,
+    powerW: 304,
+    pcie: "PCIe 5.0 x16",
+    nvlinkGBs: null,
+    msrpUSD: 599,
+    priceUSD: 649,
+    priceUpdated: "2026-05-12",
+    merchant: "manual",
+    source: "https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html",
+    notes: "RDNA 4; dedicated AI accelerators; best price/perf in class.",
+  },
+  {
     id: "intel-arc-a770-16gb",
     model: "Intel Arc A770 16GB",
     vendor: "Intel",
@@ -783,6 +890,37 @@ const seedGpus = [
     notes: "Cheap 16GB VRAM option, check software compatibility.",
   },
   {
+    id: "intel-arc-b580",
+    model: "Intel Arc B580",
+    vendor: "Intel",
+    segment: "Desktop",
+    architecture: "Xe2 Battlemage",
+    releaseDate: "2024-12-05",
+    processNode: "TSMC N5",
+    cudaCores: null,
+    tensorCores: null,
+    rtCores: 20,
+    computeUnits: 20,
+    vramGB: 12,
+    memoryType: "GDDR6",
+    memoryBusBit: 192,
+    bandwidthGBs: 456,
+    fp32TFLOPS: 10.7,
+    fp16TFLOPS: 21.5,
+    bf16TFLOPS: null,
+    fp8TFLOPS: null,
+    int8TOPS: 215,
+    powerW: 190,
+    pcie: "PCIe 4.0 x8",
+    nvlinkGBs: null,
+    msrpUSD: 249,
+    priceUSD: 260,
+    priceUpdated: "2026-05-12",
+    merchant: "manual",
+    source: "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/arc/desktop/b-series/b580.html",
+    notes: "Battlemage; competitive price/VRAM ratio; check driver maturity.",
+  },
+  {
     id: "apple-m3-max-40gpu",
     model: "Apple M3 Max 40-core GPU",
     vendor: "Apple",
@@ -812,6 +950,37 @@ const seedGpus = [
     merchant: "",
     source: "https://www.apple.com/newsroom/2023/10/apple-unveils-m3-m3-pro-and-m3-max/",
     notes: "Unified memory ceiling depends on Mac configuration.",
+  },
+  {
+    id: "apple-m4-max-40gpu",
+    model: "Apple M4 Max 40-core GPU",
+    vendor: "Apple",
+    segment: "Integrated",
+    architecture: "Apple GPU",
+    releaseDate: "2024-11-08",
+    processNode: "TSMC N3E",
+    cudaCores: null,
+    tensorCores: null,
+    rtCores: null,
+    computeUnits: 40,
+    vramGB: 128,
+    memoryType: "Unified LPDDR5X",
+    memoryBusBit: null,
+    bandwidthGBs: 546,
+    fp32TFLOPS: 21.3,
+    fp16TFLOPS: null,
+    bf16TFLOPS: null,
+    fp8TFLOPS: null,
+    int8TOPS: null,
+    powerW: null,
+    pcie: "SoC",
+    nvlinkGBs: null,
+    msrpUSD: null,
+    priceUSD: null,
+    priceUpdated: null,
+    merchant: "",
+    source: "https://www.apple.com/newsroom/2024/10/apple-introduces-m4-pro-and-m4-max/",
+    notes: "Unified memory up to 128 GB; excellent inference bandwidth per watt.",
   },
   {
     id: "apple-m2-ultra-76gpu",
@@ -1158,6 +1327,67 @@ const specDetailsById = {
     transistorsBillion: 134,
     computeCapability: "Metal 3",
   },
+  "nvidia-rtx-5070-ti": {
+    gpuDie: "GB203",
+    baseClockMHz: 2122,
+    boostClockMHz: 2452,
+    memoryClockGbps: 28,
+    fp64Ratio: "1:64",
+    l2CacheMB: 64,
+    rops: 112,
+    tmus: 280,
+    dieSizeMm2: 378,
+    transistorsBillion: 45.6,
+    fp32OpsPerClock: 128,
+    computeCapability: "Blackwell / CUDA 10.x",
+    sparsitySupport: "2:4 sparse Tensor Core",
+  },
+  "nvidia-rtx-5070": {
+    gpuDie: "GB205",
+    baseClockMHz: 1987,
+    boostClockMHz: 2506,
+    memoryClockGbps: 28,
+    fp64Ratio: "1:64",
+    l2CacheMB: 48,
+    rops: 64,
+    tmus: 192,
+    transistorsBillion: 30,
+    fp32OpsPerClock: 128,
+    computeCapability: "Blackwell / CUDA 10.x",
+    sparsitySupport: "2:4 sparse Tensor Core",
+  },
+  "intel-arc-b580": {
+    gpuDie: "BMG-G21",
+    baseClockMHz: 1665,
+    boostClockMHz: 2670,
+    memoryClockGbps: 19,
+    l2CacheMB: 16,
+    rops: 80,
+    tmus: 160,
+    transistorsBillion: 18.7,
+    computeCapability: "Xe2 HPG / oneAPI Level Zero",
+    sparsitySupport: "XMX Matrix Engines",
+  },
+  "amd-rx-9070-xt": {
+    gpuDie: "Navi 48 XTX",
+    baseClockMHz: 1580,
+    boostClockMHz: 2970,
+    memoryClockGbps: 20,
+    fp64TFLOPS: 1.52,
+    fp64Ratio: "1:32",
+    l2CacheMB: 4,
+    l3CacheMB: 64,
+    rops: 128,
+    tmus: 256,
+    transistorsBillion: 53.9,
+    computeCapability: "ROCm gfx1201 / RDNA 4",
+    sparsitySupport: "Matrix Core (WMMA)",
+  },
+  "apple-m4-max-40gpu": {
+    gpuDie: "Apple M4 Max",
+    transistorsBillion: 92,
+    computeCapability: "Metal 3",
+  },
 };
 
 const state = {
@@ -1205,6 +1435,7 @@ const elements = {
   applyImportButton: document.querySelector("#applyImportButton"),
   importResult: document.querySelector("#importResult"),
   exportDataButton: document.querySelector("#exportDataButton"),
+  exportCsvButton: document.querySelector("#exportCsvButton"),
 };
 
 init();
@@ -1374,6 +1605,10 @@ function bindEvents() {
   elements.exportDataButton.addEventListener("click", () => {
     exportCurrentData();
   });
+
+  elements.exportCsvButton.addEventListener("click", () => {
+    exportCsv();
+  });
 }
 
 function render() {
@@ -1395,10 +1630,33 @@ function getFilteredRows() {
 }
 
 function enrichGpuRow(gpu) {
+  const fp16 = isUsableNumber(gpu.fp16TFLOPS) ? Number(gpu.fp16TFLOPS) : null;
+  const power = isUsableNumber(gpu.powerW) ? Number(gpu.powerW) : null;
+  const price = isUsableNumber(gpu.priceUSD) ? Number(gpu.priceUSD) : null;
+  const bw = isUsableNumber(gpu.bandwidthGBs) ? Number(gpu.bandwidthGBs) : null;
   return {
     ...gpu,
     pricePerGb: computePricePerGb(gpu),
+    fp16PerWatt: fp16 && power ? Number((fp16 / power).toFixed(3)) : null,
+    fp16PerDollar: fp16 && price ? Number((fp16 / price).toFixed(4)) : null,
+    bwPerDollar: bw && price ? Number((bw / price).toFixed(4)) : null,
   };
+}
+
+function computeColumnStats(rows, columns) {
+  const stats = {};
+  for (const field of columns) {
+    if (field.heatmap) {
+      const values = rows.map(r => r[field.key]).filter(isUsableNumber).map(Number);
+      stats[field.key] = values.length ? { min: Math.min(...values), max: Math.max(...values) } : null;
+    }
+  }
+  return stats;
+}
+
+function getHeatmapColor(percent) {
+  if (percent < 50) return `rgba(255, ${Math.floor(255 * (percent / 50))}, 0, 0.2)`;
+  return `rgba(${Math.floor(255 * (1 - (percent - 50) / 50))}, 255, 0, 0.2)`;
 }
 
 function compareValues(a, b, type) {
@@ -1464,6 +1722,7 @@ function renderSummary(rows) {
 
 function renderTable(rows) {
   const columns = fieldDefs.filter((field) => state.visibleColumns.has(field.key));
+  const stats = computeColumnStats(rows, columns);
   elements.tableHead.innerHTML = `<tr>${columns
     .map(
       (field) =>
@@ -1475,7 +1734,7 @@ function renderTable(rows) {
     .map(
       (gpu) =>
         `<tr>${columns
-          .map((field) => `<td>${formatCell(gpu, field)}</td>`)
+          .map((field) => `<td>${formatCell(gpu, field, stats[field.key])}</td>`)
           .join("")}</tr>`,
     )
     .join("");
@@ -1605,8 +1864,20 @@ function operatorOptions(selected) {
   return ops.map((op) => `<option value="${op}" ${op === selected ? "selected" : ""}>${labels[op]}</option>`).join("");
 }
 
-function formatCell(gpu, field) {
+function formatCell(gpu, field, stat) {
   const value = gpu[field.key];
+  if (field.heatmap && isUsableNumber(value) && stat) {
+    const num = Number(value);
+    const lengthPercent = ((num - stat.min) / (stat.max - stat.min || 1)) * 100;
+    const colorPercent = field.inverseHeatmap ? 100 - lengthPercent : lengthPercent;
+    const color = getHeatmapColor(colorPercent);
+    let displayStr;
+    if (field.key === "priceUSD" || field.key === "msrpUSD") displayStr = `$${formatNumber(num)}`;
+    else if (field.key === "pricePerGb") displayStr = `$${num.toFixed(2)}`;
+    else if (field.key === "fp16PerWatt" || field.key === "fp16PerDollar" || field.key === "bwPerDollar") displayStr = num.toFixed(3);
+    else displayStr = formatNumber(num);
+    return `<div class="heatmap-container mini" title="${displayStr}"><div class="heatmap-bar" style="width:${Math.max(0, Math.min(100, lengthPercent)).toFixed(1)}%;background:${color}"></div><span class="heatmap-value">${escapeHtml(displayStr)}</span></div>`;
+  }
   if (field.key === "model") return `<span class="model-cell">${escapeHtml(value)}</span>`;
   if (field.key === "segment") return `<span class="tag">${escapeHtml(value)}</span>`;
   if (field.key === "priceUSD") return value ? `$${formatNumber(value)}` : "-";
@@ -1740,6 +2011,25 @@ function exportCurrentData() {
   anchor.href = url;
   anchor.download = `gpu-table-${new Date().toISOString().slice(0, 10)}.json`;
   anchor.click();
+  URL.revokeObjectURL(url);
+}
+
+function exportCsv() {
+  const activeFields = fieldDefs.filter(f => state.visibleColumns.has(f.key));
+  const rows = getFilteredRows();
+  const escape = v => {
+    const s = v === null || v === undefined ? "" : String(v);
+    return s.includes(",") || s.includes('"') || s.includes("\n")
+      ? `"${s.replace(/"/g, '""')}"` : s;
+  };
+  const header = activeFields.map(f => escape(f.label)).join(",");
+  const body = rows.map(r => activeFields.map(f => escape(r[f.key])).join(",")).join("\n");
+  const blob = new Blob(["\uFEFF" + header + "\n" + body], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `gpu-table-${new Date().toISOString().slice(0, 10)}.csv`;
+  a.click();
   URL.revokeObjectURL(url);
 }
 
