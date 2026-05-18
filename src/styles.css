@@ -54,16 +54,16 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  padding: 28px 32px 20px;
+  gap: 16px;
+  padding: 10px 24px;
   border-bottom: 1px solid var(--line);
   background: #fbfcfc;
 }
 
 .eyebrow {
-  margin: 0 0 4px;
+  margin: 0;
   color: var(--accent);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -76,12 +76,12 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(20px, 3vw, 28px);
-  line-height: 1.1;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: 17px;
+  font-size: 14px;
 }
 
 .actions,
@@ -97,12 +97,13 @@ h2 {
 .ghost-button,
 .icon-button,
 .text-button {
-  min-height: 38px;
-  border-radius: 8px;
+  min-height: 28px;
+  border-radius: 6px;
   border: 1px solid var(--line);
   background: var(--panel);
   color: var(--ink);
-  padding: 0 14px;
+  padding: 0 10px;
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -135,9 +136,9 @@ h2 {
 }
 
 .workspace {
-  padding: 10px 32px 28px;
+  padding: 8px 24px 20px;
   display: grid;
-  gap: 8px;
+  gap: 6px;
 }
 
 .workspace > * {
@@ -182,7 +183,7 @@ h2 {
 
 label {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
 }
 
@@ -194,8 +195,9 @@ textarea {
   border-radius: 6px;
   background: #fff;
   color: var(--ink);
-  min-height: 26px;
-  padding: 4px 8px;
+  min-height: 24px;
+  padding: 2px 7px;
+  font-size: 12px;
 }
 
 input:focus,
@@ -208,41 +210,41 @@ textarea:focus {
 .insight-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 6px;
+  gap: 5px;
 }
 
 .metric {
   min-height: 0;
-  padding: 6px 12px;
+  padding: 4px 10px;
   background: var(--panel);
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 .metric span {
   display: block;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 800;
 }
 
 .metric strong {
   display: block;
-  margin-top: 2px;
-  font-size: 15px;
+  margin-top: 1px;
+  font-size: 13px;
 }
 
 .filters-panel,
 .table-panel {
-  padding: 8px 12px;
+  padding: 6px 10px;
 }
 
 .panel-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
-  margin-bottom: 8px;
+  gap: 10px;
+  margin-bottom: 4px;
 }
 
 .rules {
@@ -635,20 +637,20 @@ textarea {
 
 .nav-tabs {
   display: flex;
-  gap: 12px;
-  margin-bottom: 8px;
+  gap: 8px;
+  margin-bottom: 4px;
   border-bottom: 1px solid var(--line);
 }
 
 .nav-link {
   display: inline-flex;
   align-items: center;
-  min-height: 42px;
-  padding: 0 16px;
+  min-height: 32px;
+  padding: 0 12px;
   text-decoration: none;
   color: var(--muted);
   border-bottom: 2px solid transparent;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 800;
   transition: all 0.2s;
 }
