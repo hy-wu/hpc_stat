@@ -2535,6 +2535,35 @@ const elements = {
   exportCsvButton: document.querySelector("#exportCsvButton"),
 };
 
+const VENDOR_LOGOS = {
+  nvidia: "https://www.nvidia.com/favicon.ico",
+  amd: "https://www.amd.com/favicon.ico",
+  intel: "https://www.intel.com/favicon.ico",
+  apple: "https://www.apple.com/favicon.ico",
+  google: "https://www.google.com/favicon.ico",
+  huawei: "https://consumer.huawei.com/favicon.ico",
+};
+
+const SEGMENT_CLASS = {
+  "Data Center": "seg-data-center",
+  "Cloud Accelerator": "seg-cloud-accelerator",
+  "Workstation": "seg-workstation",
+  "Desktop": "seg-desktop",
+  "Integrated": "seg-integrated",
+  "Inference": "seg-inference",
+  "FPGA": "seg-fpga",
+  "Mining": "seg-mining",
+  "Many-core CPU": "seg-many-core-cpu",
+};
+
+const ACCEL_TYPE_CLASS = {
+  "GPU": "type-gpu",
+  "TPU": "type-tpu",
+  "NPU": "type-npu",
+  "FPGA": "type-fpga",
+  "Many-core CPU": "type-many-core-cpu",
+};
+
 init();
 
 function init() {
@@ -2981,14 +3010,6 @@ function operatorOptions(selected) {
   return ops.map((op) => `<option value="${op}" ${op === selected ? "selected" : ""}>${labels[op]}</option>`).join("");
 }
 
-const VENDOR_LOGOS = {
-  nvidia: "https://www.nvidia.com/favicon.ico",
-  amd: "https://www.amd.com/favicon.ico",
-  intel: "https://www.intel.com/favicon.ico",
-  apple: "https://www.apple.com/favicon.ico",
-  google: "https://www.google.com/favicon.ico",
-  huawei: "https://consumer.huawei.com/favicon.ico",
-};
 
 function vendorSlug(v) {
   return (v || "").toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -3004,25 +3025,6 @@ function renderVendorTag(vendor) {
   return `<span class="tag vendor-tag vendor-${escapeAttr(slug)}">${img}${escapeHtml(vendor)}</span>`;
 }
 
-const SEGMENT_CLASS = {
-  "Data Center": "seg-data-center",
-  "Cloud Accelerator": "seg-cloud-accelerator",
-  "Workstation": "seg-workstation",
-  "Desktop": "seg-desktop",
-  "Integrated": "seg-integrated",
-  "Inference": "seg-inference",
-  "FPGA": "seg-fpga",
-  "Mining": "seg-mining",
-  "Many-core CPU": "seg-many-core-cpu",
-};
-
-const ACCEL_TYPE_CLASS = {
-  "GPU": "type-gpu",
-  "TPU": "type-tpu",
-  "NPU": "type-npu",
-  "FPGA": "type-fpga",
-  "Many-core CPU": "type-many-core-cpu",
-};
 
 function archClass(arch) {
   if (!arch) return "";
