@@ -696,8 +696,7 @@ textarea {
 
 /* -- Vendor tags: logo + text -- */
 .tag.vendor-tag { gap: 5px; padding-left: 5px; }
-.vendor-logo { width: 11px; height: 11px; vertical-align: middle; flex-shrink: 0; object-fit: contain; }
-.compact .vendor-logo { width: 9px; height: 9px; }
+.vendor-logo { width: 1em; height: 1em; vertical-align: middle; flex-shrink: 0; object-fit: contain; }
 .tag.vendor-nvidia  { background: #213600; color: #a0e020; }
 .tag.vendor-amd     { background: #500000; color: #ff9898; }
 .tag.vendor-intel   { background: #002d5c; color: #7ec8ff; }
