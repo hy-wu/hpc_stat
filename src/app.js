@@ -2095,7 +2095,7 @@ const seedGpus = [
     computeUnits: 26,
     // BM1397D 无可寻址 DRAM；片内只有几 KB SRAM 用于 SHA-256 流水线状态缓冲
     vramGB: null,
-    memoryType: "On-die SRAM (片内 ~几 KB/芯片，仅用于流水线缓冲)",
+    memoryType: "On-die SRAM",
     memoryBusBit: null,
     memoryClockGbps: null,
     bandwidthGBs: null,
@@ -2134,7 +2134,7 @@ const seedGpus = [
     // 每张矿板 18 颗 BM1397；完整矿机 3 张板 = 54 颗
     computeUnits: 18,
     vramGB: null,
-    memoryType: "On-die SRAM (片内 ~几 KB/芯片，仅用于流水线缓冲)",
+    memoryType: "On-die SRAM",
     memoryBusBit: null,
     memoryClockGbps: null,
     bandwidthGBs: null,
@@ -2200,6 +2200,48 @@ const seedGpus = [
     notes: "Virtex UltraScale+ VU9P FPGA；BCU1525 是国产仿制版，以太坊矿潮时代大量流入闲鱼，价格极低。计算性能完全取决于比特流：DSP48E2×6840, LUT6×1,143,000, FF×2,364,480, BRAM 36K×4320（≈18.5 MB）, URAM×960（≈33.75 MB）。FP32/INT8 为理论最大值，实际工程设计通常只能达到 50–80%。",
   },
   {
+    id: "xilinx-zynq-7010-dev",
+    model: "Xilinx Zynq-7010 Dev Board (PYNQ-Z1 / Arty-Z7-10)",
+    vendor: "Xilinx",
+    segment: "FPGA",
+    acceleratorType: "FPGA",
+    architecture: "Zynq-7000 (ARM + Artix-7)",
+    gpuDie: "XC7Z010-1CLG400",
+    releaseDate: "2013-02-01",
+    processNode: "TSMC 28 nm",
+    cudaCores: null,
+    tensorCores: null,
+    rtCores: null,
+    // PL 侧 DSP48E1 × 80，Zynq-7000 最小型号
+    computeUnits: 80,
+    // 典型开发板载 512 MB DDR3（PS 32-bit）
+    vramGB: 0.512,
+    memoryType: "DDR3-1066 (PS 1ch, 32-bit)",
+    memoryBusBit: 32,
+    memoryClockGbps: 1.066,
+    // 32-bit × 1066 MT/s ÷ 8 = 4.26 GB/s
+    bandwidthGBs: 4.26,
+    // HLS FP32 IP：80/3.5 ≈ 23 FP32 单元 × 2 FLOPS × 200 MHz ≈ 9 GFLOPS
+    fp32TFLOPS: 0.009,
+    fp16TFLOPS: null,
+    bf16TFLOPS: null,
+    fp8TFLOPS: null,
+    // DSP48E1 INT8 打包：80 × 2 × 2 × 150 MHz = 48 GOPS
+    int8TOPS: 0.048,
+    // 开发板整体功耗约 3-5 W
+    powerW: 5,
+    pcie: "N/A（USB/以太网接口）",
+    nvlinkGBs: null,
+    msrpUSD: 149,
+    priceUSD: 8,
+    priceUpdated: "2026-05-19",
+    availability: "used / 闲鱼 FPGA 开发板",
+    softwareStack: "Vivado / Vitis / PetaLinux / PYNQ",
+    merchant: "used",
+    source: "https://www.xilinx.com/products/silicon-devices/soc/zynq-7000.html",
+    notes: "Zynq-7000 最低端型号（7010），PYNQ-Z1 / Arty-Z7-10 等开发板常用，闲鱼约 ¥50-80。PL = Artix-7 等效：LUT6×17,600 / FF×35,200 / DSP48E1×80 / BRAM 36K×60（≈ 270 KB）；PS = ARM Cortex-A9 × 2 @ 667 MHz + DDR3/USB/GigE 硬核。是 FPGA 入门学习的主流平台，资源是 Z-7020 的约 1/3。",
+  },
+  {
     id: "xilinx-zynq-7020-s9-ctrl",
     model: "Antminer S9 Control Board (Zynq-7020)",
     vendor: "Xilinx",
@@ -2241,6 +2283,90 @@ const seedGpus = [
     merchant: "used",
     source: "https://www.xilinx.com/products/silicon-devices/soc/zynq-7000.html",
     notes: "蚂蚁 S9 矿机控制板焊载 Xilinx Zynq-7020 SoC，是极廉价 FPGA 入门硬件（闲鱼约 ¥20-30）。【Zynq-7000 系列】= Xilinx 2012 年推出的 All Programmable SoC，PS（Processing System）= 双核 ARM Cortex-A9 @ 666 MHz + DDR/USB/GigE 硬核；PL（Programmable Logic）= Artix-7 架构 FPGA：LUT6×53,200 / FF×106,400 / DSP48E1×220 / BRAM 36K×140（≈ 630 KB）。向上一代为 Zynq UltraScale+ MPSoC（四核 A53 + R5 + Mali + UltraScale+ PL，16nm）。FP32/INT8 值为 HLS IP 实现的估算上限，实际因比特流差异极大。",
+  },
+  {
+    id: "xilinx-zynq-7045-zc706",
+    model: "Xilinx Zynq-7045 (ZC706 Eval Board)",
+    vendor: "Xilinx",
+    segment: "FPGA",
+    acceleratorType: "FPGA",
+    architecture: "Zynq-7000 (ARM + Kintex-7)",
+    gpuDie: "XC7Z045-2FFG900",
+    releaseDate: "2013-06-01",
+    processNode: "TSMC 28 nm",
+    cudaCores: null,
+    tensorCores: null,
+    rtCores: null,
+    // PL 侧 DSP48E1 × 900（Kintex-7 级别，Z-7000 高端型号）
+    computeUnits: 900,
+    // ZC706：PS 侧 1 GB DDR3 + PL 侧 1 GB DDR3（MIG 独立通道）
+    vramGB: 1.0,
+    memoryType: "DDR3-1066 (PL 64-bit MIG + PS 32-bit)",
+    memoryBusBit: 64,
+    memoryClockGbps: 1.066,
+    // PL MIG 64-bit × 1066 MT/s ÷ 8 = 8.53 GB/s
+    bandwidthGBs: 8.53,
+    // HLS FP32 IP：900/3.5 ≈ 257 单元 × 2 × 300 MHz ≈ 154 GFLOPS
+    fp32TFLOPS: 0.154,
+    fp16TFLOPS: null,
+    bf16TFLOPS: null,
+    fp8TFLOPS: null,
+    // DSP48E1 INT8 打包：900 × 2 × 2 × 250 MHz = 900 GOPS
+    int8TOPS: 0.9,
+    powerW: 20,
+    pcie: "PCIe 2.0 x8 (PL MIG)",
+    nvlinkGBs: null,
+    msrpUSD: 2495,
+    priceUSD: 110,
+    priceUpdated: "2026-05-19",
+    availability: "used / ZC706 官方评估板",
+    softwareStack: "Vivado / Vitis / PetaLinux / SDSoC",
+    merchant: "used",
+    source: "https://www.xilinx.com/products/boards-and-kits/ek-z7-zc706-g.html",
+    notes: "Zynq-7000 高端型号（7045），ZC706 官方评估板，闲鱼约 ¥800-1500。PL = Kintex-7 级别（非 Artix-7）：LUT6×218,600 / FF×437,200 / DSP48E1×900 / BRAM 36K×545（≈ 2.45 MB）；PS = ARM Cortex-A9 × 2 @ 800 MHz（-2 speed grade）。含 PCIe 2.0 x8 / SFP+ / 2× FMC 接口，FP32 为 HLS IP 估算上限。",
+  },
+  {
+    id: "xilinx-zu3eg-ultra96",
+    model: "Xilinx Zynq UltraScale+ ZU3EG (Ultra96-V2)",
+    vendor: "Xilinx",
+    segment: "FPGA",
+    acceleratorType: "FPGA",
+    architecture: "Zynq UltraScale+ MPSoC",
+    gpuDie: "XCZU3EG-SBVA484",
+    releaseDate: "2019-06-01",
+    processNode: "TSMC 16 nm FinFET+",
+    cudaCores: null,
+    tensorCores: null,
+    rtCores: null,
+    // PL 侧 DSP58E2 × 360（UltraScale+ 新一代乘加单元，比 DSP48E1 更高效）
+    computeUnits: 360,
+    // Ultra96-V2：2 GB LPDDR4（PS 64-bit 双 32-bit 通道）
+    vramGB: 2.0,
+    memoryType: "LPDDR4-4267 (PS 64-bit)",
+    memoryBusBit: 64,
+    memoryClockGbps: 4.267,
+    // 4266 MT/s × 8 bytes = 34.1 GB/s 理论峰值；实际有效约 17.1 GB/s（双 32-bit 通道合并）
+    bandwidthGBs: 17.1,
+    // HLS FP32 IP（DSP58E2 约 4 个/单元）：360/4 × 2 × 400 MHz = 72 GFLOPS
+    fp32TFLOPS: 0.072,
+    fp16TFLOPS: null,
+    bf16TFLOPS: null,
+    fp8TFLOPS: null,
+    // DSP58E2 级联 INT8：360 × 2 × 2 × 400 MHz = 576 GOPS
+    int8TOPS: 0.576,
+    // 板载功耗：Ultra96-V2 约 15 W（含 PS + PL + DRAM）
+    powerW: 15,
+    pcie: "PCIe Gen2 x4 (PS 硬核，依板载引出)",
+    nvlinkGBs: null,
+    // Ultra96-V2 新品约 $249；闲鱼 ZU3EG SoM 约 ¥400-600
+    msrpUSD: 249,
+    priceUSD: 65,
+    priceUpdated: "2026-05-19",
+    availability: "used / Ultra96-V2 / PYNQ-ZU 开发板",
+    softwareStack: "Vitis / PetaLinux / PYNQ / Vitis AI",
+    merchant: "used",
+    source: "https://www.xilinx.com/products/silicon-devices/soc/zynq-ultrascale-mpsoc.html",
+    notes: "Zynq UltraScale+ MPSoC，Xilinx 第二代 All Programmable SoC，16nm 工艺，Ultra96-V2 开发板闲鱼约 ¥400-600。PS = 四核 ARM Cortex-A53 @ 1.2 GHz + 双核 Cortex-R5F @ 500 MHz + ARM Mali-400 MP2 GPU @ 600 MHz；PL = UltraScale+ FPGA：LUT6×70,560 / FF×141,120 / DSP58E2×360 / BRAM 36K×216（≈ 972 KB）；无 URAM（从 ZU4EV 起才有）。FP32/INT8 为 HLS / Vitis AI 理论峰值。",
   },
   {
     id: "amd-epyc-7742",
@@ -3146,9 +3272,56 @@ const specDetailsById = {
     l2CacheMB: 0.5,
     // ARM Cortex-A9 L1D: 32 KB per core × 2 = 64 KB total
     l1CacheKB: 64,
+    // PL DSP48E1 FP64 HLS（约 12 DSP/单元）：220/12 ≈ 18 单元 × 2 × 200 MHz ≈ 7.2 GFLOPS；+ PS ARM VFP ≈ 2.7 GFLOPS；合计 ≈ 0.01 TFLOPS
+    fp64TFLOPS: 0.01,
     computeCapability: "FPGA（Vivado / Vitis）",
     ipcNotes: "Zynq-7020 PS：ARM Cortex-A9 × 2 @ 666 MHz；PL：Artix-7，DSP48E1×220, LUT6×53,200, BRAM×630 KB；FP32/INT8 为 HLS 实现估算，极度取决于比特流设计",
     transistorsBillion: 0.85,
+  },
+  "xilinx-zynq-7010-dev": {
+    baseClockMHz: 667,
+    boostClockMHz: 667,
+    // BRAM 36K × 60 = 2160 Kbit ÷ 8 ÷ 1024 ≈ 0.26 MB on-chip SRAM
+    l3CacheMB: 0.26,
+    // PS 侧 PL390 L2 cache 512 KB（与 Z-7020 相同 PS 架构）
+    l2CacheMB: 0.5,
+    // ARM Cortex-A9 L1D: 32 KB/核 × 2 = 64 KB
+    l1CacheKB: 64,
+    // PL DSP48E1 FP64 HLS：80/12 ≈ 6 单元 × 2 × 150 MHz ≈ 1.8 GFLOPS；+ PS ARM VFP ≈ 2.7 GFLOPS；合计 ≈ 0.005 TFLOPS
+    fp64TFLOPS: 0.005,
+    computeCapability: "FPGA（Vivado / Vitis）",
+    ipcNotes: "Zynq-7010 PS：ARM Cortex-A9 × 2 @ 667 MHz；PL：Artix-7 最小资源，DSP48E1×80, LUT6×17,600, BRAM×270 KB；PYNQ-Z1 / Arty-Z7-10 等开发板的主芯片",
+    transistorsBillion: 0.43,
+  },
+  "xilinx-zynq-7045-zc706": {
+    baseClockMHz: 800,
+    boostClockMHz: 800,
+    // BRAM 36K × 545 = 19620 Kbit ÷ 8 ÷ 1024 ≈ 2.39 MB on-chip SRAM
+    l3CacheMB: 2.39,
+    // PS 侧 PL390 L2 cache 512 KB
+    l2CacheMB: 0.5,
+    // ARM Cortex-A9 L1D: 32 KB/核 × 2 = 64 KB
+    l1CacheKB: 64,
+    // PL DSP48E1 FP64 HLS：900/12 ≈ 75 单元 × 2 × 250 MHz ≈ 37.5 GFLOPS；+ PS ARM VFP ≈ 3.2 GFLOPS；合计 ≈ 0.04 TFLOPS
+    fp64TFLOPS: 0.04,
+    computeCapability: "FPGA（Vivado / Vitis）",
+    ipcNotes: "Zynq-7045 PS：ARM Cortex-A9 × 2 @ 800 MHz（-2 speed grade）；PL：Kintex-7 级别，DSP48E1×900, LUT6×218,600, BRAM×2.45 MB；ZC706 官方评估板含 PCIe 2.0 x8 / SFP+ / 2× FMC",
+    transistorsBillion: 1.5,
+  },
+  "xilinx-zu3eg-ultra96": {
+    baseClockMHz: 1200,
+    boostClockMHz: 1500,
+    // BRAM 36K × 216 = 7776 Kbit ÷ 8 ÷ 1024 ≈ 0.95 MB on-chip SRAM（ZU3EG 无 URAM）
+    l3CacheMB: 0.95,
+    // A53 四核共享 L2 cache 1 MB（ARM CCI-400 互联）
+    l2CacheMB: 1.0,
+    // A53 L1D: 32 KB/核 × 4 = 128 KB（R5F TCM 64 KB×2 另计）
+    l1CacheKB: 128,
+    // PL DSP58E2 FP64 HLS（约 10 DSP/FP64 单元）：360/10 ≈ 36 单元 × 2 × 350 MHz ≈ 25 GFLOPS；+ A53 scalar FP64 ≈ 10 GFLOPS；合计 ≈ 0.035 TFLOPS
+    fp64TFLOPS: 0.035,
+    computeCapability: "FPGA + ARMv8-A / UltraScale+ DSP58E2",
+    ipcNotes: "Zynq UltraScale+ ZU3EG：PS = quad A53 @ 1.2 GHz + dual R5F @ 500 MHz + Mali-400 MP2；PL = UltraScale+，DSP58E2×360, LUT6×70,560, BRAM×972 KB，无 URAM；Ultra96-V2 / PYNQ-ZU 开发板主芯片",
+    transistorsBillion: 3.0,
   },
   "amd-epyc-7742": {
     baseClockMHz: 2250,
@@ -3264,6 +3437,9 @@ const xianyuCnyById = {
   "bitmain-antminer-s17-pro-hashboard": 100,
   "xilinx-vu9p-bcu1525": 1200,
   "xilinx-zynq-7020-s9-ctrl": 25,
+  "xilinx-zynq-7010-dev": 65,
+  "xilinx-zynq-7045-zc706": 800,
+  "xilinx-zu3eg-ultra96": 500,
   "amd-epyc-7742": 2800,
   "amd-epyc-7b13": 4200,
   "intel-xeon-platinum-8280": 1600,
