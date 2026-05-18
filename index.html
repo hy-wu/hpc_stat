@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Unified GPU Table</title>
+    <title>并行计算</title>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="app-shell">
       <header class="topbar">
-        <div>
-          <p class="eyebrow">Unified GPU Table</p>
-          <h1>GPU 参数工作台</h1>
+        <div class="topbar-brand">
+          <h1>并行计算</h1>
         </div>
+        <nav class="nav-tabs">
+          <a href="index.html" class="nav-link active">并行计算</a>
+          <a href="models.html" class="nav-link">大模型</a>
+        </nav>
         <div class="actions">
           <button class="icon-button" id="importDataButton" type="button" title="导入 GPU 数据">导入</button>
           <button class="icon-button" id="exportDataButton" type="button" title="导出当前数据">导出</button>
@@ -21,61 +24,59 @@
       </header>
 
       <main class="workspace">
-        <nav class="nav-tabs">
-          <a href="index.html" class="nav-link active">GPU 参数</a>
-          <a href="models.html" class="nav-link">LLM 模型</a>
-        </nav>
-        <section class="control-band">
-          <div class="search-block">
-            <label for="globalSearch">搜索</label>
-            <input id="globalSearch" type="search" placeholder="型号、架构、显存、接口、备注..." />
-          </div>
-          <div class="control">
-            <label for="typeFilter">类型</label>
-            <select id="typeFilter"></select>
-          </div>
-          <div class="control">
-            <label for="segmentFilter">场景</label>
-            <select id="segmentFilter"></select>
-          </div>
-          <div class="control">
-            <label for="vendorFilter">厂商</label>
-            <select id="vendorFilter"></select>
-          </div>
-          <div class="control">
-            <label for="sortField">排序字段</label>
-            <select id="sortField"></select>
-          </div>
-          <button class="ghost-button" id="sortDirectionButton" type="button">降序</button>
-          <button class="ghost-button" id="resetFiltersButton" type="button">重置</button>
-        </section>
+        <div class="filter-card">
+          <section class="control-band">
+            <div class="search-block">
+              <label for="globalSearch">搜索</label>
+              <input id="globalSearch" type="search" placeholder="型号、架构、显存、接口、备注..." />
+            </div>
+            <div class="control">
+              <label for="typeFilter">类型</label>
+              <select id="typeFilter"></select>
+            </div>
+            <div class="control">
+              <label for="segmentFilter">场景</label>
+              <select id="segmentFilter"></select>
+            </div>
+            <div class="control">
+              <label for="vendorFilter">厂商</label>
+              <select id="vendorFilter"></select>
+            </div>
+            <div class="control">
+              <label for="sortField">排序字段</label>
+              <select id="sortField"></select>
+            </div>
+            <button class="ghost-button" id="sortDirectionButton" type="button">降序</button>
+            <button class="ghost-button" id="resetFiltersButton" type="button">重置</button>
+          </section>
 
-        <section class="insight-grid" aria-label="统计概览">
-          <div class="metric">
-            <span>筛选结果</span>
-            <strong id="visibleCount">0</strong>
-          </div>
-          <div class="metric">
-            <span>最高显存</span>
-            <strong id="maxMemory">-</strong>
-          </div>
-          <div class="metric">
-            <span>最低 $/GB</span>
-            <strong id="bestPricePerGb">-</strong>
-          </div>
-          <div class="metric">
-            <span>价格更新时间</span>
-            <strong id="latestPriceDate">-</strong>
-          </div>
-        </section>
+          <section class="insight-grid" aria-label="统计概览">
+            <div class="metric">
+              <span>筛选结果</span>
+              <strong id="visibleCount">0</strong>
+            </div>
+            <div class="metric">
+              <span>最高显存</span>
+              <strong id="maxMemory">-</strong>
+            </div>
+            <div class="metric">
+              <span>最低 $/GB</span>
+              <strong id="bestPricePerGb">-</strong>
+            </div>
+            <div class="metric">
+              <span>价格更新时间</span>
+              <strong id="latestPriceDate">-</strong>
+            </div>
+          </section>
 
-        <section class="filters-panel">
-          <div class="panel-head">
-            <h2>字段筛选</h2>
-            <button class="text-button" id="addRuleButton" type="button">添加条件</button>
-          </div>
-          <div id="filterRules" class="rules"></div>
-        </section>
+          <section class="filters-panel-inner">
+            <div class="panel-head">
+              <h2>字段筛选</h2>
+              <button class="text-button" id="addRuleButton" type="button">添加条件</button>
+            </div>
+            <div id="filterRules" class="rules"></div>
+          </section>
+        </div>
 
         <section class="table-panel">
           <div class="panel-head">
