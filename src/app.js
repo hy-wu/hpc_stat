@@ -13,16 +13,22 @@ const fieldDefs = [
   { key: "bf16TFLOPS", label: "BF16 TFLOPS", type: "number", visible: true, heatmap: true },
   { key: "fp8TFLOPS", label: "FP8 TFLOPS", type: "number", visible: true, heatmap: true },
   { key: "int8TOPS", label: "INT8 TOPS", type: "number", visible: true, heatmap: true },
-  { key: "powerW", label: "功耗 W", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
+  { key: "powerW", label: "TDP W", type: "number", visible: true, heatmap: true, inverseHeatmap: true, description: "热设计功耗 TDP（W），厂商官方规格额定值，实际满载功耗可能略低或略高" },
   { key: "priceUSD", label: "价格 USD", type: "number", visible: true, heatmap: true, inverseHeatmap: true },
   { key: "xianyu_cny", label: "咸鱼价 ¥", type: "number", visible: true, heatmap: true, inverseHeatmap: true, description: "闲鱼二手参考价（人民币，2026年5月，仅供参考）" },
-  { key: "pricePerGb", label: "$/GB", type: "number", visible: true, derived: true, heatmap: true, inverseHeatmap: true },
-  { key: "fp16PerWatt", label: "FP16/W", type: "number", visible: true, derived: true, heatmap: true, description: "FP16 TFLOPS 每瓦功耗效率（越高越好）" },
-  { key: "fp16PerDollar", label: "FP16/$", type: "number", visible: true, derived: true, heatmap: true, description: "FP16 TFLOPS 每美元性价比（越高越好）" },
-  { key: "bwPerDollar", label: "带宽/$", type: "number", visible: true, derived: true, heatmap: true, description: "内存带宽 GB/s 每美元性价比（越高越好）" },
+  { key: "pricePerGb", label: "$/GB", type: "number", visible: true, derived: true, heatmap: true, inverseHeatmap: true, description: "显存每美元（MSRP/二手 USD，越低越好）" },
+  { key: "cnyPerGb", label: "¥/GB", type: "number", visible: true, derived: true, heatmap: true, inverseHeatmap: true, description: "显存每元人民币（咸鱼价，越低越好）" },
+  { key: "fp16PerWatt", label: "FP16/W", type: "number", visible: true, derived: true, heatmap: true, description: "FP16 TFLOPS 每瓦 TDP 效率（越高越好）" },
+  { key: "fp32PerWatt", label: "FP32/W", type: "number", visible: false, derived: true, heatmap: true, description: "FP32 TFLOPS 每瓦 TDP 效率，适用于无 FP16 的 CPU/FPGA（越高越好）" },
+  { key: "fp16PerDollar", label: "FP16/$", type: "number", visible: false, derived: true, heatmap: true, description: "FP16 TFLOPS 每美元性价比（越高越好）" },
+  { key: "fp16PerCny", label: "FP16/¥", type: "number", visible: true, derived: true, heatmap: true, description: "FP16 TFLOPS 每元人民币（咸鱼价）性价比（越高越好）" },
+  { key: "fp32PerCny", label: "FP32/¥", type: "number", visible: true, derived: true, heatmap: true, description: "FP32 TFLOPS 每元人民币（咸鱼价）性价比；FP16 无数据时可参考（越高越好）" },
+  { key: "int8PerCny", label: "INT8/¥", type: "number", visible: true, derived: true, heatmap: true, description: "INT8 TOPS 每元人民币（咸鱼价）推理性价比（越高越好）" },
+  { key: "bwPerCny", label: "BW/¥", type: "number", visible: true, derived: true, heatmap: true, description: "内存带宽 GB/s 每元人民币（咸鱼价）性价比（越高越好）" },
+  { key: "bwPerDollar", label: "带宽/$", type: "number", visible: false, derived: true, heatmap: true, description: "内存带宽 GB/s 每美元性价比（越高越好）" },
   { key: "fp32PerDollar", label: "FP32/$", type: "number", visible: false, derived: true, heatmap: true, description: "FP32 TFLOPS 每美元性价比（越高越好）" },
-  { key: "vramPerDollar", label: "VRAM/$", type: "number", visible: true, derived: true, heatmap: true, description: "显存 GB 每美元性价比（越高越好）" },
-  { key: "bwPerWatt", label: "BW/W", type: "number", visible: true, derived: true, heatmap: true, description: "内存带宽 GB/s 每瓦效率（越高越好）" },
+  { key: "vramPerDollar", label: "VRAM/$", type: "number", visible: false, derived: true, heatmap: true, description: "显存 GB 每美元性价比（越高越好）" },
+  { key: "bwPerWatt", label: "BW/W", type: "number", visible: true, derived: true, heatmap: true, description: "内存带宽 GB/s 每瓦 TDP 效率（越高越好）" },
   { key: "priceUpdated", label: "价格日期", type: "date", visible: true },
   { key: "cudaCores", label: "CUDA/SP/ALU", type: "number", visible: false },
   { key: "tensorCores", label: "Tensor/XMX/AI", type: "number", visible: false },
@@ -137,8 +143,13 @@ const fieldOrder = [
   "int4TOPS",
   "fp4TOPS",
   "fp16PerWatt",
+  "fp32PerWatt",
   "fp16PerDollar",
+  "fp16PerCny",
+  "fp32PerCny",
+  "int8PerCny",
   "bwPerDollar",
+  "bwPerCny",
   "fp32PerDollar",
   "vramPerDollar",
   "bwPerWatt",
@@ -151,6 +162,7 @@ const fieldOrder = [
   "priceUSD",
   "xianyu_cny",
   "pricePerGb",
+  "cnyPerGb",
   "priceUpdated",
   "availability",
   "merchant",
@@ -164,7 +176,9 @@ const defaultVisibleKeys = new Set([
   "model", "vendor", "segment", "acceleratorType", "architecture", "releaseDate",
   "processNode", "vramGB", "memoryType", "memoryBusBit", "bandwidthGBs",
   "fp32TFLOPS", "fp16TFLOPS", "bf16TFLOPS", "fp8TFLOPS", "int8TOPS",
-  "powerW", "priceUSD", "xianyu_cny", "pricePerGb", "fp16PerWatt", "fp16PerDollar", "bwPerWatt", "vramPerDollar",
+  "powerW", "priceUSD", "xianyu_cny", "pricePerGb", "cnyPerGb",
+  "fp16PerWatt", "bwPerWatt",
+  "fp16PerCny", "fp32PerCny", "int8PerCny", "bwPerCny",
   "priceUpdated", "availability", "softwareStack",
 ]);
 fieldDefs.forEach((field) => {
@@ -3743,16 +3757,24 @@ function getFilteredRows() {
 function enrichGpuRow(gpu) {
   const fp16 = isUsableNumber(gpu.fp16TFLOPS) ? Number(gpu.fp16TFLOPS) : null;
   const fp32 = isUsableNumber(gpu.fp32TFLOPS) ? Number(gpu.fp32TFLOPS) : null;
+  const int8 = isUsableNumber(gpu.int8TOPS) ? Number(gpu.int8TOPS) : null;
   const power = isUsableNumber(gpu.powerW) ? Number(gpu.powerW) : null;
   const price = isUsableNumber(gpu.priceUSD) ? Number(gpu.priceUSD) : null;
+  const cny = isUsableNumber(gpu.xianyu_cny) ? Number(gpu.xianyu_cny) : null;
   const bw = isUsableNumber(gpu.bandwidthGBs) ? Number(gpu.bandwidthGBs) : null;
   const vram = isUsableNumber(gpu.vramGB) ? Number(gpu.vramGB) : null;
   return {
     ...gpu,
     pricePerGb: computePricePerGb(gpu),
+    cnyPerGb: cny && vram ? Number((cny / vram).toFixed(2)) : null,
     fp16PerWatt: fp16 && power ? Number((fp16 / power).toFixed(3)) : null,
+    fp32PerWatt: fp32 && power ? Number((fp32 / power).toFixed(3)) : null,
     fp16PerDollar: fp16 && price ? Number((fp16 / price).toFixed(4)) : null,
+    fp16PerCny: fp16 && cny ? Number((fp16 / cny).toFixed(5)) : null,
+    fp32PerCny: fp32 && cny ? Number((fp32 / cny).toFixed(5)) : null,
+    int8PerCny: int8 && cny ? Number((int8 / cny).toFixed(5)) : null,
     bwPerDollar: bw && price ? Number((bw / price).toFixed(4)) : null,
+    bwPerCny: bw && cny ? Number((bw / cny).toFixed(4)) : null,
     fp32PerDollar: fp32 && price ? Number((fp32 / price).toFixed(4)) : null,
     vramPerDollar: vram && price ? Number((vram / price).toFixed(4)) : null,
     bwPerWatt: bw && power ? Number((bw / power).toFixed(3)) : null,
@@ -4047,6 +4069,7 @@ function formatCell(gpu, field, stat) {
     else if (field.key === "priceUSD" || field.key === "msrpUSD") displayStr = `$${formatNumber(heatmapNum)}`;
     else if (field.key === "xianyu_cny") displayStr = `¥${formatNumber(heatmapNum)}`;
     else if (field.key === "pricePerGb") displayStr = `$${heatmapNum.toFixed(2)}`;
+    else if (field.key === "cnyPerGb") displayStr = `¥${heatmapNum.toFixed(1)}`;
     else if (field.derived) displayStr = heatmapNum < 1 ? heatmapNum.toFixed(4) : heatmapNum.toFixed(3);
     else displayStr = formatNumber(heatmapNum);
     return `<div class="heatmap-container mini" title="${displayStr}"><div class="heatmap-bar" style="width:${Math.max(0, Math.min(100, lengthPercent)).toFixed(1)}%;background:${color}"></div><span class="heatmap-value">${escapeHtml(displayStr)}</span></div>`;
@@ -4068,6 +4091,7 @@ function formatCell(gpu, field, stat) {
   if (field.key === "priceUSD") return value ? `$${formatNumber(value)}` : "-";
   if (field.key === "xianyu_cny") return value ? `¥${formatNumber(value)}` : "-";
   if (field.key === "pricePerGb") return value ? `$${formatNumber(value)}` : "-";
+  if (field.key === "cnyPerGb") return value ? `¥${formatNumber(value)}` : "-";
   if (field.key === "priceUpdated") return formatPriceDate(value);
   if (field.type === "url" && value) {
     const safeUrl = sanitizeUrl(value);
