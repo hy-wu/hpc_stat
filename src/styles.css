@@ -752,6 +752,7 @@ textarea {
 .tag.type-tpu           { background: #dbeafe; color: #1d4ed8; }
 .tag.type-npu           { background: #fde8ee; color: #8b0021; }
 .tag.type-fpga          { background: #ffedd5; color: #9a3412; }
+.tag.type-asic          { background: #ede9fe; color: #5b21b6; }
 .tag.type-many-core-cpu { background: #fef9c3; color: #713f12; }
 
 /* -- Architecture tags -- */
