@@ -3412,7 +3412,7 @@ const xianyuCnyById = {
   "huawei-atlas-300i-pro": 1800,
   // Workstation
   "nvidia-rtx-6000-ada": 30000,
-  "nvidia-a40": 5500,
+  "nvidia-a40": 39000,
   "amd-radeon-pro-w7900": 18000,
   "amd-radeon-pro-duo": 350,
   "nvidia-titan-v": 3500,
