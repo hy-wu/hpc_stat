@@ -307,9 +307,9 @@ textarea:focus {
 .rule {
   display: grid;
   grid-template-columns: minmax(180px, 1fr) minmax(140px, 0.65fr) minmax(160px, 1fr) auto;
-  gap: 10px;
+  gap: 6px;
   align-items: end;
-  padding: 10px;
+  padding: 0px 12px 6px 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #f9fbfb;

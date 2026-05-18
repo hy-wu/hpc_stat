@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>并行计算</title>
+    <title>HPC Comparison</title>
+    <link rel="icon" href="src/assets/icon.svg" />
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="app-shell">
       <header class="topbar">
         <div class="topbar-brand">
-          <h1>并行计算</h1>
+          <h1>Unified GPU Table</h1>
         </div>
         <nav class="nav-tabs">
           <a href="index.html" class="nav-link active">并行计算</a>
@@ -50,25 +51,6 @@
             <button class="ghost-button" id="resetFiltersButton" type="button">重置</button>
           </section>
 
-          <section class="insight-grid" aria-label="统计概览">
-            <div class="metric">
-              <span>筛选结果</span>
-              <strong id="visibleCount">0</strong>
-            </div>
-            <div class="metric">
-              <span>最高显存</span>
-              <strong id="maxMemory">-</strong>
-            </div>
-            <div class="metric">
-              <span>最低 $/GB</span>
-              <strong id="bestPricePerGb">-</strong>
-            </div>
-            <div class="metric">
-              <span>价格更新时间</span>
-              <strong id="latestPriceDate">-</strong>
-            </div>
-          </section>
-
           <section class="filters-panel-inner">
             <div class="panel-head">
               <h2>字段筛选</h2>
@@ -77,6 +59,25 @@
             <div id="filterRules" class="rules"></div>
           </section>
         </div>
+        
+        <section class="insight-grid" aria-label="统计概览">
+          <div class="metric">
+            <span>筛选结果</span>
+            <strong id="visibleCount">0</strong>
+          </div>
+          <div class="metric">
+            <span>最高显存</span>
+            <strong id="maxMemory">-</strong>
+          </div>
+          <div class="metric">
+            <span>最低 $/GB</span>
+            <strong id="bestPricePerGb">-</strong>
+          </div>
+          <div class="metric">
+            <span>价格更新时间</span>
+            <strong id="latestPriceDate">-</strong>
+          </div>
+        </section>
 
         <section class="table-panel">
           <div class="panel-head">
