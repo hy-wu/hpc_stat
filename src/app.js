@@ -29,6 +29,9 @@ const fieldDefs = [
   { key: "fp32PerDollar", label: "FP32/$", type: "number", visible: false, derived: true, heatmap: true, description: "FP32 TFLOPS 每美元性价比（越高越好）" },
   { key: "vramPerDollar", label: "VRAM/$", type: "number", visible: false, derived: true, heatmap: true, description: "显存 GB 每美元性价比（越高越好）" },
   { key: "bwPerWatt", label: "BW/W", type: "number", visible: true, derived: true, heatmap: true, description: "内存带宽 GB/s 每瓦 TDP 效率（越高越好）" },
+  { key: "fp16PjPerFlop", label: "FP16 pJ/op", type: "number", visible: true, derived: true, heatmap: true, inverseHeatmap: true, description: "完成一次 FP16 浮点运算消耗的皮焦耳数（TDP÷FP16 TFLOPS）。越低越好。芯片设计标准能效指标（ISSCC 论文常用）。1亿次运算能耗 = 此值×100 nJ" },
+  { key: "fp32PjPerFlop", label: "FP32 pJ/op", type: "number", visible: false, derived: true, heatmap: true, inverseHeatmap: true, description: "完成一次 FP32 运算消耗的皮焦耳数。CPU/FPGA 无独立 FP16 路径时参考此列（越低越好）" },
+  { key: "int8PjPerOp", label: "INT8 pJ/op", type: "number", visible: true, derived: true, heatmap: true, inverseHeatmap: true, description: "完成一次 INT8 运算消耗的皮焦耳数（TDP÷INT8 TOPS）。越低越好。推理能效的器件级指标" },
   { key: "priceUpdated", label: "价格日期", type: "date", visible: true },
   { key: "cudaCores", label: "CUDA/SP/ALU", type: "number", visible: false },
   { key: "tensorCores", label: "Tensor/XMX/AI", type: "number", visible: false },
@@ -153,6 +156,9 @@ const fieldOrder = [
   "fp32PerDollar",
   "vramPerDollar",
   "bwPerWatt",
+  "fp16PjPerFlop",
+  "fp32PjPerFlop",
+  "int8PjPerOp",
   "llamaCppTgTokS",
   "rops",
   "tmus",
@@ -178,6 +184,7 @@ const defaultVisibleKeys = new Set([
   "fp32TFLOPS", "fp16TFLOPS", "bf16TFLOPS", "fp8TFLOPS", "int8TOPS",
   "powerW", "priceUSD", "xianyu_cny", "pricePerGb", "cnyPerGb",
   "fp16PerWatt", "bwPerWatt",
+  "fp16PjPerFlop", "int8PjPerOp",
   "fp16PerCny", "fp32PerCny", "int8PerCny", "bwPerCny",
   "priceUpdated", "availability", "softwareStack",
 ]);
@@ -738,10 +745,9 @@ const seedGpus = [
     nvlinkGBs: null,
     msrpUSD: null,
     priceUSD: 3800,
-    priceUpdated: "2026-05-01",
+    priceUpdated: "2026-05-19",
     merchant: "used",
     source: "https://www.nvidia.com/en-us/data-center/a40/",
-    notes: "48GB ECC alternative to A100 for dense inference at lower cost.",
   },
   {
     id: "amd-radeon-pro-w7900",
@@ -3406,7 +3412,7 @@ const xianyuCnyById = {
   "huawei-atlas-300i-pro": 1800,
   // Workstation
   "nvidia-rtx-6000-ada": 30000,
-  "nvidia-a40": 9000,
+  "nvidia-a40": 5500,
   "amd-radeon-pro-w7900": 18000,
   "amd-radeon-pro-duo": 350,
   "nvidia-titan-v": 3500,
@@ -3778,6 +3784,11 @@ function enrichGpuRow(gpu) {
     fp32PerDollar: fp32 && price ? Number((fp32 / price).toFixed(4)) : null,
     vramPerDollar: vram && price ? Number((vram / price).toFixed(4)) : null,
     bwPerWatt: bw && power ? Number((bw / power).toFixed(3)) : null,
+    // pJ/op = TDP(W) / TFLOPS — standard chip-design energy-efficiency metric (ISSCC)
+    // derivation: 1 W / 1 TFLOPS = 1 J/s / 10^12 op/s = 10^-12 J/op = 1 pJ/op
+    fp16PjPerFlop: fp16 && power ? Number((power / fp16).toFixed(3)) : null,
+    fp32PjPerFlop: fp32 && power ? Number((power / fp32).toFixed(3)) : null,
+    int8PjPerOp: int8 && power ? Number((power / int8).toFixed(3)) : null,
   };
 }
 
