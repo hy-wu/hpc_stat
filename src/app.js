@@ -2077,6 +2077,9 @@ const xianyuCnyById = {
   "intel-arc-a770-16gb": 950,
   "intel-arc-b580": 1300,
 };
+
+const state = {
+  gpus: loadStoredGpus(),
   gpus: loadStoredGpus(),
   visibleColumns: new Set(fieldDefs.filter((field) => field.visible).map((field) => field.key)),
   sortField: "vramGB",
