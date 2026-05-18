@@ -135,9 +135,9 @@ h2 {
 }
 
 .workspace {
-  padding: 16px 32px 36px;
+  padding: 10px 32px 28px;
   display: grid;
-  gap: 12px;
+  gap: 8px;
 }
 
 .workspace > * {
@@ -156,9 +156,9 @@ h2 {
 .control-band {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   align-items: end;
-  padding: 10px 14px;
+  padding: 7px 12px;
 }
 
 .control,
@@ -173,7 +173,7 @@ h2 {
 }
 
 .control {
-  flex: 1 1 170px;
+  flex: 1 1 130px;
 }
 
 .control-band > button {
@@ -191,11 +191,11 @@ select,
 textarea {
   width: 100%;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 6px;
   background: #fff;
   color: var(--ink);
-  min-height: 28px;
-  padding: 8px 10px;
+  min-height: 26px;
+  padding: 4px 8px;
 }
 
 input:focus,
@@ -208,12 +208,12 @@ textarea:focus {
 .insight-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 6px;
 }
 
 .metric {
-  min-height: 40px;
-  padding: 8px 14px;
+  min-height: 0;
+  padding: 6px 12px;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -228,13 +228,13 @@ textarea:focus {
 
 .metric strong {
   display: block;
-  margin-top: 4px;
-  font-size: 18px;
+  margin-top: 2px;
+  font-size: 15px;
 }
 
 .filters-panel,
 .table-panel {
-  padding: 10px 14px;
+  padding: 8px 12px;
 }
 
 .panel-head {

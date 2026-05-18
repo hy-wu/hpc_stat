@@ -2495,6 +2495,7 @@ const state = {
   globalSearch: "",
   vendor: "all",
   segment: "all",
+  accelType: "all",
   rules: [],
   compact: false,
 };
@@ -2504,6 +2505,7 @@ const defaultVisibleColumns = new Set(fieldDefs.filter((field) => field.visible)
 const elements = {
   globalSearch: document.querySelector("#globalSearch"),
   segmentFilter: document.querySelector("#segmentFilter"),
+  typeFilter: document.querySelector("#typeFilter"),
   vendorFilter: document.querySelector("#vendorFilter"),
   sortField: document.querySelector("#sortField"),
   sortDirectionButton: document.querySelector("#sortDirectionButton"),
@@ -2612,6 +2614,7 @@ function normalizeGpu(gpu) {
 
 function renderSelectOptions() {
   fillSelect(elements.segmentFilter, ["all", ...uniqueValues("segment")], "全部场景");
+  fillSelect(elements.typeFilter, ["all", ...uniqueValues("acceleratorType")], "全部类型");
   fillSelect(elements.vendorFilter, ["all", ...uniqueValues("vendor")], "全部厂商");
   elements.sortField.innerHTML = fieldDefs
     .map(
@@ -2645,6 +2648,11 @@ function bindEvents() {
     render();
   });
 
+  elements.typeFilter.addEventListener("change", () => {
+    state.accelType = elements.typeFilter.value;
+    render();
+  });
+
   elements.vendorFilter.addEventListener("change", () => {
     state.vendor = elements.vendorFilter.value;
     render();
@@ -2665,10 +2673,12 @@ function bindEvents() {
     state.globalSearch = "";
     state.vendor = "all";
     state.segment = "all";
+    state.accelType = "all";
     state.rules = [];
     elements.globalSearch.value = "";
     elements.vendorFilter.value = "all";
     elements.segmentFilter.value = "all";
+    elements.typeFilter.value = "all";
     renderRules();
     render();
   });
@@ -2759,6 +2769,7 @@ function getFilteredRows() {
     .filter(matchesGlobalSearch)
     .filter((gpu) => state.vendor === "all" || gpu.vendor === state.vendor)
     .filter((gpu) => state.segment === "all" || gpu.segment === state.segment)
+    .filter((gpu) => state.accelType === "all" || gpu.acceleratorType === state.accelType)
     .filter(matchesRules);
 
   const field = fieldDefs.find((item) => item.key === state.sortField);
