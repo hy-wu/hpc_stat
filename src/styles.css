@@ -689,3 +689,57 @@ textarea {
   color: #000;
   text-shadow: 0 0 2px rgba(255,255,255,0.8);
 }
+
+/* ============================================================
+   Colored tags: vendor / segment / acceleratorType / architecture
+   ============================================================ */
+
+/* -- Vendor tags: logo + text -- */
+.tag.vendor-tag { gap: 5px; padding-left: 5px; }
+.vendor-logo { width: 13px; height: 13px; vertical-align: middle; flex-shrink: 0; object-fit: contain; }
+.tag.vendor-nvidia  { background: #213600; color: #a0e020; }
+.tag.vendor-amd     { background: #500000; color: #ff9898; }
+.tag.vendor-intel   { background: #002d5c; color: #7ec8ff; }
+.tag.vendor-google  { background: #0a2a6e; color: #93b8ff; }
+.tag.vendor-apple   { background: #252525; color: #d0d0d0; }
+.tag.vendor-huawei  { background: #520010; color: #ffaaaa; }
+
+/* -- Segment tags -- */
+.tag.seg-data-center       { background: #0f2942; color: #93c5fd; }
+.tag.seg-cloud-accelerator { background: #0f1f5c; color: #a5b4fc; }
+.tag.seg-workstation       { background: #2c1558; color: #d8b4fe; }
+.tag.seg-desktop           { background: #0b3028; color: #6ee7b7; }
+.tag.seg-integrated        { background: #12243e; color: #93c5fd; }
+.tag.seg-inference         { background: #0a2b14; color: #86efac; }
+.tag.seg-fpga              { background: #3d1500; color: #fdba74; }
+.tag.seg-mining            { background: #222222; color: #9ca3af; }
+.tag.seg-many-core-cpu     { background: #2f1900; color: #fbbf24; }
+
+/* -- Accelerator type tags -- */
+.tag.type-gpu           { background: #1a3300; color: #a3e635; }
+.tag.type-tpu           { background: #0a2460; color: #93c5fd; }
+.tag.type-npu           { background: #520010; color: #fca5a5; }
+.tag.type-fpga          { background: #3d1500; color: #fdba74; }
+.tag.type-many-core-cpu { background: #2f1900; color: #fbbf24; }
+
+/* -- Architecture tags -- */
+.tag.arch-blackwell { background: #0f3d20; color: #4ade80; }
+.tag.arch-ada       { background: #0e3834; color: #5eead4; }
+.tag.arch-hopper    { background: #1e0858; color: #c4b5fd; }
+.tag.arch-ampere    { background: #0f265c; color: #93c5fd; }
+.tag.arch-turing    { background: #0f2842; color: #7dd3fc; }
+.tag.arch-volta     { background: #26303e; color: #d1d5db; }
+.tag.arch-pascal    { background: #26303e; color: #d1d5db; }
+.tag.arch-rdna4     { background: #5c0000; color: #fca5a5; }
+.tag.arch-rdna3     { background: #6e0e0e; color: #fecaca; }
+.tag.arch-rdna2     { background: #5c0000; color: #fca5a5; }
+.tag.arch-gcn       { background: #360000; color: #fca5a5; }
+.tag.arch-cdna      { background: #7a0020; color: #fecdd3; }
+.tag.arch-tpu-chip  { background: #0a2460; color: #93c5fd; }
+.tag.arch-ascend    { background: #520010; color: #fca5a5; }
+.tag.arch-kni       { background: #002850; color: #7ec8ff; }
+.tag.arch-xe2       { background: #003868; color: #bae6fd; }
+.tag.arch-xe        { background: #002d5c; color: #7ec8ff; }
+.tag.arch-versal    { background: #341558; color: #d8b4fe; }
+.tag.arch-stratix   { background: #002d5c; color: #7ec8ff; }
+.tag.arch-apple-gpu { background: #1c1c1c; color: #d1d5db; }

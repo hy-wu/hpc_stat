@@ -2,10 +2,11 @@ const fieldDefs = [
   { key: "model", label: "型号", type: "text", visible: true },
   { key: "vendor", label: "厂商", type: "text", visible: true },
   { key: "segment", label: "场景", type: "text", visible: true },
+  { key: "acceleratorType", label: "类型", type: "text", visible: true },
   { key: "architecture", label: "架构", type: "text", visible: true },
   { key: "releaseDate", label: "发布", type: "date", visible: true, heatmap: true },
-  { key: "vramGB", label: "显存 GB", type: "number", visible: true, heatmap: true },
-  { key: "memoryType", label: "显存类型", type: "text", visible: true },
+  { key: "vramGB", label: "内存/HBM GB", type: "number", visible: true, heatmap: true },
+  { key: "memoryType", label: "内存类型", type: "text", visible: true },
   { key: "bandwidthGBs", label: "带宽 GB/s", type: "number", visible: true, heatmap: true },
   { key: "fp32TFLOPS", label: "FP32 TFLOPS", type: "number", visible: true, heatmap: true },
   { key: "fp16TFLOPS", label: "FP16 TFLOPS", type: "number", visible: true, heatmap: true },
@@ -23,15 +24,17 @@ const fieldDefs = [
   { key: "vramPerDollar", label: "VRAM/$", type: "number", visible: true, derived: true, heatmap: true, description: "显存 GB 每美元性价比（越高越好）" },
   { key: "bwPerWatt", label: "BW/W", type: "number", visible: true, derived: true, heatmap: true, description: "内存带宽 GB/s 每瓦效率（越高越好）" },
   { key: "priceUpdated", label: "价格日期", type: "date", visible: true },
-  { key: "cudaCores", label: "CUDA/SP", type: "number", visible: false },
-  { key: "tensorCores", label: "Tensor/XMX", type: "number", visible: false },
+  { key: "cudaCores", label: "CUDA/SP/ALU", type: "number", visible: false },
+  { key: "tensorCores", label: "Tensor/XMX/AI", type: "number", visible: false },
   { key: "rtCores", label: "RT Core", type: "number", visible: false },
-  { key: "computeUnits", label: "CU/SM/Xe", type: "number", visible: false },
+  { key: "computeUnits", label: "CU/SM/Xe/Tile", type: "number", visible: false },
   { key: "processNode", label: "制程", type: "text", visible: false },
   { key: "memoryBusBit", label: "位宽 bit", type: "number", visible: false, heatmap: true },
   { key: "pcie", label: "PCIe", type: "text", visible: false },
   { key: "nvlinkGBs", label: "互联 GB/s", type: "number", visible: false },
   { key: "msrpUSD", label: "MSRP USD", type: "number", visible: false, heatmap: true, inverseHeatmap: true },
+  { key: "availability", label: "获取方式", type: "text", visible: true },
+  { key: "softwareStack", label: "软件栈", type: "text", visible: true },
   { key: "merchant", label: "价格商家", type: "text", visible: false },
   { key: "source", label: "来源", type: "url", visible: false },
   { key: "notes", label: "备注", type: "text", visible: false },
@@ -93,6 +96,7 @@ const fieldOrder = [
   "model",
   "vendor",
   "segment",
+  "acceleratorType",
   "architecture",
   "gpuDie",
   "releaseDate",
@@ -120,6 +124,7 @@ const fieldOrder = [
   "pcie",
   "nvlinkGBs",
   "computeCapability",
+  "softwareStack",
   "sparsitySupport",
   "fp64TFLOPS",
   "fp64Ratio",
@@ -147,6 +152,7 @@ const fieldOrder = [
   "xianyu_cny",
   "pricePerGb",
   "priceUpdated",
+  "availability",
   "merchant",
   "source",
   "notes",
@@ -155,11 +161,11 @@ const fieldRank = new Map(fieldOrder.map((key, index) => [key, index]));
 fieldDefs.sort((a, b) => (fieldRank.get(a.key) ?? 999) - (fieldRank.get(b.key) ?? 999));
 
 const defaultVisibleKeys = new Set([
-  "model", "vendor", "segment", "architecture", "releaseDate",
+  "model", "vendor", "segment", "acceleratorType", "architecture", "releaseDate",
   "processNode", "vramGB", "memoryType", "memoryBusBit", "bandwidthGBs",
   "fp32TFLOPS", "fp16TFLOPS", "bf16TFLOPS", "fp8TFLOPS", "int8TOPS",
   "powerW", "priceUSD", "xianyu_cny", "pricePerGb", "fp16PerWatt", "fp16PerDollar", "bwPerWatt", "vramPerDollar",
-  "priceUpdated",
+  "priceUpdated", "availability", "softwareStack",
 ]);
 fieldDefs.forEach((field) => {
   field.visible = defaultVisibleKeys.has(field.key);
@@ -196,6 +202,150 @@ const seedGpus = [
     merchant: "",
     source: "https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/",
     notes: "AI accelerator, values vary by platform.",
+  },
+  {
+    id: "google-tpu-v6e",
+    model: "Google Cloud TPU v6e (Trillium) chip",
+    vendor: "Google",
+    segment: "Cloud Accelerator",
+    acceleratorType: "TPU",
+    architecture: "TPU v6e / Trillium",
+    gpuDie: "TPU v6e",
+    releaseDate: "2024-12-11",
+    processNode: null,
+    cudaCores: null,
+    tensorCores: 1,
+    rtCores: null,
+    computeUnits: 1,
+    vramGB: 32,
+    memoryType: "HBM",
+    memoryBusBit: null,
+    memoryClockGbps: null,
+    bandwidthGBs: 1638,
+    fp32TFLOPS: null,
+    fp16TFLOPS: null,
+    bf16TFLOPS: 918,
+    fp8TFLOPS: null,
+    int8TOPS: 1836,
+    powerW: null,
+    pcie: "Cloud TPU slice",
+    nvlinkGBs: 800,
+    msrpUSD: null,
+    priceUSD: null,
+    priceUpdated: null,
+    availability: "Google Cloud only",
+    softwareStack: "JAX / TensorFlow / PyTorch/XLA",
+    merchant: "",
+    source: "https://cloud.google.com/tpu/docs/v6e",
+    notes: "Per-chip public spec; optimized for transformer training/fine-tuning/serving. Price depends on region and reservation.",
+  },
+  {
+    id: "google-tpu-v5p",
+    model: "Google Cloud TPU v5p chip",
+    vendor: "Google",
+    segment: "Cloud Accelerator",
+    acceleratorType: "TPU",
+    architecture: "TPU v5p",
+    gpuDie: "TPU v5p",
+    releaseDate: "2023-12-06",
+    processNode: null,
+    cudaCores: null,
+    tensorCores: 2,
+    rtCores: null,
+    computeUnits: 1,
+    vramGB: 95,
+    memoryType: "HBM",
+    memoryBusBit: null,
+    memoryClockGbps: null,
+    bandwidthGBs: 2575,
+    fp32TFLOPS: null,
+    fp16TFLOPS: null,
+    bf16TFLOPS: 459,
+    fp8TFLOPS: 459,
+    int8TOPS: null,
+    powerW: null,
+    pcie: "Cloud TPU slice",
+    nvlinkGBs: 1200,
+    msrpUSD: null,
+    priceUSD: null,
+    priceUpdated: null,
+    availability: "Google Cloud only",
+    softwareStack: "JAX / TensorFlow / PyTorch/XLA",
+    merchant: "",
+    source: "https://cloud.google.com/tpu/docs/v5p",
+    notes: "Per-chip public spec; 3D torus Pod architecture with 95GB HBM per chip.",
+  },
+  {
+    id: "google-tpu-v5e",
+    model: "Google Cloud TPU v5e chip",
+    vendor: "Google",
+    segment: "Cloud Accelerator",
+    acceleratorType: "TPU",
+    architecture: "TPU v5e",
+    gpuDie: "TPU v5e",
+    releaseDate: "2023-08-29",
+    processNode: null,
+    cudaCores: null,
+    tensorCores: 1,
+    rtCores: null,
+    computeUnits: 1,
+    vramGB: 16,
+    memoryType: "HBM",
+    memoryBusBit: null,
+    memoryClockGbps: null,
+    bandwidthGBs: 800,
+    fp32TFLOPS: null,
+    fp16TFLOPS: null,
+    bf16TFLOPS: 197,
+    fp8TFLOPS: null,
+    int8TOPS: 393,
+    powerW: null,
+    pcie: "Cloud TPU slice",
+    nvlinkGBs: 400,
+    msrpUSD: null,
+    priceUSD: null,
+    priceUpdated: null,
+    availability: "Google Cloud only",
+    softwareStack: "JAX / TensorFlow / PyTorch/XLA",
+    merchant: "",
+    source: "https://cloud.google.com/tpu/docs/v5e",
+    notes: "Cost-oriented TPU generation for training and serving; per-chip public spec.",
+  },
+  {
+    id: "google-tpu-v4",
+    model: "Google Cloud TPU v4 chip",
+    vendor: "Google",
+    segment: "Cloud Accelerator",
+    acceleratorType: "TPU",
+    architecture: "TPU v4",
+    gpuDie: "TPU v4",
+    releaseDate: "2021-05-18",
+    processNode: null,
+    cudaCores: null,
+    tensorCores: 2,
+    rtCores: null,
+    computeUnits: 1,
+    vramGB: 32,
+    memoryType: "HBM2",
+    memoryBusBit: null,
+    memoryClockGbps: null,
+    bandwidthGBs: 1200,
+    fp32TFLOPS: null,
+    fp16TFLOPS: null,
+    bf16TFLOPS: 275,
+    fp8TFLOPS: null,
+    int8TOPS: 275,
+    powerW: 170,
+    pcie: "Cloud TPU slice",
+    nvlinkGBs: null,
+    msrpUSD: null,
+    priceUSD: null,
+    priceUpdated: null,
+    availability: "Google Cloud only",
+    softwareStack: "JAX / TensorFlow / PyTorch/XLA",
+    merchant: "",
+    source: "https://cloud.google.com/tpu/docs/v4",
+    notes: "Per-chip public spec; power is Google measured mean (min/mean/max 90/170/192W).",
   },
   {
     id: "nvidia-h200-sxm",
@@ -446,6 +596,78 @@ const seedGpus = [
     notes: "Large HBM memory for dense inference workloads.",
   },
   {
+    id: "huawei-ascend-910b",
+    model: "Huawei Ascend 910B",
+    vendor: "Huawei",
+    segment: "Data Center",
+    acceleratorType: "NPU",
+    architecture: "Da Vinci / Ascend 910B",
+    gpuDie: "Ascend 910B",
+    releaseDate: "2023-08-01",
+    processNode: "7 nm (est.)",
+    cudaCores: null,
+    tensorCores: 32,
+    rtCores: null,
+    computeUnits: 1,
+    vramGB: 64,
+    memoryType: "HBM2e",
+    memoryBusBit: null,
+    memoryClockGbps: null,
+    bandwidthGBs: 3200,
+    fp32TFLOPS: null,
+    fp16TFLOPS: 320,
+    bf16TFLOPS: 320,
+    fp8TFLOPS: null,
+    int8TOPS: 640,
+    powerW: 310,
+    pcie: "Atlas server / PCIe module",
+    nvlinkGBs: null,
+    msrpUSD: null,
+    priceUSD: null,
+    priceUpdated: "2026-05-18",
+    availability: "OEM/server channel",
+    softwareStack: "CANN / MindSpore / PyTorch Ascend",
+    merchant: "channel",
+    source: "https://www.hiascend.com/en/",
+    notes: "Public 910B figures vary by card/server SKU; this row uses common 910B-class public estimates for planning.",
+  },
+  {
+    id: "huawei-ascend-310p3",
+    model: "Huawei Ascend 310P3",
+    vendor: "Huawei",
+    segment: "Inference",
+    acceleratorType: "NPU",
+    architecture: "Da Vinci / Ascend 310P",
+    gpuDie: "Ascend 310P3",
+    releaseDate: "2020-09-23",
+    processNode: "12 nm",
+    cudaCores: null,
+    tensorCores: 32,
+    rtCores: null,
+    computeUnits: 1,
+    vramGB: 24,
+    memoryType: "LPDDR4X",
+    memoryBusBit: null,
+    memoryClockGbps: null,
+    bandwidthGBs: 204.8,
+    fp32TFLOPS: null,
+    fp16TFLOPS: 22,
+    bf16TFLOPS: null,
+    fp8TFLOPS: null,
+    int8TOPS: 88,
+    powerW: 75,
+    pcie: "PCIe 3.0 x8",
+    nvlinkGBs: null,
+    msrpUSD: null,
+    priceUSD: null,
+    priceUpdated: "2026-05-18",
+    availability: "PCIe card / OEM channel",
+    softwareStack: "CANN / MindSpore / PyTorch Ascend",
+    merchant: "channel",
+    source: "https://www.hiascend.com/en/",
+    notes: "Inference-focused Ascend card; useful for CANN/MindIE deployment comparisons.",
+  },
+  {
     id: "nvidia-rtx-6000-ada",
     model: "NVIDIA RTX 6000 Ada",
     vendor: "NVIDIA",
@@ -568,6 +790,114 @@ const seedGpus = [
     merchant: "used",
     source: "https://www.amd.com/en/products/graphics/workstation/radeon-pro-duo.html",
     notes: "Dual Fiji XT dies; each 4096 SPs + 4GB HBM1. mGPU workload dependent.",
+  },
+  {
+    id: "amd-alveo-v80",
+    model: "AMD Alveo V80",
+    vendor: "AMD",
+    segment: "FPGA",
+    acceleratorType: "FPGA",
+    architecture: "Versal HBM",
+    gpuDie: "Versal HBM",
+    releaseDate: "2024-06-01",
+    processNode: "TSMC 7N / 6N",
+    cudaCores: null,
+    tensorCores: null,
+    rtCores: null,
+    computeUnits: null,
+    vramGB: 32,
+    memoryType: "HBM2e + DDR4",
+    memoryBusBit: null,
+    memoryClockGbps: null,
+    bandwidthGBs: 820,
+    fp32TFLOPS: null,
+    fp16TFLOPS: null,
+    bf16TFLOPS: null,
+    fp8TFLOPS: null,
+    int8TOPS: null,
+    powerW: null,
+    pcie: "PCIe 4.0/5.0",
+    nvlinkGBs: 100,
+    msrpUSD: null,
+    priceUSD: null,
+    priceUpdated: null,
+    availability: "PCIe card / OEM channel",
+    softwareStack: "Vivado / Vitis",
+    merchant: "",
+    source: "https://www.amd.com/en/products/accelerators/alveo/v80.html",
+    notes: "FPGA fabric plus HBM; throughput is workload-specific, so FLOPS fields are intentionally blank.",
+  },
+  {
+    id: "amd-alveo-u55c",
+    model: "AMD Alveo U55C",
+    vendor: "AMD",
+    segment: "FPGA",
+    acceleratorType: "FPGA",
+    architecture: "Alveo / UltraScale+ HBM",
+    gpuDie: "XCU55C",
+    releaseDate: "2021-11-01",
+    processNode: "TSMC 16N",
+    cudaCores: null,
+    tensorCores: null,
+    rtCores: null,
+    computeUnits: null,
+    vramGB: 16,
+    memoryType: "HBM2",
+    memoryBusBit: null,
+    memoryClockGbps: null,
+    bandwidthGBs: 460,
+    fp32TFLOPS: null,
+    fp16TFLOPS: null,
+    bf16TFLOPS: null,
+    fp8TFLOPS: null,
+    int8TOPS: null,
+    powerW: 150,
+    pcie: "PCIe 4.0 x16",
+    nvlinkGBs: null,
+    msrpUSD: null,
+    priceUSD: 4500,
+    priceUpdated: "2026-05-18",
+    availability: "PCIe card / used market",
+    softwareStack: "Vivado / Vitis",
+    merchant: "used",
+    source: "https://www.amd.com/en/products/accelerators/alveo/u55c.html",
+    notes: "Memory-bound and custom-pipeline workloads; compare by HBM bandwidth/power rather than generic FLOPS.",
+  },
+  {
+    id: "intel-stratix-10-nx",
+    model: "Intel Stratix 10 NX PCIe",
+    vendor: "Intel",
+    segment: "FPGA",
+    acceleratorType: "FPGA",
+    architecture: "Stratix 10 NX",
+    gpuDie: "Stratix 10 NX",
+    releaseDate: "2020-06-18",
+    processNode: "Intel 14 nm",
+    cudaCores: null,
+    tensorCores: null,
+    rtCores: null,
+    computeUnits: null,
+    vramGB: 16,
+    memoryType: "HBM2",
+    memoryBusBit: null,
+    memoryClockGbps: null,
+    bandwidthGBs: 512,
+    fp32TFLOPS: null,
+    fp16TFLOPS: null,
+    bf16TFLOPS: null,
+    fp8TFLOPS: null,
+    int8TOPS: 143,
+    powerW: 225,
+    pcie: "PCIe card",
+    nvlinkGBs: null,
+    msrpUSD: null,
+    priceUSD: null,
+    priceUpdated: "2026-05-18",
+    availability: "PCIe card / OEM channel",
+    softwareStack: "Quartus / oneAPI FPGA",
+    merchant: "channel",
+    source: "https://www.intel.com/content/www/us/en/products/details/fpga/stratix/10/nx.html",
+    notes: "AI Tensor Block FPGA; TOPS depends on bit width and kernel mapping.",
   },
   {
     id: "nvidia-rtx-5090",
@@ -1314,6 +1644,78 @@ const seedGpus = [
     notes: "Battlemage; competitive price/VRAM ratio; check driver maturity.",
   },
   {
+    id: "intel-xeon-phi-7290f",
+    model: "Intel Xeon Phi 7290F",
+    vendor: "Intel",
+    segment: "Many-core CPU",
+    acceleratorType: "Many-core CPU",
+    architecture: "Knights Landing",
+    gpuDie: "KNL 7290F",
+    releaseDate: "2016-10-01",
+    processNode: "Intel 14 nm",
+    cudaCores: 72,
+    tensorCores: null,
+    rtCores: null,
+    computeUnits: 72,
+    vramGB: 16,
+    memoryType: "MCDRAM + DDR4-2400",
+    memoryBusBit: null,
+    memoryClockGbps: null,
+    bandwidthGBs: 490,
+    fp32TFLOPS: 6.9,
+    fp16TFLOPS: null,
+    bf16TFLOPS: null,
+    fp8TFLOPS: null,
+    int8TOPS: null,
+    powerW: 260,
+    pcie: "Socket / Omni-Path",
+    nvlinkGBs: 12.5,
+    msrpUSD: null,
+    priceUSD: null,
+    priceUpdated: "2026-05-18",
+    availability: "used / discontinued",
+    softwareStack: "x86 / AVX-512 / OpenMP / MPI",
+    merchant: "used",
+    source: "https://www.intel.com/content/www/us/en/products/sku/95831/intel-xeon-phi-processor-7290-16gb-1-50-ghz-72-core/specifications.html",
+    notes: "Discontinued many-core CPU; MCDRAM bandwidth is commonly cited around 490GB/s, while Intel ARK lists DDR4 bandwidth separately.",
+  },
+  {
+    id: "intel-xeon-phi-7210",
+    model: "Intel Xeon Phi 7210",
+    vendor: "Intel",
+    segment: "Many-core CPU",
+    acceleratorType: "Many-core CPU",
+    architecture: "Knights Landing",
+    gpuDie: "KNL 7210",
+    releaseDate: "2016-06-01",
+    processNode: "Intel 14 nm",
+    cudaCores: 64,
+    tensorCores: null,
+    rtCores: null,
+    computeUnits: 64,
+    vramGB: 16,
+    memoryType: "MCDRAM + DDR4-2133",
+    memoryBusBit: null,
+    memoryClockGbps: null,
+    bandwidthGBs: 490,
+    fp32TFLOPS: 5.3,
+    fp16TFLOPS: null,
+    bf16TFLOPS: null,
+    fp8TFLOPS: null,
+    int8TOPS: null,
+    powerW: 215,
+    pcie: "Socket",
+    nvlinkGBs: null,
+    msrpUSD: null,
+    priceUSD: null,
+    priceUpdated: "2026-05-18",
+    availability: "used / discontinued",
+    softwareStack: "x86 / AVX-512 / OpenMP / MPI",
+    merchant: "used",
+    source: "https://www.intel.com/content/www/us/en/products/sku/94033/intel-xeon-phi-processor-7210-16gb-1-30-ghz-64-core/specifications.html",
+    notes: "Entry KNL SKU; useful historical baseline for AVX-512 and high-bandwidth-memory CPU experiments.",
+  },
+  {
     id: "apple-m3-max-40gpu",
     model: "Apple M3 Max 40-core GPU",
     vendor: "Apple",
@@ -2044,11 +2446,18 @@ const xianyuCnyById = {
   "nvidia-p100-pcie-16gb": 1800,
   "nvidia-l40s": 45000,
   "amd-instinct-mi300x": 125000,
+  "huawei-ascend-910b": 80000,
+  "huawei-ascend-310p3": 2500,
   // Workstation
   "nvidia-rtx-6000-ada": 30000,
   "nvidia-a40": 9000,
   "amd-radeon-pro-w7900": 18000,
   "amd-radeon-pro-duo": 350,
+  // FPGA / legacy accelerators
+  "amd-alveo-u55c": 5000,
+  "intel-stratix-10-nx": 12000,
+  "intel-xeon-phi-7290f": 1500,
+  "intel-xeon-phi-7210": 500,
   // Desktop NVIDIA
   "nvidia-rtx-5090": 20000,
   "nvidia-rtx-5080": 9500,
@@ -2079,7 +2488,6 @@ const xianyuCnyById = {
 };
 
 const state = {
-  gpus: loadStoredGpus(),
   gpus: loadStoredGpus(),
   visibleColumns: new Set(fieldDefs.filter((field) => field.visible).map((field) => field.key)),
   sortField: "vramGB",
@@ -2158,6 +2566,9 @@ function saveGpus() {
 
 function normalizeGpu(gpu) {
   const normalized = { ...(specDetailsById[gpu.id] || {}), ...gpu };
+  if (!normalized.acceleratorType) {
+    normalized.acceleratorType = "GPU";
+  }
   if (normalized.xianyu_cny == null && xianyuCnyById[gpu.id] != null) {
     normalized.xianyu_cny = xianyuCnyById[gpu.id];
   }
@@ -2570,6 +2981,75 @@ function operatorOptions(selected) {
   return ops.map((op) => `<option value="${op}" ${op === selected ? "selected" : ""}>${labels[op]}</option>`).join("");
 }
 
+const VENDOR_LOGOS = {
+  nvidia: "https://www.nvidia.com/favicon.ico",
+  amd: "https://www.amd.com/favicon.ico",
+  intel: "https://www.intel.com/favicon.ico",
+  apple: "https://www.apple.com/favicon.ico",
+  google: "https://www.google.com/favicon.ico",
+  huawei: "https://consumer.huawei.com/favicon.ico",
+};
+
+function vendorSlug(v) {
+  return (v || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+function renderVendorTag(vendor) {
+  if (!vendor) return "-";
+  const slug = vendorSlug(vendor);
+  const logoUrl = VENDOR_LOGOS[slug];
+  const img = logoUrl
+    ? `<img class="vendor-logo" src="${escapeAttr(logoUrl)}" alt="" onerror="this.style.display='none'">`
+    : "";
+  return `<span class="tag vendor-tag vendor-${escapeAttr(slug)}">${img}${escapeHtml(vendor)}</span>`;
+}
+
+const SEGMENT_CLASS = {
+  "Data Center": "seg-data-center",
+  "Cloud Accelerator": "seg-cloud-accelerator",
+  "Workstation": "seg-workstation",
+  "Desktop": "seg-desktop",
+  "Integrated": "seg-integrated",
+  "Inference": "seg-inference",
+  "FPGA": "seg-fpga",
+  "Mining": "seg-mining",
+  "Many-core CPU": "seg-many-core-cpu",
+};
+
+const ACCEL_TYPE_CLASS = {
+  "GPU": "type-gpu",
+  "TPU": "type-tpu",
+  "NPU": "type-npu",
+  "FPGA": "type-fpga",
+  "Many-core CPU": "type-many-core-cpu",
+};
+
+function archClass(arch) {
+  if (!arch) return "";
+  const a = arch.toLowerCase();
+  if (a.includes("blackwell")) return "arch-blackwell";
+  if (a.includes("ada")) return "arch-ada";
+  if (a.includes("hopper")) return "arch-hopper";
+  if (a.includes("ampere")) return "arch-ampere";
+  if (a.includes("turing")) return "arch-turing";
+  if (a.includes("volta")) return "arch-volta";
+  if (a.includes("pascal")) return "arch-pascal";
+  if (a.includes("rdna 4") || a.includes("rdna4")) return "arch-rdna4";
+  if (a.includes("rdna 3") || a.includes("rdna3")) return "arch-rdna3";
+  if (a.includes("rdna 2") || a.includes("rdna2")) return "arch-rdna2";
+  if (a.includes("cdna")) return "arch-cdna";
+  if (a.includes("gcn")) return "arch-gcn";
+  if (a.includes("tpu")) return "arch-tpu-chip";
+  if (a.includes("da vinci") || a.includes("ascend")) return "arch-ascend";
+  if (a.includes("knights")) return "arch-kni";
+  if (a.includes("xe2") || a.includes("battlemage")) return "arch-xe2";
+  if (a.includes("xe-hpg") || a.includes("alchemist") || a.startsWith("xe")) return "arch-xe";
+  if (a.includes("versal") || a.includes("ultrascale")) return "arch-versal";
+  if (a.includes("stratix")) return "arch-stratix";
+  if (a.includes("apple gpu")) return "arch-apple-gpu";
+  return "";
+}
+
 function formatCell(gpu, field, stat) {
   const value = gpu[field.key];
   // Determine numeric value for heatmap (supports both numbers and dates)
@@ -2588,14 +3068,28 @@ function formatCell(gpu, field, stat) {
     let displayStr;
     if (field.type === "date") displayStr = String(value);
     else if (field.key === "priceUSD" || field.key === "msrpUSD") displayStr = `$${formatNumber(heatmapNum)}`;
+    else if (field.key === "xianyu_cny") displayStr = `¥${formatNumber(heatmapNum)}`;
     else if (field.key === "pricePerGb") displayStr = `$${heatmapNum.toFixed(2)}`;
     else if (field.derived) displayStr = heatmapNum < 1 ? heatmapNum.toFixed(4) : heatmapNum.toFixed(3);
     else displayStr = formatNumber(heatmapNum);
     return `<div class="heatmap-container mini" title="${displayStr}"><div class="heatmap-bar" style="width:${Math.max(0, Math.min(100, lengthPercent)).toFixed(1)}%;background:${color}"></div><span class="heatmap-value">${escapeHtml(displayStr)}</span></div>`;
   }
   if (field.key === "model") return `<span class="model-cell">${escapeHtml(value)}</span>`;
-  if (field.key === "segment") return `<span class="tag">${escapeHtml(value)}</span>`;
+  if (field.key === "vendor") return renderVendorTag(value);
+  if (field.key === "segment") {
+    const cls = SEGMENT_CLASS[value] || "";
+    return value ? `<span class="tag ${cls}">${escapeHtml(value)}</span>` : "-";
+  }
+  if (field.key === "acceleratorType") {
+    const cls = ACCEL_TYPE_CLASS[value] || "";
+    return value ? `<span class="tag ${cls}">${escapeHtml(value)}</span>` : "-";
+  }
+  if (field.key === "architecture") {
+    const cls = archClass(value);
+    return value ? `<span class="tag ${cls}">${escapeHtml(value)}</span>` : "-";
+  }
   if (field.key === "priceUSD") return value ? `$${formatNumber(value)}` : "-";
+  if (field.key === "xianyu_cny") return value ? `¥${formatNumber(value)}` : "-";
   if (field.key === "pricePerGb") return value ? `$${formatNumber(value)}` : "-";
   if (field.key === "priceUpdated") return formatPriceDate(value);
   if (field.type === "url" && value) {
