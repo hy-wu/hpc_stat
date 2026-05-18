@@ -2200,6 +2200,49 @@ const seedGpus = [
     notes: "Virtex UltraScale+ VU9P FPGA；BCU1525 是国产仿制版，以太坊矿潮时代大量流入闲鱼，价格极低。计算性能完全取决于比特流：DSP48E2×6840, LUT6×1,143,000, FF×2,364,480, BRAM 36K×4320（≈18.5 MB）, URAM×960（≈33.75 MB）。FP32/INT8 为理论最大值，实际工程设计通常只能达到 50–80%。",
   },
   {
+    id: "xilinx-zynq-7020-s9-ctrl",
+    model: "Antminer S9 Control Board (Zynq-7020)",
+    vendor: "Xilinx",
+    segment: "FPGA",
+    acceleratorType: "FPGA",
+    architecture: "Zynq-7000 (ARM + Artix-7)",
+    gpuDie: "XC7Z020-1CLG484",
+    releaseDate: "2013-03-01",
+    processNode: "TSMC 28 nm",
+    cudaCores: null,
+    tensorCores: null,
+    rtCores: null,
+    // PL 侧 DSP48E1 × 220，是 Artix-7 FPGA 上的主要乘加资源
+    computeUnits: 220,
+    // 板载 256 MB DDR3（焊接，PS 控制器直连）
+    vramGB: 0.256,
+    memoryType: "DDR3-1066 (PS 1ch, 32-bit)",
+    memoryBusBit: 32,
+    memoryClockGbps: 1.066,
+    // 32-bit × 1066 MT/s ÷ 8 = 4.26 GB/s
+    bandwidthGBs: 4.26,
+    // HLS FP32 IP 约需 3-4 DSP48E1/单元：220/3.5 ≈ 63 FP32 单元 × 2 FLOPS × 350 MHz ≈ 44 GFLOPS
+    fp32TFLOPS: 0.044,
+    fp16TFLOPS: null,
+    bf16TFLOPS: null,
+    fp8TFLOPS: null,
+    // DSP48E1 直接 INT18 打包 INT8（每 DSP 2 个 INT8 MAC）：220 × 2 × 2 × 200e6 = 0.176 TOPS
+    int8TOPS: 0.18,
+    // PS（ARM） + PL（FPGA） + 外设：实测约 5-8 W
+    powerW: 8,
+    pcie: "N/A（ARM SoC，USB/以太网接口）",
+    nvlinkGBs: null,
+    // Zynq-7020 SoC 官方零售约 $70；整板/模块 $150-200 新品
+    msrpUSD: 150,
+    priceUSD: 3,
+    priceUpdated: "2026-05-19",
+    availability: "used / 拆机 S9 控制板",
+    softwareStack: "Vivado / Vitis / PetaLinux / 裸机 C",
+    merchant: "used",
+    source: "https://www.xilinx.com/products/silicon-devices/soc/zynq-7000.html",
+    notes: "蚂蚁 S9 矿机控制板焊载 Xilinx Zynq-7020 SoC，是极廉价 FPGA 入门硬件（闲鱼约 ¥20-30）。【Zynq-7000 系列】= Xilinx 2012 年推出的 All Programmable SoC，PS（Processing System）= 双核 ARM Cortex-A9 @ 666 MHz + DDR/USB/GigE 硬核；PL（Programmable Logic）= Artix-7 架构 FPGA：LUT6×53,200 / FF×106,400 / DSP48E1×220 / BRAM 36K×140（≈ 630 KB）。向上一代为 Zynq UltraScale+ MPSoC（四核 A53 + R5 + Mali + UltraScale+ PL，16nm）。FP32/INT8 值为 HLS IP 实现的估算上限，实际因比特流差异极大。",
+  },
+  {
     id: "amd-epyc-7742",
     model: "AMD EPYC 7742",
     vendor: "AMD",
@@ -2290,11 +2333,13 @@ const seedGpus = [
     memoryBusBit: null,
     memoryClockGbps: null,
     bandwidthGBs: 140.8,
+    // Cascade Lake-SP：1×512-bit FMA/周期（两个 256-bit 单元融合），28 核 × 32 FLOPS × 2.7 GHz
     fp32TFLOPS: 2.42,
     fp16TFLOPS: null,
-    bf16TFLOPS: null,
+    bf16TFLOPS: null,   // Cascade Lake 不支持 BF16（需 Cooper Lake 及以上）
     fp8TFLOPS: null,
-    int8TOPS: null,
+    // VNNI (VPDPBUSD)：4× INT8 吞吐量 vs FP32，28 × 128 × 2 × 2.7 GHz ≈ 9.7 TOPS
+    int8TOPS: 9.68,
     powerW: 205,
     pcie: "PCIe 3.0 x48",
     nvlinkGBs: null,
@@ -2326,11 +2371,15 @@ const seedGpus = [
     memoryBusBit: null,
     memoryClockGbps: null,
     bandwidthGBs: 204.8,
-    fp32TFLOPS: 2.94,
+    // Ice Lake-SP：2×512-bit FMA/周期（原生双端口），40 核 × 64 FLOPS × 2.3 GHz
+    // Cascade Lake 只有 1×512-bit/周期；ICX 此处是真正的翻倍
+    fp32TFLOPS: 5.89,
     fp16TFLOPS: null,
-    bf16TFLOPS: null,
+    // VDPBF16PS（Ice Lake 新增）：2 BF16 输入 → 1 FP32 累加，等效 2× FP32 吞吐量
+    bf16TFLOPS: 11.78,
     fp8TFLOPS: null,
-    int8TOPS: null,
+    // AVX-512 VNNI：40 × 2 × 64 INT8 MAC × 2.3 GHz ≈ 23.6 TOPS（1 MAC = 1 op 约定）
+    int8TOPS: 23.6,
     powerW: 270,
     pcie: "PCIe 4.0 x64",
     nvlinkGBs: null,
@@ -3087,33 +3136,70 @@ const specDetailsById = {
     ipcNotes: "XCVU9P-L2FSGD2104；DSP48E2×6840, LUT6×1,143,000, FF×2,364,480, BRAM×18.5 MB, URAM×33.75 MB；时钟频率因设计差异极大（100–500 MHz）；FP32/INT8 为资源全用时的理论上限",
     transistorsBillion: 21.0,
   },
+  "xilinx-zynq-7020-s9-ctrl": {
+    // PS ARM Cortex-A9 时钟；PL 可配置独立频率（通常 100-300 MHz）
+    baseClockMHz: 666,
+    boostClockMHz: 666,
+    // BRAM 36K×140 = 5040 Kbit ÷ 8 ÷ 1024 = ~0.62 MB on-chip SRAM
+    l3CacheMB: 0.62,
+    // PS 侧可选 PL390 L2 cache 512 KB
+    l2CacheMB: 0.5,
+    // ARM Cortex-A9 L1D: 32 KB per core × 2 = 64 KB total
+    l1CacheKB: 64,
+    computeCapability: "FPGA（Vivado / Vitis）",
+    ipcNotes: "Zynq-7020 PS：ARM Cortex-A9 × 2 @ 666 MHz；PL：Artix-7，DSP48E1×220, LUT6×53,200, BRAM×630 KB；FP32/INT8 为 HLS 实现估算，极度取决于比特流设计",
+    transistorsBillion: 0.85,
+  },
   "amd-epyc-7742": {
     baseClockMHz: 2250,
     boostClockMHz: 3400,
+    // FP64 = FP32/2（AVX2 256-bit 中 FP64 宽度是 FP32 的一半）：64c × 16 FP64/cycle × 2 FLOPS × 2.25 GHz
+    fp64TFLOPS: 2.30,
     l3CacheMB: 256,
+    // L1D 32 KB/核 × 64 核 = 2048 KB 总计
+    l1CacheKB: 2048,
+    // L2 512 KB/核 × 64 核 = 32 MB 总计
+    l2CacheMB: 32,
     computeCapability: "x86-64 / AVX2 / 8ch DDR4",
-    ipcNotes: "Zen 2 单路 64 核；FP32 峰值按双 256-bit FMA 近似估算",
+    ipcNotes: "Zen 2 单路 64 核；L1D 32 KB/核，L2 512 KB/核，L3 256 MB；FP64 = FP32/2；无 VNNI（INT8 TOPS 不计）",
   },
   "amd-epyc-7b13": {
     baseClockMHz: 2450,
     boostClockMHz: 3650,
+    // FP64：64c × 16 FP64/cycle × 2 FLOPS × 2.45 GHz
+    fp64TFLOPS: 2.51,
     l3CacheMB: 256,
+    // L1D 32 KB/核 × 64 = 2048 KB；Zen 3 L3 改为整 CCD 共享（32 MB/CCD × 8 CCDs）
+    l1CacheKB: 2048,
+    l2CacheMB: 32,
     computeCapability: "x86-64 / AVX2 / 8ch DDR4",
-    ipcNotes: "Zen 3 OEM 64 核；二手渠道常见，适合作为 CPU-only 对照",
+    ipcNotes: "Zen 3 OEM 64 核；L1D 32 KB/核，L2 512 KB/核，L3 256 MB（每 CCD 全共享，延迟比 Zen 2 低）；无 VNNI；二手渠道常见",
   },
   "intel-xeon-platinum-8280": {
     baseClockMHz: 2700,
     boostClockMHz: 4000,
+    // FP64 = FP32/2（512-bit FP64 宽度是 FP32 的一半）：28c × 8 FP64 × 2 FLOPS × 2.7 GHz
+    fp64TFLOPS: 1.21,
     l3CacheMB: 38.5,
-    computeCapability: "x86-64 / AVX-512 / 6ch DDR4",
-    ipcNotes: "Cascade Lake 单路 28 核；FP32 峰值按 AVX-512 FMA 近似估算",
+    // L1D 32 KB/核 × 28 核 = 896 KB
+    l1CacheKB: 896,
+    // L2 1 MB/核 × 28 核 = 28 MB
+    l2CacheMB: 28,
+    computeCapability: "x86-64 / AVX-512 / VNNI / 6ch DDR4",
+    ipcNotes: "Cascade Lake-SP 单路 28 核；1×512-bit FMA/周期（两个 256-bit 单元融合），有 VNNI（INT8 9.68 TOPS）；L1D 32 KB/核，L2 1 MB/核，L3 38.5 MB",
   },
   "intel-xeon-platinum-8380": {
     baseClockMHz: 2300,
     boostClockMHz: 3400,
+    // FP64 = FP32/2：40c × 2 × 8 FP64 × 2 FLOPS × 2.3 GHz = 2.944 TFLOPS
+    fp64TFLOPS: 2.94,
     l3CacheMB: 60,
-    computeCapability: "x86-64 / AVX-512 / 8ch DDR4",
-    ipcNotes: "Ice Lake 单路 40 核；适合和便宜高显存卡对比整机成本",
+    // L1D 48 KB/核 × 40 核 = 1920 KB（Ice Lake 相比 Skylake 增大 L1D）
+    l1CacheKB: 1920,
+    // L2 1.25 MB/核 × 40 核 = 50 MB（Ice Lake 增大 L2）
+    l2CacheMB: 50,
+    computeCapability: "x86-64 / AVX-512 / VNNI / BF16 / 8ch DDR4",
+    ipcNotes: "Ice Lake-SP 单路 40 核；2×512-bit FMA/周期（ICX 原生双端口），FP32 翻倍为 5.89 TFLOPS；BF16（VDPBF16PS）11.78 TFLOPS；VNNI INT8 23.6 TOPS；L1D 48 KB/核，L2 1.25 MB/核，L3 60 MB",
   },
 };
 
@@ -3177,6 +3263,7 @@ const xianyuCnyById = {
   "bitmain-antminer-s19j-pro-hashboard": 220,
   "bitmain-antminer-s17-pro-hashboard": 100,
   "xilinx-vu9p-bcu1525": 1200,
+  "xilinx-zynq-7020-s9-ctrl": 25,
   "amd-epyc-7742": 2800,
   "amd-epyc-7b13": 4200,
   "intel-xeon-platinum-8280": 1600,
