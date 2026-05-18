@@ -100,8 +100,8 @@ function renderColumnPicker() {
   elements.columnPicker.innerHTML = `
     <div class="column-picker-head">
       <div>
-        <p class="column-picker-title">显示列</p>
-        <p class="column-picker-meta">已选 ${selectedCount} / ${fieldDefs.length}</p>
+        <span class="column-picker-title">显示列</span>
+        <span class="column-picker-meta">已选 ${selectedCount} / ${fieldDefs.length}</span>
       </div>
       <div class="column-picker-tools">
         <button class="ghost-button" type="button" data-column-action="select-all">全选</button>
