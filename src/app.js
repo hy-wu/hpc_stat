@@ -1065,6 +1065,8 @@ const seedGpus = [
     source: "https://www.amd.com/en/support/graphics/amd-radeon-rx-500-series/amd-radeon-rx-580.html",
     notes: "经典 GCN4 卡；中国二手市场极多；ROCm 支持有限（gfx803 已过时）。",
   },
+  {
+    id: "amd-rx-7900-xtx",
     model: "AMD Radeon RX 7900 XTX",
     vendor: "AMD",
     segment: "Desktop",
