@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LLM Comparison</title>
-    <link rel="icon" href="src/assets/icon.png" />
+    <title>Agent Tools Comparison</title>
+    <link rel="icon" href="src/assets/icon.svg" />
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="app-shell">
       <header class="topbar">
         <div class="topbar-brand">
-          <h1>LLM Comparison</h1>
+          <h1>Agent Tools Comparison</h1>
         </div>
         <nav class="nav-tabs">
           <a href="index.html" class="nav-link">并行计算</a>
-          <a href="models.html" class="nav-link active">大模型</a>
-          <a href="agent-tools.html" class="nav-link">Agent 工具</a>
+          <a href="models.html" class="nav-link">大模型</a>
+          <a href="agent-tools.html" class="nav-link active">Agent 工具</a>
         </nav>
       </header>
 
@@ -24,20 +24,28 @@
         <div class="filter-card">
           <section class="control-band">
             <div class="search-block">
-              <label for="globalSearch">搜索模型</label>
-              <input id="globalSearch" type="search" placeholder="名称、厂商、性能标签、价格、评测..." />
+              <label for="globalSearch">搜索工具</label>
+              <input id="globalSearch" type="search" placeholder="名称、厂商、模型、MCP、本地模型、价格、备注..." />
             </div>
             <div class="control">
-              <label for="modalityFilter">模态</label>
-              <select id="modalityFilter"></select>
+              <label for="typeFilter">类型</label>
+              <select id="typeFilter"></select>
             </div>
             <div class="control">
-              <label for="statusFilter">核验状态</label>
-              <select id="statusFilter"></select>
+              <label for="deploymentFilter">形态</label>
+              <select id="deploymentFilter"></select>
+            </div>
+            <div class="control">
+              <label for="accessFilter">接入方式</label>
+              <select id="accessFilter"></select>
             </div>
             <div class="control">
               <label for="vendorFilter">厂商</label>
               <select id="vendorFilter"></select>
+            </div>
+            <div class="control">
+              <label for="statusFilter">核验状态</label>
+              <select id="statusFilter"></select>
             </div>
             <div class="control">
               <label for="sortField">排序字段</label>
@@ -58,23 +66,26 @@
 
         <section class="insight-grid" aria-label="统计概览">
           <div class="metric">
-            <span>对比模型</span>
+            <span>筛选工具</span>
             <strong id="visibleCount">0</strong>
           </div>
           <div class="metric">
-            <span>模型名已验证</span>
-            <strong id="bestElo">-</strong>
+            <span>有来源</span>
+            <strong id="sourcedCount">-</strong>
           </div>
           <div class="metric">
-            <span>官方价格覆盖</span>
-            <strong id="bestHumanEval">-</strong>
+            <span>免费版</span>
+            <strong id="freeCount">-</strong>
+          </div>
+          <div class="metric">
+            <span>开源</span>
+            <strong id="openSourceCount">-</strong>
           </div>
         </section>
 
         <section class="table-panel">
           <div class="panel-head">
-            <h2>已核验模型表</h2>
-            
+            <h2>Agent 工具表</h2>
             <div class="table-tools">
               <button
                 class="text-button"
@@ -91,7 +102,7 @@
           </div>
           <div class="column-picker" id="columnPicker" hidden></div>
           <div class="table-wrap">
-            <table id="gpuTable"> <!-- Reusing ID for CSS -->
+            <table id="gpuTable">
               <thead id="tableHead"></thead>
               <tbody id="tableBody"></tbody>
             </table>
@@ -100,6 +111,6 @@
       </main>
     </div>
 
-    <script type="module" src="src/models.js"></script>
+    <script type="module" src="src/agent-tools.js"></script>
   </body>
 </html>

@@ -522,6 +522,115 @@ tbody tr:hover {
   font-weight: 800;
 }
 
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-width: 220px;
+}
+
+.tag.group-boolean.bool-yes {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.tag.group-boolean.bool-no {
+  background: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+}
+
+.tag.tone-0 {
+  background: #dbeafe;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.tag.tone-1 {
+  background: #ede9fe;
+  color: #6d28d9;
+  border: 1px solid #ddd6fe;
+}
+
+.tag.tone-2 {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.tag.tone-3 {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.tag.tone-4 {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.tag.tone-5 {
+  background: #cffafe;
+  color: #155e75;
+  border: 1px solid #a5f3fc;
+}
+
+.tag.tone-6 {
+  background: #fce7f3;
+  color: #be185d;
+  border: 1px solid #fbcfe8;
+}
+
+.tag.tone-7 {
+  background: #e2e8f0;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.plan-stack {
+  display: grid;
+  gap: 6px;
+  min-width: 240px;
+}
+
+.plan-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fbfc;
+}
+
+.plan-name {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.plan-price {
+  color: var(--ink);
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.plan-price .source-link {
+  font-weight: 400;
+  font-family: inherit;
+}
+
+.plan-note {
+  margin-top: -2px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
 .source-link {
   color: var(--accent-strong);
   font-weight: 700;
@@ -576,6 +685,20 @@ tbody tr:hover {
   padding: 0 6px;
 }
 
+.compact .tag-list {
+  gap: 4px;
+  min-width: 160px;
+}
+
+.compact .plan-stack {
+  gap: 4px;
+  min-width: 180px;
+}
+
+.compact .plan-row {
+  padding: 3px 6px;
+}
+
 /* Pricing Grid Styles */
 .price-grid {
   display: flex;
@@ -621,9 +744,7 @@ tbody tr:hover {
 }
 
 .tag.unverified-cell {
-  background: #eef2f3;
-  color: var(--muted);
-  border-color: var(--line);
+  opacity: 0.82;
 }
 
 dialog {

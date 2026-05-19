@@ -41,6 +41,39 @@ This document contains official links to LLM benchmark suites, leaderboards, and
 | **Cursor** | [https://www.cursor.com/pricing](https://www.cursor.com/pricing) |
 | **Groq** | [https://groq.com/pricing/](https://groq.com/pricing/) |
 
+## 🧰 Agent Coding Tools
+
+| Tool | Type | URL |
+| :--- | :--- | :--- |
+| **GitHub Copilot** | AI IDE / coding agent | [https://github.com/features/copilot](https://github.com/features/copilot) |
+| **Cursor** | AI IDE | [https://cursor.com/](https://cursor.com/) |
+| **Windsurf** | AI IDE | [https://windsurf.com/](https://windsurf.com/) |
+| **Claude Code** | Vibe coding CLI | [https://docs.anthropic.com/en/docs/claude-code/overview](https://docs.anthropic.com/en/docs/claude-code/overview) |
+| **OpenAI Codex CLI** | Vibe coding CLI | [https://github.com/openai/codex](https://github.com/openai/codex) |
+| **Gemini CLI** | Vibe coding CLI | [https://github.com/google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) |
+| **Cline** | VS Code agent extension | [https://cline.bot/](https://cline.bot/) |
+| **Roo Code** | VS Code agent extension | [https://roocode.com/](https://roocode.com/) |
+| **Continue** | AI IDE extension | [https://www.continue.dev/](https://www.continue.dev/) |
+| **Aider** | Vibe coding CLI | [https://aider.chat/](https://aider.chat/) |
+| **Sourcegraph Cody** | AI IDE extension / code search assistant | [https://sourcegraph.com/cody](https://sourcegraph.com/cody) |
+| **JetBrains AI Assistant** | JetBrains IDE assistant | [https://www.jetbrains.com/ai/](https://www.jetbrains.com/ai/) |
+| **Devin** | Cloud coding agent | [https://devin.ai/](https://devin.ai/) |
+| **通义灵码** | AI IDE / coding agent | [https://tongyi.aliyun.com/lingma](https://tongyi.aliyun.com/lingma) |
+| **TRAE / SOLO** | AI IDE / web assistant | [https://www.trae.ai/](https://www.trae.ai/) |
+| **Qoder** | Agentic coding platform | [https://qoder.com/](https://qoder.com/) |
+| **CodeGeeX** | AI coding assistant | [https://codegeex.cn/](https://codegeex.cn/) |
+| **Kilo Code** | Open-source coding agent | [https://kilocode.ai/](https://kilocode.ai/) |
+| **OpenCode** | Open-source coding agent | [https://opencode.ai/](https://opencode.ai/) |
+| **Crush** | Terminal coding agent | [https://github.com/charmbracelet/crush](https://github.com/charmbracelet/crush) |
+| **AstrBot** | Agent chatbot platform | [https://github.com/AstrBotDevs/AstrBot](https://github.com/AstrBotDevs/AstrBot) |
+| **DeepSeek TUI** | Open-source terminal coding agent | [https://github.com/Hmbown/DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) |
+| **Reasonix** | DeepSeek-native terminal coding agent | [https://github.com/esengine/DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix) |
+| **OpenHands** | Open-source AI-driven development platform | [https://github.com/OpenHands/OpenHands](https://github.com/OpenHands/OpenHands) |
+| **OpenClaw** | Open-source personal AI assistant / agent gateway | [https://github.com/openclaw/openclaw](https://github.com/openclaw/openclaw) |
+| **Hermes Agent** | Open-source self-improving agent framework | [https://github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) |
+
+> **GitHub Stars** (`githubStars` field): star counts fetched from GitHub API on 2026-05-19. Open-source entries only; proprietary tools (Cursor, Windsurf, etc.) are set to `null`. Counts for: openai/codex 83,740 · google-gemini/gemini-cli 104,292 · openclaw/openclaw 373,124 · All-Hands-AI/OpenHands 74,092 · cline/cline 62,014 · Aider-AI/aider 45,004 · continuedev/continue 33,265 · charmbracelet/crush 24,409 · RooCodeInc/Roo-Code 24,102 · AstrBotDevs/AstrBot 32,570 · Hmbown/DeepSeek-TUI 32,242 · opencode-ai/opencode 12,622 · esengine/DeepSeek-Reasonix 4,516 · zai-org/CodeGeeX4 2,505 · sourcegraph/cody-public-snapshot 3,796.
+
 ## 🇨🇳 Chinese Vendor Pricing (Mainland China)
 
 | Vendor | Platform | Pricing Page |
@@ -53,4 +86,4 @@ This document contains official links to LLM benchmark suites, leaderboards, and
 | **DeepSeek (深度求索)** | DeepSeek Platform | [https://api-docs.deepseek.com/quick_start/pricing](https://api-docs.deepseek.com/quick_start/pricing) |
 
 ---
-*Last Updated: 2026-05-17*
+*Last Updated: 2026-05-19*
