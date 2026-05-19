@@ -5039,9 +5039,11 @@ function renderColumnPicker() {
 }
 
 function syncColumnPickerState() {
+  const selectedCount = state.visibleColumns.size;
+  const hiddenCount = Math.max(0, fieldDefs.length - selectedCount);
   const expanded = !elements.columnPicker.hidden;
   elements.toggleColumnsButton.setAttribute("aria-expanded", String(expanded));
-  elements.toggleColumnsButton.textContent = `列设置 (${state.visibleColumns.size}/${fieldDefs.length})`;
+  elements.toggleColumnsButton.textContent = `列设置 (已选 ${selectedCount} / 未选 ${hiddenCount})`;
 }
 
 function operatorOptions(selected) {

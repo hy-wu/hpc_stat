@@ -20,12 +20,40 @@
       </header>
 
       <main class="workspace">
-        <section class="control-band filter-card">
-          <div class="search-block">
-            <label for="globalSearch">搜索模型</label>
-            <input id="globalSearch" type="search" placeholder="名称、厂商、性能标签..." />
-          </div>
-        </section>
+        <div class="filter-card">
+          <section class="control-band">
+            <div class="search-block">
+              <label for="globalSearch">搜索模型</label>
+              <input id="globalSearch" type="search" placeholder="名称、厂商、性能标签、价格、评测..." />
+            </div>
+            <div class="control">
+              <label for="modalityFilter">模态</label>
+              <select id="modalityFilter"></select>
+            </div>
+            <div class="control">
+              <label for="statusFilter">核验状态</label>
+              <select id="statusFilter"></select>
+            </div>
+            <div class="control">
+              <label for="vendorFilter">厂商</label>
+              <select id="vendorFilter"></select>
+            </div>
+            <div class="control">
+              <label for="sortField">排序字段</label>
+              <select id="sortField"></select>
+            </div>
+            <button class="ghost-button" id="sortDirectionButton" type="button">升序</button>
+            <button class="ghost-button" id="resetFiltersButton" type="button">重置</button>
+          </section>
+
+          <section class="filters-panel-inner">
+            <div class="panel-head">
+              <h2>字段筛选</h2>
+              <button class="text-button" id="addRuleButton" type="button">添加条件</button>
+            </div>
+            <div id="filterRules" class="rules"></div>
+          </section>
+        </div>
 
         <section class="insight-grid" aria-label="统计概览">
           <div class="metric">
@@ -47,18 +75,20 @@
             <h2>已核验模型表</h2>
             
             <div class="table-tools">
-              <button class="ghost-button" id="toggleColumnsButton" type="button">列设置</button>
-              <button class="ghost-button" id="compactToggleButton" type="button">紧凑模式</button>
-              <button class="ghost-button" id="exportCsvButton" type="button">下载 CSV</button>
+              <button
+                class="text-button"
+                id="toggleColumnsButton"
+                type="button"
+                aria-expanded="false"
+                aria-controls="columnPicker"
+              >
+                列设置
+              </button>
+              <button class="text-button" id="compactToggleButton" type="button">紧凑模式</button>
+              <button class="text-button" id="exportCsvButton" type="button">下载 CSV</button>
             </div>
           </div>
           <div class="column-picker" id="columnPicker" hidden></div>
-          <!-- <section class="filter-card" id="columnPicker" hidden>
-            <div class="panel-head">
-              <h2>选择显示列</h2>
-            </div>
-            <div class="column-picker-grid"></div>
-          </section> -->
           <div class="table-wrap">
             <table id="gpuTable"> <!-- Reusing ID for CSS -->
               <thead id="tableHead"></thead>

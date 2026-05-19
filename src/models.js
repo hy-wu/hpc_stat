@@ -9,11 +9,23 @@ const state = {
   sortField: "name",
   sortDirection: "asc",
   globalSearch: "",
+  vendor: "all",
+  modality: "all",
+  verificationStatus: "all",
+  rules: [],
   compact: false,
 };
 
 const elements = {
   globalSearch: document.querySelector("#globalSearch"),
+  modalityFilter: document.querySelector("#modalityFilter"),
+  statusFilter: document.querySelector("#statusFilter"),
+  vendorFilter: document.querySelector("#vendorFilter"),
+  sortField: document.querySelector("#sortField"),
+  sortDirectionButton: document.querySelector("#sortDirectionButton"),
+  resetFiltersButton: document.querySelector("#resetFiltersButton"),
+  addRuleButton: document.querySelector("#addRuleButton"),
+  filterRules: document.querySelector("#filterRules"),
   tableHead: document.querySelector("#tableHead"),
   tableBody: document.querySelector("#tableBody"),
   gpuTable: document.querySelector("#gpuTable"),
@@ -48,7 +60,10 @@ async function init() {
       return model;
     });
 
+    renderSelectOptions();
     renderColumnPicker();
+    syncColumnPickerState();
+    renderRules();
     bindEvents();
     render();
   } catch (err) {
@@ -62,6 +77,53 @@ function bindEvents() {
     render();
   });
 
+  elements.modalityFilter.addEventListener("change", () => {
+    state.modality = elements.modalityFilter.value;
+    render();
+  });
+
+  elements.statusFilter.addEventListener("change", () => {
+    state.verificationStatus = elements.statusFilter.value;
+    render();
+  });
+
+  elements.vendorFilter.addEventListener("change", () => {
+    state.vendor = elements.vendorFilter.value;
+    render();
+  });
+
+  elements.sortField.addEventListener("change", () => {
+    state.sortField = elements.sortField.value;
+    render();
+  });
+
+  elements.sortDirectionButton.addEventListener("click", () => {
+    state.sortDirection = state.sortDirection === "asc" ? "desc" : "asc";
+    elements.sortDirectionButton.textContent = state.sortDirection === "asc" ? "升序" : "降序";
+    render();
+  });
+
+  elements.resetFiltersButton.addEventListener("click", () => {
+    state.globalSearch = "";
+    state.vendor = "all";
+    state.modality = "all";
+    state.verificationStatus = "all";
+    state.rules = [];
+    elements.globalSearch.value = "";
+    elements.vendorFilter.value = "all";
+    elements.modalityFilter.value = "all";
+    elements.statusFilter.value = "all";
+    renderRules();
+    render();
+  });
+
+  elements.addRuleButton.addEventListener("click", () => {
+    const defaultField = fieldDefs.find(field => field.type === "number" && field.visible)?.key || fieldDefs[0]?.key || "name";
+    state.rules.push({ field: defaultField, op: ">=", value: "" });
+    renderRules();
+    render();
+  });
+
   elements.compactToggleButton.addEventListener("click", () => {
     state.compact = !state.compact;
     elements.gpuTable.classList.toggle("compact", state.compact);
@@ -70,6 +132,7 @@ function bindEvents() {
 
   elements.toggleColumnsButton.addEventListener("click", () => {
     elements.columnPicker.hidden = !elements.columnPicker.hidden;
+    syncColumnPickerState();
   });
 
   if (elements.exportCsvButton) {
@@ -97,6 +160,7 @@ function bindEvents() {
 
 function renderColumnPicker() {
   const selectedCount = state.visibleColumns.size;
+  const allSelected = selectedCount === fieldDefs.length;
   elements.columnPicker.innerHTML = `
     <div class="column-picker-head">
       <div>
@@ -104,7 +168,7 @@ function renderColumnPicker() {
         <span class="column-picker-meta">已选 ${selectedCount} / ${fieldDefs.length}</span>
       </div>
       <div class="column-picker-tools">
-        <button class="ghost-button" type="button" data-column-action="select-all">全选</button>
+        <button class="ghost-button" type="button" data-column-action="select-all" ${allSelected ? "disabled" : ""}>全选</button>
         <button class="text-button" type="button" data-column-action="reset-default">恢复默认</button>
       </div>
     </div>
@@ -117,19 +181,24 @@ function renderColumnPicker() {
       `).join('')}
     </div>
   `;
+  syncColumnPickerState();
 }
 
 function render() {
-  const sortFieldDef = fieldDefs.find(f => f.key === state.sortField);
-  const filtered = state.models
-    .filter(m => 
-      !state.globalSearch || 
-      Object.values(m).some(v => String(v).toLowerCase().includes(state.globalSearch))
-    )
-    .sort((a, b) => compareRows(a, b, state.sortField, state.sortDirection, sortFieldDef));
-
+  const filtered = getFilteredRows();
   renderSummary(filtered);
   renderTable(filtered);
+}
+
+function getFilteredRows() {
+  const sortFieldDef = fieldDefs.find(f => f.key === state.sortField);
+  return state.models
+    .filter(matchesGlobalSearch)
+    .filter(model => state.vendor === "all" || model.vendor === state.vendor)
+    .filter(model => state.modality === "all" || String(model.multimodal || "") === state.modality)
+    .filter(model => state.verificationStatus === "all" || String(model.verification?.status || "unknown") === state.verificationStatus)
+    .filter(matchesRules)
+    .sort((a, b) => compareRows(a, b, state.sortField, state.sortDirection, sortFieldDef));
 }
 
 function getNestedValue(obj, path) {
@@ -199,6 +268,154 @@ function compareTieBreakers(a, b) {
   return sortCollator.compare(String(a.name || a.id || ""), String(b.name || b.id || ""));
 }
 
+function renderSelectOptions() {
+  fillSelect(elements.modalityFilter, ["all", ...uniqueValues("multimodal")], "全部模态");
+  fillSelect(elements.statusFilter, ["all", ...uniqueVerificationStatuses()], "全部状态", verificationStatusLabel);
+  fillSelect(elements.vendorFilter, ["all", ...uniqueValues("vendor")], "全部厂商");
+  elements.sortField.innerHTML = fieldDefs
+    .map(field => `<option value="${field.key}">${field.label}</option>`)
+    .join("");
+  elements.sortField.value = state.sortField;
+  elements.sortDirectionButton.textContent = state.sortDirection === "asc" ? "升序" : "降序";
+}
+
+function fillSelect(select, values, allLabel, labelFormatter = value => value) {
+  select.innerHTML = values
+    .map(value => `<option value="${escapeAttr(value)}">${value === "all" ? allLabel : labelFormatter(value)}</option>`)
+    .join("");
+}
+
+function uniqueValues(key) {
+  return [...new Set(state.models.map(model => getNestedValue(model, key)).filter(Boolean))]
+    .sort((a, b) => sortCollator.compare(String(a), String(b)));
+}
+
+function uniqueVerificationStatuses() {
+  return [...new Set(state.models.map(model => model.verification?.status || "unknown"))]
+    .sort((a, b) => sortCollator.compare(verificationStatusLabel(a), verificationStatusLabel(b)));
+}
+
+function verificationStatusLabel(status) {
+  const labels = {
+    verified: "已核验",
+    partial: "部分核验",
+    generated: "生成/待核验",
+    unverified: "未核验",
+    unknown: "未知",
+  };
+  return labels[status] || status;
+}
+
+function matchesGlobalSearch(model) {
+  if (!state.globalSearch) return true;
+  return fieldDefs.some(field => String(getNestedValue(model, field.key) ?? "").toLowerCase().includes(state.globalSearch))
+    || String(model.id || "").toLowerCase().includes(state.globalSearch)
+    || String(model.verification?.status || "").toLowerCase().includes(state.globalSearch)
+    || (model.verification?.sources || []).some(source => String(source.label || source.url || "").toLowerCase().includes(state.globalSearch));
+}
+
+function matchesRules(model) {
+  return state.rules.every(rule => {
+    const field = fieldDefs.find(item => item.key === rule.field);
+    const actual = getNestedValue(model, rule.field);
+    const expected = rule.value;
+    if (!expected) return true;
+    if (field?.type === "number") {
+      const left = Number(actual);
+      const right = Number(expected);
+      if (!Number.isFinite(left) || !Number.isFinite(right)) return false;
+      if (rule.op === ">=") return left >= right;
+      if (rule.op === "<=") return left <= right;
+      if (rule.op === ">") return left > right;
+      if (rule.op === "<") return left < right;
+      if (rule.op === "=") return left === right;
+      if (rule.op === "!=") return left !== right;
+    }
+    const left = String(actual ?? "").toLowerCase();
+    const right = String(expected).toLowerCase();
+    if (rule.op === "=") return left === right;
+    if (rule.op === "!=") return left !== right;
+    return left.includes(right);
+  });
+}
+
+function renderRules() {
+  elements.filterRules.innerHTML = state.rules
+    .map((rule, index) => `
+      <div class="rule">
+        <div>
+          <label>字段</label>
+          <select data-rule-field="${index}">
+            ${fieldDefs.map(field => `<option value="${field.key}" ${field.key === rule.field ? "selected" : ""}>${field.label}</option>`).join("")}
+          </select>
+        </div>
+        <div>
+          <label>条件</label>
+          <select data-rule-op="${index}">
+            ${operatorOptions(rule.op)}
+          </select>
+        </div>
+        <div>
+          <label>值</label>
+          <input data-rule-value="${index}" value="${escapeAttr(rule.value)}" />
+        </div>
+        <button class="ghost-button" data-rule-remove="${index}" type="button" title="删除条件">×</button>
+      </div>
+    `)
+    .join("");
+
+  elements.filterRules.querySelectorAll("[data-rule-field]").forEach(select => {
+    select.addEventListener("change", () => {
+      state.rules[Number(select.dataset.ruleField)].field = select.value;
+      render();
+    });
+  });
+
+  elements.filterRules.querySelectorAll("[data-rule-op]").forEach(select => {
+    select.addEventListener("change", () => {
+      state.rules[Number(select.dataset.ruleOp)].op = select.value;
+      render();
+    });
+  });
+
+  elements.filterRules.querySelectorAll("[data-rule-value]").forEach(input => {
+    input.addEventListener("input", () => {
+      state.rules[Number(input.dataset.ruleValue)].value = input.value;
+      render();
+    });
+  });
+
+  elements.filterRules.querySelectorAll("[data-rule-remove]").forEach(button => {
+    button.addEventListener("click", () => {
+      state.rules.splice(Number(button.dataset.ruleRemove), 1);
+      renderRules();
+      render();
+    });
+  });
+}
+
+function operatorOptions(selected) {
+  const ops = ["contains", "=", "!=", ">=", "<=", ">", "<"];
+  const labels = {
+    contains: "包含",
+    "=": "等于",
+    "!=": "不等于",
+    ">=": "大于等于",
+    "<=": "小于等于",
+    ">": "大于",
+    "<": "小于",
+  };
+  return ops.map(op => `<option value="${op}" ${op === selected ? "selected" : ""}>${labels[op]}</option>`).join("");
+}
+
+function syncColumnPickerState() {
+  const selectedCount = state.visibleColumns.size;
+  const hiddenCount = Math.max(0, fieldDefs.length - selectedCount);
+  const expanded = !elements.columnPicker.hidden;
+  elements.toggleColumnsButton.setAttribute("aria-expanded", String(expanded));
+  elements.toggleColumnsButton.textContent = `列设置 (已选 ${selectedCount} / 未选 ${hiddenCount})`;
+}
+
 function renderSummary(rows) {
   if (elements.visibleCount) elements.visibleCount.textContent = rows.length;
   if (elements.bestElo) {
@@ -215,8 +432,8 @@ function renderTable(rows) {
   const stats = {};
   fieldDefs.forEach(f => {
     if (f.heatmap) {
-      const values = state.models.map(m => getNestedValue(m, f.key)).filter(v => typeof v === 'number');
-      stats[f.key] = { min: Math.min(...values), max: Math.max(...values) };
+      const values = rows.map(m => getNestedValue(m, f.key)).filter(v => typeof v === 'number');
+      stats[f.key] = values.length ? { min: Math.min(...values), max: Math.max(...values) } : null;
     }
   });
 
@@ -244,6 +461,8 @@ function renderTable(rows) {
         state.sortField = field;
         state.sortDirection = "desc";
       }
+      elements.sortField.value = state.sortField;
+      elements.sortDirectionButton.textContent = state.sortDirection === "asc" ? "升序" : "降序";
       render();
     });
   });
@@ -265,7 +484,7 @@ function formatCell(row, field, stat) {
       : `<span class="${className}" title="${sourceTitle}">${val}</span>`;
   }
 
-  if (field.heatmap && typeof val === "number") {
+  if (field.heatmap && stat && typeof val === "number") {
     const lengthPercent = (val - stat.min) / (stat.max - stat.min || 1) * 100;
     let colorPercent = lengthPercent;
     if (field.inverseHeatmap) colorPercent = 100 - lengthPercent; 
@@ -302,13 +521,7 @@ function getHeatmapColor(percent) {
 
 function exportCsv() {
   const activeFields = fieldDefs.filter(f => state.visibleColumns.has(f.key));
-  const sortFieldDef = fieldDefs.find(f => f.key === state.sortField);
-  const rows = state.models
-    .filter(m =>
-      !state.globalSearch ||
-      Object.values(m).some(v => String(v).toLowerCase().includes(state.globalSearch))
-    )
-    .sort((a, b) => compareRows(a, b, state.sortField, state.sortDirection, sortFieldDef));
+  const rows = getFilteredRows();
 
   const escape = v => {
     const s = v === null || v === undefined ? "" : String(v);
@@ -329,6 +542,19 @@ function exportCsv() {
   a.download = `llm-models-${new Date().toISOString().slice(0, 10)}.csv`;
   a.click();
   URL.revokeObjectURL(url);
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function escapeAttr(value) {
+  return escapeHtml(value);
 }
 
 init();

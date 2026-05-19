@@ -1,9 +1,13 @@
-# Unified GPU Table
+# Unified GPU + LLM Table
 
-一个零依赖的 GPU 参数工作台，用于维护自己的统一 GPU 参数表。
+一个零依赖的静态参数工作台，包含硬件对比页和大模型统计页：
+
+- `index.html`：GPU / FPGA / ASIC / CPU 参数、价格与能效对比。
+- `models.html`：LLM 价格、上下文、评测与核验状态宽表。
 
 ## 功能
 
+- 双页面：硬件参数页与 LLM 数据页共用一套静态发布方式。
 - 任意字段排序：点击表头或使用排序字段下拉框。
 - 全局搜索：型号、架构、显存、备注等字段都会参与搜索。
 - 字段筛选：可添加多个条件，支持文本包含和数值比较。
@@ -14,7 +18,7 @@
 
 ## 本地使用
 
-直接打开 `index.html` 即可使用。若要测试 `data/prices.json` 的读取，请用任意静态服务器启动：
+直接打开 `index.html` 或 `models.html` 即可使用。若要测试 `data/prices.json` / `data/models.json` 的读取，请用任意静态服务器启动：
 
 ```powershell
 python -m http.server 4173
@@ -23,7 +27,8 @@ python -m http.server 4173
 然后访问：
 
 ```text
-http://localhost:4173
+http://localhost:4173/index.html
+http://localhost:4173/models.html
 ```
 
 ## LLM 数据核验
