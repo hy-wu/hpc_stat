@@ -701,6 +701,25 @@ thead .matrix-sticky-col {
   white-space: nowrap;
 }
 
+.score-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.score-bar {
+  height: 3px;
+  border-radius: 2px;
+  min-width: 3px;
+  transition: width 0.25s ease;
+}
+
+.score-bar-c { background: #3b82f6; opacity: 0.80; }
+.score-bar-a { background: #f59e0b; opacity: 0.80; }
+.score-bar-x { background: #10b981; opacity: 0.80; }
+
+.score-bars-avg .score-bar { height: 4px; }
+
 .matrix-route-tags {
   gap: 4px;
 }
