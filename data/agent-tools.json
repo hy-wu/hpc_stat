@@ -1,0 +1,2704 @@
+[
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "vendor": "GitHub",
+    "categoryTags": [
+      "AI IDE",
+      "Coding Agent",
+      "Vibe Coding CLI"
+    ],
+    "deploymentTags": [
+      "IDE extension",
+      "GitHub cloud",
+      "Terminal CLI"
+    ],
+    "platforms": [
+      "VS Code",
+      "Visual Studio",
+      "JetBrains",
+      "GitHub.com"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": false,
+      "usageMeter": "订阅 + premium requests / coding agent 配额",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "user/mo"
+        },
+        {
+          "name": "Pro",
+          "priceUSD": 10,
+          "period": "user/mo"
+        },
+        {
+          "name": "Pro+",
+          "priceUSD": 39,
+          "period": "user/mo"
+        }
+      ]
+    },
+    "access": {
+      "byok": false,
+      "openAICompatible": false,
+      "localModel": false,
+      "modelChoice": "GitHub-hosted model pool"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": true,
+      "backgroundAgent": true,
+      "browser": false
+    },
+    "customization": {
+      "rules": "copilot-instructions.md / instructions.md / custom instructions"
+    },
+    "privacy": {
+      "localIndexing": "IDE workspace context",
+      "enterpriseControls": "Business / Enterprise policy controls"
+    },
+    "builtInModels": [
+      "GPT-5 family",
+      "Claude family",
+      "Gemini family"
+    ],
+    "supportedModels": [
+      "GitHub-hosted model choices"
+    ],
+    "officialUrl": "https://github.com/features/copilot",
+    "notes": "一个产品横跨编辑器、GitHub 云端 coding agent 和 CLI。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "integrations.mcp",
+        "integrations.git",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
+        "capabilities.pullRequest",
+        "capabilities.backgroundAgent",
+        "customization.rules",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "GitHub Copilot plans",
+          "url": "https://github.com/features/copilot/plans?locale=en-US"
+        },
+        {
+          "label": "GitHub Copilot overview",
+          "url": "https://github.com/features/copilot"
+        }
+      ]
+    },
+    "githubStars": null
+  },
+  {
+    "id": "github-copilot-cli",
+    "name": "GitHub Copilot CLI",
+    "vendor": "GitHub",
+    "categoryTags": [
+      "Vibe Coding CLI",
+      "Coding Agent"
+    ],
+    "deploymentTags": [
+      "Terminal CLI"
+    ],
+    "platforms": [
+      "Terminal",
+      "GitHub"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": false,
+      "usageMeter": "包含在 Copilot Free / Pro / Pro+ 中，使用 premium requests",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "user/mo"
+        },
+        {
+          "name": "Pro",
+          "priceUSD": 10,
+          "period": "user/mo"
+        },
+        {
+          "name": "Pro+",
+          "priceUSD": 39,
+          "period": "user/mo"
+        }
+      ]
+    },
+    "access": {
+      "byok": false,
+      "openAICompatible": false,
+      "localModel": false,
+      "modelChoice": "GitHub Copilot model pool"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": false,
+      "backgroundAgent": true,
+      "browser": false
+    },
+    "customization": {
+      "rules": "instructions.md / custom CLI instructions"
+    },
+    "privacy": {
+      "localIndexing": "按会话读取工作区上下文",
+      "enterpriseControls": "随 Copilot 计划而定"
+    },
+    "builtInModels": [
+      "GitHub-hosted coding models"
+    ],
+    "supportedModels": [
+      "GitHub Copilot model choices"
+    ],
+    "officialUrl": "https://docs.github.com/en/copilot/github-copilot-in-the-cli",
+    "notes": "旧版 GitHub CLI 扩展已被新的 Copilot CLI / coding agent 工作流替代。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "pricing.plans",
+        "pricing.freeTier",
+        "capabilities.terminal",
+        "capabilities.backgroundAgent",
+        "integrations.git",
+        "integrations.mcp",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "Copilot CLI docs",
+          "url": "https://docs.github.com/en/copilot/github-copilot-in-the-cli"
+        },
+        {
+          "label": "GitHub Copilot plans",
+          "url": "https://github.com/features/copilot/plans?locale=en-US"
+        }
+      ]
+    },
+    "githubStars": null
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "vendor": "Anysphere",
+    "categoryTags": [
+      "AI IDE",
+      "Coding Agent"
+    ],
+    "deploymentTags": [
+      "Standalone IDE",
+      "Terminal CLI",
+      "Cloud agent"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": false,
+      "usageMeter": "订阅 + on-demand usage / usage-based billing",
+      "plans": [
+        {
+          "name": "Hobby",
+          "priceUSD": 0,
+          "period": "user/mo"
+        },
+        {
+          "name": "Pro",
+          "priceUSD": 20,
+          "period": "user/mo"
+        },
+        {
+          "name": "Pro Plus",
+          "priceUSD": 60,
+          "period": "user/mo"
+        },
+        {
+          "name": "Ultra",
+          "priceUSD": 200,
+          "period": "user/mo"
+        },
+        {
+          "name": "Teams",
+          "priceUSD": 40,
+          "period": "user/mo"
+        },
+        {
+          "name": "Enterprise",
+          "priceLabel": "Custom"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": true,
+      "localModel": false,
+      "modelChoice": "内置模型 + 自定义 API key"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": false,
+      "backgroundAgent": true,
+      "browser": false
+    },
+    "customization": {
+      "rules": ".cursor/rules"
+    },
+    "privacy": {
+      "localIndexing": "代码库索引与上下文工程",
+      "enterpriseControls": "Teams / Enterprise policy controls"
+    },
+    "builtInModels": [
+      "Claude",
+      "GPT",
+      "Gemini"
+    ],
+    "supportedModels": [
+      "OpenAI-compatible providers",
+      "Anthropic",
+      "OpenAI",
+      "Google"
+    ],
+    "officialUrl": "https://cursor.com/",
+    "notes": "产品线已覆盖 IDE、CLI 和 cloud agents；个人计划按 Pro / Pro Plus / Ultra 分层。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "access.byok",
+        "access.openAICompatible",
+        "integrations.mcp",
+        "integrations.git",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
+        "capabilities.backgroundAgent",
+        "customization.rules",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "Cursor pricing",
+          "url": "https://cursor.com/pricing"
+        },
+        {
+          "label": "Cursor docs pricing",
+          "url": "https://cursor.com/docs/models-and-pricing"
+        }
+      ]
+    },
+    "githubStars": null
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf",
+    "vendor": "Codeium",
+    "categoryTags": [
+      "AI IDE",
+      "Coding Agent"
+    ],
+    "deploymentTags": [
+      "Standalone IDE",
+      "Cloud agent"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": false,
+      "usageMeter": "订阅 + API-price extra usage",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "user/mo"
+        },
+        {
+          "name": "Pro",
+          "priceUSD": 20,
+          "period": "user/mo"
+        },
+        {
+          "name": "Max",
+          "priceUSD": 200,
+          "period": "user/mo"
+        },
+        {
+          "name": "Teams",
+          "priceUSD": 40,
+          "period": "user/mo"
+        },
+        {
+          "name": "Enterprise",
+          "priceLabel": "Custom"
+        }
+      ]
+    },
+    "access": {
+      "byok": false,
+      "openAICompatible": false,
+      "localModel": false,
+      "modelChoice": "Windsurf-hosted model pool"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": false,
+      "backgroundAgent": false,
+      "browser": false
+    },
+    "customization": {
+      "rules": "memories / rules"
+    },
+    "privacy": {
+      "localIndexing": "代码库上下文",
+      "enterpriseControls": "Teams / Enterprise"
+    },
+    "builtInModels": [
+      "SWE-1.5",
+      "Claude",
+      "GPT",
+      "Gemini"
+    ],
+    "supportedModels": [
+      "Windsurf-hosted models"
+    ],
+    "officialUrl": "https://windsurf.com/",
+    "notes": "官方 pricing 明确给出 Free / Pro / Max / Teams / Enterprise。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.plans",
+        "integrations.mcp",
+        "integrations.git",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "Windsurf pricing",
+          "url": "https://windsurf.com/pricing"
+        },
+        {
+          "label": "Windsurf home",
+          "url": "https://windsurf.com/"
+        }
+      ]
+    },
+    "githubStars": null
+  },
+  {
+    "id": "claude-code",
+    "name": "Claude Code",
+    "vendor": "Anthropic",
+    "categoryTags": [
+      "Vibe Coding CLI",
+      "Coding Agent"
+    ],
+    "deploymentTags": [
+      "Terminal CLI"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows via WSL"
+    ],
+    "pricing": {
+      "startingUSD": null,
+      "freeTier": false,
+      "openSource": false,
+      "usageMeter": "Anthropic API usage / Claude subscription eligibility",
+      "plans": [
+        {
+          "name": "API",
+          "priceLabel": "Usage-based"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": false,
+      "localModel": false,
+      "modelChoice": "Claude models"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": false,
+      "backgroundAgent": false,
+      "browser": false
+    },
+    "customization": {
+      "rules": "CLAUDE.md / slash commands / MCP config"
+    },
+    "privacy": {
+      "localIndexing": "按命令读取工作区上下文",
+      "enterpriseControls": "Anthropic Console / enterprise controls"
+    },
+    "builtInModels": [
+      "Claude Sonnet",
+      "Claude Opus"
+    ],
+    "supportedModels": [
+      "Anthropic Claude"
+    ],
+    "officialUrl": "https://docs.anthropic.com/en/docs/claude-code/overview",
+    "notes": "命令行优先的 coding agent。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.freeTier",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "access.byok",
+        "integrations.mcp",
+        "integrations.git",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
+        "capabilities.testRun",
+        "customization.rules",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "Claude Code overview",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+        }
+      ]
+    },
+    "githubStars": null
+  },
+  {
+    "id": "openai-codex",
+    "name": "OpenAI Codex",
+    "vendor": "OpenAI",
+    "categoryTags": [
+      "Vibe Coding CLI",
+      "Coding Agent"
+    ],
+    "deploymentTags": [
+      "Terminal CLI",
+      "IDE extension",
+      "Desktop app",
+      "Web app",
+      "Cloud agent"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows",
+      "Web"
+    ],
+    "pricing": {
+      "startingUSD": null,
+      "freeTier": null,
+      "openSource": true,
+      "usageMeter": "ChatGPT plan inclusion or API usage",
+      "plans": [
+        {
+          "name": "ChatGPT Plus / Pro / Business / Edu / Enterprise",
+          "priceLabel": "Included if subscribed"
+        },
+        {
+          "name": "API",
+          "priceLabel": "Usage-based"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": false,
+      "localModel": false,
+      "modelChoice": "OpenAI-hosted models"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": false,
+      "backgroundAgent": true,
+      "browser": true
+    },
+    "customization": {
+      "rules": "AGENTS.md / CLI config"
+    },
+    "privacy": {
+      "localIndexing": "本地运行并按会话读取工作区",
+      "enterpriseControls": "OpenAI account / enterprise controls"
+    },
+    "builtInModels": [
+      "GPT / Codex"
+    ],
+    "supportedModels": [
+      "OpenAI-hosted models"
+    ],
+    "officialUrl": "https://github.com/openai/codex",
+    "logoUrl": "https://cdn.openai.com/codex/codex-icon.png",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.openSource",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "access.byok",
+        "integrations.git",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
+        "capabilities.testRun",
+        "capabilities.browser",
+        "capabilities.backgroundAgent",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI Codex GitHub",
+          "url": "https://github.com/openai/codex"
+        }
+      ]
+    },
+    "githubStars": 83740
+  },
+  {
+    "id": "google-gemini-dev-tools",
+    "name": "Google Gemini / Gemini CLI",
+    "vendor": "Google",
+    "categoryTags": [
+      "Vibe Coding CLI",
+      "IDE assistant",
+      "Cloud assistant"
+    ],
+    "deploymentTags": [
+      "Terminal CLI",
+      "IDE extension",
+      "Web app"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows",
+      "Web"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": null,
+      "usageMeter": "Google account quota / Gemini API usage",
+      "plans": [
+        {
+          "name": "Free tier",
+          "priceUSD": 0,
+          "period": "quota-based"
+        },
+        {
+          "name": "API",
+          "priceLabel": "Usage-based"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": false,
+      "localModel": false,
+      "modelChoice": "Gemini models"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": false,
+      "backgroundAgent": false,
+      "browser": true
+    },
+    "customization": {
+      "rules": "GEMINI.md / settings"
+    },
+    "privacy": {
+      "localIndexing": "按会话读取工作区上下文",
+      "enterpriseControls": "Google account / enterprise controls"
+    },
+    "builtInModels": [
+      "Gemini"
+    ],
+    "supportedModels": [
+      "Google Gemini"
+    ],
+    "officialUrl": "https://github.com/google-gemini/gemini-cli",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=gemini.google.com&sz=32",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "access.byok",
+        "integrations.mcp",
+        "integrations.git",
+        "capabilities.terminal",
+        "capabilities.browser",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "Gemini CLI GitHub",
+          "url": "https://github.com/google-gemini/gemini-cli"
+        },
+        {
+          "label": "Gemini pricing",
+          "url": "https://ai.google.dev/pricing"
+        }
+      ]
+    },
+    "githubStars": 104292
+  },
+  {
+    "id": "tongyi-lingma",
+    "name": "通义灵码",
+    "vendor": "Alibaba Cloud",
+    "categoryTags": [
+      "AI IDE",
+      "Coding Agent"
+    ],
+    "deploymentTags": [
+      "IDE extension"
+    ],
+    "platforms": [
+      "IDE"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": false,
+      "usageMeter": "个人免费使用；企业方案未在首页静态给出",
+      "plans": [
+        {
+          "name": "个人版",
+          "priceUSD": 0,
+          "period": "user/mo"
+        }
+      ]
+    },
+    "access": {
+      "byok": false,
+      "openAICompatible": false,
+      "localModel": false,
+      "modelChoice": "Tongyi / Qwen coding models"
+    },
+    "integrations": {
+      "mcp": null,
+      "git": null
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": false,
+      "backgroundAgent": true,
+      "browser": false
+    },
+    "customization": {
+      "rules": "企业知识与研发上下文配置"
+    },
+    "privacy": {
+      "localIndexing": "工程自动感知",
+      "enterpriseControls": "企业方案能力"
+    },
+    "builtInModels": [
+      "Tongyi coding models"
+    ],
+    "supportedModels": [
+      "Alibaba-hosted"
+    ],
+    "officialUrl": "https://tongyi.aliyun.com/lingma",
+    "notes": "首页已明确“个人免费使用”，并展示编程智能体、终端执行、工程自动感知。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
+        "capabilities.backgroundAgent",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "通义灵码主页",
+          "url": "https://tongyi.aliyun.com/lingma"
+        }
+      ]
+    },
+    "githubStars": null
+  },
+  {
+    "id": "trae",
+    "name": "TRAE / SOLO",
+    "vendor": "ByteDance",
+    "categoryTags": [
+      "AI IDE",
+      "Cloud assistant"
+    ],
+    "deploymentTags": [
+      "Standalone IDE",
+      "Desktop app",
+      "Web app"
+    ],
+    "platforms": [
+      "Desktop",
+      "Web"
+    ],
+    "pricing": {
+      "startingUSD": null,
+      "freeTier": null,
+      "openSource": false,
+      "usageMeter": null,
+      "plans": [
+        {
+          "name": "Pricing",
+          "pricingUrl": "https://www.trae.ai/pricing"
+        }
+      ]
+    },
+    "access": {
+      "byok": null,
+      "openAICompatible": null,
+      "localModel": null,
+      "modelChoice": "TRAE-hosted workflow"
+    },
+    "integrations": {
+      "mcp": null,
+      "git": null
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": false,
+      "testRun": false,
+      "pullRequest": false,
+      "backgroundAgent": true,
+      "browser": true
+    },
+    "customization": {
+      "rules": "Workspace / tool integration"
+    },
+    "privacy": {
+      "localIndexing": "Workspace context",
+      "enterpriseControls": null
+    },
+    "builtInModels": [
+      "TRAE-managed stack"
+    ],
+    "supportedModels": [
+      "TRAE-hosted"
+    ],
+    "officialUrl": "https://www.trae.ai/",
+    "notes": "TRAE SOLO 明确支持 Web 与 Desktop 并行执行；公开价格页未直接列出套餐金额。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "capabilities.backgroundAgent",
+        "capabilities.browser",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "TRAE home",
+          "url": "https://www.trae.ai/"
+        },
+        {
+          "label": "TRAE pricing",
+          "url": "https://www.trae.ai/pricing"
+        },
+        {
+          "label": "TRAE SOLO web",
+          "url": "https://www.trae.ai/solo-web"
+        }
+      ]
+    },
+    "githubStars": null
+  },
+  {
+    "id": "qoder",
+    "name": "Qoder",
+    "vendor": "Qoder",
+    "categoryTags": [
+      "AI IDE",
+      "Coding Agent",
+      "Vibe Coding CLI"
+    ],
+    "deploymentTags": [
+      "Standalone IDE",
+      "JetBrains plugin",
+      "Terminal CLI"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "JetBrains"
+    ],
+    "pricing": {
+      "startingUSD": null,
+      "freeTier": null,
+      "openSource": false,
+      "usageMeter": null,
+      "plans": [
+        {
+          "name": "Pricing",
+          "pricingUrl": "https://qoder.com/pricing"
+        }
+      ]
+    },
+    "access": {
+      "byok": null,
+      "openAICompatible": null,
+      "localModel": null,
+      "modelChoice": "Latest and advanced AI models"
+    },
+    "integrations": {
+      "mcp": null,
+      "git": null
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": false,
+      "pullRequest": false,
+      "backgroundAgent": true,
+      "browser": false
+    },
+    "customization": {
+      "rules": "Quest / repo wiki / workspace configuration"
+    },
+    "privacy": {
+      "localIndexing": "Context engineering + repo understanding",
+      "enterpriseControls": null
+    },
+    "builtInModels": [
+      "Multiple frontier models"
+    ],
+    "supportedModels": [
+      "Qoder-managed stack"
+    ],
+    "officialUrl": "https://qoder.com/",
+    "notes": "官方文档强调 Editor + Quest 双工作区，其中 Quest 是 autonomous delegation。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
+        "capabilities.backgroundAgent",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "Qoder pricing",
+          "url": "https://qoder.com/pricing"
+        },
+        {
+          "label": "Qoder docs",
+          "url": "https://docs.qoder.com/"
+        }
+      ]
+    },
+    "githubStars": null
+  },
+  {
+    "id": "codegeex",
+    "name": "CodeGeeX",
+    "vendor": "Zhipu AI",
+    "categoryTags": [
+      "AI IDE extension"
+    ],
+    "deploymentTags": [
+      "IDE extension",
+      "Web app"
+    ],
+    "platforms": [
+      "IDE",
+      "Web"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": true,
+      "usageMeter": "工具免费，模型/服务口径以平台为准",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "tool"
+        }
+      ]
+    },
+    "access": {
+      "byok": false,
+      "openAICompatible": false,
+      "localModel": false,
+      "modelChoice": "CodeGeeX models"
+    },
+    "integrations": {
+      "mcp": false,
+      "git": false
+    },
+    "capabilities": {
+      "multiFileEdit": false,
+      "terminal": false,
+      "testRun": false,
+      "pullRequest": false,
+      "backgroundAgent": false,
+      "browser": false
+    },
+    "customization": {
+      "rules": "IDE plugin settings"
+    },
+    "privacy": {
+      "localIndexing": null,
+      "enterpriseControls": null
+    },
+    "builtInModels": [
+      "CodeGeeX 13B and related code models"
+    ],
+    "supportedModels": [
+      "CodeGeeX"
+    ],
+    "officialUrl": "https://codegeex.cn/",
+    "notes": "更偏代码助手与生成/翻译/注释，不是重型自主 coding agent。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "pricing.plans",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "CodeGeeX home",
+          "url": "https://codegeex.cn/"
+        }
+      ]
+    },
+    "githubStars": 2505
+  },
+  {
+    "id": "kilo-code",
+    "name": "Kilo Code",
+    "vendor": "Kilo Code",
+    "categoryTags": [
+      "AI IDE",
+      "Coding Agent",
+      "Vibe Coding CLI"
+    ],
+    "deploymentTags": [
+      "VS Code extension",
+      "JetBrains plugin",
+      "Terminal CLI",
+      "Cloud agent"
+    ],
+    "platforms": [
+      "VS Code",
+      "JetBrains",
+      "CLI"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": true,
+      "usageMeter": "开源工具 + Kilo Pass token subscription + business plans",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "tool"
+        },
+        {
+          "name": "Kilo Pass",
+          "priceLabel": "Monthly token subscription"
+        },
+        {
+          "name": "Teams",
+          "priceLabel": "Custom"
+        },
+        {
+          "name": "Enterprise",
+          "priceLabel": "Custom"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": true,
+      "localModel": true,
+      "modelChoice": "Any model"
+    },
+    "integrations": {
+      "mcp": null,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": true,
+      "backgroundAgent": true,
+      "browser": false
+    },
+    "customization": {
+      "rules": "Specialized modes / agent modes"
+    },
+    "privacy": {
+      "localIndexing": "代码库上下文",
+      "enterpriseControls": "Business plans / private model controls"
+    },
+    "builtInModels": [],
+    "supportedModels": [
+      "Any model / 500+ models via gateway"
+    ],
+    "officialUrl": "https://kilocode.ai/",
+    "notes": "官网同时覆盖 Kilo Code 与 Hosted OpenClaw / KiloClaw。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "access.byok",
+        "access.openAICompatible",
+        "access.localModel",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
+        "capabilities.backgroundAgent",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "Kilo Code home",
+          "url": "https://kilocode.ai/"
+        },
+        {
+          "label": "Kilo pricing",
+          "url": "https://kilocode.ai/pricing"
+        }
+      ]
+    },
+    "githubStars": null
+  },
+  {
+    "id": "opencode",
+    "name": "OpenCode",
+    "vendor": "OpenCode",
+    "categoryTags": [
+      "Coding Agent",
+      "Vibe Coding CLI",
+      "AI IDE"
+    ],
+    "deploymentTags": [
+      "Terminal CLI",
+      "Desktop app",
+      "IDE extension"
+    ],
+    "platforms": [
+      "Terminal",
+      "Desktop",
+      "IDE"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": true,
+      "usageMeter": "自带免费模型或连接任意 provider",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "tool"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": true,
+      "localModel": true,
+      "modelChoice": "Any model from any provider"
+    },
+    "integrations": {
+      "mcp": null,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": false,
+      "backgroundAgent": true,
+      "browser": false
+    },
+    "customization": {
+      "rules": "Multi-session / editor integration"
+    },
+    "privacy": {
+      "localIndexing": "LSP enabled / privacy-first",
+      "enterpriseControls": "Privacy-focused deployment"
+    },
+    "builtInModels": [
+      "Free included models"
+    ],
+    "supportedModels": [
+      "Claude",
+      "GPT",
+      "Gemini",
+      "local models",
+      "75+ providers"
+    ],
+    "officialUrl": "https://opencode.ai/",
+    "notes": "官网明确写 terminal、IDE、desktop 三种载体，并支持本地模型。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "pricing.plans",
+        "access.byok",
+        "access.openAICompatible",
+        "access.localModel",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
+        "capabilities.backgroundAgent",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "OpenCode home",
+          "url": "https://opencode.ai/"
+        }
+      ]
+    },
+    "githubStars": 12622
+  },
+  {
+    "id": "cline",
+    "name": "Cline",
+    "vendor": "Cline",
+    "categoryTags": [
+      "AI IDE extension",
+      "Vibe Coding CLI",
+      "Coding Agent"
+    ],
+    "deploymentTags": [
+      "VS Code extension",
+      "JetBrains plugin",
+      "Terminal CLI",
+      "Web task board"
+    ],
+    "platforms": [
+      "VS Code",
+      "JetBrains",
+      "CLI",
+      "Web"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": true,
+      "usageMeter": "工具免费；所选模型 provider 计费",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "tool"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": true,
+      "localModel": true,
+      "modelChoice": "Multi-provider / local / custom"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": false,
+      "backgroundAgent": true,
+      "browser": true
+    },
+    "customization": {
+      "rules": ".clinerules / MCP config / SDK"
+    },
+    "privacy": {
+      "localIndexing": "按请求读取工作区上下文",
+      "enterpriseControls": "取决于 provider / self-hosted choices"
+    },
+    "builtInModels": [],
+    "supportedModels": [
+      "Anthropic",
+      "OpenAI",
+      "OpenRouter",
+      "Google",
+      "AWS Bedrock",
+      "Ollama",
+      "LM Studio"
+    ],
+    "officialUrl": "https://github.com/cline/cline",
+    "notes": "现在不只 VS Code 扩展，还包含 CLI、Kanban 和 JetBrains plugin。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "access.byok",
+        "access.openAICompatible",
+        "access.localModel",
+        "integrations.mcp",
+        "integrations.git",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
+        "capabilities.testRun",
+        "capabilities.backgroundAgent",
+        "capabilities.browser",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "Cline GitHub",
+          "url": "https://github.com/cline/cline"
+        }
+      ]
+    },
+    "githubStars": 62014
+  },
+  {
+    "id": "roo-code",
+    "name": "Roo Code",
+    "vendor": "Roo Code",
+    "categoryTags": [
+      "AI IDE extension",
+      "Coding Agent"
+    ],
+    "deploymentTags": [
+      "VS Code extension"
+    ],
+    "platforms": [
+      "VS Code"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": true,
+      "usageMeter": "工具免费；provider 计费",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "tool"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": true,
+      "localModel": true,
+      "modelChoice": "Multi-provider / local"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": false,
+      "backgroundAgent": false,
+      "browser": true
+    },
+    "customization": {
+      "rules": ".roo/rules / modes"
+    },
+    "privacy": {
+      "localIndexing": "按请求读取工作区",
+      "enterpriseControls": "取决于 provider"
+    },
+    "builtInModels": [],
+    "supportedModels": [
+      "Anthropic",
+      "OpenAI",
+      "OpenRouter",
+      "Google",
+      "Ollama",
+      "LM Studio"
+    ],
+    "officialUrl": "https://github.com/RooVetGit/Roo-Code",
+    "notes": "README 当前有 shutdown notice，使用前建议再确认项目现状。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "access.byok",
+        "integrations.mcp",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
+        "officialUrl",
+        "notes"
+      ],
+      "sources": [
+        {
+          "label": "Roo Code GitHub",
+          "url": "https://github.com/RooVetGit/Roo-Code"
+        }
+      ]
+    },
+    "githubStars": 24102
+  },
+  {
+    "id": "continue",
+    "name": "Continue",
+    "vendor": "Continue",
+    "categoryTags": [
+      "AI IDE extension"
+    ],
+    "deploymentTags": [
+      "VS Code extension",
+      "JetBrains plugin"
+    ],
+    "platforms": [
+      "VS Code",
+      "JetBrains"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": true,
+      "usageMeter": "开源扩展；provider 或团队方案计费",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "tool"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": true,
+      "localModel": true,
+      "modelChoice": "Multi-provider / local / custom"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": false,
+      "testRun": false,
+      "pullRequest": false,
+      "backgroundAgent": false,
+      "browser": false
+    },
+    "customization": {
+      "rules": "config.yaml / assistant config"
+    },
+    "privacy": {
+      "localIndexing": "代码库索引与检索可配置",
+      "enterpriseControls": "Teams / enterprise options"
+    },
+    "builtInModels": [],
+    "supportedModels": [
+      "OpenAI",
+      "Anthropic",
+      "Google",
+      "Mistral",
+      "Ollama",
+      "LM Studio",
+      "OpenAI-compatible"
+    ],
+    "officialUrl": "https://www.continue.dev/",
+    "notes": "更像可配置的 IDE AI 层。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "access.byok",
+        "access.openAICompatible",
+        "access.localModel",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "Continue docs",
+          "url": "https://www.continue.dev/"
+        }
+      ]
+    },
+    "githubStars": 33265
+  },
+  {
+    "id": "aider",
+    "name": "Aider",
+    "vendor": "Aider",
+    "categoryTags": [
+      "Vibe Coding CLI"
+    ],
+    "deploymentTags": [
+      "Terminal CLI"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": true,
+      "usageMeter": "工具免费；provider 计费",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "tool"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": true,
+      "localModel": true,
+      "modelChoice": "OpenAI / Anthropic / Gemini / OpenRouter / local"
+    },
+    "integrations": {
+      "mcp": false,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": false,
+      "backgroundAgent": false,
+      "browser": false
+    },
+    "customization": {
+      "rules": ".aider.conf.yml / repo-map"
+    },
+    "privacy": {
+      "localIndexing": "repo-map 摘要",
+      "enterpriseControls": "取决于 provider"
+    },
+    "builtInModels": [],
+    "supportedModels": [
+      "OpenAI",
+      "Anthropic",
+      "Gemini",
+      "Groq",
+      "LM Studio",
+      "DeepSeek",
+      "Ollama",
+      "OpenAI-compatible"
+    ],
+    "officialUrl": "https://aider.chat/",
+    "notes": "经典 terminal pair programming 工具。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "access.byok",
+        "access.openAICompatible",
+        "access.localModel",
+        "integrations.git",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
+        "capabilities.testRun",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "Aider home",
+          "url": "https://aider.chat/"
+        },
+        {
+          "label": "Aider model docs",
+          "url": "https://aider.chat/docs/llms.html"
+        }
+      ]
+    },
+    "githubStars": 45004
+  },
+  {
+    "id": "sourcegraph-cody",
+    "name": "Sourcegraph Cody",
+    "vendor": "Sourcegraph",
+    "categoryTags": [
+      "AI IDE extension",
+      "Code search assistant"
+    ],
+    "deploymentTags": [
+      "VS Code extension",
+      "JetBrains plugin",
+      "Web app"
+    ],
+    "platforms": [
+      "VS Code",
+      "JetBrains",
+      "Sourcegraph"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": false,
+      "usageMeter": "计划与 seat 计费",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "user/mo"
+        },
+        {
+          "name": "Enterprise",
+          "priceLabel": "Custom"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": false,
+      "localModel": false,
+      "modelChoice": "Sourcegraph-hosted and enterprise model options"
+    },
+    "integrations": {
+      "mcp": false,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": false,
+      "testRun": false,
+      "pullRequest": false,
+      "backgroundAgent": false,
+      "browser": false
+    },
+    "customization": {
+      "rules": "Context filters / enterprise configuration"
+    },
+    "privacy": {
+      "localIndexing": "Code graph / code search",
+      "enterpriseControls": "Enterprise deployment and policy controls"
+    },
+    "builtInModels": [
+      "Claude",
+      "GPT"
+    ],
+    "supportedModels": [
+      "Sourcegraph-supported providers"
+    ],
+    "officialUrl": "https://sourcegraph.com/cody",
+    "notes": "强项在大型代码库检索与企业代码图。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.plans",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "Sourcegraph Cody",
+          "url": "https://sourcegraph.com/cody"
+        }
+      ]
+    },
+    "githubStars": 3796
+  },
+  {
+    "id": "jetbrains-ai-assistant",
+    "name": "JetBrains AI Assistant",
+    "vendor": "JetBrains",
+    "categoryTags": [
+      "AI IDE extension"
+    ],
+    "deploymentTags": [
+      "JetBrains plugin"
+    ],
+    "platforms": [
+      "JetBrains IDEs"
+    ],
+    "pricing": {
+      "startingUSD": null,
+      "freeTier": false,
+      "openSource": false,
+      "usageMeter": "AI subscription / organization licensing",
+      "plans": [
+        {
+          "name": "Personal",
+          "pricingUrl": "https://www.jetbrains.com/store/#personal"
+        },
+        {
+          "name": "Organization",
+          "pricingUrl": "https://www.jetbrains.com/store/#commercial"
+        }
+      ]
+    },
+    "access": {
+      "byok": false,
+      "openAICompatible": false,
+      "localModel": false,
+      "modelChoice": "JetBrains-hosted model choices"
+    },
+    "integrations": {
+      "mcp": false,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": false,
+      "testRun": false,
+      "pullRequest": false,
+      "backgroundAgent": false,
+      "browser": false
+    },
+    "customization": {
+      "rules": "IDE settings / project context"
+    },
+    "privacy": {
+      "localIndexing": "JetBrains IDE project model",
+      "enterpriseControls": "Organization licensing and AI controls"
+    },
+    "builtInModels": [
+      "JetBrains AI service model choices"
+    ],
+    "supportedModels": [
+      "JetBrains-hosted providers"
+    ],
+    "officialUrl": "https://www.jetbrains.com/ai/",
+    "notes": "官方主站可见产品与方案入口，但价格文案抓取不稳定。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.plans",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "JetBrains AI",
+          "url": "https://www.jetbrains.com/ai/"
+        }
+      ]
+    },
+    "githubStars": null
+  },
+  {
+    "id": "devin",
+    "name": "Devin",
+    "vendor": "Cognition",
+    "categoryTags": [
+      "Cloud coding agent",
+      "Coding Agent"
+    ],
+    "deploymentTags": [
+      "Cloud workspace",
+      "Web app"
+    ],
+    "platforms": [
+      "Web",
+      "GitHub integrations"
+    ],
+    "pricing": {
+      "startingUSD": null,
+      "freeTier": false,
+      "openSource": false,
+      "usageMeter": "Seat + agent compute",
+      "plans": [
+        {
+          "name": "Pricing",
+          "pricingUrl": "https://devin.ai/pricing"
+        }
+      ]
+    },
+    "access": {
+      "byok": false,
+      "openAICompatible": false,
+      "localModel": false,
+      "modelChoice": "Cognition-hosted agent stack"
+    },
+    "integrations": {
+      "mcp": false,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": true,
+      "backgroundAgent": true,
+      "browser": true
+    },
+    "customization": {
+      "rules": "Repo knowledge / task instructions"
+    },
+    "privacy": {
+      "localIndexing": "Cloud workspace clone",
+      "enterpriseControls": "Team / enterprise controls"
+    },
+    "builtInModels": [
+      "Cognition-hosted models"
+    ],
+    "supportedModels": [
+      "Devin-managed stack"
+    ],
+    "officialUrl": "https://devin.ai/",
+    "notes": "偏云端异步 issue/PR 级软件工程 agent。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "integrations.git",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
+        "capabilities.testRun",
+        "capabilities.pullRequest",
+        "capabilities.backgroundAgent",
+        "capabilities.browser",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "Devin",
+          "url": "https://devin.ai/"
+        }
+      ]
+    },
+    "githubStars": null
+  },
+  {
+    "id": "crush",
+    "name": "Crush",
+    "vendor": "Charmbracelet",
+    "categoryTags": [
+      "Vibe Coding CLI",
+      "Coding Agent"
+    ],
+    "deploymentTags": [
+      "Terminal CLI"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows",
+      "PowerShell",
+      "WSL"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": true,
+      "usageMeter": "工具免费；接入的 LLM provider 计费",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "tool"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": true,
+      "localModel": true,
+      "modelChoice": "LLM of your choice"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": false,
+      "backgroundAgent": false,
+      "browser": false
+    },
+    "customization": {
+      "rules": "MCP / session config"
+    },
+    "privacy": {
+      "localIndexing": "LSP enhanced context",
+      "enterpriseControls": null
+    },
+    "builtInModels": [],
+    "supportedModels": [
+      "OpenAI-compatible",
+      "Anthropic-compatible",
+      "your own providers"
+    ],
+    "officialUrl": "https://github.com/charmbracelet/crush",
+    "notes": "终端原生、可切换模型，且 MCP 支持明确写在 README。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "access.byok",
+        "access.openAICompatible",
+        "integrations.mcp",
+        "capabilities.terminal",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "Crush GitHub",
+          "url": "https://github.com/charmbracelet/crush"
+        }
+      ]
+    },
+    "githubStars": 24409
+  },
+  {
+    "id": "astrbot",
+    "name": "AstrBot",
+    "vendor": "AstrBot",
+    "categoryTags": [
+      "Agent framework",
+      "Chatbot framework"
+    ],
+    "deploymentTags": [
+      "Self-hosted",
+      "Web app",
+      "IM integrations"
+    ],
+    "platforms": [
+      "Self-hosted",
+      "Discord",
+      "Telegram",
+      "IM platforms"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": true,
+      "usageMeter": "平台免费；所选模型/provider 计费",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "tool"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": true,
+      "localModel": true,
+      "modelChoice": "LLM conversations / multimodal / agent"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": false
+    },
+    "capabilities": {
+      "multiFileEdit": false,
+      "terminal": false,
+      "testRun": false,
+      "pullRequest": false,
+      "backgroundAgent": true,
+      "browser": false
+    },
+    "customization": {
+      "rules": "插件 / bot workflows"
+    },
+    "privacy": {
+      "localIndexing": "Self-hosted deployment",
+      "enterpriseControls": "取决于部署方式"
+    },
+    "builtInModels": [],
+    "supportedModels": [
+      "OpenAI-compatible / local / multimodal providers"
+    ],
+    "officialUrl": "https://github.com/AstrBotDevs/AstrBot",
+    "notes": "不是 coding IDE，而是 all-in-one agent chatbot platform。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "access.byok",
+        "access.openAICompatible",
+        "access.localModel",
+        "integrations.mcp",
+        "capabilities.backgroundAgent",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "AstrBot GitHub",
+          "url": "https://github.com/AstrBotDevs/AstrBot"
+        }
+      ]
+    },
+    "githubStars": 32570
+  },
+  {
+    "id": "deepseek-tui",
+    "name": "DeepSeek TUI",
+    "vendor": "DeepSeek CLI Contributors",
+    "categoryTags": [
+      "Vibe Coding CLI",
+      "Coding Agent"
+    ],
+    "deploymentTags": [
+      "Terminal CLI"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": true,
+      "usageMeter": "工具免费；按 DeepSeek / OpenAI-compatible / Ollama provider 计费",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "tool"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": true,
+      "localModel": true,
+      "modelChoice": "DeepSeek V4 + OpenAI-compatible / Ollama endpoints"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": false,
+      "backgroundAgent": true,
+      "browser": true
+    },
+    "customization": {
+      "rules": "~/.deepseek/config.toml / project overlay / skills"
+    },
+    "privacy": {
+      "localIndexing": "workspace-scoped sandbox + session persistence",
+      "enterpriseControls": null
+    },
+    "builtInModels": [
+      "deepseek-v4-pro",
+      "deepseek-v4-flash",
+      "auto routing"
+    ],
+    "supportedModels": [
+      "DeepSeek",
+      "OpenAI-compatible endpoints",
+      "Ollama",
+      "SGLang",
+      "vLLM"
+    ],
+    "officialUrl": "https://github.com/Hmbown/DeepSeek-TUI",
+    "notes": "README 明确写了 git / web / MCP / sub-agents / durable task queue / HTTP API。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "access.byok",
+        "access.openAICompatible",
+        "access.localModel",
+        "integrations.mcp",
+        "integrations.git",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
+        "capabilities.testRun",
+        "capabilities.backgroundAgent",
+        "capabilities.browser",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "DeepSeek TUI GitHub",
+          "url": "https://github.com/Hmbown/DeepSeek-TUI"
+        },
+        {
+          "label": "DeepSeek TUI license",
+          "url": "https://github.com/Hmbown/DeepSeek-TUI/blob/main/LICENSE"
+        }
+      ]
+    },
+    "githubStars": 32242
+  },
+  {
+    "id": "reasonix",
+    "name": "Reasonix",
+    "vendor": "esengine",
+    "categoryTags": [
+      "Vibe Coding CLI",
+      "Coding Agent"
+    ],
+    "deploymentTags": [
+      "Terminal CLI",
+      "Desktop app"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows",
+      "QQ"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": true,
+      "usageMeter": "工具免费；主循环依赖 DeepSeek API key",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "tool"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": false,
+      "localModel": false,
+      "modelChoice": "DeepSeek-only (v4-flash / v4-pro)"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": false,
+      "backgroundAgent": false,
+      "browser": false
+    },
+    "customization": {
+      "rules": "~/.reasonix/config.json / .reasonix / skills / memory / hooks"
+    },
+    "privacy": {
+      "localIndexing": "per-project memory + optional semantic index",
+      "enterpriseControls": null
+    },
+    "builtInModels": [
+      "DeepSeek V4 Flash",
+      "DeepSeek V4 Pro"
+    ],
+    "supportedModels": [
+      "DeepSeek"
+    ],
+    "officialUrl": "https://esengine.github.io/DeepSeek-Reasonix/",
+    "notes": "定位非常鲜明：DeepSeek-native、cache-first、terminal-first；另有桌面预发行版和 QQ channel。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "access.byok",
+        "integrations.mcp",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "Reasonix GitHub",
+          "url": "https://github.com/esengine/DeepSeek-Reasonix"
+        },
+        {
+          "label": "Reasonix website",
+          "url": "https://esengine.github.io/DeepSeek-Reasonix/"
+        }
+      ]
+    },
+    "githubStars": 4516
+  },
+  {
+    "id": "openhands",
+    "name": "OpenHands",
+    "vendor": "OpenHands",
+    "categoryTags": [
+      "Cloud coding agent",
+      "Vibe Coding CLI",
+      "Agent framework"
+    ],
+    "deploymentTags": [
+      "Terminal CLI",
+      "Web app",
+      "Cloud workspace",
+      "Self-hosted"
+    ],
+    "platforms": [
+      "CLI",
+      "Web",
+      "GitHub",
+      "GitLab"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": true,
+      "usageMeter": "本地/CLI 免费；OpenHands Cloud 可免费试用；Enterprise 需许可证",
+      "plans": [
+        {
+          "name": "Local / CLI",
+          "priceUSD": 0,
+          "period": "tool"
+        },
+        {
+          "name": "Cloud",
+          "priceUSD": 0,
+          "period": "trial"
+        },
+        {
+          "name": "Enterprise",
+          "pricingUrl": "https://openhands.dev/enterprise"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": true,
+      "localModel": false,
+      "modelChoice": "Claude, GPT, or any other LLM"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": true,
+      "backgroundAgent": true,
+      "browser": false
+    },
+    "customization": {
+      "rules": "SDK / workflows / enterprise policies"
+    },
+    "privacy": {
+      "localIndexing": "local GUI or self-hosted cloud workspace",
+      "enterpriseControls": "RBAC / audit logs / policy controls in Enterprise"
+    },
+    "builtInModels": [],
+    "supportedModels": [
+      "Claude",
+      "GPT",
+      "model-agnostic providers"
+    ],
+    "officialUrl": "https://openhands.dev/",
+    "notes": "一个项目同时覆盖 SDK、CLI、本地 GUI、托管 Cloud 和 self-hosted Enterprise。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "access.byok",
+        "access.openAICompatible",
+        "integrations.mcp",
+        "integrations.git",
+        "capabilities.terminal",
+        "capabilities.pullRequest",
+        "capabilities.backgroundAgent",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "OpenHands GitHub",
+          "url": "https://github.com/OpenHands/OpenHands"
+        },
+        {
+          "label": "OpenHands CLI docs",
+          "url": "https://docs.openhands.dev/openhands/usage/run-openhands/cli-mode"
+        },
+        {
+          "label": "OpenHands Enterprise",
+          "url": "https://openhands.dev/enterprise"
+        }
+      ]
+    },
+    "githubStars": 74092
+  },
+  {
+    "id": "openclaw",
+    "name": "OpenClaw",
+    "vendor": "OpenClaw",
+    "categoryTags": [
+      "Agent framework",
+      "Chatbot framework",
+      "Cloud assistant"
+    ],
+    "deploymentTags": [
+      "Terminal CLI",
+      "Desktop app",
+      "IM integrations",
+      "Self-hosted",
+      "Web app"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows via WSL2",
+      "iOS",
+      "Android",
+      "Telegram",
+      "Discord",
+      "Slack",
+      "WeChat",
+      "QQ"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": true,
+      "usageMeter": "工具免费；依赖 OpenAI Code / Anthropic / OpenRouter / custom provider 认证或计费",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "tool"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": true,
+      "localModel": true,
+      "modelChoice": "OpenAI Code, Anthropic, OpenRouter, local/GGUF, custom providers"
+    },
+    "integrations": {
+      "mcp": null,
+      "git": false
+    },
+    "capabilities": {
+      "multiFileEdit": false,
+      "terminal": true,
+      "testRun": false,
+      "pullRequest": false,
+      "backgroundAgent": true,
+      "browser": true
+    },
+    "customization": {
+      "rules": "AGENTS.md / SOUL.md / TOOLS.md / skills / gateway config"
+    },
+    "privacy": {
+      "localIndexing": "local-first gateway + per-agent workspaces",
+      "enterpriseControls": "pairing / sandbox / allowlist policies"
+    },
+    "builtInModels": [],
+    "supportedModels": [
+      "OpenAI Code (Codex)",
+      "Anthropic",
+      "OpenRouter",
+      "provider/* allowlists",
+      "local/GGUF providers"
+    ],
+    "officialUrl": "https://openclaw.ai/",
+    "notes": "更像 personal AI assistant / gateway，不是纯 coding IDE；但 channels、skills、sandbox 与 browser tooling 都很完整。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "access.byok",
+        "access.openAICompatible",
+        "access.localModel",
+        "capabilities.terminal",
+        "capabilities.backgroundAgent",
+        "capabilities.browser",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "OpenClaw GitHub",
+          "url": "https://github.com/openclaw/openclaw"
+        },
+        {
+          "label": "OpenClaw docs",
+          "url": "https://docs.openclaw.ai/start/getting-started"
+        },
+        {
+          "label": "OpenClaw models",
+          "url": "https://docs.openclaw.ai/concepts/models"
+        }
+      ]
+    },
+    "githubStars": 373124
+  },
+  {
+    "id": "hermes-agent",
+    "name": "Hermes Agent",
+    "vendor": "Nous Research",
+    "categoryTags": [
+      "Agent framework",
+      "Cloud assistant"
+    ],
+    "deploymentTags": [
+      "Terminal CLI",
+      "IM integrations",
+      "Self-hosted"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows",
+      "Telegram",
+      "Discord",
+      "Slack",
+      "WhatsApp",
+      "Signal",
+      "Email"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": true,
+      "usageMeter": "工具免费；依赖 Nous Portal / OpenRouter / OpenAI / custom endpoint 计费",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "tool"
+        }
+      ]
+    },
+    "access": {
+      "byok": true,
+      "openAICompatible": true,
+      "localModel": false,
+      "modelChoice": "Nous Portal, OpenRouter, OpenAI, or your own endpoint"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": false
+    },
+    "capabilities": {
+      "multiFileEdit": false,
+      "terminal": true,
+      "testRun": false,
+      "pullRequest": false,
+      "backgroundAgent": true,
+      "browser": false
+    },
+    "customization": {
+      "rules": "skills / memory / personalities / config"
+    },
+    "privacy": {
+      "localIndexing": "persistent memories + session search",
+      "enterpriseControls": "command approval / container isolation"
+    },
+    "builtInModels": [],
+    "supportedModels": [
+      "Nous Portal",
+      "OpenRouter",
+      "OpenAI",
+      "NovitaAI",
+      "NVIDIA NIM",
+      "your own endpoint"
+    ],
+    "officialUrl": "https://hermes-agent.nousresearch.com/docs/",
+    "notes": "主打 self-improving agent、消息网关、cron 自动化，以及从 OpenClaw 的迁移能力。",
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-05-19",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "access.byok",
+        "access.openAICompatible",
+        "integrations.mcp",
+        "capabilities.terminal",
+        "capabilities.backgroundAgent",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "Hermes Agent GitHub",
+          "url": "https://github.com/NousResearch/hermes-agent"
+        },
+        {
+          "label": "Hermes Agent docs",
+          "url": "https://hermes-agent.nousresearch.com/docs/"
+        },
+        {
+          "label": "Hermes Agent license",
+          "url": "https://github.com/NousResearch/hermes-agent/blob/main/LICENSE"
+        }
+      ]
+    },
+    "githubStars": null
+  }
+]

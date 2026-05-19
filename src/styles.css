@@ -522,14 +522,213 @@ tbody tr:hover {
   font-weight: 800;
 }
 
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-width: 220px;
+}
+
+.tag.group-boolean.bool-yes {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.tag.group-boolean.bool-no {
+  background: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+}
+
+.tag.tone-0 {
+  background: #dbeafe;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.tag.tone-1 {
+  background: #ede9fe;
+  color: #6d28d9;
+  border: 1px solid #ddd6fe;
+}
+
+.tag.tone-2 {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.tag.tone-3 {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.tag.tone-4 {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.tag.tone-5 {
+  background: #cffafe;
+  color: #155e75;
+  border: 1px solid #a5f3fc;
+}
+
+.tag.tone-6 {
+  background: #fce7f3;
+  color: #be185d;
+  border: 1px solid #fbcfe8;
+}
+
+.tag.tone-7 {
+  background: #e2e8f0;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.plan-stack {
+  display: grid;
+  gap: 6px;
+  min-width: 240px;
+}
+
+.plan-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fbfc;
+}
+
+.plan-name {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.plan-price {
+  color: var(--ink);
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.plan-price .source-link {
+  font-weight: 400;
+  font-family: inherit;
+}
+
+.plan-note {
+  margin-top: -2px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
 .source-link {
   color: var(--accent-strong);
   font-weight: 700;
   text-decoration: none;
 }
 
+.tool-name-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tool-logo {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  object-fit: contain;
+}
+
 .source-link:hover {
   text-decoration: underline;
+}
+
+.matrix-sticky-col {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: var(--panel);
+}
+
+thead .matrix-sticky-col {
+  z-index: 3;
+}
+
+.matrix-tool-head {
+  min-width: 230px;
+  max-width: 260px;
+  white-space: normal;
+}
+
+.matrix-tool-cell {
+  min-width: 230px;
+  max-width: 280px;
+  vertical-align: top;
+}
+
+.matrix-cell {
+  display: grid;
+  gap: 6px;
+  min-height: 112px;
+  align-content: start;
+}
+
+.matrix-cell-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.matrix-cell-score,
+.matrix-score {
+  color: var(--ink);
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.matrix-route-tags {
+  gap: 4px;
+}
+
+.matrix-route-tags .tag {
+  font-size: 10px;
+  min-height: 18px;
+  padding: 0 6px;
+}
+
+.matrix-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.matrix-source-link {
+  font-weight: 700;
+}
+
+.matrix-empty {
+  display: grid;
+  min-height: 96px;
+  place-items: center;
+  color: var(--muted);
+  opacity: 0.5;
 }
 
 .stale {
@@ -574,6 +773,20 @@ tbody tr:hover {
   font-size: 10px;
   min-height: 18px;
   padding: 0 6px;
+}
+
+.compact .tag-list {
+  gap: 4px;
+  min-width: 160px;
+}
+
+.compact .plan-stack {
+  gap: 4px;
+  min-width: 180px;
+}
+
+.compact .plan-row {
+  padding: 3px 6px;
 }
 
 /* Pricing Grid Styles */
@@ -621,9 +834,7 @@ tbody tr:hover {
 }
 
 .tag.unverified-cell {
-  background: #eef2f3;
-  color: var(--muted);
-  border-color: var(--line);
+  opacity: 0.82;
 }
 
 dialog {
