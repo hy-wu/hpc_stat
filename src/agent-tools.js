@@ -525,8 +525,10 @@ function formatCell(row, field, stat) {
   }
 
   if (field.key === "name") {
-    const url = getNestedValue(row, "officialUrl");
-    const logoHtml = url ? `<img class="tool-logo" src="${getFaviconUrl(url)}" alt="" loading="lazy" onerror="this.style.display='none'">` : "";
+    const logoUrl = getNestedValue(row, "logoUrl");
+    const officialUrl = getNestedValue(row, "officialUrl");
+    const imgSrc = logoUrl || (officialUrl ? getFaviconUrl(officialUrl) : "");
+    const logoHtml = imgSrc ? `<img class="tool-logo" src="${escapeAttr(imgSrc)}" alt="" loading="lazy" onerror="this.style.display='none'">` : "";
     return `<span class="tool-name-cell ${className}" title="${verified ? escapeAttr(sourceTitle) : "未核验"}">${logoHtml}${escapeHtml(getValueAsText(val))}</span>`;
   }
 

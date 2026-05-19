@@ -619,7 +619,7 @@
       "OpenAI-hosted models"
     ],
     "officialUrl": "https://github.com/openai/codex",
-    "notes": "官方 README 已明确覆盖 CLI、IDE、桌面 App 和 Codex Web。",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=openai.com&sz=32",
     "verification": {
       "status": "partial",
       "checkedAt": "2026-05-19",
@@ -719,7 +719,7 @@
       "Google Gemini"
     ],
     "officialUrl": "https://github.com/google-gemini/gemini-cli",
-    "notes": "这里用一行概括 Gemini coding surfaces：CLI + IDE assistance + Web assistant。",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=gemini.google.com&sz=32",
     "verification": {
       "status": "partial",
       "checkedAt": "2026-05-19",
