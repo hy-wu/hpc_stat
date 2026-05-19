@@ -467,10 +467,15 @@ function sortMarker(key) {
 
 function scoreBars(c, a, x, extraClass = "") {
   const pct = v => v != null ? `${Math.round(v / 5 * 100)}%` : "0%";
-  return `<div class="score-bars${extraClass ? " " + extraClass : ""}" title="C ${c ?? "—"} · A ${a ?? "—"} · X ${x ?? "—"}">
-    <div class="score-bar score-bar-c" style="width:${pct(c)}" title="代码适配 ${c ?? "—"}/5"></div>
-    <div class="score-bar score-bar-a" style="width:${pct(a)}" title="Agent 适配 ${a ?? "—"}/5"></div>
-    <div class="score-bar score-bar-x" style="width:${pct(x)}" title="长上下文 ${x ?? "—"}/5"></div>
+  const fmt = v => v != null ? formatNumber(v) : "—";
+  const title = `代码 ${fmt(c)}/5 · Agent ${fmt(a)}/5 · 上下文 ${fmt(x)}/5`;
+  return `<div class="score-bars-wrap${extraClass ? " " + extraClass : ""}" title="${escapeAttr(title)}">
+    <div class="score-bars">
+      <div class="score-bar score-bar-c" style="width:${pct(c)}"></div>
+      <div class="score-bar score-bar-a" style="width:${pct(a)}"></div>
+      <div class="score-bar score-bar-x" style="width:${pct(x)}"></div>
+    </div>
+    <span class="score-text">C ${fmt(c)} · A ${fmt(a)} · X ${fmt(x)}</span>
   </div>`;
 }
 
