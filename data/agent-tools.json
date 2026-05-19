@@ -619,7 +619,7 @@
       "OpenAI-hosted models"
     ],
     "officialUrl": "https://github.com/openai/codex",
-    "logoUrl": "https://www.google.com/s2/favicons?domain=openai.com&sz=32",
+    "logoUrl": "https://cdn.openai.com/codex/codex-icon.png",
     "verification": {
       "status": "partial",
       "checkedAt": "2026-05-19",
