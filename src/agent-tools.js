@@ -524,6 +524,12 @@ function formatCell(row, field, stat) {
     return `<span class="unverified-cell" title="未核验或暂无数据">-</span>`;
   }
 
+  if (field.key === "name") {
+    const url = getNestedValue(row, "officialUrl");
+    const logoHtml = url ? `<img class="tool-logo" src="${getFaviconUrl(url)}" alt="" loading="lazy" onerror="this.style.display='none'">` : "";
+    return `<span class="tool-name-cell ${className}" title="${verified ? escapeAttr(sourceTitle) : "未核验"}">${logoHtml}${escapeHtml(getValueAsText(val))}</span>`;
+  }
+
   if (field.key === "vendor") {
     const link = vendorLinks[val];
     return link
@@ -648,6 +654,15 @@ function getToneClass(value, group) {
   }
   const tone = Math.abs(hash) % paletteSize;
   return `tone-${tone}`;
+}
+
+function getFaviconUrl(url) {
+  try {
+    const domain = new URL(url).hostname;
+    return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=32`;
+  } catch {
+    return "";
+  }
 }
 
 function formatNumber(value) {
