@@ -1,14 +1,15 @@
 # Unified GPU + LLM Table
 
-一个零依赖的静态参数工作台，包含硬件对比页、大模型统计页和 AI Agent 工具页：
+一个零依赖的静态参数工作台，包含硬件对比页、大模型统计页、AI Agent 工具页和模型 × 工具关联表：
 
 - `index.html`：GPU / FPGA / ASIC / CPU 参数、价格与能效对比。
 - `models.html`：LLM 价格、上下文、评测与核验状态宽表。
 - `agent-tools.html`：AI IDE、vibe coding CLI、云端 coding agent、IDE 插件的接入方式、能力、价格与核验状态宽表。
+- `model-tools.html`：模型在各 Agent 工具中的接入方式、价格消耗口径、能力适配与评价的稀疏关联表。
 
 ## 功能
 
-- 多页面：硬件参数页、LLM 数据页与 Agent 工具页共用一套静态发布方式。
+- 多页面：硬件参数页、LLM 数据页、Agent 工具页与模型 × 工具关联表共用一套静态发布方式。
 - 任意字段排序：点击表头或使用排序字段下拉框。
 - 全局搜索：型号、架构、显存、备注等字段都会参与搜索。
 - 字段筛选：可添加多个条件，支持文本包含和数值比较。
@@ -19,7 +20,7 @@
 
 ## 本地使用
 
-直接打开 `index.html`、`models.html` 或 `agent-tools.html` 即可使用。若要测试 `data/prices.json` / `data/models.json` / `data/agent-tools.json` 的读取，请用任意静态服务器启动：
+直接打开 `index.html`、`models.html`、`agent-tools.html` 或 `model-tools.html` 即可使用。若要测试 `data/prices.json` / `data/models.json` / `data/agent-tools.json` / `data/model-tools.json` 的读取，请用任意静态服务器启动：
 
 ```powershell
 python -m http.server 4173
@@ -31,6 +32,7 @@ python -m http.server 4173
 http://localhost:4173/index.html
 http://localhost:4173/models.html
 http://localhost:4173/agent-tools.html
+http://localhost:4173/model-tools.html
 ```
 
 ## LLM 数据核验
@@ -68,7 +70,7 @@ Agent 工具页当前约定：
 - `pricing.plans` 保存各级套餐，优先写官方月费；无法静态确认时写 `Custom` / `Usage-based` / `See official pricing page`，不要猜。
 - 对于 CLI/插件免费、但底层模型按 token 计费的工具，`startingUSD` 可以是 `0`，并在 `pricing.usageMeter` 中说明 provider 计费口径。
 
-后续模型 × 工具关系建议使用稀疏记录，而不是全量矩阵：每条记录用 `toolId`、`modelId`、接入方式、消耗口径、能力评价和来源描述一个已观察到的组合。
+模型 × 工具关系的数据源仍使用稀疏记录：每条记录用 `toolId`、`modelId`、接入方式、消耗口径、能力评价和来源描述一个已观察到的组合。`model-tools.html` 会把这些记录 pivot 成真正的矩阵：模型是行、工具是列，空白 cell 表示暂无记录；评分字段是 1-5 的人工适配度（不是 benchmark），用于排序和筛选候选组合。
 
 ## 价格更新格式
 

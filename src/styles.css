@@ -655,6 +655,82 @@ tbody tr:hover {
   text-decoration: underline;
 }
 
+.matrix-sticky-col {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: var(--panel);
+}
+
+thead .matrix-sticky-col {
+  z-index: 3;
+}
+
+.matrix-tool-head {
+  min-width: 230px;
+  max-width: 260px;
+  white-space: normal;
+}
+
+.matrix-tool-cell {
+  min-width: 230px;
+  max-width: 280px;
+  vertical-align: top;
+}
+
+.matrix-cell {
+  display: grid;
+  gap: 6px;
+  min-height: 112px;
+  align-content: start;
+}
+
+.matrix-cell-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.matrix-cell-score,
+.matrix-score {
+  color: var(--ink);
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.matrix-route-tags {
+  gap: 4px;
+}
+
+.matrix-route-tags .tag {
+  font-size: 10px;
+  min-height: 18px;
+  padding: 0 6px;
+}
+
+.matrix-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.matrix-source-link {
+  font-weight: 700;
+}
+
+.matrix-empty {
+  display: grid;
+  min-height: 96px;
+  place-items: center;
+  color: var(--muted);
+  opacity: 0.5;
+}
+
 .stale {
   color: var(--warn);
 }

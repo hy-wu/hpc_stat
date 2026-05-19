@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agent Tools Comparison</title>
+    <title>Model × Tool Matrix</title>
     <link rel="icon" href="src/assets/icon.svg" />
     <link rel="stylesheet" href="src/styles.css" />
   </head>
@@ -11,13 +11,13 @@
     <div class="app-shell">
       <header class="topbar">
         <div class="topbar-brand">
-          <h1>Agent Tools Comparison</h1>
+          <h1>Model × Tool Matrix</h1>
         </div>
         <nav class="nav-tabs">
           <a href="index.html" class="nav-link">并行计算</a>
           <a href="models.html" class="nav-link">大模型</a>
-          <a href="agent-tools.html" class="nav-link active">Agent 工具</a>
-          <a href="model-tools.html" class="nav-link">模型 × 工具</a>
+          <a href="agent-tools.html" class="nav-link">Agent 工具</a>
+          <a href="model-tools.html" class="nav-link active">模型 × 工具</a>
         </nav>
       </header>
 
@@ -25,40 +25,36 @@
         <div class="filter-card">
           <section class="control-band">
             <div class="search-block">
-              <label for="globalSearch">搜索工具</label>
-              <input id="globalSearch" type="search" placeholder="名称、厂商、模型、MCP、本地模型、价格、备注..." />
+              <label for="globalSearch">搜索矩阵</label>
+              <input id="globalSearch" type="search" placeholder="模型、工具、接入方式、价格口径、评价..." />
             </div>
             <div class="control">
-              <label for="typeFilter">类型</label>
-              <select id="typeFilter"></select>
+              <label for="toolFilter">聚焦工具</label>
+              <select id="toolFilter"></select>
             </div>
             <div class="control">
-              <label for="deploymentFilter">形态</label>
-              <select id="deploymentFilter"></select>
+              <label for="modelVendorFilter">模型厂商</label>
+              <select id="modelVendorFilter"></select>
             </div>
             <div class="control">
-              <label for="accessFilter">接入方式</label>
-              <select id="accessFilter"></select>
-            </div>
-            <div class="control">
-              <label for="vendorFilter">厂商</label>
-              <select id="vendorFilter"></select>
-            </div>
-            <div class="control">
-              <label for="statusFilter">核验状态</label>
+              <label for="statusFilter">接入状态</label>
               <select id="statusFilter"></select>
             </div>
             <div class="control">
-              <label for="sortField">排序字段</label>
+              <label for="routeFilter">接入方式</label>
+              <select id="routeFilter"></select>
+            </div>
+            <div class="control">
+              <label for="sortField">模型行排序</label>
               <select id="sortField"></select>
             </div>
-            <button class="ghost-button" id="sortDirectionButton" type="button">升序</button>
+            <button class="ghost-button" id="sortDirectionButton" type="button">降序</button>
             <button class="ghost-button" id="resetFiltersButton" type="button">重置</button>
           </section>
 
           <section class="filters-panel-inner">
             <div class="panel-head">
-              <h2>字段筛选</h2>
+              <h2>组合筛选</h2>
               <button class="text-button" id="addRuleButton" type="button">添加条件</button>
             </div>
             <div id="filterRules" class="rules"></div>
@@ -67,26 +63,26 @@
 
         <section class="insight-grid" aria-label="统计概览">
           <div class="metric">
-            <span>筛选工具</span>
+            <span>筛选组合</span>
             <strong id="visibleCount">0</strong>
           </div>
           <div class="metric">
-            <span>有来源</span>
-            <strong id="sourcedCount">-</strong>
+            <span>官方/默认</span>
+            <strong id="nativeCount">-</strong>
           </div>
           <div class="metric">
-            <span>免费版</span>
-            <strong id="freeCount">-</strong>
+            <span>BYOK/兼容</span>
+            <strong id="byokCount">-</strong>
           </div>
           <div class="metric">
-            <span>开源</span>
-            <strong id="openSourceCount">-</strong>
+            <span>平均 Agent 适配</span>
+            <strong id="avgAgentFit">-</strong>
           </div>
         </section>
 
         <section class="table-panel">
           <div class="panel-head">
-            <h2>Agent 工具表</h2>
+            <h2>模型 × 工具矩阵</h2>
             <div class="table-tools">
               <button
                 class="text-button"
@@ -112,6 +108,6 @@
       </main>
     </div>
 
-    <script type="module" src="src/agent-tools.js"></script>
+    <script type="module" src="src/model-tools.js"></script>
   </body>
 </html>
