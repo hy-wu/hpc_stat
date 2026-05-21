@@ -69,6 +69,13 @@ RAW_SOURCE_URLS = {
     "zhipu_pricing": "https://open.bigmodel.cn/pricing",
     "groq_pricing": "https://groq.com/pricing/",
     "perplexity_pricing": "https://docs.perplexity.ai/getting-started/pricing",
+    # New providers (2026-05-21)
+    "together_pricing": "https://www.together.ai/pricing",
+    "fireworks_pricing": "https://fireworks.ai/pricing",
+    "deepinfra_pricing": "https://deepinfra.com/pricing",
+    "novita_pricing": "https://novita.ai/model-api",
+    "cerebras_pricing": "https://cerebras.ai/inference",
+    "bytedance_pricing": "https://www.volcengine.com/docs/82379/1544106",
 }
 
 # Arena model name → our model ID; covers cases where normalization alone is insufficient.
@@ -1499,6 +1506,198 @@ def extract_perplexity_prices(
     return prices
 
 
+# ── New provider extractors (2026-05-21) ──────────────────────────────
+
+
+def extract_together_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    """Parse Together AI pricing page.
+
+    Together AI lists models in a table with columns: Model, Input, Output.
+    Extract model name and token pricing (in/out) in $/MTok.
+    """
+    source = fetch_optional_source_text(session, args, report, "together_pricing", RAW_SOURCE_URLS["together_pricing"])
+    if not source:
+        return {}
+    soup = BeautifulSoup(source.text, "html.parser")
+    prices: dict[str, dict[str, float]] = {}
+    for table in soup.find_all("table"):
+        rows = expand_html_table(table)
+        if len(rows) < 2:
+            continue
+        header = " ".join(rows[0]).lower()
+        if "model" in header and ("input" in header or "price" in header):
+            in_idx = out_idx = -1
+            for i, h in enumerate(rows[0]):
+                hl = h.lower()
+                if "input" in hl or "prompt" in hl:
+                    in_idx = i
+                elif "output" in hl or "completion" in hl:
+                    out_idx = i
+            if in_idx < 0 or out_idx < 0:
+                continue
+            for row in rows[1:]:
+                if not row or not row[0]:
+                    continue
+                model_name = row[0].strip()
+                in_val = extract_money_value(row[in_idx]) if in_idx < len(row) else None
+                out_val = extract_money_value(row[out_idx]) if out_idx < len(row) else None
+                if in_val is not None and out_val is not None:
+                    keep_min_prices(prices.setdefault(model_name, {}), {"in": in_val, "out": out_val})
+    return prices
+
+
+def extract_fireworks_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    """Parse Fireworks AI pricing page.
+
+    Fireworks lists models in table format with columns: Model, Input Price, Output Price.
+    """
+    source = fetch_optional_source_text(session, args, report, "fireworks_pricing", RAW_SOURCE_URLS["fireworks_pricing"])
+    if not source:
+        return {}
+    soup = BeautifulSoup(source.text, "html.parser")
+    prices: dict[str, dict[str, float]] = {}
+    for table in soup.find_all("table"):
+        rows = expand_html_table(table)
+        if len(rows) < 2:
+            continue
+        header = " ".join(rows[0]).lower()
+        if "model" in header and ("input" in header or "price" in header):
+            in_idx = out_idx = -1
+            for i, h in enumerate(rows[0]):
+                hl = h.lower()
+                if "input" in hl or "prompt" in hl:
+                    in_idx = i
+                elif "output" in hl or "completion" in hl:
+                    out_idx = i
+            if in_idx < 0 or out_idx < 0:
+                continue
+            for row in rows[1:]:
+                if not row or not row[0]:
+                    continue
+                model_name = row[0].strip()
+                in_val = extract_money_value(row[in_idx]) if in_idx < len(row) else None
+                out_val = extract_money_value(row[out_idx]) if out_idx < len(row) else None
+                if in_val is not None and out_val is not None:
+                    keep_min_prices(prices.setdefault(model_name, {}), {"in": in_val, "out": out_val})
+    return prices
+
+
+def extract_deepinfra_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    """Parse Deep Infra pricing page.
+
+    Deep Infra shows models in a table with Input/Output token pricing.
+    """
+    source = fetch_optional_source_text(session, args, report, "deepinfra_pricing", RAW_SOURCE_URLS["deepinfra_pricing"])
+    if not source:
+        return {}
+    soup = BeautifulSoup(source.text, "html.parser")
+    prices: dict[str, dict[str, float]] = {}
+    for table in soup.find_all("table"):
+        rows = expand_html_table(table)
+        if len(rows) < 2:
+            continue
+        header = " ".join(rows[0]).lower()
+        if "model" in header and ("input" in header or "price" in header):
+            in_idx = out_idx = -1
+            for i, h in enumerate(rows[0]):
+                hl = h.lower()
+                if "input" in hl or "prompt" in hl:
+                    in_idx = i
+                elif "output" in hl or "completion" in hl:
+                    out_idx = i
+            if in_idx < 0 or out_idx < 0:
+                continue
+            for row in rows[1:]:
+                if not row or not row[0]:
+                    continue
+                model_name = row[0].strip()
+                in_val = extract_money_value(row[in_idx]) if in_idx < len(row) else None
+                out_val = extract_money_value(row[out_idx]) if out_idx < len(row) else None
+                if in_val is not None and out_val is not None:
+                    keep_min_prices(prices.setdefault(model_name, {}), {"in": in_val, "out": out_val})
+    return prices
+
+
+def extract_bytedance_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    """Parse ByteDance (火山引擎) pricing page for Doubao/Seed models.
+
+    The pricing page has tables listing model names and 元/千tokens prices.
+    """
+    source = fetch_optional_source_text(session, args, report, "bytedance_pricing", RAW_SOURCE_URLS["bytedance_pricing"])
+    if not source:
+        return {}
+    soup = BeautifulSoup(source.text, "html.parser")
+    prices: dict[str, dict[str, float]] = {}
+
+    # Try finding tables with pricing info - ByteDance uses structured HTML tables
+    for table in soup.find_all("table"):
+        rows = expand_html_table(table)
+        if len(rows) < 2:
+            continue
+        header_text = " ".join(rows[0]).lower()
+        if "模型" in header_text and ("输入" in header_text or "输出" in header_text or "价格" in header_text or "定价" in header_text):
+            in_idx = out_idx = -1
+            for i, h in enumerate(rows[0]):
+                hl = h.lower()
+                if "输入" in hl or "in" in hl:
+                    in_idx = i
+                elif "输出" in hl or "out" in hl:
+                    out_idx = i
+            if in_idx < 0 or out_idx < 0:
+                # Try to find by position: first columns are model info, last columns are prices
+                if len(rows[0]) >= 3:
+                    in_idx = len(rows[0]) - 2
+                    out_idx = len(rows[0]) - 1
+            if in_idx < 0 or out_idx < 0:
+                continue
+            for row in rows[1:]:
+                if not row or not row[0]:
+                    continue
+                model_name = row[0].strip()
+                # ByteDance may use 元/千tokens or 元/百万tokens - extract_money_value handles it
+                raw_in = row[in_idx] if in_idx < len(row) else ""
+                raw_out = row[out_idx] if out_idx < len(row) else ""
+                in_val = extract_money_value(raw_in)
+                out_val = extract_money_value(raw_out)
+                # If values are very small, they might be 元/千tokens - multiply by 1000 to get per-MTok
+                if in_val is not None and in_val < 0.01:
+                    in_val *= 1000
+                if out_val is not None and out_val < 0.01:
+                    out_val *= 1000
+                if in_val is not None and out_val is not None:
+                    keep_min_prices(prices.setdefault(model_name, {}), {"in": in_val, "out": out_val})
+
+    # Also try looking for JS-embedded price data
+    scripts = soup.find_all("script")
+    price_pattern = re.compile(r'["\']?(?:model|name)["\']?\s*[:=]\s*["\'](\w[\w.-]*)["\'].*?'
+                               r'(?:input|in)[Pp]rice["\']?\s*[:=]\s*([0-9.]+).*?'
+                               r'(?:output|out)[Pp]rice["\']?\s*[:=]\s*([0-9.]+)')
+    for script in scripts:
+        if script.string:
+            for m in price_pattern.finditer(script.string):
+                mn = m.group(1)
+                if mn not in prices:
+                    prices[mn] = {"in": float(m.group(2)), "out": float(m.group(3))}
+
+    return prices
+
+
 def extract_platform_prices(
     models: list[dict[str, Any]],
     session: requests.Session,
@@ -1513,6 +1712,11 @@ def extract_platform_prices(
         ("zhipu", "智谱开放平台定价", RAW_SOURCE_URLS["zhipu_pricing"], extract_zhipu_prices),
         ("groq", "Groq pricing", RAW_SOURCE_URLS["groq_pricing"], extract_groq_prices),
         ("perplexity", "Perplexity pricing", RAW_SOURCE_URLS["perplexity_pricing"], extract_perplexity_prices),
+        # New providers (2026-05-21)
+        ("together-ai", "Together AI pricing", RAW_SOURCE_URLS["together_pricing"], extract_together_prices),
+        ("fireworks-ai", "Fireworks AI pricing", RAW_SOURCE_URLS["fireworks_pricing"], extract_fireworks_prices),
+        ("deep-infra", "Deep Infra pricing", RAW_SOURCE_URLS["deepinfra_pricing"], extract_deepinfra_prices),
+        ("bytedance", "ByteDance 火山引擎定价", RAW_SOURCE_URLS["bytedance_pricing"], extract_bytedance_prices),
     ]
     patches: list[ExtractedModel] = []
     coverage: dict[str, Any] = {}

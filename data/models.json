@@ -6,7 +6,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 15.0,
     "performance": "Most capable Claude model",
-    "arenaElo": 1559.3,
+    "arenaElo": 1559.8,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -37,7 +37,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -170,7 +170,7 @@
       "hle": 49.0,
       "reportedSweBenchVerified": 79.6
     },
-    "contextWindow": "200K",
+    "contextWindow": "1M",
     "pricing": {
       "official": {
         "in": 3.0,
@@ -189,7 +189,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -308,7 +308,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 1.0,
     "performance": null,
-    "arenaElo": 1453.4,
+    "arenaElo": 1453.9,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -319,7 +319,7 @@
       "gpqaDiamond": 83.4,
       "terminalBench": 50.0
     },
-    "contextWindow": "200K",
+    "contextWindow": "1M",
     "pricing": {
       "official": {
         "in": 3.0,
@@ -338,7 +338,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -448,7 +448,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 0.33,
     "performance": "Fastest Claude model",
-    "arenaElo": 1320.3,
+    "arenaElo": 1320.6,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -479,7 +479,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -590,7 +590,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 7.5,
     "performance": "High",
-    "arenaElo": 1289.6,
+    "arenaElo": 1287.6,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -626,7 +626,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -754,7 +754,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 1.0,
     "performance": "High",
-    "arenaElo": 1435.2,
+    "arenaElo": 1269.4,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -767,7 +767,7 @@
       "browseComp": 82.7,
       "hle": 39.8
     },
-    "contextWindow": "1M",
+    "contextWindow": "1.1M",
     "pricing": {
       "official": {
         "in": 2.5,
@@ -786,7 +786,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -910,7 +910,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 0.33,
     "performance": "High",
-    "arenaElo": 1257.1,
+    "arenaElo": 1254.1,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -945,7 +945,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -1082,7 +1082,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
@@ -1184,7 +1184,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -1294,7 +1294,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -1435,7 +1435,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -1529,7 +1529,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 0.0,
     "performance": null,
-    "arenaElo": 1214.5,
+    "arenaElo": 1214.4,
     "mmlu": 90.2,
     "humanEval": null,
     "gsm8k": null,
@@ -1561,7 +1561,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -1676,7 +1676,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "Thinking/non-thinking modes",
-    "arenaElo": 1459.2,
+    "arenaElo": 1458.7,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1731,7 +1731,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -1887,7 +1887,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "Thinking/non-thinking modes",
-    "arenaElo": 1434.4,
+    "arenaElo": 1433.3,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1940,7 +1940,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -2132,7 +2132,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -2243,7 +2243,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "Hybrid reasoning",
-    "arenaElo": 1213.8,
+    "arenaElo": 1214.2,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -2276,7 +2276,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -2386,7 +2386,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "17B active / 400B total MoE",
-    "arenaElo": 1147.4,
+    "arenaElo": 1147.5,
     "mmlu": 85.5,
     "humanEval": null,
     "gsm8k": null,
@@ -2406,7 +2406,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -2471,7 +2471,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "17B active / 109B total MoE",
-    "arenaElo": 1128.4,
+    "arenaElo": 1128.5,
     "mmlu": 79.6,
     "humanEval": null,
     "gsm8k": null,
@@ -2495,7 +2495,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -2584,7 +2584,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -2628,7 +2628,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -2672,7 +2672,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -2717,7 +2717,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "llmStats.codeArena",
@@ -2759,7 +2759,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1278.8,
+    "arenaElo": 1280.2,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -2776,7 +2776,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -2830,7 +2830,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -2891,7 +2891,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1199.5,
+    "arenaElo": 1201.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -2908,7 +2908,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -2948,22 +2948,35 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "aime2025": 86.3,
+      "browseComp": 48.6,
+      "reportedSweBenchVerified": 77.6
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
+        "in": 1.5,
+        "out": 7.5
+      },
+      "official": {
         "in": 1.5,
         "out": 7.5
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
+        "evals.aime2025",
+        "evals.browseComp",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -2972,6 +2985,22 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -3001,7 +3030,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3048,7 +3077,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3101,7 +3130,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3164,7 +3193,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
@@ -3230,7 +3259,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1491.3,
+    "arenaElo": 1490.8,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3250,7 +3279,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -3303,7 +3332,7 @@
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 0.32,
+        "in": 0.317,
         "out": 3.2
       },
       "official": {
@@ -3321,7 +3350,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
@@ -3438,7 +3467,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "evals.browseComp",
@@ -3485,14 +3514,14 @@
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 0.3,
-        "hit": 0.06,
-        "out": 2.5
+        "in": 0.075,
+        "hit": 0.015,
+        "out": 0.625
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3542,7 +3571,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3577,7 +3606,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1472.3,
+    "arenaElo": 1470.9,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3590,17 +3619,23 @@
         "in": 1.0,
         "hit": 0.2,
         "out": 3.0
+      },
+      "aliyun": {
+        "in": 7.0,
+        "out": 21.0
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
         "performance",
+        "pricing.aliyun.in",
+        "pricing.aliyun.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -3614,6 +3649,10 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "阿里云 Model Studio 定价",
+          "url": "https://help.aliyun.com/zh/model-studio/model-pricing"
         }
       ]
     },
@@ -3627,7 +3666,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+audio+video->text",
-    "arenaElo": 1439.3,
+    "arenaElo": 1437.8,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3644,7 +3683,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -3694,7 +3733,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3739,7 +3778,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3780,7 +3819,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3821,7 +3860,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3848,7 +3887,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image->text",
-    "arenaElo": 1518.5,
+    "arenaElo": 1519.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3888,7 +3927,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -4030,7 +4069,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -4058,7 +4097,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1531.9,
+    "arenaElo": 1532.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4069,20 +4108,20 @@
       "gpqaDiamond": 86.2,
       "hle": 52.3
     },
-    "contextWindow": "200K",
+    "contextWindow": "203K",
     "pricing": {
       "openrouter": {
-        "in": 0.98,
+        "in": 0.0,
         "hit": 0.182,
-        "out": 3.08
+        "out": 0.0
       },
       "official": {
         "in": 1.4,
         "out": 4.4
       },
       "aliyun": {
-        "in": 6.0,
-        "out": 24.0
+        "in": 8.0,
+        "out": 28.0
       },
       "baidu": {
         "in": 6.0,
@@ -4110,7 +4149,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -4238,7 +4277,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1242.5,
+    "arenaElo": 1241.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4266,7 +4305,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -4363,7 +4402,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1252.0,
+    "arenaElo": 1247.8,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4391,7 +4430,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -4511,7 +4550,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -4616,7 +4655,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1229.4,
+    "arenaElo": 1227.2,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4648,7 +4687,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -4695,7 +4734,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1245.0,
+    "arenaElo": 1245.7,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4712,7 +4751,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -4762,7 +4801,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -4807,7 +4846,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -4851,7 +4890,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -4894,7 +4933,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -4938,7 +4977,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -4982,7 +5021,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -5010,7 +5049,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+audio+video->text",
-    "arenaElo": 1210.1,
+    "arenaElo": 1212.5,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5029,7 +5068,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -5079,7 +5118,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1432.9,
+    "arenaElo": 1432.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5098,7 +5137,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -5152,14 +5191,14 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1407.2,
+    "arenaElo": 1404.7,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {},
-    "contextWindow": "197K",
+    "contextWindow": "205K",
     "pricing": {
       "openrouter": {
         "in": 0.279,
@@ -5181,7 +5220,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -5258,7 +5297,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1200.8,
+    "arenaElo": 1199.9,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5286,7 +5325,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -5387,7 +5426,7 @@
       "liveCodeBench": 63.6,
       "mmluPro": 78.0
     },
-    "contextWindow": "256K",
+    "contextWindow": "262K",
     "pricing": {
       "openrouter": {
         "in": 0.15,
@@ -5401,7 +5440,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -5512,7 +5551,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -5579,7 +5618,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -5672,7 +5711,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -5742,7 +5781,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
@@ -5811,7 +5850,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -5838,7 +5877,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1165.3,
+    "arenaElo": 1165.4,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5863,7 +5902,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -5947,7 +5986,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1449.0,
+    "arenaElo": 1449.2,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5972,7 +6011,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -6054,7 +6093,7 @@
       "hle": 16.0,
       "simpleQA": 43.3
     },
-    "contextWindow": "1M",
+    "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
         "in": 0.25,
@@ -6072,7 +6111,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -6152,7 +6191,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -6195,7 +6234,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -6222,7 +6261,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1249.0,
+    "arenaElo": 1249.2,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6239,7 +6278,7 @@
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 0.14,
+        "in": 0.139,
         "hit": 0.05,
         "out": 1.0
       },
@@ -6258,7 +6297,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -6381,7 +6420,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1223.8,
+    "arenaElo": 1221.5,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6416,7 +6455,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -6537,7 +6576,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1223.8,
+    "arenaElo": 1222.8,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6572,7 +6611,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -6694,7 +6733,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1236.9,
+    "arenaElo": 1237.1,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6714,7 +6753,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -6768,7 +6807,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -6814,7 +6853,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -6859,7 +6898,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -6887,7 +6926,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file+audio+video->text",
-    "arenaElo": 1488.9,
+    "arenaElo": 1488.2,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6917,7 +6956,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -7042,7 +7081,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -7075,7 +7114,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1241.2,
+    "arenaElo": 1243.5,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7111,7 +7150,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -7250,7 +7289,7 @@
       "browseComp": 76.3,
       "reportedSweBenchVerified": 80.2
     },
-    "contextWindow": "1M",
+    "contextWindow": "205K",
     "pricing": {
       "openrouter": {
         "in": 0.15,
@@ -7280,7 +7319,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -7389,7 +7428,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1435.4,
+    "arenaElo": 1435.2,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7399,7 +7438,7 @@
       "browseComp": 75.9,
       "reportedSweBenchVerified": 77.8
     },
-    "contextWindow": "200K",
+    "contextWindow": "203K",
     "pricing": {
       "openrouter": {
         "in": 0.6,
@@ -7411,8 +7450,8 @@
         "out": 3.2
       },
       "aliyun": {
-        "in": 4.0,
-        "out": 18.0
+        "in": 6.0,
+        "out": 22.0
       },
       "baidu": {
         "in": 4.0,
@@ -7440,7 +7479,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -7575,7 +7614,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -7602,7 +7641,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1497.8,
+    "arenaElo": 1498.1,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7633,7 +7672,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -7766,7 +7805,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -7800,7 +7839,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1395.0,
+    "arenaElo": 1394.9,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7811,11 +7850,12 @@
       "browseComp": 69.0,
       "reportedSweBenchVerified": 74.4
     },
-    "contextWindow": "66K",
+    "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 0.1,
-        "out": 0.3
+        "in": 0.09,
+        "out": 0.3,
+        "hit": 0.02
       },
       "official": {
         "in": 0.1,
@@ -7828,7 +7868,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -7846,6 +7886,7 @@
         "performance",
         "pricing.official.in",
         "pricing.official.out",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "pricing.siliconflow.in",
@@ -7941,7 +7982,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -8019,7 +8060,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -8173,7 +8214,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -8218,7 +8259,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -8262,7 +8303,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -8305,7 +8346,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -8348,7 +8389,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -8406,7 +8447,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -8516,7 +8557,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -8559,7 +8600,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -8602,7 +8643,7 @@
       "reportedSweBenchVerified": 67.0,
       "terminalBench": 47.9
     },
-    "contextWindow": "1M",
+    "contextWindow": "205K",
     "pricing": {
       "openrouter": {
         "in": 0.29,
@@ -8620,7 +8661,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -8784,7 +8825,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -8915,7 +8956,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file+audio+video->text",
-    "arenaElo": 1270.1,
+    "arenaElo": 1446.7,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -8928,7 +8969,7 @@
       "reportedSweBenchVerified": 78.0,
       "simpleQA": 68.7
     },
-    "contextWindow": "1M",
+    "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
         "in": 0.5,
@@ -8946,7 +8987,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -9079,7 +9120,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -9193,7 +9234,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -9301,7 +9342,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9350,7 +9391,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -9418,7 +9459,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9463,7 +9504,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9517,7 +9558,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -9573,7 +9614,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9618,7 +9659,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9658,7 +9699,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9700,7 +9741,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9744,7 +9785,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -9793,7 +9834,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9839,7 +9880,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9885,7 +9926,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9931,7 +9972,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9976,7 +10017,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10024,7 +10065,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -10098,7 +10139,7 @@
       "mmluPro": 85.0,
       "reportedSweBenchVerified": 73.1
     },
-    "contextWindow": "164K",
+    "contextWindow": "131K",
     "pricing": {
       "openrouter": {
         "in": 0.252,
@@ -10128,7 +10169,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -10282,7 +10323,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -10343,7 +10384,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -10452,7 +10493,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10497,7 +10538,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10541,7 +10582,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10599,7 +10640,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -10716,7 +10757,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10771,7 +10812,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -10851,7 +10892,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image->text",
-    "arenaElo": 1239.0,
+    "arenaElo": 1239.1,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -10870,7 +10911,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -10920,7 +10961,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1329.6,
+    "arenaElo": 1329.7,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -10945,7 +10986,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -11007,7 +11048,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11055,7 +11096,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11105,7 +11146,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11155,7 +11196,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11206,7 +11247,7 @@
       "reportedSweBenchVerified": 69.4,
       "terminalBench": 46.3
     },
-    "contextWindow": "1M",
+    "contextWindow": "205K",
     "pricing": {
       "openrouter": {
         "in": 0.255,
@@ -11220,7 +11261,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -11360,7 +11401,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -11445,7 +11486,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11489,7 +11530,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11535,7 +11576,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11576,7 +11617,7 @@
       "mmluPro": 77.3,
       "simpleQA": 49.6
     },
-    "contextWindow": "262K",
+    "contextWindow": "256K",
     "pricing": {
       "openrouter": {
         "in": 0.117,
@@ -11597,7 +11638,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -11716,7 +11757,7 @@
       "ifEval": 83.7,
       "mmluPro": 71.6
     },
-    "contextWindow": "131K",
+    "contextWindow": "256K",
     "pricing": {
       "openrouter": {
         "in": 0.08,
@@ -11737,7 +11778,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -11852,7 +11893,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11897,7 +11938,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11942,7 +11983,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11986,7 +12027,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -12030,7 +12071,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -12076,7 +12117,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -12134,7 +12175,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -12239,7 +12280,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -12330,7 +12371,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -12385,7 +12426,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -12516,7 +12557,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-18",
+      "checkedAt": "2026-05-21",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",

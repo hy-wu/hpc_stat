@@ -414,6 +414,14 @@ textarea:focus {
   min-width: 0;
 }
 
+.column-count {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--ink-35);
+  white-space: nowrap;
+}
+
 .table-wrap {
   max-height: calc(100vh - 350px);
   min-height: 360px;
