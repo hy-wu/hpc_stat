@@ -1,97 +1,2590 @@
 {
   "fields": [
-    { "key": "name", "label": "模型名称", "type": "text", "visible": true },
-    { "key": "vendor", "label": "厂商", "type": "text", "visible": true },
-    { "key": "multimodal", "label": "模态", "type": "text", "visible": true },
-    { "key": "copilotMultiplier", "label": "Copilot 倍率", "type": "number", "visible": true },
-    { "key": "performance", "label": "能力/输入输出", "type": "text", "visible": false },
-    { "key": "params", "label": "参数量(B)", "type": "number", "visible": true },
-    { "key": "paramsActive", "label": "激活量(B)", "type": "number", "visible": true },
-    { "key": "pricing.official.in", "label": "官方 In ($)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.official.hit", "label": "官方 In(Hit) ($)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.official.out", "label": "官方 Out ($)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.officialCny.in", "label": "官方 In (¥)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true, "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing" },
-    { "key": "pricing.officialCny.hit", "label": "官方 In(Hit) (¥)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.officialCny.out", "label": "官方 Out (¥)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.openrouter.in", "label": "OpenRouter In", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true, "source": "https://openrouter.ai/models" },
-    { "key": "pricing.openrouter.hit", "label": "OpenRouter In(Hit)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.openrouter.out", "label": "OpenRouter Out", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.copilot.in", "label": "Copilot In", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.copilot.out", "label": "Copilot Out", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.cursor.in", "label": "Cursor In", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true, "source": "https://cursor.com/cn/docs/models-and-pricing" },
-    { "key": "pricing.cursor.out", "label": "Cursor Out", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.siliconflow.in", "label": "硅基流动 In (¥)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true, "source": "https://siliconflow.cn/pricing" },
-    { "key": "pricing.siliconflow.hit", "label": "硅基流动 In(Hit) (¥)", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.siliconflow.out", "label": "硅基流动 Out (¥)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.nvidia.in", "label": "NVIDIA In", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true, "source": "https://www.nvidia.com/en-us/ai-data-science/generative-ai/nim/" },
-    { "key": "pricing.nvidia.out", "label": "NVIDIA Out", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.aliyun.in", "label": "阿里云 In (¥)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true, "source": "https://help.aliyun.com/zh/model-studio/model-pricing" },
-    { "key": "pricing.aliyun.out", "label": "阿里云 Out (¥)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.tencent.in", "label": "腾讯云 In (¥)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true, "source": "https://cloud.tencent.com.cn/document/product/1823/130055" },
-    { "key": "pricing.tencent.hit", "label": "腾讯云 In(Hit) (¥)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.tencent.out", "label": "腾讯云 Out (¥)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.baidu.in", "label": "百度千帆 In (¥)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true, "source": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya" },
-    { "key": "pricing.baidu.hit", "label": "百度千帆 In(Hit) (¥)", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.baidu.out", "label": "百度千帆 Out (¥)", "type": "number", "visible": true, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.groq.in", "label": "Groq In", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true, "source": "https://groq.com/pricing/" },
-    { "key": "pricing.groq.out", "label": "Groq Out", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.perplexity.in", "label": "Perplexity In", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true, "source": "https://docs.perplexity.ai/getting-started/pricing" },
-    { "key": "pricing.perplexity.out", "label": "Perplexity Out", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.zhipu.in", "label": "智谱 In (¥)", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true, "source": "https://open.bigmodel.cn/pricing" },
-    { "key": "pricing.zhipu.hit", "label": "智谱 In(Hit) (¥)", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true },
-    { "key": "pricing.zhipu.out", "label": "智谱 Out (¥)", "type": "number", "visible": false, "heatmap": true, "inverseHeatmap": true },
-    { "key": "contextWindow", "label": "上下文", "type": "text", "visible": true },
-    { "key": "evals.caisiElo", "label": "CAISI Elo", "type": "number", "visible": true, "heatmap": true, "source": "https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro" },
-    { "key": "arenaElo", "label": "Arena Elo", "type": "number", "visible": true, "heatmap": true, "source": "https://lmarena.ai/leaderboard" },
-    { "key": "llmStats.codeArena", "label": "Code Arena", "type": "number", "visible": true, "heatmap": true, "source": "https://llm-stats.com/" },
-    { "key": "evals.gpqaDiamond", "label": "GPQA-Diamond", "type": "number", "visible": true, "heatmap": true, "source": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details" },
-    { "key": "llmStats.reasoning", "label": "推理 (LLM Stats)", "type": "number", "visible": true, "heatmap": true, "source": "https://llm-stats.com/" },
-    { "key": "llmStats.speed", "label": "速度(c/s)", "type": "number", "visible": true, "heatmap": true, "source": "https://llm-stats.com/" },
-    { "key": "llmStats.coding", "label": "代码 (LLM Stats)", "type": "number", "visible": true, "heatmap": true, "source": "https://llm-stats.com/" },
-    { "key": "llmStats.math", "label": "数学 (LLM Stats)", "type": "number", "visible": true, "heatmap": true, "source": "https://llm-stats.com/" },
-    { "key": "evals.hle", "label": "HLE", "type": "number", "visible": true, "heatmap": true, "source": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details" },
-    { "key": "evals.reportedSweBenchVerified", "label": "SWE Verified (report)", "type": "number", "visible": true, "heatmap": true, "source": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details" },
-    { "key": "evals.aime2025", "label": "AIME 2025", "type": "number", "visible": true, "heatmap": true, "source": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details" },
-    { "key": "evals.mmluPro", "label": "MMLU-Pro", "type": "number", "visible": true, "heatmap": true, "source": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details" },
-    { "key": "evals.browseComp", "label": "BrowseComp", "type": "number", "visible": true, "heatmap": true, "source": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details" },
-    { "key": "evals.terminalBench", "label": "Terminal-Bench", "type": "number", "visible": true, "heatmap": true, "source": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details" },
-    { "key": "evals.ifEval", "label": "IFEval", "type": "number", "visible": true, "heatmap": true, "source": "https://api.zeroeval.com/leaderboard/benchmarks/ifeval/details" },
-    { "key": "evals.liveCodeBench", "label": "LiveCodeBench", "type": "number", "visible": true, "heatmap": true, "source": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details" },
-    { "key": "llmStats.search", "label": "搜索 (LLM Stats)", "type": "number", "visible": false, "heatmap": true, "source": "https://llm-stats.com/" },
-    { "key": "llmStats.writing", "label": "写作 (LLM Stats)", "type": "number", "visible": false, "heatmap": true, "source": "https://llm-stats.com/" },
-    { "key": "llmStats.vision", "label": "视觉 (LLM Stats)", "type": "number", "visible": false, "heatmap": true, "source": "https://llm-stats.com/" },
-    { "key": "llmStats.tools", "label": "工具 (LLM Stats)", "type": "number", "visible": false, "heatmap": true, "source": "https://llm-stats.com/" },
-    { "key": "llmStats.longCtx", "label": "长上下文 (LLM Stats)", "type": "number", "visible": false, "heatmap": true, "source": "https://llm-stats.com/" },
-    { "key": "evals.caisiSweBenchVerified", "label": "SWE Verified (CAISI)", "type": "number", "visible": false, "heatmap": true },
-    { "key": "evals.caisiGpqaDiamond", "label": "GPQA-Diamond (CAISI)", "type": "number", "visible": false, "heatmap": true },
-    { "key": "evals.caisiOtisAime2025", "label": "OTIS-AIME 2025", "type": "number", "visible": false, "heatmap": true },
-    { "key": "evals.caisiPumac2024", "label": "PUMaC 2024", "type": "number", "visible": false, "heatmap": true },
-    { "key": "evals.caisiSmt2025", "label": "SMT 2025", "type": "number", "visible": false, "heatmap": true },
-    { "key": "evals.simpleQA", "label": "SimpleQA", "type": "number", "visible": false, "heatmap": true, "source": "https://api.zeroeval.com/leaderboard/benchmarks/simpleqa/details" },
-    { "key": "evals.aime2024", "label": "AIME 2024", "type": "number", "visible": false, "heatmap": true, "source": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2024/details" },
-    { "key": "mmlu", "label": "MMLU", "type": "number", "visible": false, "heatmap": true },
-    { "key": "humanEval", "label": "HumanEval", "type": "number", "visible": false, "heatmap": true },
-    { "key": "gsm8k", "label": "GSM8K", "type": "number", "visible": false, "heatmap": true },
-    { "key": "gpqa", "label": "GPQA", "type": "number", "visible": false, "heatmap": true },
-    { "key": "math", "label": "MATH", "type": "number", "visible": false, "heatmap": true },
-    { "key": "notes", "label": "备注", "type": "text", "visible": false }
+    {
+      "key": "name",
+      "label": "模型名称",
+      "type": "text",
+      "visible": true
+    },
+    {
+      "key": "vendor",
+      "label": "厂商",
+      "type": "text",
+      "visible": true
+    },
+    {
+      "key": "multimodal",
+      "label": "模态",
+      "type": "text",
+      "visible": true
+    },
+    {
+      "key": "copilotMultiplier",
+      "label": "Copilot 倍率",
+      "type": "number",
+      "visible": true
+    },
+    {
+      "key": "performance",
+      "label": "能力/输入输出",
+      "type": "text",
+      "visible": false
+    },
+    {
+      "key": "params",
+      "label": "参数量(B)",
+      "type": "number",
+      "visible": true
+    },
+    {
+      "key": "paramsActive",
+      "label": "激活量(B)",
+      "type": "number",
+      "visible": true
+    },
+    {
+      "key": "pricing.official.in",
+      "label": "官方 In ($)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.official.hit",
+      "label": "官方 In(Hit) ($)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.official.out",
+      "label": "官方 Out ($)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.officialCny.in",
+      "label": "官方 In (¥)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
+    },
+    {
+      "key": "pricing.officialCny.hit",
+      "label": "官方 In(Hit) (¥)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.officialCny.out",
+      "label": "官方 Out (¥)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.openrouter.in",
+      "label": "OpenRouter In",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://openrouter.ai/models"
+    },
+    {
+      "key": "pricing.openrouter.hit",
+      "label": "OpenRouter In(Hit)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.openrouter.out",
+      "label": "OpenRouter Out",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.copilot.in",
+      "label": "Copilot In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.copilot.out",
+      "label": "Copilot Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.cursor.in",
+      "label": "Cursor In",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://cursor.com/cn/docs/models-and-pricing"
+    },
+    {
+      "key": "pricing.cursor.out",
+      "label": "Cursor Out",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.siliconflow.in",
+      "label": "硅基流动 In (¥)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://siliconflow.cn/pricing"
+    },
+    {
+      "key": "pricing.siliconflow.hit",
+      "label": "硅基流动 In(Hit) (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.siliconflow.out",
+      "label": "硅基流动 Out (¥)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.nvidia.in",
+      "label": "NVIDIA In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://www.nvidia.com/en-us/ai-data-science/generative-ai/nim/"
+    },
+    {
+      "key": "pricing.nvidia.out",
+      "label": "NVIDIA Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.aliyun.in",
+      "label": "阿里云 In (¥)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://help.aliyun.com/zh/model-studio/model-pricing"
+    },
+    {
+      "key": "pricing.aliyun.out",
+      "label": "阿里云 Out (¥)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.tencent.in",
+      "label": "腾讯云 In (¥)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://cloud.tencent.com.cn/document/product/1823/130055"
+    },
+    {
+      "key": "pricing.tencent.hit",
+      "label": "腾讯云 In(Hit) (¥)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.tencent.out",
+      "label": "腾讯云 Out (¥)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.baidu.in",
+      "label": "百度千帆 In (¥)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya"
+    },
+    {
+      "key": "pricing.baidu.hit",
+      "label": "百度千帆 In(Hit) (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.baidu.out",
+      "label": "百度千帆 Out (¥)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.groq.in",
+      "label": "Groq In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://groq.com/pricing/"
+    },
+    {
+      "key": "pricing.groq.out",
+      "label": "Groq Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.perplexity.in",
+      "label": "Perplexity In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://docs.perplexity.ai/getting-started/pricing"
+    },
+    {
+      "key": "pricing.perplexity.out",
+      "label": "Perplexity Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.zhipu.in",
+      "label": "智谱 In (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://open.bigmodel.cn/pricing"
+    },
+    {
+      "key": "pricing.zhipu.hit",
+      "label": "智谱 In(Hit) (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.zhipu.out",
+      "label": "智谱 Out (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.01.ai.in",
+      "label": "01.AI In (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://platform.lingyiwanwu.com/pricing"
+    },
+    {
+      "key": "pricing.01.ai.out",
+      "label": "01.AI Out (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.302.ai.in",
+      "label": "302.AI In (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://302.ai"
+    },
+    {
+      "key": "pricing.302.ai.out",
+      "label": "302.AI Out (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.abacus.in",
+      "label": "Abacus In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://abacus.ai"
+    },
+    {
+      "key": "pricing.abacus.out",
+      "label": "Abacus Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.abliteration.ai.in",
+      "label": "abliteration.ai In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://abliteration.ai"
+    },
+    {
+      "key": "pricing.abliteration.ai.out",
+      "label": "abliteration.ai Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.aihubmix.in",
+      "label": "AIHubMix In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://aihubmix.com"
+    },
+    {
+      "key": "pricing.aihubmix.out",
+      "label": "AIHubMix Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.amazon-bedrock.in",
+      "label": "Amazon Bedrock In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://aws.amazon.com/bedrock/pricing/"
+    },
+    {
+      "key": "pricing.amazon-bedrock.out",
+      "label": "Amazon Bedrock Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.amazon.in",
+      "label": "Amazon In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://aws.amazon.com/bedrock/pricing/"
+    },
+    {
+      "key": "pricing.amazon.out",
+      "label": "Amazon Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.ambient.in",
+      "label": "Ambient In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://ambient.ai"
+    },
+    {
+      "key": "pricing.ambient.out",
+      "label": "Ambient Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.auriko.in",
+      "label": "Auriko In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://auriko.ai"
+    },
+    {
+      "key": "pricing.auriko.out",
+      "label": "Auriko Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.azure-cognitive-services.in",
+      "label": "Azure Cognitive Services In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://azure.microsoft.com"
+    },
+    {
+      "key": "pricing.azure-cognitive-services.out",
+      "label": "Azure Cognitive Services Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.azure.in",
+      "label": "Azure In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://azure.microsoft.com"
+    },
+    {
+      "key": "pricing.azure.out",
+      "label": "Azure Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.bailing.in",
+      "label": "Bailing In (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://bailing.ai"
+    },
+    {
+      "key": "pricing.bailing.out",
+      "label": "Bailing Out (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.baseten.in",
+      "label": "Baseten In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://baseten.ai"
+    },
+    {
+      "key": "pricing.baseten.out",
+      "label": "Baseten Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.berget.ai.in",
+      "label": "Berget.AI In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://berget.ai"
+    },
+    {
+      "key": "pricing.berget.ai.out",
+      "label": "Berget.AI Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.bytedance.in",
+      "label": "ByteDance In (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://www.volcengine.com/docs/82379/1544106"
+    },
+    {
+      "key": "pricing.bytedance.out",
+      "label": "ByteDance Out (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.cerebras.in",
+      "label": "Cerebras In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://cerebras.ai"
+    },
+    {
+      "key": "pricing.cerebras.out",
+      "label": "Cerebras Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.chutes.in",
+      "label": "Chutes In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://chutes.ai"
+    },
+    {
+      "key": "pricing.chutes.out",
+      "label": "Chutes Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.clarifai.in",
+      "label": "Clarifai In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://clarifai.com"
+    },
+    {
+      "key": "pricing.clarifai.out",
+      "label": "Clarifai Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.claudinio.in",
+      "label": "Claudinio In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://claudinio.ai"
+    },
+    {
+      "key": "pricing.claudinio.out",
+      "label": "Claudinio Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.cloudferro-sherlock.in",
+      "label": "CloudFerro Sherlock In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://cloudferro.com"
+    },
+    {
+      "key": "pricing.cloudferro-sherlock.out",
+      "label": "CloudFerro Sherlock Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.cloudflare-ai-gateway.in",
+      "label": "Cloudflare AI Gateway In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://cloudflare.com"
+    },
+    {
+      "key": "pricing.cloudflare-ai-gateway.out",
+      "label": "Cloudflare AI Gateway Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.cloudflare-workers-ai.in",
+      "label": "Cloudflare Workers AI In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://cloudflare.com"
+    },
+    {
+      "key": "pricing.cloudflare-workers-ai.out",
+      "label": "Cloudflare Workers AI Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.cohere.in",
+      "label": "Cohere In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://cohere.com"
+    },
+    {
+      "key": "pricing.cohere.out",
+      "label": "Cohere Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.cortecs.in",
+      "label": "Cortecs In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://cortecs.ai"
+    },
+    {
+      "key": "pricing.cortecs.out",
+      "label": "Cortecs Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.d.run-china.in",
+      "label": "D.Run (China) In (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://drun.ai"
+    },
+    {
+      "key": "pricing.d.run-china.out",
+      "label": "D.Run (China) Out (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.databricks.in",
+      "label": "Databricks In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://databricks.com"
+    },
+    {
+      "key": "pricing.databricks.out",
+      "label": "Databricks Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.deep-infra.in",
+      "label": "Deep Infra In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://deepinfra.com"
+    },
+    {
+      "key": "pricing.deep-infra.out",
+      "label": "Deep Infra Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.digitalocean.in",
+      "label": "DigitalOcean In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://digitalocean.com"
+    },
+    {
+      "key": "pricing.digitalocean.out",
+      "label": "DigitalOcean Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.dinference.in",
+      "label": "DInference In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://dinference.ai"
+    },
+    {
+      "key": "pricing.dinference.out",
+      "label": "DInference Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.evroc.in",
+      "label": "evroc In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://evroc.com"
+    },
+    {
+      "key": "pricing.evroc.out",
+      "label": "evroc Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.fastrouter.in",
+      "label": "FastRouter In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://fastrouter.ai"
+    },
+    {
+      "key": "pricing.fastrouter.out",
+      "label": "FastRouter Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.fireworks-ai.in",
+      "label": "Fireworks AI In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://fireworks.ai"
+    },
+    {
+      "key": "pricing.fireworks-ai.out",
+      "label": "Fireworks AI Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.fireworks-firepass.in",
+      "label": "Fireworks (Firepass) In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://fireworks.ai"
+    },
+    {
+      "key": "pricing.fireworks-firepass.out",
+      "label": "Fireworks (Firepass) Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.friendli.in",
+      "label": "Friendli In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://friendli.ai"
+    },
+    {
+      "key": "pricing.friendli.out",
+      "label": "Friendli Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.frogbot.in",
+      "label": "FrogBot In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://frogbot.ai"
+    },
+    {
+      "key": "pricing.frogbot.out",
+      "label": "FrogBot Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.github-models.in",
+      "label": "GitHub Models In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://github.com/marketplace/models"
+    },
+    {
+      "key": "pricing.github-models.out",
+      "label": "GitHub Models Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.gitlab-duo.in",
+      "label": "GitLab Duo In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://gitlab.com"
+    },
+    {
+      "key": "pricing.gitlab-duo.out",
+      "label": "GitLab Duo Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.gmi-cloud.in",
+      "label": "GMI Cloud In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://gmicloud.com"
+    },
+    {
+      "key": "pricing.gmi-cloud.out",
+      "label": "GMI Cloud Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.helicone.in",
+      "label": "Helicone In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://helicone.ai"
+    },
+    {
+      "key": "pricing.helicone.out",
+      "label": "Helicone Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.hpc-ai.in",
+      "label": "HPC-AI In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://hpc-ai.com"
+    },
+    {
+      "key": "pricing.hpc-ai.out",
+      "label": "HPC-AI Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.hugging-face.in",
+      "label": "Hugging Face In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://huggingface.co"
+    },
+    {
+      "key": "pricing.hugging-face.out",
+      "label": "Hugging Face Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.iflow.in",
+      "label": "iFLow In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://iflow.ai"
+    },
+    {
+      "key": "pricing.iflow.out",
+      "label": "iFLow Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.inception.in",
+      "label": "Inception In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://inceptionai.com"
+    },
+    {
+      "key": "pricing.inception.out",
+      "label": "Inception Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.io.net.in",
+      "label": "IO.NET In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://io.net"
+    },
+    {
+      "key": "pricing.io.net.out",
+      "label": "IO.NET Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.jiekou.ai.in",
+      "label": "Jiekou.AI In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://jiekou.ai"
+    },
+    {
+      "key": "pricing.jiekou.ai.out",
+      "label": "Jiekou.AI Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.kilo-gateway.in",
+      "label": "Kilo Gateway In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://kilogateway.ai"
+    },
+    {
+      "key": "pricing.kilo-gateway.out",
+      "label": "Kilo Gateway Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.kimi-for-coding.in",
+      "label": "Kimi For Coding In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://kimi.moonshot.cn"
+    },
+    {
+      "key": "pricing.kimi-for-coding.out",
+      "label": "Kimi For Coding Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.kuae-cloud-coding-plan.in",
+      "label": "KUAE Cloud Coding Plan In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://kuae.com"
+    },
+    {
+      "key": "pricing.kuae-cloud-coding-plan.out",
+      "label": "KUAE Cloud Coding Plan Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.lilac.in",
+      "label": "Lilac In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://lilac.ai"
+    },
+    {
+      "key": "pricing.lilac.out",
+      "label": "Lilac Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.llama.in",
+      "label": "Llama In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://llama.meta.com"
+    },
+    {
+      "key": "pricing.llama.out",
+      "label": "Llama Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.llm-gateway.in",
+      "label": "LLM Gateway In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://llmgateway.io"
+    },
+    {
+      "key": "pricing.llm-gateway.out",
+      "label": "LLM Gateway Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.lmstudio.in",
+      "label": "LMStudio In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://lmstudio.ai"
+    },
+    {
+      "key": "pricing.lmstudio.out",
+      "label": "LMStudio Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.lucidquery-ai.in",
+      "label": "LucidQuery AI In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://lucidquery.com"
+    },
+    {
+      "key": "pricing.lucidquery-ai.out",
+      "label": "LucidQuery AI Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.meganova.in",
+      "label": "Meganova In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://meganova.ai"
+    },
+    {
+      "key": "pricing.meganova.out",
+      "label": "Meganova Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.minimax-minimax.io.in",
+      "label": "MiniMax (minimax.io) In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://minimax.io"
+    },
+    {
+      "key": "pricing.minimax-minimax.io.out",
+      "label": "MiniMax (minimax.io) Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.minimax-minimaxi.com.in",
+      "label": "MiniMax (minimaxi.com) In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://minimaxi.com"
+    },
+    {
+      "key": "pricing.minimax-minimaxi.com.out",
+      "label": "MiniMax (minimaxi.com) Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.minimax-token-plan-minimax.io.in",
+      "label": "MiniMax Token Plan (minimax.io) In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://minimax.io"
+    },
+    {
+      "key": "pricing.minimax-token-plan-minimax.io.out",
+      "label": "MiniMax Token Plan (minimax.io) Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.minimax-token-plan-minimaxi.com.in",
+      "label": "MiniMax Token Plan (minimaxi.com) In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://minimaxi.com"
+    },
+    {
+      "key": "pricing.minimax-token-plan-minimaxi.com.out",
+      "label": "MiniMax Token Plan (minimaxi.com) Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.mistral.in",
+      "label": "Mistral In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://mistral.ai/technology/#pricing"
+    },
+    {
+      "key": "pricing.mistral.out",
+      "label": "Mistral Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.mixlayer.in",
+      "label": "Mixlayer In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://mixlayer.ai"
+    },
+    {
+      "key": "pricing.mixlayer.out",
+      "label": "Mixlayer Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.moark.in",
+      "label": "Moark In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://moark.ai"
+    },
+    {
+      "key": "pricing.moark.out",
+      "label": "Moark Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.modelscope.in",
+      "label": "ModeLScope In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://modelscope.cn"
+    },
+    {
+      "key": "pricing.modelscope.out",
+      "label": "ModeLScope Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.moonshot-ai-china.in",
+      "label": "Moonshot AI (China) In (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://platform.moonshot.cn"
+    },
+    {
+      "key": "pricing.moonshot-ai-china.out",
+      "label": "Moonshot AI (China) Out (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.moonshot-ai.in",
+      "label": "Moonshot AI In (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://platform.moonshot.ai/docs/pricing/chat"
+    },
+    {
+      "key": "pricing.moonshot-ai.out",
+      "label": "Moonshot AI Out (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.morph.in",
+      "label": "Morph In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://morph.ai"
+    },
+    {
+      "key": "pricing.morph.out",
+      "label": "Morph Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.nanogpt.in",
+      "label": "NanoGPT In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://nanogpt.com"
+    },
+    {
+      "key": "pricing.nanogpt.out",
+      "label": "NanoGPT Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.near-ai-cloud.in",
+      "label": "NEAR AI Cloud In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://near.ai"
+    },
+    {
+      "key": "pricing.near-ai-cloud.out",
+      "label": "NEAR AI Cloud Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.nebius-token-factory.in",
+      "label": "Nebius Token Factory In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://nebius.com"
+    },
+    {
+      "key": "pricing.nebius-token-factory.out",
+      "label": "Nebius Token Factory Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.neuralwatt.in",
+      "label": "Neuralwatt In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://neuralwatt.com"
+    },
+    {
+      "key": "pricing.neuralwatt.out",
+      "label": "Neuralwatt Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.nova.in",
+      "label": "Nova In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://nova.ai"
+    },
+    {
+      "key": "pricing.nova.out",
+      "label": "Nova Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.novitaai.in",
+      "label": "NovitaAI In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://novita.ai"
+    },
+    {
+      "key": "pricing.novitaai.out",
+      "label": "NovitaAI Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.ollama-cloud.in",
+      "label": "Ollama Cloud In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://ollama.com"
+    },
+    {
+      "key": "pricing.ollama-cloud.out",
+      "label": "Ollama Cloud Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.opencode.in",
+      "label": "OpenCode In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://opencode.ai"
+    },
+    {
+      "key": "pricing.opencode.out",
+      "label": "OpenCode Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.orcarouter.in",
+      "label": "OrcaRouter In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://orcarouter.ai"
+    },
+    {
+      "key": "pricing.orcarouter.out",
+      "label": "OrcaRouter Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.ovhcloud-ai-endpoints.in",
+      "label": "OVHcloud AI Endpoints In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://ovhcloud.com"
+    },
+    {
+      "key": "pricing.ovhcloud-ai-endpoints.out",
+      "label": "OVHcloud AI Endpoints Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.poe.in",
+      "label": "Poe In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://poe.com"
+    },
+    {
+      "key": "pricing.poe.out",
+      "label": "Poe Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.privatemode-ai.in",
+      "label": "Privatemode AI In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://privatemode.ai"
+    },
+    {
+      "key": "pricing.privatemode-ai.out",
+      "label": "Privatemode AI Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.qihang.in",
+      "label": "QiHang In (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://qihang.ai"
+    },
+    {
+      "key": "pricing.qihang.out",
+      "label": "QiHang Out (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.qiniu.in",
+      "label": "Qiniu In (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://qiniu.com"
+    },
+    {
+      "key": "pricing.qiniu.out",
+      "label": "Qiniu Out (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.regolo-ai.in",
+      "label": "Regolo AI In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://regolo.ai"
+    },
+    {
+      "key": "pricing.regolo-ai.out",
+      "label": "Regolo AI Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.requesty.in",
+      "label": "Requesty In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://requesty.ai"
+    },
+    {
+      "key": "pricing.requesty.out",
+      "label": "Requesty Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.routing.run.in",
+      "label": "routing.run In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://routing.run"
+    },
+    {
+      "key": "pricing.routing.run.out",
+      "label": "routing.run Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.sap-ai-core.in",
+      "label": "SAP AI Core In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://sap.com"
+    },
+    {
+      "key": "pricing.sap-ai-core.out",
+      "label": "SAP AI Core Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.sarvam-ai.in",
+      "label": "Sarvam AI In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://sarvam.ai"
+    },
+    {
+      "key": "pricing.sarvam-ai.out",
+      "label": "Sarvam AI Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.scaleway.in",
+      "label": "Scaleway In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://scaleway.com"
+    },
+    {
+      "key": "pricing.scaleway.out",
+      "label": "Scaleway Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.stackit.in",
+      "label": "STACKIT In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://stackit.cloud"
+    },
+    {
+      "key": "pricing.stackit.out",
+      "label": "STACKIT Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.stepfun.in",
+      "label": "StepFun In (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://stepfun.com"
+    },
+    {
+      "key": "pricing.stepfun.out",
+      "label": "StepFun Out (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.submodel.in",
+      "label": "submodel In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://submodel.ai"
+    },
+    {
+      "key": "pricing.submodel.out",
+      "label": "submodel Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.synthetic.in",
+      "label": "Synthetic In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://synthetic.ai"
+    },
+    {
+      "key": "pricing.synthetic.out",
+      "label": "Synthetic Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.the-grid-ai.in",
+      "label": "The Grid AI In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://thegrid.ai"
+    },
+    {
+      "key": "pricing.the-grid-ai.out",
+      "label": "The Grid AI Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.together-ai.in",
+      "label": "Together AI In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://together.ai"
+    },
+    {
+      "key": "pricing.together-ai.out",
+      "label": "Together AI Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.umans-ai-coding-plan.in",
+      "label": "Umans AI Coding Plan In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://umans.ai"
+    },
+    {
+      "key": "pricing.umans-ai-coding-plan.out",
+      "label": "Umans AI Coding Plan Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.upstage.in",
+      "label": "Upstage In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://upstage.ai"
+    },
+    {
+      "key": "pricing.upstage.out",
+      "label": "Upstage Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.v0.in",
+      "label": "v0 In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://v0.dev"
+    },
+    {
+      "key": "pricing.v0.out",
+      "label": "v0 Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.venice-ai.in",
+      "label": "Venice AI In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://venice.ai"
+    },
+    {
+      "key": "pricing.venice-ai.out",
+      "label": "Venice AI Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.vercel-ai-gateway.in",
+      "label": "Vercel AI Gateway In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://vercel.com"
+    },
+    {
+      "key": "pricing.vercel-ai-gateway.out",
+      "label": "Vercel AI Gateway Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.vertex-anthropic.in",
+      "label": "Vertex (Anthropic) In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://console.cloud.google.com/vertex-ai"
+    },
+    {
+      "key": "pricing.vertex-anthropic.out",
+      "label": "Vertex (Anthropic) Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.vertex.in",
+      "label": "Vertex In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://console.cloud.google.com/vertex-ai"
+    },
+    {
+      "key": "pricing.vertex.out",
+      "label": "Vertex Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.vivgrid.in",
+      "label": "Vivgrid In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://vivgrid.com"
+    },
+    {
+      "key": "pricing.vivgrid.out",
+      "label": "Vivgrid Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.vultr.in",
+      "label": "Vultr In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://vultr.com"
+    },
+    {
+      "key": "pricing.vultr.out",
+      "label": "Vultr Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.wafer.in",
+      "label": "Wafer In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://wafer.ai"
+    },
+    {
+      "key": "pricing.wafer.out",
+      "label": "Wafer Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.weights-biases.in",
+      "label": "Weights & Biases In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://wandb.ai"
+    },
+    {
+      "key": "pricing.weights-biases.out",
+      "label": "Weights & Biases Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.xai.in",
+      "label": "xAI In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://docs.x.ai/docs/models"
+    },
+    {
+      "key": "pricing.xai.out",
+      "label": "xAI Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.xiaomi-token-plan-china.in",
+      "label": "Xiaomi Token Plan (China) In (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://cloud.xiaomi.com"
+    },
+    {
+      "key": "pricing.xiaomi-token-plan-china.out",
+      "label": "Xiaomi Token Plan (China) Out (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.xiaomi-token-plan-europe.in",
+      "label": "Xiaomi Token Plan (Europe) In (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://cloud.xiaomi.com"
+    },
+    {
+      "key": "pricing.xiaomi-token-plan-europe.out",
+      "label": "Xiaomi Token Plan (Europe) Out (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.xiaomi-token-plan-singapore.in",
+      "label": "Xiaomi Token Plan (Singapore) In (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://cloud.xiaomi.com"
+    },
+    {
+      "key": "pricing.xiaomi-token-plan-singapore.out",
+      "label": "Xiaomi Token Plan (Singapore) Out (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.xiaomi.in",
+      "label": "Xiaomi In (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://xiaomi.com"
+    },
+    {
+      "key": "pricing.xiaomi.out",
+      "label": "Xiaomi Out (¥)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.xpersona.in",
+      "label": "Xpersona In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://xpersona.ai"
+    },
+    {
+      "key": "pricing.xpersona.out",
+      "label": "Xpersona Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.z.ai.in",
+      "label": "Z.AI In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://z.ai"
+    },
+    {
+      "key": "pricing.z.ai.out",
+      "label": "Z.AI Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.zenmux.in",
+      "label": "ZenMux In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://zenmux.com"
+    },
+    {
+      "key": "pricing.zenmux.out",
+      "label": "ZenMux Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "contextWindow",
+      "label": "上下文",
+      "type": "text",
+      "visible": true
+    },
+    {
+      "key": "evals.caisiElo",
+      "label": "CAISI Elo",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "source": "https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro"
+    },
+    {
+      "key": "arenaElo",
+      "label": "Arena Elo",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "source": "https://lmarena.ai/leaderboard"
+    },
+    {
+      "key": "llmStats.codeArena",
+      "label": "Code Arena",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "source": "https://llm-stats.com/"
+    },
+    {
+      "key": "evals.gpqaDiamond",
+      "label": "GPQA-Diamond",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "source": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+    },
+    {
+      "key": "llmStats.reasoning",
+      "label": "推理 (LLM Stats)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "source": "https://llm-stats.com/"
+    },
+    {
+      "key": "llmStats.speed",
+      "label": "速度(c/s)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "source": "https://llm-stats.com/"
+    },
+    {
+      "key": "llmStats.coding",
+      "label": "代码 (LLM Stats)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "source": "https://llm-stats.com/"
+    },
+    {
+      "key": "llmStats.math",
+      "label": "数学 (LLM Stats)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "source": "https://llm-stats.com/"
+    },
+    {
+      "key": "evals.hle",
+      "label": "HLE",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "source": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+    },
+    {
+      "key": "evals.reportedSweBenchVerified",
+      "label": "SWE Verified (report)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "source": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+    },
+    {
+      "key": "evals.aime2025",
+      "label": "AIME 2025",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "source": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+    },
+    {
+      "key": "evals.mmluPro",
+      "label": "MMLU-Pro",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "source": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+    },
+    {
+      "key": "evals.browseComp",
+      "label": "BrowseComp",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "source": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+    },
+    {
+      "key": "evals.terminalBench",
+      "label": "Terminal-Bench",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "source": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
+    },
+    {
+      "key": "evals.ifEval",
+      "label": "IFEval",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "source": "https://api.zeroeval.com/leaderboard/benchmarks/ifeval/details"
+    },
+    {
+      "key": "evals.liveCodeBench",
+      "label": "LiveCodeBench",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "source": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
+    },
+    {
+      "key": "llmStats.search",
+      "label": "搜索 (LLM Stats)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "source": "https://llm-stats.com/"
+    },
+    {
+      "key": "llmStats.writing",
+      "label": "写作 (LLM Stats)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "source": "https://llm-stats.com/"
+    },
+    {
+      "key": "llmStats.vision",
+      "label": "视觉 (LLM Stats)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "source": "https://llm-stats.com/"
+    },
+    {
+      "key": "llmStats.tools",
+      "label": "工具 (LLM Stats)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "source": "https://llm-stats.com/"
+    },
+    {
+      "key": "llmStats.longCtx",
+      "label": "长上下文 (LLM Stats)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "source": "https://llm-stats.com/"
+    },
+    {
+      "key": "evals.caisiSweBenchVerified",
+      "label": "SWE Verified (CAISI)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true
+    },
+    {
+      "key": "evals.caisiGpqaDiamond",
+      "label": "GPQA-Diamond (CAISI)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true
+    },
+    {
+      "key": "evals.caisiOtisAime2025",
+      "label": "OTIS-AIME 2025",
+      "type": "number",
+      "visible": false,
+      "heatmap": true
+    },
+    {
+      "key": "evals.caisiPumac2024",
+      "label": "PUMaC 2024",
+      "type": "number",
+      "visible": false,
+      "heatmap": true
+    },
+    {
+      "key": "evals.caisiSmt2025",
+      "label": "SMT 2025",
+      "type": "number",
+      "visible": false,
+      "heatmap": true
+    },
+    {
+      "key": "evals.simpleQA",
+      "label": "SimpleQA",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "source": "https://api.zeroeval.com/leaderboard/benchmarks/simpleqa/details"
+    },
+    {
+      "key": "evals.aime2024",
+      "label": "AIME 2024",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "source": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2024/details"
+    },
+    {
+      "key": "mmlu",
+      "label": "MMLU",
+      "type": "number",
+      "visible": false,
+      "heatmap": true
+    },
+    {
+      "key": "humanEval",
+      "label": "HumanEval",
+      "type": "number",
+      "visible": false,
+      "heatmap": true
+    },
+    {
+      "key": "gsm8k",
+      "label": "GSM8K",
+      "type": "number",
+      "visible": false,
+      "heatmap": true
+    },
+    {
+      "key": "gpqa",
+      "label": "GPQA",
+      "type": "number",
+      "visible": false,
+      "heatmap": true
+    },
+    {
+      "key": "math",
+      "label": "MATH",
+      "type": "number",
+      "visible": false,
+      "heatmap": true
+    },
+    {
+      "key": "notes",
+      "label": "备注",
+      "type": "text",
+      "visible": false
+    }
   ],
   "vendorLinks": {
-    "Anthropic": "https://www.anthropic.com/pricing",
+    "OpenCode": "https://opencode.ai",
     "OpenAI": "https://openai.com/api/pricing",
-    "DeepSeek": "https://api-docs.deepseek.com/quick_start/pricing",
+    "GitHub Copilot": "https://github.com/features/copilot",
+    "Anthropic": "https://www.anthropic.com/pricing",
     "Google": "https://ai.google.dev/pricing",
-    "Meta": "https://llama.meta.com/",
-    "Alibaba": "https://help.aliyun.com/zh/dashscope/developer-reference/model-pricing",
+    "Helicone": "https://helicone.ai",
+    "Auriko": "https://auriko.ai",
+    "Fireworks (Firepass)": "https://fireworks.ai",
+    "NanoGPT": "https://nanogpt.com",
+    "IO.NET": "https://io.net",
+    "Inception": "https://inceptionai.com",
+    "submodel": "https://submodel.ai",
+    "Requesty": "https://requesty.ai",
+    "Z.AI": "https://z.ai",
+    "Deep Infra": "https://deepinfra.com",
+    "Clarifai": "https://clarifai.com",
+    "Moark": "https://moark.ai",
+    "FrogBot": "https://frogbot.ai",
+    "Cohere": "https://cohere.com",
+    "Weights & Biases": "https://wandb.ai",
+    "GMI Cloud": "https://gmicloud.com",
+    "Ambient": "https://ambient.ai",
+    "routing.run": "https://routing.run",
+    "The Grid AI": "https://thegrid.ai",
+    "FastRouter": "https://fastrouter.ai",
+    "Tencent Coding Plan (China)": "https://cloud.tencent.com/document/product/1823/130055",
+    "Cortecs": "https://cortecs.ai",
+    "Baseten": "https://baseten.ai",
+    "Llama": "https://llama.meta.com",
+    "NovitaAI": "https://novita.ai",
+    "DigitalOcean": "https://digitalocean.com",
+    "Moonshot AI": "https://platform.moonshot.ai/docs/pricing/chat",
     "Mistral": "https://mistral.ai/technology/#pricing",
-    "01.AI": "https://platform.lingyiwanwu.com/pricing",
+    "Kilo Gateway": "https://kilogateway.ai",
+    "Vertex (Anthropic)": "https://console.cloud.google.com/vertex-ai",
+    "Cloudflare Workers AI": "https://cloudflare.com",
+    "LMStudio": "https://lmstudio.ai",
+    "Xiaomi Token Plan (China)": "https://cloud.xiaomi.com",
+    "v0": "https://v0.dev",
+    "Morph": "https://morph.ai",
+    "NEAR AI Cloud": "https://near.ai",
+    "Abacus": "https://abacus.ai",
+    "Privatemode AI": "https://privatemode.ai",
+    "MiniMax Token Plan (minimaxi.com)": "https://minimaxi.com",
+    "Xiaomi Token Plan (Europe)": "https://cloud.xiaomi.com",
+    "CloudFerro Sherlock": "https://cloudferro.com",
+    "DInference": "https://dinference.ai",
+    "Vivgrid": "https://vivgrid.com",
+    "Cerebras": "https://cerebras.ai",
+    "Cloudflare AI Gateway": "https://cloudflare.com",
+    "Vultr": "https://vultr.com",
+    "KUAE Cloud Coding Plan": "https://kuae.com",
+    "ModeLScope": "https://modelscope.cn",
+    "Kimi For Coding": "https://kimi.moonshot.cn",
+    "LucidQuery AI": "https://lucidquery.com",
+    "Neuralwatt": "https://neuralwatt.com",
+    "Azure Cognitive Services": "https://azure.microsoft.com",
+    "Jiekou.AI": "https://jiekou.ai",
+    "OVHcloud AI Endpoints": "https://ovhcloud.com",
+    "Friendli": "https://friendli.ai",
+    "OpenRouter": "https://openrouter.ai/models",
+    "Regolo AI": "https://regolo.ai",
+    "Claudinio": "https://claudinio.ai",
+    "OrcaRouter": "https://orcarouter.ai",
+    "LLM Gateway": "https://llmgateway.io",
+    "Poe": "https://poe.com",
+    "MiniMax (minimax.io)": "https://minimax.io",
+    "Groq": "https://groq.com/pricing/",
+    "Xiaomi Token Plan (Singapore)": "https://cloud.xiaomi.com",
+    "SiliconFLow": "https://siliconflow.cn/pricing",
+    "Vertex": "https://console.cloud.google.com/vertex-ai",
+    "Ollama Cloud": "https://ollama.com",
+    "Databricks": "https://databricks.com",
+    "Berget.AI": "https://berget.ai",
+    "Moonshot AI (China)": "https://platform.moonshot.cn",
+    "Alibaba Coding Plan (China)": "https://help.aliyun.com/zh/dashscope/developer-reference/model-pricing",
+    "MiniMax (minimaxi.com)": "https://minimaxi.com",
+    "Chutes": "https://chutes.ai",
+    "SiliconFlow (China)": "https://siliconflow.cn/pricing",
+    "AIHubMix": "https://aihubmix.com",
+    "GitHub Models": "https://github.com/marketplace/models",
+    "Qiniu": "https://qiniu.com",
+    "SAP AI Core": "https://sap.com",
+    "Scaleway": "https://scaleway.com",
+    "Mixlayer": "https://mixlayer.ai",
+    "ZenMux": "https://zenmux.com",
+    "Perplexity Agent": "https://docs.perplexity.ai",
+    "Alibaba Coding Plan": "https://help.aliyun.com/zh/dashscope/developer-reference/model-pricing",
+    "Meganova": "https://meganova.ai",
+    "Synthetic": "https://synthetic.ai",
+    "Azure": "https://azure.microsoft.com",
+    "MiniMax Token Plan (minimax.io)": "https://minimax.io",
+    "Upstage": "https://upstage.ai",
+    "Amazon Bedrock": "https://aws.amazon.com/bedrock/pricing/",
+    "Vercel AI Gateway": "https://vercel.com",
+    "abliteration.ai": "https://abliteration.ai",
+    "DeepSeek": "https://api-docs.deepseek.com/quick_start/pricing",
+    "Perplexity": "https://docs.perplexity.ai/getting-started/pricing",
+    "iFLow": "https://iflow.ai",
+    "STACKIT": "https://stackit.cloud",
+    "Wafer": "https://wafer.ai",
+    "evroc": "https://evroc.com",
+    "Nova": "https://nova.ai",
+    "Venice AI": "https://venice.ai",
+    "Fireworks AI": "https://fireworks.ai",
+    "Alibaba": "https://help.aliyun.com/zh/dashscope/developer-reference/model-pricing",
+    "302.AI": "https://302.ai",
+    "Xpersona": "https://xpersona.ai",
+    "StepFun": "https://stepfun.com",
+    "xAI": "https://docs.x.ai/docs/models",
+    "Sarvam AI": "https://sarvam.ai",
     "Zhipu AI": "https://open.bigmodel.cn/pricing",
+    "Bailing": "https://bailing.ai",
+    "QiHang": "https://qihang.ai",
+    "Lilac": "https://lilac.ai",
+    "Alibaba (China)": "https://help.aliyun.com/zh/dashscope/developer-reference/model-pricing",
+    "D.Run (China)": "https://drun.ai",
+    "Hugging Face": "https://huggingface.co",
+    "Umans AI Coding Plan": "https://umans.ai",
+    "Tencent TokenHub": "https://cloud.tencent.com/document/product/1823/130055",
+    "GitLab Duo": "https://gitlab.com",
+    "Nebius Token Factory": "https://nebius.com",
+    "HPC-AI": "https://hpc-ai.com",
+    "Xiaomi": "https://xiaomi.com",
+    "Together AI": "https://together.ai",
+    "Meta": "https://llama.meta.com/",
+    "01.AI": "https://platform.lingyiwanwu.com/pricing",
     "Amazon": "https://aws.amazon.com/bedrock/pricing/",
     "Baidu": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
     "ByteDance": "https://www.volcengine.com/docs/82379/1544106",
-    "Moonshot AI": "https://platform.moonshot.ai/docs/pricing/chat",
-    "NVIDIA": "https://www.nvidia.com/en-us/ai-data-science/generative-ai/nim/",
-    "Perplexity": "https://docs.perplexity.ai/getting-started/pricing",
-    "xAI": "https://docs.x.ai/docs/models"
+    "NVIDIA": "https://www.nvidia.com/en-us/ai-data-science/generative-ai/nim/"
   }
 }

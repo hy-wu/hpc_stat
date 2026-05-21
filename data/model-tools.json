@@ -2929,5 +2929,243 @@
       }
     ],
     "checkedAt": "2026-05-19"
+  },
+  {
+    "id": "openai-codex__gpt-5-3-codex",
+    "toolId": "openai-codex",
+    "toolName": "Codex",
+    "modelId": "gpt-5.3-codex",
+    "modelName": "GPT-5.3-Codex",
+    "modelVendor": "OpenAI",
+    "supportStatus": "官方内置",
+    "routeTags": [
+      "OpenAI-hosted",
+      "ChatGPT plan",
+      "API",
+      "Terminal CLI"
+    ],
+    "capabilityTags": [
+      "代码生成",
+      "终端",
+      "多文件编辑",
+      "Agent"
+    ],
+    "codingFit": 5,
+    "agentFit": 5,
+    "contextFit": 4,
+    "priceMeter": "ChatGPT 计划包含或 OpenAI API 用量计费",
+    "planRequirement": "Plus / Pro / Business / Enterprise 或 API 账户",
+    "latencyNote": "OpenAI 官方链路",
+    "notes": "最新 Codex 模型，支持 --model gpt-5.3-codex；多轮 agent 任务表现最强。",
+    "sources": [
+      {
+        "label": "OpenAI Codex GitHub",
+        "url": "https://github.com/openai/codex"
+      },
+      {
+        "label": "OpenAI API pricing",
+        "url": "https://openai.com/api/pricing/"
+      }
+    ],
+    "checkedAt": "2026-05-19"
+  },
+  {
+    "id": "openai-codex__gpt-5-2-codex",
+    "toolId": "openai-codex",
+    "toolName": "Codex",
+    "modelId": "gpt-5.2-codex",
+    "modelName": "GPT-5.2-Codex",
+    "modelVendor": "OpenAI",
+    "supportStatus": "官方内置",
+    "routeTags": [
+      "OpenAI-hosted",
+      "ChatGPT plan",
+      "API",
+      "Terminal CLI"
+    ],
+    "capabilityTags": [
+      "代码生成",
+      "终端",
+      "多文件编辑",
+      "Agent"
+    ],
+    "codingFit": 5,
+    "agentFit": 5,
+    "contextFit": 4,
+    "priceMeter": "ChatGPT 计划包含或 OpenAI API 用量计费",
+    "planRequirement": "Plus / Pro / Business / Enterprise 或 API 账户",
+    "latencyNote": "OpenAI 官方链路",
+    "notes": "Codex 系列前代主力，稳定可用；与 CLI 工具链配合成熟。",
+    "sources": [
+      {
+        "label": "OpenAI Codex GitHub",
+        "url": "https://github.com/openai/codex"
+      },
+      {
+        "label": "OpenAI API pricing",
+        "url": "https://openai.com/api/pricing/"
+      }
+    ],
+    "checkedAt": "2026-05-19"
+  },
+  {
+    "id": "openai-codex__openai-gpt-5-1-codex-mini",
+    "toolId": "openai-codex",
+    "toolName": "Codex",
+    "modelId": "openai/gpt-5.1-codex-mini",
+    "modelName": "GPT-5.1-Codex-Mini",
+    "modelVendor": "OpenAI",
+    "supportStatus": "官方内置",
+    "routeTags": [
+      "OpenAI-hosted",
+      "ChatGPT plan",
+      "API",
+      "Terminal CLI",
+      "低成本"
+    ],
+    "capabilityTags": [
+      "代码生成",
+      "终端",
+      "多文件编辑",
+      "Agent"
+    ],
+    "codingFit": 4,
+    "agentFit": 4,
+    "contextFit": 3,
+    "priceMeter": "ChatGPT 计划包含或 OpenAI API 用量计费",
+    "planRequirement": "Plus / Pro / Business / Enterprise 或 API 账户",
+    "latencyNote": "OpenAI 官方链路",
+    "notes": "轻量 Codex 变体，适合快速任务和低成本高频调用。",
+    "sources": [
+      {
+        "label": "OpenAI Codex GitHub",
+        "url": "https://github.com/openai/codex"
+      },
+      {
+        "label": "OpenAI API pricing",
+        "url": "https://openai.com/api/pricing/"
+      }
+    ],
+    "checkedAt": "2026-05-19"
+  },
+  {
+    "id": "openai-codex__openai-gpt-5-1-codex-max",
+    "toolId": "openai-codex",
+    "toolName": "Codex",
+    "modelId": "openai/gpt-5.1-codex-max",
+    "modelName": "GPT-5.1-Codex-Max",
+    "modelVendor": "OpenAI",
+    "supportStatus": "官方内置",
+    "routeTags": [
+      "OpenAI-hosted",
+      "ChatGPT plan",
+      "API",
+      "Terminal CLI",
+      "超长上下文"
+    ],
+    "capabilityTags": [
+      "代码生成",
+      "终端",
+      "多文件编辑",
+      "Agent"
+    ],
+    "codingFit": 5,
+    "agentFit": 5,
+    "contextFit": 5,
+    "priceMeter": "ChatGPT 计划包含或 OpenAI API 用量计费",
+    "planRequirement": "Plus / Pro / Business / Enterprise 或 API 账户",
+    "latencyNote": "OpenAI 官方链路",
+    "notes": "最大容量 Codex 变体，适合超复杂任务和长上下文代码库操作。",
+    "sources": [
+      {
+        "label": "OpenAI Codex GitHub",
+        "url": "https://github.com/openai/codex"
+      },
+      {
+        "label": "OpenAI API pricing",
+        "url": "https://openai.com/api/pricing/"
+      }
+    ],
+    "checkedAt": "2026-05-19"
+  },
+  {
+    "id": "openai-codex__gpt-5-5",
+    "toolId": "openai-codex",
+    "toolName": "Codex",
+    "modelId": "gpt-5.5",
+    "modelName": "GPT-5.5",
+    "modelVendor": "OpenAI",
+    "supportStatus": "官方内置",
+    "routeTags": [
+      "OpenAI-hosted",
+      "ChatGPT plan",
+      "API",
+      "Terminal CLI",
+      "--model 指定"
+    ],
+    "capabilityTags": [
+      "代码生成",
+      "终端",
+      "多文件编辑",
+      "Agent"
+    ],
+    "codingFit": 5,
+    "agentFit": 4,
+    "contextFit": 4,
+    "priceMeter": "ChatGPT 计划包含或 OpenAI API 用量计费",
+    "planRequirement": "Plus / Pro / Business / Enterprise 或 API 账户",
+    "latencyNote": "OpenAI 官方链路",
+    "notes": "Codex CLI 可通过 --model gpt-5.5 调用，能力强但非 Codex 专用。",
+    "sources": [
+      {
+        "label": "OpenAI Codex GitHub",
+        "url": "https://github.com/openai/codex"
+      },
+      {
+        "label": "OpenAI API pricing",
+        "url": "https://openai.com/api/pricing/"
+      }
+    ],
+    "checkedAt": "2026-05-19"
+  },
+  {
+    "id": "openai-codex__gpt-4-1",
+    "toolId": "openai-codex",
+    "toolName": "Codex",
+    "modelId": "gpt-4.1",
+    "modelName": "GPT-4.1",
+    "modelVendor": "OpenAI",
+    "supportStatus": "官方内置",
+    "routeTags": [
+      "OpenAI-hosted",
+      "ChatGPT plan",
+      "API",
+      "Terminal CLI",
+      "--model 指定"
+    ],
+    "capabilityTags": [
+      "代码生成",
+      "终端",
+      "多文件编辑",
+      "Agent"
+    ],
+    "codingFit": 4,
+    "agentFit": 4,
+    "contextFit": 3,
+    "priceMeter": "ChatGPT 计划包含或 OpenAI API 用量计费",
+    "planRequirement": "Plus / Pro / Business / Enterprise 或 API 账户",
+    "latencyNote": "OpenAI 官方链路",
+    "notes": "稳定通用模型，Codex CLI 兼容；适合对响应稳定性要求高的任务。",
+    "sources": [
+      {
+        "label": "OpenAI Codex GitHub",
+        "url": "https://github.com/openai/codex"
+      },
+      {
+        "label": "OpenAI API pricing",
+        "url": "https://openai.com/api/pricing/"
+      }
+    ],
+    "checkedAt": "2026-05-19"
   }
 ]

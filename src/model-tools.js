@@ -465,9 +465,22 @@ function sortMarker(key) {
   return state.sortDirection === "asc" ? " ↑" : " ↓";
 }
 
+function scoreBars(c, a, x, extraClass = "") {
+  const pct = v => v != null ? `${Math.round(v / 5 * 100)}%` : "0%";
+  const fmt = v => v != null ? formatNumber(v) : "—";
+  const title = `代码 ${fmt(c)}/5 · Agent ${fmt(a)}/5 · 上下文 ${fmt(x)}/5`;
+  return `<div class="score-bars-wrap${extraClass ? " " + extraClass : ""}" title="${escapeAttr(title)}">
+    <div class="score-bars">
+      <div class="score-bar score-bar-c" style="width:${pct(c)}"></div>
+      <div class="score-bar score-bar-a" style="width:${pct(a)}"></div>
+      <div class="score-bar score-bar-x" style="width:${pct(x)}"></div>
+    </div>
+    <span class="score-text">C ${fmt(c)} · A ${fmt(a)} · X ${fmt(x)}</span>
+  </div>`;
+}
+
 function formatAverageCell(row) {
-  const title = `代码 ${formatNullable(row.avgCodingFit)} / Agent ${formatNullable(row.avgAgentFit)} / 上下文 ${formatNullable(row.avgContextFit)}`;
-  return `<span class="matrix-score" title="${escapeAttr(title)}">C ${formatNullable(row.avgCodingFit)} · A ${formatNullable(row.avgAgentFit)} · X ${formatNullable(row.avgContextFit)}</span>`;
+  return scoreBars(row.avgCodingFit, row.avgAgentFit, row.avgContextFit, "score-bars-avg");
 }
 
 function formatMatrixCell(record) {
@@ -492,7 +505,7 @@ function formatMatrixCell(record) {
       <div class="matrix-cell-top">
         <span class="tag group-status ${statusClass} verified-cell">${escapeHtml(record.supportStatus)}</span>
       </div>
-      <div class="matrix-cell-score">C ${formatNumber(record.codingFit)} · A ${formatNumber(record.agentFit)} · X ${formatNumber(record.contextFit)}</div>
+      ${scoreBars(record.codingFit, record.agentFit, record.contextFit)}
       <div class="tag-list matrix-route-tags">
         ${routeTags.map(route => `<span class="tag group-route ${getToneClass(route, "route")} verified-cell">${escapeHtml(route)}</span>`).join("")}
       </div>

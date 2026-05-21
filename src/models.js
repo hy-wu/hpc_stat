@@ -1,6 +1,7 @@
 let fieldDefs = [];
 let vendorLinks = {};
 let defaultVisibleColumns = new Set();
+let fieldDataCounts = {};
 const sortCollator = new Intl.Collator("zh-Hans-CN", { numeric: true, sensitivity: "base" });
 
 const state = {
@@ -59,6 +60,16 @@ async function init() {
       if (!model.pricing) model.pricing = {};
       return model;
     });
+
+    fieldDataCounts = {};
+    for (const f of fieldDefs) {
+      let count = 0;
+      for (const m of state.models) {
+        const val = getNestedValue(m, f.key);
+        if (val !== null && val !== undefined) count++;
+      }
+      fieldDataCounts[f.key] = count;
+    }
 
     renderSelectOptions();
     renderColumnPicker();
@@ -173,12 +184,18 @@ function renderColumnPicker() {
       </div>
     </div>
     <div class="column-picker-grid">
-      ${fieldDefs.map(f => `
+      ${fieldDefs.map(f => {
+        const count = fieldDataCounts[f.key] ?? 0;
+        const pct = state.models.length ? (count / state.models.length * 100) : 0;
+        const color = getHeatmapColor(pct);
+        return `
         <label class="column-option">
+          <div class="cp-bar" style="width:${pct}%;background:${color}"></div>
           <input type="checkbox" value="${f.key}" ${state.visibleColumns.has(f.key) ? 'checked' : ''}>
           <span>${f.label}</span>
-        </label>
-      `).join('')}
+          <span class="column-count">${count}/${state.models.length}</span>
+        </label>`;
+      }).join('')}
     </div>
   `;
   syncColumnPickerState();

@@ -69,6 +69,13 @@ RAW_SOURCE_URLS = {
     "zhipu_pricing": "https://open.bigmodel.cn/pricing",
     "groq_pricing": "https://groq.com/pricing/",
     "perplexity_pricing": "https://docs.perplexity.ai/getting-started/pricing",
+    # New providers (2026-05-21)
+    "together_pricing": "https://www.together.ai/pricing",
+    "fireworks_pricing": "https://fireworks.ai/pricing",
+    "deepinfra_pricing": "https://deepinfra.com/pricing",
+    "novita_pricing": "https://novita.ai/model-api",
+    "cerebras_pricing": "https://cerebras.ai/inference",
+    "bytedance_pricing": "https://www.volcengine.com/docs/82379/1544106",
 }
 
 # Arena model name → our model ID; covers cases where normalization alone is insufficient.
@@ -231,6 +238,40 @@ OPENROUTER_VENDOR_PREFIXES = {
     "DeepSeek": "deepseek",
 }
 
+# OpenRouter vendor prefix → pricing column key for provider-specific columns.
+# Only include providers that have their OWN pricing column (not covered by pricing.official).
+# Model creators (Anthropic, OpenAI, etc.) already go to pricing.official - skip them here.
+OPENROUTER_PREFIX_TO_PRICING_KEY = {
+    # Model creators with their own pricing column
+    "baidu": "baidu",
+    "cohere": "cohere",
+    "deepinfra": "deep-infra",
+    "groq": "groq",
+    "mistralai": "mistral",
+    "moonshotai": "moonshot-ai",
+    "nvidia": "nvidia",
+    "perplexity": "perplexity",
+    "x-ai": "xai",
+    "z-ai": "zhipu",
+    # Chinese providers with own models on OpenRouter
+    "bytedance": "bytedance",
+    "bytedance-seed": "bytedance",
+    "minimax": "minimax",
+    "stepfun": "stepfun",
+    "xiaomi": "xiaomi",
+    "01-ai": "01-ai",
+    # Inference/API providers
+    "alibaba": "aliyun",
+    "cerebras": "cerebras",
+    "novita": "novitaai",
+    "together": "together-ai",
+    "fireworks": "fireworks-ai",
+    # Others with columns in vendorLinks
+    "amazon": "amazon",
+    "inflection": "inflection",
+    "upstage": "upstage",
+}
+
 OPENROUTER_VENDOR_NAMES = {
     "01-ai": "01.AI",
     "ai21": "AI21",
@@ -370,9 +411,10 @@ class ModelMatcher:
 
 
 def enrich_official_cny(models: list[dict[str, Any]]) -> int:
-    """Populate pricing.officialCny from Zhipu (GLM) and DeepSeek CNY pricing.
+    """Populate pricing.officialCny from Zhipu, Moonshot AI, and DeepSeek CNY pricing.
 
     - GLM models (vendor == "Zhipu AI"): copy from existing pricing.zhipu
+    - Moonshot AI models (vendor == "Moonshot AI"): copy from pricing.moonshot-ai
     - DeepSeek models: use hardcoded CNY prices from DEEPSEEK_CNY_PRICING
 
     Returns the count of models updated.
@@ -386,6 +428,25 @@ def enrich_official_cny(models: list[dict[str, Any]]) -> int:
             count += 1
         elif pricing.get("zhipu") and model.get("vendor") == "Zhipu AI":
             pricing["officialCny"] = dict(pricing["zhipu"])
+            count += 1
+        elif pricing.get("moonshot-ai") and model.get("vendor") == "Moonshot AI":
+            pricing["officialCny"] = dict(pricing["moonshot-ai"])
+            count += 1
+    return count
+
+
+def enrich_official_usd(models: list[dict[str, Any]]) -> int:
+    """Populate pricing.official from provider-specific pricing for vendors without official API data.
+
+    - Mistral models (vendor == "Mistral"): copy from pricing.mistral
+
+    Returns the count of models updated.
+    """
+    count = 0
+    for model in models:
+        pricing = model.setdefault("pricing", {})
+        if pricing.get("mistral") and model.get("vendor") == "Mistral" and not pricing.get("official"):
+            pricing["official"] = dict(pricing["mistral"])
             count += 1
     return count
 
@@ -428,6 +489,7 @@ def main() -> int:
     parser.add_argument("--refresh-cache", action="store_true", help="refetch sources even if cache exists; implies --online")
     parser.add_argument("--fetch-reference-sources", action="store_true", help="also fetch every URL listed in REFERENCE_SOURCES.md")
     parser.add_argument("--skip-page-check", action="store_true", help="skip static models.html/src/models.js data-fill checks")
+    parser.add_argument("--skip-platform", action="store_true", help="skip platform pricing re-fetch (aliyun/tencent/baidu/zhipu/groq/perplexity)")
     parser.add_argument("--output", type=Path, help="write a JSON report to this path")
     args = parser.parse_args()
     if args.refresh_cache:
@@ -469,7 +531,7 @@ def main() -> int:
             report["modelCount"] = len(models)
         patches.extend(extract_openrouter_prices(models, session, args, report))
         patches.extend(extract_official_prices(models, source_texts, session, args, report))
-        patches.extend(extract_platform_prices(models, session, args, report))
+        patches.extend(extract_platform_prices(models, session, args, report, skip_existing=args.skip_platform))
         patches.extend(extract_caisi_evals(source_texts))
         patches.extend(extract_zeroeval_benchmark_evals(models, session, args, report))
         patches.extend(extract_llm_stats_data(models, session, args, report))
@@ -491,6 +553,8 @@ def main() -> int:
         report["paramsCoverage"] = params_coverage
         cny_count = enrich_official_cny(models)
         report["officialCnyCount"] = cny_count
+        usd_count = enrich_official_usd(models)
+        report["officialUsdCount"] = usd_count
         MODELS_PATH.write_text(json.dumps(models, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         report["wrote"] = str(MODELS_PATH)
 
@@ -807,6 +871,26 @@ def extract_openrouter_prices(
         if completion is not None:
             patch["pricing"]["openrouter"]["out"] = completion
             fields.append("pricing.openrouter.out")
+
+        # Also populate provider-specific pricing key from OpenRouter data.
+        # Extract vendor prefix from OpenRouter item ID (e.g. "mistralai/mistral-large" -> "mistralai")
+        item_id: str | None = item.get("id")
+        if item_id and "/" in item_id:
+            vendor_prefix = item_id.split("/", 1)[0]
+            pricing_key = OPENROUTER_PREFIX_TO_PRICING_KEY.get(vendor_prefix)
+            if pricing_key:
+                prov_fields: list[str] = []
+                prov_pricing: dict[str, float] = {}
+                if prompt is not None:
+                    prov_pricing["in"] = prompt
+                    prov_fields.append(f"pricing.{pricing_key}.in")
+                if completion is not None:
+                    prov_pricing["out"] = completion
+                    prov_fields.append(f"pricing.{pricing_key}.out")
+                if prov_fields:
+                    patch.setdefault("pricing", {})[pricing_key] = prov_pricing
+                    fields.extend(prov_fields)
+
         if context:
             patch["contextWindow"] = compact_tokens(context)
             fields.append("contextWindow")
@@ -1168,7 +1252,14 @@ def fetch_optional_source_text(
 def extract_money_value(value: str | None) -> float | None:
     if not value:
         return None
-    match = re.search(r"([0-9]+(?:\.[0-9]+)?)\s*(?:元|\$)", value.replace(",", ""))
+    # Handle: $1.40, 1.40$, 1.40元, ¥2.00, $0.30 $0.06 (cached), $0.14 / $0.028 cached
+    cleaned = value.replace(",", "")
+    # Try "$1.40" / "¥2.00"  format (symbol before number)
+    match = re.search(r"[\$¥]\s*([0-9]+(?:\.[0-9]+)?)", cleaned)
+    if match:
+        return float(match.group(1))
+    # Try "1.40$" / "1.40元" format (number before symbol)
+    match = re.search(r"([0-9]+(?:\.[0-9]+)?)\s*(?:元|\$|¥)", cleaned)
     if match:
         return float(match.group(1))
     return None
@@ -1499,14 +1590,199 @@ def extract_perplexity_prices(
     return prices
 
 
+# ── New provider extractors (2026-05-21) ──────────────────────────────
+
+
+def extract_together_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    """Parse Together AI pricing page.
+
+    Together AI uses simple tables: Model Name | Input $ | Output $.
+    No standard headers; each row is name + two dollar amounts.
+    """
+    source = fetch_optional_source_text(session, args, report, "together_pricing", RAW_SOURCE_URLS["together_pricing"])
+    if not source:
+        return {}
+    soup = BeautifulSoup(source.text, "html.parser")
+    prices: dict[str, dict[str, float]] = {}
+    for table in soup.find_all("table"):
+        rows = expand_html_table(table)
+        if len(rows) < 2:
+            continue
+        # Check each row: if column 0 looks like a model name and columns 1/2 are $ amounts, extract
+        for row in rows:
+            if not row or not row[0]:
+                continue
+            name = row[0].strip()
+            if not name or len(name) < 3:
+                continue
+            money_vals = [extract_money_value(c) for c in row[1:]]
+            money_vals = [v for v in money_vals if v is not None]
+            if len(money_vals) >= 2:
+                keep_min_prices(prices.setdefault(name, {}), {"in": money_vals[0], "out": money_vals[-1]})
+    return prices
+
+
+def extract_fireworks_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    """Parse Fireworks AI pricing page.
+
+    Fireworks lists models in table format with columns: Model, Input Price, Output Price.
+    """
+    source = fetch_optional_source_text(session, args, report, "fireworks_pricing", RAW_SOURCE_URLS["fireworks_pricing"])
+    if not source:
+        return {}
+    soup = BeautifulSoup(source.text, "html.parser")
+    prices: dict[str, dict[str, float]] = {}
+    for table in soup.find_all("table"):
+        rows = expand_html_table(table)
+        if len(rows) < 2:
+            continue
+        header = " ".join(rows[0]).lower()
+        if "model" in header and ("input" in header or "price" in header):
+            in_idx = out_idx = -1
+            for i, h in enumerate(rows[0]):
+                hl = h.lower()
+                if "input" in hl or "prompt" in hl:
+                    in_idx = i
+                elif "output" in hl or "completion" in hl:
+                    out_idx = i
+            if in_idx < 0 or out_idx < 0:
+                continue
+            for row in rows[1:]:
+                if not row or not row[0]:
+                    continue
+                model_name = row[0].strip()
+                in_val = extract_money_value(row[in_idx]) if in_idx < len(row) else None
+                out_val = extract_money_value(row[out_idx]) if out_idx < len(row) else None
+                if in_val is not None and out_val is not None:
+                    keep_min_prices(prices.setdefault(model_name, {}), {"in": in_val, "out": out_val})
+    return prices
+
+
+def extract_deepinfra_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    """Parse Deep Infra pricing page.
+
+    Deep Infra shows models in a table with Input/Output token pricing.
+    """
+    source = fetch_optional_source_text(session, args, report, "deepinfra_pricing", RAW_SOURCE_URLS["deepinfra_pricing"])
+    if not source:
+        return {}
+    soup = BeautifulSoup(source.text, "html.parser")
+    prices: dict[str, dict[str, float]] = {}
+    for table in soup.find_all("table"):
+        rows = expand_html_table(table)
+        if len(rows) < 2:
+            continue
+        header = " ".join(rows[0]).lower()
+        if "model" in header and ("input" in header or "price" in header):
+            in_idx = out_idx = -1
+            for i, h in enumerate(rows[0]):
+                hl = h.lower()
+                if "input" in hl or "prompt" in hl:
+                    in_idx = i
+                elif "output" in hl or "completion" in hl:
+                    out_idx = i
+            if in_idx < 0 or out_idx < 0:
+                continue
+            for row in rows[1:]:
+                if not row or not row[0]:
+                    continue
+                model_name = row[0].strip()
+                in_val = extract_money_value(row[in_idx]) if in_idx < len(row) else None
+                out_val = extract_money_value(row[out_idx]) if out_idx < len(row) else None
+                if in_val is not None and out_val is not None:
+                    keep_min_prices(prices.setdefault(model_name, {}), {"in": in_val, "out": out_val})
+    return prices
+
+
+def extract_bytedance_prices(
+    session: requests.Session,
+    args: argparse.Namespace,
+    report: dict[str, Any],
+) -> dict[str, dict[str, float]]:
+    """Parse ByteDance (火山引擎) pricing page for Doubao/Seed models.
+
+    The pricing page has tables listing model names and 元/千tokens prices.
+    """
+    source = fetch_optional_source_text(session, args, report, "bytedance_pricing", RAW_SOURCE_URLS["bytedance_pricing"])
+    if not source:
+        return {}
+    soup = BeautifulSoup(source.text, "html.parser")
+    prices: dict[str, dict[str, float]] = {}
+
+    # Try finding tables with pricing info - ByteDance uses structured HTML tables
+    for table in soup.find_all("table"):
+        rows = expand_html_table(table)
+        if len(rows) < 2:
+            continue
+        header_text = " ".join(rows[0]).lower()
+        if "模型" in header_text and ("输入" in header_text or "输出" in header_text or "价格" in header_text or "定价" in header_text):
+            in_idx = out_idx = -1
+            for i, h in enumerate(rows[0]):
+                hl = h.lower()
+                if "输入" in hl or "in" in hl:
+                    in_idx = i
+                elif "输出" in hl or "out" in hl:
+                    out_idx = i
+            if in_idx < 0 or out_idx < 0:
+                # Try to find by position: first columns are model info, last columns are prices
+                if len(rows[0]) >= 3:
+                    in_idx = len(rows[0]) - 2
+                    out_idx = len(rows[0]) - 1
+            if in_idx < 0 or out_idx < 0:
+                continue
+            for row in rows[1:]:
+                if not row or not row[0]:
+                    continue
+                model_name = row[0].strip()
+                # ByteDance may use 元/千tokens or 元/百万tokens - extract_money_value handles it
+                raw_in = row[in_idx] if in_idx < len(row) else ""
+                raw_out = row[out_idx] if out_idx < len(row) else ""
+                in_val = extract_money_value(raw_in)
+                out_val = extract_money_value(raw_out)
+                # If values are very small, they might be 元/千tokens - multiply by 1000 to get per-MTok
+                if in_val is not None and in_val < 0.01:
+                    in_val *= 1000
+                if out_val is not None and out_val < 0.01:
+                    out_val *= 1000
+                if in_val is not None and out_val is not None:
+                    keep_min_prices(prices.setdefault(model_name, {}), {"in": in_val, "out": out_val})
+
+    # Also try looking for JS-embedded price data
+    scripts = soup.find_all("script")
+    price_pattern = re.compile(r'["\']?(?:model|name)["\']?\s*[:=]\s*["\'](\w[\w.-]*)["\'].*?'
+                               r'(?:input|in)[Pp]rice["\']?\s*[:=]\s*([0-9.]+).*?'
+                               r'(?:output|out)[Pp]rice["\']?\s*[:=]\s*([0-9.]+)')
+    for script in scripts:
+        if script.string:
+            for m in price_pattern.finditer(script.string):
+                mn = m.group(1)
+                if mn not in prices:
+                    prices[mn] = {"in": float(m.group(2)), "out": float(m.group(3))}
+
+    return prices
+
+
 def extract_platform_prices(
     models: list[dict[str, Any]],
     session: requests.Session,
     args: argparse.Namespace,
     report: dict[str, Any],
+    skip_existing: bool = False,
 ) -> list[ExtractedModel]:
     matcher = build_model_matcher(models)
-    providers = [
+    existing_providers = [
         ("aliyun", "阿里云 Model Studio 定价", RAW_SOURCE_URLS["aliyun_pricing"], extract_aliyun_prices),
         ("tencent", "腾讯混元定价", RAW_SOURCE_URLS["tencent_hunyuan_pricing"], extract_tencent_prices),
         ("baidu", "百度千帆大模型定价", RAW_SOURCE_URLS["baidu_qianfan_pricing"], extract_baidu_prices),
@@ -1514,6 +1790,13 @@ def extract_platform_prices(
         ("groq", "Groq pricing", RAW_SOURCE_URLS["groq_pricing"], extract_groq_prices),
         ("perplexity", "Perplexity pricing", RAW_SOURCE_URLS["perplexity_pricing"], extract_perplexity_prices),
     ]
+    new_providers = [
+        ("together-ai", "Together AI pricing", RAW_SOURCE_URLS["together_pricing"], extract_together_prices),
+        ("fireworks-ai", "Fireworks AI pricing", RAW_SOURCE_URLS["fireworks_pricing"], extract_fireworks_prices),
+        ("deep-infra", "Deep Infra pricing", RAW_SOURCE_URLS["deepinfra_pricing"], extract_deepinfra_prices),
+        ("bytedance", "ByteDance 火山引擎定价", RAW_SOURCE_URLS["bytedance_pricing"], extract_bytedance_prices),
+    ]
+    providers = new_providers + ([] if skip_existing else existing_providers)
     patches: list[ExtractedModel] = []
     coverage: dict[str, Any] = {}
     for provider_key, source_label, source_url, extractor in providers:
