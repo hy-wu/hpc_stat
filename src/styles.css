@@ -390,6 +390,15 @@ textarea:focus {
     border-color 0.18s ease,
     background 0.18s ease,
     box-shadow 0.18s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cp-bar {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 5px;
 }
 
 .column-option:hover {

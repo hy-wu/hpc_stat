@@ -411,9 +411,10 @@ class ModelMatcher:
 
 
 def enrich_official_cny(models: list[dict[str, Any]]) -> int:
-    """Populate pricing.officialCny from Zhipu (GLM) and DeepSeek CNY pricing.
+    """Populate pricing.officialCny from Zhipu, Moonshot AI, and DeepSeek CNY pricing.
 
     - GLM models (vendor == "Zhipu AI"): copy from existing pricing.zhipu
+    - Moonshot AI models (vendor == "Moonshot AI"): copy from pricing.moonshot-ai
     - DeepSeek models: use hardcoded CNY prices from DEEPSEEK_CNY_PRICING
 
     Returns the count of models updated.
@@ -427,6 +428,25 @@ def enrich_official_cny(models: list[dict[str, Any]]) -> int:
             count += 1
         elif pricing.get("zhipu") and model.get("vendor") == "Zhipu AI":
             pricing["officialCny"] = dict(pricing["zhipu"])
+            count += 1
+        elif pricing.get("moonshot-ai") and model.get("vendor") == "Moonshot AI":
+            pricing["officialCny"] = dict(pricing["moonshot-ai"])
+            count += 1
+    return count
+
+
+def enrich_official_usd(models: list[dict[str, Any]]) -> int:
+    """Populate pricing.official from provider-specific pricing for vendors without official API data.
+
+    - Mistral models (vendor == "Mistral"): copy from pricing.mistral
+
+    Returns the count of models updated.
+    """
+    count = 0
+    for model in models:
+        pricing = model.setdefault("pricing", {})
+        if pricing.get("mistral") and model.get("vendor") == "Mistral" and not pricing.get("official"):
+            pricing["official"] = dict(pricing["mistral"])
             count += 1
     return count
 
@@ -533,6 +553,8 @@ def main() -> int:
         report["paramsCoverage"] = params_coverage
         cny_count = enrich_official_cny(models)
         report["officialCnyCount"] = cny_count
+        usd_count = enrich_official_usd(models)
+        report["officialUsdCount"] = usd_count
         MODELS_PATH.write_text(json.dumps(models, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         report["wrote"] = str(MODELS_PATH)
 

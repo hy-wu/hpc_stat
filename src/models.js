@@ -186,8 +186,11 @@ function renderColumnPicker() {
     <div class="column-picker-grid">
       ${fieldDefs.map(f => {
         const count = fieldDataCounts[f.key] ?? 0;
+        const pct = state.models.length ? (count / state.models.length * 100) : 0;
+        const color = getHeatmapColor(pct);
         return `
         <label class="column-option">
+          <div class="cp-bar" style="width:${pct}%;background:${color}"></div>
           <input type="checkbox" value="${f.key}" ${state.visibleColumns.has(f.key) ? 'checked' : ''}>
           <span>${f.label}</span>
           <span class="column-count">${count}/${state.models.length}</span>

@@ -4051,6 +4051,10 @@
       "together-ai": {
         "in": 1.2,
         "out": 4.5
+      },
+      "officialCny": {
+        "in": 0.73,
+        "out": 3.49
       }
     },
     "verification": {
@@ -8406,6 +8410,10 @@
       "together-ai": {
         "in": 0.5,
         "out": 2.8
+      },
+      "officialCny": {
+        "in": 0.4,
+        "out": 1.9
       }
     },
     "verification": {
@@ -9869,6 +9877,10 @@
       "mistral": {
         "in": 0.4,
         "out": 2.0
+      },
+      "official": {
+        "in": 0.4,
+        "out": 2.0
       }
     },
     "verification": {
@@ -10266,6 +10278,10 @@
       "mistral": {
         "in": 0.2,
         "out": 0.2
+      },
+      "official": {
+        "in": 0.2,
+        "out": 0.2
       }
     },
     "verification": {
@@ -10316,6 +10332,10 @@
         "out": 0.15
       },
       "mistral": {
+        "in": 0.15,
+        "out": 0.15
+      },
+      "official": {
         "in": 0.15,
         "out": 0.15
       }
@@ -10370,6 +10390,10 @@
       "mistral": {
         "in": 0.1,
         "out": 0.1
+      },
+      "official": {
+        "in": 0.1,
+        "out": 0.1
       }
     },
     "verification": {
@@ -10420,6 +10444,10 @@
         "out": 1.5
       },
       "mistral": {
+        "in": 0.5,
+        "out": 1.5
+      },
+      "official": {
         "in": 0.5,
         "out": 1.5
       }
@@ -11462,6 +11490,10 @@
       "moonshot-ai": {
         "in": 0.6,
         "out": 2.5
+      },
+      "officialCny": {
+        "in": 0.6,
+        "out": 2.5
       }
     },
     "verification": {
@@ -11632,6 +11664,10 @@
         "out": 0.3
       },
       "mistral": {
+        "in": 0.1,
+        "out": 0.3
+      },
+      "official": {
         "in": 0.1,
         "out": 0.3
       }
