@@ -238,6 +238,40 @@ OPENROUTER_VENDOR_PREFIXES = {
     "DeepSeek": "deepseek",
 }
 
+# OpenRouter vendor prefix → pricing column key for provider-specific columns.
+# Only include providers that have their OWN pricing column (not covered by pricing.official).
+# Model creators (Anthropic, OpenAI, etc.) already go to pricing.official - skip them here.
+OPENROUTER_PREFIX_TO_PRICING_KEY = {
+    # Model creators with their own pricing column
+    "baidu": "baidu",
+    "cohere": "cohere",
+    "deepinfra": "deep-infra",
+    "groq": "groq",
+    "mistralai": "mistral",
+    "moonshotai": "moonshot-ai",
+    "nvidia": "nvidia",
+    "perplexity": "perplexity",
+    "x-ai": "xai",
+    "z-ai": "zhipu",
+    # Chinese providers with own models on OpenRouter
+    "bytedance": "bytedance",
+    "bytedance-seed": "bytedance",
+    "minimax": "minimax",
+    "stepfun": "stepfun",
+    "xiaomi": "xiaomi",
+    "01-ai": "01-ai",
+    # Inference/API providers
+    "alibaba": "aliyun",
+    "cerebras": "cerebras",
+    "novita": "novitaai",
+    "together": "together-ai",
+    "fireworks": "fireworks-ai",
+    # Others with columns in vendorLinks
+    "amazon": "amazon",
+    "inflection": "inflection",
+    "upstage": "upstage",
+}
+
 OPENROUTER_VENDOR_NAMES = {
     "01-ai": "01.AI",
     "ai21": "AI21",
@@ -435,6 +469,7 @@ def main() -> int:
     parser.add_argument("--refresh-cache", action="store_true", help="refetch sources even if cache exists; implies --online")
     parser.add_argument("--fetch-reference-sources", action="store_true", help="also fetch every URL listed in REFERENCE_SOURCES.md")
     parser.add_argument("--skip-page-check", action="store_true", help="skip static models.html/src/models.js data-fill checks")
+    parser.add_argument("--skip-platform", action="store_true", help="skip platform pricing re-fetch (aliyun/tencent/baidu/zhipu/groq/perplexity)")
     parser.add_argument("--output", type=Path, help="write a JSON report to this path")
     args = parser.parse_args()
     if args.refresh_cache:
@@ -476,7 +511,7 @@ def main() -> int:
             report["modelCount"] = len(models)
         patches.extend(extract_openrouter_prices(models, session, args, report))
         patches.extend(extract_official_prices(models, source_texts, session, args, report))
-        patches.extend(extract_platform_prices(models, session, args, report))
+        patches.extend(extract_platform_prices(models, session, args, report, skip_existing=args.skip_platform))
         patches.extend(extract_caisi_evals(source_texts))
         patches.extend(extract_zeroeval_benchmark_evals(models, session, args, report))
         patches.extend(extract_llm_stats_data(models, session, args, report))
@@ -814,6 +849,26 @@ def extract_openrouter_prices(
         if completion is not None:
             patch["pricing"]["openrouter"]["out"] = completion
             fields.append("pricing.openrouter.out")
+
+        # Also populate provider-specific pricing key from OpenRouter data.
+        # Extract vendor prefix from OpenRouter item ID (e.g. "mistralai/mistral-large" -> "mistralai")
+        item_id: str | None = item.get("id")
+        if item_id and "/" in item_id:
+            vendor_prefix = item_id.split("/", 1)[0]
+            pricing_key = OPENROUTER_PREFIX_TO_PRICING_KEY.get(vendor_prefix)
+            if pricing_key:
+                prov_fields: list[str] = []
+                prov_pricing: dict[str, float] = {}
+                if prompt is not None:
+                    prov_pricing["in"] = prompt
+                    prov_fields.append(f"pricing.{pricing_key}.in")
+                if completion is not None:
+                    prov_pricing["out"] = completion
+                    prov_fields.append(f"pricing.{pricing_key}.out")
+                if prov_fields:
+                    patch.setdefault("pricing", {})[pricing_key] = prov_pricing
+                    fields.extend(prov_fields)
+
         if context:
             patch["contextWindow"] = compact_tokens(context)
             fields.append("contextWindow")
@@ -1175,7 +1230,14 @@ def fetch_optional_source_text(
 def extract_money_value(value: str | None) -> float | None:
     if not value:
         return None
-    match = re.search(r"([0-9]+(?:\.[0-9]+)?)\s*(?:元|\$)", value.replace(",", ""))
+    # Handle: $1.40, 1.40$, 1.40元, ¥2.00, $0.30 $0.06 (cached), $0.14 / $0.028 cached
+    cleaned = value.replace(",", "")
+    # Try "$1.40" / "¥2.00"  format (symbol before number)
+    match = re.search(r"[\$¥]\s*([0-9]+(?:\.[0-9]+)?)", cleaned)
+    if match:
+        return float(match.group(1))
+    # Try "1.40$" / "1.40元" format (number before symbol)
+    match = re.search(r"([0-9]+(?:\.[0-9]+)?)\s*(?:元|\$|¥)", cleaned)
     if match:
         return float(match.group(1))
     return None
@@ -1516,8 +1578,8 @@ def extract_together_prices(
 ) -> dict[str, dict[str, float]]:
     """Parse Together AI pricing page.
 
-    Together AI lists models in a table with columns: Model, Input, Output.
-    Extract model name and token pricing (in/out) in $/MTok.
+    Together AI uses simple tables: Model Name | Input $ | Output $.
+    No standard headers; each row is name + two dollar amounts.
     """
     source = fetch_optional_source_text(session, args, report, "together_pricing", RAW_SOURCE_URLS["together_pricing"])
     if not source:
@@ -1528,25 +1590,17 @@ def extract_together_prices(
         rows = expand_html_table(table)
         if len(rows) < 2:
             continue
-        header = " ".join(rows[0]).lower()
-        if "model" in header and ("input" in header or "price" in header):
-            in_idx = out_idx = -1
-            for i, h in enumerate(rows[0]):
-                hl = h.lower()
-                if "input" in hl or "prompt" in hl:
-                    in_idx = i
-                elif "output" in hl or "completion" in hl:
-                    out_idx = i
-            if in_idx < 0 or out_idx < 0:
+        # Check each row: if column 0 looks like a model name and columns 1/2 are $ amounts, extract
+        for row in rows:
+            if not row or not row[0]:
                 continue
-            for row in rows[1:]:
-                if not row or not row[0]:
-                    continue
-                model_name = row[0].strip()
-                in_val = extract_money_value(row[in_idx]) if in_idx < len(row) else None
-                out_val = extract_money_value(row[out_idx]) if out_idx < len(row) else None
-                if in_val is not None and out_val is not None:
-                    keep_min_prices(prices.setdefault(model_name, {}), {"in": in_val, "out": out_val})
+            name = row[0].strip()
+            if not name or len(name) < 3:
+                continue
+            money_vals = [extract_money_value(c) for c in row[1:]]
+            money_vals = [v for v in money_vals if v is not None]
+            if len(money_vals) >= 2:
+                keep_min_prices(prices.setdefault(name, {}), {"in": money_vals[0], "out": money_vals[-1]})
     return prices
 
 
@@ -1703,21 +1757,24 @@ def extract_platform_prices(
     session: requests.Session,
     args: argparse.Namespace,
     report: dict[str, Any],
+    skip_existing: bool = False,
 ) -> list[ExtractedModel]:
     matcher = build_model_matcher(models)
-    providers = [
+    existing_providers = [
         ("aliyun", "阿里云 Model Studio 定价", RAW_SOURCE_URLS["aliyun_pricing"], extract_aliyun_prices),
         ("tencent", "腾讯混元定价", RAW_SOURCE_URLS["tencent_hunyuan_pricing"], extract_tencent_prices),
         ("baidu", "百度千帆大模型定价", RAW_SOURCE_URLS["baidu_qianfan_pricing"], extract_baidu_prices),
         ("zhipu", "智谱开放平台定价", RAW_SOURCE_URLS["zhipu_pricing"], extract_zhipu_prices),
         ("groq", "Groq pricing", RAW_SOURCE_URLS["groq_pricing"], extract_groq_prices),
         ("perplexity", "Perplexity pricing", RAW_SOURCE_URLS["perplexity_pricing"], extract_perplexity_prices),
-        # New providers (2026-05-21)
+    ]
+    new_providers = [
         ("together-ai", "Together AI pricing", RAW_SOURCE_URLS["together_pricing"], extract_together_prices),
         ("fireworks-ai", "Fireworks AI pricing", RAW_SOURCE_URLS["fireworks_pricing"], extract_fireworks_prices),
         ("deep-infra", "Deep Infra pricing", RAW_SOURCE_URLS["deepinfra_pricing"], extract_deepinfra_prices),
         ("bytedance", "ByteDance 火山引擎定价", RAW_SOURCE_URLS["bytedance_pricing"], extract_bytedance_prices),
     ]
+    providers = new_providers + ([] if skip_existing else existing_providers)
     patches: list[ExtractedModel] = []
     coverage: dict[str, Any] = {}
     for provider_key, source_label, source_url, extractor in providers:
