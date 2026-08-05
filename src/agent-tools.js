@@ -75,6 +75,9 @@ async function init() {
     render();
   } catch (err) {
     console.error("Failed to load agent tools:", err);
+    if (elements.tableBody) {
+      elements.tableBody.innerHTML = `<tr><td colspan="99" class="muted" style="text-align:center;padding:24px">Agent 工具数据加载失败：请确认通过静态服务器访问且 data/agent-tools.json、data/agent-tool-fields.json 存在。</td></tr>`;
+    }
   }
 }
 
@@ -491,6 +494,11 @@ function renderTable(rows) {
       ${field.source ? `<a href="${escapeAttr(field.source)}" target="_blank" class="source-icon" title="查看字段来源">🔗</a>` : ""}
     </th>`)
     .join("")}</tr>`;
+
+  if (!rows.length) {
+    elements.tableBody.innerHTML = `<tr><td colspan="${activeFields.length || 1}" class="muted" style="text-align:center;padding:24px">没有匹配的工具；请调整搜索或筛选条件。</td></tr>`;
+    return;
+  }
 
   elements.tableBody.innerHTML = rows
     .map(row => `<tr>${activeFields

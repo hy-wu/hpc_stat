@@ -1,5 +1,5 @@
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
   --bg: #f4f7f8;
   --panel: #ffffff;
   --ink: #172025;
@@ -11,6 +11,63 @@
   --warn: #a35f00;
   --good: #16754a;
   --shadow: 0 14px 36px rgba(16, 40, 48, 0.08);
+  --th-bg: #eef5f6;
+  --th-color: #26363d;
+  --td-hover: #f7fbfb;
+  --td-sticky-bg: var(--panel);
+  --input-bg: #fff;
+  --rule-bg: #f9fbfb;
+  --topbar-bg: #fbfcfc;
+  --code-bg: #102026;
+  --code-color: #e7f8fb;
+}
+
+[data-theme="dark"] {
+  --bg: #0f1419;
+  --panel: #1a2128;
+  --ink: #e6edf3;
+  --muted: #8b949e;
+  --line: #30363d;
+  --accent: #58a6c2;
+  --accent-strong: #79c0da;
+  --accent-soft: #1a2f38;
+  --warn: #d29922;
+  --good: #3fb950;
+  --shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+  --th-bg: #1c252e;
+  --th-color: #c9d1d9;
+  --td-hover: #1e2a33;
+  --td-sticky-bg: var(--panel);
+  --input-bg: #161b22;
+  --rule-bg: #161b22;
+  --topbar-bg: #161b22;
+  --code-bg: #0d1117;
+  --code-color: #c9d1d9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1419;
+    --panel: #1a2128;
+    --ink: #e6edf3;
+    --muted: #8b949e;
+    --line: #30363d;
+    --accent: #58a6c2;
+    --accent-strong: #79c0da;
+    --accent-soft: #1a2f38;
+    --warn: #d29922;
+    --good: #3fb950;
+    --shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+    --th-bg: #1c252e;
+    --th-color: #c9d1d9;
+    --td-hover: #1e2a33;
+    --td-sticky-bg: var(--panel);
+    --input-bg: #161b22;
+    --rule-bg: #161b22;
+    --topbar-bg: #161b22;
+    --code-bg: #0d1117;
+    --code-color: #c9d1d9;
+  }
 }
 
 * {
@@ -57,7 +114,8 @@ button {
   gap: 20px;
   padding: 8px 24px;
   border-bottom: 1px solid var(--line);
-  background: #fbfcfc;
+  background: var(--topbar-bg);
+  transition: background 0.2s;
 }
 
 .topbar-brand {
@@ -239,7 +297,7 @@ textarea {
   width: 100%;
   border: 1px solid var(--line);
   border-radius: 6px;
-  background: #fff;
+  background: var(--input-bg);
   color: var(--ink);
   min-height: 26px;
   padding: 3px 8px;
@@ -312,7 +370,7 @@ textarea:focus {
   padding: 0px 12px 6px 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #f9fbfb;
+  background: var(--rule-bg);
 }
 
 .rule button {
@@ -325,7 +383,7 @@ textarea:focus {
   gap: 8px;
   padding: 10px 12px;
   margin-bottom: 10px;
-  background: #f9fbfb;
+  background: var(--rule-bg);
   border: 1px solid var(--line);
   border-radius: 8px;
 }
@@ -382,7 +440,7 @@ textarea:focus {
   padding: 4px 10px;
   border: 1px solid var(--line);
   border-radius: 6px;
-  background: #fff;
+  background: var(--input-bg);
   color: var(--ink);
   font-weight: 650;
   font-size: 12px;
@@ -463,8 +521,8 @@ th {
   position: sticky;
   top: 0;
   z-index: 2;
-  background: #eef5f6;
-  color: #26363d;
+  background: var(--th-bg);
+  color: var(--th-color);
   font-size: 12px;
   font-weight: 850;
   white-space: normal;
@@ -479,12 +537,12 @@ td:first-child {
   position: sticky;
   left: 0;
   z-index: 2;
-  background: var(--panel);
+  background: var(--td-sticky-bg);
   box-shadow: 2px 0 4px rgba(0,0,0,0.06);
 }
 
 tbody tr:hover td:first-child {
-  background: #f7fbfb;
+  background: var(--td-hover);
 }
 
 th button {
@@ -510,7 +568,7 @@ th button {
 }
 
 tbody tr:hover {
-  background: #f7fbfb;
+  background: var(--td-hover);
 }
 
 .model-cell {
@@ -620,7 +678,7 @@ tbody tr:hover {
   padding: 4px 8px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #f8fbfc;
+  background: var(--rule-bg);
 }
 
 .plan-name {
@@ -930,8 +988,8 @@ textarea {
   margin: 12px 0 0;
   padding: 10px;
   border-radius: 8px;
-  background: #102026;
-  color: #e7f8fb;
+  background: var(--code-bg);
+  color: var(--code-color);
   font-size: 12px;
 }
 
@@ -963,7 +1021,7 @@ textarea {
   width: 100%;
   min-width: 120px;
   height: 24px;
-  background: #eee;
+  background: var(--line);
   border-radius: 4px;
   overflow: hidden;
   display: flex;
@@ -986,8 +1044,8 @@ textarea {
   position: relative;
   z-index: 1;
   font-weight: 700;
-  color: #000;
-  text-shadow: 0 0 2px rgba(255,255,255,0.8);
+  color: var(--ink);
+  text-shadow: 0 0 2px rgba(255,255,255,0.4);
 }
 
 /* ============================================================
@@ -1003,6 +1061,13 @@ textarea {
 .tag.vendor-google  { background: #e8eeff; color: #1a3a9c; }
 .tag.vendor-apple   { background: #ebebeb; color: #1a1a1a; }
 .tag.vendor-huawei  { background: #fde8ee; color: #8b0021; }
+
+[data-theme="dark"] .tag.vendor-nvidia  { background: #1a3a00; color: #8fd460; }
+[data-theme="dark"] .tag.vendor-amd     { background: #3a0000; color: #ff8080; }
+[data-theme="dark"] .tag.vendor-intel   { background: #001a3a; color: #80b8ff; }
+[data-theme="dark"] .tag.vendor-google  { background: #001a3a; color: #80a8ff; }
+[data-theme="dark"] .tag.vendor-apple   { background: #2a2a2a; color: #e0e0e0; }
+[data-theme="dark"] .tag.vendor-huawei  { background: #3a0010; color: #ff8090; }
 
 /* -- Segment tags -- */
 .tag.seg-data-center       { background: #dbeafe; color: #1d4ed8; }
@@ -1044,3 +1109,62 @@ textarea {
 .tag.arch-versal    { background: #ede9fe; color: #5b21b6; }
 .tag.arch-stratix   { background: #ddeeff; color: #003d8f; }
 .tag.arch-apple-gpu { background: #f5f5f5; color: #1a1a1a; }
+
+/* Dark mode overrides for segment / type / arch tags */
+[data-theme="dark"] .tag.seg-data-center       { background: #0d2540; color: #60a5fa; }
+[data-theme="dark"] .tag.seg-cloud-accelerator { background: #1e1b4b; color: #a5b4fc; }
+[data-theme="dark"] .tag.seg-workstation       { background: #2e1065; color: #c4b5fd; }
+[data-theme="dark"] .tag.seg-desktop           { background: #064e3b; color: #6ee7b7; }
+[data-theme="dark"] .tag.seg-integrated        { background: #164e63; color: #67e8f9; }
+[data-theme="dark"] .tag.seg-inference         { background: #14532d; color: #86efac; }
+[data-theme="dark"] .tag.seg-fpga              { background: #431407; color: #fdba74; }
+[data-theme="dark"] .tag.seg-mining            { background: #1f2937; color: #9ca3af; }
+[data-theme="dark"] .tag.seg-many-core-cpu     { background: #422006; color: #fde047; }
+
+[data-theme="dark"] .tag.type-gpu           { background: #064e3b; color: #6ee7b7; }
+[data-theme="dark"] .tag.type-tpu           { background: #0d2540; color: #60a5fa; }
+[data-theme="dark"] .tag.type-npu           { background: #3a0010; color: #ff8090; }
+[data-theme="dark"] .tag.type-fpga          { background: #431407; color: #fdba74; }
+[data-theme="dark"] .tag.type-asic          { background: #2e1065; color: #c4b5fd; }
+[data-theme="dark"] .tag.type-many-core-cpu { background: #422006; color: #fde047; }
+
+[data-theme="dark"] .tag.arch-blackwell,
+[data-theme="dark"] .tag.arch-hopper,
+[data-theme="dark"] .tag.arch-ampere,
+[data-theme="dark"] .tag.arch-ada,
+[data-theme="dark"] .tag.arch-turing,
+[data-theme="dark"] .tag.arch-volta,
+[data-theme="dark"] .tag.arch-pascal,
+[data-theme="dark"] .tag.arch-rdna4,
+[data-theme="dark"] .tag.arch-rdna3,
+[data-theme="dark"] .tag.arch-rdna2,
+[data-theme="dark"] .tag.arch-cdna,
+[data-theme="dark"] .tag.arch-gcn,
+[data-theme="dark"] .tag.arch-tpu-chip,
+[data-theme="dark"] .tag.arch-ascend,
+[data-theme="dark"] .tag.arch-kni,
+[data-theme="dark"] .tag.arch-xe2,
+[data-theme="dark"] .tag.arch-xe,
+[data-theme="dark"] .tag.arch-versal,
+[data-theme="dark"] .tag.arch-stratix,
+[data-theme="dark"] .tag.arch-apple-gpu {
+  opacity: 0.88;
+}
+
+[data-theme="dark"] .tag.group-boolean.bool-yes {
+  background: #064e3b;
+  color: #6ee7b7;
+  border-color: #065f46;
+}
+
+[data-theme="dark"] .tag.group-boolean.bool-no {
+  background: #1f2937;
+  color: #9ca3af;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .tag.multimodal {
+  background: #1e3a5f;
+  color: #60a5fa;
+  border-color: #1e40af;
+}

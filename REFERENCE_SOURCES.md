@@ -2,17 +2,19 @@
 
 This document contains official links to LLM benchmark suites, leaderboards, and vendor pricing pages for data verification and enrichment.
 
+> **时效约定**：各来源标注的适用时间范围是本项目最近一次成功核验的窗口。超出窗口或标注为「待验证」的链接，使用前请重新核验。
+
 ## 📊 Leaderboards & Aggregators
 
-| Source | Description | URL |
-| :--- | :--- | :--- |
-| **LMSYS Chatbot Arena** | Elo-based crowdsourced human evaluation | [https://lmarena.ai/](https://lmarena.ai/) |
-| **Hugging Face Open LLM Leaderboard** | Tracking open-source LLMs across various benchmarks | [https://huggingface.co/spaces/open-llm-leaderboard/open-llm-leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open-llm-leaderboard) |
-| **LiveCodeBench** | Holistic evaluation of LLMs for code | [https://livecodebench.github.io/](https://livecodebench.github.io/) |
-| **OpenRouter** | Unified API provider with up-to-date pricing for many models | [https://openrouter.ai/models](https://openrouter.ai/models) |
-| **Artificial Analysis** | Performance, price, and quality analysis | [https://artificialanalysis.ai/](https://artificialanalysis.ai/) |
-| **LLM-Stats.com** | Visualized LLM comparison stats | [https://llm-stats.com/](https://llm-stats.com/) |
-| **OpenRouter** | Unified API provider with up-to-date pricing for many models | [https://openrouter.ai/models](https://openrouter.ai/models) |
+| Source | Description | URL | 适用时间范围 |
+| :--- | :--- | :--- | :--- |
+| **Arena (原 LMArena / Chatbot Arena)** | Elo-based crowdsourced human evaluation | [https://arena.ai/leaderboard](https://arena.ai/leaderboard) | 2026-08-05 已核验（lmarena.ai 已迁移至 arena.ai）；Next.js CSR 页面，需浏览器抓取 |
+| **ToolCenter LLM 排行榜** | Arena Elo 月度同步快照 | [https://www.toolcenter.ai/zh/llm-leaderboard](https://www.toolcenter.ai/zh/llm-leaderboard) | 2026-07-01 快照；可作为 Arena 数据的人工核验来源 |
+| **Hugging Face Open LLM Leaderboard** | Tracking open-source LLMs across various benchmarks（已归档，仅历史参考） | [https://huggingface.co/spaces/open-llm-leaderboard/open-llm-leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open-llm-leaderboard) | 已停更，仅用于历史数据 |
+| **LiveCodeBench** | Holistic evaluation of LLMs for code | [https://livecodebench.github.io/](https://livecodebench.github.io/) | 长期有效 |
+| **OpenRouter** | Unified API provider with up-to-date pricing for many models（本项目模型价格的主要实时来源） | [https://openrouter.ai/models](https://openrouter.ai/models) | 2026-08-05 已核验（API 返回 200） |
+| **Artificial Analysis** | Performance, price, and quality analysis | [https://artificialanalysis.ai/](https://artificialanalysis.ai/) | 长期有效 |
+| **LLM-Stats.com** | Visualized LLM comparison stats | [https://llm-stats.com/](https://llm-stats.com/) | 长期有效 |
 
 ## 🧪 Benchmark Suites (Official Repositories/Homepages)
 
@@ -30,16 +32,22 @@ This document contains official links to LLM benchmark suites, leaderboards, and
 
 ## 💰 Global Vendor & Platform Pricing
 
-| Vendor/Platform | Pricing Page |
-| :--- | :--- |
-| **OpenAI** | [https://openai.com/api/pricing](https://openai.com/api/pricing) |
-| **Anthropic** | [https://www.anthropic.com/pricing](https://www.anthropic.com/pricing) |
-| **Google Gemini** | [https://ai.google.dev/pricing](https://ai.google.dev/pricing) |
-| **Meta Llama** | [https://llama.meta.com/](https://llama.meta.com/) |
-| **Mistral AI** | [https://mistral.ai/technology/#pricing](https://mistral.ai/technology/#pricing) |
-| **GitHub Copilot** | [https://github.com/features/copilot#pricing](https://github.com/features/copilot#pricing) |
-| **Cursor** | [https://www.cursor.com/pricing](https://www.cursor.com/pricing) |
-| **Groq** | [https://groq.com/pricing/](https://groq.com/pricing/) |
+| Vendor/Platform | Pricing Page | 适用时间范围 |
+| :--- | :--- | :--- |
+| **OpenAI** | [https://openai.com/api/pricing](https://openai.com/api/pricing) | 长期有效 |
+| **Anthropic** | [https://platform.claude.com/docs/en/about-claude/pricing](https://platform.claude.com/docs/en/about-claude/pricing) | 2026-05-21 已核验 |
+| **Google Gemini** | [https://ai.google.dev/pricing](https://ai.google.dev/pricing) | 长期有效 |
+| **Meta Llama** | [https://llama.meta.com/](https://llama.meta.com/) | 长期有效（开源模型，无官方 API 定价） |
+| **Mistral AI** | [https://mistral.ai/pricing](https://mistral.ai/pricing) | 2026-08-05 已核验（HTTP 200）；API 定价需从 [docs.mistral.ai](https://docs.mistral.ai/getting-started/pricing/) 获取 |
+| **xAI (Grok)** | [https://docs.x.ai/developers/pricing](https://docs.x.ai/developers/pricing) | 2026-07 官方页；本环境无法直接核验，待验证 |
+| **Moonshot (Kimi)** | [https://platform.moonshot.cn/docs/pricing/chat](https://platform.moonshot.cn/docs/pricing/chat) | 2026-08-05 已核验（HTTP 200） |
+| **MiniMax** | [https://platform.minimaxi.com/document/pricing](https://platform.minimaxi.com/document/pricing) | 2026-08-05 已核验（HTTP 200） |
+| **Together AI** | [https://www.together.ai/pricing](https://www.together.ai/pricing) | 2026-08-05 已核验（HTTP 200） |
+| **Fireworks AI** | [https://fireworks.ai/pricing](https://fireworks.ai/pricing) | 2026-08-05 已核验（HTTP 200） |
+| **DeepInfra** | [https://deepinfra.com/pricing](https://deepinfra.com/pricing) | 2026-08-05 已核验（HTTP 200） |
+| **GitHub Copilot** | [https://github.com/features/copilot#pricing](https://github.com/features/copilot#pricing) | 长期有效 |
+| **Cursor** | [https://www.cursor.com/pricing](https://www.cursor.com/pricing) | 长期有效 |
+| **Groq** | [https://groq.com/pricing/](https://groq.com/pricing/) | 长期有效 |
 
 ## 🧰 Agent Coding Tools
 
@@ -76,14 +84,25 @@ This document contains official links to LLM benchmark suites, leaderboards, and
 
 ## 🇨🇳 Chinese Vendor Pricing (Mainland China)
 
-| Vendor | Platform | Pricing Page |
+| Vendor | Platform | Pricing Page | 适用时间范围 |
+| :--- | :--- | :--- | :--- |
+| **Alibaba (阿里云)** | Model Studio (通义千问) | [https://help.aliyun.com/zh/model-studio/model-pricing](https://help.aliyun.com/zh/model-studio/model-pricing) | 长期有效 |
+| **Baidu (百度云)** | Qianfan (文心一言) | [https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya](https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya) | 长期有效 |
+| **Tencent (腾讯云)** | Hunyuan (腾讯混元) | [https://cloud.tencent.com.cn/document/product/1823/130055](https://cloud.tencent.com.cn/document/product/1823/130055) | 长期有效 |
+| **Zhipu AI (智谱AI)** | BigModel (ChatGLM) | [https://open.bigmodel.cn/pricing](https://open.bigmodel.cn/pricing) | 长期有效 |
+| **ByteDance (火山引擎)** | Doubao (豆包) | [https://www.volcengine.com/docs/82379/1544106](https://www.volcengine.com/docs/82379/1544106) | 长期有效 |
+| **DeepSeek (深度求索)** | DeepSeek Platform | [https://api-docs.deepseek.com/quick_start/pricing](https://api-docs.deepseek.com/quick_start/pricing) | 长期有效 |
+| **SiliconFlow (硅基流动)** | SiliconCloud 推理平台 | [https://siliconflow.cn/zh-cn/pricing](https://siliconflow.cn/zh-cn/pricing) | 2026-08-05 已核验（HTTP 200） |
+
+## 🗓 数据快照时间线
+
+| 数据集 | 快照日期 | 说明 |
 | :--- | :--- | :--- |
-| **Alibaba (阿里云)** | Model Studio (通义千问) | [https://help.aliyun.com/zh/model-studio/model-pricing](https://help.aliyun.com/zh/model-studio/model-pricing) |
-| **Baidu (百度云)** | Qianfan (文心一言) | [https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya](https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya) |
-| **Tencent (腾讯云)** | Hunyuan (腾讯混元) | [https://cloud.tencent.com.cn/document/product/1823/130055](https://cloud.tencent.com.cn/document/product/1823/130055) |
-| **Zhipu AI (智谱AI)** | BigModel (ChatGLM) | [https://open.bigmodel.cn/pricing](https://open.bigmodel.cn/pricing) |
-| **ByteDance (火山引擎)** | Doubao (豆包) | [https://www.volcengine.com/docs/82379/1544106](https://www.volcengine.com/docs/82379/1544106) |
-| **DeepSeek (深度求索)** | DeepSeek Platform | [https://api-docs.deepseek.com/quick_start/pricing](https://api-docs.deepseek.com/quick_start/pricing) |
+| `data/models.json` 模型价格/参数 | 2026-08-05（135/150）；其余 15 条为 2026-05-21 | 由 `scripts/enrich_model_data.py --write --online` 生成，价格来自 OpenRouter API 与官方页核验 |
+| `data/models.json` Arena Elo | 2026-07-01（7 条从 ToolCenter 快照更新）；其余 58 条为 2026-05-21 待重新核验 | arena.ai（原 lmarena.ai）CSR 页面，脚本无法直接抓取；更新通过 ToolCenter 月度快照 |
+| `data/agent-tools.json` 工具数据 | 2026-05-19 | 套餐价格随计划变化，使用前请抽查官方页 |
+| `data/gpus.json` / `data/prices.json` GPU 价格 | 2026-08-05 新增 5 条（RTX 5060/RX 9060 XT/M4 Ultra/B300/MI325X）；其余为 2026-04~2026-05 人工报价快照 | 新增 GPU 价格为 MSRP，二手/市场价需另行更新 |
+| GitHub Stars | 2026-05-19 | 见上方 Agent Coding Tools 备注 |
 
 ---
-*Last Updated: 2026-05-19*
+*Last Updated: 2026-08-05*

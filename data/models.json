@@ -6,7 +6,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 15.0,
     "performance": "Most capable Claude model",
-    "arenaElo": 1559.8,
+    "arenaElo": 1492.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -41,7 +41,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -146,6 +146,10 @@
         {
           "label": "Deep Infra pricing",
           "url": "https://deepinfra.com/pricing"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -159,7 +163,9 @@
       "speed": 52.0,
       "tools": 39.6,
       "vision": 44.5
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "claude-sonnet-4.6",
@@ -168,7 +174,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 1.0,
     "performance": "Medium",
-    "arenaElo": 1556.6,
+    "arenaElo": 1472.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -180,7 +186,7 @@
       "hle": 49.0,
       "reportedSweBenchVerified": 79.6
     },
-    "contextWindow": "1M",
+    "contextWindow": "200K",
     "pricing": {
       "official": {
         "in": 3.0,
@@ -203,7 +209,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -305,6 +311,10 @@
         {
           "label": "Deep Infra pricing",
           "url": "https://deepinfra.com/pricing"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -319,7 +329,9 @@
       "tools": 29.9,
       "vision": 33.9,
       "writing": 35.6
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "claude-sonnet-4.5",
@@ -328,7 +340,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 1.0,
     "performance": null,
-    "arenaElo": 1453.9,
+    "arenaElo": 1455.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -339,7 +351,7 @@
       "gpqaDiamond": 83.4,
       "terminalBench": 50.0
     },
-    "contextWindow": "1M",
+    "contextWindow": "200K",
     "pricing": {
       "official": {
         "in": 3.0,
@@ -358,7 +370,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -446,6 +458,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -459,7 +475,9 @@
       "tools": 33.8,
       "vision": 19.2,
       "writing": 35.3
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "claude-haiku-4.5",
@@ -468,7 +486,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 0.33,
     "performance": "Fastest Claude model",
-    "arenaElo": 1320.6,
+    "arenaElo": 1412.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -503,7 +521,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -601,6 +619,10 @@
         {
           "label": "Deep Infra pricing",
           "url": "https://deepinfra.com/pricing"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -611,7 +633,9 @@
       "reasoning": 35.9,
       "speed": 114.0,
       "writing": 25.3
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "gpt-5.5",
@@ -620,7 +644,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 7.5,
     "performance": "High",
-    "arenaElo": 1287.6,
+    "arenaElo": 1476.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -656,7 +680,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -761,6 +785,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -775,7 +803,9 @@
       "tools": 40.4,
       "vision": 46.8,
       "writing": 30.8
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "gpt-5.4",
@@ -784,7 +814,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 1.0,
     "performance": "High",
-    "arenaElo": 1269.4,
+    "arenaElo": 1465.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -792,12 +822,12 @@
     "math": null,
     "evals": {
       "mmluPro": 87.5,
-      "gpqaDiamond": 93.0,
+      "gpqaDiamond": 92.8,
       "terminalBench": 75.1,
       "browseComp": 82.7,
       "hle": 39.8
     },
-    "contextWindow": "1.1M",
+    "contextWindow": "1M",
     "pricing": {
       "official": {
         "in": 2.5,
@@ -816,7 +846,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -917,6 +947,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -931,7 +965,9 @@
       "tools": 36.3,
       "vision": 38.1,
       "writing": 35.5
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "gpt-5.4-mini",
@@ -940,7 +976,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 0.33,
     "performance": "High",
-    "arenaElo": 1254.1,
+    "arenaElo": 1449.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -975,7 +1011,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -1067,6 +1103,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -1077,7 +1117,9 @@
       "reasoning": 46.1,
       "speed": 451.0,
       "writing": 22.2
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "gpt-5.3-codex",
@@ -1112,7 +1154,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
@@ -1189,7 +1231,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 1.0,
     "performance": "High",
-    "arenaElo": 1334.4,
+    "arenaElo": 1402.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1214,7 +1256,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -1275,6 +1317,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -1284,7 +1330,9 @@
       "reasoning": 52.7,
       "speed": 262.0,
       "tools": 27.6
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "gpt-5.2",
@@ -1293,7 +1341,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 1.0,
     "performance": "Medium",
-    "arenaElo": 1404.3,
+    "arenaElo": 1435.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1324,7 +1372,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -1414,6 +1462,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -1427,7 +1479,9 @@
       "tools": 28.7,
       "vision": 35.7,
       "writing": 33.1
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "gpt-5-mini",
@@ -1436,7 +1490,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 0.0,
     "performance": "Medium",
-    "arenaElo": 1182.1,
+    "arenaElo": 1390.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1465,7 +1519,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -1541,6 +1595,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -1550,7 +1608,9 @@
       "reasoning": 36.9,
       "speed": 89.0,
       "vision": 12.8
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "gpt-4.1",
@@ -1559,7 +1619,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 0.0,
     "performance": null,
-    "arenaElo": 1214.4,
+    "arenaElo": 1414.0,
     "mmlu": 90.2,
     "humanEval": null,
     "gsm8k": null,
@@ -1591,7 +1651,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -1687,6 +1747,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -1697,7 +1761,9 @@
       "reasoning": 21.7,
       "speed": 317.0,
       "writing": 10.7
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "deepseek-v4-pro",
@@ -1706,7 +1772,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "Thinking/non-thinking modes",
-    "arenaElo": 1458.7,
+    "arenaElo": 1458.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1731,9 +1797,9 @@
     "contextWindow": "1.0M",
     "pricing": {
       "official": {
-        "in": 1.74,
+        "in": 1.6,
         "hit": 0.003625,
-        "out": 3.48
+        "out": 3.2
       },
       "openrouter": {
         "in": 0.435,
@@ -1759,17 +1825,17 @@
         "out": 6.0
       },
       "deep-infra": {
-        "in": 1.74,
-        "out": 3.48
+        "in": 1.3,
+        "out": 2.6
       },
       "together-ai": {
-        "in": 2.1,
-        "out": 4.4
+        "in": 1.74,
+        "out": 3.48
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -1914,6 +1980,10 @@
         {
           "label": "Deep Infra pricing",
           "url": "https://deepinfra.com/pricing"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
         }
       ]
     },
@@ -1928,7 +1998,9 @@
       "speed": 81.0,
       "tools": 35.2,
       "vision": 33.6
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "deepseek-v4-flash",
@@ -1937,7 +2009,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "Thinking/non-thinking modes",
-    "arenaElo": 1433.3,
+    "arenaElo": 1436.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1956,14 +2028,14 @@
     "contextWindow": "1.0M",
     "pricing": {
       "official": {
-        "in": 0.14,
+        "in": 0.1,
         "hit": 0.0028,
-        "out": 0.28
+        "out": 0.2
       },
       "openrouter": {
-        "in": 0.112,
-        "out": 0.224,
-        "hit": 0.022
+        "in": 0.14,
+        "out": 0.28,
+        "hit": 0.028
       },
       "aliyun": {
         "in": 1.0,
@@ -1988,13 +2060,13 @@
         "out": 2.0
       },
       "deep-infra": {
-        "in": 0.14,
-        "out": 0.28
+        "in": 0.09,
+        "out": 0.18
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -2137,6 +2209,10 @@
         {
           "label": "Deep Infra pricing",
           "url": "https://deepinfra.com/pricing"
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": ""
         }
       ]
     },
@@ -2150,7 +2226,9 @@
       "speed": 162.0,
       "tools": 28.3,
       "vision": 31.0
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "gemini-2.5-pro",
@@ -2159,7 +2237,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "Complex reasoning/coding",
-    "arenaElo": 1275.8,
+    "arenaElo": 1446.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -2196,7 +2274,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -2294,6 +2372,10 @@
         {
           "label": "Deep Infra pricing",
           "url": "https://deepinfra.com/pricing"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -2304,7 +2386,9 @@
       "math": 31.7,
       "reasoning": 35.5,
       "speed": 272.0
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "gemini-2.5-flash",
@@ -2313,7 +2397,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "Hybrid reasoning",
-    "arenaElo": 1214.2,
+    "arenaElo": 1410.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -2350,7 +2434,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -2448,6 +2532,10 @@
         {
           "label": "Deep Infra pricing",
           "url": "https://deepinfra.com/pricing"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -2457,7 +2545,9 @@
       "math": 23.3,
       "reasoning": 28.9,
       "speed": 463.0
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "llama-4-maverick",
@@ -2466,7 +2556,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "17B active / 400B total MoE",
-    "arenaElo": 1147.5,
+    "arenaElo": 1327.0,
     "mmlu": 85.5,
     "humanEval": null,
     "gsm8k": null,
@@ -2477,16 +2567,16 @@
       "liveCodeBench": 43.4,
       "mmluPro": 80.5
     },
-    "contextWindow": "1M",
+    "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
-        "in": 0.15,
-        "out": 0.6
+        "in": 0.2,
+        "out": 0.8
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -2542,7 +2632,9 @@
       ]
     },
     "params": 400.0,
-    "paramsActive": 17.0
+    "paramsActive": 17.0,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "llama-4-scout",
@@ -2551,7 +2643,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "17B active / 109B total MoE",
-    "arenaElo": 1128.5,
+    "arenaElo": 1323.0,
     "mmlu": 79.6,
     "humanEval": null,
     "gsm8k": null,
@@ -2562,10 +2654,10 @@
       "liveCodeBench": 32.8,
       "mmluPro": 74.3
     },
-    "contextWindow": "10M",
+    "contextWindow": "1.3M",
     "pricing": {
       "openrouter": {
-        "in": 0.08,
+        "in": 0.1,
         "out": 0.3
       },
       "groq": {
@@ -2575,7 +2667,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -2637,7 +2729,9 @@
       ]
     },
     "params": 109.0,
-    "paramsActive": 17.0
+    "paramsActive": 17.0,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "anthropic/claude-opus-4.7-fast",
@@ -2664,7 +2758,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -2708,7 +2802,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -2752,7 +2846,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -2801,7 +2895,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "llmStats.codeArena",
@@ -2866,7 +2960,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -2889,7 +2983,9 @@
         }
       ]
     },
-    "notes": "GPT Chat Latest points to OpenAI's stable API alias `chat-latest` that always resolves to the latest Instant chat model used in ChatGPT."
+    "notes": "GPT Chat Latest points to OpenAI's stable API alias `chat-latest` that always resolves to the latest Instant chat model used in ChatGPT.",
+    "arenaEloCheckedAt": "2026-05-21",
+    "arenaEloNote": "Score from previous snapshot (arena.ai Aug 2026 not matched); needs re-verification"
   },
   {
     "id": "x-ai/grok-4.3",
@@ -2899,7 +2995,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image->text",
-    "arenaElo": 1395.9,
+    "arenaElo": 1442.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -2924,7 +3020,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -2970,6 +3066,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
         }
       ]
     },
@@ -2977,7 +3077,9 @@
     "llmStats": {
       "codeArena": 420.0,
       "speed": 209.0
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "ibm-granite/granite-4.1-8b",
@@ -2987,7 +3089,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1201.0,
+    "arenaElo": 1354.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3004,7 +3106,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -3028,7 +3130,9 @@
       ]
     },
     "notes": "Granite 4.1 8B is a dense, decoder-only 8-billion-parameter language model from IBM, part of the Granite 4.1 family.",
-    "params": 8.0
+    "params": 8.0,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "mistralai/mistral-medium-3-5",
@@ -3038,7 +3142,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": null,
+    "arenaElo": 1427.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3049,7 +3153,7 @@
       "browseComp": 48.6,
       "reportedSweBenchVerified": 77.6
     },
-    "contextWindow": "262K",
+    "contextWindow": "256K",
     "pricing": {
       "openrouter": {
         "in": 1.5,
@@ -3066,7 +3170,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -3103,10 +3207,16 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
         }
       ]
     },
-    "notes": "Mistral Medium 3.5 is a dense 128B instruction-following model from Mistral AI."
+    "notes": "Mistral Medium 3.5 is a dense 128B instruction-following model from Mistral AI.",
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "openrouter/owl-alpha",
@@ -3179,7 +3289,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3232,7 +3342,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3280,7 +3390,7 @@
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 0.15,
+        "in": 0.14,
         "hit": 0.05,
         "out": 1.0
       },
@@ -3295,7 +3405,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
@@ -3361,7 +3471,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1490.8,
+    "arenaElo": 1460.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3371,8 +3481,8 @@
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 1.04,
-        "out": 6.24
+        "in": 1.027,
+        "out": 6.162
       },
       "aliyun": {
         "in": 9.0,
@@ -3381,7 +3491,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -3409,7 +3519,9 @@
         }
       ]
     },
-    "notes": "Qwen3.6-Max-Preview is a proprietary frontier model from Alibaba Cloud built on a sparse mixture-of-experts architecture with approximately 1 trillion total parameters."
+    "notes": "Qwen3.6-Max-Preview is a proprietary frontier model from Alibaba Cloud built on a sparse mixture-of-experts architecture with approximately 1 trillion total parameters.",
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "qwen/qwen3.6-27b",
@@ -3434,8 +3546,8 @@
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 0.317,
-        "out": 3.2
+        "in": 0.289,
+        "out": 2.4
       },
       "official": {
         "in": 0.6,
@@ -3452,7 +3564,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
@@ -3569,7 +3681,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.browseComp",
@@ -3623,7 +3735,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3657,13 +3769,17 @@
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "browseComp": 84.2,
+      "gpqaDiamond": 90.4,
+      "reportedSweBenchVerified": 78.0
+    },
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 0.066,
-        "hit": 0.029,
-        "out": 0.26
+        "in": 0.063,
+        "hit": 0.021,
+        "out": 0.21
       },
       "tencent": {
         "hit": 0.4,
@@ -3673,9 +3789,12 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
+        "evals.browseComp",
+        "evals.gpqaDiamond",
+        "evals.reportedSweBenchVerified",
         "multimodal",
         "name",
         "performance",
@@ -3695,6 +3814,22 @@
         {
           "label": "腾讯混元定价",
           "url": "https://cloud.tencent.com.cn/document/product/1823/130055"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
@@ -3708,43 +3843,69 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1470.9,
-    "mmlu": null,
+    "arenaElo": 1466.0,
+    "mmlu": 89.4,
     "humanEval": null,
-    "gsm8k": null,
+    "gsm8k": 99.6,
     "gpqa": null,
-    "math": null,
-    "evals": {},
+    "math": 86.2,
+    "evals": {
+      "gpqaDiamond": 66.7,
+      "hle": 34.0,
+      "mmluPro": 68.5,
+      "reportedSweBenchVerified": 78.9
+    },
     "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
-        "in": 1.0,
-        "hit": 0.2,
-        "out": 3.0
+        "in": 0.435,
+        "hit": 0.0036,
+        "out": 0.87
       },
       "aliyun": {
         "in": 7.0,
         "out": 21.0
       },
       "xiaomi": {
-        "in": 1.0,
-        "out": 3.0
+        "in": 0.435,
+        "out": 0.87
+      },
+      "official": {
+        "in": 0.435,
+        "out": 0.87
+      },
+      "tencent": {
+        "hit": 0.025,
+        "in": 3.0,
+        "out": 6.0
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.hle",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
+        "gsm8k",
+        "math",
+        "mmlu",
         "multimodal",
         "name",
         "performance",
         "pricing.aliyun.in",
         "pricing.aliyun.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
+        "pricing.tencent.hit",
+        "pricing.tencent.in",
+        "pricing.tencent.out",
         "pricing.xiaomi.in",
         "pricing.xiaomi.out",
         "vendor"
@@ -3761,10 +3922,52 @@
         {
           "label": "阿里云 Model Studio 定价",
           "url": "https://help.aliyun.com/zh/model-studio/model-pricing"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "腾讯混元定价",
+          "url": "https://cloud.tencent.com.cn/document/product/1823/130055"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval MMLU leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu/details"
+        },
+        {
+          "label": "ZeroEval GSM8k leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gsm8k/details"
+        },
+        {
+          "label": "ZeroEval MATH leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/math/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
-    "notes": "MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as ClawEval, GDPVal, and"
+    "notes": "MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as ClawEval, GDPVal, and",
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "xiaomi/mimo-v2.5",
@@ -3774,7 +3977,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+audio+video->text",
-    "arenaElo": 1437.8,
+    "arenaElo": 1434.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3784,24 +3987,30 @@
     "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
-        "in": 0.4,
-        "hit": 0.08,
-        "out": 2.0
+        "in": 0.14,
+        "hit": 0.0028,
+        "out": 0.28
       },
       "xiaomi": {
-        "in": 0.4,
-        "out": 2.0
+        "in": 0.14,
+        "out": 0.28
+      },
+      "official": {
+        "in": 0.168,
+        "out": 0.336
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
         "multimodal",
         "name",
         "performance",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
@@ -3817,10 +4026,20 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
-    "notes": "MiMo-V2.5 is a native omnimodal model by Xiaomi."
+    "notes": "MiMo-V2.5 is a native omnimodal model by Xiaomi.",
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "openai/gpt-5.4-image-2",
@@ -3847,7 +4066,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3892,7 +4111,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3933,7 +4152,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -4007,7 +4226,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image->text",
-    "arenaElo": 1519.0,
+    "arenaElo": 1461.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4022,14 +4241,14 @@
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 0.73,
-        "hit": 0.25,
-        "out": 3.49
+        "in": 0.589,
+        "hit": 0.0992,
+        "out": 2.48
       },
       "official": {
         "hit": 0.16,
-        "in": 0.95,
-        "out": 4.0
+        "in": 0.75,
+        "out": 3.5
       },
       "aliyun": {
         "in": 6.5,
@@ -4045,21 +4264,25 @@
         "out": 27.0
       },
       "moonshot-ai": {
-        "in": 0.73,
-        "out": 3.49
+        "in": 0.589,
+        "out": 2.48
       },
       "together-ai": {
         "in": 1.2,
         "out": 4.5
       },
       "officialCny": {
-        "in": 0.73,
-        "out": 3.49
+        "in": 0.589,
+        "out": 2.48
+      },
+      "baidu": {
+        "in": 6.5,
+        "out": 27.0
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -4080,6 +4303,8 @@
         "performance",
         "pricing.aliyun.in",
         "pricing.aliyun.out",
+        "pricing.baidu.in",
+        "pricing.baidu.out",
         "pricing.moonshot-ai.in",
         "pricing.moonshot-ai.out",
         "pricing.official.hit",
@@ -4169,6 +4394,14 @@
         {
           "label": "Together AI pricing",
           "url": "https://www.together.ai/pricing"
+        },
+        {
+          "label": "百度千帆大模型定价",
+          "url": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya"
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": ""
         }
       ]
     },
@@ -4182,7 +4415,9 @@
       "speed": 194.0,
       "tools": 33.4,
       "vision": 38.0
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "anthropic/claude-opus-4.6-fast",
@@ -4237,7 +4472,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1532.0,
+    "arenaElo": 1469.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4248,12 +4483,12 @@
       "gpqaDiamond": 86.2,
       "hle": 52.3
     },
-    "contextWindow": "203K",
+    "contextWindow": "200K",
     "pricing": {
       "openrouter": {
-        "in": 0.0,
-        "hit": 0.182,
-        "out": 0.0
+        "in": 0.966,
+        "hit": 0.1794,
+        "out": 3.036
       },
       "official": {
         "in": 1.4,
@@ -4293,7 +4528,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -4404,6 +4639,10 @@
         {
           "label": "Together AI pricing",
           "url": "https://www.together.ai/pricing"
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": ""
         }
       ]
     },
@@ -4417,7 +4656,9 @@
       "speed": 247.0,
       "tools": 30.6,
       "vision": 39.5
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "google/gemma-4-26b-a4b-it",
@@ -4427,7 +4668,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1241.0,
+    "arenaElo": 1438.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4459,7 +4700,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -4538,6 +4779,10 @@
         {
           "label": "Deep Infra pricing",
           "url": "https://deepinfra.com/pricing"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -4552,7 +4797,9 @@
       "vision": 21.1
     },
     "params": 26.0,
-    "paramsActive": 4.0
+    "paramsActive": 4.0,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "google/gemma-4-31b-it",
@@ -4562,7 +4809,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1247.8,
+    "arenaElo": 1451.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4580,12 +4827,12 @@
         "out": 0.37
       },
       "cursor": {
-        "in": 0.14,
-        "out": 0.4
+        "in": 0.13,
+        "out": 0.38
       },
       "official": {
-        "in": 0.14,
-        "out": 0.4
+        "in": 0.13,
+        "out": 0.38
       },
       "deep-infra": {
         "in": 0.13,
@@ -4598,7 +4845,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -4680,6 +4927,10 @@
         {
           "label": "Deep Infra pricing",
           "url": "https://deepinfra.com/pricing"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -4690,7 +4941,9 @@
       "reasoning": 45.2,
       "speed": 115.0
     },
-    "params": 31.0
+    "params": 31.0,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "qwen/qwen3.6-plus",
@@ -4700,7 +4953,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1467.2,
+    "arenaElo": 1444.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4734,7 +4987,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -4821,6 +5074,10 @@
         {
           "label": "Together AI pricing",
           "url": "https://www.together.ai/pricing"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
         }
       ]
     },
@@ -4835,7 +5092,9 @@
       "speed": 79.0,
       "tools": 31.0,
       "vision": 36.1
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "z-ai/glm-5v-turbo",
@@ -4845,7 +5104,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1227.2,
+    "arenaElo": 1433.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4877,7 +5136,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -4914,7 +5173,9 @@
         }
       ]
     },
-    "notes": "GLM-5V-Turbo is Z.ai’s first native multimodal agent foundation model, built for vision-based coding and agent-driven tasks."
+    "notes": "GLM-5V-Turbo is Z.ai’s first native multimodal agent foundation model, built for vision-based coding and agent-driven tasks.",
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "arcee-ai/trinity-large-thinking",
@@ -4924,7 +5185,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1245.7,
+    "arenaElo": 1369.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4941,7 +5202,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -4964,7 +5225,9 @@
         }
       ]
     },
-    "notes": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI."
+    "notes": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI.",
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "x-ai/grok-4.20-multi-agent",
@@ -4984,18 +5247,18 @@
     "contextWindow": "2M",
     "pricing": {
       "openrouter": {
-        "in": 2.0,
+        "in": 1.25,
         "hit": 0.2,
-        "out": 6.0
+        "out": 2.5
       },
       "xai": {
-        "in": 2.0,
-        "out": 6.0
+        "in": 1.25,
+        "out": 2.5
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -5046,7 +5309,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -5092,7 +5355,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -5135,7 +5398,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -5169,7 +5432,7 @@
     "gpqa": null,
     "math": null,
     "evals": {},
-    "contextWindow": "256K",
+    "contextWindow": "262K",
     "pricing": {
       "openrouter": {
         "in": 0.3,
@@ -5179,7 +5442,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -5223,7 +5486,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -5251,7 +5514,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+audio+video->text",
-    "arenaElo": 1212.5,
+    "arenaElo": 1430.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5274,7 +5537,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -5316,7 +5579,9 @@
       "codeArena": 191.0,
       "coding": 28.6,
       "reasoning": 45.5
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "xiaomi/mimo-v2-pro",
@@ -5326,7 +5591,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1432.0,
+    "arenaElo": 1448.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5349,7 +5614,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -5395,7 +5660,9 @@
       "reasoning": 52.0,
       "search": 33.1,
       "writing": 28.4
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "minimax/minimax-m2.7",
@@ -5405,18 +5672,19 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1404.7,
+    "arenaElo": 1445.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {},
-    "contextWindow": "205K",
+    "contextWindow": "197K",
     "pricing": {
       "openrouter": {
-        "in": 0.279,
-        "out": 1.2
+        "in": 0.27,
+        "out": 1.08,
+        "hit": 0.054
       },
       "official": {
         "in": 0.3,
@@ -5432,8 +5700,8 @@
         "out": 8.4
       },
       "minimax": {
-        "in": 0.279,
-        "out": 1.2
+        "in": 0.27,
+        "out": 1.08
       },
       "together-ai": {
         "in": 0.3,
@@ -5442,7 +5710,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -5459,6 +5727,7 @@
         "pricing.minimax.out",
         "pricing.official.in",
         "pricing.official.out",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "pricing.tencent.hit",
@@ -5508,6 +5777,10 @@
         {
           "label": "Together AI pricing",
           "url": "https://www.together.ai/pricing"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
         }
       ]
     },
@@ -5517,7 +5790,9 @@
       "coding": 40.1,
       "reasoning": 53.9,
       "speed": 243.0
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "openai/gpt-5.4-nano",
@@ -5527,7 +5802,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1199.9,
+    "arenaElo": 1402.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5555,7 +5830,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -5623,6 +5898,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -5634,7 +5913,9 @@
       "reasoning": 40.1,
       "speed": 518.0,
       "writing": 20.9
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "mistralai/mistral-small-2603",
@@ -5656,7 +5937,7 @@
       "liveCodeBench": 63.6,
       "mmluPro": 78.0
     },
-    "contextWindow": "262K",
+    "contextWindow": "256K",
     "pricing": {
       "openrouter": {
         "in": 0.15,
@@ -5674,7 +5955,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -5787,7 +6068,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -5858,7 +6139,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -5957,7 +6238,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -6019,7 +6300,7 @@
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 0.04,
+        "in": 0.1,
         "out": 0.15
       },
       "siliconflow": {
@@ -6027,13 +6308,13 @@
         "out": 12.0
       },
       "together-ai": {
-        "in": 0.1,
-        "out": 0.15
+        "in": 0.17,
+        "out": 0.25
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
@@ -6108,7 +6389,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -6135,7 +6416,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1165.4,
+    "arenaElo": 1347.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6160,7 +6441,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -6223,6 +6504,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
         }
       ]
     },
@@ -6234,7 +6519,9 @@
       "reasoning": 29.5,
       "speed": 657.0,
       "writing": 7.3
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "openai/gpt-5.3-chat",
@@ -6244,7 +6531,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1449.2,
+    "arenaElo": 1449.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6269,7 +6556,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -6323,6 +6610,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -6330,7 +6621,9 @@
     "llmStats": {
       "codeArena": 590.0,
       "speed": 276.0
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "google/gemini-3.1-flash-lite-preview",
@@ -6340,7 +6633,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file+audio+video->text",
-    "arenaElo": 1328.8,
+    "arenaElo": 1432.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6351,7 +6644,7 @@
       "hle": 16.0,
       "simpleQA": 43.3
     },
-    "contextWindow": "1.0M",
+    "contextWindow": "1M",
     "pricing": {
       "openrouter": {
         "in": 0.25,
@@ -6369,7 +6662,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -6423,7 +6716,9 @@
         }
       ]
     },
-    "notes": "Gemini 3.1 Flash Lite Preview is Google's high-efficiency model optimized for high-volume use cases."
+    "notes": "Gemini 3.1 Flash Lite Preview is Google's high-efficiency model optimized for high-volume use cases.",
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "bytedance-seed/seed-2.0-mini",
@@ -6453,7 +6748,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -6489,7 +6784,7 @@
     "gpqa": null,
     "math": null,
     "evals": {},
-    "contextWindow": "131K",
+    "contextWindow": "66K",
     "pricing": {
       "openrouter": {
         "in": 0.5,
@@ -6498,7 +6793,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -6525,7 +6820,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1249.2,
+    "arenaElo": 1395.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6542,7 +6837,7 @@
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 0.139,
+        "in": 0.14,
         "hit": 0.05,
         "out": 1.0
       },
@@ -6561,7 +6856,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -6660,6 +6955,10 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": "https://siliconflow.cn/pricing"
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": ""
         }
       ]
     },
@@ -6674,7 +6973,9 @@
       "writing": 18.8
     },
     "params": 35.0,
-    "paramsActive": 3.0
+    "paramsActive": 3.0,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "qwen/qwen3.5-27b",
@@ -6684,7 +6985,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1221.5,
+    "arenaElo": 1408.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6719,7 +7020,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -6817,6 +7118,10 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": "https://siliconflow.cn/pricing"
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": ""
         }
       ]
     },
@@ -6830,7 +7135,9 @@
       "speed": 69.0,
       "writing": 22.3
     },
-    "params": 27.0
+    "params": 27.0,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "qwen/qwen3.5-122b-a10b",
@@ -6840,7 +7147,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1222.8,
+    "arenaElo": 1417.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6879,7 +7186,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -6983,6 +7290,10 @@
         {
           "label": "Together AI pricing",
           "url": "https://www.together.ai/pricing"
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": ""
         }
       ]
     },
@@ -6997,7 +7308,9 @@
       "writing": 24.3
     },
     "params": 122.0,
-    "paramsActive": 10.0
+    "paramsActive": 10.0,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "qwen/qwen3.5-flash-02-23",
@@ -7007,7 +7320,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1237.1,
+    "arenaElo": 1397.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7023,11 +7336,16 @@
       "aliyun": {
         "in": 0.2,
         "out": 2.0
+      },
+      "tencent": {
+        "hit": 0.02,
+        "in": 0.2,
+        "out": 2.0
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -7038,6 +7356,9 @@
         "pricing.aliyun.out",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
+        "pricing.tencent.hit",
+        "pricing.tencent.in",
+        "pricing.tencent.out",
         "vendor"
       ],
       "sources": [
@@ -7052,10 +7373,16 @@
         {
           "label": "阿里云 Model Studio 定价",
           "url": "https://help.aliyun.com/zh/model-studio/model-pricing"
+        },
+        {
+          "label": "腾讯混元定价",
+          "url": "https://cloud.tencent.com.cn/document/product/1823/130055"
         }
       ]
     },
-    "notes": "The Qwen3.5 native vision-language Flash models are built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency."
+    "notes": "The Qwen3.5 native vision-language Flash models are built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency.",
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "liquid/lfm-2-24b-a2b",
@@ -7137,7 +7464,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -7182,7 +7509,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -7210,7 +7537,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file+audio+video->text",
-    "arenaElo": 1488.2,
+    "arenaElo": 1485.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7244,7 +7571,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -7331,6 +7658,10 @@
         {
           "label": "Deep Infra pricing",
           "url": "https://deepinfra.com/pricing"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -7345,7 +7676,9 @@
       "speed": 157.0,
       "tools": 34.1,
       "vision": 41.0
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "qwen/qwen3.5-plus-02-15",
@@ -7375,7 +7708,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -7408,7 +7741,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1243.5,
+    "arenaElo": 1442.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7448,7 +7781,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -7556,6 +7889,10 @@
         {
           "label": "Together AI pricing",
           "url": "https://www.together.ai/pricing"
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": ""
         }
       ]
     },
@@ -7573,7 +7910,9 @@
       "writing": 28.7
     },
     "params": 397.0,
-    "paramsActive": 17.0
+    "paramsActive": 17.0,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "minimax/minimax-m2.5",
@@ -7583,7 +7922,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1382.1,
+    "arenaElo": 1390.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7593,11 +7932,12 @@
       "browseComp": 76.3,
       "reportedSweBenchVerified": 80.2
     },
-    "contextWindow": "205K",
+    "contextWindow": "1M",
     "pricing": {
       "openrouter": {
         "in": 0.15,
-        "out": 1.15
+        "out": 0.9,
+        "hit": 0.05
       },
       "official": {
         "in": 0.3,
@@ -7622,7 +7962,7 @@
       },
       "minimax": {
         "in": 0.15,
-        "out": 1.15
+        "out": 0.9
       },
       "together-ai": {
         "in": 0.3,
@@ -7631,7 +7971,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -7653,6 +7993,7 @@
         "pricing.minimax.out",
         "pricing.official.in",
         "pricing.official.out",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "pricing.siliconflow.in",
@@ -7728,6 +8069,10 @@
         {
           "label": "Together AI pricing",
           "url": "https://www.together.ai/pricing"
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": ""
         }
       ]
     },
@@ -7738,7 +8083,9 @@
       "reasoning": 53.1,
       "search": 27.0,
       "speed": 559.0
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "z-ai/glm-5",
@@ -7748,7 +8095,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1435.2,
+    "arenaElo": 1457.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7758,12 +8105,12 @@
       "browseComp": 75.9,
       "reportedSweBenchVerified": 77.8
     },
-    "contextWindow": "203K",
+    "contextWindow": "200K",
     "pricing": {
       "openrouter": {
-        "in": 0.6,
-        "hit": 0.12,
-        "out": 1.92
+        "in": 0.95,
+        "hit": 0.2,
+        "out": 2.55
       },
       "official": {
         "in": 1.0,
@@ -7803,7 +8150,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -7907,6 +8254,10 @@
         {
           "label": "Together AI pricing",
           "url": "https://www.together.ai/pricing"
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": ""
         }
       ]
     },
@@ -7918,7 +8269,9 @@
       "search": 26.5,
       "speed": 299.0,
       "tools": 26.7
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "qwen/qwen3-max-thinking",
@@ -7948,7 +8301,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -7981,7 +8334,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1498.1,
+    "arenaElo": 1497.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -8012,7 +8365,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -8099,6 +8452,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -8114,7 +8471,9 @@
       "tools": 35.1,
       "vision": 36.5,
       "writing": 44.6
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "qwen/qwen3-coder-next",
@@ -8134,7 +8493,7 @@
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 0.11,
+        "in": 0.12,
         "hit": 0.07,
         "out": 0.8
       },
@@ -8145,7 +8504,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -8179,7 +8538,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1394.9,
+    "arenaElo": 1395.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -8190,10 +8549,10 @@
       "browseComp": 69.0,
       "reportedSweBenchVerified": 74.4
     },
-    "contextWindow": "262K",
+    "contextWindow": "66K",
     "pricing": {
       "openrouter": {
-        "in": 0.09,
+        "in": 0.1,
         "out": 0.3,
         "hit": 0.02
       },
@@ -8206,13 +8565,13 @@
         "out": 2.1
       },
       "stepfun": {
-        "in": 0.09,
+        "in": 0.1,
         "out": 0.3
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -8291,6 +8650,10 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": "https://siliconflow.cn/pricing"
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": ""
         }
       ]
     },
@@ -8302,7 +8665,9 @@
       "reasoning": 49.8,
       "search": 22.4,
       "speed": 259.0
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "arcee-ai/trinity-large-preview",
@@ -8312,7 +8677,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1375.7,
+    "arenaElo": 1379.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -8350,7 +8715,9 @@
         }
       ]
     },
-    "notes": "Trinity-Large-Preview is a frontier-scale open-weight language model from Arcee, built as a 400B-parameter sparse Mixture-of-Experts with 13B active parameters per token using 4-of-256 expert routing."
+    "notes": "Trinity-Large-Preview is a frontier-scale open-weight language model from Arcee, built as a 400B-parameter sparse Mixture-of-Experts with 13B active parameters per token using 4-of-256 expert routing.",
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "moonshotai/kimi-k2.5",
@@ -8360,7 +8727,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image->text",
-    "arenaElo": 1439.8,
+    "arenaElo": 1432.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -8377,9 +8744,9 @@
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 0.4,
-        "hit": 0.09,
-        "out": 1.9
+        "in": 0.57,
+        "hit": 0.095,
+        "out": 2.85
       },
       "official": {
         "hit": 0.1,
@@ -8404,21 +8771,21 @@
         "out": 21.0
       },
       "moonshot-ai": {
-        "in": 0.4,
-        "out": 1.9
+        "in": 0.57,
+        "out": 2.85
       },
       "together-ai": {
         "in": 0.5,
         "out": 2.8
       },
       "officialCny": {
-        "in": 0.4,
-        "out": 1.9
+        "in": 0.57,
+        "out": 2.85
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -8540,6 +8907,10 @@
         {
           "label": "Together AI pricing",
           "url": "https://www.together.ai/pricing"
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": ""
         }
       ]
     },
@@ -8553,7 +8924,9 @@
       "search": 30.4,
       "tools": 14.6,
       "vision": 35.9
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "upstage/solar-pro-3",
@@ -8584,7 +8957,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -8635,7 +9008,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -8681,7 +9054,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -8724,7 +9097,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -8767,7 +9140,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -8825,7 +9198,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -8898,6 +9271,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
         }
       ]
     },
@@ -8909,7 +9286,9 @@
       "reasoning": 32.0,
       "search": 3.9,
       "speed": 38.0
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "bytedance-seed/seed-1.6-flash",
@@ -8939,7 +9318,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -8988,7 +9367,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9017,7 +9396,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1391.6,
+    "arenaElo": 1384.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -9033,12 +9412,12 @@
       "reportedSweBenchVerified": 67.0,
       "terminalBench": 47.9
     },
-    "contextWindow": "205K",
+    "contextWindow": "1M",
     "pricing": {
       "openrouter": {
-        "in": 0.29,
+        "in": 0.3,
         "hit": 0.03,
-        "out": 0.95
+        "out": 1.2
       },
       "official": {
         "in": 0.3,
@@ -9049,13 +9428,13 @@
         "out": 8.4
       },
       "minimax": {
-        "in": 0.29,
-        "out": 0.95
+        "in": 0.3,
+        "out": 1.2
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -9152,6 +9531,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
         }
       ]
     },
@@ -9164,7 +9547,9 @@
       "search": 19.1,
       "speed": 395.0,
       "writing": 18.2
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "z-ai/glm-4.7",
@@ -9174,7 +9559,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1440.1,
+    "arenaElo": 1442.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -9189,7 +9574,7 @@
       "reportedSweBenchVerified": 73.8,
       "terminalBench": 33.3
     },
-    "contextWindow": "203K",
+    "contextWindow": "205K",
     "pricing": {
       "openrouter": {
         "in": 0.4,
@@ -9221,7 +9606,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -9331,6 +9716,10 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": "https://siliconflow.cn/pricing"
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": ""
         }
       ]
     },
@@ -9342,7 +9731,9 @@
       "reasoning": 44.2,
       "search": 16.8,
       "speed": 61.0
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "google/gemini-3-flash-preview",
@@ -9352,7 +9743,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file+audio+video->text",
-    "arenaElo": 1446.7,
+    "arenaElo": 1473.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -9365,7 +9756,7 @@
       "reportedSweBenchVerified": 78.0,
       "simpleQA": 68.7
     },
-    "contextWindow": "1.0M",
+    "contextWindow": "1M",
     "pricing": {
       "openrouter": {
         "in": 0.5,
@@ -9383,7 +9774,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -9468,6 +9859,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -9481,7 +9876,9 @@
       "speed": 600.0,
       "tools": 24.1,
       "vision": 34.1
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "xiaomi/mimo-v2-flash",
@@ -9520,7 +9917,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -9644,7 +10041,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -9743,7 +10140,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": null,
+    "arenaElo": 1435.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -9760,7 +10157,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9778,7 +10175,9 @@
         }
       ]
     },
-    "notes": "GPT-5.2 Chat (AKA Instant) is the fast, lightweight member of the 5.2 family, optimized for low-latency chat while retaining strong general intelligence."
+    "notes": "GPT-5.2 Chat (AKA Instant) is the fast, lightweight member of the 5.2 family, optimized for low-latency chat while retaining strong general intelligence.",
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "openai/gpt-5.2-pro",
@@ -9809,7 +10208,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -9932,7 +10331,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9959,7 +10358,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1164.6,
+    "arenaElo": 1377.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -9970,7 +10369,7 @@
     "pricing": {
       "openrouter": {
         "in": 0.3,
-        "hit": 0.05,
+        "hit": 0.055,
         "out": 0.9
       },
       "zhipu": {
@@ -9986,7 +10385,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -10016,7 +10415,9 @@
         }
       ]
     },
-    "notes": "GLM-4.6V is a large multimodal model designed for high-fidelity visual understanding and long-context reasoning across images, documents, and mixed media."
+    "notes": "GLM-4.6V is a large multimodal model designed for high-fidelity visual understanding and long-context reasoning across images, documents, and mixed media.",
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "nex-agi/deepseek-v3.1-nex-n1",
@@ -10091,7 +10492,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10137,7 +10538,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10179,7 +10580,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10207,13 +10608,20 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file+video->text",
-    "arenaElo": 1337.2,
+    "arenaElo": 1337.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
-    "evals": {},
+    "evals": {
+      "aime2025": 91.0,
+      "gpqaDiamond": 79.6,
+      "liveCodeBench": 71.0,
+      "mmluPro": 80.9,
+      "reportedSweBenchVerified": 64.5,
+      "terminalBench": 32.5
+    },
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
@@ -10223,19 +10631,31 @@
       "amazon": {
         "in": 0.3,
         "out": 2.5
+      },
+      "official": {
+        "in": 0.3,
+        "out": 2.5
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
+        "evals.aime2025",
+        "evals.gpqaDiamond",
+        "evals.liveCodeBench",
+        "evals.mmluPro",
+        "evals.reportedSweBenchVerified",
+        "evals.terminalBench",
         "multimodal",
         "name",
         "performance",
         "pricing.amazon.in",
         "pricing.amazon.out",
+        "pricing.official.in",
+        "pricing.official.out",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -10248,10 +10668,44 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval MMLU-Pro leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/mmlu-pro/details"
+        },
+        {
+          "label": "ZeroEval LiveCodeBench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/livecodebench/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Terminal-Bench leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/terminal-bench/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
         }
       ]
     },
-    "notes": "Nova 2 Lite is a fast, cost-effective reasoning model for everyday workloads that can process text, images, and videos to generate text."
+    "notes": "Nova 2 Lite is a fast, cost-effective reasoning model for everyday workloads that can process text, images, and videos to generate text.",
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "mistralai/ministral-14b-2512",
@@ -10286,7 +10740,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10342,7 +10796,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10398,7 +10852,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10429,7 +10883,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": null,
+    "arenaElo": 1415.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -10454,7 +10908,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10475,7 +10929,9 @@
       ]
     },
     "notes": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.",
-    "params": 123.0
+    "params": 123.0,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "arcee-ai/trinity-mini",
@@ -10549,7 +11005,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -10608,7 +11064,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1332.1,
+    "arenaElo": 1425.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -10623,12 +11079,12 @@
       "mmluPro": 85.0,
       "reportedSweBenchVerified": 73.1
     },
-    "contextWindow": "131K",
+    "contextWindow": "164K",
     "pricing": {
       "openrouter": {
-        "in": 0.252,
-        "hit": 0.0252,
-        "out": 0.378
+        "in": 0.269,
+        "hit": 0.1345,
+        "out": 0.4
       },
       "official": {
         "in": 0.26,
@@ -10644,7 +11100,8 @@
       },
       "tencent": {
         "in": 2.0,
-        "out": 3.0
+        "out": 3.0,
+        "hit": 0.4
       },
       "siliconflow": {
         "in": 2.0,
@@ -10657,7 +11114,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -10690,6 +11147,7 @@
         "pricing.openrouter.out",
         "pricing.siliconflow.in",
         "pricing.siliconflow.out",
+        "pricing.tencent.hit",
         "pricing.tencent.in",
         "pricing.tencent.out",
         "vendor"
@@ -10778,6 +11236,10 @@
         {
           "label": "Deep Infra pricing",
           "url": "https://deepinfra.com/pricing"
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": ""
         }
       ]
     },
@@ -10791,7 +11253,9 @@
       "speed": 53.0
     },
     "params": 671.0,
-    "paramsActive": 37.0
+    "paramsActive": 37.0,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "prime-intellect/intellect-3",
@@ -10801,7 +11265,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1356.6,
+    "arenaElo": 1356.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -10840,7 +11304,9 @@
       ]
     },
     "notes": "INTELLECT-3 is a 106B-parameter Mixture-of-Experts model (12B active) post-trained from GLM-4.5-Air-Base using supervised fine-tuning (SFT) followed by large-scale reinforcement learning (RL).",
-    "params": 32.0
+    "params": 32.0,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "anthropic/claude-opus-4.5",
@@ -10850,7 +11316,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1467.0,
+    "arenaElo": 1469.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -10878,7 +11344,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -10948,6 +11414,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -10961,7 +11431,9 @@
       "tools": 30.8,
       "vision": 29.9,
       "writing": 35.6
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "allenai/olmo-3-32b-think",
@@ -10987,7 +11459,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11032,7 +11504,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11080,7 +11552,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11115,7 +11587,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1344.5,
+    "arenaElo": 1439.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -11130,7 +11602,7 @@
     "pricing": {
       "openrouter": {
         "in": 1.25,
-        "hit": 0.13,
+        "hit": 0.125,
         "out": 10.0
       },
       "cursor": {
@@ -11144,7 +11616,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -11220,6 +11692,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://docs.cursor.com/models/"
         }
       ]
     },
@@ -11234,7 +11710,9 @@
       "tools": 25.3,
       "vision": 35.1,
       "writing": 28.4
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "openai/gpt-5.1-chat",
@@ -11289,7 +11767,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image->text",
-    "arenaElo": 1329.3,
+    "arenaElo": 1455.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -11302,7 +11780,7 @@
     "pricing": {
       "openrouter": {
         "in": 1.25,
-        "hit": 0.125,
+        "hit": 0.13,
         "out": 10.0
       },
       "cursor": {
@@ -11316,7 +11794,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -11386,7 +11864,9 @@
       "coding": 29.4,
       "reasoning": 43.3,
       "speed": 329.0
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "openai/gpt-5.1-codex-mini",
@@ -11415,7 +11895,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -11455,7 +11935,9 @@
       "codeArena": 210.0,
       "math": 0.9,
       "reasoning": 0.6
-    }
+    },
+    "arenaEloCheckedAt": "2026-05-21",
+    "arenaEloNote": "Score from previous snapshot (arena.ai Aug 2026 not matched); needs re-verification"
   },
   {
     "id": "moonshotai/kimi-k2-thinking",
@@ -11465,7 +11947,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1329.7,
+    "arenaElo": 1430.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -11476,7 +11958,8 @@
     "pricing": {
       "openrouter": {
         "in": 0.6,
-        "out": 2.5
+        "out": 2.5,
+        "hit": 0.15
       },
       "official": {
         "hit": 0.15,
@@ -11498,7 +11981,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -11512,6 +11995,7 @@
         "pricing.official.hit",
         "pricing.official.in",
         "pricing.official.out",
+        "pricing.openrouter.hit",
         "pricing.openrouter.in",
         "pricing.openrouter.out",
         "vendor"
@@ -11535,7 +12019,9 @@
         }
       ]
     },
-    "notes": "Kimi K2 Thinking is Moonshot AI’s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning."
+    "notes": "Kimi K2 Thinking is Moonshot AI’s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning.",
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "amazon/nova-premier-v1",
@@ -11566,7 +12052,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11616,7 +12102,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11674,7 +12160,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11716,7 +12202,7 @@
     "pricing": {
       "openrouter": {
         "in": 0.075,
-        "hit": 0.037,
+        "hit": 0.0375,
         "out": 0.3
       },
       "groq": {
@@ -11726,7 +12212,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11761,7 +12247,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1304.6,
+    "arenaElo": 1346.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -11777,12 +12263,12 @@
       "reportedSweBenchVerified": 69.4,
       "terminalBench": 46.3
     },
-    "contextWindow": "205K",
+    "contextWindow": "1M",
     "pricing": {
       "openrouter": {
         "in": 0.255,
         "hit": 0.03,
-        "out": 1.0
+        "out": 1.02
       },
       "official": {
         "in": 0.3,
@@ -11790,12 +12276,12 @@
       },
       "minimax": {
         "in": 0.255,
-        "out": 1.0
+        "out": 1.02
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -11886,6 +12372,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
         }
       ]
     },
@@ -11898,7 +12388,9 @@
       "search": 5.3,
       "speed": 368.0,
       "writing": 19.1
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "qwen/qwen3-vl-32b-instruct",
@@ -11920,7 +12412,7 @@
       "ifEval": 84.7,
       "mmluPro": 78.6
     },
-    "contextWindow": "262K",
+    "contextWindow": "131K",
     "pricing": {
       "openrouter": {
         "in": 0.104,
@@ -11937,7 +12429,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -12022,7 +12514,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -12112,7 +12604,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -12153,11 +12645,11 @@
       "mmluPro": 77.3,
       "simpleQA": 49.6
     },
-    "contextWindow": "256K",
+    "contextWindow": "131K",
     "pricing": {
       "openrouter": {
-        "in": 0.117,
-        "out": 1.365
+        "in": 0.18,
+        "out": 2.1
       },
       "official": {
         "in": 0.18,
@@ -12174,7 +12666,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -12293,11 +12785,11 @@
       "ifEval": 83.7,
       "mmluPro": 71.6
     },
-    "contextWindow": "256K",
+    "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 0.08,
-        "out": 0.5
+        "in": 0.117,
+        "out": 0.455
       },
       "official": {
         "in": 0.08,
@@ -12314,7 +12806,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -12429,7 +12921,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -12547,7 +13039,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1343.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -12597,7 +13089,9 @@
       ]
     },
     "notes": "Llama-3.3-Nemotron-Super-49B-v1.5 is a 49B-parameter, English-centric reasoning/chat model derived from Meta’s Llama-3.3-70B-Instruct with a 128K context.",
-    "params": 49.0
+    "params": 49.0,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "baidu/ernie-4.5-21b-a3b-thinking",
@@ -12675,7 +13169,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -12716,11 +13210,11 @@
       "mmluPro": 80.5,
       "simpleQA": 23.9
     },
-    "contextWindow": "131K",
+    "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 0.13,
-        "out": 1.56
+        "in": 0.2,
+        "out": 2.4
       },
       "aliyun": {
         "in": 0.75,
@@ -12733,7 +13227,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -12824,8 +13318,8 @@
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 0.13,
-        "out": 0.52
+        "in": 0.15,
+        "out": 0.6
       },
       "aliyun": {
         "in": 0.75,
@@ -12842,7 +13336,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -12939,7 +13433,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -12966,7 +13460,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1355.1,
+    "arenaElo": 1425.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -12980,29 +13474,29 @@
       "reportedSweBenchVerified": 68.0,
       "terminalBench": 40.5
     },
-    "contextWindow": "203K",
+    "contextWindow": "205K",
     "pricing": {
       "openrouter": {
-        "in": 0.43,
-        "hit": 0.08,
-        "out": 1.74
+        "in": 0.5,
+        "hit": 0.1,
+        "out": 2.0
       },
       "aliyun": {
         "in": 3.0,
         "out": 14.0
       },
       "zhipu": {
-        "in": 0.43,
-        "out": 1.74
+        "in": 0.5,
+        "out": 2.0
       },
       "officialCny": {
-        "in": 0.43,
-        "out": 1.74
+        "in": 0.5,
+        "out": 2.0
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -13083,6 +13577,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
         }
       ]
     },
@@ -13095,7 +13593,9 @@
       "search": 7.4,
       "speed": 104.0,
       "vision": 13.5
-    }
+    },
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "deepseek/deepseek-v3.2-exp",
@@ -13105,7 +13605,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1286.6,
+    "arenaElo": 1423.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -13135,7 +13635,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-05",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -13226,6 +13726,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
         }
       ]
     },
@@ -13238,6 +13742,168 @@
       "search": 1.9
     },
     "params": 671.0,
-    "paramsActive": 37.0
+    "paramsActive": 37.0,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
+  },
+  {
+    "id": "anthropic/claude-fable-5",
+    "name": "Claude Fable 5",
+    "vendor": "Anthropic",
+    "multimodal": "Text",
+    "contextWindow": "200K",
+    "pricing": {
+      "openrouter": {
+        "in": null,
+        "out": null
+      }
+    },
+    "arenaElo": 1509,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
+    "verification": {
+      "status": "generated",
+      "verifiedFields": [
+        "arenaElo"
+      ],
+      "sources": [
+        {
+          "label": "Arena Leaderboard",
+          "url": "https://arena.ai/leaderboard"
+        }
+      ],
+      "checkedAt": "2026-08-01"
+    },
+    "checkedAt": "2026-08-01",
+    "notes": "Arena #1 as of Aug 2026. Pricing TBD; not yet available via OpenRouter.",
+    "catalogNote": "Not available on OpenRouter; added from Arena leaderboard"
+  },
+  {
+    "id": "meta/muse-spark",
+    "name": "Muse Spark",
+    "vendor": "Meta",
+    "multimodal": "Text",
+    "contextWindow": "128K",
+    "pricing": {
+      "openrouter": {
+        "in": null,
+        "out": null
+      }
+    },
+    "arenaElo": 1488,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
+    "verification": {
+      "status": "generated",
+      "verifiedFields": [
+        "arenaElo"
+      ],
+      "sources": [
+        {
+          "label": "Arena Leaderboard",
+          "url": "https://arena.ai/leaderboard"
+        }
+      ],
+      "checkedAt": "2026-08-01"
+    },
+    "checkedAt": "2026-08-01",
+    "notes": "Meta's Muse Spark, Arena rank #10 as of Aug 2026. Pricing TBD.",
+    "catalogNote": "Not available on OpenRouter; added from Arena leaderboard"
+  },
+  {
+    "id": "google/gemini-3-pro",
+    "name": "Gemini 3 Pro",
+    "vendor": "Google",
+    "multimodal": "Text+Image",
+    "contextWindow": "1M",
+    "pricing": {
+      "openrouter": {
+        "in": null,
+        "out": null
+      }
+    },
+    "arenaElo": 1486,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
+    "verification": {
+      "status": "generated",
+      "verifiedFields": [
+        "arenaElo"
+      ],
+      "sources": [
+        {
+          "label": "Arena Leaderboard",
+          "url": "https://arena.ai/leaderboard"
+        }
+      ],
+      "checkedAt": "2026-08-01"
+    },
+    "checkedAt": "2026-08-01",
+    "notes": "Gemini 3 Pro (non-preview), Arena rank #11 as of Aug 2026. Pricing from Google AI Studio TBD.",
+    "catalogNote": "Not available on OpenRouter; added from Arena leaderboard"
+  },
+  {
+    "id": "anthropic/claude-opus-4.8",
+    "name": "Claude Opus 4.8",
+    "vendor": "Anthropic",
+    "multimodal": "Text",
+    "contextWindow": "200K",
+    "pricing": {
+      "openrouter": {
+        "in": null,
+        "out": null
+      }
+    },
+    "arenaElo": 1475,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
+    "verification": {
+      "status": "generated",
+      "verifiedFields": [
+        "arenaElo"
+      ],
+      "sources": [
+        {
+          "label": "Arena Leaderboard",
+          "url": "https://arena.ai/leaderboard"
+        }
+      ],
+      "checkedAt": "2026-08-01"
+    },
+    "checkedAt": "2026-08-01",
+    "notes": "Arena rank #24. Non-thinking variant.",
+    "catalogNote": "Not available on OpenRouter; added from Arena leaderboard"
+  },
+  {
+    "id": "meta/muse-spark-1.1",
+    "name": "Muse Spark 1.1",
+    "vendor": "Meta",
+    "multimodal": "Text",
+    "contextWindow": "128K",
+    "pricing": {
+      "openrouter": {
+        "in": null,
+        "out": null
+      }
+    },
+    "arenaElo": 1490,
+    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
+    "verification": {
+      "status": "generated",
+      "verifiedFields": [
+        "arenaElo"
+      ],
+      "sources": [
+        {
+          "label": "Arena Leaderboard",
+          "url": "https://arena.ai/leaderboard"
+        }
+      ],
+      "checkedAt": "2026-08-01"
+    },
+    "checkedAt": "2026-08-01",
+    "notes": "Meta's Muse Spark 1.1, Arena rank #9.",
+    "catalogNote": "Not available on OpenRouter; added from Arena leaderboard"
   }
 ]

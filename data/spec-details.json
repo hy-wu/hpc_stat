@@ -1023,5 +1023,49 @@
     "l1CacheKB": 704,
     "computeCapability": "x86-64 / AVX2 / 4ch DDR4",
     "ipcNotes": "Broadwell-EP 最高规格：22C/44T 145W；L3 55MB；单颗当年 $4115，闲鱼 ¥280；双路 44 核"
+  },
+  "nvidia-rtx-5060": {
+    "gpuDie": "GB206-250",
+    "boostClockMHz": 2497,
+    "baseClockMHz": 2280,
+    "l2CacheMB": 32,
+    "transistorsBillion": 21.9,
+    "computeCapability": "Blackwell / CUDA 12.x",
+    "displayOutputs": "3x DP 2.1b + 1x HDMI 2.1b"
+  },
+  "amd-rx-9060-xt-8gb": {
+    "gpuDie": "Navi 44",
+    "boostClockMHz": 3130,
+    "streamProcessors": 2048,
+    "rayTracingAccelerators": 32,
+    "aiAccelerators": 64,
+    "l2CacheMB": 4,
+    "l3CacheMB": 32,
+    "transistorsBillion": 53.9,
+    "displayOutputs": "2x DP 2.1a + 1x HDMI 2.1b"
+  },
+  "apple-m4-ultra-76gpu": {
+    "gpuDie": "M4 Ultra (UltraFusion)",
+    "neuralEngineCores": 32,
+    "neuralEngineTOPS": 38,
+    "transistorsBillion": 134,
+    "maxMemoryGB": 256,
+    "mediaEngine": "2x decode, 4x encode, 4x ProRes"
+  },
+  "nvidia-b300-sxm": {
+    "gpuDie": "B300 (Blackwell Ultra)",
+    "fp64TFLOPS": 37,
+    "tf32TFLOPS": 2500,
+    "fp4TOPS": 20000,
+    "computeCapability": "Blackwell Ultra / CUDA 12.x",
+    "nvlinkGeneration": 5,
+    "sparsitySupport": "2:4 sparse Tensor Core, FP4/FP6/FP8"
+  },
+  "amd-instinct-mi325x": {
+    "gpuDie": "MI325X (CDNA 3)",
+    "fp64TFLOPS": 81.7,
+    "streamProcessors": 19456,
+    "infinityFabricLinks": 8,
+    "formFactor": "OAM"
   }
 }

@@ -78,6 +78,9 @@ async function init() {
     render();
   } catch (err) {
     console.error("Failed to load model-tool matrix:", err);
+    if (elements.tableBody) {
+      elements.tableBody.innerHTML = `<tr><td colspan="99" class="muted" style="text-align:center;padding:24px">模型 × 工具数据加载失败：请确认通过静态服务器访问且 data/model-tools.json 存在。</td></tr>`;
+    }
   }
 }
 
@@ -431,6 +434,11 @@ function renderTable(rows, tools) {
       ${tools.map(toolName => `<th class="matrix-tool-head">${escapeHtml(toolName)}</th>`).join("")}
     </tr>
   `;
+
+  if (!rows.length) {
+    elements.tableBody.innerHTML = `<tr><td colspan="${tools.length + 4}" class="muted" style="text-align:center;padding:24px">没有匹配的模型 × 工具组合；请调整搜索或筛选条件。</td></tr>`;
+    return;
+  }
 
   elements.tableBody.innerHTML = rows
     .map(row => `

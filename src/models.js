@@ -79,6 +79,13 @@ async function init() {
     render();
   } catch (err) {
     console.error("Failed to load models:", err);
+    showLoadError("模型数据加载失败：请确认通过静态服务器访问且 data/models.json、data/model-fields.json 存在。");
+  }
+}
+
+function showLoadError(message) {
+  if (elements.tableBody) {
+    elements.tableBody.innerHTML = `<tr><td colspan="99" class="muted" style="text-align:center;padding:24px">${escapeHtml(message)}</td></tr>`;
   }
 }
 
@@ -191,8 +198,8 @@ function renderColumnPicker() {
         return `
         <label class="column-option">
           <div class="cp-bar" style="width:${pct}%;background:${color}"></div>
-          <input type="checkbox" value="${f.key}" ${state.visibleColumns.has(f.key) ? 'checked' : ''}>
-          <span>${f.label}</span>
+          <input type="checkbox" value="${escapeAttr(f.key)}" ${state.visibleColumns.has(f.key) ? 'checked' : ''}>
+          <span>${escapeHtml(f.label)}</span>
           <span class="column-count">${count}/${state.models.length}</span>
         </label>`;
       }).join('')}
@@ -290,7 +297,7 @@ function renderSelectOptions() {
   fillSelect(elements.statusFilter, ["all", ...uniqueVerificationStatuses()], "全部状态", verificationStatusLabel);
   fillSelect(elements.vendorFilter, ["all", ...uniqueValues("vendor")], "全部厂商");
   elements.sortField.innerHTML = fieldDefs
-    .map(field => `<option value="${field.key}">${field.label}</option>`)
+    .map(field => `<option value="${escapeAttr(field.key)}">${escapeHtml(field.label)}</option>`)
     .join("");
   elements.sortField.value = state.sortField;
   elements.sortDirectionButton.textContent = state.sortDirection === "asc" ? "升序" : "降序";
@@ -363,7 +370,7 @@ function renderRules() {
         <div>
           <label>字段</label>
           <select data-rule-field="${index}">
-            ${fieldDefs.map(field => `<option value="${field.key}" ${field.key === rule.field ? "selected" : ""}>${field.label}</option>`).join("")}
+            ${fieldDefs.map(field => `<option value="${escapeAttr(field.key)}" ${field.key === rule.field ? "selected" : ""}>${escapeHtml(field.label)}</option>`).join("")}
           </select>
         </div>
         <div>
@@ -458,10 +465,15 @@ function renderTable(rows) {
 
   elements.tableHead.innerHTML = `<tr>${activeFields
     .map(f => `<th>
-      <button data-sort="${f.key}">${f.label}${state.sortField === f.key ? (state.sortDirection === 'asc' ? ' ↑' : ' ↓') : ''}</button>
-      ${f.source ? `<a href="${f.source}" target="_blank" class="source-icon" title="查看平台定价">🔗</a>` : ''}
+      <button data-sort="${escapeAttr(f.key)}">${escapeHtml(f.label)}${state.sortField === f.key ? (state.sortDirection === 'asc' ? ' ↑' : ' ↓') : ''}</button>
+      ${f.source ? `<a href="${escapeAttr(f.source)}" target="_blank" class="source-icon" title="查看平台定价">🔗</a>` : ''}
     </th>`)
     .join("")}</tr>`;
+
+  if (!rows.length) {
+    elements.tableBody.innerHTML = `<tr><td colspan="${activeFields.length || 1}" class="muted" style="text-align:center;padding:24px">没有匹配的模型；请调整搜索或筛选条件。</td></tr>`;
+    return;
+  }
 
   elements.tableBody.innerHTML = rows
     .map(r => `<tr>${activeFields
@@ -497,8 +509,8 @@ function formatCell(row, field, stat) {
   if (field.key === "vendor") {
     const link = vendorLinks[val];
     return link
-      ? `<a href="${link}" target="_blank" class="vendor-link ${className}" title="${sourceTitle || "前往官网定价"}">${val}</a>`
-      : `<span class="${className}" title="${sourceTitle}">${val}</span>`;
+      ? `<a href="${escapeAttr(link)}" target="_blank" class="vendor-link ${className}" title="${escapeAttr(sourceTitle || "前往官网定价")}">${escapeHtml(val)}</a>`
+      : `<span class="${className}" title="${escapeAttr(sourceTitle)}">${escapeHtml(val)}</span>`;
   }
 
   if (field.heatmap && stat && typeof val === "number") {
@@ -506,18 +518,29 @@ function formatCell(row, field, stat) {
     let colorPercent = lengthPercent;
     if (field.inverseHeatmap) colorPercent = 100 - lengthPercent; 
     const color = getHeatmapColor(colorPercent);
+    // Arena Elo: include note and checkedAt in tooltip
+    let tooltipText = verified ? sourceTitle : "未核验";
+    if (field.key === "arenaElo") {
+      const note = row.arenaEloNote;
+      const checkedAt = row.arenaEloCheckedAt;
+      const src = row.arenaEloSource || "";
+      tooltipText = src || tooltipText;
+      if (note) tooltipText += "\n⚠ " + note;
+      if (checkedAt) tooltipText += "\n📅 " + checkedAt;
+    }
+    const staleIndicator = (field.key === "arenaElo" && row.arenaEloNote) ? " stale" : "";
     return `
-      <div class="heatmap-container mini ${className}" title="${verified ? sourceTitle : "未核验"}">
+      <div class="heatmap-container mini ${className}${staleIndicator}" title="${escapeAttr(tooltipText)}">
         <div class="heatmap-bar" style="width: ${lengthPercent}%; background: ${color}"></div>
-        <span class="heatmap-value">${typeof val === 'number' && field.key.includes('pricing') ? val.toFixed(3) : val}</span>
+        <span class="heatmap-value">${typeof val === 'number' && field.key.includes('pricing') ? val.toFixed(3) : escapeHtml(val)}</span>
       </div>
     `;
   }
 
-  if (field.key === "multimodal") return `<span class="tag multimodal ${className}" title="${sourceTitle}">${val}</span>`;
-  if (field.key === "copilotMultiplier") return val === null ? "-" : `<span class="${className}" title="${sourceTitle}">${val}x</span>`;
+  if (field.key === "multimodal") return `<span class="tag multimodal ${className}" title="${escapeAttr(sourceTitle)}">${escapeHtml(val)}</span>`;
+  if (field.key === "copilotMultiplier") return val === null ? "-" : `<span class="${className}" title="${escapeAttr(sourceTitle)}">${escapeHtml(val)}x</span>`;
 
-  return `<span class="${className}" title="${verified ? sourceTitle : "未核验"}">${val}</span>`;
+  return `<span class="${className}" title="${verified ? escapeAttr(sourceTitle) : "未核验"}">${escapeHtml(val)}</span>`;
 }
 
 function isVerifiedField(row, key) {

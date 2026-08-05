@@ -16,14 +16,14 @@
 - 列设置：显示或隐藏任意字段。
 - 价格更新：支持粘贴 JSON，或读取 `data/prices.json`。
 - 数据导入/导出：用 JSON 合并 GPU 数据，按 `id` 覆盖。
-- 本地持久化：导入和价格更新会保存到浏览器 `localStorage`。
+- 本地持久化：导入和价格更新会保存到浏览器 `localStorage`。数据带种子版本号（`src/app.js` 的 `SEED_VERSION`），修改 `data/gpus.json` 种子数据后递增该值，旧缓存会被丢弃并重新加载最新种子。
 
 ## 本地使用
 
 直接打开 `index.html`、`models.html`、`agent-tools.html` 或 `model-tools.html` 即可使用。若要测试 `data/prices.json` / `data/models.json` / `data/agent-tools.json` / `data/model-tools.json` 的读取，请用任意静态服务器启动：
 
-```powershell
-python -m http.server 4173
+```bash
+python3 -m http.server 4173
 ```
 
 然后访问：
@@ -37,23 +37,33 @@ http://localhost:4173/model-tools.html
 
 ## LLM 数据核验
 
-`models.html` 只把 `data/models.json` 中 `verification.verifiedFields` 标记过的字段加粗；没有来源或未核验的字段会以灰色显示。来源可以是官方页面、公开评测页，也可以是人工提供的截图/采购单等明确证据，但要在 `verification.sources` 中写清楚。
+`models.html` 只把 `data/models.json` 中 `verification.verifiedFields` 标记过的字段加粗；没有来源或未核验的字段会以灰色显示。来源可以是官方页面、公开评测页，也可以是人工提供的截图/采购单等明确证据，但要在 `verification.sources` 中写清楚。人工证据类来源（截图、采购单等）的 `url` 允许为空字符串，此时 `label` 必须写清证据形式；空 URL 不代表可以省略来源说明。
+
+数据快照约定：`verification.checkedAt` 表示该条记录最近一次成功核验的日期；页面与文档不得把旧快照数据当作实时值引用。当前模型数据主体快照为 2026-08-05（Arena Elo 仍为 2026-05-21，因 lmarena.ai 抓取超时），GPU 价格为 2026-04~05 人工报价快照，详见 `REFERENCE_SOURCES.md` 的「数据快照时间线」。
 
 评测数据不要混用口径：旧的 `MMLU`、`HumanEval`、`GSM8K`、`MATH` 字段只填同名 benchmark；`MMLU-Pro`、`GPQA-Diamond`、`SWE-Bench Verified`、`Terminal-Bench` 等现代评测写入 `evals.*` 字段。
 
 更新模型数据统一跑 Python 富化脚本。`data/model-overrides.json` 保存人工维护的精选模型、官方价格、评测和备注；脚本会用这些 curated overrides 作为基底，再从 OpenRouter 生成浏览器读取的 `data/models.json`。能结构化解析的来源绝不交给 LLM。
 
-生成宽表数据时运行：
+生成宽表数据时运行（macOS / Linux）：
 
-```powershell
-python scripts\enrich_model_data.py --generate-openrouter --target-count 150 --min-model-count 150 --write --online --output .cache\model-enrich-report.json
+```bash
+python3 scripts/enrich_model_data.py --generate-openrouter --target-count 150 --min-model-count 150 --write --online --output .cache/model-enrich-report.json
+```
+
+仅做增量价格/参数更新（保留现有模型清单，不重新选型）时运行：
+
+```bash
+python3 scripts/enrich_model_data.py --write --online --min-model-count 150 --output .cache/model-enrich-report.json
 ```
 
 只做离线一致性校验、不写回时运行：
 
-```powershell
-python scripts\enrich_model_data.py --verify-only --min-model-count 150 --output .cache\model-verify-report.json
+```bash
+python3 scripts/enrich_model_data.py --verify-only --min-model-count 150 --output .cache/model-verify-report.json
 ```
+
+Windows 下把 `python3` 换成 `python`、路径分隔符换成 `\` 即可。依赖安装：`python3 -m venv .cache/venv && .cache/venv/bin/pip install -r requirements.txt`。
 
 需要在线核验官方页面字符串时再加 `--online`。如果页面文本不够结构化，可显式增加 `--deepseek`；脚本只从 `.env` 读取 `DEEPSEEK_API_KEY`，不会把 key 写入源码或输出。旧的 Node 校验脚本已弃用。
 

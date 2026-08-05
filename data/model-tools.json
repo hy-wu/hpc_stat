@@ -229,7 +229,7 @@
   {
     "id": "openai-codex__gpt-5-1-codex",
     "toolId": "openai-codex",
-    "toolName": "Codex",
+    "toolName": "OpenAI Codex",
     "modelId": "openai/gpt-5.1-codex",
     "modelName": "GPT-5.1-Codex",
     "modelVendor": "OpenAI",
@@ -268,7 +268,7 @@
   {
     "id": "google-gemini-dev-tools__gemini-2-5-pro",
     "toolId": "google-gemini-dev-tools",
-    "toolName": "Gemini CLI",
+    "toolName": "Google Gemini / Gemini CLI",
     "modelId": "gemini-2.5-pro",
     "modelName": "Gemini 2.5 Pro",
     "modelVendor": "Google",
@@ -307,7 +307,7 @@
   {
     "id": "google-gemini-dev-tools__gemini-2-5-flash",
     "toolId": "google-gemini-dev-tools",
-    "toolName": "Gemini CLI",
+    "toolName": "Google Gemini / Gemini CLI",
     "modelId": "gemini-2.5-flash",
     "modelName": "Gemini 2.5 Flash",
     "modelVendor": "Google",
@@ -2933,7 +2933,7 @@
   {
     "id": "openai-codex__gpt-5-3-codex",
     "toolId": "openai-codex",
-    "toolName": "Codex",
+    "toolName": "OpenAI Codex",
     "modelId": "gpt-5.3-codex",
     "modelName": "GPT-5.3-Codex",
     "modelVendor": "OpenAI",
@@ -2972,7 +2972,7 @@
   {
     "id": "openai-codex__gpt-5-2-codex",
     "toolId": "openai-codex",
-    "toolName": "Codex",
+    "toolName": "OpenAI Codex",
     "modelId": "gpt-5.2-codex",
     "modelName": "GPT-5.2-Codex",
     "modelVendor": "OpenAI",
@@ -3011,7 +3011,7 @@
   {
     "id": "openai-codex__openai-gpt-5-1-codex-mini",
     "toolId": "openai-codex",
-    "toolName": "Codex",
+    "toolName": "OpenAI Codex",
     "modelId": "openai/gpt-5.1-codex-mini",
     "modelName": "GPT-5.1-Codex-Mini",
     "modelVendor": "OpenAI",
@@ -3051,7 +3051,7 @@
   {
     "id": "openai-codex__openai-gpt-5-1-codex-max",
     "toolId": "openai-codex",
-    "toolName": "Codex",
+    "toolName": "OpenAI Codex",
     "modelId": "openai/gpt-5.1-codex-max",
     "modelName": "GPT-5.1-Codex-Max",
     "modelVendor": "OpenAI",
@@ -3091,7 +3091,7 @@
   {
     "id": "openai-codex__gpt-5-5",
     "toolId": "openai-codex",
-    "toolName": "Codex",
+    "toolName": "OpenAI Codex",
     "modelId": "gpt-5.5",
     "modelName": "GPT-5.5",
     "modelVendor": "OpenAI",
@@ -3131,7 +3131,7 @@
   {
     "id": "openai-codex__gpt-4-1",
     "toolId": "openai-codex",
-    "toolName": "Codex",
+    "toolName": "OpenAI Codex",
     "modelId": "gpt-4.1",
     "modelName": "GPT-4.1",
     "modelVendor": "OpenAI",

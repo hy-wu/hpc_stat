@@ -88,5 +88,7 @@
   "moore-threads-mtt-s3000": 3000,
   "cambricon-mlu590": 45000,
   "cambricon-mlu370-s4": 3000,
-  "huawei-ascend-910": 35000
+  "huawei-ascend-910": 35000,
+  "nvidia-rtx-5060": 2800,
+  "amd-rx-9060-xt-8gb": 2500
 }

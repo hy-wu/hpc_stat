@@ -1,5 +1,10 @@
 ﻿const sortCollator = new Intl.Collator("zh-Hans-CN", { numeric: true, sensitivity: "base" });
 
+// 每次修改 data/gpus.json 种子数据后递增，用于丢弃过期的 localStorage 快照
+const SEED_VERSION = 3;
+const STORAGE_KEY = "unified-gpu-table-data";
+const STORAGE_VERSION_KEY = "unified-gpu-table-seed-version";
+
 let fieldDefs = [];
 let fieldOrder = [];
 let defaultVisibleKeys = new Set();
@@ -124,14 +129,16 @@ async function loadData() {
     render();
   } catch (err) {
     console.error("Failed to load GPU data:", err);
+    elements.tableBody.innerHTML = `<tr><td colspan="99" class="muted" style="text-align:center;padding:24px">GPU 数据加载失败：请确认通过静态服务器访问且 data/ 目录下文件完整。</td></tr>`;
   }
 }
 
 init();
 
 function loadStoredGpus() {
-  const stored = localStorage.getItem("unified-gpu-table-data");
-  if (!stored) return seedGpus.map(normalizeGpu);
+  const stored = localStorage.getItem(STORAGE_KEY);
+  const storedVersion = localStorage.getItem(STORAGE_VERSION_KEY);
+  if (!stored || storedVersion !== String(SEED_VERSION)) return seedGpus.map(normalizeGpu);
   try {
     const parsed = JSON.parse(stored);
     if (!Array.isArray(parsed)) return seedGpus.map(normalizeGpu);
@@ -145,7 +152,8 @@ function loadStoredGpus() {
 }
 
 function saveGpus() {
-  localStorage.setItem("unified-gpu-table-data", JSON.stringify(state.gpus));
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state.gpus));
+  localStorage.setItem(STORAGE_VERSION_KEY, String(SEED_VERSION));
 }
 
 function normalizeGpu(gpu) {
@@ -393,7 +401,13 @@ function compareValues(a, b, type) {
   if (type === "number") {
     result = Number(a) - Number(b);
   } else if (type === "date") {
-    result = new Date(a).getTime() - new Date(b).getTime();
+    const timeA = new Date(a).getTime();
+    const timeB = new Date(b).getTime();
+    if (Number.isNaN(timeA) || Number.isNaN(timeB)) {
+      result = sortCollator.compare(String(a), String(b));
+    } else {
+      result = timeA - timeB;
+    }
   } else {
     result = String(a).localeCompare(String(b), "zh-CN", { numeric: true });
   }
@@ -452,6 +466,11 @@ function renderTable(rows) {
         `<th><button type="button" data-sort="${field.key}" title="${escapeAttr(field.description || field.label)}">${formatHeaderLabel(field.label)}${sortMark(field.key)}</button></th>`,
     )
     .join("")}</tr>`;
+
+  if (!rows.length) {
+    elements.tableBody.innerHTML = `<tr><td colspan="${columns.length || 1}" class="muted" style="text-align:center;padding:24px">没有匹配的设备；请调整搜索或筛选条件。</td></tr>`;
+    return;
+  }
 
   elements.tableBody.innerHTML = rows
     .map(

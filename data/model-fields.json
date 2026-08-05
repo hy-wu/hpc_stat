@@ -1270,6 +1270,23 @@
       "inverseHeatmap": true
     },
     {
+      "key": "pricing.minimax.in",
+      "label": "MiniMax API In",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://platform.minimaxi.com/document/pricing"
+    },
+    {
+      "key": "pricing.minimax.out",
+      "label": "MiniMax API Out",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
       "key": "pricing.minimax-token-plan-minimax.io.in",
       "label": "MiniMax Token Plan (minimax.io) In",
       "type": "number",
@@ -1356,7 +1373,7 @@
     },
     {
       "key": "pricing.modelscope.in",
-      "label": "ModeLScope In",
+      "label": "ModelScope In",
       "type": "number",
       "visible": false,
       "heatmap": true,
@@ -1365,7 +1382,7 @@
     },
     {
       "key": "pricing.modelscope.out",
-      "label": "ModeLScope Out",
+      "label": "ModelScope Out",
       "type": "number",
       "visible": false,
       "heatmap": true,
@@ -2207,7 +2224,7 @@
       "type": "number",
       "visible": true,
       "heatmap": true,
-      "source": "https://lmarena.ai/leaderboard"
+      "source": "https://arena.ai/leaderboard"
     },
     {
       "key": "llmStats.codeArena",
@@ -2507,7 +2524,7 @@
     "Cloudflare AI Gateway": "https://cloudflare.com",
     "Vultr": "https://vultr.com",
     "KUAE Cloud Coding Plan": "https://kuae.com",
-    "ModeLScope": "https://modelscope.cn",
+    "ModelScope": "https://modelscope.cn",
     "Kimi For Coding": "https://kimi.moonshot.cn",
     "LucidQuery AI": "https://lucidquery.com",
     "Neuralwatt": "https://neuralwatt.com",

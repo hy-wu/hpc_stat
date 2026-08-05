@@ -19,6 +19,9 @@
           <a href="agent-tools.html" class="nav-link active">Agent 工具</a>
           <a href="model-tools.html" class="nav-link">模型 × 工具</a>
         </nav>
+        <div class="actions">
+          <button class="icon-button" id="themeToggleButton" type="button" title="切换暗色/亮色模式">☀️</button>
+        </div>
       </header>
 
       <main class="workspace">
@@ -113,5 +116,34 @@
     </div>
 
     <script type="module" src="src/agent-tools.js"></script>
+    <script>
+      (function() {
+        const THEME_KEY = 'hpc-stat-theme';
+        function getEffectiveTheme() {
+          const stored = localStorage.getItem(THEME_KEY);
+          if (stored === 'dark') return 'dark';
+          if (stored === 'light') return 'light';
+          return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        function applyTheme(theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+          const btn = document.getElementById('themeToggleButton');
+          if (btn) btn.textContent = theme === 'dark' ? '🌙' : '☀️';
+        }
+        applyTheme(getEffectiveTheme());
+        document.addEventListener('DOMContentLoaded', function() {
+          const btn = document.getElementById('themeToggleButton');
+          if (btn) {
+            applyTheme(getEffectiveTheme());
+            btn.addEventListener('click', function() {
+              const current = getEffectiveTheme();
+              const next = current === 'dark' ? 'light' : 'dark';
+              localStorage.setItem(THEME_KEY, next);
+              applyTheme(next);
+            });
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
