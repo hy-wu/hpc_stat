@@ -23,7 +23,7 @@
       "startingUSD": 0,
       "freeTier": true,
       "openSource": false,
-      "usageMeter": "订阅 + premium requests / coding agent 配额",
+      "usageMeter": "订阅 + GitHub AI Credits（Pro $15 / Pro+ $70 / Max $200 每月）",
       "plans": [
         {
           "name": "Free",
@@ -38,6 +38,11 @@
         {
           "name": "Pro+",
           "priceUSD": 39,
+          "period": "user/mo"
+        },
+        {
+          "name": "Max",
+          "priceUSD": 100,
           "period": "user/mo"
         }
       ]
@@ -76,29 +81,29 @@
       "GitHub-hosted model choices"
     ],
     "officialUrl": "https://github.com/features/copilot",
-    "notes": "一个产品横跨编辑器、GitHub 云端 coding agent 和 CLI。",
+    "notes": "一个产品横跨编辑器、GitHub 云端 coding agent 和 CLI。2026 年新增 Max 档（$100/月）。",
     "verification": {
       "status": "partial",
-      "checkedAt": "2026-05-19",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
-        "name",
-        "vendor",
+        "capabilities.backgroundAgent",
+        "capabilities.multiFileEdit",
+        "capabilities.pullRequest",
+        "capabilities.terminal",
         "categoryTags",
+        "customization.rules",
         "deploymentTags",
+        "integrations.git",
+        "integrations.mcp",
+        "name",
+        "officialUrl",
         "platforms",
-        "pricing.startingUSD",
         "pricing.freeTier",
         "pricing.openSource",
         "pricing.plans",
+        "pricing.startingUSD",
         "pricing.usageMeter",
-        "integrations.mcp",
-        "integrations.git",
-        "capabilities.multiFileEdit",
-        "capabilities.terminal",
-        "capabilities.pullRequest",
-        "capabilities.backgroundAgent",
-        "customization.rules",
-        "officialUrl"
+        "vendor"
       ],
       "sources": [
         {
@@ -132,7 +137,7 @@
       "startingUSD": 0,
       "freeTier": true,
       "openSource": false,
-      "usageMeter": "包含在 Copilot Free / Pro / Pro+ 中，使用 premium requests",
+      "usageMeter": "包含在 Copilot Free / Pro / Pro+ / Max 中，消耗 GitHub AI Credits",
       "plans": [
         {
           "name": "Free",
@@ -147,6 +152,11 @@
         {
           "name": "Pro+",
           "priceUSD": 39,
+          "period": "user/mo"
+        },
+        {
+          "name": "Max",
+          "priceUSD": 100,
           "period": "user/mo"
         }
       ]
@@ -186,19 +196,21 @@
     "notes": "旧版 GitHub CLI 扩展已被新的 Copilot CLI / coding agent 工作流替代。",
     "verification": {
       "status": "partial",
-      "checkedAt": "2026-05-19",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
-        "name",
-        "vendor",
+        "capabilities.backgroundAgent",
+        "capabilities.terminal",
         "categoryTags",
         "deploymentTags",
-        "pricing.plans",
-        "pricing.freeTier",
-        "capabilities.terminal",
-        "capabilities.backgroundAgent",
         "integrations.git",
         "integrations.mcp",
-        "officialUrl"
+        "name",
+        "officialUrl",
+        "pricing.freeTier",
+        "pricing.plans",
+        "pricing.startingUSD",
+        "pricing.usageMeter",
+        "vendor"
       ],
       "sources": [
         {
@@ -345,7 +357,7 @@
   {
     "id": "windsurf",
     "name": "Windsurf",
-    "vendor": "Codeium",
+    "vendor": "Cognition",
     "categoryTags": [
       "AI IDE",
       "Coding Agent"
@@ -363,7 +375,7 @@
       "startingUSD": 0,
       "freeTier": true,
       "openSource": false,
-      "usageMeter": "订阅 + API-price extra usage",
+      "usageMeter": "订阅配额（日/周刷新）+ 超额按 API 价购买",
       "plans": [
         {
           "name": "Free",
@@ -382,8 +394,7 @@
         },
         {
           "name": "Teams",
-          "priceUSD": 40,
-          "period": "user/mo"
+          "priceLabel": "$80/mo base + $40/mo per full dev seat"
         },
         {
           "name": "Enterprise",
@@ -426,24 +437,25 @@
       "Windsurf-hosted models"
     ],
     "officialUrl": "https://windsurf.com/",
-    "notes": "官方 pricing 明确给出 Free / Pro / Max / Teams / Enterprise。",
+    "notes": "Windsurf 已被 Cognition 收购，pricing 页与 Devin 统一：Free / Pro $20 / Max $200 / Teams $80+$40/席 / Enterprise。内置 SWE 1.7。",
     "verification": {
       "status": "partial",
-      "checkedAt": "2026-05-19",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "categoryTags",
-        "deploymentTags",
-        "platforms",
-        "pricing.startingUSD",
-        "pricing.freeTier",
-        "pricing.plans",
-        "integrations.mcp",
-        "integrations.git",
         "capabilities.multiFileEdit",
         "capabilities.terminal",
-        "officialUrl"
+        "categoryTags",
+        "deploymentTags",
+        "integrations.git",
+        "integrations.mcp",
+        "name",
+        "officialUrl",
+        "platforms",
+        "pricing.freeTier",
+        "pricing.plans",
+        "pricing.startingUSD",
+        "pricing.usageMeter",
+        "vendor"
       ],
       "sources": [
         {
@@ -453,6 +465,10 @@
         {
           "label": "Windsurf home",
           "url": "https://windsurf.com/"
+        },
+        {
+          "label": "Devin/Windsurf pricing (Cognition)",
+          "url": "https://devin.ai/pricing"
         }
       ]
     },
@@ -624,22 +640,23 @@
       "status": "partial",
       "checkedAt": "2026-05-19",
       "verifiedFields": [
-        "name",
-        "vendor",
+        "access.byok",
+        "capabilities.backgroundAgent",
+        "capabilities.browser",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
+        "capabilities.testRun",
         "categoryTags",
         "deploymentTags",
+        "githubStars",
+        "integrations.git",
+        "name",
+        "officialUrl",
         "platforms",
         "pricing.openSource",
         "pricing.plans",
         "pricing.usageMeter",
-        "access.byok",
-        "integrations.git",
-        "capabilities.multiFileEdit",
-        "capabilities.terminal",
-        "capabilities.testRun",
-        "capabilities.browser",
-        "capabilities.backgroundAgent",
-        "officialUrl"
+        "vendor"
       ],
       "sources": [
         {
@@ -648,7 +665,7 @@
         }
       ]
     },
-    "githubStars": 83740
+    "githubStars": 104112
   },
   {
     "id": "google-gemini-dev-tools",
@@ -724,21 +741,22 @@
       "status": "partial",
       "checkedAt": "2026-05-19",
       "verifiedFields": [
-        "name",
-        "vendor",
+        "access.byok",
+        "capabilities.browser",
+        "capabilities.terminal",
         "categoryTags",
         "deploymentTags",
+        "githubStars",
+        "integrations.git",
+        "integrations.mcp",
+        "name",
+        "officialUrl",
         "platforms",
-        "pricing.startingUSD",
         "pricing.freeTier",
         "pricing.plans",
+        "pricing.startingUSD",
         "pricing.usageMeter",
-        "access.byok",
-        "integrations.mcp",
-        "integrations.git",
-        "capabilities.terminal",
-        "capabilities.browser",
-        "officialUrl"
+        "vendor"
       ],
       "sources": [
         {
@@ -751,93 +769,7 @@
         }
       ]
     },
-    "githubStars": 104292
-  },
-  {
-    "id": "tongyi-lingma",
-    "name": "通义灵码",
-    "vendor": "Alibaba Cloud",
-    "categoryTags": [
-      "AI IDE",
-      "Coding Agent"
-    ],
-    "deploymentTags": [
-      "IDE extension"
-    ],
-    "platforms": [
-      "IDE"
-    ],
-    "pricing": {
-      "startingUSD": 0,
-      "freeTier": true,
-      "openSource": false,
-      "usageMeter": "个人免费使用；企业方案未在首页静态给出",
-      "plans": [
-        {
-          "name": "个人版",
-          "priceUSD": 0,
-          "period": "user/mo"
-        }
-      ]
-    },
-    "access": {
-      "byok": false,
-      "openAICompatible": false,
-      "localModel": false,
-      "modelChoice": "Tongyi / Qwen coding models"
-    },
-    "integrations": {
-      "mcp": null,
-      "git": null
-    },
-    "capabilities": {
-      "multiFileEdit": true,
-      "terminal": true,
-      "testRun": true,
-      "pullRequest": false,
-      "backgroundAgent": true,
-      "browser": false
-    },
-    "customization": {
-      "rules": "企业知识与研发上下文配置"
-    },
-    "privacy": {
-      "localIndexing": "工程自动感知",
-      "enterpriseControls": "企业方案能力"
-    },
-    "builtInModels": [
-      "Tongyi coding models"
-    ],
-    "supportedModels": [
-      "Alibaba-hosted"
-    ],
-    "officialUrl": "https://tongyi.aliyun.com/lingma",
-    "notes": "首页已明确“个人免费使用”，并展示编程智能体、终端执行、工程自动感知。",
-    "verification": {
-      "status": "partial",
-      "checkedAt": "2026-05-19",
-      "verifiedFields": [
-        "name",
-        "vendor",
-        "categoryTags",
-        "deploymentTags",
-        "pricing.startingUSD",
-        "pricing.freeTier",
-        "pricing.plans",
-        "pricing.usageMeter",
-        "capabilities.multiFileEdit",
-        "capabilities.terminal",
-        "capabilities.backgroundAgent",
-        "officialUrl"
-      ],
-      "sources": [
-        {
-          "label": "通义灵码主页",
-          "url": "https://tongyi.aliyun.com/lingma"
-        }
-      ]
-    },
-    "githubStars": null
+    "githubStars": 106373
   },
   {
     "id": "trae",
@@ -857,14 +789,35 @@
       "Web"
     ],
     "pricing": {
-      "startingUSD": null,
-      "freeTier": null,
+      "startingUSD": 0,
+      "freeTier": true,
       "openSource": false,
-      "usageMeter": null,
+      "usageMeter": "Basic usage 额度（Lite $5 / Pro $20 / Pro+ $90 / Ultra $400）+ Bonus usage",
       "plans": [
         {
-          "name": "Pricing",
-          "pricingUrl": "https://www.trae.ai/pricing"
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "user/mo"
+        },
+        {
+          "name": "Lite",
+          "priceUSD": 3,
+          "period": "user/mo"
+        },
+        {
+          "name": "Pro",
+          "priceUSD": 10,
+          "period": "user/mo"
+        },
+        {
+          "name": "Pro+",
+          "priceUSD": 30,
+          "period": "user/mo"
+        },
+        {
+          "name": "Ultra",
+          "priceUSD": 100,
+          "period": "user/mo"
         }
       ]
     },
@@ -900,21 +853,23 @@
       "TRAE-hosted"
     ],
     "officialUrl": "https://www.trae.ai/",
-    "notes": "TRAE SOLO 明确支持 Web 与 Desktop 并行执行；公开价格页未直接列出套餐金额。",
+    "notes": "TRAE SOLO 支持 Web 与 Desktop 并行执行；官方价格页已列出 Lite/Pro/Pro+/Ultra 套餐（Pro 新用户 7 天免费试用）。",
     "verification": {
       "status": "partial",
-      "checkedAt": "2026-05-19",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "categoryTags",
-        "deploymentTags",
-        "platforms",
-        "pricing.plans",
-        "pricing.usageMeter",
         "capabilities.backgroundAgent",
         "capabilities.browser",
-        "officialUrl"
+        "categoryTags",
+        "deploymentTags",
+        "name",
+        "officialUrl",
+        "platforms",
+        "pricing.freeTier",
+        "pricing.plans",
+        "pricing.startingUSD",
+        "pricing.usageMeter",
+        "vendor"
       ],
       "sources": [
         {
@@ -936,7 +891,7 @@
   {
     "id": "qoder",
     "name": "Qoder",
-    "vendor": "Qoder",
+    "vendor": "Alibaba Cloud",
     "categoryTags": [
       "AI IDE",
       "Coding Agent",
@@ -954,14 +909,39 @@
       "JetBrains"
     ],
     "pricing": {
-      "startingUSD": null,
-      "freeTier": null,
+      "startingUSD": 0,
+      "freeTier": true,
       "openSource": false,
-      "usageMeter": null,
+      "usageMeter": "Credits 计量；资源包 $20/1,500 Credits（1 个月有效）",
       "plans": [
         {
-          "name": "Pricing",
-          "pricingUrl": "https://qoder.com/pricing"
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "user/mo",
+          "note": "2 周 Pro 试用 + 300 Credits"
+        },
+        {
+          "name": "Pro",
+          "priceUSD": 20,
+          "period": "user/mo",
+          "note": "2,000 Credits"
+        },
+        {
+          "name": "Pro+",
+          "priceUSD": 60,
+          "period": "user/mo",
+          "note": "6,000 Credits"
+        },
+        {
+          "name": "Ultra",
+          "priceUSD": 200,
+          "period": "user/mo",
+          "note": "20,000 Credits"
+        },
+        {
+          "name": "Lite（Qoder CN 国内版）",
+          "priceLabel": "¥49/月（国内版 Lite 档起）",
+          "note": "Qoder CN 国内订阅独立计价"
         }
       ]
     },
@@ -969,7 +949,7 @@
       "byok": null,
       "openAICompatible": null,
       "localModel": null,
-      "modelChoice": "Latest and advanced AI models"
+      "modelChoice": "模型选择器：Qwen/Kimi/GLM/DeepSeek/MiniMax 等主流模型自由切换"
     },
     "integrations": {
       "mcp": null,
@@ -991,28 +971,42 @@
       "enterpriseControls": null
     },
     "builtInModels": [
-      "Multiple frontier models"
+      "Qwen",
+      "Kimi",
+      "GLM",
+      "DeepSeek",
+      "MiniMax"
     ],
     "supportedModels": [
-      "Qoder-managed stack"
+      "Qwen3.7-Plus/Max",
+      "Qwen3.8",
+      "Kimi-K3",
+      "GLM-5.x",
+      "DeepSeek-V4",
+      "MiniMax-M3"
     ],
     "officialUrl": "https://qoder.com/",
-    "notes": "官方文档强调 Editor + Quest 双工作区，其中 Quest 是 autonomous delegation。",
+    "notes": "阿里智能体编程平台（Editor + Quest 双工作区）。2026-05-20 原通义灵码正式升级为 Qoder CN，覆盖 IDE / JetBrains 插件 / VS Code 插件 / CLI；Qoder CN 底层支持 GLM、DeepSeek、Kimi、MiniMax、Qwen 等国产大模型并按倍率计费，全链路国内云部署。全球用户超 500 万，Gartner 2026 AI 代码智能体报告唯一入围中国厂商。",
     "verification": {
       "status": "partial",
-      "checkedAt": "2026-05-19",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "categoryTags",
-        "deploymentTags",
-        "platforms",
-        "pricing.plans",
-        "pricing.usageMeter",
+        "access.modelChoice",
+        "builtInModels",
+        "capabilities.backgroundAgent",
         "capabilities.multiFileEdit",
         "capabilities.terminal",
-        "capabilities.backgroundAgent",
-        "officialUrl"
+        "categoryTags",
+        "deploymentTags",
+        "name",
+        "officialUrl",
+        "platforms",
+        "pricing.freeTier",
+        "pricing.plans",
+        "pricing.startingUSD",
+        "pricing.usageMeter",
+        "supportedModels",
+        "vendor"
       ],
       "sources": [
         {
@@ -1022,6 +1016,10 @@
         {
           "label": "Qoder docs",
           "url": "https://docs.qoder.com/"
+        },
+        {
+          "label": "Qoder CN 系列介绍（阿里云文档）",
+          "url": "https://help.aliyun.com/zh/lingma/introduction-of-lingma"
         }
       ]
     },
@@ -1092,15 +1090,16 @@
       "status": "partial",
       "checkedAt": "2026-05-19",
       "verifiedFields": [
-        "name",
-        "vendor",
         "categoryTags",
         "deploymentTags",
-        "pricing.startingUSD",
+        "githubStars",
+        "name",
+        "officialUrl",
         "pricing.freeTier",
         "pricing.openSource",
         "pricing.plans",
-        "officialUrl"
+        "pricing.startingUSD",
+        "vendor"
       ],
       "sources": [
         {
@@ -1109,7 +1108,7 @@
         }
       ]
     },
-    "githubStars": 2505
+    "githubStars": 2573
   },
   {
     "id": "kilo-code",
@@ -1295,22 +1294,23 @@
       "status": "partial",
       "checkedAt": "2026-05-19",
       "verifiedFields": [
-        "name",
-        "vendor",
+        "access.byok",
+        "access.localModel",
+        "access.openAICompatible",
+        "capabilities.backgroundAgent",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
         "categoryTags",
         "deploymentTags",
+        "githubStars",
+        "name",
+        "officialUrl",
         "platforms",
-        "pricing.startingUSD",
         "pricing.freeTier",
         "pricing.openSource",
         "pricing.plans",
-        "access.byok",
-        "access.openAICompatible",
-        "access.localModel",
-        "capabilities.multiFileEdit",
-        "capabilities.terminal",
-        "capabilities.backgroundAgent",
-        "officialUrl"
+        "pricing.startingUSD",
+        "vendor"
       ],
       "sources": [
         {
@@ -1319,7 +1319,7 @@
         }
       ]
     },
-    "githubStars": 12622
+    "githubStars": 13611
   },
   {
     "id": "cline",
@@ -1396,25 +1396,26 @@
       "status": "partial",
       "checkedAt": "2026-05-19",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "categoryTags",
-        "deploymentTags",
-        "platforms",
-        "pricing.startingUSD",
-        "pricing.freeTier",
-        "pricing.openSource",
         "access.byok",
-        "access.openAICompatible",
         "access.localModel",
-        "integrations.mcp",
-        "integrations.git",
+        "access.openAICompatible",
+        "capabilities.backgroundAgent",
+        "capabilities.browser",
         "capabilities.multiFileEdit",
         "capabilities.terminal",
         "capabilities.testRun",
-        "capabilities.backgroundAgent",
-        "capabilities.browser",
-        "officialUrl"
+        "categoryTags",
+        "deploymentTags",
+        "githubStars",
+        "integrations.git",
+        "integrations.mcp",
+        "name",
+        "officialUrl",
+        "platforms",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "pricing.startingUSD",
+        "vendor"
       ],
       "sources": [
         {
@@ -1423,7 +1424,7 @@
         }
       ]
     },
-    "githubStars": 62014
+    "githubStars": 65682
   },
   {
     "id": "roo-code",
@@ -1492,20 +1493,21 @@
       "status": "partial",
       "checkedAt": "2026-05-19",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "categoryTags",
-        "deploymentTags",
-        "platforms",
-        "pricing.startingUSD",
-        "pricing.freeTier",
-        "pricing.openSource",
         "access.byok",
-        "integrations.mcp",
         "capabilities.multiFileEdit",
         "capabilities.terminal",
+        "categoryTags",
+        "deploymentTags",
+        "githubStars",
+        "integrations.mcp",
+        "name",
+        "notes",
         "officialUrl",
-        "notes"
+        "platforms",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "pricing.startingUSD",
+        "vendor"
       ],
       "sources": [
         {
@@ -1514,7 +1516,7 @@
         }
       ]
     },
-    "githubStars": 24102
+    "githubStars": 24354
   },
   {
     "id": "continue",
@@ -1585,18 +1587,19 @@
       "status": "partial",
       "checkedAt": "2026-05-19",
       "verifiedFields": [
-        "name",
-        "vendor",
+        "access.byok",
+        "access.localModel",
+        "access.openAICompatible",
         "categoryTags",
         "deploymentTags",
+        "githubStars",
+        "name",
+        "officialUrl",
         "platforms",
-        "pricing.startingUSD",
         "pricing.freeTier",
         "pricing.openSource",
-        "access.byok",
-        "access.openAICompatible",
-        "access.localModel",
-        "officialUrl"
+        "pricing.startingUSD",
+        "vendor"
       ],
       "sources": [
         {
@@ -1605,7 +1608,7 @@
         }
       ]
     },
-    "githubStars": 33265
+    "githubStars": 35332
   },
   {
     "id": "aider",
@@ -1677,22 +1680,23 @@
       "status": "partial",
       "checkedAt": "2026-05-19",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "categoryTags",
-        "deploymentTags",
-        "platforms",
-        "pricing.startingUSD",
-        "pricing.freeTier",
-        "pricing.openSource",
         "access.byok",
-        "access.openAICompatible",
         "access.localModel",
-        "integrations.git",
+        "access.openAICompatible",
         "capabilities.multiFileEdit",
         "capabilities.terminal",
         "capabilities.testRun",
-        "officialUrl"
+        "categoryTags",
+        "deploymentTags",
+        "githubStars",
+        "integrations.git",
+        "name",
+        "officialUrl",
+        "platforms",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "pricing.startingUSD",
+        "vendor"
       ],
       "sources": [
         {
@@ -1705,7 +1709,7 @@
         }
       ]
     },
-    "githubStars": 45004
+    "githubStars": 47958
   },
   {
     "id": "sourcegraph-cody",
@@ -1780,15 +1784,16 @@
       "status": "partial",
       "checkedAt": "2026-05-19",
       "verifiedFields": [
-        "name",
-        "vendor",
         "categoryTags",
         "deploymentTags",
+        "githubStars",
+        "name",
+        "officialUrl",
         "platforms",
-        "pricing.startingUSD",
         "pricing.freeTier",
         "pricing.plans",
-        "officialUrl"
+        "pricing.startingUSD",
+        "vendor"
       ],
       "sources": [
         {
@@ -1797,7 +1802,7 @@
         }
       ]
     },
-    "githubStars": 3796
+    "githubStars": 3809
   },
   {
     "id": "jetbrains-ai-assistant",
@@ -1899,14 +1904,33 @@
       "GitHub integrations"
     ],
     "pricing": {
-      "startingUSD": null,
-      "freeTier": false,
+      "startingUSD": 0,
+      "freeTier": true,
       "openSource": false,
-      "usageMeter": "Seat + agent compute",
+      "usageMeter": "订阅配额（日/周刷新）+ 超额按 API 价购买",
       "plans": [
         {
-          "name": "Pricing",
-          "pricingUrl": "https://devin.ai/pricing"
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "user/mo"
+        },
+        {
+          "name": "Pro",
+          "priceUSD": 20,
+          "period": "user/mo"
+        },
+        {
+          "name": "Max",
+          "priceUSD": 200,
+          "period": "user/mo"
+        },
+        {
+          "name": "Teams",
+          "priceLabel": "$80/mo base + $40/mo per full dev seat"
+        },
+        {
+          "name": "Enterprise",
+          "priceLabel": "Custom"
         }
       ]
     },
@@ -1942,31 +1966,37 @@
       "Devin-managed stack"
     ],
     "officialUrl": "https://devin.ai/",
-    "notes": "偏云端异步 issue/PR 级软件工程 agent。",
+    "notes": "偏云端异步 issue/PR 级软件工程 agent；现与 Windsurf 共用统一订阅体系（Free / Pro $20 / Max $200）。",
     "verification": {
       "status": "partial",
-      "checkedAt": "2026-05-19",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "categoryTags",
-        "deploymentTags",
-        "platforms",
-        "pricing.plans",
-        "pricing.usageMeter",
-        "integrations.git",
-        "capabilities.multiFileEdit",
-        "capabilities.terminal",
-        "capabilities.testRun",
-        "capabilities.pullRequest",
         "capabilities.backgroundAgent",
         "capabilities.browser",
-        "officialUrl"
+        "capabilities.multiFileEdit",
+        "capabilities.pullRequest",
+        "capabilities.terminal",
+        "capabilities.testRun",
+        "categoryTags",
+        "deploymentTags",
+        "integrations.git",
+        "name",
+        "officialUrl",
+        "platforms",
+        "pricing.freeTier",
+        "pricing.plans",
+        "pricing.startingUSD",
+        "pricing.usageMeter",
+        "vendor"
       ],
       "sources": [
         {
           "label": "Devin",
           "url": "https://devin.ai/"
+        },
+        {
+          "label": "Devin/Windsurf pricing (Cognition)",
+          "url": "https://devin.ai/pricing"
         }
       ]
     },
@@ -2040,19 +2070,20 @@
       "status": "partial",
       "checkedAt": "2026-05-19",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "categoryTags",
-        "deploymentTags",
-        "platforms",
-        "pricing.startingUSD",
-        "pricing.freeTier",
-        "pricing.openSource",
         "access.byok",
         "access.openAICompatible",
-        "integrations.mcp",
         "capabilities.terminal",
-        "officialUrl"
+        "categoryTags",
+        "deploymentTags",
+        "githubStars",
+        "integrations.mcp",
+        "name",
+        "officialUrl",
+        "platforms",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "pricing.startingUSD",
+        "vendor"
       ],
       "sources": [
         {
@@ -2061,7 +2092,7 @@
         }
       ]
     },
-    "githubStars": 24409
+    "githubStars": 27093
   },
   {
     "id": "astrbot",
@@ -2130,20 +2161,21 @@
       "status": "partial",
       "checkedAt": "2026-05-19",
       "verifiedFields": [
-        "name",
-        "vendor",
+        "access.byok",
+        "access.localModel",
+        "access.openAICompatible",
+        "capabilities.backgroundAgent",
         "categoryTags",
         "deploymentTags",
+        "githubStars",
+        "integrations.mcp",
+        "name",
+        "officialUrl",
         "platforms",
-        "pricing.startingUSD",
         "pricing.freeTier",
         "pricing.openSource",
-        "access.byok",
-        "access.openAICompatible",
-        "access.localModel",
-        "integrations.mcp",
-        "capabilities.backgroundAgent",
-        "officialUrl"
+        "pricing.startingUSD",
+        "vendor"
       ],
       "sources": [
         {
@@ -2152,7 +2184,7 @@
         }
       ]
     },
-    "githubStars": 32570
+    "githubStars": 38635
   },
   {
     "id": "deepseek-tui",
@@ -2226,27 +2258,28 @@
       "status": "partial",
       "checkedAt": "2026-05-19",
       "verifiedFields": [
-        "name",
-        "vendor",
-        "categoryTags",
-        "deploymentTags",
-        "platforms",
-        "pricing.startingUSD",
-        "pricing.freeTier",
-        "pricing.openSource",
-        "pricing.plans",
-        "pricing.usageMeter",
         "access.byok",
-        "access.openAICompatible",
         "access.localModel",
-        "integrations.mcp",
-        "integrations.git",
+        "access.openAICompatible",
+        "capabilities.backgroundAgent",
+        "capabilities.browser",
         "capabilities.multiFileEdit",
         "capabilities.terminal",
         "capabilities.testRun",
-        "capabilities.backgroundAgent",
-        "capabilities.browser",
-        "officialUrl"
+        "categoryTags",
+        "deploymentTags",
+        "githubStars",
+        "integrations.git",
+        "integrations.mcp",
+        "name",
+        "officialUrl",
+        "platforms",
+        "pricing.freeTier",
+        "pricing.openSource",
+        "pricing.plans",
+        "pricing.startingUSD",
+        "pricing.usageMeter",
+        "vendor"
       ],
       "sources": [
         {
@@ -2259,7 +2292,7 @@
         }
       ]
     },
-    "githubStars": 32242
+    "githubStars": 40478
   },
   {
     "id": "reasonix",
@@ -2330,21 +2363,22 @@
       "status": "partial",
       "checkedAt": "2026-05-19",
       "verifiedFields": [
-        "name",
-        "vendor",
+        "access.byok",
+        "capabilities.multiFileEdit",
+        "capabilities.terminal",
         "categoryTags",
         "deploymentTags",
+        "githubStars",
+        "integrations.mcp",
+        "name",
+        "officialUrl",
         "platforms",
-        "pricing.startingUSD",
         "pricing.freeTier",
         "pricing.openSource",
         "pricing.plans",
+        "pricing.startingUSD",
         "pricing.usageMeter",
-        "access.byok",
-        "integrations.mcp",
-        "capabilities.multiFileEdit",
-        "capabilities.terminal",
-        "officialUrl"
+        "vendor"
       ],
       "sources": [
         {
@@ -2357,7 +2391,7 @@
         }
       ]
     },
-    "githubStars": 4516
+    "githubStars": 31320
   },
   {
     "id": "openhands",
@@ -2439,24 +2473,25 @@
       "status": "partial",
       "checkedAt": "2026-05-19",
       "verifiedFields": [
-        "name",
-        "vendor",
+        "access.byok",
+        "access.openAICompatible",
+        "capabilities.backgroundAgent",
+        "capabilities.pullRequest",
+        "capabilities.terminal",
         "categoryTags",
         "deploymentTags",
+        "githubStars",
+        "integrations.git",
+        "integrations.mcp",
+        "name",
+        "officialUrl",
         "platforms",
-        "pricing.startingUSD",
         "pricing.freeTier",
         "pricing.openSource",
         "pricing.plans",
+        "pricing.startingUSD",
         "pricing.usageMeter",
-        "access.byok",
-        "access.openAICompatible",
-        "integrations.mcp",
-        "integrations.git",
-        "capabilities.terminal",
-        "capabilities.pullRequest",
-        "capabilities.backgroundAgent",
-        "officialUrl"
+        "vendor"
       ],
       "sources": [
         {
@@ -2473,7 +2508,7 @@
         }
       ]
     },
-    "githubStars": 74092
+    "githubStars": 83185
   },
   {
     "id": "openclaw",
@@ -2555,23 +2590,24 @@
       "status": "partial",
       "checkedAt": "2026-05-19",
       "verifiedFields": [
-        "name",
-        "vendor",
+        "access.byok",
+        "access.localModel",
+        "access.openAICompatible",
+        "capabilities.backgroundAgent",
+        "capabilities.browser",
+        "capabilities.terminal",
         "categoryTags",
         "deploymentTags",
+        "githubStars",
+        "name",
+        "officialUrl",
         "platforms",
-        "pricing.startingUSD",
         "pricing.freeTier",
         "pricing.openSource",
         "pricing.plans",
+        "pricing.startingUSD",
         "pricing.usageMeter",
-        "access.byok",
-        "access.openAICompatible",
-        "access.localModel",
-        "capabilities.terminal",
-        "capabilities.backgroundAgent",
-        "capabilities.browser",
-        "officialUrl"
+        "vendor"
       ],
       "sources": [
         {
@@ -2588,7 +2624,7 @@
         }
       ]
     },
-    "githubStars": 373124
+    "githubStars": 385229
   },
   {
     "id": "hermes-agent",
@@ -2696,6 +2732,234 @@
         {
           "label": "Hermes Agent license",
           "url": "https://github.com/NousResearch/hermes-agent/blob/main/LICENSE"
+        }
+      ]
+    },
+    "githubStars": null
+  },
+  {
+    "id": "antigravity",
+    "name": "Google Antigravity",
+    "vendor": "Google",
+    "categoryTags": [
+      "AI IDE",
+      "Coding Agent",
+      "Vibe Coding CLI"
+    ],
+    "deploymentTags": [
+      "Standalone IDE",
+      "Desktop app",
+      "Terminal CLI",
+      "SDK"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": false,
+      "usageMeter": "Google AI 订阅计划的速率限额与 AI 信用额度池；企业版经 Google Cloud 按用量计费",
+      "plans": [
+        {
+          "name": "Free",
+          "priceUSD": 0,
+          "period": "user/mo",
+          "note": "GA 免费档：基础每周限额，无限 Tab 补全/Command"
+        },
+        {
+          "name": "Google AI Pro",
+          "priceUSD": 19.99,
+          "period": "user/mo",
+          "note": "更充足速率限额 + 灵活 AI 信用额度池"
+        },
+        {
+          "name": "Google AI Ultra",
+          "priceUSD": 100,
+          "period": "user/mo",
+          "note": "2026 I/O 新增档：Antigravity 额度为 Pro 的 5 倍"
+        },
+        {
+          "name": "Google AI Ultra（顶配）",
+          "priceUSD": 200,
+          "period": "user/mo",
+          "note": "原 $250 降价：额度为 Pro 的 20 倍"
+        },
+        {
+          "name": "Organization",
+          "priceLabel": "Usage-based via Google Cloud",
+          "note": "经 Gemini Enterprise Agent 平台访问 Antigravity 2.0 与 CLI"
+        }
+      ]
+    },
+    "access": {
+      "byok": false,
+      "openAICompatible": false,
+      "localModel": false,
+      "modelChoice": "Gemini 3.5 Flash 默认；另提供 Gemini 3.1 Pro、Claude Sonnet/Opus、gpt-oss-120b"
+    },
+    "integrations": {
+      "mcp": true,
+      "git": true
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": true,
+      "testRun": true,
+      "pullRequest": false,
+      "backgroundAgent": true,
+      "browser": true
+    },
+    "customization": {
+      "rules": "全局规则 + 工作区规则；独立额度规则池（Gemini Pro/Flash/Claude）"
+    },
+    "privacy": {
+      "localIndexing": "Agent Manager 会话上下文",
+      "enterpriseControls": "Google Cloud ToS / 企业组织计划"
+    },
+    "builtInModels": [
+      "Gemini 3.5 Flash",
+      "Gemini 3.1 Pro",
+      "Claude Sonnet/Opus 4.6",
+      "gpt-oss-120b"
+    ],
+    "supportedModels": [
+      "Google Gemini",
+      "Anthropic Claude",
+      "gpt-oss"
+    ],
+    "officialUrl": "https://antigravity.google/",
+    "notes": "Google DeepMind 于 2025-11 发布的 agent-first 开发平台（VS Code 分支 IDE）。2026 I/O 推出 Antigravity 2.0：四形态（IDE / 独立桌面应用 / Go 版 CLI / Python SDK），Antigravity CLI 取代 Gemini CLI（后者 2026-06-18 停服）。个人免费起步，用量取自 Google AI 计划。",
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-08-06",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "access.modelChoice",
+        "integrations.mcp",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "Antigravity pricing",
+          "url": "https://antigravity.google/pricing"
+        },
+        {
+          "label": "Google I/O 2026 Antigravity 2.0 报道",
+          "url": "https://news.sina.cn/ai/2026-05-21/detail-inhyrrtt8277478.d.html"
+        }
+      ]
+    },
+    "githubStars": null
+  },
+  {
+    "id": "workbuddy",
+    "name": "WorkBuddy",
+    "vendor": "Tencent",
+    "categoryTags": [
+      "AI Agent",
+      "Office Agent"
+    ],
+    "deploymentTags": [
+      "Desktop app",
+      "Web app",
+      "Mobile app",
+      "WeChat mini program"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "pricing": {
+      "startingUSD": 0,
+      "freeTier": true,
+      "openSource": false,
+      "usageMeter": "积分/额度制；企业版另行商务定价",
+      "plans": [
+        {
+          "name": "个人版",
+          "priceUSD": 0,
+          "period": "user/mo",
+          "note": "公测免费体验"
+        },
+        {
+          "name": "企业版 WorkBuddy Enterprise",
+          "priceLabel": "Custom",
+          "note": "2026-06-05 腾讯云 AI 产业应用大会发布，含办公智能体套件 Agent Suite"
+        }
+      ]
+    },
+    "access": {
+      "byok": false,
+      "openAICompatible": false,
+      "localModel": false,
+      "modelChoice": "腾讯混元及合作模型，专家团/技能体系调度"
+    },
+    "integrations": {
+      "mcp": null,
+      "git": null
+    },
+    "capabilities": {
+      "multiFileEdit": true,
+      "terminal": false,
+      "testRun": false,
+      "pullRequest": false,
+      "backgroundAgent": true,
+      "browser": true
+    },
+    "customization": {
+      "rules": "Skill 技能、连接器（Slack/Telegram 等）、专家团与自动化编排"
+    },
+    "privacy": {
+      "localIndexing": "授权文件夹读取与批量处理",
+      "enterpriseControls": "腾讯云底座 / 企业版管控"
+    },
+    "builtInModels": [
+      "腾讯混元"
+    ],
+    "supportedModels": [
+      "Tencent-hosted"
+    ],
+    "officialUrl": "https://www.codebuddy.cn/",
+    "notes": "腾讯 CodeBuddy 团队推出的全场景职场 AI 智能体桌面工作台（'AI 同事'）：2026-03-09 开启公测，一句话下达任务即自主规划、调用工具、操作本地文件并交付文档/表格/PPT 等成果；支持多 Agent 并行、桌面/网页/手机 App/微信小程序多入口；2026-06-05 发布企业版与 Agent Suite。",
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-08-06",
+      "verifiedFields": [
+        "name",
+        "vendor",
+        "categoryTags",
+        "deploymentTags",
+        "platforms",
+        "pricing.startingUSD",
+        "pricing.freeTier",
+        "pricing.plans",
+        "pricing.usageMeter",
+        "capabilities.multiFileEdit",
+        "capabilities.backgroundAgent",
+        "officialUrl"
+      ],
+      "sources": [
+        {
+          "label": "WorkBuddy 快速开始（CodeBuddy 文档）",
+          "url": "https://www.codebuddy.cn/docs/workbuddy/Quickstart"
+        },
+        {
+          "label": "WorkBuddy 公测与企业版报道",
+          "url": "https://m.sohu.com/a/1054379176_121124359"
         }
       ]
     },

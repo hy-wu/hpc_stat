@@ -41,9 +41,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "copilotMultiplier",
         "evals.browseComp",
@@ -150,6 +152,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -164,7 +170,7 @@
       "tools": 39.6,
       "vision": 44.5
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -209,9 +215,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "copilotMultiplier",
         "evals.browseComp",
@@ -315,6 +323,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -330,7 +342,7 @@
       "vision": 33.9,
       "writing": 35.6
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -370,9 +382,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "copilotMultiplier",
         "evals.aime2025",
@@ -462,6 +476,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -476,7 +494,7 @@
       "vision": 19.2,
       "writing": 35.3
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -521,9 +539,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "copilotMultiplier",
         "evals.aime2025",
@@ -623,6 +643,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -634,7 +658,7 @@
       "speed": 114.0,
       "writing": 25.3
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -680,9 +704,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "copilotMultiplier",
         "evals.browseComp",
@@ -789,6 +815,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -804,7 +834,7 @@
       "vision": 46.8,
       "writing": 30.8
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -822,7 +852,7 @@
     "math": null,
     "evals": {
       "mmluPro": 87.5,
-      "gpqaDiamond": 92.8,
+      "gpqaDiamond": 93.0,
       "terminalBench": 75.1,
       "browseComp": 82.7,
       "hle": 39.8
@@ -846,9 +876,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "copilotMultiplier",
         "evals.browseComp",
@@ -951,6 +983,14 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -966,7 +1006,7 @@
       "vision": 38.1,
       "writing": 35.5
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -1011,9 +1051,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "copilotMultiplier",
         "evals.caisiElo",
@@ -1107,6 +1149,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -1118,7 +1164,7 @@
       "speed": 451.0,
       "writing": 22.2
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -1154,7 +1200,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "copilotMultiplier",
@@ -1256,7 +1302,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -1331,7 +1377,7 @@
       "speed": 262.0,
       "tools": 27.6
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -1372,9 +1418,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "copilotMultiplier",
         "evals.aime2025",
@@ -1466,6 +1514,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -1480,7 +1532,7 @@
       "vision": 35.7,
       "writing": 33.1
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -1519,9 +1571,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "copilotMultiplier",
         "evals.aime2025",
@@ -1599,6 +1653,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -1609,7 +1667,7 @@
       "speed": 89.0,
       "vision": 12.8
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -1651,9 +1709,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "copilotMultiplier",
         "evals.aime2024",
@@ -1751,6 +1811,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -1762,7 +1826,7 @@
       "speed": 317.0,
       "writing": 10.7
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -1835,9 +1899,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.browseComp",
         "evals.caisiElo",
@@ -1984,6 +2050,14 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": ""
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -1999,7 +2073,7 @@
       "tools": 35.2,
       "vision": 33.6
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -2066,9 +2140,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.browseComp",
         "evals.gpqaDiamond",
@@ -2213,6 +2289,14 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": ""
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -2227,7 +2311,7 @@
       "tools": 28.3,
       "vision": 31.0
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -2274,9 +2358,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2024",
         "evals.aime2025",
@@ -2376,6 +2462,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -2387,7 +2477,7 @@
       "reasoning": 35.5,
       "speed": 272.0
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -2434,9 +2524,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2024",
         "evals.aime2025",
@@ -2536,6 +2628,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -2546,7 +2642,7 @@
       "reasoning": 28.9,
       "speed": 463.0
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -2567,7 +2663,7 @@
       "liveCodeBench": 43.4,
       "mmluPro": 80.5
     },
-    "contextWindow": "1.0M",
+    "contextWindow": "1M",
     "pricing": {
       "openrouter": {
         "in": 0.2,
@@ -2576,9 +2672,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.liveCodeBench",
@@ -2628,12 +2726,16 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "params": 400.0,
     "paramsActive": 17.0,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -2654,7 +2756,7 @@
       "liveCodeBench": 32.8,
       "mmluPro": 74.3
     },
-    "contextWindow": "1.3M",
+    "contextWindow": "10M",
     "pricing": {
       "openrouter": {
         "in": 0.1,
@@ -2667,9 +2769,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.liveCodeBench",
@@ -2725,12 +2829,16 @@
         {
           "label": "Groq pricing",
           "url": "https://groq.com/pricing/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "params": 109.0,
     "paramsActive": 17.0,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -2758,7 +2866,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -2802,7 +2910,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -2846,7 +2954,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -2895,7 +3003,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "llmStats.codeArena",
@@ -2943,7 +3051,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1280.2,
+    "arenaElo": 1476.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -2960,9 +3068,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "multimodal",
         "name",
@@ -2980,12 +3090,17 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "notes": "GPT Chat Latest points to OpenAI's stable API alias `chat-latest` that always resolves to the latest Instant chat model used in ChatGPT.",
-    "arenaEloCheckedAt": "2026-05-21",
-    "arenaEloNote": "Score from previous snapshot (arena.ai Aug 2026 not matched); needs re-verification"
+    "arenaEloCheckedAt": "Aug 1, 2026",
+    "arenaEloNote": "Score from previous snapshot (arena.ai Aug 2026 not matched); needs re-verification",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "x-ai/grok-4.3",
@@ -3020,9 +3135,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "llmStats.codeArena",
         "llmStats.speed",
@@ -3070,6 +3187,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": ""
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -3078,7 +3199,7 @@
       "codeArena": 420.0,
       "speed": 209.0
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -3089,7 +3210,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1354.0,
+    "arenaElo": 1307.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3106,9 +3227,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "multimodal",
         "name",
@@ -3126,12 +3249,16 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "notes": "Granite 4.1 8B is a dense, decoder-only 8-billion-parameter language model from IBM, part of the Granite 4.1 family.",
     "params": 8.0,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -3170,8 +3297,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -3211,11 +3341,15 @@
         {
           "label": "LLM Stats model catalog",
           "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "notes": "Mistral Medium 3.5 is a dense 128B instruction-following model from Mistral AI.",
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -3289,7 +3423,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3342,7 +3476,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3405,7 +3539,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
@@ -3491,9 +3625,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "multimodal",
         "name",
@@ -3516,11 +3652,15 @@
         {
           "label": "阿里云 Model Studio 定价",
           "url": "https://help.aliyun.com/zh/model-studio/model-pricing"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "notes": "Qwen3.6-Max-Preview is a proprietary frontier model from Alibaba Cloud built on a sparse mixture-of-experts architecture with approximately 1 trillion total parameters.",
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -3564,7 +3704,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
@@ -3681,7 +3821,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "evals.browseComp",
@@ -3735,7 +3875,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -3763,7 +3903,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1456.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3782,15 +3922,18 @@
         "out": 0.21
       },
       "tencent": {
-        "hit": 0.4,
-        "in": 1.2,
+        "hit": 0.25,
+        "in": 1.0,
         "out": 4.0
       }
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.browseComp",
         "evals.gpqaDiamond",
@@ -3830,10 +3973,16 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
-    "notes": "Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use."
+    "notes": "Hy3 preview is a high-efficiency Mixture-of-Experts model from Tencent designed for agentic workflows and production use.",
+    "arenaEloCheckedAt": "Aug 1, 2026",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "xiaomi/mimo-v2.5-pro",
@@ -3882,9 +4031,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.hle",
@@ -3962,11 +4113,15 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "notes": "MiMo-V2.5-Pro is Xiaomi’s flagship model, delivering strong performance in general agentic capabilities, complex software engineering, and long-horizon tasks, with top rankings on benchmarks such as ClawEval, GDPVal, and",
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -4002,9 +4157,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "multimodal",
         "name",
@@ -4034,11 +4191,15 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "notes": "MiMo-V2.5 is a native omnimodal model by Xiaomi.",
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -4066,7 +4227,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -4111,7 +4272,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -4152,7 +4313,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -4282,9 +4443,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.browseComp",
         "evals.gpqaDiamond",
@@ -4402,6 +4565,10 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": ""
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -4416,7 +4583,7 @@
       "tools": 33.4,
       "vision": 38.0
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -4528,9 +4695,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.browseComp",
         "evals.gpqaDiamond",
@@ -4643,6 +4812,10 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": ""
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -4657,7 +4830,7 @@
       "tools": 30.6,
       "vision": 39.5
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -4700,9 +4873,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.hle",
@@ -4783,6 +4958,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -4798,7 +4977,7 @@
     },
     "params": 26.0,
     "paramsActive": 4.0,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -4845,9 +5024,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.hle",
@@ -4931,6 +5112,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -4942,7 +5127,7 @@
       "speed": 115.0
     },
     "params": 31.0,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -4987,9 +5172,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.hle",
@@ -5078,6 +5265,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": ""
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -5093,7 +5284,7 @@
       "tools": 31.0,
       "vision": 36.1
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -5136,9 +5327,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "multimodal",
         "name",
@@ -5170,11 +5363,15 @@
         {
           "label": "智谱开放平台定价",
           "url": "https://open.bigmodel.cn/pricing"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "notes": "GLM-5V-Turbo is Z.ai’s first native multimodal agent foundation model, built for vision-based coding and agent-driven tasks.",
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -5202,9 +5399,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "multimodal",
         "name",
@@ -5222,11 +5421,15 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "notes": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI.",
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -5258,7 +5461,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -5309,7 +5512,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -5355,7 +5558,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -5398,7 +5601,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -5442,7 +5645,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -5486,7 +5689,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -5537,9 +5740,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.reportedSweBenchVerified",
         "llmStats.codeArena",
@@ -5571,6 +5776,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -5580,7 +5789,7 @@
       "coding": 28.6,
       "reasoning": 45.5
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -5614,9 +5823,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.reportedSweBenchVerified",
         "llmStats.codeArena",
@@ -5650,6 +5861,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -5661,7 +5876,7 @@
       "search": 33.1,
       "writing": 28.4
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -5672,14 +5887,14 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1445.0,
+    "arenaElo": 1417.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {},
-    "contextWindow": "197K",
+    "contextWindow": "205K",
     "pricing": {
       "openrouter": {
         "in": 0.27,
@@ -5710,9 +5925,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "llmStats.codeArena",
         "llmStats.coding",
@@ -5781,6 +5998,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": ""
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -5791,7 +6012,7 @@
       "reasoning": 53.9,
       "speed": 243.0
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -5830,9 +6051,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.hle",
@@ -5902,6 +6125,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -5914,7 +6141,7 @@
       "speed": 518.0,
       "writing": 20.9
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -5955,7 +6182,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -6068,7 +6295,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -6139,7 +6366,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -6238,7 +6465,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -6314,7 +6541,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "evals.gpqaDiamond",
@@ -6389,7 +6616,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -6441,9 +6668,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2025",
         "evals.gpqaDiamond",
@@ -6508,6 +6737,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": ""
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -6520,7 +6753,7 @@
       "speed": 657.0,
       "writing": 7.3
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -6556,9 +6789,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "llmStats.codeArena",
         "llmStats.speed",
@@ -6614,6 +6849,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -6622,7 +6861,7 @@
       "codeArena": 590.0,
       "speed": 276.0
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -6662,9 +6901,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.hle",
@@ -6713,11 +6954,15 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "notes": "Gemini 3.1 Flash Lite Preview is Google's high-efficiency model optimized for high-volume use cases.",
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -6748,7 +6993,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -6793,7 +7038,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -6856,9 +7101,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.browseComp",
         "evals.gpqaDiamond",
@@ -6959,6 +7206,10 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": ""
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -6974,7 +7225,7 @@
     },
     "params": 35.0,
     "paramsActive": 3.0,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -7020,9 +7271,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.browseComp",
         "evals.gpqaDiamond",
@@ -7122,6 +7375,10 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": ""
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -7136,7 +7393,7 @@
       "writing": 22.3
     },
     "params": 27.0,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -7186,9 +7443,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.browseComp",
         "evals.gpqaDiamond",
@@ -7294,6 +7553,10 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": ""
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -7309,7 +7572,7 @@
     },
     "params": 122.0,
     "paramsActive": 10.0,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -7345,9 +7608,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "multimodal",
         "name",
@@ -7377,11 +7642,15 @@
         {
           "label": "腾讯混元定价",
           "url": "https://cloud.tencent.com.cn/document/product/1823/130055"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "notes": "The Qwen3.5 native vision-language Flash models are built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency.",
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -7464,7 +7733,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -7509,7 +7778,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -7571,9 +7840,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.browseComp",
         "evals.gpqaDiamond",
@@ -7662,6 +7933,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -7677,7 +7952,7 @@
       "tools": 34.1,
       "vision": 41.0
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -7708,7 +7983,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -7781,9 +8056,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.browseComp",
         "evals.gpqaDiamond",
@@ -7893,6 +8170,10 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": ""
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -7911,7 +8192,7 @@
     },
     "params": 397.0,
     "paramsActive": 17.0,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -7971,9 +8252,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.browseComp",
         "evals.reportedSweBenchVerified",
@@ -8073,6 +8356,10 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": ""
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -8084,7 +8371,7 @@
       "search": 27.0,
       "speed": 559.0
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -8150,9 +8437,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.browseComp",
         "evals.reportedSweBenchVerified",
@@ -8258,6 +8547,10 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": ""
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -8270,7 +8563,7 @@
       "speed": 299.0,
       "tools": 26.7
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -8301,7 +8594,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -8365,9 +8658,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -8456,6 +8751,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -8472,7 +8771,7 @@
       "vision": 36.5,
       "writing": 44.6
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -8504,7 +8803,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -8571,9 +8870,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -8654,6 +8955,10 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": ""
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -8666,7 +8971,7 @@
       "search": 22.4,
       "speed": 259.0
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -8693,9 +8998,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "multimodal",
         "name",
@@ -8712,11 +9019,15 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "notes": "Trinity-Large-Preview is a frontier-scale open-weight language model from Arcee, built as a 400B-parameter sparse Mixture-of-Experts with 13B active parameters per token using 4-of-256 expert routing.",
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -8727,7 +9038,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image->text",
-    "arenaElo": 1432.0,
+    "arenaElo": 1450.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -8785,9 +9096,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -8911,6 +9224,10 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": ""
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -8925,7 +9242,7 @@
       "tools": 14.6,
       "vision": 35.9
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -8957,7 +9274,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9008,7 +9325,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9054,7 +9371,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9097,7 +9414,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9140,7 +9457,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9198,9 +9515,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -9275,6 +9594,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": ""
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -9287,7 +9610,7 @@
       "search": 3.9,
       "speed": 38.0
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -9318,7 +9641,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9367,7 +9690,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -9434,9 +9757,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -9535,6 +9860,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": ""
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -9548,7 +9877,7 @@
       "speed": 395.0,
       "writing": 18.2
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -9606,9 +9935,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -9720,6 +10051,10 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": ""
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -9732,7 +10067,7 @@
       "search": 16.8,
       "speed": 61.0
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -9774,9 +10109,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2025",
         "evals.gpqaDiamond",
@@ -9863,6 +10200,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -9877,7 +10218,7 @@
       "tools": 24.1,
       "vision": 34.1
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -9917,7 +10258,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -10041,7 +10382,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -10157,7 +10498,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10176,7 +10517,7 @@
       ]
     },
     "notes": "GPT-5.2 Chat (AKA Instant) is the fast, lightweight member of the 5.2 family, optimized for low-latency chat while retaining strong general intelligence.",
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -10208,7 +10549,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -10331,7 +10672,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10385,9 +10726,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "multimodal",
         "name",
@@ -10412,11 +10755,15 @@
         {
           "label": "智谱开放平台定价",
           "url": "https://open.bigmodel.cn/pricing"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "notes": "GLM-4.6V is a large multimodal model designed for high-fidelity visual understanding and long-context reasoning across images, documents, and mixed media.",
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -10492,7 +10839,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10538,7 +10885,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10580,7 +10927,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10639,9 +10986,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2025",
         "evals.gpqaDiamond",
@@ -10700,11 +11049,15 @@
         {
           "label": "LLM-Stats model catalog",
           "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "notes": "Nova 2 Lite is a fast, cost-effective reasoning model for everyday workloads that can process text, images, and videos to generate text.",
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -10740,7 +11093,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10796,7 +11149,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10852,7 +11205,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10908,7 +11261,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -10930,7 +11283,7 @@
     },
     "notes": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.",
     "params": 123.0,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -11005,7 +11358,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -11114,9 +11467,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -11240,6 +11595,10 @@
         {
           "label": "硅基流动 pricing snapshot",
           "url": ""
+        },
+        {
+          "label": "硅基流动 pricing snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -11254,7 +11613,7 @@
     },
     "params": 671.0,
     "paramsActive": 37.0,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -11281,9 +11640,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-05-21",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "multimodal",
         "name",
@@ -11300,12 +11661,16 @@
         {
           "label": "Chatbot Arena leaderboard",
           "url": "https://lmarena.ai/leaderboard"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "notes": "INTELLECT-3 is a 106B-parameter Mixture-of-Experts model (12B active) post-trained from GLM-4.5-Air-Base using supervised fine-tuning (SFT) followed by large-scale reinforcement learning (RL).",
     "params": 32.0,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -11344,9 +11709,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.gpqaDiamond",
         "evals.reportedSweBenchVerified",
@@ -11418,6 +11785,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -11432,7 +11803,7 @@
       "vision": 29.9,
       "writing": 35.6
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -11443,7 +11814,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": null,
+    "arenaElo": 1305.0,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -11459,8 +11830,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "multimodal",
         "name",
@@ -11473,11 +11847,17 @@
         {
           "label": "OpenRouter models API",
           "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "notes": "Olmo 3 32B Think is a large-scale, 32-billion-parameter model purpose-built for deep reasoning, complex logic chains and advanced instruction-following scenarios.",
-    "params": 32.0
+    "params": 32.0,
+    "arenaEloCheckedAt": "Aug 1, 2026",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "google/gemini-3-pro-image-preview",
@@ -11504,7 +11884,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11552,7 +11932,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -11616,9 +11996,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2025",
         "evals.gpqaDiamond",
@@ -11696,6 +12078,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -11711,7 +12097,7 @@
       "vision": 35.1,
       "writing": 28.4
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -11794,7 +12180,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -11865,7 +12251,7 @@
       "reasoning": 43.3,
       "speed": 329.0
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -11895,7 +12281,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
         "contextWindow",
@@ -11937,7 +12323,7 @@
       "reasoning": 0.6
     },
     "arenaEloCheckedAt": "2026-05-21",
-    "arenaEloNote": "Score from previous snapshot (arena.ai Aug 2026 not matched); needs re-verification"
+    "arenaEloNote": "不在 2026-08-01 Arena 文本榜；此为 2026-05-21 旧快照值"
   },
   {
     "id": "moonshotai/kimi-k2-thinking",
@@ -11981,9 +12367,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "multimodal",
         "name",
@@ -12016,11 +12404,15 @@
         {
           "label": "阿里云 Model Studio 定价",
           "url": "https://help.aliyun.com/zh/model-studio/model-pricing"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "notes": "Kimi K2 Thinking is Moonshot AI’s most advanced open reasoning model to date, extending the K2 series into agentic, long-horizon reasoning.",
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -12052,7 +12444,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -12102,7 +12494,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -12160,7 +12552,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -12212,7 +12604,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -12263,7 +12655,7 @@
       "reportedSweBenchVerified": 69.4,
       "terminalBench": 46.3
     },
-    "contextWindow": "1M",
+    "contextWindow": "205K",
     "pricing": {
       "openrouter": {
         "in": 0.255,
@@ -12281,9 +12673,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -12376,6 +12770,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": ""
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -12389,7 +12787,7 @@
       "speed": 368.0,
       "writing": 19.1
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -12429,7 +12827,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -12514,7 +12912,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -12604,7 +13002,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -12666,7 +13064,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -12806,7 +13204,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -12921,7 +13319,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -13090,7 +13488,7 @@
     },
     "notes": "Llama-3.3-Nemotron-Super-49B-v1.5 is a 49B-parameter, English-centric reasoning/chat model derived from Meta’s Llama-3.3-70B-Instruct with a 128K context.",
     "params": 49.0,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -13169,7 +13567,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -13227,7 +13625,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -13336,7 +13734,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "evals.aime2025",
@@ -13433,7 +13831,7 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "contextWindow",
         "multimodal",
@@ -13496,9 +13894,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -13581,6 +13981,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": ""
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -13594,7 +13998,7 @@
       "speed": 104.0,
       "vision": 13.5
     },
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
@@ -13635,9 +14039,11 @@
     },
     "verification": {
       "status": "verified",
-      "checkedAt": "2026-08-05",
+      "checkedAt": "2026-08-06",
       "verifiedFields": [
         "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
         "contextWindow",
         "evals.aime2025",
         "evals.browseComp",
@@ -13730,6 +14136,10 @@
         {
           "label": "User-provided LLM-Stats explorer snapshot",
           "url": ""
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ]
     },
@@ -13743,40 +14153,111 @@
     },
     "params": 671.0,
     "paramsActive": 37.0,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
   {
     "id": "anthropic/claude-fable-5",
     "name": "Claude Fable 5",
     "vendor": "Anthropic",
-    "multimodal": "Text",
-    "contextWindow": "200K",
+    "multimodal": "Vision",
+    "contextWindow": "1M",
     "pricing": {
       "openrouter": {
-        "in": null,
-        "out": null
+        "in": 10.0,
+        "out": 50.0,
+        "hit": 1.0
+      },
+      "cursor": {
+        "in": 10.0,
+        "out": 50.0
+      },
+      "deep-infra": {
+        "in": 10.0,
+        "out": 50.0
+      },
+      "official": {
+        "in": 10.0,
+        "out": 50.0,
+        "hit": 1.0
       }
     },
-    "arenaElo": 1509,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaElo": 1509.0,
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "verification": {
-      "status": "generated",
+      "status": "verified",
       "verifiedFields": [
-        "arenaElo"
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
+        "contextWindow",
+        "evals.hle",
+        "evals.reportedSweBenchVerified",
+        "multimodal",
+        "name",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.deep-infra.in",
+        "pricing.deep-infra.out",
+        "pricing.official.hit",
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
       ],
       "sources": [
         {
           "label": "Arena Leaderboard",
           "url": "https://arena.ai/leaderboard"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "Deep Infra pricing",
+          "url": "https://deepinfra.com/pricing"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Anthropic models/pricing",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ],
-      "checkedAt": "2026-08-01"
+      "checkedAt": "2026-08-06"
     },
     "checkedAt": "2026-08-01",
-    "notes": "Arena #1 as of Aug 2026. Pricing TBD; not yet available via OpenRouter.",
-    "catalogNote": "Not available on OpenRouter; added from Arena leaderboard"
+    "notes": "Anthropic Mythos-class flagship (Arena text leaderboard #1 as of Aug 2026). Official pricing $10/$50 per MTok, cache hits $1, 1M context. Available via Claude API and OpenRouter.",
+    "evals": {
+      "hle": 64.5,
+      "reportedSweBenchVerified": 95.0
+    }
   },
   {
     "id": "meta/muse-spark",
@@ -13790,25 +14271,63 @@
         "out": null
       }
     },
-    "arenaElo": 1488,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaElo": 1488.0,
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "verification": {
-      "status": "generated",
+      "status": "verified",
       "verifiedFields": [
-        "arenaElo"
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
+        "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.hle",
+        "evals.reportedSweBenchVerified",
+        "multimodal",
+        "name",
+        "vendor"
       ],
       "sources": [
         {
           "label": "Arena Leaderboard",
           "url": "https://arena.ai/leaderboard"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Meta AI blog: Introducing Muse Spark",
+          "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ],
-      "checkedAt": "2026-08-01"
+      "checkedAt": "2026-08-06"
     },
     "checkedAt": "2026-08-01",
-    "notes": "Meta's Muse Spark, Arena rank #10 as of Aug 2026. Pricing TBD.",
-    "catalogNote": "Not available on OpenRouter; added from Arena leaderboard"
+    "notes": "Meta Superintelligence Labs' first text reasoning model (Apr 2026). Served in Meta AI products and partner-only private API preview; no public API pricing.",
+    "catalogNote": "Not available on OpenRouter; no public API pricing",
+    "evals": {
+      "gpqaDiamond": 89.5,
+      "hle": 58.4,
+      "reportedSweBenchVerified": 77.4
+    }
   },
   {
     "id": "google/gemini-3-pro",
@@ -13820,90 +14339,1392 @@
       "openrouter": {
         "in": null,
         "out": null
+      },
+      "official": {
+        "in": 2.0,
+        "hit": 0.2,
+        "out": 12.0
+      },
+      "cursor": {
+        "in": 2.0,
+        "out": 12.0
       }
     },
-    "arenaElo": 1486,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaElo": 1486.0,
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "verification": {
-      "status": "generated",
+      "status": "verified",
       "verifiedFields": [
-        "arenaElo"
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
+        "contextWindow",
+        "evals.aime2025",
+        "evals.gpqaDiamond",
+        "evals.hle",
+        "evals.reportedSweBenchVerified",
+        "evals.simpleQA",
+        "llmStats.codeArena",
+        "llmStats.coding",
+        "llmStats.longCtx",
+        "llmStats.math",
+        "llmStats.reasoning",
+        "llmStats.tools",
+        "llmStats.vision",
+        "multimodal",
+        "name",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official.hit",
+        "pricing.official.in",
+        "pricing.official.out",
+        "vendor"
       ],
       "sources": [
         {
           "label": "Arena Leaderboard",
           "url": "https://arena.ai/leaderboard"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval AIME 2025 leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/aime-2025/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval SimpleQA leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/simpleqa/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": ""
+        },
+        {
+          "label": "Google Gemini API pricing",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        },
+        {
+          "label": "Gemini 3.1 Pro launch coverage (NetEase Tech)",
+          "url": "https://3g.163.com/news/article/KM62F6RN0556C3J2.html"
+        },
+        {
+          "label": "User-provided LLM-Stats explorer snapshot",
+          "url": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": ""
         }
       ],
-      "checkedAt": "2026-08-01"
+      "checkedAt": "2026-08-06"
     },
     "checkedAt": "2026-08-01",
-    "notes": "Gemini 3 Pro (non-preview), Arena rank #11 as of Aug 2026. Pricing from Google AI Studio TBD.",
-    "catalogNote": "Not available on OpenRouter; added from Arena leaderboard"
+    "notes": "Google pricing page no longer lists gemini-3-pro text separately; priced the same as Gemini 3.1 Pro Preview (<=200K prompts: $2 in / $12 out, cache hits $0.20; >200K doubles). Not on OpenRouter as a text model.",
+    "catalogNote": "Not available on OpenRouter; pricing taken from Google Gemini 3.1 Pro Preview tier",
+    "evals": {
+      "aime2025": 100.0,
+      "gpqaDiamond": 91.9,
+      "hle": 45.8,
+      "reportedSweBenchVerified": 76.2,
+      "simpleQA": 72.1
+    },
+    "llmStats": {
+      "codeArena": 1579.0,
+      "coding": 33.4,
+      "longCtx": 9.8,
+      "math": 51.6,
+      "reasoning": 50.1,
+      "tools": 19.8,
+      "vision": 34.9
+    }
   },
   {
     "id": "anthropic/claude-opus-4.8",
     "name": "Claude Opus 4.8",
     "vendor": "Anthropic",
-    "multimodal": "Text",
-    "contextWindow": "200K",
+    "multimodal": "Vision",
+    "contextWindow": "1M",
     "pricing": {
       "openrouter": {
-        "in": null,
-        "out": null
+        "in": 5.0,
+        "out": 25.0,
+        "hit": 0.5
+      },
+      "cursor": {
+        "in": 5.0,
+        "out": 25.0
+      },
+      "deep-infra": {
+        "in": 5.0,
+        "out": 25.0
+      },
+      "official": {
+        "in": 5.0,
+        "out": 25.0,
+        "hit": 0.5
       }
     },
-    "arenaElo": 1475,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaElo": 1475.0,
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "verification": {
-      "status": "generated",
+      "status": "verified",
       "verifiedFields": [
-        "arenaElo"
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
+        "contextWindow",
+        "evals.browseComp",
+        "evals.gpqaDiamond",
+        "evals.hle",
+        "evals.reportedSweBenchVerified",
+        "multimodal",
+        "name",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.deep-infra.in",
+        "pricing.deep-infra.out",
+        "pricing.official.hit",
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
       ],
       "sources": [
         {
           "label": "Arena Leaderboard",
           "url": "https://arena.ai/leaderboard"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "Deep Infra pricing",
+          "url": "https://deepinfra.com/pricing"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        },
+        {
+          "label": "Anthropic models/pricing",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ],
-      "checkedAt": "2026-08-01"
+      "checkedAt": "2026-08-06"
     },
     "checkedAt": "2026-08-01",
-    "notes": "Arena rank #24. Non-thinking variant.",
-    "catalogNote": "Not available on OpenRouter; added from Arena leaderboard"
+    "notes": "Official pricing $5/$25 per MTok, cache hits $0.50, 1M context; Fast mode (research preview) billed at $10/$50. Non-thinking Arena variant.",
+    "evals": {
+      "browseComp": 84.3,
+      "gpqaDiamond": 93.6,
+      "hle": 57.9,
+      "reportedSweBenchVerified": 88.6
+    }
   },
   {
     "id": "meta/muse-spark-1.1",
     "name": "Muse Spark 1.1",
     "vendor": "Meta",
-    "multimodal": "Text",
-    "contextWindow": "128K",
+    "multimodal": "Vision",
+    "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
-        "in": null,
-        "out": null
+        "in": 1.25,
+        "out": 4.25,
+        "hit": 0.15
+      },
+      "official": {
+        "in": 1.25,
+        "out": 4.25,
+        "hit": 0.15
       }
     },
-    "arenaElo": 1490,
-    "arenaEloCheckedAt": "2026-08-01",
+    "arenaElo": 1490.0,
+    "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "verification": {
-      "status": "generated",
+      "status": "verified",
       "verifiedFields": [
-        "arenaElo"
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
+        "contextWindow",
+        "evals.hle",
+        "multimodal",
+        "name",
+        "pricing.official.hit",
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "vendor"
       ],
       "sources": [
         {
           "label": "Arena Leaderboard",
           "url": "https://arena.ai/leaderboard"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Meta AI blog: Introducing Muse Spark 1.1 / Meta Model API",
+          "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
         }
       ],
-      "checkedAt": "2026-08-01"
+      "checkedAt": "2026-08-06"
     },
     "checkedAt": "2026-08-01",
-    "notes": "Meta's Muse Spark 1.1, Arena rank #9.",
-    "catalogNote": "Not available on OpenRouter; added from Arena leaderboard"
+    "notes": "Meta's first paid API model (Meta Model API public preview, 2026-07-09, US-only at launch). Official pricing $1.25/$4.25 per MTok, cache hits $0.15, 1M context, multimodal (text/image/video/audio) agentic model.",
+    "evals": {
+      "hle": 62.1
+    }
+  },
+  {
+    "id": "openai/gpt-5.6-sol",
+    "vendor": "OpenAI",
+    "name": "GPT-5.6 Sol",
+    "aliases": [
+      "gpt-5.6-sol"
+    ],
+    "params": null,
+    "paramsActive": null,
+    "contextWindow": "1.1M",
+    "multimodal": "Vision",
+    "performance": "text+image+file->text",
+    "pricing": {
+      "official": {
+        "in": 5.0,
+        "hit": 0.5,
+        "out": 30.0
+      },
+      "cursor": {
+        "in": 5.0,
+        "out": 30.0
+      },
+      "openrouter": {
+        "hit": 0.5,
+        "in": 5.0,
+        "out": 30.0
+      }
+    },
+    "notes": "GPT-5.6 系列旗舰（2026-07-10 发布，日+天体命名体系）：最强推理/高强度代码/科研/网络安全/长时 Agent；7/31 起新增 Fast mode（最高 2.5x 速度、价格翻倍）。Sol 定价与 GPT-5.5 持平。长上下文档（>272K）$10/$45。",
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-08-06",
+      "verifiedFields": [
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
+        "contextWindow",
+        "evals.browseComp",
+        "evals.gpqaDiamond",
+        "multimodal",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official",
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI API pricing",
+          "url": "https://developers.openai.com/api/docs/pricing"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        }
+      ]
+    },
+    "arenaElo": 1483.0,
+    "arenaEloCheckedAt": "Aug 1, 2026",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
+    "evals": {
+      "browseComp": 90.4,
+      "gpqaDiamond": 94.6
+    }
+  },
+  {
+    "id": "openai/gpt-5.6-terra",
+    "vendor": "OpenAI",
+    "name": "GPT-5.6 Terra",
+    "aliases": [
+      "gpt-5.6-terra"
+    ],
+    "params": null,
+    "paramsActive": null,
+    "contextWindow": "1.1M",
+    "multimodal": "Vision",
+    "performance": "text+image+file->text",
+    "pricing": {
+      "official": {
+        "in": 2.0,
+        "hit": 0.2,
+        "out": 12.0
+      },
+      "cursor": {
+        "in": 2.0,
+        "out": 12.0
+      },
+      "openrouter": {
+        "hit": 0.1,
+        "in": 1.0,
+        "out": 6.0
+      }
+    },
+    "notes": "GPT-5.6 均衡主力档：性能对标 GPT-5.5、成本减半；2026-07-31 降价 20% 至 $2/$12。长上下文档（>272K）$4/$18。",
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-08-06",
+      "verifiedFields": [
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
+        "contextWindow",
+        "evals.browseComp",
+        "evals.gpqaDiamond",
+        "multimodal",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official",
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI API pricing",
+          "url": "https://developers.openai.com/api/docs/pricing"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        }
+      ]
+    },
+    "arenaElo": 1468.0,
+    "arenaEloCheckedAt": "Aug 1, 2026",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
+    "evals": {
+      "browseComp": 87.5,
+      "gpqaDiamond": 92.9
+    }
+  },
+  {
+    "id": "openai/gpt-5.6-luna",
+    "vendor": "OpenAI",
+    "name": "GPT-5.6 Luna",
+    "aliases": [
+      "gpt-5.6-luna"
+    ],
+    "params": null,
+    "paramsActive": null,
+    "contextWindow": "1.1M",
+    "multimodal": "Vision",
+    "performance": "text+image+file->text",
+    "pricing": {
+      "official": {
+        "in": 0.2,
+        "hit": 0.02,
+        "out": 1.2
+      },
+      "cursor": {
+        "in": 0.2,
+        "out": 1.2
+      },
+      "openrouter": {
+        "hit": 0.01,
+        "in": 0.1,
+        "out": 0.6
+      }
+    },
+    "notes": "GPT-5.6 轻量速度档（对标此前 nano 定位）：低延迟高频调用，系列内成本最低；2026-07-31 降价 80% 至 $0.20/$1.20。长上下文档（>272K）$0.40/$1.80。",
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-08-06",
+      "verifiedFields": [
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
+        "contextWindow",
+        "evals.browseComp",
+        "evals.gpqaDiamond",
+        "multimodal",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official",
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI API pricing",
+          "url": "https://developers.openai.com/api/docs/pricing"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        }
+      ]
+    },
+    "arenaElo": 1450.0,
+    "arenaEloCheckedAt": "Aug 1, 2026",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
+    "evals": {
+      "browseComp": 83.3,
+      "gpqaDiamond": 92.3
+    }
+  },
+  {
+    "id": "openai/gpt-astra",
+    "vendor": "OpenAI",
+    "name": "GPT Astra (internal)",
+    "aliases": [
+      "astra"
+    ],
+    "params": null,
+    "paramsActive": null,
+    "contextWindow": null,
+    "multimodal": null,
+    "performance": null,
+    "pricing": {},
+    "notes": "内部模型：OpenAI 内部新模型家族代号 Astra（拉丁语'星辰'，呼应 Sol/Terra/Luna），2026-08-02 曝光于内部测试（多文件游戏开发等任务），外界推测为 Sol/Terra 升级版；尚无公开 API 与定价。",
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-08-06",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "OpenAI Astra report",
+          "url": "https://m.163.com/dy/article/L38HGL940511ABV6.html"
+        }
+      ]
+    }
+  },
+  {
+    "id": "anthropic/claude-opus-5",
+    "vendor": "Anthropic",
+    "name": "Claude Opus 5",
+    "aliases": [
+      "claude-opus-5"
+    ],
+    "params": null,
+    "paramsActive": null,
+    "contextWindow": "1M",
+    "multimodal": "Vision",
+    "performance": "text+image+file->text",
+    "pricing": {
+      "official": {
+        "in": 5.0,
+        "hit": 0.5,
+        "out": 25.0
+      },
+      "cursor": {
+        "in": 5.0,
+        "out": 25.0
+      },
+      "openrouter": {
+        "hit": 0.5,
+        "in": 5.0,
+        "out": 25.0
+      }
+    },
+    "notes": "Anthropic 新一代旗舰（Opus 线）；1M 上下文；另有 Opus 5 Fast 变体（$10/$50）。",
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-08-06",
+      "verifiedFields": [
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
+        "contextWindow",
+        "evals.browseComp",
+        "evals.hle",
+        "multimodal",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official",
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic API pricing",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        }
+      ]
+    },
+    "arenaElo": 1490.0,
+    "arenaEloCheckedAt": "Aug 1, 2026",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
+    "evals": {
+      "browseComp": 90.8,
+      "hle": 64.7
+    }
+  },
+  {
+    "id": "anthropic/claude-mythos-5",
+    "vendor": "Anthropic",
+    "name": "Claude Mythos 5",
+    "aliases": [
+      "claude-mythos-5"
+    ],
+    "params": null,
+    "paramsActive": null,
+    "contextWindow": "1M",
+    "multimodal": "Vision",
+    "performance": "text+image+file->text",
+    "pricing": {
+      "official": {
+        "in": 10.0,
+        "hit": 1.0,
+        "out": 50.0
+      },
+      "cursor": {
+        "in": 10.0,
+        "out": 50.0
+      }
+    },
+    "notes": "内部模型（limited availability）：Anthropic 前沿内部模型，仅向 Project Glasswing 受控合作方开放 API；在生物研究与进攻性网络安全方向为最强档（高于 Opus/Fable）。",
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-08-06",
+      "verifiedFields": [
+        "contextWindow",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic API pricing",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "anthropic/claude-sonnet-5",
+    "vendor": "Anthropic",
+    "name": "Claude Sonnet 5",
+    "aliases": [
+      "claude-sonnet-5"
+    ],
+    "params": null,
+    "paramsActive": null,
+    "contextWindow": "1M",
+    "multimodal": "Vision",
+    "performance": "text+image+file->text",
+    "pricing": {
+      "official": {
+        "in": 2.0,
+        "hit": 0.2,
+        "out": 10.0
+      },
+      "cursor": {
+        "in": 2.0,
+        "out": 10.0
+      },
+      "deep-infra": {
+        "in": 2.0,
+        "out": 10.0
+      },
+      "openrouter": {
+        "hit": 0.2,
+        "in": 2.0,
+        "out": 10.0
+      }
+    },
+    "notes": "Sonnet 线新一代主力；早鸟价 $2/$10 至 2026-08-31，2026-09-01 起恢复标准价 $3/$15（缓存命中 $0.30）。",
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-08-06",
+      "verifiedFields": [
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
+        "contextWindow",
+        "evals.browseComp",
+        "evals.hle",
+        "evals.reportedSweBenchVerified",
+        "multimodal",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.deep-infra.in",
+        "pricing.deep-infra.out",
+        "pricing.official",
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic API pricing",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "Deep Infra pricing",
+          "url": "https://deepinfra.com/pricing"
+        },
+        {
+          "label": "ZeroEval SWE-Bench Verified leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/swe-bench-verified/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        }
+      ]
+    },
+    "arenaElo": 1462.0,
+    "arenaEloCheckedAt": "Aug 1, 2026",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
+    "evals": {
+      "browseComp": 84.7,
+      "hle": 57.4,
+      "reportedSweBenchVerified": 85.2
+    }
+  },
+  {
+    "id": "google/gemini-3.6-flash",
+    "vendor": "Google",
+    "name": "Gemini 3.6 Flash",
+    "aliases": [
+      "gemini-3.6-flash"
+    ],
+    "params": null,
+    "paramsActive": null,
+    "contextWindow": "1.0M",
+    "multimodal": "Vision",
+    "performance": "text+image+file+audio+video->text",
+    "pricing": {
+      "official": {
+        "in": 1.5,
+        "hit": 0.15,
+        "out": 7.5
+      },
+      "cursor": {
+        "in": 1.5,
+        "out": 7.5
+      },
+      "openrouter": {
+        "hit": 0.15,
+        "in": 1.5,
+        "out": 7.5
+      }
+    },
+    "notes": "Gemini 3.6 Flash（GA）：面向高频生产工作负载的高吞吐混合推理模型；含 Batch 档 $0.75/$3.75。",
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-08-06",
+      "verifiedFields": [
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
+        "contextWindow",
+        "multimodal",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.official",
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out"
+      ],
+      "sources": [
+        {
+          "label": "Gemini API pricing",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        }
+      ]
+    },
+    "arenaElo": 1483.0,
+    "arenaEloCheckedAt": "Aug 1, 2026",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
+  },
+  {
+    "id": "google/gemini-3.5-flash",
+    "vendor": "Google",
+    "name": "Gemini 3.5 Flash",
+    "aliases": [
+      "gemini-3.5-flash"
+    ],
+    "params": null,
+    "paramsActive": null,
+    "contextWindow": "1.0M",
+    "multimodal": "Vision",
+    "performance": "text+image+file+audio+video->text",
+    "pricing": {
+      "official": {
+        "in": 1.5,
+        "hit": 0.15,
+        "out": 9.0
+      },
+      "cursor": {
+        "in": 1.5,
+        "out": 9.0
+      },
+      "deep-infra": {
+        "in": 1.5,
+        "out": 9.0
+      },
+      "openrouter": {
+        "hit": 0.15,
+        "in": 1.5,
+        "out": 9.0
+      }
+    },
+    "notes": "Gemini 3.5 Flash：'最具智能的速度型模型'，前沿智能+搜索与 grounding；Batch 档 $0.75/$4.50；另有 Flash-Lite 档。",
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-08-06",
+      "verifiedFields": [
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
+        "contextWindow",
+        "evals.hle",
+        "multimodal",
+        "pricing.cursor.in",
+        "pricing.cursor.out",
+        "pricing.deep-infra.in",
+        "pricing.deep-infra.out",
+        "pricing.official",
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out"
+      ],
+      "sources": [
+        {
+          "label": "Gemini API pricing",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "Deep Infra pricing",
+          "url": "https://deepinfra.com/pricing"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "label": "Cursor models/pricing",
+          "url": "https://docs.cursor.com/models/"
+        }
+      ]
+    },
+    "arenaElo": 1476.0,
+    "arenaEloCheckedAt": "Aug 1, 2026",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
+    "evals": {
+      "hle": 40.2
+    }
+  },
+  {
+    "id": "moonshotai/kimi-k3",
+    "vendor": "Moonshot AI",
+    "name": "Kimi K3",
+    "aliases": [
+      "kimi-k3"
+    ],
+    "params": 2800.0,
+    "paramsActive": 104.0,
+    "contextWindow": "1.0M",
+    "multimodal": "Vision",
+    "performance": "text+image->text",
+    "pricing": {
+      "aliyun": {
+        "in": 20.0,
+        "out": 100.0
+      },
+      "moonshot-ai": {
+        "in": 3.0,
+        "out": 15.0
+      },
+      "official": {
+        "in": 3.0,
+        "out": 15.0
+      },
+      "openrouter": {
+        "hit": 0.3,
+        "in": 3.0,
+        "out": 15.0
+      },
+      "tencent": {
+        "hit": 2.0,
+        "in": 20.0,
+        "out": 100.0
+      },
+      "together-ai": {
+        "in": 3.0,
+        "out": 15.0
+      },
+      "officialCny": {
+        "in": 3.0,
+        "out": 15.0
+      }
+    },
+    "notes": "2026-07-16 发布、07-27 开放完整权重：迄今最大开放权重模型（官方称首个开放 3T 级）；2.8T MoE、896 专家每 token 激活 16 个（约 104B）、KDA 注意力、1M 上下文、原生视觉；开放权重允许免费商用，可用 Moonshot 官方 API 或自部署。",
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-08-06",
+      "verifiedFields": [
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
+        "contextWindow",
+        "evals.browseComp",
+        "evals.gpqaDiamond",
+        "evals.hle",
+        "multimodal",
+        "params",
+        "paramsActive",
+        "pricing.aliyun.in",
+        "pricing.aliyun.out",
+        "pricing.moonshot-ai.in",
+        "pricing.moonshot-ai.out",
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "pricing.tencent.hit",
+        "pricing.tencent.in",
+        "pricing.tencent.out",
+        "pricing.together-ai.in",
+        "pricing.together-ai.out"
+      ],
+      "sources": [
+        {
+          "label": "Kimi K3 tech report",
+          "url": "https://arxiv.org/abs/2607.kimi-k3"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "Together AI pricing",
+          "url": "https://www.together.ai/pricing"
+        },
+        {
+          "label": "阿里云 Model Studio 定价",
+          "url": "https://help.aliyun.com/zh/model-studio/model-pricing"
+        },
+        {
+          "label": "腾讯混元定价",
+          "url": "https://cloud.tencent.com.cn/document/product/1823/130055"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "ZeroEval BrowseComp leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/browsecomp/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
+        }
+      ]
+    },
+    "arenaElo": 1485.0,
+    "arenaEloCheckedAt": "Aug 1, 2026",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
+    "evals": {
+      "browseComp": 91.2,
+      "gpqaDiamond": 93.5,
+      "hle": 56.0
+    }
+  },
+  {
+    "id": "qwen/qwen3.8-max",
+    "vendor": "Alibaba (Tongyi)",
+    "name": "Qwen3.8-Max",
+    "aliases": [
+      "qwen3.8-max"
+    ],
+    "params": 2400.0,
+    "paramsActive": 95.0,
+    "contextWindow": "1M",
+    "multimodal": "Vision",
+    "performance": "text+image+video->text",
+    "pricing": {
+      "official": {
+        "in": 2.0,
+        "out": 6.0
+      },
+      "officialCny": {
+        "in": 12.0,
+        "out": 36.0
+      },
+      "aliyun": {
+        "in": 12.0,
+        "out": 36.0
+      },
+      "openrouter": {
+        "hit": 0.25,
+        "in": 2.0,
+        "out": 6.0
+      }
+    },
+    "notes": "2026-08-03 发布：2.4T MoE、每次推理激活约 95B（约 4%）、1M 上下文、原生多模态（文/图/视频/文档）；Max 级旗舰首次开源（权重 8/10 当周发布），另有 Qwen3.8-27B 稠密轻量版；主打自主编程、企业协同与长周期 Agent。",
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-08-06",
+      "verifiedFields": [
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
+        "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.hle",
+        "multimodal",
+        "params",
+        "paramsActive",
+        "pricing.aliyun.in",
+        "pricing.aliyun.out",
+        "pricing.official",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out"
+      ],
+      "sources": [
+        {
+          "label": "Qwen3.8-Max launch",
+          "url": "https://qwen.ai/blog/qwen3.8-max"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "阿里云 Model Studio 定价",
+          "url": "https://help.aliyun.com/zh/model-studio/model-pricing"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
+        }
+      ]
+    },
+    "arenaElo": 1496.0,
+    "arenaEloCheckedAt": "Aug 1, 2026",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
+    "evals": {
+      "gpqaDiamond": 92.6,
+      "hle": 43.6
+    }
+  },
+  {
+    "id": "z-ai/glm-5.2",
+    "vendor": "Z.ai (Zhipu)",
+    "name": "GLM-5.2",
+    "aliases": [
+      "glm-5.2"
+    ],
+    "params": 744.0,
+    "paramsActive": 40.0,
+    "contextWindow": "1.0M",
+    "multimodal": "Text",
+    "performance": "text->text",
+    "pricing": {
+      "aliyun": {
+        "in": 8.0,
+        "out": 28.0
+      },
+      "baidu": {
+        "in": 8.0,
+        "out": 28.0
+      },
+      "official": {
+        "in": 0.95,
+        "out": 3.0
+      },
+      "openrouter": {
+        "hit": 0.14,
+        "in": 0.76,
+        "out": 2.42
+      },
+      "tencent": {
+        "hit": 1.9044,
+        "in": 8.0,
+        "out": 28.0
+      },
+      "together-ai": {
+        "in": 1.4,
+        "out": 4.4
+      },
+      "zhipu": {
+        "hit": 2.0,
+        "in": 8.0,
+        "out": 28.0
+      }
+    },
+    "notes": "2026-06-13 发布、06-16 开放权重：MIT 协议开源旗舰；约 744B MoE、每 token 激活约 40B；上下文从 200K 提升至 1M（IndexShare 稀疏注意力 + HiSparse + MTP）；编码/Agent 能力逼近顶级闭源（SWE-bench Pro 62.1、Terminal-Bench 2.1 81.0）；官方 API 支持多模态输入，OpenRouter 托管暂仅文本。",
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-08-06",
+      "verifiedFields": [
+        "arenaElo",
+        "arenaEloCheckedAt",
+        "arenaEloSource",
+        "contextWindow",
+        "evals.gpqaDiamond",
+        "evals.hle",
+        "multimodal",
+        "params",
+        "paramsActive",
+        "pricing.aliyun.in",
+        "pricing.aliyun.out",
+        "pricing.baidu.in",
+        "pricing.baidu.out",
+        "pricing.official.in",
+        "pricing.official.out",
+        "pricing.openrouter.hit",
+        "pricing.openrouter.in",
+        "pricing.openrouter.out",
+        "pricing.tencent.hit",
+        "pricing.tencent.in",
+        "pricing.tencent.out",
+        "pricing.together-ai.in",
+        "pricing.together-ai.out",
+        "pricing.zhipu.hit",
+        "pricing.zhipu.in",
+        "pricing.zhipu.out"
+      ],
+      "sources": [
+        {
+          "label": "GLM-5.2 release",
+          "url": "https://huggingface.co/z-ai/GLM-5.2"
+        },
+        {
+          "label": "OpenRouter models API",
+          "url": "https://openrouter.ai/api/v1/models"
+        },
+        {
+          "label": "LLM Stats model catalog",
+          "url": "https://api.zeroeval.com/leaderboard/models/list"
+        },
+        {
+          "label": "Together AI pricing",
+          "url": "https://www.together.ai/pricing"
+        },
+        {
+          "label": "阿里云 Model Studio 定价",
+          "url": "https://help.aliyun.com/zh/model-studio/model-pricing"
+        },
+        {
+          "label": "腾讯混元定价",
+          "url": "https://cloud.tencent.com.cn/document/product/1823/130055"
+        },
+        {
+          "label": "百度千帆大模型定价",
+          "url": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya"
+        },
+        {
+          "label": "智谱开放平台定价",
+          "url": "https://open.bigmodel.cn/pricing"
+        },
+        {
+          "label": "ZeroEval GPQA Diamond leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/gpqa/details"
+        },
+        {
+          "label": "ZeroEval Humanity's Last Exam leaderboard",
+          "url": "https://api.zeroeval.com/leaderboard/benchmarks/humanity%27s-last-exam/details"
+        },
+        {
+          "label": "LLM-Stats model catalog",
+          "url": "https://llm-stats.com/"
+        },
+        {
+          "label": "Chatbot Arena leaderboard",
+          "url": "https://arena.ai/leaderboard/text"
+        }
+      ]
+    },
+    "arenaElo": 1469.0,
+    "arenaEloCheckedAt": "Aug 1, 2026",
+    "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
+    "evals": {
+      "gpqaDiamond": 91.2,
+      "hle": 54.7
+    }
   }
 ]

@@ -38,6 +38,8 @@ This document contains official links to LLM benchmark suites, leaderboards, and
 | **Anthropic** | [https://platform.claude.com/docs/en/about-claude/pricing](https://platform.claude.com/docs/en/about-claude/pricing) | 2026-05-21 已核验 |
 | **Google Gemini** | [https://ai.google.dev/pricing](https://ai.google.dev/pricing) | 长期有效 |
 | **Meta Llama** | [https://llama.meta.com/](https://llama.meta.com/) | 长期有效（开源模型，无官方 API 定价） |
+| **Meta Model API (Muse Spark 1.1)** | [https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/](https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/) | 2026-08-05 已核验（HTTP 200）；定价 $1.25/$4.25 per MTok，2026-07-09 公测（美国） |
+| **Meta Muse Spark（初代）** | [https://ai.meta.com/blog/introducing-muse-spark-msl/](https://ai.meta.com/blog/introducing-muse-spark-msl/) | 2026-08-05 已核验（HTTP 200）；仅 Meta AI 产品与合作伙伴私测，无公开 API 定价 |
 | **Mistral AI** | [https://mistral.ai/pricing](https://mistral.ai/pricing) | 2026-08-05 已核验（HTTP 200）；API 定价需从 [docs.mistral.ai](https://docs.mistral.ai/getting-started/pricing/) 获取 |
 | **xAI (Grok)** | [https://docs.x.ai/developers/pricing](https://docs.x.ai/developers/pricing) | 2026-07 官方页；本环境无法直接核验，待验证 |
 | **Moonshot (Kimi)** | [https://platform.moonshot.cn/docs/pricing/chat](https://platform.moonshot.cn/docs/pricing/chat) | 2026-08-05 已核验（HTTP 200） |
@@ -66,9 +68,10 @@ This document contains official links to LLM benchmark suites, leaderboards, and
 | **Sourcegraph Cody** | AI IDE extension / code search assistant | [https://sourcegraph.com/cody](https://sourcegraph.com/cody) |
 | **JetBrains AI Assistant** | JetBrains IDE assistant | [https://www.jetbrains.com/ai/](https://www.jetbrains.com/ai/) |
 | **Devin** | Cloud coding agent | [https://devin.ai/](https://devin.ai/) |
-| **通义灵码** | AI IDE / coding agent | [https://tongyi.aliyun.com/lingma](https://tongyi.aliyun.com/lingma) |
 | **TRAE / SOLO** | AI IDE / web assistant | [https://www.trae.ai/](https://www.trae.ai/) |
-| **Qoder** | Agentic coding platform | [https://qoder.com/](https://qoder.com/) |
+| **Qoder（含 Qoder CN，原通义灵码）** | Agentic coding platform | [https://qoder.com/](https://qoder.com/) · [https://help.aliyun.com/zh/lingma/introduction-of-lingma](https://help.aliyun.com/zh/lingma/introduction-of-lingma) |
+| **Google Antigravity** | Agent-first 开发平台（IDE/桌面/CLI/SDK） | [https://antigravity.google/](https://antigravity.google/) |
+| **WorkBuddy** | 腾讯全场景 AI Agent 工作台 | [https://www.codebuddy.cn/](https://www.codebuddy.cn/) |
 | **CodeGeeX** | AI coding assistant | [https://codegeex.cn/](https://codegeex.cn/) |
 | **Kilo Code** | Open-source coding agent | [https://kilocode.ai/](https://kilocode.ai/) |
 | **OpenCode** | Open-source coding agent | [https://opencode.ai/](https://opencode.ai/) |
@@ -80,7 +83,7 @@ This document contains official links to LLM benchmark suites, leaderboards, and
 | **OpenClaw** | Open-source personal AI assistant / agent gateway | [https://github.com/openclaw/openclaw](https://github.com/openclaw/openclaw) |
 | **Hermes Agent** | Open-source self-improving agent framework | [https://github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) |
 
-> **GitHub Stars** (`githubStars` field): star counts fetched from GitHub API on 2026-05-19. Open-source entries only; proprietary tools (Cursor, Windsurf, etc.) are set to `null`. Counts for: openai/codex 83,740 · google-gemini/gemini-cli 104,292 · openclaw/openclaw 373,124 · All-Hands-AI/OpenHands 74,092 · cline/cline 62,014 · Aider-AI/aider 45,004 · continuedev/continue 33,265 · charmbracelet/crush 24,409 · RooCodeInc/Roo-Code 24,102 · AstrBotDevs/AstrBot 32,570 · Hmbown/DeepSeek-TUI 32,242 · opencode-ai/opencode 12,622 · esengine/DeepSeek-Reasonix 4,516 · zai-org/CodeGeeX4 2,505 · sourcegraph/cody-public-snapshot 3,796.
+> **GitHub Stars** (`githubStars` field): star counts fetched from GitHub API on 2026-08-06. Open-source entries only; proprietary tools (Cursor, Windsurf, etc.) are set to `null`. Counts for: openai/codex 104,112 · google-gemini/gemini-cli 106,373 · openclaw/openclaw 385,229 · All-Hands-AI/OpenHands 83,185 · cline/cline 65,682 · Aider-AI/aider 47,958 · continuedev/continue 35,332 · charmbracelet/crush 27,093 · RooVetGit/Roo-Code 24,354 · AstrBotDevs/AstrBot 38,635 · Hmbown/DeepSeek-TUI 40,478 · opencode-ai/opencode 13,611 · esengine/DeepSeek-Reasonix 31,320 · zai-org/CodeGeeX4 2,573 · sourcegraph/cody-public-snapshot 3,809.
 
 ## 🇨🇳 Chinese Vendor Pricing (Mainland China)
 
@@ -98,11 +101,11 @@ This document contains official links to LLM benchmark suites, leaderboards, and
 
 | 数据集 | 快照日期 | 说明 |
 | :--- | :--- | :--- |
-| `data/models.json` 模型价格/参数 | 2026-08-05（135/150）；其余 15 条为 2026-05-21 | 由 `scripts/enrich_model_data.py --write --online` 生成，价格来自 OpenRouter API 与官方页核验 |
-| `data/models.json` Arena Elo | 2026-07-01（7 条从 ToolCenter 快照更新）；其余 58 条为 2026-05-21 待重新核验 | arena.ai（原 lmarena.ai）CSR 页面，脚本无法直接抓取；更新通过 ToolCenter 月度快照 |
-| `data/agent-tools.json` 工具数据 | 2026-05-19 | 套餐价格随计划变化，使用前请抽查官方页 |
+| `data/models.json` 模型价格/参数 | 2026-08-06（167/167，全量核验通过） | 由 `scripts/enrich_model_data.py --write --online` 生成；2026-08-06 补录 8 月流行波：GPT-5.6 Sol/Terra/Luna、GPT Astra（内部）、Claude Opus 5、Claude Mythos 5（内部）、Claude Sonnet 5、Gemini 3.5/3.6 Flash、Kimi K3（2.8T/104B）、Qwen3.8-Max（2.4T/95B）、GLM-5.2（744B/40B） |
+| `data/models.json` Arena Elo | 2026-08-01（arena.ai 文本榜全量快照，386 个模型） | arena.ai 已改为 SSR 表格，脚本 `extract_arena_elo_data` 可直接解析（优先读 `.cache/model-sources/arena_text_leaderboard.json` 浏览器快照）；xhigh/max/high 等模式变体经 `ARENA_ELO_ALIASES` 映射到 API 基础模型；仅 gpt-5.1-codex-mini 仍为 2026-05-21 旧值（已下榜，记录中带警示备注） |
+| `data/agent-tools.json` 工具数据 | 2026-08-06：新增 Google Antigravity、腾讯 WorkBuddy；移除通义灵码（2026-05-20 升级为 Qoder CN），Qoder 更新为国产多模型支持；其余核验于 2026-08-06 / 2026-05-19 | 套餐价格随计划变化，使用前请抽查官方页；Windsurf 已并入 Cognition/Devin 统一订阅体系 |
 | `data/gpus.json` / `data/prices.json` GPU 价格 | 2026-08-05 新增 5 条（RTX 5060/RX 9060 XT/M4 Ultra/B300/MI325X）；其余为 2026-04~2026-05 人工报价快照 | 新增 GPU 价格为 MSRP，二手/市场价需另行更新 |
-| GitHub Stars | 2026-05-19 | 见上方 Agent Coding Tools 备注 |
+| GitHub Stars | 2026-08-06 | 见上方 Agent Coding Tools 备注 |
 
 ---
-*Last Updated: 2026-08-05*
+*Last Updated: 2026-08-06*

@@ -52,6 +52,9 @@ SOURCE_URLS = {
     "deepseek_hf": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
     "cursor_models": "https://docs.cursor.com/models/",
     "meta_llama_4": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+    "meta_muse_spark_blog": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+    "meta_model_api_blog": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+    "openai_astra_news": "https://m.163.com/dy/article/L38HGL940511ABV6.html",
 }
 
 RAW_SOURCE_URLS = {
@@ -61,8 +64,9 @@ RAW_SOURCE_URLS = {
     "zeroeval_models_list": "https://api.zeroeval.com/leaderboard/models/list",
     # LLM-Stats serves its full model catalog as a Next.js RSC payload
     "llm_stats_rsc": "https://llm-stats.com/",
-    # Chatbot Arena leaderboard (lmarena.ai) — embeds Elo ratings in Next.js RSC payload
-    "lmarena_leaderboard": "https://lmarena.ai/leaderboard",
+    # Chatbot Arena text leaderboard (arena.ai) — server-rendered HTML table; a structured
+    # JSON snapshot may also be dropped at arena_text_leaderboard.json by browser scraping.
+    "arena_leaderboard": "https://arena.ai/leaderboard/text",
     "aliyun_pricing": "https://help.aliyun.com/zh/model-studio/model-pricing",
     "baidu_qianfan_pricing": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
     "tencent_hunyuan_pricing": "https://cloud.tencent.com.cn/document/product/1823/130055",
@@ -87,6 +91,16 @@ ARENA_ELO_ALIASES: dict[str, str] = {
     # Llama 4 uses full architecture names in Arena
     "llama-4-maverick-17b-128e-instruct": "llama-4-maverick",
     "llama-4-scout-17b-16e-instruct": "llama-4-scout",
+    # Arena mode variants (xhigh/max/high) → base API model
+    "gpt-5.6-sol-xhigh": "openai/gpt-5.6-sol",
+    "gpt-5.6-terra-xhigh": "openai/gpt-5.6-terra",
+    "gpt-5.6-luna-xhigh": "openai/gpt-5.6-luna",
+    "kimi-k3-max": "moonshotai/kimi-k3",
+    "glm-5.2-max": "z-ai/glm-5.2",
+    "claude-opus-5-high": "anthropic/claude-opus-5",
+    "claude-opus-5-max": "anthropic/claude-opus-5",
+    "claude-sonnet-5-high": "anthropic/claude-sonnet-5",
+    "qwen3.8-max": "qwen/qwen3.8-max",
 }
 
 # Suffixes that indicate a special variant; Arena entries with these are used only as
@@ -111,6 +125,9 @@ KNOWN_PARAMS_OVERRIDE: dict[str, tuple[float, float | None]] = {
     "deepseek-v3.1-nex-n1": (671.0, 37.0),  # DeepSeek V3.1 derivative
     "cogito-v2.1-671b": (671.0, 37.0),        # DeepSeek V3 architecture
     "gpt-oss-safeguard-20b": (20.0, None),
+    "kimi-k3": (2800.0, 104.0),                # Moonshot K3: 2.8T MoE, 104B active (tech report, 2026-07)
+    "qwen3.8-max": (2400.0, 95.0),             # Qwen3.8-Max: 2.4T MoE, ~95B active (official launch, 2026-08-03)
+    "glm-5.2": (744.0, 40.0),                  # GLM-5.2: ~744B MoE, ~40B active (MIT open weights, 2026-06)
 }
 
 ZEROEVAL_BENCHMARKS = {
@@ -368,6 +385,62 @@ CATALOG_CHECKS = {
     "llama-4-scout": {
         "source": "meta_llama_4",
         "required": ["Llama 4 Scout", "17 billion active", "10 million tokens"],
+    },
+    "anthropic/claude-fable-5": {
+        "source": "anthropic_pricing",
+        "required": ["Claude Fable 5", "$10 / MTok", "$50 / MTok"],
+    },
+    "anthropic/claude-opus-4.8": {
+        "source": "anthropic_pricing",
+        "required": ["Claude Opus 4.8", "$5 / MTok", "$25 / MTok"],
+    },
+    "google/gemini-3-pro": {
+        "source": "gemini_pricing",
+        "required": ["Gemini 3.1 Pro Preview", "gemini-3.1-pro-preview", "$2.00", "$12.00"],
+    },
+    "meta/muse-spark": {
+        "source": "meta_muse_spark_blog",
+        "required": ["Muse Spark", "Superintelligence"],
+    },
+    "meta/muse-spark-1.1": {
+        "source": "meta_model_api_blog",
+        "required": ["Muse Spark 1.1", "Meta Model API"],
+    },
+    "openai/gpt-5.6-sol": {
+        "source": "openai_pricing",
+        "required": ["gpt-5.6-sol", "$5.00", "$30.00"],
+    },
+    "openai/gpt-5.6-terra": {
+        "source": "openai_pricing",
+        "required": ["gpt-5.6-terra", "$2.00", "$12.00"],
+    },
+    "openai/gpt-5.6-luna": {
+        "source": "openai_pricing",
+        "required": ["gpt-5.6-luna", "$0.20", "$1.20"],
+    },
+    "openai/gpt-astra": {
+        "source": "openai_astra_news",
+        "required": ["Astra", "Sol"],
+    },
+    "anthropic/claude-opus-5": {
+        "source": "anthropic_pricing",
+        "required": ["Claude Opus 5", "$5 / MTok", "$25 / MTok"],
+    },
+    "anthropic/claude-mythos-5": {
+        "source": "anthropic_pricing",
+        "required": ["Claude Mythos 5", "$10 / MTok", "$50 / MTok"],
+    },
+    "anthropic/claude-sonnet-5": {
+        "source": "anthropic_pricing",
+        "required": ["Claude Sonnet 5", "$2 / MTok", "$10 / MTok"],
+    },
+    "google/gemini-3.6-flash": {
+        "source": "gemini_pricing",
+        "required": ["Gemini 3.6 Flash", "gemini-3.6-flash", "$1.50", "$7.50"],
+    },
+    "google/gemini-3.5-flash": {
+        "source": "gemini_pricing",
+        "required": ["Gemini 3.5 Flash", "gemini-3.5-flash", "$1.50", "$9.00"],
     },
 }
 
@@ -2354,70 +2427,109 @@ def extract_sidebar_snapshot_data(
     return patches
 
 
+def parse_arena_html_table(raw_text: str) -> list[tuple[str, str, str]]:
+    """Parse the arena.ai server-rendered leaderboard table.
+
+    Each row has cells: rank, rank spread, model (slug in span[title]),
+    score (e.g. "1509±6"), votes, price, context.
+    Returns (rank, display_name, rating) tuples compatible with the old RSC parser.
+    """
+    soup = BeautifulSoup(raw_text, "html.parser")
+    entries: list[tuple[str, str, str]] = []
+    for row in soup.find_all("tr"):
+        cells = row.find_all("td")
+        if len(cells) < 4:
+            continue
+        score_cell = cells[3].get_text(" ", strip=True)
+        score_match = re.match(r"(\d{3,4})\s*\u00b1\s*(\d+)", score_cell)
+        if not score_match:
+            continue
+        slug_tag = cells[2].find("span", attrs={"title": True})
+        slug = slug_tag["title"].strip() if slug_tag else cells[2].get_text(" ", strip=True)
+        if not slug:
+            continue
+        rank_text = cells[0].get_text(" ", strip=True)
+        rank = rank_text if rank_text.isdigit() else "0"
+        entries.append((rank, slug, score_match.group(1)))
+    return entries
+
+
 def extract_arena_elo_data(
     models: list[dict[str, Any]],
     session: requests.Session,
     args: argparse.Namespace,
     report: dict[str, Any],
 ) -> list[ExtractedModel]:
-    """Fetch Chatbot Arena Elo ratings from lmarena.ai/leaderboard.
+    """Fetch Chatbot Arena Elo ratings from arena.ai/leaderboard/text.
 
-    The page is a Next.js app that embeds leaderboard data in a large RSC script tag.
-    Each entry has rank, modelDisplayName, and rating (Elo score).
-    We match Arena display names to our model IDs via normalized key lookup,
-    explicit ARENA_ELO_ALIASES, and a second pass with variant-suffix fallback.
+    Preferred input: a structured JSON snapshot at
+    .cache/model-sources/arena_text_leaderboard.json (produced by browser
+    scraping, [{rank, modelDisplayName, rating}]). Otherwise the page HTML is
+    fetched and its server-rendered table is parsed. Arena display names are
+    matched to our model IDs via normalized key lookup, explicit
+    ARENA_ELO_ALIASES, and a second pass with variant-suffix fallback.
     """
-    source_url = RAW_SOURCE_URLS["lmarena_leaderboard"]
-    cache_key = "lmarena_leaderboard"
+    source_url = RAW_SOURCE_URLS["arena_leaderboard"]
+    cache_key = "arena_leaderboard"
 
-    cache_path = CACHE_DIR / f"{cache_key}.txt"
-    if not args.no_cache and not args.refresh_cache and cache_path.exists():
-        raw_text = cache_path.read_text(encoding="utf-8")
-        report.setdefault("cacheHits", []).append(cache_key)
-    elif not args.online and not args.refresh_cache:
-        report.setdefault("sourceWarnings", []).append({"key": cache_key, "url": source_url, "error": "Cache miss - run with --online to fetch"})
-        return []
-    else:
+    entries: list[tuple[str, str, str]] = []
+    raw_text = ""
+    snapshot_path = CACHE_DIR / "arena_text_leaderboard.json"
+    if snapshot_path.exists() and not args.refresh_cache:
         try:
-            resp = session.get(source_url, timeout=30, headers={"Accept": "text/html,*/*"})
-            resp.raise_for_status()
-            raw_text = resp.text
-            if not args.no_cache:
-                CACHE_DIR.mkdir(parents=True, exist_ok=True)
-                cache_path.write_text(raw_text, encoding="utf-8")
-        except Exception as exc:
-            report.setdefault("errors", []).append(f"lmarena_leaderboard fetch error: {exc}")
+            snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
+            entries = [
+                (str(item.get("rank") or 0), str(item.get("modelDisplayName", "")), str(item.get("rating", "")))
+                for item in snapshot
+                if item.get("modelDisplayName") and item.get("rating") is not None
+            ]
+            report.setdefault("cacheHits", []).append("arena_text_leaderboard.json")
+        except (json.JSONDecodeError, OSError):
+            entries = []
+
+    if not entries:
+        cache_path = CACHE_DIR / f"{cache_key}.txt"
+        if not args.no_cache and not args.refresh_cache and cache_path.exists():
+            raw_text = cache_path.read_text(encoding="utf-8")
+            report.setdefault("cacheHits", []).append(cache_key)
+        elif not args.online and not args.refresh_cache:
+            report.setdefault("sourceWarnings", []).append({"key": cache_key, "url": source_url, "error": "Cache miss - run with --online to fetch"})
             return []
+        else:
+            try:
+                resp = session.get(source_url, timeout=60, headers={"Accept": "text/html,*/*"})
+                resp.raise_for_status()
+                raw_text = resp.text
+                if not args.no_cache:
+                    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+                    cache_path.write_text(raw_text, encoding="utf-8")
+            except Exception as exc:
+                report.setdefault("errors", []).append(f"arena_leaderboard fetch error: {exc}")
+                return []
+        entries = parse_arena_html_table(raw_text)
 
-    # Locate the large RSC script containing the leaderboard payload.
-    # It is the script that includes both "arenaSlug" and "rating" and is >100 KB.
-    leaderboard_script = ""
-    for sc in re.findall(r"<script[^>]*>(.*?)</script>", raw_text, re.DOTALL):
-        sc = sc.strip()
-        if len(sc) > 100_000 and "arenaSlug" in sc and "rating" in sc:
-            leaderboard_script = sc
-            break
+    # Best-effort snapshot date from the page header ("Aug 1, 2026 7,571,037 votes").
+    if not raw_text:
+        html_cache = CACHE_DIR / f"{cache_key}.txt"
+        if html_cache.exists():
+            try:
+                raw_text = html_cache.read_text(encoding="utf-8")
+            except OSError:
+                raw_text = ""
+    snapshot_date = ""
+    if raw_text:
+        page_text = re.sub(r"<[^>]+>", " ", raw_text)
+        page_text = re.sub(r"\s+", " ", page_text)
+        date_match = re.search(
+            r"((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* \d{1,2}, \d{4})\s+[\d,]+ votes",
+            page_text,
+        )
+        if date_match:
+            snapshot_date = date_match.group(1)
 
-    if not leaderboard_script:
-        report.setdefault("sourceWarnings", []).append({"key": cache_key, "url": source_url, "error": "leaderboard RSC script not found"})
-        return []
-
-    # The script is: self.__next_f.push([1,"<escaped JSON>"]).
-    # Unescape the inner JSON string.
-    match = re.search(r'self\.__next_f\.push\(\[1,"(.+)"\]\)\s*$', leaderboard_script, re.DOTALL)
-    if not match:
-        report.setdefault("sourceWarnings", []).append({"key": cache_key, "url": source_url, "error": "RSC push wrapper not found"})
-        return []
-
-    decoded = match.group(1).replace('\\"', '"').replace('\\\\', '\\').replace('\\n', '\n').replace('\\t', '\t')
-
-    # Extract entries: {rank, rankUpper, rankLower, modelDisplayName, rating, ...}
-    entries = re.findall(
-        r'"rank":(\d+),"rankUpper":\d+,"rankLower":\d+,"modelDisplayName":"([^"]+)","rating":([\d.]+)',
-        decoded,
-    )
     report["arenaEloEntries"] = len(entries)
     if not entries:
+        report.setdefault("sourceWarnings", []).append({"key": cache_key, "url": source_url, "error": "no leaderboard entries parsed"})
         return []
 
     matcher = build_model_matcher(models)
@@ -2460,13 +2572,19 @@ def extract_arena_elo_data(
             arena_best[model_id] = entry_data  # same type — prefer higher score
 
     for model_id, entry in arena_best.items():
+        patch: dict[str, Any] = {"arenaElo": entry["score"]}
+        verified_fields = ["arenaElo"]
+        if snapshot_date:
+            patch["arenaEloCheckedAt"] = snapshot_date
+            patch["arenaEloSource"] = f"Arena Text Leaderboard (arena.ai, {snapshot_date})"
+            verified_fields += ["arenaEloCheckedAt", "arenaEloSource"]
         patches.append(
             ExtractedModel(
                 model_id=model_id,
                 source_label="Chatbot Arena leaderboard",
                 source_url=source_url,
-                verified_fields=["arenaElo"],
-                patch={"arenaElo": entry["score"]},
+                verified_fields=verified_fields,
+                patch=patch,
                 evidence=[f"rank={entry['rank']} modelDisplayName={entry['name']!r} rating={entry['score']}"],
             )
         )

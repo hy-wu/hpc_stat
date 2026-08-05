@@ -687,43 +687,6 @@
     "checkedAt": "2026-05-19"
   },
   {
-    "id": "tongyi-lingma__qwen3-coder-next",
-    "toolId": "tongyi-lingma",
-    "toolName": "通义灵码",
-    "modelId": "qwen/qwen3-coder-next",
-    "modelName": "Qwen3 Coder Next",
-    "modelVendor": "Alibaba",
-    "supportStatus": "官方内置",
-    "routeTags": [
-      "阿里云/通义账号",
-      "IDE extension",
-      "订阅/企业"
-    ],
-    "capabilityTags": [
-      "中文场景",
-      "代码生成",
-      "企业管理"
-    ],
-    "codingFit": 4,
-    "agentFit": 4,
-    "contextFit": 4,
-    "priceMeter": "个人免费/企业套餐；底层模型与额度以通义灵码发布为准",
-    "planRequirement": "个人版/企业版",
-    "latencyNote": "国内访问友好，企业接入与合规控制较重要",
-    "notes": "适合中文开发团队和阿里云生态；底层模型映射需持续核验。",
-    "sources": [
-      {
-        "label": "通义灵码",
-        "url": "https://tongyi.aliyun.com/lingma"
-      },
-      {
-        "label": "Alibaba Model Studio pricing",
-        "url": "https://help.aliyun.com/zh/model-studio/model-pricing"
-      }
-    ],
-    "checkedAt": "2026-05-19"
-  },
-  {
     "id": "codegeex__glm-5-1",
     "toolId": "codegeex",
     "toolName": "CodeGeeX",
@@ -3167,5 +3130,169 @@
       }
     ],
     "checkedAt": "2026-05-19"
+  },
+  {
+    "id": "qoder__qwen3.8-max",
+    "toolId": "qoder",
+    "toolName": "Qoder",
+    "modelId": "qwen/qwen3.8-max",
+    "modelName": "Qwen3.8-Max",
+    "modelVendor": "Alibaba",
+    "supportStatus": "官方内置",
+    "routeTags": [
+      "阿里云账号",
+      "Standalone IDE",
+      "订阅 Credits"
+    ],
+    "capabilityTags": [
+      "中文场景",
+      "代码生成",
+      "长周期 Agent"
+    ],
+    "codingFit": 5,
+    "agentFit": 5,
+    "contextFit": 5,
+    "priceMeter": "Credits 计量；Qoder CN 国内版按模型倍率计费",
+    "planRequirement": "Free/Pro/Pro+/Ultra",
+    "latencyNote": "国内访问友好，模型选择器按倍率计费",
+    "notes": "2026-05-20 通义灵码升级为 Qoder CN；Qwen3.8-Max 为 Qoder 全系集成的旗舰模型之一。",
+    "sources": [
+      {
+        "label": "Qoder CN 系列介绍（阿里云文档）",
+        "url": "https://help.aliyun.com/zh/lingma/introduction-of-lingma"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "qoder__kimi-k3",
+    "toolId": "qoder",
+    "toolName": "Qoder",
+    "modelId": "moonshotai/kimi-k3",
+    "modelName": "Kimi K3",
+    "modelVendor": "Moonshot AI",
+    "supportStatus": "官方内置",
+    "routeTags": [
+      "阿里云账号",
+      "模型选择器",
+      "订阅 Credits"
+    ],
+    "capabilityTags": [
+      "长程编程",
+      "推理",
+      "中文场景"
+    ],
+    "codingFit": 5,
+    "agentFit": 5,
+    "contextFit": 5,
+    "priceMeter": "Qoder CN 模型选择器内置（Kimi-K3 NEW）",
+    "planRequirement": "Free/Pro/Pro+/Ultra",
+    "latencyNote": "国内访问友好，模型选择器按倍率计费",
+    "notes": "Qoder CN 支持 Kimi 最新旗舰，长程编程与推理场景推荐。",
+    "sources": [
+      {
+        "label": "Qoder CN 系列介绍（阿里云文档）",
+        "url": "https://help.aliyun.com/zh/lingma/introduction-of-lingma"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "qoder__deepseek-v4-pro",
+    "toolId": "qoder",
+    "toolName": "Qoder",
+    "modelId": "deepseek-v4-pro",
+    "modelName": "DeepSeek V4 Pro",
+    "modelVendor": "DeepSeek",
+    "supportStatus": "官方内置",
+    "routeTags": [
+      "阿里云账号",
+      "模型选择器",
+      "订阅 Credits"
+    ],
+    "capabilityTags": [
+      "代码生成",
+      "推理",
+      "性价比"
+    ],
+    "codingFit": 4,
+    "agentFit": 4,
+    "contextFit": 4,
+    "priceMeter": "Qoder CN 倍率 0.2x（最经济档之一）",
+    "planRequirement": "Free/Pro/Pro+/Ultra",
+    "latencyNote": "国内访问友好，模型选择器按倍率计费",
+    "notes": "Qoder CN 模型选择器内置 DeepSeek-V4-Pro，倍率 0.2x。",
+    "sources": [
+      {
+        "label": "Qoder CN 系列介绍（阿里云文档）",
+        "url": "https://help.aliyun.com/zh/lingma/introduction-of-lingma"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "antigravity__gemini-3.5-flash",
+    "toolId": "antigravity",
+    "toolName": "Google Antigravity",
+    "modelId": "google/gemini-3.5-flash",
+    "modelName": "Gemini 3.5 Flash",
+    "modelVendor": "Google",
+    "supportStatus": "官方内置",
+    "routeTags": [
+      "Google 账号",
+      "Standalone IDE",
+      "订阅限额"
+    ],
+    "capabilityTags": [
+      "代码生成",
+      "Agent 编排",
+      "多模型"
+    ],
+    "codingFit": 5,
+    "agentFit": 5,
+    "contextFit": 5,
+    "priceMeter": "个人免费起步，用量取自 Google AI 计划",
+    "planRequirement": "Free/AI Pro/AI Ultra",
+    "latencyNote": "国内访问友好，模型选择器按倍率计费",
+    "notes": "Antigravity 默认 Agent 模型；免费档含无限 Tab 补全与 Command。",
+    "sources": [
+      {
+        "label": "Antigravity pricing",
+        "url": "https://antigravity.google/pricing"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "antigravity__claude-opus-4.6",
+    "toolId": "antigravity",
+    "toolName": "Google Antigravity",
+    "modelId": "anthropic/claude-opus-4.6",
+    "modelName": "Claude Opus 4.6",
+    "modelVendor": "Anthropic",
+    "supportStatus": "官方内置",
+    "routeTags": [
+      "Google 账号",
+      "Standalone IDE",
+      "订阅限额"
+    ],
+    "capabilityTags": [
+      "复杂推理",
+      "Agent 编排"
+    ],
+    "codingFit": 4,
+    "agentFit": 4,
+    "contextFit": 4,
+    "priceMeter": "经 Google AI 计划额度池调用（Claude 池）",
+    "planRequirement": "AI Pro/AI Ultra",
+    "latencyNote": "国内访问友好，模型选择器按倍率计费",
+    "notes": "免费档即含 Claude Sonnet & Opus 4.6 访问；独立 Claude 额度池管理。",
+    "sources": [
+      {
+        "label": "Antigravity pricing",
+        "url": "https://antigravity.google/pricing"
+      }
+    ],
+    "checkedAt": "2026-08-06"
   }
 ]
