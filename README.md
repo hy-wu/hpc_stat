@@ -1,15 +1,16 @@
 # Unified GPU + LLM Table
 
-一个零依赖的静态参数工作台，包含硬件对比页、大模型统计页、AI Agent 工具页和模型 × 工具关联表：
+一个零依赖的静态参数工作台，包含硬件对比页、大模型统计页、AI Agent 工具页、模型 × 工具关联表和模型 × 硬件关联表：
 
 - `index.html`：GPU / FPGA / ASIC / CPU 参数、价格与能效对比。
 - `models.html`：LLM 价格、上下文、评测与核验状态宽表。
 - `agent-tools.html`：AI IDE、vibe coding CLI、云端 coding agent、IDE 插件的接入方式、能力、价格与核验状态宽表。
 - `model-tools.html`：模型在各 Agent 工具中的接入方式、价格消耗口径、能力适配与评价的稀疏关联表。
+- `model-hardware.html`：可自托管模型在各加速硬件上的部署方式、量化精度、显存需求与适配评分的稀疏关联表。
 
 ## 功能
 
-- 多页面：硬件参数页、LLM 数据页、Agent 工具页与模型 × 工具关联表共用一套静态发布方式。
+- 多页面：硬件参数页、LLM 数据页、Agent 工具页、模型 × 工具与模型 × 硬件关联表共用一套静态发布方式。
 - 任意字段排序：点击表头或使用排序字段下拉框。
 - 全局搜索：型号、架构、显存、备注等字段都会参与搜索。
 - 字段筛选：可添加多个条件，支持文本包含和数值比较。
@@ -20,7 +21,7 @@
 
 ## 本地使用
 
-直接打开 `index.html`、`models.html`、`agent-tools.html` 或 `model-tools.html` 即可使用。若要测试 `data/prices.json` / `data/models.json` / `data/agent-tools.json` / `data/model-tools.json` 的读取，请用任意静态服务器启动：
+直接打开 `index.html`、`models.html`、`agent-tools.html`、`model-tools.html` 或 `model-hardware.html` 即可使用。若要测试 `data/prices.json` / `data/models.json` / `data/agent-tools.json` / `data/model-tools.json` / `data/model-hardware.json` 的读取，请用任意静态服务器启动：
 
 ```bash
 python3 -m http.server 4173
@@ -33,6 +34,7 @@ http://localhost:4173/index.html
 http://localhost:4173/models.html
 http://localhost:4173/agent-tools.html
 http://localhost:4173/model-tools.html
+http://localhost:4173/model-hardware.html
 ```
 
 ## LLM 数据核验
@@ -81,6 +83,8 @@ Agent 工具页当前约定：
 - 对于 CLI/插件免费、但底层模型按 token 计费的工具，`startingUSD` 可以是 `0`，并在 `pricing.usageMeter` 中说明 provider 计费口径。
 
 模型 × 工具关系的数据源仍使用稀疏记录：每条记录用 `toolId`、`modelId`、接入方式、消耗口径、能力评价和来源描述一个已观察到的组合。`model-tools.html` 会把这些记录 pivot 成真正的矩阵：模型是行、工具是列，空白 cell 表示暂无记录；评分字段是 1-5 的人工适配度（不是 benchmark），用于排序和筛选候选组合。
+
+模型 × 硬件关系同样使用稀疏记录（`data/model-hardware.json`）：每条记录用 `modelId`、`gpuId`、部署方式（单卡/单设备/多卡/集群）、量化精度、卡数、最低显存、吞吐与成本说明和来源描述一个已观察到的部署组合。`model-hardware.html` 把它 pivot 成矩阵：模型是行、硬件是列；`memoryFit` / `bandwidthFit` / `computeFit` / `fitScore` 均为 1-5 的人工适配度（不是 benchmark），仅用于排序和筛选候选部署方案。`inputTps` / `outputTps` / `concurrency` / `perfSource` 记录 prefill 输入与 decode 输出速度（tok/s）、当时并发数与速度数据口径；速度数字允许摘自博客、论坛帖子、新闻等公开实测，不必全来自官方汇总，但要在 `perfSource` 中写清口径。页面把这三个指标画成单元格背景柱状图：输入/输出/并发三根竖条横向并排、填满格子，柱高按全表全局最大值归一（筛选时标尺不变），颜色越深数值越高；格内最后一行以左/中/右对齐显示对应数值。筛选后完全没有记录的硬件列会自动隐藏（列设置按钮会标注自动隐藏数量）。新抓取到的模型、硬件、工具条目一律并入对应数据表，不得以不在既有清单为由过滤。
 
 ## 价格更新格式
 

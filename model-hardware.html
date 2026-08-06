@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LLM Comparison</title>
+    <title>Model × Hardware Matrix</title>
     <link rel="icon" href="src/assets/icon.svg" />
     <link rel="stylesheet" href="src/styles.css" />
   </head>
@@ -11,14 +11,14 @@
     <div class="app-shell">
       <header class="topbar">
         <div class="topbar-brand">
-          <h1>LLM Comparison</h1>
+          <h1>Model × Hardware Matrix</h1>
         </div>
         <nav class="nav-tabs">
           <a href="index.html" class="nav-link">并行计算</a>
-          <a href="models.html" class="nav-link active">大模型</a>
+          <a href="models.html" class="nav-link">大模型</a>
           <a href="agent-tools.html" class="nav-link">Agent 工具</a>
           <a href="model-tools.html" class="nav-link">模型 × 工具</a>
-          <a href="model-hardware.html" class="nav-link">模型 × 硬件</a>
+          <a href="model-hardware.html" class="nav-link active">模型 × 硬件</a>
         </nav>
         <div class="actions">
           <button class="icon-button" id="themeToggleButton" type="button" title="切换暗色/亮色模式">☀️</button>
@@ -29,32 +29,36 @@
         <div class="filter-card">
           <section class="control-band">
             <div class="search-block">
-              <label for="globalSearch">搜索模型</label>
-              <input id="globalSearch" type="search" placeholder="名称、厂商、性能标签、价格、评测..." />
+              <label for="globalSearch">搜索矩阵</label>
+              <input id="globalSearch" type="search" placeholder="模型、硬件、部署方式、精度、吞吐、成本、评价..." />
             </div>
             <div class="control">
-              <label for="modalityFilter">模态</label>
-              <select id="modalityFilter"></select>
+              <label for="gpuFilter">聚焦硬件</label>
+              <select id="gpuFilter"></select>
             </div>
             <div class="control">
-              <label for="statusFilter">核验状态</label>
-              <select id="statusFilter"></select>
+              <label for="modelVendorFilter">模型厂商</label>
+              <select id="modelVendorFilter"></select>
             </div>
             <div class="control">
-              <label for="vendorFilter">厂商</label>
-              <select id="vendorFilter"></select>
+              <label for="deployModeFilter">部署方式</label>
+              <select id="deployModeFilter"></select>
             </div>
             <div class="control">
-              <label for="sortField">排序字段</label>
+              <label for="precisionFilter">量化精度</label>
+              <select id="precisionFilter"></select>
+            </div>
+            <div class="control">
+              <label for="sortField">模型行排序</label>
               <select id="sortField"></select>
             </div>
-            <button class="ghost-button" id="sortDirectionButton" type="button">升序</button>
+            <button class="ghost-button" id="sortDirectionButton" type="button">降序</button>
             <button class="ghost-button" id="resetFiltersButton" type="button">重置</button>
           </section>
 
           <section class="filters-panel-inner">
             <div class="panel-head">
-              <h2>字段筛选</h2>
+              <h2>组合筛选</h2>
               <button class="text-button" id="addRuleButton" type="button">添加条件</button>
             </div>
             <div id="filterRules" class="rules"></div>
@@ -63,23 +67,26 @@
 
         <section class="insight-grid" aria-label="统计概览">
           <div class="metric">
-            <span>对比模型</span>
+            <span>筛选组合</span>
             <strong id="visibleCount">0</strong>
           </div>
           <div class="metric">
-            <span>模型名已验证</span>
-            <strong id="bestElo">-</strong>
+            <span>单卡/单设备可部署</span>
+            <strong id="singleCardCount">-</strong>
           </div>
           <div class="metric">
-            <span>官方价格覆盖</span>
-            <strong id="bestHumanEval">-</strong>
+            <span>多卡/集群</span>
+            <strong id="multiCardCount">-</strong>
+          </div>
+          <div class="metric">
+            <span>平均硬件适配</span>
+            <strong id="avgFitScore">-</strong>
           </div>
         </section>
 
         <section class="table-panel">
           <div class="panel-head">
-            <h2>已核验模型表</h2>
-            
+            <h2>模型 × 硬件矩阵</h2>
             <div class="table-tools">
               <button
                 class="text-button"
@@ -95,8 +102,13 @@
             </div>
           </div>
           <div class="column-picker" id="columnPicker" hidden></div>
+          <p class="matrix-legend muted">
+            单元格说明：适配条 <strong>M</strong>=显存容量 · <strong>B</strong>=带宽 · <strong>C</strong>=算力（1–5 人工适配度，非 benchmark）；
+            背景柱状图三根竖条依次为 <strong>↑输入(prefill)</strong>、<strong>↓输出(decode)</strong> 速度(tok/s) 与并发数，柱高按全表全局最大值归一（筛选时标尺不变），颜色越深数值越高，悬停单元格可见具体数值与口径；
+            速度数据摘自博客/论坛/新闻等公开实测；筛选后无任何记录的硬件列会自动隐藏。
+          </p>
           <div class="table-wrap">
-            <table id="gpuTable"> <!-- Reusing ID for CSS -->
+            <table id="gpuTable">
               <thead id="tableHead"></thead>
               <tbody id="tableBody"></tbody>
             </table>
@@ -105,7 +117,7 @@
       </main>
     </div>
 
-    <script type="module" src="src/models.js"></script>
+    <script type="module" src="src/model-hardware.js"></script>
     <script>
       (function() {
         const THEME_KEY = 'hpc-stat-theme';

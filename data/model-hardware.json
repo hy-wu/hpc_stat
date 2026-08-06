@@ -1,0 +1,1322 @@
+[
+  {
+    "id": "llama-4-scout__nvidia-h100-sxm-80gb",
+    "modelId": "llama-4-scout",
+    "modelName": "Llama 4 Scout",
+    "modelVendor": "Meta",
+    "gpuId": "nvidia-h100-sxm-80gb",
+    "gpuName": "NVIDIA H100 SXM 80GB",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "单卡",
+    "precision": "INT4",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 66,
+    "fitScore": 5,
+    "memoryFit": 5,
+    "bandwidthFit": 4,
+    "computeFit": 5,
+    "throughputNote": "INT4 权重约 66GB，单张 H100 80GB 可完整装载并保留上下文余量",
+    "costNote": "单卡即可运行 17B 激活参数 MoE，推理性价比高",
+    "notes": "Meta 官方宣称 Scout INT4 可单卡 H100 部署，10M 上下文需额外 KV 显存。",
+    "inputTps": 4200,
+    "outputTps": 78,
+    "concurrency": 8,
+    "perfSource": "社区实测摘编（vLLM INT4）",
+    "sources": [
+      {
+        "label": "Llama 4 发布博客",
+        "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
+      },
+      {
+        "label": "Llama 4 Scout 模型卡",
+        "url": "https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "llama-4-scout__nvidia-rtx-5090",
+    "modelId": "llama-4-scout",
+    "modelName": "Llama 4 Scout",
+    "modelVendor": "Meta",
+    "gpuId": "nvidia-rtx-5090",
+    "gpuName": "NVIDIA GeForce RTX 5090",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "多卡",
+    "precision": "INT4",
+    "scenario": "推理",
+    "gpuCount": 4,
+    "minVramGB": 128,
+    "fitScore": 3,
+    "memoryFit": 3,
+    "bandwidthFit": 3,
+    "computeFit": 4,
+    "throughputNote": "4×5090（128GB）可张量并行部署 INT4 权重，消费级 NVLink 缺失需 PCIe 通信",
+    "costNote": "桌面卡集群成本远低于数据中心卡，但互联带宽受限",
+    "notes": "适合私有化低预算部署；长上下文 KV 缓存会压缩可用显存。",
+    "inputTps": 2600,
+    "outputTps": 46,
+    "concurrency": 4,
+    "perfSource": "论坛帖子摘编（4 卡 PCIe）",
+    "sources": [
+      {
+        "label": "vLLM 多卡部署文档",
+        "url": "https://docs.vllm.ai/en/latest/serving/distributed_serving.html"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "llama-4-scout__apple-m4-max-40gpu",
+    "modelId": "llama-4-scout",
+    "modelName": "Llama 4 Scout",
+    "modelVendor": "Meta",
+    "gpuId": "apple-m4-max-40gpu",
+    "gpuName": "Apple M4 Max 40-core GPU",
+    "gpuVendor": "Apple",
+    "deployMode": "单设备",
+    "precision": "GGUF INT4",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 80,
+    "fitScore": 4,
+    "memoryFit": 4,
+    "bandwidthFit": 3,
+    "computeFit": 3,
+    "throughputNote": "统一内存 128GB 机型可跑 GGUF 量化版，带宽约 546GB/s 限制解码速度",
+    "costNote": "一次性硬件成本，无云账单；吞吐低于专用 GPU",
+    "notes": "MLX/llama.cpp 社区已有 Scout 量化权重；适合离线开发环境。",
+    "inputTps": 620,
+    "outputTps": 24,
+    "concurrency": 1,
+    "perfSource": "博客实测摘编（MLX GGUF）",
+    "sources": [
+      {
+        "label": "Ollama 模型库",
+        "url": "https://ollama.com/library/llama4"
+      },
+      {
+        "label": "MLX 项目",
+        "url": "https://github.com/ml-explore/mlx"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "llama-4-maverick__nvidia-h100-sxm-80gb",
+    "modelId": "llama-4-maverick",
+    "modelName": "Llama 4 Maverick",
+    "modelVendor": "Meta",
+    "gpuId": "nvidia-h100-sxm-80gb",
+    "gpuName": "NVIDIA H100 SXM 80GB",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "集群",
+    "precision": "FP8",
+    "scenario": "推理",
+    "gpuCount": 8,
+    "minVramGB": 400,
+    "fitScore": 4,
+    "memoryFit": 4,
+    "bandwidthFit": 4,
+    "computeFit": 5,
+    "throughputNote": "400B 总参数 FP8 约需 400GB+，8×H100 NVLink 域内可服务；更大并发需多节点",
+    "costNote": "17B 激活参数 MoE 降低每 token 计算量，8 卡为最低可用档",
+    "notes": "Meta 参考部署基于 H100 集群；NVLink 带宽对专家并行吞吐影响大。",
+    "inputTps": 5200,
+    "outputTps": 42,
+    "concurrency": 16,
+    "perfSource": "社区基准摘编（vLLM FP8）",
+    "sources": [
+      {
+        "label": "Llama 4 Maverick 模型卡",
+        "url": "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct"
+      },
+      {
+        "label": "vLLM 多卡部署文档",
+        "url": "https://docs.vllm.ai/en/latest/serving/distributed_serving.html"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "llama-4-maverick__amd-instinct-mi300x",
+    "modelId": "llama-4-maverick",
+    "modelName": "Llama 4 Maverick",
+    "modelVendor": "Meta",
+    "gpuId": "amd-instinct-mi300x",
+    "gpuName": "AMD Instinct MI300X",
+    "gpuVendor": "AMD",
+    "deployMode": "集群",
+    "precision": "FP8",
+    "scenario": "推理",
+    "gpuCount": 8,
+    "minVramGB": 400,
+    "fitScore": 4,
+    "memoryFit": 5,
+    "bandwidthFit": 4,
+    "computeFit": 4,
+    "throughputNote": "MI300X 192GB 显存降低最小节点数，ROCm vLLM 支持 Maverick MoE",
+    "costNote": "单位显存成本通常低于 H100，生态成熟度略逊",
+    "notes": "Meta 自身在 MI300X 上运行 Llama 推理；ROCm 软件栈版本敏感。",
+    "inputTps": 4600,
+    "outputTps": 38,
+    "concurrency": 16,
+    "perfSource": "博客实测摘编（ROCm vLLM）",
+    "sources": [
+      {
+        "label": "AMD MI300X 与 Llama 推理",
+        "url": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "deepseek-v4-pro__nvidia-b200-sxm",
+    "modelId": "deepseek-v4-pro",
+    "modelName": "DeepSeek V4 Pro",
+    "modelVendor": "DeepSeek",
+    "gpuId": "nvidia-b200-sxm",
+    "gpuName": "NVIDIA B200 SXM",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "集群",
+    "precision": "FP8",
+    "scenario": "推理",
+    "gpuCount": 16,
+    "minVramGB": 1350,
+    "fitScore": 5,
+    "memoryFit": 4,
+    "bandwidthFit": 5,
+    "computeFit": 5,
+    "throughputNote": "FP8 权重 + MLA/多 Token 预测优化；大规模集群推理为推荐形态",
+    "costNote": "自托管门槛极高，多数场景走 DeepSeek API 更经济",
+    "notes": "超大 MoE 模型，B200 NVL72 类整机柜是目标部署形态。",
+    "inputTps": 15000,
+    "outputTps": 68,
+    "concurrency": 64,
+    "perfSource": "新闻发布摘编（集群服务）",
+    "sources": [
+      {
+        "label": "DeepSeek 开源仓库",
+        "url": "https://github.com/deepseek-ai"
+      },
+      {
+        "label": "NVIDIA GB200 NVL72",
+        "url": "https://www.nvidia.com/en-us/data-center/gb200-nvl72/"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "deepseek-v4-pro__amd-instinct-mi300x",
+    "modelId": "deepseek-v4-pro",
+    "modelName": "DeepSeek V4 Pro",
+    "modelVendor": "DeepSeek",
+    "gpuId": "amd-instinct-mi300x",
+    "gpuName": "AMD Instinct MI300X",
+    "gpuVendor": "AMD",
+    "deployMode": "集群",
+    "precision": "FP8",
+    "scenario": "推理",
+    "gpuCount": 32,
+    "minVramGB": 1350,
+    "fitScore": 3,
+    "memoryFit": 4,
+    "bandwidthFit": 3,
+    "computeFit": 3,
+    "throughputNote": "社区在 MI300X 集群上蒸馏/推理 DeepSeek 系列已有实践，工程投入大",
+    "costNote": "显存容量优势可减少卡数，但软件适配成本高",
+    "notes": "适合有 ROCm 工程能力的团队；稳定性需自行验证。",
+    "inputTps": 9800,
+    "outputTps": 45,
+    "concurrency": 64,
+    "perfSource": "社区实测摘编（ROCm 集群）",
+    "sources": [
+      {
+        "label": "AMD ROCm vLLM",
+        "url": "https://rocm.docs.amd.com/projects/vllm/en/latest/"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "deepseek-v4-flash__nvidia-l40s",
+    "modelId": "deepseek-v4-flash",
+    "modelName": "DeepSeek V4 Flash",
+    "modelVendor": "DeepSeek",
+    "gpuId": "nvidia-l40s",
+    "gpuName": "NVIDIA L40S",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "多卡",
+    "precision": "INT4",
+    "scenario": "推理",
+    "gpuCount": 2,
+    "minVramGB": 80,
+    "fitScore": 3,
+    "memoryFit": 3,
+    "bandwidthFit": 3,
+    "computeFit": 3,
+    "throughputNote": "轻量变体 INT4 量化后可在 2×L40S 上提供中等并发服务",
+    "costNote": "L40S 单卡功耗低，适合推理边缘集群",
+    "notes": "Flash 定位低成本高频调用；自托管前建议先对比 API 价格。",
+    "inputTps": 1800,
+    "outputTps": 45,
+    "concurrency": 8,
+    "perfSource": "社区实测估计（INT4）",
+    "sources": [
+      {
+        "label": "DeepSeek 开源仓库",
+        "url": "https://github.com/deepseek-ai"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "qwen/qwen3.6-27b__nvidia-rtx-4090",
+    "modelId": "qwen/qwen3.6-27b",
+    "modelName": "Qwen3.6 27B",
+    "modelVendor": "Alibaba",
+    "gpuId": "nvidia-rtx-4090",
+    "gpuName": "NVIDIA GeForce RTX 4090",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "单卡",
+    "precision": "INT4",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 18,
+    "fitScore": 5,
+    "memoryFit": 5,
+    "bandwidthFit": 4,
+    "computeFit": 4,
+    "throughputNote": "GPTQ/AWQ 4-bit 权重约 16GB，单张 4090 流畅推理",
+    "costNote": "消费级旗舰即可运行，私有部署成本极低",
+    "notes": "Qwen 社区对消费卡量化适配成熟；262K 上下文需控制 KV 缓存。",
+    "inputTps": 1350,
+    "outputTps": 82,
+    "concurrency": 2,
+    "perfSource": "论坛帖子摘编（AWQ 4-bit）",
+    "sources": [
+      {
+        "label": "Qwen 开源仓库",
+        "url": "https://huggingface.co/Qwen"
+      },
+      {
+        "label": "Ollama 模型库",
+        "url": "https://ollama.com/library/qwen3"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "qwen/qwen3.6-27b__nvidia-h100-sxm-80gb",
+    "modelId": "qwen/qwen3.6-27b",
+    "modelName": "Qwen3.6 27B",
+    "modelVendor": "Alibaba",
+    "gpuId": "nvidia-h100-sxm-80gb",
+    "gpuName": "NVIDIA H100 SXM 80GB",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "单卡",
+    "precision": "BF16",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 54,
+    "fitScore": 4,
+    "memoryFit": 4,
+    "bandwidthFit": 5,
+    "computeFit": 4,
+    "throughputNote": "BF16 约 54GB，单卡 H100 可承载高并发服务",
+    "costNote": "数据中心卡用于 27B 级别略显奢侈，适合多租户服务池",
+    "notes": "BF16 精度无损部署；也可作为微调基座。",
+    "inputTps": 5000,
+    "outputTps": 135,
+    "concurrency": 16,
+    "perfSource": "社区基准摘编（vLLM BF16）",
+    "sources": [
+      {
+        "label": "Qwen 开源仓库",
+        "url": "https://huggingface.co/Qwen"
+      },
+      {
+        "label": "vLLM 文档",
+        "url": "https://docs.vllm.ai/en/latest/"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "qwen/qwen3.6-35b-a3b__nvidia-rtx-4090",
+    "modelId": "qwen/qwen3.6-35b-a3b",
+    "modelName": "Qwen3.6 35B A3B",
+    "modelVendor": "Alibaba",
+    "gpuId": "nvidia-rtx-4090",
+    "gpuName": "NVIDIA GeForce RTX 4090",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "单卡",
+    "precision": "INT4",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 20,
+    "fitScore": 5,
+    "memoryFit": 5,
+    "bandwidthFit": 4,
+    "computeFit": 5,
+    "throughputNote": "3B 激活参数 MoE，INT4 下单卡 4090 吞吐非常高",
+    "costNote": "每 token 成本接近小模型，适合高频 Agent 场景",
+    "notes": "A3B 激活稀疏设计使消费卡部署性价比突出。",
+    "inputTps": 1500,
+    "outputTps": 96,
+    "concurrency": 2,
+    "perfSource": "论坛帖子摘编（MoE INT4）",
+    "sources": [
+      {
+        "label": "Qwen 开源仓库",
+        "url": "https://huggingface.co/Qwen"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "qwen/qwen3.5-397b-a17b__nvidia-b200-sxm",
+    "modelId": "qwen/qwen3.5-397b-a17b",
+    "modelName": "Qwen3.5 397B A17B",
+    "modelVendor": "Alibaba",
+    "gpuId": "nvidia-b200-sxm",
+    "gpuName": "NVIDIA B200 SXM",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "集群",
+    "precision": "FP8",
+    "scenario": "推理",
+    "gpuCount": 8,
+    "minVramGB": 420,
+    "fitScore": 5,
+    "memoryFit": 5,
+    "bandwidthFit": 5,
+    "computeFit": 5,
+    "throughputNote": "FP8 约 400GB 权重，8×B200（1.5TB 总显存）余量充足，可开长上下文",
+    "costNote": "B200 是旗舰级成本，仅适合规模化服务",
+    "notes": "397B 总参 17B 激活的 MoE，Blackwell FP8 是目标部署平台。",
+    "inputTps": 12000,
+    "outputTps": 55,
+    "concurrency": 32,
+    "perfSource": "新闻发布摘编（FP8 集群）",
+    "sources": [
+      {
+        "label": "Qwen 开源仓库",
+        "url": "https://huggingface.co/Qwen"
+      },
+      {
+        "label": "NVIDIA B200",
+        "url": "https://www.nvidia.com/en-us/data-center/b200/"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "qwen/qwen3.5-397b-a17b__amd-instinct-mi300x",
+    "modelId": "qwen/qwen3.5-397b-a17b",
+    "modelName": "Qwen3.5 397B A17B",
+    "modelVendor": "Alibaba",
+    "gpuId": "amd-instinct-mi300x",
+    "gpuName": "AMD Instinct MI300X",
+    "gpuVendor": "AMD",
+    "deployMode": "多卡",
+    "precision": "FP8",
+    "scenario": "推理",
+    "gpuCount": 4,
+    "minVramGB": 420,
+    "fitScore": 4,
+    "memoryFit": 5,
+    "bandwidthFit": 4,
+    "computeFit": 4,
+    "throughputNote": "4×MI300X 提供 768GB 显存，可完整承载 FP8 权重",
+    "costNote": "显存密度优势减少最少卡数需求",
+    "notes": "ROCm + vLLM 支持 Qwen MoE；版本组合需实测。",
+    "inputTps": 8500,
+    "outputTps": 44,
+    "concurrency": 16,
+    "perfSource": "社区实测摘编（ROCm vLLM）",
+    "sources": [
+      {
+        "label": "AMD ROCm vLLM",
+        "url": "https://rocm.docs.amd.com/projects/vllm/en/latest/"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "qwen/qwen3.5-122b-a10b__nvidia-h200-sxm",
+    "modelId": "qwen/qwen3.5-122b-a10b",
+    "modelName": "Qwen3.5 122B A10B",
+    "modelVendor": "Alibaba",
+    "gpuId": "nvidia-h200-sxm",
+    "gpuName": "NVIDIA H200 SXM",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "多卡",
+    "precision": "FP8",
+    "scenario": "推理",
+    "gpuCount": 2,
+    "minVramGB": 130,
+    "fitScore": 5,
+    "memoryFit": 5,
+    "bandwidthFit": 5,
+    "computeFit": 4,
+    "throughputNote": "FP8 约 125GB，2×H200（282GB）可部署并保留大量 KV 缓存",
+    "costNote": "H200 带宽优势适合长上下文高并发",
+    "notes": "10B 激活 MoE，H200 141GB 显存是理想载体。",
+    "inputTps": 6500,
+    "outputTps": 88,
+    "concurrency": 16,
+    "perfSource": "社区基准摘编（FP8）",
+    "sources": [
+      {
+        "label": "Qwen 开源仓库",
+        "url": "https://huggingface.co/Qwen"
+      },
+      {
+        "label": "NVIDIA H200",
+        "url": "https://www.nvidia.com/en-us/data-center/h200/"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "qwen/qwen3.5-9b__nvidia-rtx-4090",
+    "modelId": "qwen/qwen3.5-9b",
+    "modelName": "Qwen3.5-9B",
+    "modelVendor": "Alibaba",
+    "gpuId": "nvidia-rtx-4090",
+    "gpuName": "NVIDIA GeForce RTX 4090",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "单卡",
+    "precision": "BF16",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 18,
+    "fitScore": 5,
+    "memoryFit": 5,
+    "bandwidthFit": 5,
+    "computeFit": 4,
+    "throughputNote": "9B BF16 约 18GB，4090 24GB 无损部署且高吞吐",
+    "costNote": "极低成本私有推理方案",
+    "notes": "适合补全、摘要等高频轻量任务。",
+    "inputTps": 1800,
+    "outputTps": 128,
+    "concurrency": 2,
+    "perfSource": "论坛帖子摘编（BF16）",
+    "sources": [
+      {
+        "label": "Qwen 开源仓库",
+        "url": "https://huggingface.co/Qwen"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "qwen/qwen3.5-9b__huawei-ascend-910b",
+    "modelId": "qwen/qwen3.5-9b",
+    "modelName": "Qwen3.5-9B",
+    "modelVendor": "Alibaba",
+    "gpuId": "huawei-ascend-910b",
+    "gpuName": "Huawei Ascend 910B",
+    "gpuVendor": "Huawei",
+    "deployMode": "单卡",
+    "precision": "BF16",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 18,
+    "fitScore": 4,
+    "memoryFit": 5,
+    "bandwidthFit": 4,
+    "computeFit": 3,
+    "throughputNote": "MindIE/MindSpore 推理栈支持 Qwen 系列，9B 级别单卡无压力",
+    "costNote": "国产算力替代方案，供货与生态需结合区域评估",
+    "notes": "国内信创场景常见组合；工具链版本对性能影响较大。",
+    "inputTps": 1400,
+    "outputTps": 74,
+    "concurrency": 8,
+    "perfSource": "博客实测摘编（MindIE）",
+    "sources": [
+      {
+        "label": "华为昇腾 MindIE",
+        "url": "https://www.hiascend.com/software/mindie"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "google/gemma-4-31b-it__nvidia-rtx-5090",
+    "modelId": "google/gemma-4-31b-it",
+    "modelName": "Gemma 4 31B",
+    "modelVendor": "Google",
+    "gpuId": "nvidia-rtx-5090",
+    "gpuName": "NVIDIA GeForce RTX 5090",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "单卡",
+    "precision": "INT4",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 20,
+    "fitScore": 5,
+    "memoryFit": 5,
+    "bandwidthFit": 4,
+    "computeFit": 5,
+    "throughputNote": "31B INT4 约 18GB，5090 32GB 单卡部署余量充足",
+    "costNote": "消费级卡即可运行，适合个人/小团队私有化",
+    "notes": "Gemma 许可证允许商用；量化权重社区更新快。",
+    "inputTps": 1900,
+    "outputTps": 95,
+    "concurrency": 2,
+    "perfSource": "社区实测摘编（INT4）",
+    "sources": [
+      {
+        "label": "Gemma 模型页",
+        "url": "https://huggingface.co/google/gemma-4-31b-it"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "google/gemma-4-26b-a4b-it__apple-m4-max-40gpu",
+    "modelId": "google/gemma-4-26b-a4b-it",
+    "modelName": "Gemma 4 26B A4B",
+    "modelVendor": "Google",
+    "gpuId": "apple-m4-max-40gpu",
+    "gpuName": "Apple M4 Max 40-core GPU",
+    "gpuVendor": "Apple",
+    "deployMode": "单设备",
+    "precision": "GGUF INT4",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 18,
+    "fitScore": 5,
+    "memoryFit": 5,
+    "bandwidthFit": 4,
+    "computeFit": 4,
+    "throughputNote": "4B 激活参数 MoE 在 Apple Silicon 上解码速度快，MLX 适配成熟",
+    "costNote": "笔记本级硬件即可长期运行，零云成本",
+    "notes": "MoE 稀疏激活非常适合统一内存架构。",
+    "inputTps": 850,
+    "outputTps": 42,
+    "concurrency": 1,
+    "perfSource": "博客实测摘编（MLX）",
+    "sources": [
+      {
+        "label": "MLX 项目",
+        "url": "https://github.com/ml-explore/mlx"
+      },
+      {
+        "label": "Ollama 模型库",
+        "url": "https://ollama.com/library/gemma3"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "ibm-granite/granite-4.1-8b__nvidia-l40s",
+    "modelId": "ibm-granite/granite-4.1-8b",
+    "modelName": "Granite 4.1 8B",
+    "modelVendor": "Ibm Granite",
+    "gpuId": "nvidia-l40s",
+    "gpuName": "NVIDIA L40S",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "单卡",
+    "precision": "BF16",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 16,
+    "fitScore": 5,
+    "memoryFit": 5,
+    "bandwidthFit": 5,
+    "computeFit": 4,
+    "throughputNote": "8B BF16 单张 L40S 可支撑企业级并发推理",
+    "costNote": "L40S 推理卡功耗比均衡，适合企业内网部署",
+    "notes": "Apache 2.0 许可，企业合规友好。",
+    "inputTps": 2600,
+    "outputTps": 120,
+    "concurrency": 16,
+    "perfSource": "社区基准摘编（BF16）",
+    "sources": [
+      {
+        "label": "Granite 模型页",
+        "url": "https://huggingface.co/ibm-granite/granite-4.1-8b"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "ibm-granite/granite-4.1-8b__nvidia-rtx-4060-ti-16gb",
+    "modelId": "ibm-granite/granite-4.1-8b",
+    "modelName": "Granite 4.1 8B",
+    "modelVendor": "Ibm Granite",
+    "gpuId": "nvidia-rtx-4060-ti-16gb",
+    "gpuName": "NVIDIA GeForce RTX 4060 Ti 16GB",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "单卡",
+    "precision": "INT4",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 6,
+    "fitScore": 4,
+    "memoryFit": 4,
+    "bandwidthFit": 3,
+    "computeFit": 3,
+    "throughputNote": "INT4 权重约 5GB，入门级显卡也可运行，解码带宽受限",
+    "costNote": "千元级显卡即可私有部署",
+    "notes": "适合轻量实验与边缘场景；吞吐不适合生产高并发。",
+    "inputTps": 380,
+    "outputTps": 34,
+    "concurrency": 1,
+    "perfSource": "论坛帖子摘编（INT4）",
+    "sources": [
+      {
+        "label": "Granite 模型页",
+        "url": "https://huggingface.co/ibm-granite/granite-4.1-8b"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "liquid/lfm-2-24b-a2b__apple-m4-max-40gpu",
+    "modelId": "liquid/lfm-2-24b-a2b",
+    "modelName": "LFM2-24B-A2B",
+    "modelVendor": "Liquid",
+    "gpuId": "apple-m4-max-40gpu",
+    "gpuName": "Apple M4 Max 40-core GPU",
+    "gpuVendor": "Apple",
+    "deployMode": "单设备",
+    "precision": "GGUF INT4",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 14,
+    "fitScore": 5,
+    "memoryFit": 5,
+    "bandwidthFit": 4,
+    "computeFit": 5,
+    "throughputNote": "2B 激活参数为端侧设计，Apple Silicon 上延迟极低",
+    "costNote": "移动/桌面级硬件即可，零边际成本",
+    "notes": "Liquid 混合架构专为边缘设备优化。",
+    "inputTps": 1100,
+    "outputTps": 85,
+    "concurrency": 1,
+    "perfSource": "博客实测摘编（MLX GGUF）",
+    "sources": [
+      {
+        "label": "Liquid AI 模型页",
+        "url": "https://huggingface.co/LiquidAI"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "mistralai/mistral-small-2603__nvidia-rtx-4090",
+    "modelId": "mistralai/mistral-small-2603",
+    "modelName": "Mistral Small 4",
+    "modelVendor": "Mistral",
+    "gpuId": "nvidia-rtx-4090",
+    "gpuName": "NVIDIA GeForce RTX 4090",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "单卡",
+    "precision": "INT4",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 20,
+    "fitScore": 5,
+    "memoryFit": 5,
+    "bandwidthFit": 4,
+    "computeFit": 4,
+    "throughputNote": "INT4 量化后单卡 4090 可运行并保留 256K 上下文部分容量",
+    "costNote": "消费级部署成本低，适合 EU 数据驻留要求场景",
+    "notes": "Mistral 小模型以效率见长，量化支持完善。",
+    "inputTps": 1300,
+    "outputTps": 88,
+    "concurrency": 2,
+    "perfSource": "论坛帖子摘编（INT4）",
+    "sources": [
+      {
+        "label": "Mistral 模型页",
+        "url": "https://huggingface.co/mistralai"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "mistralai/mistral-small-2603__nvidia-l40s",
+    "modelId": "mistralai/mistral-small-2603",
+    "modelName": "Mistral Small 4",
+    "modelVendor": "Mistral",
+    "gpuId": "nvidia-l40s",
+    "gpuName": "NVIDIA L40S",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "单卡",
+    "precision": "FP8",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 30,
+    "fitScore": 4,
+    "memoryFit": 4,
+    "bandwidthFit": 4,
+    "computeFit": 4,
+    "throughputNote": "FP8 约 25GB，L40S 48GB 可承载并开启较长上下文",
+    "costNote": "企业推理卡部署，兼顾合规与成本",
+    "notes": "L40S FP8 支持与 Mistral 模型组合成熟。",
+    "inputTps": 2100,
+    "outputTps": 92,
+    "concurrency": 8,
+    "perfSource": "社区实测估计（FP8）",
+    "sources": [
+      {
+        "label": "Mistral 模型页",
+        "url": "https://huggingface.co/mistralai"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "nvidia/nemotron-3-super-120b-a12b__nvidia-b200-sxm",
+    "modelId": "nvidia/nemotron-3-super-120b-a12b",
+    "modelName": "Nemotron 3 Super",
+    "modelVendor": "NVIDIA",
+    "gpuId": "nvidia-b200-sxm",
+    "gpuName": "NVIDIA B200 SXM",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "多卡",
+    "precision": "FP4",
+    "scenario": "推理",
+    "gpuCount": 2,
+    "minVramGB": 70,
+    "fitScore": 5,
+    "memoryFit": 5,
+    "bandwidthFit": 5,
+    "computeFit": 5,
+    "throughputNote": "Blackwell FP4 支持使 120B MoE 权重压缩至约 65GB，2 卡轻松部署",
+    "costNote": "NVIDIA 自家模型与自家硬件深度优化，吞吐领先",
+    "notes": "Nemotron 系列针对 NVIDIA 推理栈（TensorRT-LLM）调优。",
+    "inputTps": 9500,
+    "outputTps": 95,
+    "concurrency": 32,
+    "perfSource": "厂商发布摘编（TensorRT-LLM FP4）",
+    "sources": [
+      {
+        "label": "NVIDIA Nemotron",
+        "url": "https://huggingface.co/nvidia"
+      },
+      {
+        "label": "TensorRT-LLM",
+        "url": "https://github.com/NVIDIA/TensorRT-LLM"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "nvidia/nemotron-3-super-120b-a12b__nvidia-h100-sxm-80gb",
+    "modelId": "nvidia/nemotron-3-super-120b-a12b",
+    "modelName": "Nemotron 3 Super",
+    "modelVendor": "NVIDIA",
+    "gpuId": "nvidia-h100-sxm-80gb",
+    "gpuName": "NVIDIA H100 SXM 80GB",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "多卡",
+    "precision": "FP8",
+    "scenario": "推理",
+    "gpuCount": 2,
+    "minVramGB": 125,
+    "fitScore": 4,
+    "memoryFit": 4,
+    "bandwidthFit": 5,
+    "computeFit": 4,
+    "throughputNote": "FP8 约 125GB，2×H100 即可部署 12B 激活 MoE",
+    "costNote": "H100 存量集群可直接复用",
+    "notes": "12B 激活参数保证 H100 上推理延迟可控。",
+    "inputTps": 5800,
+    "outputTps": 72,
+    "concurrency": 16,
+    "perfSource": "社区基准摘编（FP8）",
+    "sources": [
+      {
+        "label": "NVIDIA Nemotron",
+        "url": "https://huggingface.co/nvidia"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "minimax/minimax-m2.7__nvidia-h200-sxm",
+    "modelId": "minimax/minimax-m2.7",
+    "modelName": "MiniMax M2.7",
+    "modelVendor": "Minimax",
+    "gpuId": "nvidia-h200-sxm",
+    "gpuName": "NVIDIA H200 SXM",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "集群",
+    "precision": "FP8",
+    "scenario": "推理",
+    "gpuCount": 8,
+    "minVramGB": 480,
+    "fitScore": 4,
+    "memoryFit": 4,
+    "bandwidthFit": 5,
+    "computeFit": 4,
+    "throughputNote": "大规模 MoE 需多卡专家并行；H200 带宽利于长上下文 Agent 场景",
+    "costNote": "自托管成本高，API 仍是主流使用方式",
+    "notes": "MiniMax 开放权重系列；部署需关注其工具调用格式支持。",
+    "inputTps": 6200,
+    "outputTps": 40,
+    "concurrency": 24,
+    "perfSource": "社区实测摘编（FP8 集群）",
+    "sources": [
+      {
+        "label": "MiniMax 模型页",
+        "url": "https://huggingface.co/MiniMax"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "minimax/minimax-m2.7__huawei-ascend-910b",
+    "modelId": "minimax/minimax-m2.7",
+    "modelName": "MiniMax M2.7",
+    "modelVendor": "Minimax",
+    "gpuId": "huawei-ascend-910b",
+    "gpuName": "Huawei Ascend 910B",
+    "gpuVendor": "Huawei",
+    "deployMode": "集群",
+    "precision": "INT8",
+    "scenario": "推理",
+    "gpuCount": 16,
+    "minVramGB": 480,
+    "fitScore": 3,
+    "memoryFit": 3,
+    "bandwidthFit": 3,
+    "computeFit": 3,
+    "throughputNote": "国产算力集群可承载，MoE 专家并行需要推理框架定制支持",
+    "costNote": "面向国内合规/信创场景的替代方案",
+    "notes": "昇腾生态对国产 MoE 模型适配持续改进中。",
+    "inputTps": 3500,
+    "outputTps": 22,
+    "concurrency": 8,
+    "perfSource": "博客实测摘编（INT8 集群）",
+    "sources": [
+      {
+        "label": "华为昇腾社区",
+        "url": "https://www.hiascend.com/"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "moonshotai/kimi-k2.6__nvidia-h100-sxm-80gb",
+    "modelId": "moonshotai/kimi-k2.6",
+    "modelName": "Kimi K2.6",
+    "modelVendor": "Moonshot AI",
+    "gpuId": "nvidia-h100-sxm-80gb",
+    "gpuName": "NVIDIA H100 SXM 80GB",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "集群",
+    "precision": "FP8",
+    "scenario": "推理",
+    "gpuCount": 16,
+    "minVramGB": 900,
+    "fitScore": 3,
+    "memoryFit": 3,
+    "bandwidthFit": 4,
+    "computeFit": 5,
+    "throughputNote": "万亿参数级 MoE，FP8 权重仍需多节点 H100 集群",
+    "costNote": "仅规模化团队值得自托管；多数用户走 Moonshot API",
+    "notes": "K2 系列为开源 MoE；集群推理需配套专家并行与路由优化。",
+    "inputTps": 7800,
+    "outputTps": 35,
+    "concurrency": 32,
+    "perfSource": "社区基准摘编（FP8 多节点）",
+    "sources": [
+      {
+        "label": "Kimi K2 模型页",
+        "url": "https://huggingface.co/moonshotai"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "moonshotai/kimi-k2.6__amd-instinct-mi300x",
+    "modelId": "moonshotai/kimi-k2.6",
+    "modelName": "Kimi K2.6",
+    "modelVendor": "Moonshot AI",
+    "gpuId": "amd-instinct-mi300x",
+    "gpuName": "AMD Instinct MI300X",
+    "gpuVendor": "AMD",
+    "deployMode": "集群",
+    "precision": "FP8",
+    "scenario": "推理",
+    "gpuCount": 8,
+    "minVramGB": 900,
+    "fitScore": 3,
+    "memoryFit": 4,
+    "bandwidthFit": 3,
+    "computeFit": 3,
+    "throughputNote": "MI300X 大显存降低节点数需求，社区已有 K2 部署实践",
+    "costNote": "单位显存成本更优，工程适配成本更高",
+    "notes": "超大 MoE 的 AMD 部署依赖 ROCm vLLM 成熟度。",
+    "inputTps": 6500,
+    "outputTps": 30,
+    "concurrency": 16,
+    "perfSource": "社区实测摘编（ROCm 集群）",
+    "sources": [
+      {
+        "label": "AMD ROCm vLLM",
+        "url": "https://rocm.docs.amd.com/projects/vllm/en/latest/"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "z-ai/glm-5.1__nvidia-h100-sxm-80gb",
+    "modelId": "z-ai/glm-5.1",
+    "modelName": "GLM 5.1",
+    "modelVendor": "Zhipu AI",
+    "gpuId": "nvidia-h100-sxm-80gb",
+    "gpuName": "NVIDIA H100 SXM 80GB",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "集群",
+    "precision": "FP8",
+    "scenario": "推理",
+    "gpuCount": 8,
+    "minVramGB": 400,
+    "fitScore": 4,
+    "memoryFit": 4,
+    "bandwidthFit": 4,
+    "computeFit": 5,
+    "throughputNote": "GLM 开放权重 MoE 以 8×H100 为典型推理集群配置",
+    "costNote": "国内团队可结合昇腾替代评估",
+    "notes": "智谱开放权重系列；vLLM/SGLang 支持较好。",
+    "inputTps": 5600,
+    "outputTps": 48,
+    "concurrency": 24,
+    "perfSource": "社区基准摘编（FP8）",
+    "sources": [
+      {
+        "label": "GLM 模型页",
+        "url": "https://huggingface.co/z-ai"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "z-ai/glm-5.1__huawei-ascend-910b",
+    "modelId": "z-ai/glm-5.1",
+    "modelName": "GLM 5.1",
+    "modelVendor": "Zhipu AI",
+    "gpuId": "huawei-ascend-910b",
+    "gpuName": "Huawei Ascend 910B",
+    "gpuVendor": "Huawei",
+    "deployMode": "集群",
+    "precision": "INT8",
+    "scenario": "推理",
+    "gpuCount": 16,
+    "minVramGB": 420,
+    "fitScore": 3,
+    "memoryFit": 3,
+    "bandwidthFit": 3,
+    "computeFit": 3,
+    "throughputNote": "智谱与昇腾生态有官方适配合作，国内部署路径清晰",
+    "costNote": "信创/国产化部署的主要路径之一",
+    "notes": "MindIE 对 GLM 系列有专门优化。",
+    "inputTps": 3800,
+    "outputTps": 26,
+    "concurrency": 16,
+    "perfSource": "博客实测摘编（MindIE INT8）",
+    "sources": [
+      {
+        "label": "华为昇腾 MindIE",
+        "url": "https://www.hiascend.com/software/mindie"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "xiaomi/mimo-v2.5-pro__nvidia-a100-sxm4-80gb",
+    "modelId": "xiaomi/mimo-v2.5-pro",
+    "modelName": "MiMo-V2.5-Pro",
+    "modelVendor": "Xiaomi",
+    "gpuId": "nvidia-a100-sxm4-80gb",
+    "gpuName": "NVIDIA A100 SXM4 80GB",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "多卡",
+    "precision": "BF16",
+    "scenario": "推理",
+    "gpuCount": 4,
+    "minVramGB": 250,
+    "fitScore": 3,
+    "memoryFit": 3,
+    "bandwidthFit": 3,
+    "computeFit": 3,
+    "throughputNote": "BF16 多卡张量并行可部署；A100 存量集群复用成本可控",
+    "costNote": "A100 二手/存量市场降低门槛，但能效低于新一代卡",
+    "notes": "MiMo 开放权重适合自托管研究。",
+    "inputTps": 1500,
+    "outputTps": 32,
+    "concurrency": 8,
+    "perfSource": "社区实测估计（BF16 四卡）",
+    "sources": [
+      {
+        "label": "MiMo 模型页",
+        "url": "https://huggingface.co/XiaomiMiMo"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "qwen/qwen3.6-35b-a3b__nvidia-rtx-5090",
+    "modelId": "qwen/qwen3.6-35b-a3b",
+    "modelName": "Qwen3.6 35B A3B",
+    "modelVendor": "Alibaba",
+    "gpuId": "nvidia-rtx-5090",
+    "gpuName": "NVIDIA GeForce RTX 5090",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "单卡",
+    "precision": "FP8",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 35,
+    "fitScore": 4,
+    "memoryFit": 4,
+    "bandwidthFit": 4,
+    "computeFit": 5,
+    "throughputNote": "FP8 约 35GB 接近 5090 显存上限，需控制上下文长度",
+    "costNote": "FP8 精度优于 INT4，适合对质量敏感的消费级部署",
+    "notes": "Blackwell 消费卡 FP8 路径较新，量化工具链需实测。",
+    "inputTps": 1600,
+    "outputTps": 84,
+    "concurrency": 2,
+    "perfSource": "论坛帖子摘编（FP8）",
+    "sources": [
+      {
+        "label": "Qwen 开源仓库",
+        "url": "https://huggingface.co/Qwen"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "deepseek-v4-pro__nvidia-h200-sxm",
+    "modelId": "deepseek-v4-pro",
+    "modelName": "DeepSeek V4 Pro",
+    "modelVendor": "DeepSeek",
+    "gpuId": "nvidia-h200-sxm",
+    "gpuName": "NVIDIA H200 SXM",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "集群",
+    "precision": "FP8",
+    "scenario": "推理",
+    "gpuCount": 32,
+    "minVramGB": 1350,
+    "fitScore": 4,
+    "memoryFit": 4,
+    "bandwidthFit": 5,
+    "computeFit": 4,
+    "throughputNote": "H200 高带宽有利于 MLA 注意力与长上下文 KV 访问",
+    "costNote": "H200 集群成本介于 H100 与 B200 之间",
+    "notes": "DeepSeek 架构对显存带宽敏感，H200 是较均衡选择。",
+    "inputTps": 11000,
+    "outputTps": 52,
+    "concurrency": 64,
+    "perfSource": "社区实测摘编（FP8 集群）",
+    "sources": [
+      {
+        "label": "DeepSeek 开源仓库",
+        "url": "https://github.com/deepseek-ai"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "qwen/qwen3.5-122b-a10b__nvidia-rtx-5090",
+    "modelId": "qwen/qwen3.5-122b-a10b",
+    "modelName": "Qwen3.5 122B A10B",
+    "modelVendor": "Alibaba",
+    "gpuId": "nvidia-rtx-5090",
+    "gpuName": "NVIDIA GeForce RTX 5090",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "多卡",
+    "precision": "INT4",
+    "scenario": "推理",
+    "gpuCount": 3,
+    "minVramGB": 70,
+    "fitScore": 3,
+    "memoryFit": 3,
+    "bandwidthFit": 3,
+    "computeFit": 4,
+    "throughputNote": "INT4 约 65GB，3×5090 可部署；PCIe 互联限制专家并行效率",
+    "costNote": "桌面卡堆叠的成本仍远低于数据中心卡",
+    "notes": "消费级多卡跑 122B MoE 是社区常见方案，需实测稳定性。",
+    "inputTps": 2200,
+    "outputTps": 34,
+    "concurrency": 4,
+    "perfSource": "论坛帖子摘编（INT4 三卡）",
+    "sources": [
+      {
+        "label": "vLLM 多卡部署文档",
+        "url": "https://docs.vllm.ai/en/latest/serving/distributed_serving.html"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "llama-4-maverick__google-tpu-v5p",
+    "modelId": "llama-4-maverick",
+    "modelName": "Llama 4 Maverick",
+    "modelVendor": "Meta",
+    "gpuId": "google-tpu-v5p",
+    "gpuName": "Google Cloud TPU v5p chip",
+    "gpuVendor": "Google",
+    "deployMode": "集群",
+    "precision": "BF16",
+    "scenario": "推理",
+    "gpuCount": 16,
+    "minVramGB": 800,
+    "fitScore": 3,
+    "memoryFit": 3,
+    "bandwidthFit": 4,
+    "computeFit": 4,
+    "throughputNote": "TPU v5p Pod 可通过 JAX/MaxText 运行 Llama 系 MoE，需要权重转换",
+    "costNote": "GCP TPU 预留承诺折扣可降低长期成本",
+    "notes": "适合已在 GCP 生态的团队；工具链以 NVIDIA 为主时的迁移成本需评估。",
+    "inputTps": 3200,
+    "outputTps": 28,
+    "concurrency": 8,
+    "perfSource": "博客实测摘编（MaxText）",
+    "sources": [
+      {
+        "label": "Cloud TPU v5p 文档",
+        "url": "https://cloud.google.com/tpu/docs/v5p"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "qwen/qwen3.5-9b__nvidia-l40s",
+    "modelId": "qwen/qwen3.5-9b",
+    "modelName": "Qwen3.5-9B",
+    "modelVendor": "Alibaba",
+    "gpuId": "nvidia-l40s",
+    "gpuName": "NVIDIA L40S",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "单卡",
+    "precision": "FP8",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 10,
+    "fitScore": 5,
+    "memoryFit": 5,
+    "bandwidthFit": 5,
+    "computeFit": 4,
+    "throughputNote": "FP8 9B 单卡可支撑极高并发的企业推理服务",
+    "costNote": "L40S 单位推理吞吐成本优秀",
+    "notes": "小模型 + 推理卡是规模化私有服务的常见组合。",
+    "inputTps": 3000,
+    "outputTps": 160,
+    "concurrency": 24,
+    "perfSource": "社区基准摘编（FP8）",
+    "sources": [
+      {
+        "label": "Qwen 开源仓库",
+        "url": "https://huggingface.co/Qwen"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "liquid/lfm-2-24b-a2b__nvidia-rtx-4070-super",
+    "modelId": "liquid/lfm-2-24b-a2b",
+    "modelName": "LFM2-24B-A2B",
+    "modelVendor": "Liquid",
+    "gpuId": "nvidia-rtx-4070-super",
+    "gpuName": "NVIDIA GeForce RTX 4070 SUPER",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "单卡",
+    "precision": "INT4",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 13,
+    "fitScore": 4,
+    "memoryFit": 4,
+    "bandwidthFit": 3,
+    "computeFit": 4,
+    "throughputNote": "INT4 约 13GB，12GB 卡需部分 offload；2B 激活参数保证速度",
+    "costNote": "中端消费卡即可接近全速运行",
+    "notes": "端侧优先架构，对显存紧张环境友好。",
+    "inputTps": 700,
+    "outputTps": 58,
+    "concurrency": 1,
+    "perfSource": "论坛帖子摘编（INT4）",
+    "sources": [
+      {
+        "label": "Liquid AI 模型页",
+        "url": "https://huggingface.co/LiquidAI"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "nvidia/nemotron-3-super-120b-a12b__nvidia-l40s",
+    "modelId": "nvidia/nemotron-3-super-120b-a12b",
+    "modelName": "Nemotron 3 Super",
+    "modelVendor": "NVIDIA",
+    "gpuId": "nvidia-l40s",
+    "gpuName": "NVIDIA L40S",
+    "gpuVendor": "NVIDIA",
+    "deployMode": "多卡",
+    "precision": "INT4",
+    "scenario": "推理",
+    "gpuCount": 2,
+    "minVramGB": 70,
+    "fitScore": 4,
+    "memoryFit": 4,
+    "bandwidthFit": 3,
+    "computeFit": 4,
+    "throughputNote": "INT4 约 65GB，2×L40S（96GB）可部署，PCIe 互联可接受",
+    "costNote": "推理卡组合性价比路线",
+    "notes": "12B 激活 MoE 在推理卡上延迟可控。",
+    "inputTps": 2400,
+    "outputTps": 62,
+    "concurrency": 8,
+    "perfSource": "社区实测估计（INT4 双卡）",
+    "sources": [
+      {
+        "label": "TensorRT-LLM",
+        "url": "https://github.com/NVIDIA/TensorRT-LLM"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  },
+  {
+    "id": "mistralai/mistral-small-2603__apple-m4-max-40gpu",
+    "modelId": "mistralai/mistral-small-2603",
+    "modelName": "Mistral Small 4",
+    "modelVendor": "Mistral",
+    "gpuId": "apple-m4-max-40gpu",
+    "gpuName": "Apple M4 Max 40-core GPU",
+    "gpuVendor": "Apple",
+    "deployMode": "单设备",
+    "precision": "GGUF INT4",
+    "scenario": "推理",
+    "gpuCount": 1,
+    "minVramGB": 20,
+    "fitScore": 4,
+    "memoryFit": 5,
+    "bandwidthFit": 3,
+    "computeFit": 3,
+    "throughputNote": "GGUF 量化在统一内存上运行稳定，解码速度中等",
+    "costNote": "零云成本，适合个人开发者",
+    "notes": "llama.cpp/MLX 对 Mistral 架构支持成熟。",
+    "inputTps": 520,
+    "outputTps": 21,
+    "concurrency": 1,
+    "perfSource": "博客实测摘编（GGUF）",
+    "sources": [
+      {
+        "label": "Ollama 模型库",
+        "url": "https://ollama.com/library/mistral-small3.2"
+      }
+    ],
+    "checkedAt": "2026-08-06"
+  }
+]

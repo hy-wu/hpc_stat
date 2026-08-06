@@ -758,6 +758,7 @@ thead .matrix-sticky-col {
   gap: 6px;
   min-height: 112px;
   align-content: start;
+  position: relative;
 }
 
 .matrix-cell-top {
@@ -1167,4 +1168,93 @@ textarea {
   background: #1e3a5f;
   color: #60a5fa;
   border-color: #1e40af;
+}
+
+/* 模型×硬件矩阵：图例与速度色阶 */
+.matrix-legend {
+  margin: 0 0 12px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* 三个标签同行：部署方式 + 精度 + 卡数/显存 */
+.matrix-tags-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.matrix-tags-row .tag {
+  font-size: 10px;
+  min-height: 18px;
+  padding: 0 6px;
+  white-space: nowrap;
+}
+
+/* 模型×硬件单元格：flex 列布局，速度文字行通过 margin-top:auto 真正贴底，消除底部留白 */
+.matrix-cell-hw {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* 模型×硬件单元格：flex 列布局，速度文字行通过 margin-top:auto 真正贴底，消除底部留白 */
+.matrix-cell-hw {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* 速度/并发背景柱状图：三根竖条横向并排填满单元格，柱高按全局最大值归一，颜色随比例加深 */
+.matrix-cell > *:not(.perf-bars) {
+  position: relative;
+  z-index: 1;
+}
+
+.perf-bars {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  padding: 2px;
+  pointer-events: none;
+}
+
+.perf-bar {
+  flex: 1;
+  border-radius: 3px 3px 0 0;
+  opacity: 0.42;
+}
+
+.perf-bar-empty {
+  background: transparent;
+}
+
+.perf-text {
+  display: flex;
+  width: 100%;
+  margin-top: auto;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.perf-seg {
+  flex: 1;
+}
+
+.perf-seg-left {
+  text-align: center;
+}
+
+.perf-seg-center {
+  text-align: center;
+}
+
+.perf-seg-right {
+  text-align: center;
 }

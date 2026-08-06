@@ -2,49 +2,59 @@ const sortCollator = new Intl.Collator("zh-Hans-CN", { numeric: true, sensitivit
 
 const ruleFields = [
   { key: "modelName", label: "模型", type: "text" },
-  { key: "toolName", label: "工具", type: "text" },
+  { key: "gpuName", label: "硬件", type: "text" },
   { key: "modelVendor", label: "模型厂商", type: "text" },
-  { key: "supportStatus", label: "接入状态", type: "text" },
-  { key: "routeTags", label: "接入方式", type: "text" },
-  { key: "capabilityTags", label: "适用能力", type: "text" },
-  { key: "codingFit", label: "代码适配", type: "number" },
-  { key: "agentFit", label: "Agent 适配", type: "number" },
-  { key: "contextFit", label: "长上下文", type: "number" },
-  { key: "priceMeter", label: "价格/消耗口径", type: "text" },
-  { key: "planRequirement", label: "套餐要求", type: "text" },
+  { key: "gpuVendor", label: "硬件厂商", type: "text" },
+  { key: "deployMode", label: "部署方式", type: "text" },
+  { key: "precision", label: "量化精度", type: "text" },
+  { key: "scenario", label: "场景", type: "text" },
+  { key: "gpuCount", label: "卡数", type: "number" },
+  { key: "minVramGB", label: "最低显存(GB)", type: "number" },
+  { key: "inputTps", label: "输入速度(tok/s)", type: "number" },
+  { key: "outputTps", label: "输出速度(tok/s)", type: "number" },
+  { key: "concurrency", label: "并发数", type: "number" },
+  { key: "perfSource", label: "速度数据口径", type: "text" },
+  { key: "fitScore", label: "硬件适配", type: "number" },
+  { key: "memoryFit", label: "显存容量适配", type: "number" },
+  { key: "bandwidthFit", label: "带宽适配", type: "number" },
+  { key: "computeFit", label: "算力适配", type: "number" },
+  { key: "throughputNote", label: "吞吐说明", type: "text" },
+  { key: "costNote", label: "成本说明", type: "text" },
   { key: "notes", label: "评价", type: "text" },
 ];
 
 const sortOptions = [
-  { key: "coverage", label: "覆盖工具数" },
-  { key: "avgAgentFit", label: "平均 Agent 适配" },
-  { key: "avgCodingFit", label: "平均代码适配" },
-  { key: "avgContextFit", label: "平均长上下文" },
+  { key: "coverage", label: "覆盖硬件数" },
+  { key: "avgFitScore", label: "平均硬件适配" },
+  { key: "avgMemoryFit", label: "平均显存适配" },
+  { key: "avgBandwidthFit", label: "平均带宽适配" },
   { key: "modelName", label: "模型名称" },
   { key: "modelVendor", label: "模型厂商" },
 ];
 
 const state = {
   records: [],
-  toolNames: [],
-  visibleTools: new Set(),
+  gpuNames: [],
+  visibleGpus: new Set(),
+  perfMax: { inputTps: 0, outputTps: 0, concurrency: 0 },
   sortField: "coverage",
   sortDirection: "desc",
   globalSearch: "",
-  tool: "all",
+  gpu: "all",
   modelVendor: "all",
-  supportStatus: "all",
-  route: "all",
+  deployMode: "all",
+  precision: "all",
   rules: [],
   compact: false,
+  autoHiddenCount: 0,
 };
 
 const elements = {
   globalSearch: document.querySelector("#globalSearch"),
-  toolFilter: document.querySelector("#toolFilter"),
+  gpuFilter: document.querySelector("#gpuFilter"),
   modelVendorFilter: document.querySelector("#modelVendorFilter"),
-  statusFilter: document.querySelector("#statusFilter"),
-  routeFilter: document.querySelector("#routeFilter"),
+  deployModeFilter: document.querySelector("#deployModeFilter"),
+  precisionFilter: document.querySelector("#precisionFilter"),
   sortField: document.querySelector("#sortField"),
   sortDirectionButton: document.querySelector("#sortDirectionButton"),
   resetFiltersButton: document.querySelector("#resetFiltersButton"),
@@ -58,17 +68,23 @@ const elements = {
   toggleColumnsButton: document.querySelector("#toggleColumnsButton"),
   exportCsvButton: document.querySelector("#exportCsvButton"),
   visibleCount: document.querySelector("#visibleCount"),
-  nativeCount: document.querySelector("#nativeCount"),
-  byokCount: document.querySelector("#byokCount"),
-  avgAgentFit: document.querySelector("#avgAgentFit"),
+  singleCardCount: document.querySelector("#singleCardCount"),
+  multiCardCount: document.querySelector("#multiCardCount"),
+  avgFitScore: document.querySelector("#avgFitScore"),
 };
 
 async function init() {
   try {
-    const response = await fetch("data/model-tools.json");
+    const response = await fetch("data/model-hardware.json");
     state.records = await response.json();
-    state.toolNames = uniqueRecordValues("toolName");
-    state.visibleTools = new Set(state.toolNames);
+    state.gpuNames = uniqueRecordValues("gpuName");
+    state.visibleGpus = new Set(state.gpuNames);
+    // 速度/并发的纵向色阶高度按全量数据的全局最大值归一化，筛选时标尺不变
+    state.perfMax = {
+      inputTps: Math.max(0, ...state.records.map(record => Number(record.inputTps) || 0)),
+      outputTps: Math.max(0, ...state.records.map(record => Number(record.outputTps) || 0)),
+      concurrency: Math.max(0, ...state.records.map(record => Number(record.concurrency) || 0)),
+    };
 
     renderSelectOptions();
     renderColumnPicker();
@@ -77,9 +93,9 @@ async function init() {
     bindEvents();
     render();
   } catch (err) {
-    console.error("Failed to load model-tool matrix:", err);
+    console.error("Failed to load model-hardware matrix:", err);
     if (elements.tableBody) {
-      elements.tableBody.innerHTML = `<tr><td colspan="99" class="muted" style="text-align:center;padding:24px">模型 × 工具数据加载失败：请确认通过静态服务器访问且 data/model-tools.json 存在。</td></tr>`;
+      elements.tableBody.innerHTML = `<tr><td colspan="99" class="muted" style="text-align:center;padding:24px">模型 × 硬件数据加载失败：请确认通过静态服务器访问且 data/model-hardware.json 存在。</td></tr>`;
     }
   }
 }
@@ -90,8 +106,8 @@ function bindEvents() {
     render();
   });
 
-  elements.toolFilter.addEventListener("change", () => {
-    state.tool = elements.toolFilter.value;
+  elements.gpuFilter.addEventListener("change", () => {
+    state.gpu = elements.gpuFilter.value;
     render();
   });
 
@@ -100,13 +116,13 @@ function bindEvents() {
     render();
   });
 
-  elements.statusFilter.addEventListener("change", () => {
-    state.supportStatus = elements.statusFilter.value;
+  elements.deployModeFilter.addEventListener("change", () => {
+    state.deployMode = elements.deployModeFilter.value;
     render();
   });
 
-  elements.routeFilter.addEventListener("change", () => {
-    state.route = elements.routeFilter.value;
+  elements.precisionFilter.addEventListener("change", () => {
+    state.precision = elements.precisionFilter.value;
     render();
   });
 
@@ -123,22 +139,22 @@ function bindEvents() {
 
   elements.resetFiltersButton.addEventListener("click", () => {
     state.globalSearch = "";
-    state.tool = "all";
+    state.gpu = "all";
     state.modelVendor = "all";
-    state.supportStatus = "all";
-    state.route = "all";
+    state.deployMode = "all";
+    state.precision = "all";
     state.rules = [];
     elements.globalSearch.value = "";
-    elements.toolFilter.value = "all";
+    elements.gpuFilter.value = "all";
     elements.modelVendorFilter.value = "all";
-    elements.statusFilter.value = "all";
-    elements.routeFilter.value = "all";
+    elements.deployModeFilter.value = "all";
+    elements.precisionFilter.value = "all";
     renderRules();
     render();
   });
 
   elements.addRuleButton.addEventListener("click", () => {
-    state.rules.push({ field: "agentFit", op: ">=", value: "" });
+    state.rules.push({ field: "fitScore", op: ">=", value: "" });
     renderRules();
     render();
   });
@@ -159,16 +175,16 @@ function bindEvents() {
   elements.columnPicker.addEventListener("click", (e) => {
     const action = e.target.closest("[data-column-action]")?.dataset.columnAction;
     if (!action) return;
-    if (action === "select-all") state.visibleTools = new Set(state.toolNames);
-    if (action === "reset-default") state.visibleTools = new Set(state.toolNames);
+    if (action === "select-all") state.visibleGpus = new Set(state.gpuNames);
+    if (action === "reset-default") state.visibleGpus = new Set(state.gpuNames);
     renderColumnPicker();
     render();
   });
 
   elements.columnPicker.addEventListener("change", (e) => {
     if (e.target.type !== "checkbox") return;
-    if (e.target.checked) state.visibleTools.add(e.target.value);
-    else state.visibleTools.delete(e.target.value);
+    if (e.target.checked) state.visibleGpus.add(e.target.value);
+    else state.visibleGpus.delete(e.target.value);
     renderColumnPicker();
     render();
   });
@@ -176,33 +192,37 @@ function bindEvents() {
 
 function render() {
   const records = getFilteredRecords();
-  const tools = getVisibleTools();
-  const matrixRows = buildMatrixRows(records, tools);
-  renderSummary(records, matrixRows, tools);
-  renderTable(matrixRows, tools);
+  const gpus = getVisibleGpus(records);
+  const matrixRows = buildMatrixRows(records, gpus);
+  renderSummary(records, matrixRows, gpus);
+  renderTable(matrixRows, gpus);
+  updateAutoHiddenHint(gpus);
 }
 
 function getFilteredRecords() {
   return state.records
     .filter(matchesGlobalSearch)
-    .filter(record => state.tool === "all" || record.toolName === state.tool)
+    .filter(record => state.gpu === "all" || record.gpuName === state.gpu)
     .filter(record => state.modelVendor === "all" || record.modelVendor === state.modelVendor)
-    .filter(record => state.supportStatus === "all" || record.supportStatus === state.supportStatus)
-    .filter(record => matchesArrayFilter(record.routeTags, state.route))
+    .filter(record => state.deployMode === "all" || record.deployMode === state.deployMode)
+    .filter(record => state.precision === "all" || record.precision === state.precision)
     .filter(matchesRules);
 }
 
-function getVisibleTools() {
-  if (state.tool !== "all") return [state.tool];
-  return state.toolNames.filter(toolName => state.visibleTools.has(toolName));
+function getVisibleGpus(filteredRecords) {
+  if (state.gpu !== "all") return [state.gpu];
+  // 筛选后自动隐藏完全没有记录的硬件列（列设置可再手动隐藏更多列）
+  const records = filteredRecords || getFilteredRecords();
+  const hitGpuNames = new Set(records.map(record => record.gpuName));
+  return state.gpuNames.filter(gpuName => state.visibleGpus.has(gpuName) && hitGpuNames.has(gpuName));
 }
 
-function buildMatrixRows(records, tools) {
-  const visibleToolSet = new Set(tools);
+function buildMatrixRows(records, gpus) {
+  const visibleGpuSet = new Set(gpus);
   const rowMap = new Map();
 
   records
-    .filter(record => visibleToolSet.has(record.toolName))
+    .filter(record => visibleGpuSet.has(record.gpuName))
     .forEach(record => {
       const key = record.modelId || record.modelName;
       if (!rowMap.has(key)) {
@@ -213,7 +233,7 @@ function buildMatrixRows(records, tools) {
           cells: new Map(),
         });
       }
-      rowMap.get(key).cells.set(record.toolName, record);
+      rowMap.get(key).cells.set(record.gpuName, record);
     });
 
   return [...rowMap.values()]
@@ -222,9 +242,10 @@ function buildMatrixRows(records, tools) {
       return {
         ...row,
         coverage: cells.length,
-        avgCodingFit: average(cells.map(cell => cell.codingFit)),
-        avgAgentFit: average(cells.map(cell => cell.agentFit)),
-        avgContextFit: average(cells.map(cell => cell.contextFit)),
+        avgFitScore: average(cells.map(cell => cell.fitScore)),
+        avgMemoryFit: average(cells.map(cell => cell.memoryFit)),
+        avgBandwidthFit: average(cells.map(cell => cell.bandwidthFit)),
+        avgComputeFit: average(cells.map(cell => cell.computeFit)),
       };
     })
     .sort(compareMatrixRows);
@@ -233,11 +254,6 @@ function buildMatrixRows(records, tools) {
 function matchesGlobalSearch(record) {
   if (!state.globalSearch) return true;
   return getValueAsText(record).toLowerCase().includes(state.globalSearch);
-}
-
-function matchesArrayFilter(values, selected) {
-  if (selected === "all") return true;
-  return Array.isArray(values) && values.includes(selected);
 }
 
 function matchesRules(record) {
@@ -288,19 +304,19 @@ function getMatrixSortValue(row, key) {
   return row[key] ?? 0;
 }
 
-function renderSummary(records, matrixRows, tools) {
-  elements.visibleCount.textContent = `${records.length} 组合 / ${matrixRows.length} 模型 × ${tools.length} 工具`;
-  elements.nativeCount.textContent = records.filter(record => ["官方内置", "官方/开源默认"].includes(record.supportStatus)).length;
-  elements.byokCount.textContent = records.filter(record => (record.routeTags || []).some(tag => ["BYOK", "OpenAI-compatible", "本地模型"].includes(tag))).length;
-  const avg = average(records.map(record => record.agentFit));
-  elements.avgAgentFit.textContent = avg === null ? "-" : `${formatNumber(avg)}/5`;
+function renderSummary(records, matrixRows, gpus) {
+  elements.visibleCount.textContent = `${records.length} 组合 / ${matrixRows.length} 模型 × ${gpus.length} 硬件`;
+  elements.singleCardCount.textContent = records.filter(record => ["单卡", "单设备"].includes(record.deployMode)).length;
+  elements.multiCardCount.textContent = records.filter(record => ["多卡", "集群"].includes(record.deployMode)).length;
+  const avg = average(records.map(record => record.fitScore));
+  elements.avgFitScore.textContent = avg === null ? "-" : `${formatNumber(avg)}/5`;
 }
 
 function renderSelectOptions() {
-  fillSelect(elements.toolFilter, ["all", ...state.toolNames], "全部工具");
+  fillSelect(elements.gpuFilter, ["all", ...state.gpuNames], "全部硬件");
   fillSelect(elements.modelVendorFilter, ["all", ...uniqueRecordValues("modelVendor")], "全部厂商");
-  fillSelect(elements.statusFilter, ["all", ...uniqueRecordValues("supportStatus")], "全部状态");
-  fillSelect(elements.routeFilter, ["all", ...uniqueRecordValues("routeTags")], "全部方式");
+  fillSelect(elements.deployModeFilter, ["all", ...uniqueRecordValues("deployMode")], "全部方式");
+  fillSelect(elements.precisionFilter, ["all", ...uniqueRecordValues("precision")], "全部精度");
   elements.sortField.innerHTML = sortOptions
     .map(option => `<option value="${escapeAttr(option.key)}">${escapeHtml(option.label)}</option>`)
     .join("");
@@ -324,13 +340,13 @@ function uniqueRecordValues(key) {
 }
 
 function renderColumnPicker() {
-  const selectedCount = state.visibleTools.size;
-  const allSelected = selectedCount === state.toolNames.length;
+  const selectedCount = state.visibleGpus.size;
+  const allSelected = selectedCount === state.gpuNames.length;
   elements.columnPicker.innerHTML = `
     <div class="column-picker-head">
       <div>
-        <span class="column-picker-title">显示工具列</span>
-        <span class="column-picker-meta">已选 ${selectedCount} / ${state.toolNames.length}</span>
+        <span class="column-picker-title">显示硬件列</span>
+        <span class="column-picker-meta">已选 ${selectedCount} / ${state.gpuNames.length}</span>
       </div>
       <div class="column-picker-tools">
         <button class="ghost-button" type="button" data-column-action="select-all" ${allSelected ? "disabled" : ""}>全选</button>
@@ -338,10 +354,10 @@ function renderColumnPicker() {
       </div>
     </div>
     <div class="column-picker-grid">
-      ${state.toolNames.map(toolName => `
+      ${state.gpuNames.map(gpuName => `
         <label class="column-option">
-          <input type="checkbox" value="${escapeAttr(toolName)}" ${state.visibleTools.has(toolName) ? "checked" : ""}>
-          <span>${escapeHtml(toolName)}</span>
+          <input type="checkbox" value="${escapeAttr(gpuName)}" ${state.visibleGpus.has(gpuName) ? "checked" : ""}>
+          <span>${escapeHtml(gpuName)}</span>
         </label>
       `).join("")}
     </div>
@@ -350,10 +366,20 @@ function renderColumnPicker() {
 }
 
 function syncColumnPickerState() {
-  const selectedCount = state.visibleTools.size;
-  const hiddenCount = Math.max(0, state.toolNames.length - selectedCount);
+  const selectedCount = state.visibleGpus.size;
+  const hiddenCount = Math.max(0, state.gpuNames.length - selectedCount);
   elements.toggleColumnsButton.setAttribute("aria-expanded", String(!elements.columnPicker.hidden));
-  elements.toggleColumnsButton.textContent = `工具列 (已选 ${selectedCount} / 未选 ${hiddenCount})`;
+  const autoHidden = state.autoHiddenCount > 0 ? ` · 自动隐 ${state.autoHiddenCount}` : "";
+  elements.toggleColumnsButton.textContent = `硬件列 (已选 ${selectedCount} / 未选 ${hiddenCount}${autoHidden})`;
+}
+
+function updateAutoHiddenHint(gpus) {
+  const autoHiddenCount = state.gpu === "all"
+    ? state.gpuNames.filter(gpuName => state.visibleGpus.has(gpuName) && !gpus.includes(gpuName)).length
+    : 0;
+  if (autoHiddenCount === state.autoHiddenCount) return;
+  state.autoHiddenCount = autoHiddenCount;
+  syncColumnPickerState();
 }
 
 function renderRules() {
@@ -428,7 +454,7 @@ function opsForType(fieldType) {
 function operatorOptions(selected, fieldType) {
   const labels = {
     contains: "包含",
-    "=": "等于",
+    "=": fieldType === "number" ? "等于" : "等于",
     "!=": fieldType === "number" ? "不等于" : "不包含",
     ">=": "大于等于",
     "<=": "小于等于",
@@ -440,19 +466,19 @@ function operatorOptions(selected, fieldType) {
     .join("");
 }
 
-function renderTable(rows, tools) {
+function renderTable(rows, gpus) {
   elements.tableHead.innerHTML = `
     <tr>
       <th class="matrix-sticky-col"><button data-sort="modelName">模型${sortMarker("modelName")}</button></th>
       <th><button data-sort="modelVendor">厂商${sortMarker("modelVendor")}</button></th>
       <th><button data-sort="coverage">覆盖${sortMarker("coverage")}</button></th>
-      <th><button data-sort="avgAgentFit">均分${sortMarker("avgAgentFit")}</button></th>
-      ${tools.map(toolName => `<th class="matrix-tool-head">${escapeHtml(toolName)}</th>`).join("")}
+      <th><button data-sort="avgFitScore">均分${sortMarker("avgFitScore")}</button></th>
+      ${gpus.map(gpuName => `<th class="matrix-tool-head">${escapeHtml(gpuName)}</th>`).join("")}
     </tr>
   `;
 
   if (!rows.length) {
-    elements.tableBody.innerHTML = `<tr><td colspan="${tools.length + 4}" class="muted" style="text-align:center;padding:24px">没有匹配的模型 × 工具组合；请调整搜索或筛选条件。</td></tr>`;
+    elements.tableBody.innerHTML = `<tr><td colspan="${gpus.length + 4}" class="muted" style="text-align:center;padding:24px">没有匹配的模型 × 硬件组合；请调整搜索或筛选条件。</td></tr>`;
     return;
   }
 
@@ -461,9 +487,9 @@ function renderTable(rows, tools) {
       <tr>
         <td class="matrix-sticky-col"><strong>${escapeHtml(row.modelName)}</strong></td>
         <td>${escapeHtml(row.modelVendor)}</td>
-        <td>${row.coverage}/${tools.length}</td>
+        <td>${row.coverage}/${gpus.length}</td>
         <td>${formatAverageCell(row)}</td>
-        ${tools.map(toolName => `<td class="matrix-tool-cell">${formatMatrixCell(row.cells.get(toolName))}</td>`).join("")}
+        ${gpus.map(gpuName => `<td class="matrix-tool-cell">${formatMatrixCell(row.cells.get(gpuName))}</td>`).join("")}
       </tr>
     `)
     .join("");
@@ -489,51 +515,90 @@ function sortMarker(key) {
   return state.sortDirection === "asc" ? " ↑" : " ↓";
 }
 
-function scoreBars(c, a, x, extraClass = "") {
+function scoreBars(m, b, c, extraClass = "") {
   const pct = v => v != null ? `${Math.round(v / 5 * 100)}%` : "0%";
   const fmt = v => v != null ? formatNumber(v) : "—";
-  const title = `代码 ${fmt(c)}/5 · Agent ${fmt(a)}/5 · 上下文 ${fmt(x)}/5`;
+  const title = `显存 ${fmt(m)}/5 · 带宽 ${fmt(b)}/5 · 算力 ${fmt(c)}/5`;
   return `<div class="score-bars-wrap${extraClass ? " " + extraClass : ""}" title="${escapeAttr(title)}">
     <div class="score-bars">
-      <div class="score-bar score-bar-c" style="width:${pct(c)}"></div>
-      <div class="score-bar score-bar-a" style="width:${pct(a)}"></div>
-      <div class="score-bar score-bar-x" style="width:${pct(x)}"></div>
+      <div class="score-bar score-bar-c" style="width:${pct(m)}"></div>
+      <div class="score-bar score-bar-a" style="width:${pct(b)}"></div>
+      <div class="score-bar score-bar-x" style="width:${pct(c)}"></div>
     </div>
-    <span class="score-text">C ${fmt(c)} · A ${fmt(a)} · X ${fmt(x)}</span>
+    <span class="score-text">M ${fmt(m)} · B ${fmt(b)} · C ${fmt(c)}</span>
   </div>`;
 }
 
 function formatAverageCell(row) {
-  return scoreBars(row.avgCodingFit, row.avgAgentFit, row.avgContextFit, "score-bars-avg");
+  return scoreBars(row.avgMemoryFit, row.avgBandwidthFit, row.avgComputeFit, "score-bars-avg");
+}
+
+function formatPerfBars(record) {
+  const bars = [
+    { key: "inputTps", value: record.inputTps, hue: 212 },
+    { key: "outputTps", value: record.outputTps, hue: 152 },
+    { key: "concurrency", value: record.concurrency, hue: 32 },
+  ];
+  // 三根竖条作为单元格背景横向并排，柱高按全表全局最大值归一，颜色随比例加深
+  const columns = bars.map(bar => {
+    const max = state.perfMax[bar.key] || 0;
+    const ratio = max > 0 && bar.value != null ? Math.min(1, bar.value / max) : 0;
+    if (bar.value == null) return `<div class="perf-bar perf-bar-empty"></div>`;
+    const lightness = 74 - Math.round(ratio * 36);
+    return `<div class="perf-bar" style="height:${Math.max(4, Math.round(ratio * 100))}%;background:hsl(${bar.hue}, 68%, ${lightness}%)"></div>`;
+  }).join("");
+  return `<div class="perf-bars" aria-hidden="true">${columns}</div>`;
+}
+
+function formatPerfText(record) {
+  const inTps = record.inputTps != null ? `↑${formatCompact(record.inputTps)}` : "↑—";
+  const outTps = record.outputTps != null ? `↓${formatCompact(record.outputTps)}` : "↓—";
+  const concurrency = record.concurrency != null ? `${formatCompact(record.concurrency)} 并发` : "并发—";
+  return `<div class="perf-text">
+    <span class="perf-seg perf-seg-left">${escapeHtml(inTps)}</span>
+    <span class="perf-seg perf-seg-center">${escapeHtml(outTps)}</span>
+    <span class="perf-seg perf-seg-right">${escapeHtml(concurrency)}</span>
+  </div>`;
+}
+
+function formatCompact(value) {
+  if (value === null || value === undefined) return "—";
+  if (value >= 1000) return `${formatNumber(Math.round(value / 100) / 10)}k`;
+  return formatNumber(value);
 }
 
 function formatMatrixCell(record) {
   if (!record) {
-    return `<span class="matrix-empty" title="暂无该模型在此工具中的记录">—</span>`;
+    return `<span class="matrix-empty" title="暂无该模型在此硬件上的部署记录">—</span>`;
   }
 
-  const statusClass = getToneClass(record.supportStatus, "status");
-  const routeTags = (record.routeTags || []).slice(0, 3);
+  const modeClass = getToneClass(record.deployMode, "status");
+  const precisionClass = getToneClass(record.precision, "route");
+  const vramText = record.minVramGB != null ? `${formatNumber(record.minVramGB)}GB` : "—";
   const sourceLinks = (record.sources || []).slice(0, 2).map(source =>
     `<a class="source-link matrix-source-link" href="${escapeAttr(source.url)}" target="_blank">${escapeHtml(source.label || "来源")}</a>`
   ).join("");
   const title = [
+    record.inputTps != null || record.outputTps != null
+      ? `速度：↑${record.inputTps != null ? formatNumber(record.inputTps) : "—"} / ↓${record.outputTps != null ? formatNumber(record.outputTps) : "—"} tok/s @ ${record.concurrency != null ? formatNumber(record.concurrency) : "—"} 并发（背景柱高按全局最大值归一，左入/中出/右并发）`
+      : "",
+    record.perfSource ? `速度口径：${record.perfSource}` : "",
+    record.throughputNote,
+    record.costNote,
     record.notes,
-    record.priceMeter,
-    record.planRequirement,
-    record.latencyNote,
   ].filter(Boolean).join("\n");
 
   return `
-    <div class="matrix-cell" title="${escapeAttr(title)}">
-      <div class="matrix-cell-top">
-        <span class="tag group-status ${statusClass} verified-cell">${escapeHtml(record.supportStatus)}</span>
+    <div class="matrix-cell matrix-cell-hw" title="${escapeAttr(title)}">
+      ${formatPerfBars(record)}
+      <div class="matrix-cell-top matrix-tags-row">
+        <span class="tag group-status ${modeClass} verified-cell">${escapeHtml(record.deployMode)}</span>
+        <span class="tag group-route ${precisionClass} verified-cell">${escapeHtml(record.precision)}</span>
+        <span class="tag group-route ${getToneClass("gpuCount", "route")} verified-cell">×${record.gpuCount ?? "—"} · 需 ${vramText}</span>
       </div>
-      ${scoreBars(record.codingFit, record.agentFit, record.contextFit)}
-      <div class="tag-list matrix-route-tags">
-        ${routeTags.map(route => `<span class="tag group-route ${getToneClass(route, "route")} verified-cell">${escapeHtml(route)}</span>`).join("")}
-      </div>
+      ${scoreBars(record.memoryFit, record.bandwidthFit, record.computeFit)}
       ${sourceLinks ? `<div class="matrix-sources">${sourceLinks}</div>` : ""}
+      ${formatPerfText(record)}
     </div>
   `;
 }
@@ -595,17 +660,17 @@ function escapeAttr(value) {
 
 function exportCsv() {
   const records = getFilteredRecords();
-  const tools = getVisibleTools();
-  const rows = buildMatrixRows(records, tools);
-  const header = ["模型", "厂商", "覆盖工具数", "平均代码适配", "平均 Agent 适配", "平均长上下文", ...tools];
+  const gpus = getVisibleGpus(records);
+  const rows = buildMatrixRows(records, gpus);
+  const header = ["模型", "厂商", "覆盖硬件数", "平均硬件适配", "平均显存适配", "平均带宽适配", ...gpus];
   const body = rows.map(row => [
     row.modelName,
     row.modelVendor,
-    `${row.coverage}/${tools.length}`,
-    formatNullable(row.avgCodingFit),
-    formatNullable(row.avgAgentFit),
-    formatNullable(row.avgContextFit),
-    ...tools.map(toolName => getCellCsvText(row.cells.get(toolName))),
+    `${row.coverage}/${gpus.length}`,
+    formatNullable(row.avgFitScore),
+    formatNullable(row.avgMemoryFit),
+    formatNullable(row.avgBandwidthFit),
+    ...gpus.map(gpuName => getCellCsvText(row.cells.get(gpuName))),
   ]);
   const csv = [header, ...body]
     .map(line => line.map(value => `"${String(value ?? "").replaceAll('"', '""')}"`).join(","))
@@ -614,7 +679,7 @@ function exportCsv() {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = "model-tool-matrix.csv";
+  link.download = "model-hardware-matrix.csv";
   link.click();
   URL.revokeObjectURL(url);
 }
@@ -622,10 +687,15 @@ function exportCsv() {
 function getCellCsvText(record) {
   if (!record) return "";
   return [
-    record.supportStatus,
-    `C${record.codingFit}/A${record.agentFit}/X${record.contextFit}`,
-    (record.routeTags || []).join(" / "),
-    record.priceMeter,
+    record.deployMode,
+    record.precision,
+    `×${record.gpuCount}`,
+    record.minVramGB != null ? `需 ${record.minVramGB}GB` : "",
+    record.inputTps != null || record.outputTps != null
+      ? `↑${record.inputTps ?? "—"}/↓${record.outputTps ?? "—"} tok/s @ ${record.concurrency ?? "—"} 并发（${record.perfSource || "口径未记录"}）`
+      : "",
+    `适配 ${record.fitScore}/5`,
+    record.throughputNote,
     record.notes,
   ].filter(Boolean).join(" | ");
 }
