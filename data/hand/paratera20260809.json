@@ -1,0 +1,583 @@
+[
+  {
+    "name": "Qwen3.8-Max",
+    "pricing": {
+      "input": 12,
+      "output": 36,
+      "hit": 1.5,
+      "cacheOutput": 36
+    },
+    "description": "2.4万亿参数MoE旗舰，编程与办公能力全面跃升，可自主编程十数天交付完整项目。胜任法律、金融、设计等数百种专业任务，一次对话端到端交付生产级成果。原生视觉理解贯穿规划、执行与验证全流程，支持超长文档与长视频的深度语义解析。长程任务中自主规划与闭环迭代，持续进化。",
+    "useCases": "Agent调用、自动化任务等",
+    "modelId": "Qwen3.8-Max",
+    "contextLength": "1000K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-08-03 16:27:41",
+    "tags": []
+  },
+  {
+    "name": "DeepSeek-V4-Flash-0731",
+    "pricing": {
+      "input": 1,
+      "output": 2,
+      "hit": 0.02,
+      "cacheOutput": 1
+    },
+    "description": "DeepSeek V4 Flash 0731 是 DeepSeek 高效 V4 Flash 混合专家模型重新后训练的官方发布版。高效轻量化MoE模型，总参284B，激活13B，原生支持百万超长上下文能力。推理速度快、延迟低、调用成本低廉，综合能力均衡，主打高并发、轻量化任务，适合日常对话、内容创作、基础 RAG、批量文案处理等普惠刚需场景。",
+    "useCases": "AI Coding、数学推理、简单任务处理",
+    "modelId": "DeepSeek-V4-Flash-0731",
+    "contextLength": "1000K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-08-03 15:46:50",
+    "tags": []
+  },
+  {
+    "name": "Kimi-K3",
+    "pricing": {
+      "input": 20,
+      "output": 100,
+      "hit": 2,
+      "cacheOutput": 100
+    },
+    "description": "Kimi K3 是全球首个开放的 3T 级模型，拥有 2.8T 参数，专为长程编程、知识工作和推理等前沿智能任务打造，原生支持视觉能力，并具备 100 万 token 的上下文窗口。",
+    "useCases": "问答 通用agent任务",
+    "modelId": "Kimi-K3",
+    "contextLength": "1000K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-07-29 14:34:13",
+    "tags": []
+  },
+  {
+    "name": "GLM-5.2",
+    "pricing": {
+      "input": 8,
+      "output": 28,
+      "hit": 2,
+      "cacheOutput": 28
+    },
+    "description": "GLM-5.2是智谱新一代旗舰开源模型，在继承上一代核心架构的基础上，重点强化了长文本处理和代码生成能力。",
+    "useCases": "长周期代码编写、智能体工程、复杂系统任务。",
+    "modelId": "GLM-5.2",
+    "contextLength": "1000K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-06-17 10:00:00",
+    "tags": [
+      "文本"
+    ],
+    "rawTags": "文本"
+  },
+  {
+    "name": "GLM-5.1",
+    "pricing": {
+      "input": 8,
+      "output": 28,
+      "hit": 2,
+      "cacheOutput": 28,
+      "cacheStorage": "限时免费"
+    },
+    "description": "智谱最新旗舰模型，在长程自主执行、复杂工程优化与真实开发场景中展示出更强能力，综合能力对标Claude Opus 4.6",
+    "useCases": "AI Coding、通用对话、写作、前端开发",
+    "modelId": "GLM-5.1",
+    "contextLength": "200K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-04-09 16:00:00",
+    "tags": [
+      "文本"
+    ],
+    "rawTags": "文本"
+  },
+  {
+    "name": "GLM-5",
+    "pricing": {
+      "input": 6,
+      "output": 20,
+      "hit": 1.5,
+      "cacheOutput": 20,
+      "cacheStorage": "限时免费"
+    },
+    "description": "GLM-5是智谱上市后首款年度旗舰模型，在创意写作、编程、逻辑推理三大维度能力显著提升，支持200K上下文，擅长前端设计、代码生成、跨文件代码分析等场景。",
+    "useCases": "编程、复杂任务、创意写作、逻辑推理。",
+    "modelId": "GLM-5",
+    "contextLength": "200K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-02-12 09:00:00",
+    "tags": [
+      "文本"
+    ],
+    "rawTags": "文本"
+  },
+  {
+    "name": "GLM-5-Turbo",
+    "pricing": {
+      "input": 7,
+      "output": 26,
+      "hit": 1.8,
+      "cacheOutput": 26,
+      "cacheStorage": "限时免费"
+    },
+    "description": "面向 OpenClaw 龙虾场景深度优化。 其从训练阶段就针对龙虾任务的核心需求进行专项优化，增强如工具调用、指令遵循、定时与持续性任务、长链路执行等核心能力，使其在复杂、动态、长链路的任务中也真正具备可执行性。",
+    "modelId": "GLM-5-Turbo",
+    "contextLength": "200K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-03-25 16:00:00",
+    "tags": [
+      "文本"
+    ],
+    "rawTags": "文本"
+  },
+  {
+    "name": "GLM-4.7",
+    "pricing": {
+      "input": 3.5,
+      "output": 16,
+      "hit": 1,
+      "cacheStorage": "限时免费"
+    },
+    "description": "GLM-4.7面向Agentic Coding场景强化了编程能力、长程任务规划与工具协同，并在多个公开基准的当期榜单中取得开源模型中的领先表现。通用能力提升，回复更简洁自然，写作更具沉浸感。在执行复杂智能体任务，在工具调用时指令遵循更强，Artifacts 与 Agentic Coding 的前端美感和长程任务完成效率进一步提升。",
+    "useCases": "Agentic Coding、多模态交互与实时应用开发、前端视觉优化、复杂问题写作、沉浸式写作",
+    "modelId": "GLM-4.7",
+    "contextLength": "200K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-12-24 09:00:00",
+    "tags": [
+      "长上下文"
+    ],
+    "rawTags": "长上下文200K"
+  },
+  {
+    "name": "DeepSeek-V4-Pro",
+    "pricing": {
+      "input": 12,
+      "output": 24,
+      "hit": 0.1,
+      "cacheOutput": 24,
+      "cacheStorage": "限时免费"
+    },
+    "description": "DeepSeek-V4-Pro模型，在Agent能力、世界知识和推理性能上均处于国内开源领域的领先地位，具备顶尖数学逻辑、复杂推理、专业代码与长文本深度解析能力。",
+    "useCases": "AI Coding、科研任务、复杂推理",
+    "modelId": "DeepSeek-V4-Pro",
+    "contextLength": "1000K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-04-24 16:00:00",
+    "tags": []
+  },
+  {
+    "name": "Doubao-Seedream-4.5",
+    "pricing": {
+      "perImage": 0.25
+    },
+    "description": "整合了文生图、图生图、组图输出等能力，融合常识和推理能力。相比前代4.0模型生成效果大幅提升，具备更好的编辑一致性和多图融合效果，能更精准的控制画面细节，生成更自然，色彩更和谐。",
+    "useCases": "影视创作、电商推广、营销广告、游戏设计",
+    "modelId": "Doubao-Seedream-4.5",
+    "contextLength": "256K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-05-29 14:00:00",
+    "tags": []
+  },
+  {
+    "name": "Doubao-Seedream-5.0-lite",
+    "pricing": {
+      "perImage": 0.22
+    },
+    "description": "豆包最新图片生成模型，支持文生图+图生图。",
+    "modelId": "Doubao-Seedream-5.0-lite",
+    "contextLength": "10000K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-04-30 16:00:00",
+    "notes": "文生图、图生图、组图",
+    "tags": []
+  },
+  {
+    "name": "Intern-S2-Preview",
+    "pricing": {
+      "free": "限时免费"
+    },
+    "description": "书生科学多模态大模型，35B参数量，主打以小博大、任务驱动，在科学领域对标万亿级Intern-S1-Pro。",
+    "useCases": "科研编程、材料研发、化学仿真、材料晶体结构生成、科学智能体",
+    "modelId": "Intern-S2-Preview",
+    "contextLength": "256K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-05-24 16:00:00",
+    "tags": []
+  },
+  {
+    "name": "Kimi-K2.6",
+    "pricing": {
+      "input": 6.5,
+      "output": 27,
+      "hit": 1.3,
+      "cacheOutput": 27,
+      "cacheStorage": "限时免费"
+    },
+    "description": "Kimi-K2.6是Kimi最新最智能的模型，具备更强更稳的长程代码编写能力，指令遵循和自我纠错能力显著提升，同时支持文本、图片与视频输入，思考与非思考模式，对话与Agent任务。",
+    "useCases": "复杂编程、Agent任务",
+    "modelId": "Kimi-K2.6",
+    "contextLength": "256K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-05-13 16:00:00",
+    "tags": []
+  },
+  {
+    "name": "MiniMax-M3",
+    "pricing": {
+      "input": 4.2,
+      "output": 16.8,
+      "hit": 0.84,
+      "cacheOutput": 16.8,
+      "cacheStorage": "限时免费"
+    },
+    "description": "原生多模态、1M 上下文的 Frontier Coding 模型。",
+    "useCases": "长文档、代码库、多步骤Agent会话、多模态Chat输入",
+    "modelId": "MiniMax-M3",
+    "contextLength": "1000K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-06-01 10:00:00",
+    "tags": []
+  },
+  {
+    "name": "Qwen3.5-Plus",
+    "pricing": {
+      "input": 4,
+      "output": 24,
+      "hit": 0.4,
+      "cacheOutput": 24,
+      "cacheStorage": "限时免费"
+    },
+    "description": "Qwen3.5原生视觉语言系列Plus模型。",
+    "modelId": "Qwen3.5-Plus",
+    "contextLength": "1000K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-04-27 16:00:00",
+    "tags": [
+      "文本生成",
+      "深度思考",
+      "视觉理解"
+    ],
+    "rawTags": "文本生成深度思考视觉理解"
+  },
+  {
+    "name": "Qwen3.6-Plus",
+    "pricing": {
+      "input": 4,
+      "output": 24,
+      "hit": 0.4,
+      "cacheOutput": 24,
+      "cacheStorage": "限时免费"
+    },
+    "description": "Qwen3.6原生视觉语言系列Plus模型，模型在Agentic coding、前端编程、Vibe coding等代码能力、多模态万物识别、OCR、物体定位等能力上显著增强。",
+    "useCases": "AI Coding、前端编程、多模态识别、科研任务",
+    "modelId": "Qwen3.6-Plus",
+    "contextLength": "1000K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-05-13 16:00:00",
+    "tags": []
+  },
+  {
+    "name": "Qwen3.7-Max",
+    "pricing": {
+      "input": 12,
+      "output": 36,
+      "hit": 2.4,
+      "cacheOutput": 36,
+      "cacheStorage": "限时免费"
+    },
+    "description": "Qwen3.7是面向智能体时代的新一代旗舰模型，核心优势在于智能体能力的广度与深度：在编程、办公与生产力、长周期自主执行方面均能出色胜任各项任务。",
+    "useCases": "Agent调用、自动化任务等",
+    "modelId": "Qwen3.7-Max",
+    "contextLength": "1000K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-06-04 10:00:00",
+    "tags": []
+  },
+  {
+    "name": "Qwen3.7-Plus",
+    "pricing": {
+      "input": 6,
+      "output": 24,
+      "hit": 1.2,
+      "cacheOutput": 24
+    },
+    "description": "核心特色为多模态交互混合智能体能力，能够感知真实世界场景、读取屏幕并操作 GUI、基于视觉参考生成代码、端到端导航移动应用。",
+    "useCases": "多模态交互",
+    "modelId": "Qwen3.7-Plus",
+    "contextLength": "1000K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-07-03 16:00:00",
+    "tags": []
+  },
+  {
+    "name": "DeepSeek-V4-Flash",
+    "pricing": {
+      "input": 1,
+      "output": 2,
+      "hit": 0.02,
+      "cacheOutput": 2
+    },
+    "description": "DeepSeek-V4-Flash 是 DeepSeek-V4 系列的轻量高效版本，在保持 1M 超长上下文能力的同时，通过更小的模型参数与激活规模，提供更为快捷、经济的 API 服务。",
+    "useCases": "AI Coding、数学推理、简单任务处理",
+    "modelId": "DeepSeek-V4-Flash",
+    "contextLength": "1000K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-04-24 16:00:00",
+    "tags": []
+  },
+  {
+    "name": "DeepSeek-V3.2",
+    "pricing": {
+      "input": 2,
+      "output": 3,
+      "hit": 0.2
+    },
+    "description": "DeepSeek-V3.2 的目标是平衡推理能力与输出长度，适合日常使用，例如问答场景和通用 Agent 任务场景。在公开的推理类 Benchmark 测试中，DeepSeek-V3.2 达到了 GPT-5 的水平，仅略低于 Gemini-3.0-Pro",
+    "useCases": "问答、通用Agent任务",
+    "modelId": "DeepSeek-V3.2",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-12-03 16:00:00",
+    "tags": []
+  },
+  {
+    "name": "ERNIE-5.0-Thinking-Preview",
+    "pricing": {
+      "input": 10,
+      "output": 40
+    },
+    "description": "文心5.0模型属于原生全模态大模型，将文本、图像、音频、视频联合建模，具备综合的全模态能力，在多模态理解、指令遵循、创意写作、智能体应用等领域表现出色。",
+    "useCases": "多模态理解",
+    "modelId": "ERNIE-5.0-Thinking-Preview",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-01-29 13:45:41",
+    "tags": [
+      "全模态"
+    ],
+    "rawTags": "全模态"
+  },
+  {
+    "name": "Kimi-K2.5",
+    "pricing": {
+      "input": 4,
+      "output": 21,
+      "hit": 0.8,
+      "cacheOutput": "限时免费",
+      "cacheStorage": "限时免费"
+    },
+    "description": "kimi-k2.5是月之暗面迄今发布最全能的模型，原生多模态架构设计，同时支持视觉与文本输入、思考与非思考模式、对话与Agent任务。",
+    "modelId": "Kimi-K2.5",
+    "contextLength": "256K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-03-05 16:00:00",
+    "tags": []
+  },
+  {
+    "name": "PaddleOCR-VL-0.9B",
+    "pricing": {
+      "free": "限时免费"
+    },
+    "description": "0.9B超紧凑视觉-语言模型，支持109种语言，并在识别复杂元素（文本、表格、公式、图表）方面表现优异，且支持PDF/PNG/JPG/BMP/TIF等各类图片格式。",
+    "useCases": "文档解析",
+    "modelId": "PaddleOCR-VL-0.9B",
+    "contextLength": "32K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-06-30 18:00:00",
+    "tags": [
+      "OCR",
+      "多语种"
+    ],
+    "rawTags": "OCR多语种"
+  },
+  {
+    "name": "PaddleOCR-VL-1.5",
+    "pricing": {
+      "free": "限时免费"
+    },
+    "description": "专为文档解析设计，支持110+语种，在图表、印章、公式、手写体等多种复杂元素上支持良好；支持PDF/PNG/JPG/BMP/TIF等各种图片格式；单文件≤50MB&100页，单图片≤10MB，批量上传≤20个",
+    "useCases": "复杂文档解析",
+    "modelId": "PaddleOCR-VL-1.5",
+    "contextLength": "-",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-01-30 14:07:03",
+    "tags": []
+  },
+  {
+    "name": "Baichuan-M3",
+    "pricing": {
+      "input": 10,
+      "output": 30
+    },
+    "description": "Baichuan-M3首次在医疗领域实现了对GPT-5.2的全面超越，超低幻觉，支持“端到端”严肃问诊。",
+    "useCases": "医疗领域复杂问题、严肃问诊",
+    "modelId": "Baichuan-M3",
+    "contextLength": "32K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-01-14 16:00:00",
+    "tags": [
+      "专业医疗",
+      "强推理",
+      "低幻觉"
+    ],
+    "rawTags": "专业医疗强推理低幻觉"
+  },
+  {
+    "name": "DeepSeek-V3.2-Exp",
+    "pricing": {
+      "input": 2,
+      "output": 3,
+      "hit": 0.2
+    },
+    "description": "V3.2-Exp 在 V3.1-Terminus 的基础上引入了 DeepSeek Sparse Attention（一种稀疏注意力机制），针对长文本的训练和推理效率进行了探索性的优化和验证。",
+    "useCases": "超复杂问题求解、智能体应用、软件工程、工具调用。",
+    "modelId": "DeepSeek-V3.2-Exp",
+    "contextLength": "64K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-09-30 10:00:00",
+    "tags": [
+      "长上下文"
+    ],
+    "rawTags": "长上下文"
+  },
+  {
+    "name": "GLM-ASR-2512",
+    "pricing": {
+      "input": 0.18,
+      "output": "限时免费"
+    },
+    "description": "智谱语音转文本模型，强抗噪，覆盖多种语言和方言，支持日常聊天、会议记录、工作文档等多种场景。",
+    "useCases": "会议纪要、视频直播字幕、多语言沟通及翻译、办公文档录入、医疗病例录入等",
+    "modelId": "GLM-ASR-2512",
+    "contextLength": "32K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-01-08 15:00:00",
+    "tags": [
+      "语音转文本"
+    ],
+    "rawTags": "语音转文本"
+  },
+  {
+    "name": "GLM-X-F",
+    "pricing": {
+      "input": 6,
+      "output": 22,
+      "hit": 1.5,
+      "cacheOutput": "限时免费",
+      "cacheStorage": "限时免费"
+    },
+    "description": "GLM-5是智谱上市后首款年度旗舰模型，在创意写作、编程、逻辑推理三大维度能力显著提升，支持200K上下文，擅长前端设计、代码生成、跨文件代码分析等场景。",
+    "useCases": "编程、复杂任务、创意写作、逻辑推理。",
+    "modelId": "GLM-X-F",
+    "contextLength": "200K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-02-12 09:00:00",
+    "tags": [
+      "文本"
+    ],
+    "rawTags": "文本"
+  },
+  {
+    "name": "MiniMax-M2.5",
+    "pricing": {
+      "input": 2.1,
+      "output": 8.4,
+      "cacheStorage": "限时免费"
+    },
+    "description": "M2 系列迭代版，主打编程能力深度强化 + Agent 任务高效执行，延续 MoE 架构优势，面向开发者与企业级 Agent 场景。",
+    "useCases": "编程能力：复杂系统开发、代码重构、调试优化、自动注释 / 文档生成；Agent 协同：适配桌面端 / 本地文件操作，强化专家 Agent 工作流闭环。",
+    "modelId": "MiniMax-M2.5",
+    "contextLength": "204K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-02-13 00:00:00",
+    "tags": [],
+    "rawTags": "204K"
+  },
+  {
+    "name": "MiniMax-M2.7",
+    "pricing": {
+      "input": 2.1,
+      "output": 8.4,
+      "hit": 0.42,
+      "cacheOutput": 8.4,
+      "cacheStorage": "限时免费"
+    },
+    "description": "MiniMax-M2.7支持自行构建复杂Agent Harness，能完成高度复杂的生产力任务。在真实软件工程、专业办公领域、OpenClaw使用中，均有优异表现。",
+    "modelId": "MiniMax-M2.7",
+    "contextLength": "200K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-04-09 16:00:00",
+    "tags": [],
+    "rawTags": "248K"
+  },
+  {
+    "name": "Qwen3.5-122B-A10B",
+    "pricing": {
+      "input": 2,
+      "output": 16,
+      "hit": 0.2,
+      "cacheOutput": 16,
+      "cacheStorage": "限时免费"
+    },
+    "description": "Qwen3.5系列原生视觉语言模型，该模型的综合表现仅次于Qwen3.5-397B-A17B，文本能力显著优于Qwen3-235B-2507，视觉能力优于Qwen3-VL-235B。",
+    "useCases": "逻辑推理、代码生成、智能体任务、视觉理解、图形用户界面（GUI）。",
+    "modelId": "Qwen3.5-122B-A10B",
+    "contextLength": "256K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-03-12 16:00:00",
+    "tags": [
+      "文本"
+    ],
+    "rawTags": "文本"
+  },
+  {
+    "name": "Qwen3.5-27B",
+    "pricing": {
+      "input": 1.8,
+      "output": 14.4,
+      "hit": 0.18,
+      "cacheOutput": 14.4,
+      "cacheStorage": "限时免费"
+    },
+    "description": "Qwen3.5系列27B原生视觉语言Dense模型。",
+    "modelId": "Qwen3.5-27B",
+    "contextLength": "256K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-03-12 16:00:00",
+    "tags": [
+      "文本"
+    ],
+    "rawTags": "文本"
+  },
+  {
+    "name": "Qwen3.6-27B",
+    "pricing": {
+      "input": 3,
+      "output": 18
+    },
+    "description": "Qwen3.6系列27B原生视觉语言Dense模型，模型效果相较3.5-27B重点提升了Agentic coding能力、模型STEM与推理能力进一步增强；视觉模态方面在空间智能、物体定位与检测能力上显著增强，视频理解、文档OCR及视觉Agent能力稳步提升。",
+    "modelId": "Qwen3.6-27B",
+    "contextLength": "256K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-07-06 16:00:00",
+    "tags": [
+      "文本"
+    ],
+    "rawTags": "文本"
+  },
+  {
+    "name": "Qwen3.5-35B-A3B",
+    "pricing": {
+      "input": 1.6,
+      "output": 12.8,
+      "hit": 0.16,
+      "cacheOutput": 12.8,
+      "cacheStorage": "限时免费"
+    },
+    "description": "Qwen3.5系列原生视觉语言模型。",
+    "modelId": "Qwen3.5-35B-A3B",
+    "contextLength": "256K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-03-12 16:00:00",
+    "tags": [
+      "文本"
+    ],
+    "rawTags": "文本"
+  }
+]
