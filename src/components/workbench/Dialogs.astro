@@ -1,0 +1,36 @@
+---
+/** GPU page only: price update + data import dialogs. */
+---
+
+<dialog id="priceDialog">
+  <form method="dialog" class="dialog-card">
+    <div class="panel-head">
+      <h2>更新价格</h2>
+      <button class="text-button" value="cancel" type="submit">关闭</button>
+    </div>
+    <p class="muted">
+      支持粘贴 JSON 数组，字段可用 id 或 model 匹配：priceUSD、currency、merchant、source、url、available。
+    </p>
+    <textarea id="pricePayload" spellcheck="false"></textarea>
+    <div class="dialog-actions">
+      <button class="ghost-button" id="loadLocalPriceButton" type="button">读取 data/prices.json</button>
+      <button class="primary-button" id="applyPriceButton" type="button">应用更新</button>
+    </div>
+    <pre id="priceResult" class="result-log"></pre>
+  </form>
+</dialog>
+
+<dialog id="importDialog">
+  <form method="dialog" class="dialog-card">
+    <div class="panel-head">
+      <h2>导入数据</h2>
+      <button class="text-button" value="cancel" type="submit">关闭</button>
+    </div>
+    <p class="muted">粘贴 GPU JSON 数组。字段会按统一模型合并；相同 id 会覆盖。</p>
+    <textarea id="importPayload" spellcheck="false"></textarea>
+    <div class="dialog-actions">
+      <button class="primary-button" id="applyImportButton" type="button">导入</button>
+    </div>
+    <pre id="importResult" class="result-log"></pre>
+  </form>
+</dialog>

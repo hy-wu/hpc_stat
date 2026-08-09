@@ -1,0 +1,20 @@
+---
+export interface Metric {
+  id: string;
+  label: string;
+}
+
+interface Props {
+  metrics: Metric[];
+}
+const { metrics } = Astro.props;
+---
+
+<section class="insight-grid" aria-label="统计概览">
+  {metrics.map((m) => (
+    <div class="metric">
+      <span>{m.label}</span>
+      <strong id={m.id}>-</strong>
+    </div>
+  ))}
+</section>

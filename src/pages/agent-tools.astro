@@ -1,0 +1,63 @@
+---
+import Base from "../layouts/Base.astro";
+import InsightGrid from "../components/workbench/InsightGrid.astro";
+import TablePanel from "../components/workbench/TablePanel.astro";
+---
+
+<Base title="Agent Tools Comparison" active="agent-tools">
+  <div class="filter-card">
+    <section class="control-band">
+      <div class="search-block">
+        <label for="globalSearch">搜索工具</label>
+        <input id="globalSearch" type="search" placeholder="名称、厂商、模型、MCP、本地模型、价格、备注..." />
+      </div>
+      <div class="control">
+        <label for="typeFilter">类型</label>
+        <select id="typeFilter"></select>
+      </div>
+      <div class="control">
+        <label for="deploymentFilter">形态</label>
+        <select id="deploymentFilter"></select>
+      </div>
+      <div class="control">
+        <label for="accessFilter">接入方式</label>
+        <select id="accessFilter"></select>
+      </div>
+      <div class="control">
+        <label for="vendorFilter">厂商</label>
+        <select id="vendorFilter"></select>
+      </div>
+      <div class="control">
+        <label for="statusFilter">核验状态</label>
+        <select id="statusFilter"></select>
+      </div>
+      <div class="control">
+        <label for="sortField">排序字段</label>
+        <select id="sortField"></select>
+      </div>
+      <button class="ghost-button" id="sortDirectionButton" type="button">升序</button>
+      <button class="ghost-button" id="resetFiltersButton" type="button">重置</button>
+    </section>
+    <section class="filters-panel-inner">
+      <div class="panel-head">
+        <h2>字段筛选</h2>
+        <button class="text-button" id="addRuleButton" type="button">添加条件</button>
+      </div>
+      <div id="filterRules" class="rules"></div>
+    </section>
+  </div>
+
+  <InsightGrid metrics={[
+    { id: "visibleCount", label: "筛选工具" },
+    { id: "sourcedCount", label: "有来源" },
+    { id: "freeCount", label: "免费版" },
+    { id: "openSourceCount", label: "开源" },
+  ]} />
+
+  <TablePanel title="Agent 工具表" />
+
+  <div data-flat-page="agent-tools"></div>
+  <script>
+    import "../islands/FlatTable";
+  </script>
+</Base>

@@ -34,8 +34,8 @@ SIDEBAR_DATA_DIR = ROOT / "data" / "byGeminiSidebar"
 SIDEBAR_GPQA_PATH = SIDEBAR_DATA_DIR / "GPQAselfReported.md"
 SIDEBAR_LLM_STATS_PATH = SIDEBAR_DATA_DIR / "llmStat.md"
 SIDEBAR_SILICONFLOW_PATH = SIDEBAR_DATA_DIR / "硅基流动.md"
-MODELS_HTML_PATH = ROOT / "models.html"
-MODELS_JS_PATH = ROOT / "src" / "models.js"
+MODELS_HTML_PATH = ROOT / "src" / "pages" / "models.astro"
+MODELS_JS_PATH = ROOT / "src" / "islands" / "FlatTable.ts"
 REFERENCE_PATH = ROOT / "REFERENCE_SOURCES.md"
 CACHE_DIR = ROOT / ".cache" / "model-sources"
 DEFAULT_OPENROUTER_TARGET = 150
@@ -561,7 +561,7 @@ def main() -> int:
     parser.add_argument("--no-cache", action="store_true", help="do not read cached source responses")
     parser.add_argument("--refresh-cache", action="store_true", help="refetch sources even if cache exists; implies --online")
     parser.add_argument("--fetch-reference-sources", action="store_true", help="also fetch every URL listed in REFERENCE_SOURCES.md")
-    parser.add_argument("--skip-page-check", action="store_true", help="skip static models.html/src/models.js data-fill checks")
+    parser.add_argument("--skip-page-check", action="store_true", help="skip models.astro/FlatTable.ts data-fill checks")
     parser.add_argument("--skip-platform", action="store_true", help="skip platform pricing re-fetch (aliyun/tencent/baidu/zhipu/groq/perplexity)")
     parser.add_argument("--output", type=Path, help="write a JSON report to this path")
     args = parser.parse_args()
@@ -3057,11 +3057,11 @@ def validate_page_data(models: list[dict[str, Any]]) -> dict[str, Any]:
     }
     visible_empty_columns = [field["key"] for field in visible_fields if coverage.get(field["key"], 0) == 0]
     errors = []
-    if 'src/models.js' not in html:
+    if "islands/FlatTable" not in html:
         errors.append({"kind": "missingModelsScript", "path": str(MODELS_HTML_PATH)})
-    if 'fetch("data/models.json")' not in js and "fetch('data/models.json')" not in js:
+    if '"data/models.json"' not in js and "'data/models.json'" not in js:
         errors.append({"kind": "missingModelsJsonFetch", "path": str(MODELS_JS_PATH)})
-    if MODEL_FIELDS_PATH.exists() and 'fetch("data/model-fields.json")' not in js and "fetch('data/model-fields.json')" not in js:
+    if MODEL_FIELDS_PATH.exists() and '"data/model-fields.json"' not in js and "'data/model-fields.json'" not in js:
         errors.append({"kind": "missingModelFieldsFetch", "path": str(MODELS_JS_PATH)})
     if visible_empty_columns:
         errors.append({"kind": "visibleEmptyColumns", "items": visible_empty_columns})

@@ -1,0 +1,65 @@
+---
+import Base from "../layouts/Base.astro";
+import InsightGrid from "../components/workbench/InsightGrid.astro";
+import TablePanel from "../components/workbench/TablePanel.astro";
+import Dialogs from "../components/workbench/Dialogs.astro";
+---
+
+<Base title="HPC Comparison" active="gpu">
+  <Fragment slot="actions">
+    <button class="icon-button" id="importDataButton" type="button" title="导入 GPU 数据">导入</button>
+    <button class="icon-button" id="exportDataButton" type="button" title="导出当前数据">导出</button>
+    <button class="primary-button" id="refreshPriceButton" type="button">更新价格</button>
+  </Fragment>
+
+  <div class="filter-card">
+    <section class="control-band">
+      <div class="search-block">
+        <label for="globalSearch">搜索</label>
+        <input id="globalSearch" type="search" placeholder="型号、架构、显存、接口、备注..." />
+      </div>
+      <div class="control">
+        <label for="typeFilter">类型</label>
+        <select id="typeFilter"></select>
+      </div>
+      <div class="control">
+        <label for="segmentFilter">场景</label>
+        <select id="segmentFilter"></select>
+      </div>
+      <div class="control">
+        <label for="vendorFilter">厂商</label>
+        <select id="vendorFilter"></select>
+      </div>
+      <div class="control">
+        <label for="sortField">排序字段</label>
+        <select id="sortField"></select>
+      </div>
+      <button class="ghost-button" id="sortDirectionButton" type="button">降序</button>
+      <button class="ghost-button" id="resetFiltersButton" type="button">重置</button>
+    </section>
+    <section class="filters-panel-inner">
+      <div class="panel-head">
+        <h2>字段筛选</h2>
+        <button class="text-button" id="addRuleButton" type="button">添加条件</button>
+      </div>
+      <div id="filterRules" class="rules"></div>
+    </section>
+  </div>
+
+  <InsightGrid metrics={[
+    { id: "visibleCount", label: "筛选结果" },
+    { id: "maxMemory", label: "最高显存" },
+    { id: "bestPricePerGb", label: "最低 $/GB" },
+    { id: "latestPriceDate", label: "价格更新时间" },
+  ]} />
+
+  <TablePanel title="参数表" />
+
+  <Dialogs />
+
+  <div data-flat-page="gpu"></div>
+  <script>
+    import "../islands/FlatTable";
+    import "../islands/gpu-extra";
+  </script>
+</Base>

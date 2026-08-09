@@ -1,0 +1,43 @@
+---
+interface Props {
+  title: string;
+  tools?: ("columns" | "compact" | "csv")[];
+  pickerLabel?: string;
+}
+const { title, tools = ["columns", "compact", "csv"], pickerLabel } = Astro.props;
+---
+
+<section class="table-panel">
+  <div class="panel-head">
+    <h2>{title}</h2>
+    <div class="table-tools">
+      {tools.includes("columns") && (
+        <button
+          class="text-button"
+          id="toggleColumnsButton"
+          type="button"
+          aria-expanded="false"
+          aria-controls="columnPicker"
+        >
+          {pickerLabel ?? "列设置"}
+        </button>
+      )}
+      {tools.includes("compact") && (
+        <button class="text-button" id="compactToggleButton" type="button">紧凑模式</button>
+      )}
+      {tools.includes("csv") && (
+        <button class="text-button" id="exportCsvButton" type="button">导出 CSV</button>
+      )}
+    </div>
+  </div>
+  {tools.includes("columns") && (
+    <div class="column-picker" id="columnPicker" hidden></div>
+  )}
+  <slot name="legend" />
+  <div class="table-wrap">
+    <table id="gpuTable">
+      <thead id="tableHead"></thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+</section>

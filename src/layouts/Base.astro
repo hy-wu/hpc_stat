@@ -1,0 +1,67 @@
+---
+import NavTabs from "../components/layout/NavTabs.astro";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  active: string;
+  heading?: string;
+}
+const { title, active, heading } = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="icon" href="icon.svg" />
+    <script is:inline>
+      (function() {
+        var THEME_KEY = 'hpc-stat-theme';
+        function getEffectiveTheme() {
+          var stored = localStorage.getItem(THEME_KEY);
+          if (stored === 'dark') return 'dark';
+          if (stored === 'light') return 'light';
+          return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        function applyTheme(theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+          var btn = document.getElementById('themeToggleButton');
+          if (btn) btn.textContent = theme === 'dark' ? '🌙' : '☀️';
+        }
+        applyTheme(getEffectiveTheme());
+        document.addEventListener('DOMContentLoaded', function() {
+          var btn = document.getElementById('themeToggleButton');
+          if (btn) {
+            applyTheme(getEffectiveTheme());
+            btn.addEventListener('click', function() {
+              var current = getEffectiveTheme();
+              var next = current === 'dark' ? 'light' : 'dark';
+              localStorage.setItem(THEME_KEY, next);
+              applyTheme(next);
+            });
+          }
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="topbar-brand">
+          <h1>{heading ?? title}</h1>
+        </div>
+        <NavTabs active={active} />
+        <div class="actions">
+          <button class="icon-button" id="themeToggleButton" type="button" title="切换暗色/亮色模式">☀️</button>
+          <slot name="actions" />
+        </div>
+      </header>
+      <main class="workspace">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

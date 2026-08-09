@@ -1,12 +1,12 @@
 # Unified GPU + LLM Table
 
-一个零依赖的静态参数工作台，包含硬件对比页、大模型统计页、AI Agent 工具页、模型 × 工具关联表和模型 × 硬件关联表：
+基于 Astro + TypeScript 的参数工作台，包含硬件对比页、大模型统计页、AI Agent 工具页、模型 × 工具关联表和模型 × 硬件关联表：
 
-- `index.html`：GPU / FPGA / ASIC / CPU 参数、价格与能效对比。
-- `models.html`：LLM 价格、上下文、评测与核验状态宽表。
-- `agent-tools.html`：AI IDE、vibe coding CLI、云端 coding agent、IDE 插件的接入方式、能力、价格与核验状态宽表。
-- `model-tools.html`：模型在各 Agent 工具中的接入方式、价格消耗口径、能力适配与评价的稀疏关联表。
-- `model-hardware.html`：可自托管模型在各加速硬件上的部署方式、量化精度、显存需求与适配评分的稀疏关联表。
+- `/`（`index.html`）：GPU / FPGA / ASIC / CPU 参数、价格与能效对比。
+- `/models.html`：LLM 价格、上下文、评测与核验状态宽表。
+- `/agent-tools.html`：AI IDE、vibe coding CLI、云端 coding agent、IDE 插件的接入方式、能力、价格与核验状态宽表。
+- `/model-tools.html`：模型在各 Agent 工具中的接入方式、价格消耗口径、能力适配与评价的稀疏关联表。
+- `/model-hardware.html`：可自托管模型在各加速硬件上的部署方式、量化精度、显存需求与适配评分的稀疏关联表。
 
 ## 功能
 
@@ -17,24 +17,31 @@
 - 列设置：显示或隐藏任意字段。
 - 价格更新：支持粘贴 JSON，或读取 `data/prices.json`。
 - 数据导入/导出：用 JSON 合并 GPU 数据，按 `id` 覆盖。
-- 本地持久化：导入和价格更新会保存到浏览器 `localStorage`。数据带种子版本号（`src/app.js` 的 `SEED_VERSION`），修改 `data/gpus.json` 种子数据后递增该值，旧缓存会被丢弃并重新加载最新种子。
+- 本地持久化：导入和价格更新会保存到浏览器 `localStorage`。数据带种子版本号（`src/islands/FlatTable.ts` 的 `GPU_SEED_VERSION`），修改 `data/gpus.json` 种子数据后递增该值，旧缓存会被丢弃并重新加载最新种子。
 
 ## 本地使用
 
-直接打开 `index.html`、`models.html`、`agent-tools.html`、`model-tools.html` 或 `model-hardware.html` 即可使用。若要测试 `data/prices.json` / `data/models.json` / `data/agent-tools.json` / `data/model-tools.json` / `data/model-hardware.json` 的读取，请用任意静态服务器启动：
+需要 Node.js ≥ 22.12.0。
 
 ```bash
-python3 -m http.server 4173
+npm install
+npm run dev
 ```
 
-然后访问：
+然后访问 `http://localhost:4321`。
 
-```text
-http://localhost:4173/index.html
-http://localhost:4173/models.html
-http://localhost:4173/agent-tools.html
-http://localhost:4173/model-tools.html
-http://localhost:4173/model-hardware.html
+构建静态产物：
+
+```bash
+npm run build
+```
+
+产物输出在 `dist/` 目录，可直接部署到 GitHub Pages、Cloudflare Pages、Netlify 等静态托管平台。
+
+类型检查：
+
+```bash
+npm run check
 ```
 
 ## LLM 数据核验
@@ -69,7 +76,7 @@ Windows 下把 `python3` 换成 `python`、路径分隔符换成 `\` 即可。�
 
 需要在线核验官方页面字符串时再加 `--online`。如果页面文本不够结构化，可显式增加 `--deepseek`；脚本只从 `.env` 读取 `DEEPSEEK_API_KEY`，不会把 key 写入源码或输出。旧的 Node 校验脚本已弃用。
 
-`data/model-fields.json` 定义 LLM 表格字段、默认显示列和厂商链接，`src/models.js` 只负责加载配置和渲染。
+`data/model-fields.json` 定义 LLM 表格字段、默认显示列和厂商链接，`src/islands/FlatTable.ts` 负责加载配置和渲染。
 
 ## Agent 工具数据核验
 
@@ -113,7 +120,7 @@ Agent 工具页当前约定：
 
 ## 部署
 
-这是静态站点，可直接部署到 GitHub Pages、Cloudflare Pages、Netlify、Vercel 或公司内网静态服务器。将整个目录发布即可。
+GitHub Pages 自动部署已配置在 `.github/workflows/deploy.yml`：推送 `main` 分支后，CI 会运行 Python 数据验证 → Node 类型检查 → Astro 构建，将 `dist/` 部署到 Pages。
 
 ## 后续可接的价格源
 

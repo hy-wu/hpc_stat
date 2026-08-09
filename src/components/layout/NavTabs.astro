@@ -1,0 +1,25 @@
+---
+interface Props {
+  active: string;
+}
+const { active } = Astro.props;
+
+const tabs = [
+  { href: "index.html", label: "并行计算", id: "gpu" },
+  { href: "models.html", label: "大模型", id: "models" },
+  { href: "agent-tools.html", label: "Agent 工具", id: "agent-tools" },
+  { href: "model-tools.html", label: "模型 × 工具", id: "model-tools" },
+  { href: "model-hardware.html", label: "模型 × 硬件", id: "model-hardware" },
+];
+---
+
+<nav class="nav-tabs">
+  {tabs.map((tab) => (
+    <a
+      href={tab.href}
+      class:list={["nav-link", { active: tab.id === active }]}
+    >
+      {tab.label}
+    </a>
+  ))}
+</nav>
