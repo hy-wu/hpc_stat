@@ -5,6 +5,8 @@
  */
 export {};
 
+import { dataUrl } from "../lib/data-url";
+
 function q<T extends HTMLElement>(id: string): T | null {
   return document.getElementById(id) as T | null;
 }
@@ -55,7 +57,7 @@ async function loadLocalPrices() {
   const result = q("priceResult");
   if (!payload || !result) return;
   try {
-    const response = await fetch(`data/prices.json?ts=${Date.now()}`);
+    const response = await fetch(`${dataUrl("prices.json")}?ts=${Date.now()}`);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     payload.value = JSON.stringify(data, null, 2);

@@ -51,7 +51,7 @@ export function renderColumnPicker(
         .map((item) => {
           const bar =
             item.coveragePercent != null
-              ? `<div class="cp-bar" style="width:${item.coveragePercent}%;background:${item.coverageColor ?? ""}"></div>`
+              ? `<div class="cp-bar" style="width:${item.coveragePercent}%;--coverage-color:${item.coverageColor ?? "var(--accent)"}"></div>`
               : "";
           const count = item.countLabel
             ? `<span class="column-count">${escapeHtml(item.countLabel)}</span>`

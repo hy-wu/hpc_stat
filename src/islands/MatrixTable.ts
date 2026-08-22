@@ -3,6 +3,7 @@
  * Shared island for model-tools and model-hardware pages.
  */
 import { getNestedValue, uniqueValues, average } from "../lib/format";
+import { dataUrl } from "../lib/data-url";
 import { matchesRules, matchesGlobalSearch, matchesArrayFilter } from "../lib/filter";
 import { renderRules } from "../lib/rules-ui";
 import { renderColumnPicker as renderColumnPickerUI, syncColumnPickerState } from "../lib/column-picker";
@@ -91,7 +92,7 @@ function getPageConfig(pageId: string): MatrixPageConfig {
 function modelToolsConfig(): MatrixPageConfig {
   return {
     pageId: "model-tools",
-    dataUrl: "data/model-tools.json",
+    dataUrl: dataUrl("model-tools.json"),
     colKeyField: "toolName",
     colLabel: "工具",
     sortOptions: [
@@ -154,7 +155,7 @@ function modelToolsConfig(): MatrixPageConfig {
 function modelHardwareConfig(): MatrixPageConfig {
   return {
     pageId: "model-hardware",
-    dataUrl: "data/model-hardware.json",
+    dataUrl: dataUrl("model-hardware.json"),
     colKeyField: "gpuName",
     colLabel: "硬件",
     sortOptions: [

@@ -9,3 +9,4 @@ dist/
 .astro/
 public/data/
 .qoder/
+.DS_Store

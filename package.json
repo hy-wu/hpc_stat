@@ -8,13 +8,15 @@
     "dev": "node scripts/sync-public-data.mjs && astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check && tsc --noEmit"
+    "check": "astro check && tsc --noEmit",
+    "model-bridge": "node scripts/model-access-bridge.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "astro": "^5.18.2"
+    "astro": "^7.2.0",
+    "chart.js": "^4.5.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",

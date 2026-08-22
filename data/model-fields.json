@@ -2211,6 +2211,82 @@
       "visible": true
     },
     {
+      "key": "pricing.paratera.in",
+      "label": "Paratera In (¥/M)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true,
+      "source": "https://www.paratera.com/"
+    },
+    {
+      "key": "pricing.paratera.hit",
+      "label": "Paratera Hit (¥/M)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.paratera.out",
+      "label": "Paratera Out (¥/M)",
+      "type": "number",
+      "visible": true,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "pricing.paratera.cacheOutput",
+      "label": "Paratera Cache Out (¥/M)",
+      "type": "number",
+      "visible": false,
+      "heatmap": true,
+      "inverseHeatmap": true
+    },
+    {
+      "key": "handDescription",
+      "label": "Paratera 简介",
+      "type": "text",
+      "visible": false
+    },
+    {
+      "key": "handUseCases",
+      "label": "Paratera 适用场景",
+      "type": "text",
+      "visible": false
+    },
+    {
+      "key": "handModelId",
+      "label": "Paratera 模型 ID",
+      "type": "text",
+      "visible": false
+    },
+    {
+      "key": "handRpmTpm",
+      "label": "Paratera RPM/TPM",
+      "type": "text",
+      "visible": false
+    },
+    {
+      "key": "handPublishedAt",
+      "label": "Paratera 发布日期",
+      "type": "date",
+      "visible": false
+    },
+    {
+      "key": "handTags",
+      "label": "Paratera 标签",
+      "type": "tag-list",
+      "visible": false,
+      "tagGroup": "performance"
+    },
+    {
+      "key": "handRawTags",
+      "label": "Paratera 原始标签",
+      "type": "text",
+      "visible": false
+    },
+    {
       "key": "evals.caisiElo",
       "label": "CAISI Elo",
       "type": "number",

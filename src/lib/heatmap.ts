@@ -8,15 +8,32 @@ export interface HeatStat {
   max: number;
 }
 
-/** Green-yellow-red gradient: 0 % → red, 50 % → yellow, 100 % → green. */
 export function getHeatmapColor(percent: number): string {
-  if (percent < 50)
-    return `rgba(255, ${Math.floor(255 * (percent / 50))}, 0, 0.2)`;
-  return `rgba(${Math.floor(255 * (1 - (percent - 50) / 50))}, 255, 0, 0.2)`;
+  const value = Math.max(0, Math.min(100, percent));
+  if (value < 50) {
+    return `rgba(255, ${Math.floor(255 * (value / 50))}, 0, 0.28)`;
+  }
+  return `rgba(${Math.floor(255 * (1 - (value - 50) / 50))}, 255, 0, 0.28)`;
+}
+
+/** Normalize a value to a visual score in the 0–100 range. */
+export function getHeatmapPercent(
+  value: number,
+  stat: HeatStat,
+  inverse = false,
+): number {
+  if (stat.max === stat.min) return 100;
+  const raw = ((value - stat.min) / (stat.max - stat.min)) * 100;
+  const bounded = Math.max(0, Math.min(100, raw));
+  return inverse ? 100 - bounded : bounded;
 }
 
 import type { FieldDef } from "../types/fields";
-import { isUsableNumber } from "./format";
+import { getNestedValue, isUsableNumber } from "./format";
+
+export function shouldHeatmapField(field: FieldDef): boolean {
+  return field.heatmap === true || field.type === "number" || field.type === "date";
+}
 
 /** Compute min/max for each heatmap-enabled column across the given rows. */
 export function computeColumnStats<T>(
@@ -25,16 +42,16 @@ export function computeColumnStats<T>(
 ): Record<string, HeatStat | null> {
   const stats: Record<string, HeatStat | null> = {};
   for (const field of fields) {
-    if (!field.heatmap) continue;
+    if (!shouldHeatmapField(field)) continue;
     let values: number[];
     if (field.type === "date") {
       values = rows
-        .map((r) => (r as Record<string, unknown>)[field.key])
+        .map((r) => getNestedValue(r, field.key))
         .filter((v) => v && !isNaN(new Date(v as string).getTime()))
         .map((v) => new Date(v as string).getTime());
     } else {
       values = rows
-        .map((r) => (r as Record<string, unknown>)[field.key])
+        .map((r) => getNestedValue(r, field.key))
         .filter(isUsableNumber)
         .map(Number);
     }

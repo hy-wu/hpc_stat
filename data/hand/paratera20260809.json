@@ -579,5 +579,928 @@
       "文本"
     ],
     "rawTags": "文本"
+  },
+  {
+    "name": "Qwen3.5-397B-A17B",
+    "pricing": {
+      "input": 3,
+      "output": 18,
+      "hit": 0.3,
+      "cacheOutput": 18,
+      "cacheStorage": "限时免费"
+    },
+    "description": "Qwen3.5系列原生视觉语言模型，在语言理解、逻辑推理、代码生成、智能体任务、图像理解、视频理解、图形用户界面（GUI）等多种任务中，均展现出卓越性能。",
+    "useCases": "逻辑推理、代码生成、智能体任务、视觉理解、图形用户界面（GUI）。",
+    "modelId": "Qwen3.5-397B-A17B",
+    "contextLength": "256K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2026-03-12 16:00:00",
+    "tags": [
+      "文本"
+    ],
+    "rawTags": "文本"
+  },
+  {
+    "name": "DeepSeek-V3.1-Terminus",
+    "pricing": {
+      "input": 4,
+      "output": 12,
+      "hit": 0.5
+    },
+    "description": "DeepSeek-V3.1-Terminus在保持deepseek v3.1 模型原有全部能力的同时，解决了用户反馈的关键问题，包括： - 语言一致性：显著减少中英文混合输出，消除异常字符出现 - 智能体性能：进一步优化代码智能体和搜索智能体的功能表现",
+    "useCases": "超复杂问题求解、智能体应用、软件工程、工具调用",
+    "modelId": "DeepSeek-V3.1-Terminus",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-09-23 16:00:00",
+    "tags": []
+  },
+  {
+    "name": "Doubao-Seedream-4.0",
+    "pricing": {
+      "perImage": 0.2
+    },
+    "description": "Seedream 4.0 是基于领先架构的SOTA级多模态图像创作模型，其生成美感、指令遵循、结构完整度、主体保持一致性处于世界头部水平。模型采用同一套架构实现文生图与编辑能力的统一，原生支持文本 、单图和多图输入，并能通过对提示词的深度推理，自动适配最优的图像比例尺寸与生成数量，可一次性连续输出最多 15 张内容关联的图像，支持 4K 超高清输出。",
+    "useCases": "文生图、图生图、组图",
+    "modelId": "Doubao-Seedream-4.0",
+    "contextLength": "-",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-12-04 16:00:00",
+    "tags": []
+  },
+  {
+    "name": "DeepSeek-V3.1",
+    "pricing": {
+      "input": 4,
+      "output": 12,
+      "hit": 0.5
+    },
+    "description": "DeepSeek-V3.1是深度求索全新推出的混合推理模型，支持思考与非思考两种推理模式，支持更高的思考效率和更强的Agent能力。",
+    "useCases": "超复杂问题求解、智能体应用、软件工程、工具调用",
+    "modelId": "DeepSeek-V3.1",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-09-11 16:00:00",
+    "tags": [
+      "MoE",
+      "Agent能力"
+    ],
+    "rawTags": "MoEAgent能力128K"
+  },
+  {
+    "name": "GLM-4.6V",
+    "pricing": {
+      "input": 2.29,
+      "output": 6.86,
+      "hit": 0.5,
+      "cacheStorage": "限时免费"
+    },
+    "description": "首次在模型架构中将 Function Call（工具调用）能力原生融入视觉模型，打通从「视觉感知」到「可执行行动（Action）」的链路，为真实业务场景中的多模态 Agent 提供统一的技术底座",
+    "useCases": "视觉理解、视频理解、文档/复杂图表问答",
+    "modelId": "GLM-4.6V",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-12-24 09:00:00",
+    "tags": [
+      "长上下文"
+    ],
+    "rawTags": "长上下文200K"
+  },
+  {
+    "name": "DeepSeek-R1-0528",
+    "pricing": {
+      "input": 4,
+      "output": 16,
+      "hit": 1,
+      "cacheStorage": "￥0.0256/百万Tokens/小时"
+    },
+    "description": "0528最新版本，在数学、编程与通用逻辑等多个基准测评中取得了当前国内所有模型中首屈一指的优异成绩，并且在整体表现上已接近其他国际顶尖模型，如 o3 与 Gemini-2.5-Pro。",
+    "useCases": "超复杂的问题求解、统计分析、表格处理、代码辅助、办公会议、基因组分析、商业分析等。提供分析推理过程，性能卓越，适用于对准确性和性能要求极高的企业与科研单位。",
+    "modelId": "DeepSeek-R1-0528",
+    "contextLength": "64K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-05-30 16:00:00",
+    "tags": [
+      "最新版本",
+      "深度思考"
+    ],
+    "rawTags": "最新版本深度思考671B"
+  },
+  {
+    "name": "Qwen-Long",
+    "pricing": {
+      "input": 0.71,
+      "output": 2.86
+    },
+    "description": "通义千问针对超长上下文处理场景的大语言模型，支持中文、英文等不同语言输入，支持最长1000万tokens（约1500万字或1.5万页文档）的超长上下文对话。",
+    "useCases": "超长上下文",
+    "modelId": "Qwen-Long",
+    "contextLength": "10000K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-11-07 16:00:00",
+    "tags": [],
+    "rawTags": "10M"
+  },
+  {
+    "name": "Baichuan-M2-128K",
+    "pricing": {
+      "input": 2,
+      "output": 20
+    },
+    "description": "开源医疗增强大模型Baichuan-M2，是目前全球最强开源医疗模型，且在数学、指令遵循、写作等通用能力上表现突出。在HealthBench医疗健康评测中，Baichuan-M2以60.1的高分，反超OpenAI 最新开源模型gpt-oss120b（得分57.6），优于众多前沿闭源模型，是目前最接近GPT-5医疗能力的开源模型 。",
+    "useCases": "医疗领域复杂问题、常规通用能力（数学、指令遵循、写作）",
+    "modelId": "Baichuan-M2-128K",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-10-10 09:00:00",
+    "tags": []
+  },
+  {
+    "name": "DeepSeek-OCR",
+    "pricing": {
+      "input": 0.3,
+      "output": 1.2
+    },
+    "description": "DeepSeek推出的视觉语言模型，旨在探索视觉-文本压缩边界，支持将长文本渲染为高压缩比图像，实现10倍无损压缩时OCR准确率达97%，20倍压缩率下仍保有约60%准确率。",
+    "useCases": "文档识别、图像转文本",
+    "modelId": "DeepSeek-OCR",
+    "contextLength": "8K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-11-18 16:00:00",
+    "tags": [
+      "视觉语言"
+    ],
+    "rawTags": "视觉语言"
+  },
+  {
+    "name": "DeepSeek-V3.2-Instruct",
+    "pricing": {
+      "input": 2,
+      "output": 3,
+      "hit": 0.2,
+      "cacheStorage": "限时免费"
+    },
+    "description": "DeepSeek-V3.2为非思考版本，不支持开启思考。",
+    "useCases": "非思考、超复杂问题求解、智能体应用、软件工程、工具调用",
+    "modelId": "DeepSeek-V3.2-Instruct",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-11-18 16:00:00",
+    "tags": [],
+    "rawTags": "128K"
+  },
+  {
+    "name": "DeepSeek-V3.2-Thinking",
+    "pricing": {
+      "input": 2,
+      "output": 3,
+      "hit": 0.2
+    },
+    "description": "DeepSeek-V3.2-Thinking为思考版本，不支持关闭思考。",
+    "useCases": "思考、超复杂问题求解、智能体应用、软件工程、工具调用",
+    "modelId": "DeepSeek-V3.2-Thinking",
+    "contextLength": "160K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-11-18 16:00:00",
+    "tags": [],
+    "rawTags": "160K"
+  },
+  {
+    "name": "Baichuan-M2",
+    "pricing": {
+      "input": 0.5,
+      "output": 0.5
+    },
+    "description": "开源医疗增强大模型Baichuan-M2，是目前全球最强开源医疗模型，且在数学、指令遵循、写作等通用能力上表现突出。在HealthBench医疗健康评测中，Baichuan-M2以60.1的高分，反超OpenAI 最新开源模型gpt-oss120b（得分57.6），优于众多前沿闭源模型，是目前最接近GPT-5医疗能力的开源模型 。",
+    "useCases": "医疗领域复杂问题、常规通用能力（数学、指令遵循、写作）",
+    "modelId": "Baichuan-M2",
+    "contextLength": "32K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-08-14 16:00:00",
+    "tags": []
+  },
+  {
+    "name": "GLM-4.6",
+    "pricing": {
+      "input": 3.5,
+      "output": 16,
+      "hit": 1,
+      "cacheStorage": "限时免费"
+    },
+    "description": "GLM-4.6 是智谱最新的旗舰模型，其总参数量 355B，激活参数 32B，上下文提升至 200K。在编程、推理、搜索、写作、智能体应用等核心能力均完成对 GLM-4.5 的超越。",
+    "useCases": "编程、推理、搜索、写作、智能体应用",
+    "modelId": "GLM-4.6",
+    "contextLength": "200K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-10-10 09:00:00",
+    "tags": [
+      "长上下文"
+    ],
+    "rawTags": "长上下文200K"
+  },
+  {
+    "name": "GLM-4.5V",
+    "pricing": {
+      "input": 4.57,
+      "output": 13.71,
+      "hit": 0.91,
+      "cacheOutput": "限时免费",
+      "cacheStorage": "限时免费"
+    },
+    "description": "GLM-4.5V 是智谱新一代基于 MOE 架构的视觉推理模型，以106B的总参数量和12B激活参数量，在各类基准测试中达到全球同级别开源多模态模型 SOTA，涵盖图像、视频、文档理解及 GUI 任务等常见任务。",
+    "useCases": "前端复刻、Grounding、GUI Agent、复杂长文档解读、图形识别与推理、视频理解",
+    "modelId": "GLM-4.5V",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-08-26 16:00:00",
+    "tags": [],
+    "rawTags": "128K"
+  },
+  {
+    "name": "GLM-4.5-X",
+    "pricing": {
+      "input": 14,
+      "output": 37,
+      "hit": 4,
+      "cacheStorage": "限时免费"
+    },
+    "description": "GLM-4.5-X 为 GLM-4.5 的极速版，在性能强劲的同时，生成速度可达 100 tokens/秒。",
+    "useCases": "工具调用、网页浏览、软件工程、前端编程、智能体应用",
+    "modelId": "GLM-4.5-X",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-08-14 16:00:00",
+    "tags": [
+      "极速版"
+    ],
+    "rawTags": "极速版"
+  },
+  {
+    "name": "GLM-4.5-AirX",
+    "pricing": {
+      "input": 4.57,
+      "output": 18.29,
+      "hit": 2,
+      "cacheStorage": "限时免费"
+    },
+    "description": "GLM-4.5-AirX 为 GLM-4.5-Air 的极速版，响应速度更快，专为大规模高速度需求打造。",
+    "useCases": "工具调用、网页浏览、软件工程、前端编程、智能体应用",
+    "modelId": "GLM-4.5-AirX",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-08-14 16:00:00",
+    "tags": [
+      "轻量级",
+      "极速响应"
+    ],
+    "rawTags": "轻量级极速响应"
+  },
+  {
+    "name": "GLM-4.5",
+    "pricing": {
+      "input": 3.5,
+      "output": 14,
+      "hit": 1,
+      "cacheStorage": "限时免费"
+    },
+    "description": "GLM-4.5 是一款专为智能体应用打造的基础模型，使用了混合专家（Mixture-of-Experts）架构。在工具调用、网页浏览、软件工程、前端编程领域进行了深度优化，支持无缝接入 Claude。",
+    "useCases": "工具调用、网页浏览、软件工程、前端编程、智能体应用",
+    "modelId": "GLM-4.5",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-07-30 10:00:00",
+    "tags": [
+      "智能体应用"
+    ],
+    "rawTags": "智能体应用"
+  },
+  {
+    "name": "GLM-4.5-Air",
+    "pricing": {
+      "input": 1,
+      "output": 6,
+      "hit": 0.28,
+      "cacheStorage": "限时免费"
+    },
+    "description": "GLM-4.5-Air 为 GLM-4.5 的轻量版，兼顾性能与性价比，可灵活切换混合思考模型。",
+    "useCases": "工具调用、网页浏览、软件工程、前端编程、智能体应用",
+    "modelId": "GLM-4.5-Air",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-07-30 10:00:00",
+    "tags": [
+      "智能体应用",
+      "高性价比",
+      "轻量级"
+    ],
+    "rawTags": "智能体应用高性价比轻量级"
+  },
+  {
+    "name": "GLM-4.5-Flash",
+    "pricing": {
+      "free": "限时免费"
+    },
+    "description": "GLM-4.5-Flash为GLM-4.5 的免费版本，推理、代码、智能体等任务表现出色。",
+    "useCases": "工具调用、网页浏览、软件工程、前端编程、智能体应用",
+    "modelId": "GLM-4.5-Flash",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-07-30 10:00:00",
+    "tags": [
+      "免费体验"
+    ],
+    "rawTags": "免费体验"
+  },
+  {
+    "name": "GLM-4-Flash",
+    "pricing": {
+      "free": "限时免费"
+    },
+    "description": "GLM-4-Flash是一款免费且好用的语言模型，适用于智能问答、摘要生成和文本数据处理等多种应用场景。该模型适用简单任务，速度快且价格0负担。",
+    "useCases": "简单问答，自动纠错，摘要综述等。",
+    "modelId": "GLM-4-Flash",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-03-14 09:00:00",
+    "tags": [
+      "免费调用"
+    ],
+    "rawTags": "免费调用"
+  },
+  {
+    "name": "GLM-4V-Flash",
+    "pricing": {
+      "free": "限时免费"
+    },
+    "description": "免费且强大的图像理解模型，在图像识别、图像问答和图像推理任务等场景上展现出了良好的效果。无论是专业分析还是日常使用，glm-4v-flash都是您的理想选择。",
+    "useCases": "图像识别、图像问答、图像推理任务。",
+    "modelId": "GLM-4V-Flash",
+    "contextLength": "4K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-03-27 15:00:00",
+    "tags": [
+      "图片理解"
+    ],
+    "rawTags": "图片理解"
+  },
+  {
+    "name": "GLM-CogView3-Flash",
+    "pricing": {
+      "free": "限时免费"
+    },
+    "description": "免费的图像生成模型，能够根据您的指令生成美学评分更高的图像。无论是艺术创作、设计参考还是娱乐用途，cogview-3-flash都能满足您的需求。",
+    "useCases": "图像生成",
+    "modelId": "GLM-CogView3-Flash",
+    "contextLength": "-",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-03-27 15:00:00",
+    "tags": [
+      "图像生成"
+    ],
+    "rawTags": "图像生成"
+  },
+  {
+    "name": "GLM-Z1-Flash",
+    "pricing": {
+      "free": "限时免费"
+    },
+    "description": "完全免费的推理模型服务，让每个人都能轻松使用AI。",
+    "useCases": "复杂推理、数学、编程",
+    "modelId": "GLM-Z1-Flash",
+    "contextLength": "32K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-04-15 15:00:00",
+    "tags": [
+      "免费调用"
+    ],
+    "rawTags": "免费调用"
+  },
+  {
+    "name": "MiniMax-M2",
+    "pricing": {
+      "input": 2.1,
+      "output": 8.4
+    },
+    "description": "MiniMax专为Agent和代码调用而优化的新一代模型，在端到端开发工作流中表现卓越，能出色规划并稳定执行复杂工具调用任务。通过2300亿总参数和100亿高效激活参数，实现智能、速度与成本的最佳平衡。",
+    "useCases": "Agent调用、编程",
+    "modelId": "MiniMax-M2",
+    "contextLength": "200K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-11-07 16:00:00",
+    "tags": [
+      "Agent能力"
+    ],
+    "rawTags": "Agent能力200K"
+  },
+  {
+    "name": "MiniMax-M1-80k",
+    "pricing": {
+      "input": 4,
+      "output": 16
+    },
+    "description": "MiniMax-M1，世界上首个开源的大规模混合架构的推理模型，支持目前业内最高的100万上下文的输入，以及业内最长的8万Token的推理输出。",
+    "useCases": "长文本处理",
+    "modelId": "MiniMax-M1-80k",
+    "contextLength": "10000K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-07-03 18:00:00",
+    "tags": [
+      "长文本处理"
+    ],
+    "rawTags": "长文本处理"
+  },
+  {
+    "name": "ERNIE-4.5-Turbo-32K",
+    "pricing": {
+      "input": 1.14,
+      "output": 4.57,
+      "cacheStorage": "限时免费"
+    },
+    "description": "文心4.5 Turbo在去幻觉、逻辑推理和代码能力等方面有着明显增强。",
+    "useCases": "复杂语义理解、数学推理。",
+    "modelId": "ERNIE-4.5-Turbo-32K",
+    "contextLength": "32K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-06-30 18:00:00",
+    "tags": [],
+    "rawTags": "32K"
+  },
+  {
+    "name": "ERNIE-4.5-Turbo-128K",
+    "pricing": {
+      "input": 1.14,
+      "output": 4.57,
+      "cacheStorage": "限时免费"
+    },
+    "description": "更好的满足多轮长历史对话处理、长文档理解问答任务。",
+    "useCases": "复杂语义理解、文档理解、数学推理。",
+    "modelId": "ERNIE-4.5-Turbo-128K",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-06-30 18:00:00",
+    "tags": [],
+    "rawTags": "128K"
+  },
+  {
+    "name": "ERNIE-4.5-Turbo-VL-32K",
+    "pricing": {
+      "input": 4.29,
+      "output": 12.86
+    },
+    "description": "文心一言大模型全新版本，图片理解、创作、翻译、代码等能力显著提升，首次支持32K上下文长度，首Token时延显著降低。",
+    "useCases": "图文营销文案、视频脚本设计.",
+    "modelId": "ERNIE-4.5-Turbo-VL-32K",
+    "contextLength": "32K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-06-30 18:00:00",
+    "tags": [],
+    "rawTags": "32K"
+  },
+  {
+    "name": "GLM-Z1-Air",
+    "pricing": {
+      "input": 0.5,
+      "output": 0.5
+    },
+    "description": "专为数理与逻辑推理优化的模型，在对齐阶段深度优化了通用能力，具备更强的泛化能力与速度表现。",
+    "useCases": "高性价比，适合高频调用场景；复杂推理、数学、编程",
+    "modelId": "GLM-Z1-Air",
+    "contextLength": "32K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-04-15 15:00:00",
+    "tags": [
+      "高性价比"
+    ],
+    "rawTags": "高性价比"
+  },
+  {
+    "name": "GLM-Z1-AirX",
+    "pricing": {
+      "input": 5,
+      "output": 5
+    },
+    "description": "国内最快推理模型，推理速度高达200 tokens/s。",
+    "useCases": "复杂推理、数学、编程",
+    "modelId": "GLM-Z1-AirX",
+    "contextLength": "32K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-04-15 15:00:00",
+    "tags": [
+      "极速推理"
+    ],
+    "rawTags": "极速推理"
+  },
+  {
+    "name": "DeepSeek-V3-250324",
+    "pricing": {
+      "input": 2,
+      "output": 8,
+      "hit": 0.5,
+      "cacheStorage": "￥0.0256/百万Tokens/小时"
+    },
+    "description": "DeepSeek-V3-0324 模型升级，推理能力显著提升，数学、代码评测超越 GPT-4.5；HTML 前端任务的代码可用性更高，视觉效果更美观、富有设计感；中文写作质量优化，长文本创作能力增强；搜索场景报告生成更精准。",
+    "useCases": "论文润色、信息检索、文本摘要、翻译、客户服务、法务助手等",
+    "modelId": "DeepSeek-V3-250324",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-03-27 15:00:00",
+    "tags": [
+      "MoE"
+    ],
+    "rawTags": "MoE671B128K"
+  },
+  {
+    "name": "DeepSeek-R1",
+    "pricing": {
+      "input": 4,
+      "output": 16,
+      "hit": 1,
+      "cacheStorage": "￥0.0256/百万Tokens/小时"
+    },
+    "description": "DeepSeek-R1 是一款强化学习（RL）驱动的推理模型，解决了模型中的重复性和可读性问题。在 RL 之前，DeepSeek-R1 引入了冷启动数据，进一步优化了推理性能。它在数学、代码和推理任务中与 OpenAI-o1 表现相当，并且通过精心设计的训练方法，提升了整体效果。",
+    "useCases": "超复杂的问题求解，统计分析，表格处理，代码辅助，办公会议，基因组分析，商业分析等。提供分析推理过程，性能卓越，适用于对准确性和性能要求极高的企业与科研单位。",
+    "modelId": "DeepSeek-R1",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-02-27 22:54:11",
+    "tags": [
+      "推理模型",
+      "MoE"
+    ],
+    "rawTags": "推理模型MoE671B128K"
+  },
+  {
+    "name": "GLM-4V",
+    "pricing": {
+      "input": 50,
+      "output": 50
+    },
+    "description": "GLM-4V 实现了视觉语言特征的深度融合，支持视觉问答、图像字幕、视觉定位、复杂目标检测等各类图像理解任务。",
+    "useCases": "视觉问答、图像字幕、视觉定位、复杂目标检测等各类图像理解任务。",
+    "modelId": "GLM-4V",
+    "contextLength": "8K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-03-27 15:00:00",
+    "tags": [
+      "图片理解"
+    ],
+    "rawTags": "图片理解"
+  },
+  {
+    "name": "GLM-4V-Plus-0111",
+    "pricing": {
+      "input": 4,
+      "output": 4
+    },
+    "description": "采用原生可变分辨率技术，在问答能力的基础上，能够适应更多的视频长度和视频分辨率。",
+    "useCases": "图像理解、视频理解",
+    "modelId": "GLM-4V-Plus-0111",
+    "contextLength": "8K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-03-27 15:00:00",
+    "tags": [
+      "视觉能力",
+      "图片理解",
+      "视频理解"
+    ],
+    "rawTags": "视觉能力图片理解视频理解"
+  },
+  {
+    "name": "GLM-Embedding-2",
+    "pricing": {
+      "input": 0.5,
+      "output": 0.5
+    },
+    "description": "文本向量模型，将输入的文本信息进行向量化表示，以便于结合向量数据库为大模型提供外部知识库，提高大模型推理的准确性。支持1024向量维度。",
+    "useCases": "语义检索增强、聚类、主题建模、分类",
+    "modelId": "GLM-Embedding-2",
+    "contextLength": "8K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-03-27 15:00:00",
+    "tags": [
+      "文本向量化"
+    ],
+    "rawTags": "文本向量化"
+  },
+  {
+    "name": "GLM-Embedding-3",
+    "pricing": {
+      "input": 0.5,
+      "output": 0.5
+    },
+    "description": "文本向量模型，将输入的文本信息进行向量化表示，以便于结合向量数据库为大模型提供外部知识库。该模型支持自定义向量维度，建议选择256、512、1024或2048维度。",
+    "useCases": "语义检索增强、聚类、主题建模、分类",
+    "modelId": "GLM-Embedding-3",
+    "contextLength": "8K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-03-27 15:00:00",
+    "tags": [
+      "文本向量化"
+    ],
+    "rawTags": "文本向量化"
+  },
+  {
+    "name": "GLM-4-Plus",
+    "pricing": {
+      "input": 5,
+      "output": 5
+    },
+    "description": "GLM-4-Plus 使用了大量模型辅助构造高质量合成数据以提升模型性能，利用PPO有效提升模型推理（数学、代码算法题等）表现，更好反映人类偏好。在各项性能指标上，GLM-4-Plus 已达到与 GPT-4o 等第一梯队模型持平的水平。",
+    "useCases": "广告文案，新闻稿件，在线教育，智能客服等。",
+    "modelId": "GLM-4-Plus",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-03-14 09:00:00",
+    "tags": [
+      "推理模型",
+      "高智能",
+      "旗舰"
+    ],
+    "rawTags": "推理模型高智能旗舰"
+  },
+  {
+    "name": "GLM-4-Air",
+    "pricing": {
+      "input": 0.5,
+      "output": 0.5
+    },
+    "description": "GLM-4-Air作为在推理能力和价格之间最平衡的模型，是性价比最高的模型版本。综合性能接近GLM-4，速度快，价格实惠。",
+    "useCases": "长篇写作，多语言翻译，文档分析，图像解析，快速开发等。",
+    "modelId": "GLM-4-Air",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-03-14 09:00:00",
+    "tags": [
+      "推理模型",
+      "高性价比"
+    ],
+    "rawTags": "推理模型高性价比"
+  },
+  {
+    "name": "GLM-4-Long",
+    "pricing": {
+      "input": 1,
+      "output": 1
+    },
+    "description": "GLM-4-Long模型支持 1 M Tokens 上下文，专为处理超长文本和记忆型任务设计。",
+    "useCases": "法律文件，技术手册，聊天机器人，情感陪伴，长篇小说等。",
+    "modelId": "GLM-4-Long",
+    "contextLength": "1M",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-03-14 09:00:00",
+    "tags": [
+      "推理模型",
+      "超长输入"
+    ],
+    "rawTags": "推理模型超长输入"
+  },
+  {
+    "name": "GLM-4-AirX",
+    "pricing": {
+      "input": 10,
+      "output": 10
+    },
+    "description": "GLM-4-AirX具有超快的推理速度和强大的推理效果,和GLM-4-Air相比效果不变，推理速度达到其2.6倍，是GLM-4-Air的高性能版本。该模型适用于对推理速度有高要求的场景。",
+    "useCases": "长篇写作，多语言翻译，文档分析，图像解析，快速开发等。",
+    "modelId": "GLM-4-AirX",
+    "contextLength": "8K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-03-14 09:00:00",
+    "tags": [
+      "推理模型",
+      "极速推理"
+    ],
+    "rawTags": "推理模型极速推理"
+  },
+  {
+    "name": "GLM-4-FlashX",
+    "pricing": {
+      "input": 0.1,
+      "output": 0.1
+    },
+    "description": "GLM-4-Flash模型的增强版本，具有超快推理速度和实惠的价格。",
+    "useCases": "新闻快报，实时创作，实时翻译，快速搜索等。",
+    "modelId": "GLM-4-FlashX",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-03-14 09:00:00",
+    "tags": [
+      "推理模型",
+      "高速低价"
+    ],
+    "rawTags": "推理模型高速低价"
+  },
+  {
+    "name": "GLM-4-9B",
+    "pricing": {
+      "input": 2,
+      "output": 2
+    },
+    "description": "GLM-4-9B-Chat 是智谱 AI 推出的 GLM-4 系列预训练模型中的开源版本。该模型在语义、数学、推理、代码和知识等多个方面表现出色。除了支持多轮推理外，GLM-4-9B-Chat 还具备网页浏览、代码执行、自定义工具调用（Function Call）和长文本推理等高级功能。模型支持 26 种语言，包括中文、英文、日语、韩语和德语等。在多项基准测试中，GLM-4-9B-Chat 展现了优秀的性能，如 AlignBench-v2、MT-Bench、MMLU 和 C-Eval 等。该模型支持最大 128K 的上下文长度，适用于学术研究和商业应用",
+    "useCases": "长篇写作，多语言翻译，文档分析，网页搜索，图像解析等。",
+    "modelId": "GLM-4-9B",
+    "contextLength": "128K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-02-28 09:17:46",
+    "tags": [],
+    "rawTags": "9B128K"
+  },
+  {
+    "name": "GLM-Rerank",
+    "pricing": {
+      "input": 0.8,
+      "output": 0.8
+    },
+    "description": "Rerank模型用于文本重排序，通过接收用户的查询文本及候选文本列表，使用模型计算候选文本与查询文本的相关性得分并返回分数。",
+    "useCases": "智能问答、信息检索",
+    "modelId": "GLM-Rerank",
+    "contextLength": "4K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-05-12 15:00:00",
+    "tags": [
+      "文本重排序"
+    ],
+    "rawTags": "文本重排序"
+  },
+  {
+    "name": "MiniMax-T2V-01",
+    "pricing": {
+      "perImage": 3
+    },
+    "description": "支持生成720p分辨率，25fps的高清视频，具备电影感的镜头移动效果，能根据文本描述快速创造出具有视觉冲击力的内容。最长6s。",
+    "useCases": "文生视频、艺术创作、广告",
+    "modelId": "MiniMax-T2V-01",
+    "contextLength": "-",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-04-23 18:00:00",
+    "tags": [
+      "文生视频"
+    ],
+    "rawTags": "文生视频"
+  },
+  {
+    "name": "MiniMax-T2V-01-Director",
+    "pricing": {
+      "perImage": 3
+    },
+    "description": "导演级文生视频模型，镜头语言更精准遵循创作灵感，呈现电影般叙事节奏。",
+    "useCases": "文生视频、专业运镜视频、精细创作",
+    "modelId": "MiniMax-T2V-01-Director",
+    "contextLength": "-",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-04-23 18:00:00",
+    "tags": [
+      "文生视频",
+      "镜头控制"
+    ],
+    "rawTags": "文生视频镜头控制"
+  },
+  {
+    "name": "MiniMax-I2V-01-Director",
+    "pricing": {
+      "perImage": 3
+    },
+    "description": "导演级图生模型，镜头语言更精准遵循创作灵感，呈现电影般叙事节奏。",
+    "useCases": "图生视频、专业运镜视频、精细创作",
+    "modelId": "MiniMax-I2V-01-Director",
+    "contextLength": "-",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-04-23 18:00:00",
+    "tags": [
+      "图生视频",
+      "镜头控制"
+    ],
+    "rawTags": "图生视频镜头控制"
+  },
+  {
+    "name": "MiniMax-I2V-01-Live",
+    "pricing": {
+      "perImage": 3
+    },
+    "description": "I2V-01-Live专门对二次元效果进行了优化，无论是卡通、漫画还是手绘风格，都能被赋予生动的动态效果。",
+    "useCases": "广告、动画、教育、游戏、动漫、二次元",
+    "modelId": "MiniMax-I2V-01-Live",
+    "contextLength": "-",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-04-23 18:00:00",
+    "tags": [
+      "图生视频",
+      "二次元效果优化"
+    ],
+    "rawTags": "图生视频二次元效果优化"
+  },
+  {
+    "name": "MiniMax-I2V-01",
+    "pricing": {
+      "perImage": 3
+    },
+    "description": "支持生成720p分辨率，25fps的高清视频，具备电影感的镜头移动效果，能根据文本描述快速创造出具有视觉冲击力的内容。最长6s。",
+    "useCases": "图生视频、艺术创作、广告",
+    "modelId": "MiniMax-I2V-01",
+    "contextLength": "-",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-04-23 18:00:00",
+    "tags": [
+      "图生视频"
+    ],
+    "rawTags": "图生视频"
+  },
+  {
+    "name": "MiniMax-Text-01",
+    "pricing": {
+      "input": 1,
+      "output": 8
+    },
+    "description": "MiniMax的文本模型，支持超长文本处理，上下文长度1000K。",
+    "useCases": "长文本处理",
+    "modelId": "MiniMax-Text-01",
+    "contextLength": "10000K",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-06-30 18:00:00",
+    "tags": [
+      "长文本处理"
+    ],
+    "rawTags": "长文本处理"
+  },
+  {
+    "name": "Doubao-Seedream-3.0-T2I",
+    "pricing": {
+      "perImage": 0.37
+    },
+    "description": "Seedream 3.0 是一款支持原生高分辨率的中英双语图像生成基础模型，综合能力媲美GPT-4o，处于世界第一梯队。支持原生 2K 分辨率输出；响应速度更快；小字生成更准确，文本排版效果增强；指令遵循能力强，美感&结构提升，保真度和细节表现较好。",
+    "useCases": "电商配图、海报设计、游戏场景生成、动漫人物设计、影视制作",
+    "modelId": "Doubao-Seedream-3.0-T2I",
+    "contextLength": "-",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-10-20 10:00:00",
+    "tags": [
+      "文生图",
+      "综合能力强"
+    ],
+    "rawTags": "文生图综合能力强"
+  },
+  {
+    "name": "Doubao-Seedance-1.0-Pro",
+    "pricing": {
+      "input": "限时免费",
+      "output": "限时免费",
+      "videoOutput": 15
+    },
+    "description": "Doubao视频生成模型由字节跳动 Seed 团队研发，支持文字与图片输入，可生成运动流畅、细节丰富、风格多样且具备影视级美感的视频。支持文生视频、首帧图生视频，分辨率支持480P、1080P，时长支持5s、10s，帧率24fps。",
+    "useCases": "文生视频、图生视频",
+    "modelId": "Doubao-Seedance-1.0-Pro",
+    "contextLength": "-",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-09-10 10:00:00",
+    "tags": []
+  },
+  {
+    "name": "WanX2.1-T2I-Plus",
+    "pricing": {
+      "perImage": 0.29
+    },
+    "description": "通义万相文生图模型，wanx2.1-t2i-plus生成图像细节更丰富。",
+    "useCases": "创意设计、人像生成",
+    "modelId": "WanX2.1-T2I-Plus",
+    "contextLength": "-",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-09-10 10:00:00",
+    "tags": [
+      "文生图",
+      "性能出众"
+    ],
+    "rawTags": "文生图性能出众"
+  },
+  {
+    "name": "WanX2.1-T2I-Turbo",
+    "pricing": {
+      "perImage": 0.2
+    },
+    "description": "通义万相文生图模型，wanx2.1-t2i-turbo生成速度快、效果全面、综合性价比高。",
+    "useCases": "创意设计、人像生成",
+    "modelId": "WanX2.1-T2I-Turbo",
+    "contextLength": "-",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-09-10 10:00:00",
+    "tags": [
+      "文生图",
+      "高性价比"
+    ],
+    "rawTags": "文生图高性价比"
+  },
+  {
+    "name": "MiniMax-Hailuo-02",
+    "pricing": {
+      "1080P_6s": 4,
+      "768P_6s": 2.29,
+      "768P_10s": 4.57
+    },
+    "description": "MiniMax最新一代视频生成模型，性能全面升级，更强指令遵循，视频更长更高清",
+    "useCases": "文生视频、图生视频",
+    "modelId": "MiniMax-Hailuo-02",
+    "contextLength": "-",
+    "rpmTpm": "2.5K/500W",
+    "publishedAt": "2025-09-10 10:00:00",
+    "tags": []
   }
 ]

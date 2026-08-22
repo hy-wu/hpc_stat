@@ -10,10 +10,11 @@ import {
 import { matchesRules, matchesGlobalSearch, matchesArrayFilter, type RuleEngineOptions } from "../lib/filter";
 import { renderRules } from "../lib/rules-ui";
 import { renderColumnPicker, syncColumnPickerState, type ColumnPickerItem } from "../lib/column-picker";
-import { getHeatmapColor, computeColumnStats, type HeatStat } from "../lib/heatmap";
+import { getHeatmapColor, getHeatmapPercent, shouldHeatmapField, computeColumnStats, type HeatStat } from "../lib/heatmap";
 import { buildCsv, downloadBlob } from "../lib/csv";
 import { escapeHtml, escapeAttr } from "../lib/escape";
 import { getToneClass } from "../matrix/cells";
+import { dataUrl } from "../lib/data-url";
 import type { FieldDef } from "../types/fields";
 import type { FilterRule, SortDirection } from "../types/common";
 
@@ -44,6 +45,8 @@ interface FlatPageConfig {
   summaryMetrics: SummaryMetric[];
   /** Transform raw data rows after loading. */
   enrichRows?: (rows: Record<string, unknown>[]) => Record<string, unknown>[];
+  /** Override which columns are visible on first load / reset after data coverage is known. */
+  chooseDefaultVisibleFields?: (fields: FieldDef[], rows: Record<string, unknown>[]) => string[];
   /** Compute data coverage for column picker bars (models page). */
   computeFieldCoverage?: (field: FieldDef, rows: Record<string, unknown>[]) => { percent: number; count: number } | null;
   /** Page-specific cell rendering hooks (called before generic rendering). */
@@ -104,26 +107,32 @@ async function init() {
   state.sortDirection = state.config.defaultSortDirection;
 
   try {
-    const [dataRes, fieldsRes] = await Promise.all([
+    const [dataRes, fieldsRes, handDataRes] = await Promise.all([
       fetch(state.config.dataUrl),
       fetch(state.config.fieldsUrl),
+      pageId === "models" ? fetch(dataUrl("hand/paratera20260809.json")) : Promise.resolve(null),
     ]);
     const rawData = await dataRes.json();
     const fieldConfig = await fieldsRes.json();
 
     state.fieldDefs = fieldConfig.fieldDefs ?? fieldConfig.fields ?? [];
     state.vendorLinks = fieldConfig.vendorLinks ?? {};
-    state.defaultVisible = new Set(
-      state.fieldDefs.filter((f: FieldDef) => f.visible).map((f: FieldDef) => f.key),
-    );
-    state.visibleColumns = new Set(state.defaultVisible);
 
     let rows = rawData as Record<string, unknown>[];
+    if (handDataRes) {
+      const handData = await handDataRes.json() as Record<string, unknown>[];
+      rows = mergeHandModelRows(rows, handData);
+    }
     if (state.config.enrichRows) {
       rows = state.config.enrichRows(rows);
     }
     state.allRows = rows;
     state.rows = rows;
+    const defaultVisibleKeys = state.config.chooseDefaultVisibleFields
+      ? state.config.chooseDefaultVisibleFields(state.fieldDefs, rows)
+      : state.fieldDefs.filter((f: FieldDef) => f.visible).map((f: FieldDef) => f.key);
+    state.defaultVisible = new Set(defaultVisibleKeys);
+    state.visibleColumns = new Set(state.defaultVisible);
 
     renderFilterDropdowns();
     renderColumnPickerUI();
@@ -267,8 +276,8 @@ function gpuPostInit(ctx: PostInitContext) {
 function gpuConfig(): FlatPageConfig {
   return {
     pageId: "gpu",
-    dataUrl: "data/gpus.json",
-    fieldsUrl: "data/gpu-fields.json",
+    dataUrl: dataUrl("gpus.json"),
+    fieldsUrl: dataUrl("gpu-fields.json"),
     ruleEngineOptions: { invalidNumberBehavior: "reject" },
     defaultSortField: "vramGB",
     defaultSortDirection: "desc",
@@ -316,8 +325,8 @@ function gpuConfig(): FlatPageConfig {
 function modelsConfig(): FlatPageConfig {
   return {
     pageId: "models",
-    dataUrl: "data/models.json",
-    fieldsUrl: "data/model-fields.json",
+    dataUrl: dataUrl("models.json"),
+    fieldsUrl: dataUrl("model-fields.json"),
     ruleEngineOptions: { invalidNumberBehavior: "reject" },
     defaultSortField: "name",
     defaultSortDirection: "asc",
@@ -360,6 +369,7 @@ function modelsConfig(): FlatPageConfig {
         if (!model.pricing) model.pricing = {};
         return model;
       }),
+    chooseDefaultVisibleFields: chooseModelDefaultVisibleFields,
     computeFieldCoverage: (field, rows) => {
       let count = 0;
       for (const row of rows) {
@@ -382,7 +392,7 @@ function modelsConfig(): FlatPageConfig {
         return `<span class="${cls}" title="${verified ? escapeAttr(sourceTitle) : "未核验"}">${escapeHtml(String(val))}x</span>`;
       }
       if (field.key === "arenaElo" && field.heatmap && stat && typeof val === "number") {
-        const lengthPercent = ((val - stat.min) / (stat.max - stat.min || 1)) * 100;
+        const lengthPercent = getHeatmapPercent(val, stat);
         const src = row.arenaEloSource as string | undefined;
         const note = row.arenaEloNote as string | undefined;
         const checkedAt = row.arenaEloCheckedAt as string | undefined;
@@ -391,11 +401,216 @@ function modelsConfig(): FlatPageConfig {
         if (checkedAt) tooltipText += `\n📅 ${checkedAt}`;
         const staleIndicator = note ? " stale" : "";
         const color = getHeatmapColor(lengthPercent);
-        return `<div class="heatmap-container mini ${cls}${staleIndicator}" title="${escapeAttr(tooltipText)}"><div class="heatmap-bar" style="width: ${lengthPercent}%; background: ${color}"></div><span class="heatmap-value">${escapeHtml(String(val))}</span></div>`;
+        return `<div class="heatmap-container mini ${cls}${staleIndicator}" title="${escapeAttr(tooltipText)}"><div class="heatmap-bar" style="width:${lengthPercent.toFixed(1)}%;background:${color}"></div><span class="heatmap-value">${escapeHtml(String(val))}</span></div>`;
       }
       return null;
     },
   };
+}
+
+const HAND_MODEL_SOURCE = "Paratera 模型目录（手工整理，2026-08-09）";
+
+function mergeHandModelRows(
+  models: Record<string, unknown>[],
+  handModels: Record<string, unknown>[],
+): Record<string, unknown>[] {
+  const merged = models.map((model) => ({ ...model }));
+  const byIdentity = new Map<string, Record<string, unknown>>();
+  for (const model of merged) {
+    for (const value of [model.id, model.name]) {
+      if (typeof value === "string" && value.trim()) byIdentity.set(normalizeModelIdentity(value), model);
+    }
+  }
+
+  for (const hand of handModels) {
+    const handRow = normalizeHandModel(hand);
+    const existing = [hand.modelId, hand.name]
+      .filter((value): value is string => typeof value === "string" && value.trim().length > 0)
+      .map(normalizeModelIdentity)
+      .map((key) => byIdentity.get(key))
+      .find(Boolean);
+
+    if (existing) {
+      mergeHandFields(existing, handRow);
+      continue;
+    }
+
+    merged.push(handRow);
+    for (const value of [handRow.id, handRow.name]) {
+      if (typeof value === "string" && value.trim()) byIdentity.set(normalizeModelIdentity(value), handRow);
+    }
+  }
+  return merged;
+}
+
+function normalizeModelIdentity(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, "");
+}
+
+function normalizeHandModel(hand: Record<string, unknown>): Record<string, unknown> {
+  const name = String(hand.name ?? hand.modelId ?? "Unknown model");
+  const pricing = (hand.pricing ?? {}) as Record<string, unknown>;
+  const tags = Array.isArray(hand.tags) ? hand.tags.filter(Boolean) : [];
+  const verifiedFields = [
+    "name", "vendor", "contextWindow", "pricing.paratera.in", "pricing.paratera.hit",
+    "pricing.paratera.out", "pricing.paratera.cacheOutput", "handDescription", "handUseCases",
+    "handModelId", "handRpmTpm", "handPublishedAt", "handTags", "handRawTags",
+  ].filter((key) => {
+    const value = getNestedValue({
+      ...hand,
+      vendor: inferHandVendor(name),
+      contextWindow: hand.contextLength,
+      handDescription: hand.description,
+      handUseCases: hand.useCases,
+      handModelId: hand.modelId,
+      handRpmTpm: hand.rpmTpm,
+      handPublishedAt: hand.publishedAt,
+      handTags: tags,
+      handRawTags: hand.rawTags,
+      pricing: { paratera: { in: pricing.input, hit: pricing.hit, out: pricing.output, cacheOutput: pricing.cacheOutput } },
+    }, key);
+    return value !== undefined && value !== null && value !== "";
+  });
+
+  return {
+    id: `paratera-${slugifyModelName(String(hand.modelId ?? name))}`,
+    name,
+    vendor: inferHandVendor(name),
+    multimodal: inferHandModality(tags),
+    contextWindow: hand.contextLength,
+    handDescription: hand.description,
+    handUseCases: hand.useCases,
+    handModelId: hand.modelId,
+    handRpmTpm: hand.rpmTpm,
+    handPublishedAt: hand.publishedAt,
+    handTags: tags,
+    handRawTags: hand.rawTags,
+    pricing: {
+      paratera: {
+        in: pricing.input,
+        hit: pricing.hit,
+        out: pricing.output,
+        cacheOutput: pricing.cacheOutput,
+        cacheStorage: pricing.cacheStorage,
+      },
+    },
+    verification: {
+      status: "partial",
+      checkedAt: "2026-08-09",
+      verifiedFields,
+      sources: [{ label: HAND_MODEL_SOURCE, url: "" }],
+    },
+  };
+}
+
+const MODEL_ALWAYS_VISIBLE = new Set([
+  "name",
+  "vendor",
+  "multimodal",
+  "contextWindow",
+]);
+
+const MODEL_DENSE_DEFAULT_FIELDS = new Set([
+  "pricing.openrouter.in",
+  "pricing.openrouter.hit",
+  "pricing.openrouter.out",
+  "pricing.official.in",
+  "pricing.official.out",
+  "pricing.paratera.in",
+  "pricing.paratera.hit",
+  "pricing.paratera.out",
+  "arenaElo",
+  "llmStats.codeArena",
+  "evals.gpqaDiamond",
+  "llmStats.reasoning",
+  "llmStats.speed",
+  "llmStats.coding",
+  "llmStats.math",
+  "evals.hle",
+  "evals.reportedSweBenchVerified",
+  "evals.aime2025",
+  "evals.browseComp",
+]);
+
+function chooseModelDefaultVisibleFields(
+  fields: FieldDef[],
+  rows: Record<string, unknown>[],
+): string[] {
+  return fields
+    .filter((field) => {
+      if (!field.visible) return false;
+      if (MODEL_ALWAYS_VISIBLE.has(field.key)) return true;
+      if (!MODEL_DENSE_DEFAULT_FIELDS.has(field.key)) return false;
+      const coverage = computeFieldValueCount(field, rows);
+      return rows.length > 0 && coverage / rows.length >= 0.16;
+    })
+    .map((field) => field.key);
+}
+
+function computeFieldValueCount(field: FieldDef, rows: Record<string, unknown>[]): number {
+  let count = 0;
+  for (const row of rows) {
+    const value = getNestedValue(row, field.key);
+    if (value === null || value === undefined || value === "") continue;
+    if (Array.isArray(value) && value.length === 0) continue;
+    count++;
+  }
+  return count;
+}
+
+function mergeHandFields(existing: Record<string, unknown>, handRow: Record<string, unknown>): void {
+  for (const key of [
+    "contextWindow", "handDescription", "handUseCases", "handModelId", "handRpmTpm",
+    "handPublishedAt", "handTags", "handRawTags",
+  ]) {
+    if (handRow[key] !== undefined && handRow[key] !== null && handRow[key] !== "") {
+      if (existing[key] === undefined || existing[key] === null || existing[key] === "") existing[key] = handRow[key];
+    }
+  }
+
+  const existingPricing = (existing.pricing ?? {}) as Record<string, unknown>;
+  const handPricing = (handRow.pricing ?? {}) as Record<string, unknown>;
+  existing.pricing = { ...existingPricing, paratera: handPricing.paratera };
+
+  const existingVerification = (existing.verification ?? {}) as Record<string, unknown>;
+  const handVerification = (handRow.verification ?? {}) as Record<string, unknown>;
+  existing.verification = {
+    ...existingVerification,
+    sources: [
+      ...(Array.isArray(existingVerification.sources) ? existingVerification.sources : []),
+      ...(Array.isArray(handVerification.sources) ? handVerification.sources : []),
+    ],
+    verifiedFields: [
+      ...new Set([
+        ...(Array.isArray(existingVerification.verifiedFields) ? existingVerification.verifiedFields : []),
+        ...(Array.isArray(handVerification.verifiedFields) ? handVerification.verifiedFields : []),
+      ]),
+    ],
+  };
+}
+
+function slugifyModelName(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "model";
+}
+
+function inferHandVendor(name: string): string {
+  if (/^qwen/i.test(name)) return "Qwen";
+  if (/^deepseek/i.test(name)) return "DeepSeek";
+  if (/^kimi/i.test(name)) return "Moonshot AI";
+  if (/^glm/i.test(name)) return "Zhipu AI";
+  if (/^doubao|^wanx/i.test(name)) return "ByteDance";
+  if (/^intern/i.test(name)) return "Shanghai AI Lab";
+  if (/^minimax/i.test(name)) return "MiniMax";
+  if (/^ernie/i.test(name)) return "Baidu";
+  if (/^paddleocr/i.test(name)) return "Baidu";
+  if (/^baichuan/i.test(name)) return "Baichuan";
+  return "Paratera catalog";
+}
+
+function inferHandModality(tags: string[]): string {
+  if (tags.some((tag) => /图像|视频|视觉|全模态|图片|图生|文生/.test(tag))) return "Vision";
+  if (tags.some((tag) => /语音|OCR|向量|重排序/.test(tag))) return "Specialized";
+  return "Text";
 }
 
 function agentToolsConfig(): FlatPageConfig {
@@ -409,8 +624,8 @@ function agentToolsConfig(): FlatPageConfig {
   ];
   return {
     pageId: "agent-tools",
-    dataUrl: "data/agent-tools.json",
-    fieldsUrl: "data/agent-tool-fields.json",
+    dataUrl: dataUrl("agent-tools.json"),
+    fieldsUrl: dataUrl("agent-tool-fields.json"),
     ruleEngineOptions: { invalidNumberBehavior: "reject", booleanSupport: true },
     defaultSortField: "name",
     defaultSortDirection: "asc",
@@ -458,25 +673,62 @@ function agentToolsConfig(): FlatPageConfig {
       const verified = ctx.isVerified(row, field.key);
       const cls = verified ? "verified-cell" : "unverified-cell";
       const sourceTitle = ctx.getSourceTitle(row);
-      const logoUrl = getNestedValue(row, "logoUrl") as string | undefined;
-      const officialUrl = getNestedValue(row, "officialUrl") as string | undefined;
-      const imgSrc = logoUrl || (officialUrl ? getFaviconUrl(officialUrl) : "");
-      const logoHtml = imgSrc
-        ? `<img class="tool-logo" src="${escapeAttr(imgSrc)}" alt="" loading="lazy" onerror="this.style.display='none'">`
-        : "";
+      const logoUrl = getCompanyLogoUrl(
+        getValueAsText(val),
+        getNestedValue(row, "logoUrl"),
+        getNestedValue(row, "officialUrl"),
+      );
+      const logoHtml = renderCompanyMark(logoUrl);
       return `<span class="tool-name-cell ${cls}" title="${verified ? escapeAttr(sourceTitle) : "未核验"}">${logoHtml}${escapeHtml(getValueAsText(val))}</span>`;
     },
   };
 }
 
-// ---- Favicon helper (agent-tools logos) ----
-function getFaviconUrl(url: string): string {
+const KNOWN_VENDOR_LOGOS: Record<string, string> = {
+  nvidia: "https://www.nvidia.com/favicon.ico",
+  amd: "https://www.amd.com/favicon.ico",
+  intel: "https://www.intel.com/favicon.ico",
+  apple: "https://www.apple.com/favicon.ico",
+  google: "https://www.google.com/favicon.ico",
+  huawei: "https://consumer.huawei.com/favicon.ico",
+  cambricon: "https://www.cambricon.com/favicon.ico",
+  moorethreads: "https://www.mthreads.com/favicon.ico",
+  bitmain: "https://www.bitmain.com/favicon.ico",
+  xilinx: "https://www.xilinx.com/favicon.ico",
+  openai: "https://openai.com/favicon.ico",
+  anthropic: "https://www.anthropic.com/favicon.ico",
+  deepseek: "https://www.deepseek.com/favicon.ico",
+  "moonshot-ai": "https://www.moonshot.cn/favicon.ico",
+  "zhipu-ai": "https://z.ai/favicon.ico",
+  alibaba: "https://www.alibabacloud.com/favicon.ico",
+  github: "https://github.com/favicon.ico",
+};
+
+function companySlug(value: string): string {
+  return value.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+function getFaviconUrl(url: unknown): string {
   try {
-    const domain = new URL(url).hostname;
-    return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=32`;
+    const parsed = new URL(String(url));
+    if (!["http:", "https:"].includes(parsed.protocol)) return "";
+    return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(parsed.hostname)}&sz=64`;
   } catch {
     return "";
   }
+}
+
+function getCompanyLogoUrl(name: string, explicitUrl?: unknown, officialUrl?: unknown): string {
+  const explicit = sanitizeUrl(explicitUrl);
+  if (explicit) return explicit;
+  const known = KNOWN_VENDOR_LOGOS[companySlug(name)];
+  if (known) return known;
+  return getFaviconUrl(officialUrl);
+}
+
+function renderCompanyMark(imageUrl: string): string {
+  if (!imageUrl) return "";
+  return `<span class="company-mark" aria-hidden="true"><img class="tool-logo" src="${escapeAttr(imageUrl)}" alt="" loading="lazy" onerror="this.closest('.company-mark')?.remove()"></span>`;
 }
 
 // ---- Verification label helper ----
@@ -558,18 +810,26 @@ function sortRows(rows: Record<string, unknown>[]): Record<string, unknown>[] {
   return [...rows].sort((a, b) => {
     const va = getNestedValue(a, state.sortField);
     const vb = getNestedValue(b, state.sortField);
+    const aMissing = isMissingSortValue(va);
+    const bMissing = isMissingSortValue(vb);
+    if (aMissing || bMissing) {
+      if (aMissing !== bMissing) return aMissing ? 1 : -1;
+      return compareTieBreakers(a, b);
+    }
     const result = compareValues(va, vb, field);
-    return state.sortDirection === "asc" ? result : -result;
+    if (result !== 0) return state.sortDirection === "asc" ? result : -result;
+    return compareTieBreakers(a, b);
   });
 }
 
-function compareValues(a: unknown, b: unknown, field?: FieldDef): number {
-  const aMissing = a === null || a === undefined || a === "";
-  const bMissing = b === null || b === undefined || b === "";
-  if (aMissing && bMissing) return 0;
-  if (aMissing) return 1;
-  if (bMissing) return -1;
+function isMissingSortValue(value: unknown): boolean {
+  return value === null
+    || value === undefined
+    || value === ""
+    || (typeof value === "number" && Number.isNaN(value));
+}
 
+function compareValues(a: unknown, b: unknown, field?: FieldDef): number {
   if (field?.type === "number") {
     const na = Number(a);
     const nb = Number(b);
@@ -587,6 +847,13 @@ function compareValues(a: unknown, b: unknown, field?: FieldDef): number {
     if (pa !== null && pb !== null) return pa - pb;
   }
   return sortCollator.compare(String(a), String(b));
+}
+
+function compareTieBreakers(a: Record<string, unknown>, b: Record<string, unknown>): number {
+  return sortCollator.compare(
+    String(a.name ?? a.model ?? a.id ?? ""),
+    String(b.name ?? b.model ?? b.id ?? ""),
+  );
 }
 
 function parseTokenCount(s: string): number | null {
@@ -688,9 +955,10 @@ function formatCell(
   // Vendor with link
   if (field.key === "vendor") {
     const link = ctx.vendorLinks[String(val)];
+    const mark = renderCompanyMark(getCompanyLogoUrl(String(val), "", link));
     return link
-      ? `<a href="${escapeAttr(link)}" target="_blank" class="vendor-link ${cls}" title="${escapeAttr(sourceTitle || "前往官网")}">${escapeHtml(String(val))}</a>`
-      : `<span class="${cls}" title="${escapeAttr(sourceTitle)}">${escapeHtml(String(val))}</span>`;
+      ? `<a href="${escapeAttr(link)}" target="_blank" class="vendor-link company-cell ${cls}" title="${escapeAttr(sourceTitle || "前往官网")}">${mark}${escapeHtml(String(val))}</a>`
+      : `<span class="company-cell ${cls}" title="${escapeAttr(sourceTitle)}">${mark}${escapeHtml(String(val))}</span>`;
   }
 
   // URL type
@@ -730,7 +998,7 @@ function formatCell(
   }
 
   // Heatmap (number or date)
-  if (field.heatmap && stat) {
+  if (shouldHeatmapField(field) && stat) {
     let heatmapNum: number | null = null;
     if (field.type === "date" && val && !isNaN(new Date(String(val)).getTime())) {
       heatmapNum = new Date(String(val)).getTime();
@@ -738,10 +1006,8 @@ function formatCell(
       heatmapNum = Number(val);
     }
     if (heatmapNum !== null) {
-      const range = stat.max - stat.min || 1;
-      const lengthPercent = ((heatmapNum - stat.min) / range) * 100;
-      const colorPercent = field.inverseHeatmap ? 100 - lengthPercent : lengthPercent;
-      const color = getHeatmapColor(colorPercent);
+      const visualPercent = getHeatmapPercent(heatmapNum, stat, field.inverseHeatmap);
+      const color = getHeatmapColor(visualPercent);
       let displayStr: string;
       if (field.type === "date") displayStr = String(val);
       else if (field.key.includes("USD") || field.key === "msrpUSD") displayStr = `$${formatNumber(heatmapNum)}`;
@@ -751,7 +1017,7 @@ function formatCell(
       else if (field.derived) displayStr = heatmapNum < 1 ? heatmapNum.toFixed(4) : heatmapNum.toFixed(3);
       else if (field.displayPrefix) displayStr = `${field.displayPrefix}${formatNumber(heatmapNum)}`;
       else displayStr = formatNumber(heatmapNum);
-      return `<div class="heatmap-container mini ${cls}" title="${escapeAttr(displayStr)}"><div class="heatmap-bar" style="width:${Math.max(0, Math.min(100, lengthPercent)).toFixed(1)}%;background:${color}"></div><span class="heatmap-value">${escapeHtml(displayStr)}</span></div>`;
+      return `<div class="heatmap-container mini ${cls}" title="${escapeAttr(displayStr)}"><div class="heatmap-bar" style="width:${visualPercent.toFixed(1)}%;background:${color}"></div><span class="heatmap-value">${escapeHtml(displayStr)}</span></div>`;
     }
   }
 
@@ -824,8 +1090,7 @@ function renderColumnPickerUI() {
       if (cov) {
         item.coveragePercent = cov.percent;
         item.countLabel = `${cov.count}`;
-        const hue = cov.percent > 66 ? 142 : cov.percent > 33 ? 45 : 0;
-        item.coverageColor = `hsl(${hue}, 60%, 55%)`;
+        item.coverageColor = getHeatmapColor(cov.percent);
       }
     }
     return item;

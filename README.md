@@ -30,6 +30,37 @@ npm run dev
 
 然后访问 `http://localhost:4321`。
 
+### 本机密钥文件接入
+
+`模型接入` 页支持通过本机桥接读取 `~/.secret/meet2ai.env`，而不把 API Key 交给浏览器。一个端点可配置多把 Key；桥接会逐把请求 `/models`，分别显示每把 Key 可访问的模型。该文件可使用以下键名：
+
+```dotenv
+MEET2AI_BASE_URL=https://api.example.com/v1
+MEET2AI_API_KEY_personal=sk-...
+MEET2AI_API_KEY_team=sk-...
+```
+
+也可保留单 Key 格式：`MEET2AI_API_KEY=sk-...`。多 Key 的另一种格式是 `MEET2AI_API_KEYS` JSON 数组，例如 `[{"id":"personal","name":"个人","key":"sk-..."}]`。变量名后缀或 JSON 的 `name` 只用作本地显示名，绝不会返回 Key。
+
+分组标签优先从每把 Key 的模型接口响应中的 `group`、`groups`、`model_group` 或 `metadata.group` 字段读取。标准 OpenAI 兼容的 `/models` 响应通常不包含这些字段；这种情况下页面会明确显示“模型 API 未提供分组”，但仍会显示实际可访问的模型，避免把模型名或 Key 名误判为业务分组。
+
+启动桥接时自行设置一个临时授权令牌；它只用于网页访问本机桥接服务，不是 API Key：
+
+```bash
+MODEL_ACCESS_BRIDGE_TOKEN='your-local-token' npm run model-bridge
+```
+
+默认接受 `http://127.0.0.1:4321` 和 `http://localhost:4321`。若页面运行在其他端口，可显式指定来源和文件路径：
+
+```bash
+MODEL_ACCESS_BRIDGE_TOKEN='your-local-token' \
+MODEL_ACCESS_BRIDGE_ORIGIN='http://127.0.0.1:4325' \
+MODEL_ACCESS_ENV_FILE="$HOME/.secret/meet2ai.env" \
+npm run model-bridge
+```
+
+在“模型接入 -> 本机密钥文件”填入桥接地址和令牌后点击“授权”。桥接服务会顺序探测所有 Key；选择其中一个配置后可再次查询该 Key 的完整模型列表。每次查询都会重新读取 env 文件；它只监听 `127.0.0.1`，不会向网页返回 API Key，也不会写入该文件。
+
 构建静态产物：
 
 ```bash

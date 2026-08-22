@@ -82,9 +82,15 @@ export function sortMatrixRows<C>(
     } else if (field === "modelVendor") {
       result = sortCollator.compare(a.modelVendor, b.modelVendor);
     } else {
-      const va = a.aggregates[field] ?? a.coverage ?? 0;
-      const vb = b.aggregates[field] ?? b.coverage ?? 0;
-      result = (va as number) - (vb as number);
+      const va = field === "coverage" ? a.coverage : a.aggregates[field];
+      const vb = field === "coverage" ? b.coverage : b.aggregates[field];
+      const aMissing = va === null || va === undefined || Number.isNaN(va);
+      const bMissing = vb === null || vb === undefined || Number.isNaN(vb);
+      if (aMissing || bMissing) {
+        if (aMissing !== bMissing) return aMissing ? 1 : -1;
+        return sortCollator.compare(a.modelName, b.modelName);
+      }
+      result = va - vb;
     }
     if (result !== 0) return direction === "asc" ? result : -result;
     return sortCollator.compare(a.modelName, b.modelName);
