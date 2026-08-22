@@ -1,0 +1,363 @@
+{
+ "query": "Radeon Instinct MI60",
+ "result": {
+  "ok": true,
+  "data": {
+   "items": [
+    {
+     "rank": 3,
+     "item_id": "1007330398204",
+     "title": "AMD Radeon Instinct MI 16G显卡 原装正品 成色几乎全新 功能正常 无拆修 适合深度学习 计算服务器 现货",
+     "url": "https://www.goofish.com/item?id=1007330398204&categoryId=126856282",
+     "price": "¥680",
+     "original_price": "累计降价13%",
+     "condition": "几乎全新",
+     "brand": "AMD",
+     "extra": "功能完好无维修",
+     "location": "广东",
+     "badge": "百分百好评"
+    },
+    {
+     "rank": 4,
+     "item_id": "1048081168378",
+     "title": "【专业生产力工具，无锁版，个人ai学习战力天花板】AMD R adeon Instinct MI50，32GB HBM2 ECC显存，1TB/s带宽，支持miniDP 4K高刷输出， Pcie 4.0，稳定无报错。涡轮静音散热，温度低噪音小，长期稳定运行。LM sudio、Deep seek V3-32B、QWEN3.6-35B Q4都能轻松跑，Auto desk、Adobe、Solidwork、3ds max、达芬奇、Pr、图文设计、视频剪辑都没问题，能装Comfyui，AI工作流不爆显存，8k大图轻松出。支持系统：1.MAC OS 全系统完美适配，黑苹果MAC系统免驱直装，插上即用。2、Ubuntu 22 支撑ROCm完美驱动，全功能无报错，满血性能。3、Win Sever2022 / 专业工作站 已刷好双驱动，Radeon VII/Pro专业驱动随心切，miniDP 4K高刷输出正常。AI大模型实测性能：单卡可流畅跑Deepseek、千问、Gemini等主流大模型，35B/36B，约36~60Tonke/s，平均45tonke参数模型无压力，本地深度推理，配置open claw养虾，用本地大模型免费超爽。 双显卡并联轻松跑70B大模型，AI性能实测完胜RTX3090，32G HBM超大高速显存，同价位无对手。 无需担心散热问题，普通全塔机箱轻松安装，已改静音涡轮散热，安装风扇温控拉满，满载核心温度最高不超65℃，日常AI工作稳定在53-57℃，运行噪音仅44-45分贝，日常使用几乎无感，长期高负载运行稳定不掉速。发货前全功能测试、温控实测、GPU-Z截图、大模型运行录屏，所见即所得。 个人服务器升级闲置，功能完好，95新，轻微使用痕迹。售出不退不换，无脑小白/新手勿扰，支持自提，诚心要可小刀，懂AI生产力卡的来。喜欢直接拍，细节可私聊。",
+     "url": "https://www.goofish.com/item?id=1048081168378&categoryId=126856282",
+     "price": "¥2820",
+     "original_price": "",
+     "condition": "轻微使用痕迹",
+     "brand": "AMD",
+     "extra": "功能完好无维修",
+     "location": "浙江",
+     "badge": ""
+    },
+    {
+     "rank": 5,
+     "item_id": "986663452944",
+     "title": "MI50 32G AI训练显卡 全新原箱 全新原箱AMD MI50 32G 运算显卡GPU加速 AI训练显卡深度学习计算卡现货 整箱发货优惠需要多张的，私我mi50背面带芯片的32g显存，已经刷好bios驱动直接驱动总裁，安装完即可开玩利用fancontrornet实现智能启停低负载下就不吵了散热器只拆过上面的盖子，原装石墨烯散热未动，防拆贴也还在性能就是图上这么个分数，吹相当于3070的我是不信，实话实说比3060分高点，但是显存大点价格便宜不少，可以直接AMD官网安装驱动，用来拿来打游戏大显存玩玩4k入门应该会好不少温度稳稳压，打印小风扇或者外挂的顺丰到付！关联：t10 p40 p100 2080ti mi60 v620乌班图22.04.5下一键脚本：2025.04.01：一键执行：curl -L https://vllm.9700001.xyz/install.sh -o install.sh && chmod +x install.sh && bash install.sh使用一键执行无需下载任何文件修复了之前的一些问题，没有测试是否完全解决, 无需像之前下载文件解压等，如果还是出现一些问题可以尝试源作者方案，编译源码与方法参考:https://github.com/Said-Akbar/triton-gcn5 官方没有windows驱动，windows系统使用问题自己到b zhan学习。注意：使用前记得把above 4g打开 关csm需要做好散热！！！另外单独加散热器➕50元一个。专业计算卡，不带视频输出，输出b zhan学习，先研究清楚，会用的再买，售出后不退不换。",
+     "url": "https://www.goofish.com/item?id=986663452944&categoryId=202038701",
+     "price": "¥950",
+     "original_price": "398人想要",
+     "condition": "",
+     "brand": "",
+     "extra": "",
+     "location": "广东",
+     "badge": "百分百好评"
+    },
+    {
+     "rank": 7,
+     "item_id": "1027245671981",
+     "title": "AMD MI60 32g显卡 总共4张 一张3200 比mi 50强20%支持AI训练/深度学习/GPU加速性能强劲 适合设计师、AI开发、渲染等场景功能正常 没修过 没暗病，只卖真心想用的买家。世面上大多数卖这种卡的都是只卖卡 不会帮忙测试。为了让大家买到放心的计算卡 发货前会帮忙测试模型，可以测试deepseek r1 32b windows ollama保证一卡一视频 一码 一token数。到付。不议价 议价已读不回。确认收货，好评 赠送模型学习或其他it互联网学习视频 ，还赠送游戏 发货前测试好，发货后不退不换，防止刀手 另外还有4090散热版的mi50 32g 2080ti22g 300a 1070 8g v100 16g欢迎选购",
+     "url": "https://www.goofish.com/item?id=1027245671981&categoryId=126856282",
+     "price": "¥2900",
+     "original_price": "累计降价300.00元",
+     "condition": "AMD",
+     "brand": "功能完好无维修",
+     "extra": "16GB(不含)-32GB(含)",
+     "location": "北京",
+     "badge": "百分百好评"
+    },
+    {
+     "rank": 8,
+     "item_id": "1068326420164",
+     "title": "AMD Radeon amd mi50 32g显存ai卡 3 60水冷显卡白色三风扇水冷，带扣具，线材齐全成色还可以，功能正常支持自提，价格可聊最好自提，售出不退不换喜欢私聊斥巨资找大佬改的水冷",
+     "url": "https://www.goofish.com/item?id=1068326420164&categoryId=126856282",
+     "price": "¥2630",
+     "original_price": "累计降价270.00元",
+     "condition": "几乎全新",
+     "brand": "AMD",
+     "extra": "功能完好无维修",
+     "location": "上海",
+     "badge": "卖家信用优秀"
+    }
+   ]
+  }
+ },
+ "retries": [
+  {
+   "query": "Radeon Instinct MI60",
+   "result": {
+    "ok": true,
+    "data": {
+     "items": [
+      {
+       "rank": 1,
+       "item_id": "901316919853",
+       "title": "AMD Radeon Instinct MI25 MI50 MI60 mi100显卡运算卡U型超短涡轮散热风扇 本设计为超短设计适合空间长度不足机箱使用，厚度约33mm！ 显卡含风扇及支架总长约1.6cm 支架厚度含风扇3.3CM 风扇套装组装到手与显卡固定安装即可使用！ 组件多少会有瑕疵介...",
+       "url": "https://www.goofish.com/item?id=901316919853&categoryId=126856279",
+       "price": "¥68",
+       "original_price": "11人想要",
+       "condition": "",
+       "brand": "",
+       "extra": "",
+       "location": "广东",
+       "badge": "卖家信用极好"
+      },
+      {
+       "rank": 2,
+       "item_id": "1060996293588",
+       "title": "标2600w电源，实测跑过6张mi50，1800w稳定运行， 成色还可以，有点使用痕迹，功能正常，无拆修，风扇无异响，支持自提，包邮。",
+       "url": "https://www.goofish.com/item?id=1060996293588&categoryId=126914064",
+       "price": "¥120",
+       "original_price": "2人想要",
+       "condition": "轻微使用痕迹",
+       "brand": "功能完好无维修",
+       "extra": "",
+       "location": "辽宁",
+       "badge": "百分百好评"
+      },
+      {
+       "rank": 3,
+       "item_id": "1007330398204",
+       "title": "AMD Radeon Instinct MI 16G显卡 原装正品 成色几乎全新 功能正常 无拆修 适合深度学习 计算服务器 现货",
+       "url": "https://www.goofish.com/item?id=1007330398204&categoryId=126856282",
+       "price": "¥680",
+       "original_price": "累计降价13%",
+       "condition": "几乎全新",
+       "brand": "AMD",
+       "extra": "功能完好无维修",
+       "location": "广东",
+       "badge": "百分百好评"
+      },
+      {
+       "rank": 4,
+       "item_id": "1048081168378",
+       "title": "【专业生产力工具，无锁版，个人ai学习战力天花板】AMD R adeon Instinct MI50，32GB HBM2 ECC显存，1TB/s带宽，支持miniDP 4K高刷输出， Pcie 4.0，稳定无报错。涡轮静音散热，温度低噪音小，长期稳定运行。LM sudio、Deep seek V3-32B、QWEN3.6-35B Q4都能轻松跑，Auto desk、Adobe、Solidwork、3ds max、达芬奇、Pr、图文设计、视频剪辑都没问题，能装Comfyui，AI工作流不爆显存，8k大图轻松出。支持系统：1.MAC OS 全系统完美适配，黑苹果MAC系统免驱直装，插上即用。2、Ubuntu 22 支撑ROCm完美驱动，全功能无报错，满血性能。3、Win Sever2022 / 专业工作站 已刷好双驱动，Radeon VII/Pro专业驱动随心切，miniDP 4K高刷输出正常。AI大模型实测性能：单卡可流畅跑Deepseek、千问、Gemini等主流大模型，35B/36B，约36~60Tonke/s，平均45tonke参数模型无压力，本地深度推理，配置open claw养虾，用本地大模型免费超爽。 双显卡并联轻松跑70B大模型，AI性能实测完胜RTX3090，32G HBM超大高速显存，同价位无对手。 无需担心散热问题，普通全塔机箱轻松安装，已改静音涡轮散热，安装风扇温控拉满，满载核心温度最高不超65℃，日常AI工作稳定在53-57℃，运行噪音仅44-45分贝，日常使用几乎无感，长期高负载运行稳定不掉速。发货前全功能测试、温控实测、GPU-Z截图、大模型运行录屏，所见即所得。 个人服务器升级闲置，功能完好，95新，轻微使用痕迹。售出不退不换，无脑小白/新手勿扰，支持自提，诚心要可小刀，懂AI生产力卡的来。喜欢直接拍，细节可私聊。",
+       "url": "https://www.goofish.com/item?id=1048081168378&categoryId=126856282",
+       "price": "¥2820",
+       "original_price": "",
+       "condition": "轻微使用痕迹",
+       "brand": "AMD",
+       "extra": "功能完好无维修",
+       "location": "浙江",
+       "badge": ""
+      },
+      {
+       "rank": 5,
+       "item_id": "1008400305947",
+       "title": "AMD MI50显卡主动散热风扇改装，淘宝25年10月买的， 原价五十多。直吹款，适合需要主动散热的卡，风扇装上风量大，温度低。尺寸大概27cm，具体看图。成色全新，，功能正常。包邮，喜欢直接拍，细节私聊。",
+       "url": "https://www.goofish.com/item?id=1008400305947&categoryId=126862114",
+       "price": "¥45",
+       "original_price": "购入价9折",
+       "condition": "",
+       "brand": "",
+       "extra": "",
+       "location": "河南",
+       "badge": "卖家信用极好"
+      },
+      {
+       "rank": 6,
+       "item_id": "970410874950",
+       "title": "AMD Instinct MI50/MI60 改装散热器｜N idec 40风扇版 矿卡 计算卡 卡诺基 全网独家定制3D打印散热套件 采用Nidec 90mm高速轴流风扇（4090同款） PWM调速，直插主板4pin风扇接口 亮点： ▪️ 实物建模，严丝合缝，不改原卡结构 ▪...",
+       "url": "https://www.goofish.com/item?id=970410874950&categoryId=126856282",
+       "price": "¥40",
+       "original_price": "¥999",
+       "condition": "",
+       "brand": "",
+       "extra": "",
+       "location": "广东",
+       "badge": ""
+      },
+      {
+       "rank": 7,
+       "item_id": "749074965695",
+       "title": "AMD Radeon Instinct MI25 MI50 MI60显卡散热服务器支架 有多种规格可选 ： 2x4cm风扇支架 3x4cm 4cm 6cm 8cm 9cm 12cm 可双可单风扇自由选择 注：自备风扇 适配 MI25 MI50 MI60 等AMD Radeon Instinct 系...",
+       "url": "https://www.goofish.com/item?id=749074965695&categoryId=126856279",
+       "price": "¥25",
+       "original_price": "¥50",
+       "condition": "",
+       "brand": "",
+       "extra": "",
+       "location": "广东",
+       "badge": "卖家信用极好"
+      },
+      {
+       "rank": 8,
+       "item_id": "749230555052",
+       "title": "AMD Radeon Instinct MI25 MI50 MI60显卡散热服务器支架 有多种规格可选 ： 2x4cm风扇支架 3x4cm 4cm 6cm 8cm 9cm 12cm 可双可单风扇自由选择 注：自备风扇 适配 MI25 MI50 MI60 等AMD Radeon Instinct 系...",
+       "url": "https://www.goofish.com/item?id=749230555052&categoryId=126856279",
+       "price": "¥32",
+       "original_price": "¥100",
+       "condition": "",
+       "brand": "",
+       "extra": "",
+       "location": "广东",
+       "badge": "卖家信用极好"
+      },
+      {
+       "rank": 9,
+       "item_id": "906280586676",
+       "title": "AMD Radeon Instinct MI25 MI50 MI60 Mi100 显卡改装散热风扇组6cm 3D打印多少会有瑕疵介意勿拍效果见图片整供参考！ 显卡含风扇及支架总长约35CM 适配 MI25 MI50 MI60 等AMD Radeon Instinct 系列显卡！",
+       "url": "https://www.goofish.com/item?id=906280586676&categoryId=126856279",
+       "price": "¥58",
+       "original_price": "45人想要",
+       "condition": "",
+       "brand": "",
+       "extra": "",
+       "location": "广东",
+       "badge": "卖家信用极好"
+      },
+      {
+       "rank": 10,
+       "item_id": "725449099036",
+       "title": "AMD Radeon Instinct MI25 MI50 MI60显卡散热服务器双风扇4CM 3D打印多少会有瑕疵介意勿拍效果见图片整供参考！ 显卡含风扇及支架总长约32cm 支架长度3CM「不含风扇」含风扇6CM 适配 MI25 MI50 MI60 等AMD Radeon Instinc...",
+       "url": "https://www.goofish.com/item?id=725449099036&categoryId=126856279",
+       "price": "¥48",
+       "original_price": "134人想要",
+       "condition": "",
+       "brand": "",
+       "extra": "",
+       "location": "广东",
+       "badge": "卖家信用极好"
+      }
+     ],
+     "total": 10,
+     "query": "Radeon Instinct MI60"
+    }
+   }
+  },
+  {
+   "query": "MI60 加速卡",
+   "result": {
+    "ok": true,
+    "data": {
+     "items": [
+      {
+       "rank": 1,
+       "item_id": "1068433562371",
+       "title": "170HX显卡8G变64G魔法，持续更新，需要原作者scri pt的link可拍下捐赠1分获取。不卖硬件，需要专属定制相关服务的另聊。 目前主要是在Linux下, Windows已经在研究，8G的搞成64G 可 稳定运行。 10G的目前只能搞成40G，unlock超过40G会不稳定。后续还将提供有偿在170HX上测试LLM的性能等服务这个型号不建议现在高位接盘，计算能力一般般， 海外行情900 USD左右，应该4000-4500 CNY比较合理英伟达 Nvidia 170HX 8G显存，用软件变成64G可跑大模型，再补电容硬改成PCIe x16 带宽用Ollama跑LLM的速度（以下速度是指2k-16k 上下文的推理，会比较快， 26.2k的OpenClaw, Hermes Agent会明显更慢）Gemma 4 31B Q8，32G的GGUF文件，推理速度18 token/s，推理时显存一共占用53G。Gemma-4-31B-it-UD-Q8_K_XL的推理速度22 t/s，GGUF文件35G，推理时共占用显存57GGemma-4-31B-it-UD-Q8_K_XL + BF16 + MTP 的推理速度46 t/s，GGUF文件35G + 1.2G + 0.5G，推理时共占用显存57GQwen3.6-35B-A3B-UD-Q8_K_XL推理速度57 t/s, GGUF文件38G, 推理时一共占用显存45G目前适合已经有这个卡的做大模型实验、玩AI算力。ai泡沫要崩了，最近nVIDIA要给OpenAI的新数据中心提供融资担保，这是危险信号，卖GPU的要帮助买GPU的借钱才能卖出去。 很多二三四线ai公司不赚钱，一旦清退设备，二级二手市场肯定崩。这型号现在价格炒太高了别去接盘，虽然是64G，但是计算能力一般，是 A100的70%左右，而且架构老了。其他的平替型号，实惠的选择也很多。V100有16G和32G, 32G改好主动散热的约3000-4000。 PG199是32G，还比A100强20%，也有主动散热方案， 8.5k-1w2 CNY吧。 其他还有 2080 改20G、3090、4080、 A100 SXM。其他AMD和Intel显卡也能实现大模型LLM推理，但是相对比较麻烦，稳定性和性能方面也不如nVIDIA的。AMD Mi100, Mi50, Mi60，Intel Arc B60等，也能跑跑中等的、小的精简LLM玩玩的，10G左右的大模型也可以了，而且这类普通游戏显卡、专业卡在市场上流动性好，容易转让AMD 的MI50, MI100 计算卡有32G的, Arc B60 16G或24G, B70是32G， 单卡也可以实现Qwen, Deepseek, Gemma 等精简版本的推理, 双卡还可以跑无损精简版本本地布署时，可以结合Open WebUI等组件，让同一个网段的设备也能访问推理服务，与App上使用ai的体验有些接近。",
+       "url": "https://www.goofish.com/item?id=1068433562371&categoryId=201459411",
+       "price": "¥0.01",
+       "original_price": "累计降价90%",
+       "condition": "",
+       "brand": "",
+       "extra": "",
+       "location": "上海",
+       "badge": "卖家信用极好"
+      },
+      {
+       "rank": 2,
+       "item_id": "1073659778116",
+       "title": "涂涂困咪萌力加速中系列毛绒盲盒 电镀刘海+流沙眼 满配 小蛋糕ESFJ 45元满配 显眼包ESTP 45元仅拆盒确认，保存很好，几乎全新，正品现货主页满60包邮，不满补邮费，支持自提默认不包官瑕，完美主义慎拍，售出不退不换细节图私聊发～",
+       "url": "https://www.goofish.com/item?id=1073659778116&categoryId=201559511",
+       "price": "¥45",
+       "original_price": "",
+       "condition": "",
+       "brand": "",
+       "extra": "",
+       "location": "甘肃",
+       "badge": "百分百好评"
+      },
+      {
+       "rank": 3,
+       "item_id": "1007330398204",
+       "title": "AMD Radeon Instinct MI 16G显卡 原装正品 成色几乎全新 功能正常 无拆修 适合深度学习 计算服务器 现货",
+       "url": "https://www.goofish.com/item?id=1007330398204&categoryId=126856282",
+       "price": "¥680",
+       "original_price": "累计降价13%",
+       "condition": "几乎全新",
+       "brand": "AMD",
+       "extra": "功能完好无维修",
+       "location": "广东",
+       "badge": "百分百好评"
+      },
+      {
+       "rank": 4,
+       "item_id": "1050360642669",
+       "title": "GIGABYTE G893-ZX1-AAX4 8U风冷8卡 MI355X AI训练服务器资料GIGABYTE G893-ZX1-AAX4 展示资料，技嘉8U风冷HPC/AI服务器，搭载8颗AMD Instinct MI355X OAM加速模块。机型定位：8U 风冷 / 双路EPYC 9005/9004 / 8卡MI355X OAM核心参数参考：-GPU：8颗AMD Instinct MI355X OAM，通过PCIe交换芯片PEX89104/PEX89048桥接-CPU：双路EPYC 9005/9004(SP5)，单颗最高500W cTDP-系统内存：24 DIMM DDR5，12通道每CPU，9005最高6400MT/s-存储：前仓8颗2.5寸Gen5 NVMe热插拔(走PEX89104) + 2颗M.2内部插槽-PCIe扩展：PEX89104提供8条FHHL单槽Gen5 x16 + PEX89048提供4条FHHL双槽Gen5 x16-网络：Intel X710-AT2双口10GbE + 前后面板各1路管理网口-供电：6+6 3000W 80-PLUS Titanium冗余，C19电源接口-散热：GPU tray区15颗80mm + PCIe区4颗80mm + 主板区6颗60mm PWM风扇-BMC：ASPEED AST2600，支持GIGABYTE Management Console(HTML5 KVM/传感器监控/风扇策略/电源上限)-物理尺寸：8U，447x351x923mm-安全：1个TPM Header(选配TPM2.0套件CTM012)适用方向：大模型训练微调、生成式AI推理、HPC CAE仿真、企业AI集群、风冷数据中心GPU算力节点说明事项：8U风冷方案无需液冷基础设施改造，适合现有风冷机房直接部署。GIGABYTE提供Launchpad远程测试验证。附件包含官方datasheet和产品多角度图片。",
+       "url": "https://www.goofish.com/item?id=1050360642669&categoryId=126856259",
+       "price": "¥253",
+       "original_price": "6人想要",
+       "condition": "",
+       "brand": "",
+       "extra": "",
+       "location": "上海",
+       "badge": ""
+      },
+      {
+       "rank": 5,
+       "item_id": "986663452944",
+       "title": "MI50 32G AI训练显卡 全新原箱 全新原箱AMD MI50 32G 运算显卡GPU加速 AI训练显卡深度学习计算卡现货 整箱发货优惠需要多张的，私我mi50背面带芯片的32g显存，已经刷好bios驱动直接驱动总裁，安装完即可开玩利用fancontrornet实现智能启停低负载下就不吵了散热器只拆过上面的盖子，原装石墨烯散热未动，防拆贴也还在性能就是图上这么个分数，吹相当于3070的我是不信，实话实说比3060分高点，但是显存大点价格便宜不少，可以直接AMD官网安装驱动，用来拿来打游戏大显存玩玩4k入门应该会好不少温度稳稳压，打印小风扇或者外挂的顺丰到付！关联：t10 p40 p100 2080ti mi60 v620乌班图22.04.5下一键脚本：2025.04.01：一键执行：curl -L https://vllm.9700001.xyz/install.sh -o install.sh && chmod +x install.sh && bash install.sh使用一键执行无需下载任何文件修复了之前的一些问题，没有测试是否完全解决, 无需像之前下载文件解压等，如果还是出现一些问题可以尝试源作者方案，编译源码与方法参考:https://github.com/Said-Akbar/triton-gcn5 官方没有windows驱动，windows系统使用问题自己到b zhan学习。注意：使用前记得把above 4g打开 关csm需要做好散热！！！另外单独加散热器➕50元一个。专业计算卡，不带视频输出，输出b zhan学习，先研究清楚，会用的再买，售出后不退不换。",
+       "url": "https://www.goofish.com/item?id=986663452944&categoryId=202038701",
+       "price": "¥950",
+       "original_price": "398人想要",
+       "condition": "",
+       "brand": "",
+       "extra": "",
+       "location": "广东",
+       "badge": "百分百好评"
+      },
+      {
+       "rank": 6,
+       "item_id": "1048081168378",
+       "title": "【专业生产力工具，无锁版，个人ai学习战力天花板】AMD R adeon Instinct MI50，32GB HBM2 ECC显存，1TB/s带宽，支持miniDP 4K高刷输出， Pcie 4.0，稳定无报错。涡轮静音散热，温度低噪音小，长期稳定运行。LM sudio、Deep seek V3-32B、QWEN3.6-35B Q4都能轻松跑，Auto desk、Adobe、Solidwork、3ds max、达芬奇、Pr、图文设计、视频剪辑都没问题，能装Comfyui，AI工作流不爆显存，8k大图轻松出。支持系统：1.MAC OS 全系统完美适配，黑苹果MAC系统免驱直装，插上即用。2、Ubuntu 22 支撑ROCm完美驱动，全功能无报错，满血性能。3、Win Sever2022 / 专业工作站 已刷好双驱动，Radeon VII/Pro专业驱动随心切，miniDP 4K高刷输出正常。AI大模型实测性能：单卡可流畅跑Deepseek、千问、Gemini等主流大模型，35B/36B，约36~60Tonke/s，平均45tonke参数模型无压力，本地深度推理，配置open claw养虾，用本地大模型免费超爽。 双显卡并联轻松跑70B大模型，AI性能实测完胜RTX3090，32G HBM超大高速显存，同价位无对手。 无需担心散热问题，普通全塔机箱轻松安装，已改静音涡轮散热，安装风扇温控拉满，满载核心温度最高不超65℃，日常AI工作稳定在53-57℃，运行噪音仅44-45分贝，日常使用几乎无感，长期高负载运行稳定不掉速。发货前全功能测试、温控实测、GPU-Z截图、大模型运行录屏，所见即所得。 个人服务器升级闲置，功能完好，95新，轻微使用痕迹。售出不退不换，无脑小白/新手勿扰，支持自提，诚心要可小刀，懂AI生产力卡的来。喜欢直接拍，细节可私聊。",
+       "url": "https://www.goofish.com/item?id=1048081168378&categoryId=126856282",
+       "price": "¥2820",
+       "original_price": "",
+       "condition": "轻微使用痕迹",
+       "brand": "AMD",
+       "extra": "功能完好无维修",
+       "location": "浙江",
+       "badge": ""
+      },
+      {
+       "rank": 7,
+       "item_id": "1027245671981",
+       "title": "AMD MI60 32g显卡 总共4张 一张3200 比mi 50强20%支持AI训练/深度学习/GPU加速性能强劲 适合设计师、AI开发、渲染等场景功能正常 没修过 没暗病，只卖真心想用的买家。世面上大多数卖这种卡的都是只卖卡 不会帮忙测试。为了让大家买到放心的计算卡 发货前会帮忙测试模型，可以测试deepseek r1 32b windows ollama保证一卡一视频 一码 一token数。到付。不议价 议价已读不回。确认收货，好评 赠送模型学习或其他it互联网学习视频 ，还赠送游戏 发货前测试好，发货后不退不换，防止刀手 另外还有4090散热版的mi50 32g 2080ti22g 300a 1070 8g v100 16g欢迎选购",
+       "url": "https://www.goofish.com/item?id=1027245671981&categoryId=126856282",
+       "price": "¥2900",
+       "original_price": "累计降价300.00元",
+       "condition": "AMD",
+       "brand": "功能完好无维修",
+       "extra": "16GB(不含)-32GB(含)",
+       "location": "北京",
+       "badge": "百分百好评"
+      },
+      {
+       "rank": 8,
+       "item_id": "1068326420164",
+       "title": "AMD Radeon amd mi50 32g显存ai卡 3 60水冷显卡白色三风扇水冷，带扣具，线材齐全成色还可以，功能正常支持自提，价格可聊最好自提，售出不退不换喜欢私聊斥巨资找大佬改的水冷",
+       "url": "https://www.goofish.com/item?id=1068326420164&categoryId=126856282",
+       "price": "¥2630",
+       "original_price": "累计降价270.00元",
+       "condition": "几乎全新",
+       "brand": "AMD",
+       "extra": "功能完好无维修",
+       "location": "上海",
+       "badge": "卖家信用优秀"
+      },
+      {
+       "rank": 9,
+       "item_id": "1052230948868",
+       "title": "Supermicro AS-4126GS-NMR-LCC 4U液冷8卡MI355X AI训练节点资料Supermicro AS-4126GS-NMR-LCC 展示资料，超微4U直接液冷GPU服务器，搭载8颗AMD Instinct MI355X加速器(向下兼容MI325X)。机型定位：4U D2C液冷 / 双路EPYC 9005/9004 / 8卡MI355X OAM核心参数参考：-GPU：8颗OAM GPU模块，支持MI355X/MI325X，Infinity Fabric互联-CPU：双路AMD EPYC 9005/9004，最高384核心/768T，500W TDP(液冷)-主板：Super H14DSG-OD-系统内存：24 DIMM DDR5，EPYC 9005最高6400MT/s，最大6TB-存储：前仓8颗2.5寸PCIe5.0 x4 NVMe热插拔 + 2颗M.2 NVMe 22110-PCIe扩展：8条LP PCIe5.0 x16 + 2条FHHL PCIe5.0 x16-网络：双口RJ45 10GbE + 专用BMC 1GbE管理口-供电：4颗(2+2)6600W Titanium Level冗余电源-散热：Direct-to-Chip冷板液冷 + 5颗60mm辅助风扇-BIOS：AMI 64MB SPI Flash EEPROM-安全：TPM 2.0-物理尺寸：4U，174x449x895.4mm(HxWxD)-净重：53kg / 毛重：63.5kg适用方向：大语言模型训练微调、AI推理集群、HPC液冷计算节点、高密度液冷数据中心部署说明事项：LCC后缀标注液冷冷板配置，需配套CDU使用。Supermicro注明液冷系统需现场安装服务。附件包含Supermicro官方产品datasheet及产品图片。具体配置按项目需求沟通确认。",
+       "url": "https://www.goofish.com/item?id=1052230948868&categoryId=126856259",
+       "price": "¥252",
+       "original_price": "2人想要",
+       "condition": "",
+       "brand": "",
+       "extra": "",
+       "location": "上海",
+       "badge": ""
+      },
+      {
+       "rank": 10,
+       "item_id": "1066700347802",
+       "title": "pro6000服务器版显卡 全新未拆封 整卡带质保三年 现货 接批量订单 顺丰到付 支持自提",
+       "url": "https://www.goofish.com/item?id=1066700347802&categoryId=126856282",
+       "price": "¥12.40",
+       "original_price": "1人想要",
+       "condition": "",
+       "brand": "",
+       "extra": "",
+       "location": "天津",
+       "badge": "卖家信用极好"
+      }
+     ],
+     "total": 10,
+     "query": "MI60 加速卡"
+    }
+   }
+  }
+ ],
+ "round": 3,
+ "merged_previous": true
+}

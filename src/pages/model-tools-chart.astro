@@ -1,0 +1,50 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="模型 × 工具成本-编码指数" active="model-tools-chart">
+  <div class="filter-card chart-controls">
+    <section class="control-band">
+      <div class="search-block">
+        <label for="chartSearchInput">搜索数据点</label>
+        <input id="chartSearchInput" type="search" placeholder="模型名称、工具名称..." />
+      </div>
+      <div class="control">
+        <label for="xAxisSelect">X 轴</label>
+        <select id="xAxisSelect"></select>
+      </div>
+      <div class="control">
+        <label for="yAxisSelect">Y 轴</label>
+        <select id="yAxisSelect"></select>
+      </div>
+      <div class="control">
+        <label for="colorFieldSelect">颜色分组</label>
+        <select id="colorFieldSelect"></select>
+      </div>
+      <div class="control">
+        <label for="colorFilterSelect">分组筛选</label>
+        <select id="colorFilterSelect"></select>
+      </div>
+      <div class="control">
+        <label for="labelModeSelect">数据标签</label>
+        <select id="labelModeSelect">
+          <option value="auto" selected>自动避让</option>
+          <option value="all">尽量显示</option>
+          <option value="off">关闭</option>
+        </select>
+      </div>
+      <button class="ghost-button" id="chartResetButton" type="button">重置</button>
+    </section>
+  </div>
+
+  <div class="chart-summary" id="chartSummary" aria-live="polite">加载数据…</div>
+
+  <section class="chart-container" aria-label="模型与工具成本-编码指数散点图">
+    <canvas id="chartCanvas" role="img" aria-label="带 Pareto 前沿、成本轴和数据标签的模型与工具散点图"></canvas>
+  </section>
+
+  <div data-chart-page="model-tools"></div>
+  <script>
+    import "../islands/ScatterChart";
+  </script>
+</Base>

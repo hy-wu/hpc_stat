@@ -1,0 +1,128 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="模型接入" active="model-access">
+  <section class="access-intro" aria-labelledby="accessTitle">
+    <div>
+      <h2 id="accessTitle">模型接入配置</h2>
+      <p>本机桥接会逐把探测同一端点下的 API Key，并显示每把 Key 实际可访问的模型与接口返回的分组。</p>
+    </div>
+    <div class="access-status" id="accessStatus" role="status">尚未选择配置</div>
+  </section>
+
+  <div class="model-access-layout">
+    <section class="access-panel access-profiles" aria-labelledby="profilesTitle">
+      <div class="panel-head">
+        <h2 id="profilesTitle">API 配置</h2>
+        <button class="text-button" id="newProfileButton" type="button">新建</button>
+      </div>
+      <section class="bridge-box" aria-labelledby="bridgeTitle">
+        <h3 id="bridgeTitle">本机密钥文件</h3>
+        <p>连接本机桥接服务后，网页只显示脱敏配置和模型列表，API Key 始终留在文件中。</p>
+        <div class="control">
+          <label for="bridgeUrl">桥接地址</label>
+          <input id="bridgeUrl" type="url" value="http://127.0.0.1:4388" />
+        </div>
+        <div class="control">
+          <label for="bridgeToken">桥接令牌</label>
+          <div class="key-input-row">
+            <input id="bridgeToken" type="password" autocomplete="off" placeholder="启动桥接时设置的令牌" />
+            <button class="icon-button" id="connectBridgeButton" type="button">授权</button>
+          </div>
+        </div>
+        <p class="bridge-status" id="bridgeStatus" role="status">未连接本机文件</p>
+      </section>
+      <div class="profile-list" id="profileList" aria-label="已保存的 API 配置"></div>
+
+      <form class="profile-form" id="profileForm">
+        <input id="profileId" type="hidden" />
+        <div class="control">
+          <label for="profileName">配置名称</label>
+          <input id="profileName" required maxlength="80" placeholder="例如：Codex 开发" />
+        </div>
+        <div class="control">
+          <label for="profileEndpoint">API 端点</label>
+          <input id="profileEndpoint" type="url" required placeholder="https://api.example.com/v1" />
+        </div>
+        <div class="form-grid-2">
+          <div class="control">
+          <label for="profileGroup">自定义分组（直连）</label>
+          <input id="profileGroup" maxlength="80" placeholder="仅直连配置需要" />
+          </div>
+          <div class="control">
+            <label for="profileKey">API Key</label>
+            <div class="key-input-row">
+              <input id="profileKey" type="password" autocomplete="off" placeholder="sk-..." />
+              <button class="icon-button" id="toggleKeyButton" type="button" title="显示或隐藏 API Key" aria-label="显示或隐藏 API Key">显示</button>
+            </div>
+          </div>
+        </div>
+        <div class="control">
+          <label for="profileNotes">备注</label>
+          <input id="profileNotes" maxlength="160" placeholder="用途、计费策略或切换说明" />
+        </div>
+        <label class="remember-key">
+          <input id="rememberKey" type="checkbox" />
+          <span>在此浏览器保存 API Key</span>
+        </label>
+        <p class="form-help">默认仅在当前浏览器会话保存密钥。端点需允许浏览器跨域请求；密钥不会写入项目文件。</p>
+        <div class="form-actions">
+          <button class="primary-button" type="submit">保存配置</button>
+          <button class="ghost-button" id="clearSessionKeyButton" type="button">清除会话密钥</button>
+          <button class="text-button danger-button" id="deleteProfileButton" type="button" hidden>删除</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="access-panel access-models" aria-labelledby="modelsTitle">
+      <div class="panel-head access-models-head">
+        <div>
+          <h2 id="modelsTitle">支持的模型</h2>
+          <p id="activeProfileMeta" class="panel-subtitle">选择左侧配置后查询。</p>
+        </div>
+        <div class="table-tools">
+          <label class="control inline-control" for="activeProfileSelect">
+            <span>当前配置</span>
+            <select id="activeProfileSelect" aria-label="当前 API 配置"></select>
+          </label>
+          <button class="primary-button" id="refreshModelsButton" type="button">查询模型</button>
+        </div>
+      </div>
+
+      <div class="model-summary" aria-label="模型查询概览">
+        <div><span>远端模型</span><strong id="remoteModelCount">-</strong></div>
+        <div><span>目录补全</span><strong id="catalogMatchCount">-</strong></div>
+        <div><span>最近查询</span><strong id="lastRefreshed">-</strong></div>
+      </div>
+
+      <div class="model-search-row">
+        <label for="modelAccessSearch">搜索模型</label>
+        <input id="modelAccessSearch" type="search" placeholder="模型 ID、名称、厂商、模态..." />
+      </div>
+
+      <div class="access-message" id="accessMessage" role="alert" hidden></div>
+      <div class="access-table-wrap">
+        <table class="access-table">
+          <thead>
+            <tr>
+              <th scope="col">模型</th>
+              <th scope="col">厂商</th>
+              <th scope="col">上下文</th>
+              <th scope="col">模态</th>
+              <th scope="col">分组</th>
+              <th scope="col">来源</th>
+            </tr>
+          </thead>
+          <tbody id="accessTableBody">
+            <tr><td colspan="6" class="empty-cell">选择或新建一个 API 配置。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    import "../islands/ModelAccess";
+  </script>
+</Base>

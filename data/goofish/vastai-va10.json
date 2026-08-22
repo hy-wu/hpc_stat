@@ -1,0 +1,77 @@
+{
+ "query": "瀚博 载天 VA10",
+ "result": {
+  "ok": true,
+  "data": {
+   "items": [
+    {
+     "rank": 1,
+     "item_id": "876364890857",
+     "title": "瀚博半导体 VASTSTREAM 载天 VA10 SV100 Series - 单槽推理卡 - 核心：SV102-IM*1 （22ww33） 内存：三星 Samsung LPDDR4X-4266MHz 16Gb×8颗×2组 = 单卡32GB ［K...",
+     "url": "https://www.goofish.com/item?id=876364890857&categoryId=126856282",
+     "price": "¥500",
+     "original_price": "累计降价99%",
+     "condition": "",
+     "brand": "",
+     "extra": "",
+     "location": "江苏",
+     "badge": "卖家信用极好"
+    }
+   ]
+  }
+ },
+ "retries": [
+  {
+   "query": "瀚博 载天 VA10",
+   "result": {
+    "ok": true,
+    "data": {
+     "items": [
+      {
+       "rank": 1,
+       "item_id": "876364890857",
+       "title": "瀚博半导体 VASTSTREAM 载天 VA10 SV100 Series - 单槽推理卡 - 核心：SV102-IM*1 （22ww33） 内存：三星 Samsung LPDDR4X-4266MHz 16Gb×8颗×2组 = 单卡32GB ［K...",
+       "url": "https://www.goofish.com/item?id=876364890857&categoryId=126856282",
+       "price": "¥500",
+       "original_price": "累计降价99%",
+       "condition": "",
+       "brand": "",
+       "extra": "",
+       "location": "江苏",
+       "badge": "卖家信用极好"
+      }
+     ],
+     "total": 1,
+     "query": "瀚博 载天 VA10"
+    }
+   }
+  },
+  {
+   "query": "VASTSTREAM VA10",
+   "result": {
+    "ok": true,
+    "data": {
+     "items": [
+      {
+       "rank": 1,
+       "item_id": "876364890857",
+       "title": "瀚博半导体 VASTSTREAM 载天 VA10 SV100 Series - 单槽推理卡 - 核心：SV102-IM*1 （22ww33） 内存：三星 Samsung LPDDR4X-4266MHz 16Gb×8颗×2组 = 单卡32GB ［K...",
+       "url": "https://www.goofish.com/item?id=876364890857&categoryId=126856282",
+       "price": "¥500",
+       "original_price": "累计降价99%",
+       "condition": "",
+       "brand": "",
+       "extra": "",
+       "location": "江苏",
+       "badge": "卖家信用极好"
+      }
+     ],
+     "total": 1,
+     "query": "VASTSTREAM VA10"
+    }
+   }
+  }
+ ],
+ "round": 3,
+ "merged_previous": true
+}

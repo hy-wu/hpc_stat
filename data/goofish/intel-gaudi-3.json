@@ -1,0 +1,65 @@
+{
+ "query": "Intel Gaudi 3 加速卡",
+ "result": {
+  "ok": true,
+  "data": {
+   "items": [
+    {
+     "rank": 17,
+     "item_id": "1037614033699",
+     "title": "全新双人皮划艇，美国Quest品牌4.1米大尺寸蓝色款全套包 邮 [红圆]全套配件齐全：双桨叶四节式皮划艇桨x2、舒适型",
+     "url": "https://www.goofish.com/item?id=1037614033699&categoryId=126856939",
+     "price": "¥1399",
+     "original_price": "¥2800",
+     "condition": "",
+     "brand": "",
+     "extra": "",
+     "location": "浪***行",
+     "badge": "卖家信用极好"
+    },
+    {
+     "rank": 18,
+     "item_id": "1059098861834",
+     "title": "【Raytek MARATHON SERIES测温仪 RAY MR1SBSF】 美国原装，工程拆机，型号RAYMR1S",
+     "url": "https://www.goofish.com/item?id=1059098861834&categoryId=126864679",
+     "price": "¥1120",
+     "original_price": "",
+     "condition": "",
+     "brand": "",
+     "extra": "",
+     "location": "博***子",
+     "badge": "卖家信用极好"
+    }
+   ]
+  }
+ },
+ "retries": [
+  {
+   "query": "Intel Gaudi 3 加速卡",
+   "result": {
+    "ok": true,
+    "data": {
+     "items": [
+      {
+       "rank": 1,
+       "item_id": "1064226463827",
+       "title": "H3C UniServer R5500 G6 * 双路 Intel Xeon Platinum 8558 处理器* 1TB DDR5 ECC 企业级内存* 8 × Intel Habana Gaudi 2 AI 加速卡（总计 768GB HBM2e 高带宽显存）* 15.36TB 企业级 NVMe SSD* Mellanox ConnectX-7 400Gb 高速网络",
+       "url": "https://www.goofish.com/item?id=1064226463827&categoryId=126856259",
+       "price": "¥1",
+       "original_price": "4人想要",
+       "condition": "几乎全新",
+       "brand": "H3C/新华三",
+       "extra": "功能完好无维修",
+       "location": "香港",
+       "badge": ""
+      }
+     ],
+     "total": 1,
+     "query": "Intel Gaudi 3 加速卡"
+    }
+   }
+  }
+ ],
+ "round": 3,
+ "merged_previous": true
+}

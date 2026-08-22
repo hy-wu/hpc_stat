@@ -1,0 +1,78 @@
+{
+ "query": "壁仞 BR100 算力卡",
+ "result": {
+  "ok": true,
+  "data": {
+   "items": [
+    {
+     "rank": 1,
+     "item_id": "1036703616017",
+     "title": "重型任意角度单头锯，适合门窗、铝型材、幕墙等加工。机器功能正 常，运转稳定，操作简单，效率高，切口平整。成色几乎全新，外",
+     "url": "https://www.goofish.com/item?id=1036703616017&categoryId=126864142",
+     "price": "¥3000",
+     "original_price": "1人想要",
+     "condition": "几乎全新",
+     "brand": "功能完好无维修",
+     "extra": "",
+     "location": "德***械",
+     "badge": ""
+    },
+    {
+     "rank": 5,
+     "item_id": "1055751768862",
+     "title": "大疆T100S原装两喷头未使用过，有意者可小刀 （有多套） 感兴趣的话点“我想要”和我私聊吧～",
+     "url": "https://www.goofish.com/item?id=1055751768862&categoryId=126860545",
+     "price": "¥580",
+     "original_price": "7人想要",
+     "condition": "DJI/大疆",
+     "brand": "全新",
+     "extra": "1年以下",
+     "location": "T***4",
+     "badge": "卖家信用优秀"
+    },
+    {
+     "rank": 18,
+     "item_id": "1037614033699",
+     "title": "全新双人皮划艇，美国Quest品牌4.1米大尺寸蓝色款全套包 邮 [红圆]全套配件齐全：双桨叶四节式皮划艇桨x2、舒适型",
+     "url": "https://www.goofish.com/item?id=1037614033699&categoryId=126856939",
+     "price": "¥1399",
+     "original_price": "¥2800",
+     "condition": "",
+     "brand": "",
+     "extra": "",
+     "location": "浪***行",
+     "badge": "卖家信用极好"
+    }
+   ]
+  }
+ },
+ "retries": [
+  {
+   "query": "壁仞 BR100 算力卡",
+   "result": {
+    "ok": true,
+    "data": {
+     "items": [
+      {
+       "rank": 1,
+       "item_id": "1030570198709",
+       "title": "BW100 显卡对标 Z100L ​BW 150 显卡 对标 K100AI DCU BW100/BW150智能加速卡，国产AI算力，支持大模型训练、推理、百亿级模型一体机，OCR/ASR高精度识别，科学计算等场景。 BW100：64GB HBM显存，1.8T/s显存...",
+       "url": "https://www.goofish.com/item?id=1030570198709&categoryId=126856282",
+       "price": "¥2.68",
+       "original_price": "22人想要",
+       "condition": "",
+       "brand": "",
+       "extra": "",
+       "location": "广东",
+       "badge": "卖家信用优秀"
+      }
+     ],
+     "total": 1,
+     "query": "壁仞 BR100 算力卡"
+    }
+   }
+  }
+ ],
+ "round": 3,
+ "merged_previous": true
+}
