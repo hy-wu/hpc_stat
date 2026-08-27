@@ -36,6 +36,16 @@ SIDEBAR_LLM_STATS_PATH = SIDEBAR_DATA_DIR / "llmStat.md"
 SIDEBAR_SILICONFLOW_PATH = SIDEBAR_DATA_DIR / "硅基流动.md"
 MODELS_HTML_PATH = ROOT / "src" / "pages" / "models.astro"
 MODELS_JS_PATH = ROOT / "src" / "islands" / "FlatTable.ts"
+PARATERA_HAND_PATH = ROOT / "data" / "hand" / "paratera20260809.json"
+# Hand-collected paratera pricing is merged into rows client-side (see
+# mergeHandModelRows in FlatTable.ts), so these keys are covered even when
+# models.json itself has no values for them.
+PARATERA_HAND_COVERAGE = {
+    "pricing.paratera.in": "input",
+    "pricing.paratera.hit": "hit",
+    "pricing.paratera.out": "output",
+    "pricing.paratera.cacheOutput": "cacheOutput",
+}
 REFERENCE_PATH = ROOT / "REFERENCE_SOURCES.md"
 CACHE_DIR = ROOT / ".cache" / "model-sources"
 DEFAULT_OPENROUTER_TARGET = 150
@@ -3046,6 +3056,22 @@ def run_online_catalog_checks(sources: dict[str, SourceText]) -> list[dict[str, 
     return checks
 
 
+def paratera_hand_coverage() -> dict[str, int]:
+    if not PARATERA_HAND_PATH.exists():
+        return {}
+    try:
+        entries = json.loads(PARATERA_HAND_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    counts = dict.fromkeys(PARATERA_HAND_COVERAGE, 0)
+    for entry in entries if isinstance(entries, list) else []:
+        pricing = entry.get("pricing") or {}
+        for key, source_key in PARATERA_HAND_COVERAGE.items():
+            if pricing.get(source_key) is not None:
+                counts[key] += 1
+    return counts
+
+
 def validate_page_data(models: list[dict[str, Any]]) -> dict[str, Any]:
     html = MODELS_HTML_PATH.read_text(encoding="utf-8")
     js = MODELS_JS_PATH.read_text(encoding="utf-8")
@@ -3055,13 +3081,27 @@ def validate_page_data(models: list[dict[str, Any]]) -> dict[str, Any]:
         field["key"]: sum(1 for model in models if get_nested(model, field["key"]) is not None)
         for field in field_defs
     }
+    for key, count in paratera_hand_coverage().items():
+        coverage[key] = max(coverage.get(key, 0), count)
     visible_empty_columns = [field["key"] for field in visible_fields if coverage.get(field["key"], 0) == 0]
     errors = []
     if "islands/FlatTable" not in html:
         errors.append({"kind": "missingModelsScript", "path": str(MODELS_HTML_PATH)})
-    if '"data/models.json"' not in js and "'data/models.json'" not in js:
+    models_json_fetched = (
+        '"data/models.json"' in js
+        or "'data/models.json'" in js
+        or '"models.json"' in js
+        or "'models.json'" in js
+    )
+    if not models_json_fetched:
         errors.append({"kind": "missingModelsJsonFetch", "path": str(MODELS_JS_PATH)})
-    if MODEL_FIELDS_PATH.exists() and '"data/model-fields.json"' not in js and "'data/model-fields.json'" not in js:
+    model_fields_fetched = (
+        '"data/model-fields.json"' in js
+        or "'data/model-fields.json'" in js
+        or '"model-fields.json"' in js
+        or "'model-fields.json'" in js
+    )
+    if MODEL_FIELDS_PATH.exists() and not model_fields_fetched:
         errors.append({"kind": "missingModelFieldsFetch", "path": str(MODELS_JS_PATH)})
     if visible_empty_columns:
         errors.append({"kind": "visibleEmptyColumns", "items": visible_empty_columns})
