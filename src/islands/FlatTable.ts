@@ -10,7 +10,7 @@ import {
 import { matchesRules, matchesGlobalSearch, matchesArrayFilter, type RuleEngineOptions } from "../lib/filter";
 import { renderRules } from "../lib/rules-ui";
 import { renderColumnPicker, syncColumnPickerState, type ColumnPickerItem } from "../lib/column-picker";
-import { getHeatmapColor, getHeatmapPercent, shouldHeatmapField, computeColumnStats, type HeatStat } from "../lib/heatmap";
+import { getHeatmapColor, getHeatmapPercent, getHeatmapLengthPercent, shouldHeatmapField, computeColumnStats, type HeatStat } from "../lib/heatmap";
 import { buildCsv, downloadBlob } from "../lib/csv";
 import { escapeHtml, escapeAttr } from "../lib/escape";
 import { getToneClass } from "../matrix/cells";
@@ -392,7 +392,8 @@ function modelsConfig(): FlatPageConfig {
         return `<span class="${cls}" title="${verified ? escapeAttr(sourceTitle) : "未核验"}">${escapeHtml(String(val))}x</span>`;
       }
       if (field.key === "arenaElo" && field.heatmap && stat && typeof val === "number") {
-        const lengthPercent = getHeatmapPercent(val, stat);
+        const lengthPercent = getHeatmapLengthPercent(val, stat);
+        const colorPercent = getHeatmapPercent(val, stat);
         const src = row.arenaEloSource as string | undefined;
         const note = row.arenaEloNote as string | undefined;
         const checkedAt = row.arenaEloCheckedAt as string | undefined;
@@ -400,7 +401,7 @@ function modelsConfig(): FlatPageConfig {
         if (note) tooltipText += `\n⚠ ${note}`;
         if (checkedAt) tooltipText += `\n📅 ${checkedAt}`;
         const staleIndicator = note ? " stale" : "";
-        const color = getHeatmapColor(lengthPercent);
+        const color = getHeatmapColor(colorPercent);
         return `<div class="heatmap-container mini ${cls}${staleIndicator}" title="${escapeAttr(tooltipText)}"><div class="heatmap-bar" style="width:${lengthPercent.toFixed(1)}%;background:${color}"></div><span class="heatmap-value">${escapeHtml(String(val))}</span></div>`;
       }
       return null;
@@ -1006,8 +1007,9 @@ function formatCell(
       heatmapNum = Number(val);
     }
     if (heatmapNum !== null) {
-      const visualPercent = getHeatmapPercent(heatmapNum, stat, field.inverseHeatmap);
-      const color = getHeatmapColor(visualPercent);
+      const colorPercent = getHeatmapPercent(heatmapNum, stat, field.inverseHeatmap);
+      const lengthPercent = getHeatmapLengthPercent(heatmapNum, stat);
+      const color = getHeatmapColor(colorPercent);
       let displayStr: string;
       if (field.type === "date") displayStr = String(val);
       else if (field.key.includes("USD") || field.key === "msrpUSD") displayStr = `$${formatNumber(heatmapNum)}`;
@@ -1017,7 +1019,7 @@ function formatCell(
       else if (field.derived) displayStr = heatmapNum < 1 ? heatmapNum.toFixed(4) : heatmapNum.toFixed(3);
       else if (field.displayPrefix) displayStr = `${field.displayPrefix}${formatNumber(heatmapNum)}`;
       else displayStr = formatNumber(heatmapNum);
-      return `<div class="heatmap-container mini ${cls}" title="${escapeAttr(displayStr)}"><div class="heatmap-bar" style="width:${visualPercent.toFixed(1)}%;background:${color}"></div><span class="heatmap-value">${escapeHtml(displayStr)}</span></div>`;
+      return `<div class="heatmap-container mini ${cls}" title="${escapeAttr(displayStr)}"><div class="heatmap-bar" style="width:${lengthPercent.toFixed(1)}%;background:${color}"></div><span class="heatmap-value">${escapeHtml(displayStr)}</span></div>`;
     }
   }
 

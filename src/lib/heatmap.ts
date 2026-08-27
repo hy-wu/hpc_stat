@@ -28,6 +28,25 @@ export function getHeatmapPercent(
   return inverse ? 100 - bounded : bounded;
 }
 
+/** Normalize a value to a bar-width percentage using log scale.
+ *  Forward log: higher values get longer bars, but low values
+ *  still have visible length (log compresses the range). */
+export function getHeatmapLengthPercent(
+  value: number,
+  stat: HeatStat,
+): number {
+  if (stat.max === stat.min) return 100;
+  if (stat.min <= 0 || value <= 0) {
+    const raw = ((value - stat.min) / (stat.max - stat.min)) * 100;
+    return Math.max(0, Math.min(100, raw));
+  }
+  const logMin = Math.log(stat.min);
+  const logMax = Math.log(stat.max);
+  const logVal = Math.log(value);
+  const raw = ((logVal - logMin) / (logMax - logMin)) * 100;
+  return Math.max(0, Math.min(100, raw));
+}
+
 import type { FieldDef } from "../types/fields";
 import { getNestedValue, isUsableNumber } from "./format";
 

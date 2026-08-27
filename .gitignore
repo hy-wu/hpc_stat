@@ -10,3 +10,4 @@ dist/
 public/data/
 .qoder/
 .DS_Store
+.opencode*
