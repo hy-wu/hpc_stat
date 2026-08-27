@@ -25,7 +25,7 @@ export interface Gpu {
   msrpUSD?: number | null;
   priceUSD?: number | null;
   priceUpdated?: string | null;
-  xianyu_cny?: number | null;
+  priceCNY?: number | null;
   merchant?: string;
   priceSource?: string;
   source?: string;

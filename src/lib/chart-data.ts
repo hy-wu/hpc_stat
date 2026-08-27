@@ -82,6 +82,7 @@ export const modelHardwareAxisFields: AxisField[] = [
   { key: "gpuVramGB", label: "GPU 显存", unit: "GB", source: "GPU" },
   { key: "outputTps", label: "输出速度 (decode)", unit: "tok/s", source: "模型×硬件", direction: "higher-better" },
   { key: "gpuPriceUSD", label: "GPU 参考价", unit: "USD", source: "GPU", scale: "logarithmic", direction: "lower-better" },
+  { key: "gpuPriceCNY", label: "闲鱼二手价", unit: "¥", source: "GPU", scale: "logarithmic", direction: "lower-better" },
   // Model-hardware specific
   { key: "fitScore", label: "硬件适配分", unit: "/5", source: "模型×硬件" },
   { key: "memoryFit", label: "显存适配", unit: "/5", source: "模型×硬件" },
@@ -524,6 +525,7 @@ export async function loadModelHardwareChartData(): Promise<{
       raw.gpuInt8TOPS = gpuRec.int8TOPS;
       raw.gpuPowerW = gpuRec.powerW;
       raw.gpuPriceUSD = gpuRec.priceUSD ?? gpuRec.msrpUSD;
+      raw.gpuPriceCNY = gpuRec.priceCNY;
       raw.gpuCudaCores = gpuRec.cudaCores;
     }
 

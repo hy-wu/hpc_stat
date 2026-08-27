@@ -461,13 +461,13 @@
       "inverseHeatmap": true
     },
     {
-      "key": "xianyu_cny",
-      "label": "咸鱼价 ¥",
+      "key": "priceCNY",
+      "label": "闲鱼价 ¥",
       "type": "number",
       "visible": true,
       "heatmap": true,
       "inverseHeatmap": true,
-      "description": "闲鱼二手参考价（人民币，2026年5月，仅供参考）"
+      "description": "闲鱼二手聚簇价（人民币，2026-08-22 前列命中样本聚合，详见 notes，仅供参考）"
     },
     {
       "key": "pricePerGb",
@@ -585,7 +585,7 @@
     "textureRateGTexelS",
     "msrpUSD",
     "priceUSD",
-    "xianyu_cny",
+    "priceCNY",
     "pricePerGb",
     "cnyPerGb",
     "priceUpdated",
@@ -613,7 +613,7 @@
     "int8TOPS",
     "powerW",
     "priceUSD",
-    "xianyu_cny",
+    "priceCNY",
     "pricePerGb",
     "cnyPerGb",
     "fp16PerWatt",
@@ -626,6 +626,7 @@
     "bwPerCny",
     "priceUpdated",
     "availability",
-    "softwareStack"
+    "softwareStack",
+    "notes"
   ]
 }

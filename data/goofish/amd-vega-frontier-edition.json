@@ -1,156 +1,270 @@
 {
- "query": "Vega Frontier Edition 显卡",
- "result": {
-  "ok": true,
-  "data": {
-   "items": [
-    {
-     "rank": 1,
-     "item_id": "1074397978199",
-     "title": "AMD Vega frontier edition水冷版（V EGA FE金水）。16G显存。极稀有，收藏向。箱说全，成色还不错，无拆修。收藏价值大于实用价值。收藏向，不议价，不接受到手刀。功能问题或描述不符可退。暂挂，一两个月后出。",
-     "url": "https://www.goofish.com/item?id=1074397978199&categoryId=126856282",
-     "price": "¥5000",
-     "original_price": "¥10000",
-     "condition": "轻微使用痕迹",
-     "brand": "AMD",
-     "extra": "功能完好无维修",
-     "location": "安徽",
-     "badge": "卖家信用极好"
-    },
-    {
-     "rank": 2,
-     "item_id": "903191918185",
-     "title": "传家宝AMD Vega FE金水！箱说全 Radeon Ve ga Frontier Edition懂的进，只渡有缘人 箱说齐对码，插上此卡，机箱自动获得「AMD YES! 镀金Buff」，并解锁成就《我与苏妈共沉沦》。",
-     "url": "https://www.goofish.com/item?id=903191918185&categoryId=126856282",
-     "price": "¥9999",
-     "original_price": "14人想要",
-     "condition": "轻微使用痕迹",
-     "brand": "AMD",
-     "extra": "功能完好无维修",
-     "location": "上海",
-     "badge": "卖家信用极好"
-    },
-    {
-     "rank": 3,
-     "item_id": "1043882410992",
-     "title": "3900x+海盗船380t机箱+海盗船260水冷+技嘉x57 0 i aorus pro wifi主板+海盗船ddr4＿3200＿16g×2内存条+1T_Tenafe SSD+Radeon Vega Frontier Edition 32G显存显卡+海盗船RM750W电源，自提优先，外地顺...",
-     "url": "https://www.goofish.com/item?id=1043882410992&categoryId=126920038",
-     "price": "¥4499",
-     "original_price": "累计降价10%",
-     "condition": "",
-     "brand": "",
-     "extra": "",
-     "location": "福建",
-     "badge": ""
-    },
-    {
-     "rank": 1,
-     "item_id": "999675966814",
-     "title": "所有东西如图1 仅散热器不含显卡pcb等 vega64 vega56 Vega Frontier Edition 公版改120水冷 asetek一体水冷头 拆的时候不小心丢了一个弹簧 如图2不影响使用。 水冷风扇买过来都是100多 送一个切割好的散热盖子",
-     "url": "https://www.goofish.com/item?id=999675966814&categoryId=126856279",
-     "price": "¥200",
-     "original_price": "累计降价71%",
-     "condition": "维修过，可正常使用",
-     "brand": "水冷",
-     "extra": "",
-     "location": "浙江",
-     "badge": "卖家信用极好"
-    },
-    {
-     "rank": 2,
-     "item_id": "995434028965",
-     "title": "AMD VEGA Frontier Edition 16G 原装盒装显卡 正常使用拆下，正常使用痕迹，无任何暗病，18年美国购买带回。稀有的非矿卡，带原包装与配件，成色如图，售出前会测试好发你，售出后不退不换。标价卖，不议价。",
-     "url": "https://www.goofish.com/item?id=995434028965&categoryId=126856282",
-     "price": "¥1999",
-     "original_price": "12人想要",
-     "condition": "轻微使用痕迹",
-     "brand": "AMD",
-     "extra": "8GB(不含)-16GB(含)",
-     "location": "四川",
-     "badge": "百分百好评"
-    }
-   ]
-  }
- },
- "retries": [
-  {
-   "query": "Vega Frontier Edition 显卡",
-   "result": {
-    "ok": true,
-    "data": {
-     "items": [
-      {
-       "rank": 1,
-       "item_id": "999675966814",
-       "title": "所有东西如图1 仅散热器不含显卡pcb等 vega64 vega56 Vega Frontier Edition 公版改120水冷 asetek一体水冷头 拆的时候不小心丢了一个弹簧 如图2不影响使用。 水冷风扇买过来都是100多 送一个切割好的散热盖子",
-       "url": "https://www.goofish.com/item?id=999675966814&categoryId=126856279",
-       "price": "¥200",
-       "original_price": "累计降价71%",
-       "condition": "维修过，可正常使用",
-       "brand": "水冷",
-       "extra": "",
-       "location": "浙江",
-       "badge": "卖家信用极好"
-      },
-      {
-       "rank": 2,
-       "item_id": "995434028965",
-       "title": "AMD VEGA Frontier Edition 16G 原装盒装显卡 正常使用拆下，正常使用痕迹，无任何暗病，18年美国购买带回。稀有的非矿卡，带原包装与配件，成色如图，售出前会测试好发你，售出后不退不换。标价卖，不议价。",
-       "url": "https://www.goofish.com/item?id=995434028965&categoryId=126856282",
-       "price": "¥1999",
-       "original_price": "12人想要",
-       "condition": "轻微使用痕迹",
-       "brand": "AMD",
-       "extra": "8GB(不含)-16GB(含)",
-       "location": "四川",
-       "badge": "百分百好评"
-      },
-      {
-       "rank": 3,
-       "item_id": "1074397978199",
-       "title": "AMD Vega frontier edition水冷版（V EGA FE金水）。16G显存。极稀有，收藏向。箱说全，成色还不错，无拆修。收藏价值大于实用价值。收藏向，不议价，不接受到手刀。功能问题或描述不符可退。暂挂，一两个月后出。",
-       "url": "https://www.goofish.com/item?id=1074397978199&categoryId=126856282",
-       "price": "¥5000",
-       "original_price": "¥10000",
-       "condition": "轻微使用痕迹",
-       "brand": "AMD",
-       "extra": "功能完好无维修",
-       "location": "安徽",
-       "badge": "卖家信用极好"
-      },
-      {
-       "rank": 4,
-       "item_id": "1043882410992",
-       "title": "3900x+海盗船380t机箱+海盗船260水冷+技嘉x57 0 i aorus pro wifi主板+海盗船ddr4＿3200＿16g×2内存条+1T_Tenafe SSD+Radeon Vega Frontier Edition 32G显存显卡+海盗船RM750W电源，自提优先，外地顺...",
-       "url": "https://www.goofish.com/item?id=1043882410992&categoryId=126920038",
-       "price": "¥4499",
-       "original_price": "累计降价10%",
-       "condition": "",
-       "brand": "",
-       "extra": "",
-       "location": "福建",
-       "badge": ""
-      },
-      {
-       "rank": 5,
-       "item_id": "903191918185",
-       "title": "传家宝AMD Vega FE金水！箱说全 Radeon Ve ga Frontier Edition懂的进，只渡有缘人 箱说齐对码，插上此卡，机箱自动获得「AMD YES! 镀金Buff」，并解锁成就《我与苏妈共沉沦》。",
-       "url": "https://www.goofish.com/item?id=903191918185&categoryId=126856282",
-       "price": "¥9999",
-       "original_price": "14人想要",
-       "condition": "轻微使用痕迹",
-       "brand": "AMD",
-       "extra": "功能完好无维修",
-       "location": "上海",
-       "badge": "卖家信用极好"
-      }
-     ],
-     "total": 5,
-     "query": "Vega Frontier Edition 显卡"
-    }
+ "query": "Vega Frontier 16G 独立显卡",
+ "data": {
+  "items": [
+   {
+    "rank": 1,
+    "item_id": "918349220802",
+    "title": "NVIDIA Tesla V100 SXM2 16G显卡 IBM服务器 原装拆机 GPU V100-16G",
+    "url": "https://www.goofish.com/item?id=918349220802&categoryId=126856501",
+    "price": "¥650",
+    "original_price": "11人想要",
+    "condition": "",
+    "brand": "",
+    "extra": "",
+    "location": "服***家",
+    "badge": ""
+   },
+   {
+    "rank": 2,
+    "item_id": "1069007274884",
+    "title": "【包邮出】真皮版 Haruta4603 棕色牛皮 35码 中 跟 上班穿过一次，未暴走，轻微穿着痕迹 正面侧面细节见图",
+    "url": "https://www.goofish.com/item?id=1069007274884&categoryId=126888001",
+    "price": "¥452.72",
+    "original_price": "",
+    "condition": "Haruta",
+    "brand": "轻微穿着痕迹",
+    "extra": "乐福鞋",
+    "location": "A***g",
+    "badge": "卖家信用极好"
+   },
+   {
+    "rank": 3,
+    "item_id": "1061066897157",
+    "title": "NVIDIA Tesla V100 SXM2 32G显卡，原 装拆机，成色好，功能完好无维修，ECC正常，原厂件，适合A",
+    "url": "https://www.goofish.com/item?id=1061066897157&categoryId=126856282",
+    "price": "¥3288",
+    "original_price": "48人想要",
+    "condition": "Nvidia",
+    "brand": "几乎全新",
+    "extra": "功能完好无维修",
+    "location": "A***售",
+    "badge": ""
+   },
+   {
+    "rank": 4,
+    "item_id": "1063233479948",
+    "title": "库房到货Atias300I 32G （3000）推理卡 保 修三年 Atlas 300T （Model 900",
+    "url": "https://www.goofish.com/item?id=1063233479948&categoryId=126856282",
+    "price": "¥1500",
+    "original_price": "5人想要",
+    "condition": "ATI",
+    "brand": "全新",
+    "extra": "16GB(不含)-32GB(含)",
+    "location": "A***商",
+    "badge": ""
+   },
+   {
+    "rank": 5,
+    "item_id": "1076598782447",
+    "title": "索泰 ZOTAC RTX3090 白色三风扇显卡 成色还可以，有使用痕迹，具体看图 深圳东莞可自提，外地顺丰到付 售出不",
+    "url": "https://www.goofish.com/item?id=1076598782447&categoryId=126856282",
+    "price": "¥88",
+    "original_price": "1人想要",
+    "condition": "",
+    "brand": "",
+    "extra": "",
+    "location": "c***1",
+    "badge": "卖家信用优秀"
+   },
+   {
+    "rank": 6,
+    "item_id": "1070948238490",
+    "title": "磐镭 RX550 4G 显卡，京东自营旗舰店购入，有购买记录 ，正品来源可查。 家用自用卡，没修过，不是矿卡。成色还可以",
+    "url": "https://www.goofish.com/item?id=1070948238490&categoryId=126856282",
+    "price": "¥279",
+    "original_price": "",
+    "condition": "磐镭",
+    "brand": "轻微使用痕迹",
+    "extra": "功能完好无维修",
+    "location": "暮***0",
+    "badge": "卖家信用极好"
+   },
+   {
+    "rank": 7,
+    "item_id": "860308849303",
+    "title": "全新DRUMMER DDR4老化板 带360个DDR3/ 4测试座 有需求的联系",
+    "url": "https://www.goofish.com/item?id=860308849303&categoryId=126856501",
+    "price": "¥800",
+    "original_price": "21人想要",
+    "condition": "",
+    "brand": "",
+    "extra": "",
+    "location": "工***件",
+    "badge": "卖家信用极好"
+   },
+   {
+    "rank": 8,
+    "item_id": "1067808290402",
+    "title": "松下 CF-FV1 14英寸 2K触摸屏商务轻薄坚固型超极本 14英寸2K触摸屏，屏幕分辨率2160*1440，屏幕比3",
+    "url": "https://www.goofish.com/item?id=1067808290402&categoryId=126854525",
+    "price": "¥1180",
+    "original_price": "25人想要",
+    "condition": "Panasonic/松下",
+    "brand": "细微磕碰划痕",
+    "extra": "16GB",
+    "location": "1***8",
+    "badge": "卖家信用极好"
+   },
+   {
+    "rank": 9,
+    "item_id": "1016163534825",
+    "title": "全新 英睿达48G 6000 24G*2 DDR5内存条 英睿达48G套条 24G*2 48G 6000频率 全新正品未",
+    "url": "https://www.goofish.com/item?id=1016163534825&categoryId=126856277",
+    "price": "¥2809",
+    "original_price": "66人想要",
+    "condition": "CRUCIAL/英睿达",
+    "brand": "全新",
+    "extra": "DDR5",
+    "location": "I***队",
+    "badge": ""
+   },
+   {
+    "rank": 10,
+    "item_id": "1052912578452",
+    "title": "亏得裤衩都没有啦！！！！！！Ai相机，工业深度相机，微软Az ureKinect DK，三维相机，功能正常，没修过，没暗",
+    "url": "https://www.goofish.com/item?id=1052912578452&categoryId=201457505",
+    "price": "¥2300",
+    "original_price": "¥3500",
+    "condition": "",
+    "brand": "",
+    "extra": "",
+    "location": "艾***呀",
+    "badge": "卖家信用极好"
+   },
+   {
+    "rank": 11,
+    "item_id": "1065921966025",
+    "title": "workbuddy无限额度方案 workbuddy无限TOKEN额度 超多token额度 第三方大厂接口，稳定不断连",
+    "url": "https://www.goofish.com/item?id=1065921966025&categoryId=202148345",
+    "price": "¥20",
+    "original_price": "1479人想要",
+    "condition": "",
+    "brand": "",
+    "extra": "",
+    "location": "Y***0",
+    "badge": "卖家信用极好"
+   },
+   {
+    "rank": 12,
+    "item_id": "1068922472896",
+    "title": "AI Infra训练营大模型训练优化 《大厂AI Infra训练营一期：大模型训练优化》 整理的飞shu在线知识文档，标",
+    "url": "https://www.goofish.com/item?id=1068922472896&categoryId=201460115",
+    "price": "¥4.90",
+    "original_price": "129人想要",
+    "condition": "",
+    "brand": "",
+    "extra": "",
+    "location": "大***库",
+    "badge": "卖家信用极好"
+   },
+   {
+    "rank": 13,
+    "item_id": "1075750894629",
+    "title": "出两套AI服务器 设备配置 ① 泰安 B8252 - GPU：DRIVE A100 SXM2 ×2 - 散热：专用定制水",
+    "url": "https://www.goofish.com/item?id=1075750894629&categoryId=126856259",
+    "price": "¥3.50",
+    "original_price": "6人想要",
+    "condition": "",
+    "brand": "",
+    "extra": "",
+    "location": "名***哥",
+    "badge": "卖家信用极好"
+   },
+   {
+    "rank": 14,
+    "item_id": "1034475905051",
+    "title": "德国 HEIDENHAIN 海德汉 绝对值 伺服电机编码器 两套 ABB机器人拆的",
+    "url": "https://www.goofish.com/item?id=1034475905051&categoryId=126856492",
+    "price": "¥1500",
+    "original_price": "6人想要",
+    "condition": "",
+    "brand": "",
+    "extra": "",
+    "location": "实***子",
+    "badge": "卖家信用极好"
+   },
+   {
+    "rank": 15,
+    "item_id": "1072854296764",
+    "title": "2TB M.2 SATA（NGFF）固态硬盘 电脑可以识别硬盘，ESP分区损坏，分区故障，无法正常稳定使用，不适合存放重",
+    "url": "https://www.goofish.com/item?id=1072854296764&categoryId=126856274",
+    "price": "¥188.88",
+    "original_price": "1人想要",
+    "condition": "",
+    "brand": "",
+    "extra": "",
+    "location": "佛***行",
+    "badge": ""
+   },
+   {
+    "rank": 16,
+    "item_id": "1076743798004",
+    "title": "个人闲置，华为freelacepro绿色挂脖耳机，左右耳都在 。线断了，适合会修或者需要配件的朋友。包邮到家，喜欢的可以",
+    "url": "https://www.goofish.com/item?id=1076743798004&categoryId=126864985",
+    "price": "¥75",
+    "original_price": "",
+    "condition": "",
+    "brand": "",
+    "extra": "",
+    "location": "蕃***子",
+    "badge": "卖家信用优秀"
+   },
+   {
+    "rank": 17,
+    "item_id": "978720893938",
+    "title": "Xilinx NVMeoF RDMA参考设计 解密版 基于NVMEOF和RNIC实现RDMA上NVME存储扩展fpga实",
+    "url": "https://www.goofish.com/item?id=978720893938&categoryId=201453616",
+    "price": "¥25",
+    "original_price": "¥1500",
+    "condition": "",
+    "brand": "",
+    "extra": "",
+    "location": "F***姐",
+    "badge": "卖家信用极好"
+   },
+   {
+    "rank": 18,
+    "item_id": "1015118892475",
+    "title": "全新PCIE转M2.NVME转接卡，EX1 EX4 EX16 插口可用支持2230/2242/2260/2280规格M2",
+    "url": "https://www.goofish.com/item?id=1015118892475&categoryId=126856276",
+    "price": "¥9.90",
+    "original_price": "249人想要",
+    "condition": "",
+    "brand": "",
+    "extra": "",
+    "location": "沙***大",
+    "badge": ""
+   },
+   {
+    "rank": 19,
+    "item_id": "1068789374443",
+    "title": "联想 ThinkStation P3 Ultra 图形工作站 准系统 3.9L小机箱，3.6kg，W680芯片组，支持i",
+    "url": "https://www.goofish.com/item?id=1068789374443&categoryId=126856260",
+    "price": "¥3399",
+    "original_price": "41人想要",
+    "condition": "",
+    "brand": "",
+    "extra": "",
+    "location": "漳***仔",
+    "badge": "卖家信用极好"
+   },
+   {
+    "rank": 20,
+    "item_id": "1068303866887",
+    "title": "2010年12月普桑重度改装，正常过户，上任车主在盘锦网红处 购得，改装的非常漂亮：牧马人LED大灯，龙鳞尾灯，贯穿流水",
+    "url": "https://www.goofish.com/item?id=1068303866887&categoryId=127302001",
+    "price": "¥1.48",
+    "original_price": "34人想要",
+    "condition": "",
+    "brand": "",
+    "extra": "",
+    "location": "兜***切",
+    "badge": "卖家信用极好"
    }
-  }
- ],
- "round": 3,
- "merged_previous": true
+  ]
+ },
+ "items_count": 20,
+ "retries": [],
+ "timestamp": "2026-08-26T16:52:52"
 }

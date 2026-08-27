@@ -314,7 +314,7 @@ function gpuConfig(): FlatPageConfig {
       rows.map((gpu) => {
         const g = { ...gpu };
         if (g.priceUSD && g.vramGB) g.pricePerGb = Number((Number(g.priceUSD) / Number(g.vramGB)).toFixed(2));
-        if (g.xianyu_cny && g.vramGB) g.cnyPerGb = Number((Number(g.xianyu_cny) / Number(g.vramGB)).toFixed(1));
+        if (g.priceCNY && g.vramGB) g.cnyPerGb = Number((Number(g.priceCNY) / Number(g.vramGB)).toFixed(1));
         if (g.fp16TFLOPS && g.powerW) g.tflopsPerWatt = Number((Number(g.fp16TFLOPS) / Number(g.powerW)).toFixed(4));
         return g;
       }),
@@ -1011,7 +1011,7 @@ function formatCell(
       let displayStr: string;
       if (field.type === "date") displayStr = String(val);
       else if (field.key.includes("USD") || field.key === "msrpUSD") displayStr = `$${formatNumber(heatmapNum)}`;
-      else if (field.key === "xianyu_cny") displayStr = `¥${formatNumber(heatmapNum)}`;
+      else if (field.key === "priceCNY") displayStr = `¥${formatNumber(heatmapNum)}`;
       else if (field.key === "pricePerGb") displayStr = `$${heatmapNum.toFixed(2)}`;
       else if (field.key === "cnyPerGb") displayStr = `¥${heatmapNum.toFixed(1)}`;
       else if (field.derived) displayStr = heatmapNum < 1 ? heatmapNum.toFixed(4) : heatmapNum.toFixed(3);
