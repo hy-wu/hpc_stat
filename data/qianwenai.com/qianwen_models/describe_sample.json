@@ -1,0 +1,934 @@
+[
+  {
+    "InstanceName": "sfm_inference_public_cn_china_dpgrryo8dm1kkos0",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100025_0376",
+      "Name": "qwen-plus-0723"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_qxe9t8ttjr9pa4y2",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 500.0,
+      "ShowUnit": "张",
+      "ShowValue": "500.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 500.0,
+      "ShowUnit": "张",
+      "ShowValue": "500.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100553_0813",
+      "Name": "wanx2.1-imageedit"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_h00xs6i94ju9b51e",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 50.0,
+      "ShowUnit": "秒",
+      "BaseUnit": "秒",
+      "ShowValue": "50.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 50.0,
+      "ShowUnit": "秒",
+      "BaseUnit": "秒",
+      "ShowValue": "50.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100603_0638",
+      "Name": "wanx2.1-vace-plus"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_jya7mr6f0750cnxf",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100023_0927",
+      "Name": "qwen-plus-0112"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_7p4ql5ublxpnmtdo",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 500.0,
+      "ShowUnit": "秒",
+      "BaseUnit": "秒",
+      "ShowValue": "500.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 500.0,
+      "ShowUnit": "秒",
+      "BaseUnit": "秒",
+      "ShowValue": "500.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111095850_0718",
+      "Name": "emoji-v1"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_l436q4wmfum9flbf",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100013_0723",
+      "Name": "qwen-omni-turbo"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_h5zsuks9xieo6sq5",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 500.0,
+      "ShowUnit": "张",
+      "ShowValue": "500.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 500.0,
+      "ShowUnit": "张",
+      "ShowValue": "500.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100606_0134",
+      "Name": "wordart-texture"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_66cs7n6fx900h96b",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100307_0803",
+      "Name": "qwen3-max-2025-10-30"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_fqeljdwuj2uh1hyb",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100201_0736",
+      "Name": "qwen2.5-72b-instruct"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_8t5em855gs7wwkdi",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100341_0937",
+      "Name": "qwen3-vl-plus"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_5g59nditjfn28cw1",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 100.0,
+      "ShowUnit": "张",
+      "ShowValue": "100.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 100.0,
+      "ShowUnit": "张",
+      "ShowValue": "100.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111095941_0407",
+      "Name": "qwen-image"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_7gllnc9j48foey95",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100150_0965",
+      "Name": "qwen2.5-14b-instruct"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_c3f40onugzw3izfe",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111095923_0109",
+      "Name": "qvq-max"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_0v79c349qkjm5c09",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100017_0182",
+      "Name": "qwen-omni-turbo-latest"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_8w9bord0an2ooji6",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111095934_0964",
+      "Name": "qwen-coder-plus-latest"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_kaavrfim127x5kd4",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111095900_0797",
+      "Name": "glm-4.5"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_chxcjzuf7gdqe3vk",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100053_0625",
+      "Name": "qwen-tts-realtime-latest"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_f4giluruv7ib08wi",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100207_0650",
+      "Name": "qwen2.5-7b-instruct-1m"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_e44y1sx66qen5mkh",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100002_0589",
+      "Name": "qwen-max-0403"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_cuno1m5ew57heb4s",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100111_0313",
+      "Name": "qwen-vl-max-1230"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_viu2q7i03vhcauaw",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100247_0454",
+      "Name": "qwen3-8b"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_ox05tbssyh9hj20w",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100003_0740",
+      "Name": "qwen-max-0428"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_0amtqw2fkoh8coov",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100229_0972",
+      "Name": "qwen2.5-vl-embedding"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_kwpvexb89j9p3iur",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100058_0176",
+      "Name": "qwen-turbo-0624"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_9vitiitl2n4go90h",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100103_0116",
+      "Name": "qwen-turbo-2025-04-28"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_16c29ocnw8abusvz",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 10000.0,
+      "ShowUnit": "万字",
+      "ShowValue": "1.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 10000.0,
+      "ShowUnit": "万字",
+      "ShowValue": "1.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100619_0887",
+      "Name": "qwen3-tts-flash-realtime-2025-09-18"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_7n4k464ssnghsm5f",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100157_0265",
+      "Name": "qwen2.5-32b-instruct"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_os7nabxvucgsedk3",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100202_0915",
+      "Name": "qwen2.5-7b-instruct"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_2n8dup0r4eatnphg",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111095901_0962",
+      "Name": "glm-4.5-air"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_uolu0kewfwflebnw",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100309_0038",
+      "Name": "qwen3-next-80b-a3b-instruct"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_k2xrfvzxalhllf5u",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 1000000.0,
+      "ShowUnit": "千tokens",
+      "ShowValue": "1000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100051_0507",
+      "Name": "qwen-tts-realtime"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_76238rhfu12nl2zh",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 50.0,
+      "ShowUnit": "秒",
+      "BaseUnit": "秒",
+      "ShowValue": "50.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 50.0,
+      "ShowUnit": "秒",
+      "BaseUnit": "秒",
+      "ShowValue": "50.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100517_0226",
+      "Name": "wan2.2-animate-mix"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_6y0qykrwm05tqaw4",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 400.0,
+      "ShowUnit": "张",
+      "ShowValue": "400.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 400.0,
+      "ShowUnit": "张",
+      "ShowValue": "400.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111095820_0678",
+      "Name": "aitryon"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_qtc3t4xk1kdyl1es",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "EndTime": "Wed Oct 21 00:00:00 CST 2026",
+    "InitCapacity": {
+      "BaseValue": 50.0,
+      "ShowUnit": "秒",
+      "BaseUnit": "秒",
+      "ShowValue": "50.000000"
+    },
+    "StartTime": "Wed Jul 22 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 50.0,
+      "ShowUnit": "秒",
+      "BaseUnit": "秒",
+      "ShowValue": "50.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100522_0114",
+      "Name": "wan2.2-i2v-plus"
+    },
+    "CurrentCycleStartTime": "Wed Jul 22 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_l5nstclb953nephj",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Tue Sep 01 00:00:00 CST 2026",
+    "EndTime": "Thu Jan 01 00:00:00 CST 2099",
+    "InitCapacity": {
+      "BaseValue": 36000.0,
+      "ShowUnit": "秒",
+      "BaseUnit": "秒",
+      "ShowValue": "36000.000000"
+    },
+    "StartTime": "Wed Jul 01 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 36000.0,
+      "ShowUnit": "秒",
+      "BaseUnit": "秒",
+      "ShowValue": "36000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111095921_0462",
+      "Name": "paraformer-v2"
+    },
+    "CurrentCycleStartTime": "Sat Aug 01 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_8riakslhhpkfs0b5",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Tue Sep 01 00:00:00 CST 2026",
+    "EndTime": "Thu Jan 01 00:00:00 CST 2099",
+    "InitCapacity": {
+      "BaseValue": 36000.0,
+      "ShowUnit": "秒",
+      "BaseUnit": "秒",
+      "ShowValue": "36000.000000"
+    },
+    "StartTime": "Wed Jul 01 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 36000.0,
+      "ShowUnit": "秒",
+      "BaseUnit": "秒",
+      "ShowValue": "36000.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111095914_0674",
+      "Name": "paraformer-mtl-v1"
+    },
+    "CurrentCycleStartTime": "Sat Aug 01 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_f1mrd8sv2diu0kr8",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Tue Sep 01 00:00:00 CST 2026",
+    "EndTime": "Thu Jan 01 00:00:00 CST 2099",
+    "InitCapacity": {
+      "BaseValue": 30000.0,
+      "ShowUnit": "万字",
+      "ShowValue": "3.000000"
+    },
+    "StartTime": "Wed Jul 01 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 30000.0,
+      "ShowUnit": "万字",
+      "ShowValue": "3.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100408_0031",
+      "Name": "sambert-perla-v1"
+    },
+    "CurrentCycleStartTime": "Sat Aug 01 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_3mzk18x3kl12i1q2",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Tue Sep 01 00:00:00 CST 2026",
+    "EndTime": "Thu Jan 01 00:00:00 CST 2099",
+    "InitCapacity": {
+      "BaseValue": 30000.0,
+      "ShowUnit": "万字",
+      "ShowValue": "3.000000"
+    },
+    "StartTime": "Wed Jul 01 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 30000.0,
+      "ShowUnit": "万字",
+      "ShowValue": "3.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100439_0131",
+      "Name": "sambert-zhishu-v1"
+    },
+    "CurrentCycleStartTime": "Sat Aug 01 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_vd4zbyi25l16y92y",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Tue Sep 01 00:00:00 CST 2026",
+    "EndTime": "Thu Jan 01 00:00:00 CST 2099",
+    "InitCapacity": {
+      "BaseValue": 30000.0,
+      "ShowUnit": "万字",
+      "ShowValue": "3.000000"
+    },
+    "StartTime": "Wed Jul 01 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 30000.0,
+      "ShowUnit": "万字",
+      "ShowValue": "3.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100430_0719",
+      "Name": "sambert-zhimo-v1"
+    },
+    "CurrentCycleStartTime": "Sat Aug 01 00:00:00 CST 2026"
+  },
+  {
+    "InstanceName": "sfm_inference_public_cn_china_kuy0cwpdlcwl7iup",
+    "Status": "valid",
+    "Uid": 1190961667414675,
+    "CurrentCycleEndTime": "Tue Sep 01 00:00:00 CST 2026",
+    "EndTime": "Thu Jan 01 00:00:00 CST 2099",
+    "InitCapacity": {
+      "BaseValue": 30000.0,
+      "ShowUnit": "万字",
+      "ShowValue": "3.000000"
+    },
+    "StartTime": "Wed Jul 01 00:00:00 CST 2026",
+    "CurrCapacity": {
+      "BaseValue": 30000.0,
+      "ShowUnit": "万字",
+      "ShowValue": "3.000000"
+    },
+    "Template": {
+      "Code": "sfm_inference_public_cn_20251111100417_0506",
+      "Name": "sambert-zhigui-v1"
+    },
+    "CurrentCycleStartTime": "Sat Aug 01 00:00:00 CST 2026"
+  }
+]

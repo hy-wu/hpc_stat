@@ -1,0 +1,488 @@
+﻿模型,TemplateCode,分类,免费额度,已消耗,剩余比例,剩余比例值,到期时间,到期提示,状态,Safemode,SupportSafe,当前容量,初始容量
+qwen3.8-max,sfm_inference_public_cn_20260801134345_0451,llm,1M tokens,1M tokens,0%,0,2026-11-01,剩余 66 天,exhaust,off,True,0.0,1000000.0
+deepseek-v4-pro-0813,sfm_inference_public_cn_20260814174235_0443,llm,1M tokens,1M tokens,0%,0,2026-11-13,剩余 78 天,exhaust,off,True,0.0,1000000.0
+deepseek-v4-flash,sfm_inference_public_cn_20260424142529_0175,llm,1M tokens,42 tokens,100.0%,100.0,2026-10-21,剩余 55 天,valid,off,True,999958.0,1000000.0
+deepseek-v4-pro,sfm_inference_public_cn_20260424142445_0182,llm,1M tokens,1M tokens,0%,0,2026-10-21,剩余 55 天,exhaust,off,True,0.0,1000000.0
+deepseek-v3.2,sfm_inference_public_cn_20251202145200_0314,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+deepseek-v3.2-exp,sfm_inference_public_cn_20251111095845_0862,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+deepseek-v3.1,sfm_inference_public_cn_20251111095844_0234,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+deepseek-r1,sfm_inference_public_cn_20251111095837_0935,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+deepseek-r1-0528,sfm_inference_public_cn_20251111095838_0282,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+deepseek-r1-distill-qwen-32b,sfm_inference_public_cn_20251111095840_0103,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+deepseek-r1-distill-qwen-14b,sfm_inference_public_cn_20251111095839_0530,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+deepseek-r1-distill-qwen-7b,sfm_inference_public_cn_20251111095842_0530,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+deepseek-v3,sfm_inference_public_cn_20251111095843_0760,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+kimi-k2.7-code,sfm_inference_public_cn_20260615001005_0594,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+kimi-k2.6,sfm_inference_public_cn_20260421152429_0722,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+kimi-k2.5,sfm_inference_public_cn_20260130104302_0863,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+kimi-k2-thinking,sfm_inference_public_cn_20251112141308_0851,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+Moonshot-Kimi-K2-Instruct,sfm_inference_public_cn_20251111095817_0882,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+happyhorse-1.1-i2v,sfm_inferenceHH_public_cn_20260621213714_0685,visual,10 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,10.0,10.0
+happyhorse-1.0-i2v,sfm_inferenceHH_public_cn_20260421145700_0769,visual,10 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,10.0,10.0
+happyhorse-1.1-t2v,sfm_inferenceHH_public_cn_20260621213600_0954,visual,10 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,10.0,10.0
+happyhorse-1.0-t2v,sfm_inferenceHH_public_cn_20260421145744_0729,visual,10 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,10.0,10.0
+happyhorse-1.1-r2v,sfm_inferenceHH_public_cn_20260621213756_0665,visual,10 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,10.0,10.0
+happyhorse-1.0-r2v,sfm_inferenceHH_public_cn_20260425163749_0773,visual,10 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,10.0,10.0
+qwen-audio-3.0-realtime-flash,sfm_inferenceFunAudio_public_cn_20260708100720_0276,speech,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-audio-3.0-realtime-plus,sfm_inferenceFunAudio_public_cn_20260708100428_0058,speech,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.7-plus,sfm_inference_public_cn_20260601221800_0326,llm,1M tokens,1M tokens,0%,0,2026-10-21,剩余 55 天,exhaust,off,True,0.0,1000000.0
+qwen3.7-plus-2026-05-26,sfm_inference_public_cn_20260601221633_0349,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-image-2.0-pro,sfm_inference_public_cn_20260303093729_0647,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen-image-2.0-pro-2026-06-22,sfm_inference_public_cn_20260623165504_0562,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen-image-2.0-pro-2026-04-22,sfm_inference_public_cn_20260423170115_0502,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen-image-2.0-pro-2026-03-03,sfm_inference_public_cn_20260303093803_0951,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+wan2.7-i2v,sfm_inferenceWan_public_cn_20260326145928_0864,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.6-i2v-flash,sfm_inference_public_cn_20260115150617_0797,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.6-i2v,sfm_inference_public_cn_20251203153107_0272,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.5-i2v-preview,sfm_inference_public_cn_20251111100536_0521,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.2-animate-move,sfm_inference_public_cn_20251111100519_0047,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.2-animate-mix,sfm_inference_public_cn_20251111100517_0226,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.2-kf2v-flash,sfm_inference_public_cn_20251111100523_0541,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.2-s2v,sfm_inference_public_cn_20251111100525_0064,visual,100 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+wan2.2-i2v-flash,sfm_inference_public_cn_20251111100520_0525,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.2-i2v-plus,sfm_inference_public_cn_20251111100522_0114,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wanx2.1-kf2v-plus,sfm_inference_public_cn_20251111100555_0363,llm,200 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,200.0,200.0
+wanx2.1-i2v-turbo,sfm_inference_public_cn_20251111100552_0090,llm,200 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,200.0,200.0
+wanx2.1-i2v-plus,sfm_inference_public_cn_20251111100550_0798,llm,200 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,200.0,200.0
+wan2.7-i2v-2026-04-25,sfm_inferenceWan_public_cn_20260425131952_0231,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.7-t2v,sfm_inferenceWan_public_cn_20260326145858_0607,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.6-t2v,sfm_inference_public_cn_20251203153020_0682,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.5-t2v-preview,sfm_inference_public_cn_20251111100539_0656,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.2-t2v-plus,sfm_inference_public_cn_20251111100533_0133,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wanx2.1-t2v-plus,sfm_inference_public_cn_20251111100600_0527,llm,200 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,200.0,200.0
+wanx2.1-t2v-turbo,sfm_inference_public_cn_20251111100601_0448,llm,200 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,200.0,200.0
+wan2.7-t2v-2026-06-12,sfm_inferenceWan_public_cn_20260630215659_0596,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.7-t2v-2026-04-25,sfm_inferenceWan_public_cn_20260425131856_0216,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.7-videoedit,sfm_inferenceWan_public_cn_20260326150023_0357,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.7-image-pro,sfm_inferenceWan_public_cn_20260326145735_0813,visual,50 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.7-image,sfm_inferenceWan_public_cn_20260326145702_0892,visual,50 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.6-image,sfm_inference_public_cn_20251215150851_0061,visual,50 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.5-i2i-preview,sfm_inference_public_cn_20251111100534_0083,visual,50 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wanx2.1-imageedit,sfm_inference_public_cn_20251111100553_0813,visual,500 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,500.0,500.0
+qwen3.7-max,sfm_inference_public_cn_20260520151353_0250,llm,1M tokens,5.8K tokens,99.42%,99.42,2026-10-21,剩余 55 天,valid,off,True,994154.0,1000000.0
+qwen3.7-max-2026-06-08,sfm_inference_public_cn_20260609102633_0450,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.7-max-2026-05-20,sfm_inference_public_cn_20260521112222_0330,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.7-max-2026-05-17,sfm_inference_public_cn_20260525133452_0429,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.7-max-preview,sfm_inference_public_cn_20260525133537_0069,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.7-flash,sfm_inference_public_cn_20260721140444_0345,llm,1M tokens,0 tokens,100%,100,2026-10-23,剩余 57 天,valid,off,True,1000000.0,1000000.0
+qwen3.7-flash-2026-07-15,sfm_inference_public_cn_20260721140528_0612,llm,1M tokens,0 tokens,100%,100,2026-10-23,剩余 57 天,valid,off,True,1000000.0,1000000.0
+qwen3.6-max-preview,sfm_inference_public_cn_20260420151503_0818,llm,1M tokens,259 tokens,99.97%,99.97,2026-10-21,剩余 55 天,valid,off,True,999741.0,1000000.0
+qwen3.6-plus,sfm_inference_public_cn_20260401162352_0515,llm,1M tokens,6.7K tokens,99.33%,99.33,2026-10-21,剩余 55 天,valid,off,True,993258.0,1000000.0
+qwen3.6-plus-2026-04-02,sfm_inference_public_cn_20260401162446_0260,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-plus,sfm_inference_public_cn_20260215045049_0106,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-plus-2026-04-20,sfm_inference_public_cn_20260422160021_0243,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-plus-2026-02-15,sfm_inference_public_cn_20260215045145_0438,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-ocr,sfm_inferenceDomain_public_cn_20260603171659_0906,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-omni-plus,sfm_inferenceOmni_public_cn_20260312141323_0256,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-omni-plus-2026-03-15,sfm_inferenceOmni_public_cn_20260312141522_0098,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-omni-flash,sfm_inferenceOmni_public_cn_20260312141051_0270,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-omni-flash-2026-03-15,sfm_inferenceOmni_public_cn_20260312140947_0182,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+cosyvoice-v3.5-plus,sfm_inferenceFunAudio_public_cn_20260209195836_0362,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+cosyvoice-v3.5-flash,sfm_inferenceFunAudio_public_cn_20260209195754_0474,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+cosyvoice-v3-flash,sfm_inference_public_cn_20251114171757_0884,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+cosyvoice-v3-plus,sfm_inference_public_cn_20251111095836_0149,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+cosyvoice-v1,sfm_inference_public_cn_20251111095832_0733,speech,10K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,10000.0,10000.0
+cosyvoice-clone-v1,sfm_inference_public_cn_20251111095831_0221,speech,10K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,10000.0,10000.0
+cosyvoice-v2,sfm_inference_public_cn_20251111095833_0135,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+glm-5.2,sfm_inference_public_cn_20260615234744_0553,llm,1M tokens,1M tokens,0%,0,2026-10-21,剩余 55 天,exhaust,off,True,0.0,1000000.0
+glm-5.1,sfm_inference_public_cn_20260409105926_0489,llm,1M tokens,1M tokens,0%,0,2026-10-21,剩余 55 天,exhaust,off,True,0.0,1000000.0
+glm-5,sfm_inference_public_cn_20260212164121_0581,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+glm-4.7,sfm_inference_public_cn_20251224183032_0169,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+glm-4.6,sfm_inference_public_cn_20251111100607_0681,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+glm-4.5-air,sfm_inference_public_cn_20251111095901_0962,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+glm-4.5,sfm_inference_public_cn_20251111095900_0797,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-flash,sfm_inference_public_cn_20260221220800_0065,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-flash-2026-02-23,sfm_inference_public_cn_20260221220855_0363,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-max,sfm_inference_public_cn_20251114120219_0844,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-max-preview,sfm_inference_public_cn_20251111100308_0110,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-max-2026-01-23,sfm_inference_public_cn_20260123132155_0286,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-max-2025-09-23,sfm_inference_public_cn_20251111100305_0574,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+fun-asr-realtime-2026-02-28,sfm_inferenceFunAudio_public_cn_20260227135226_0766,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+happyhorse-1.0-video-edit,sfm_inferenceHH_public_cn_20260425163648_0705,visual,10 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,10.0,10.0
+qwen-image-2.0,sfm_inference_public_cn_20260303093533_0066,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen-image-2.0-2026-03-03,sfm_inference_public_cn_20260303093649_0333,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen3.6-27b,sfm_inference_public_cn_20260422180240_0063,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.6-35b-a3b,sfm_inference_public_cn_20260416180256_0471,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.6-flash,sfm_inference_public_cn_20260416180107_0169,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.6-flash-2026-04-16,sfm_inference_public_cn_20260416180422_0047,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+fun-asr,sfm_inference_public_cn_20251111095852_0547,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+fun-asr-mtl,sfm_inference_public_cn_20251111095855_0954,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+fun-asr-2025-11-07,sfm_inference_public_cn_20251114160110_0311,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+fun-asr-mtl-2025-08-25,sfm_inference_public_cn_20251111095856_0226,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+fun-asr-2025-08-25,sfm_inference_public_cn_20251111095853_0008,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+fun-asr-flash-2026-06-15,sfm_inferenceFunAudio_public_cn_20260610163509_0799,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+qwen-image-edit-max,sfm_inference_public_cn_20260115143351_0096,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen-image-edit-max-2026-01-16,sfm_inference_public_cn_20260115143434_0450,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen-image-plus,sfm_inference_public_cn_20251111095946_0654,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen-image,sfm_inference_public_cn_20251111095941_0407,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen-image-plus-2026-01-09,sfm_inference_public_cn_20260109110451_0338,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+wan2.7-r2v-2026-06-12,sfm_inferenceWan_public_cn_20260630215755_0062,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.7-r2v,sfm_inferenceWan_public_cn_20260326145954_0428,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.6-r2v-flash,sfm_inference_public_cn_20260129165003_0955,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.6-r2v,sfm_inference_public_cn_20251215150715_0740,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+qwen-image-max,sfm_inference_public_cn_20251230150035_0053,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen-image-max-2025-12-30,sfm_inference_public_cn_20251230150230_0323,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen-image-edit-plus-2025-12-15,sfm_inference_public_cn_20251215133021_0830,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen-image-edit-plus-2025-10-30,sfm_inference_public_cn_20251111095945_0903,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen-image-edit-plus,sfm_inference_public_cn_20251111095944_0318,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen-image-edit,sfm_inference_public_cn_20251111095943_0911,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen-vl-ocr,sfm_inference_public_cn_20251111100118_0385,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-ocr-latest,sfm_inference_public_cn_20251111100124_0697,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-ocr-2025-11-20,sfm_inference_public_cn_20251119122217_0494,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-ocr-2025-08-28,sfm_inference_public_cn_20251111100122_0750,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-ocr-2025-04-13,sfm_inference_public_cn_20251111100121_0039,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-ocr-1028,sfm_inference_public_cn_20251111100119_0864,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-mt-lite,sfm_inference_public_cn_20251124181742_0989,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-asr-flash-filetrans,sfm_inference_public_cn_20251117101810_0700,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+qwen3-asr-flash-filetrans-2025-11-17,sfm_inference_public_cn_20251117102109_0462,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+qwen-mt-flash,sfm_inference_public_cn_20251112141501_0213,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-mt-image,sfm_inference_public_cn_20251111100009_0364,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen-mt-plus,sfm_inference_public_cn_20251111100010_0871,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-mt-turbo,sfm_inference_public_cn_20251111100012_0160,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-coder-plus,sfm_inference_public_cn_20251111100256_0206,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-coder-plus-2025-09-23,sfm_inference_public_cn_20251111100259_0897,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-coder-plus-2025-07-22,sfm_inference_public_cn_20251111100258_0787,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-asr-flash,sfm_inference_public_cn_20251111100615_0957,speech,36K seconds,0 seconds,100%,100,2027-01-19,剩余 145 天,valid,off,True,36000.0,36000.0
+qwen3-asr-flash-2026-02-10,sfm_inferenceQwenAudio_public_cn_20260226151611_0597,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+qwen3-asr-flash-2025-09-08,sfm_inference_public_cn_20251113181604_0360,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+qwen3-coder-flash,sfm_inference_public_cn_20251111100254_0233,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-coder-flash-2025-07-28,sfm_inference_public_cn_20251111100255_0841,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-coder-30b-a3b-instruct,sfm_inference_public_cn_20251111100251_0353,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-coder-480b-a35b-instruct,sfm_inference_public_cn_20251111100252_0108,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-flash-character,sfm_inferenceDomain_public_cn_20260107182418_0955,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-flash-character-2026-02-26,sfm_inferenceDomain_public_cn_20260226200806_0836,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-27b,sfm_inference_public_cn_20260221221051_0019,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-122b-a10b,sfm_inference_public_cn_20260221220955_0725,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-35b-a3b,sfm_inference_public_cn_20260221221145_0963,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-397b-a17b,sfm_inference_public_cn_20260215045239_0577,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-coder-next,sfm_inference_public_cn_20260202094508_0349,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-vl-32b-thinking,sfm_inference_public_cn_20251111100331_0147,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-vl-32b-instruct,sfm_inference_public_cn_20251111100329_0015,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-vl-30b-a3b-thinking,sfm_inference_public_cn_20251111100327_0890,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-vl-30b-a3b-instruct,sfm_inference_public_cn_20251111100325_0459,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-vl-8b-thinking,sfm_inference_public_cn_20251111100335_0842,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-vl-8b-instruct,sfm_inference_public_cn_20251111100333_0948,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-vl-235b-a22b-thinking,sfm_inference_public_cn_20251111100324_0951,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-vl-235b-a22b-instruct,sfm_inference_public_cn_20251111100322_0324,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-next-80b-a3b-instruct,sfm_inference_public_cn_20251111100309_0038,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-next-80b-a3b-thinking,sfm_inference_public_cn_20251111100311_0455,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-30b-a3b-thinking-2507,sfm_inference_public_cn_20251111100242_0767,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-30b-a3b-instruct-2507,sfm_inference_public_cn_20251111100241_0294,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-235b-a22b-thinking-2507,sfm_inference_public_cn_20251111100238_0475,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-235b-a22b-instruct-2507,sfm_inference_public_cn_20251111100237_0880,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-235b-a22b,sfm_inference_public_cn_20251111100235_0956,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-30b-a3b,sfm_inference_public_cn_20251111100239_0909,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-32b,sfm_inference_public_cn_20251111100244_0090,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-8b,sfm_inference_public_cn_20251111100247_0454,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-14b,sfm_inference_public_cn_20251111100234_0034,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-tts-instruct-flash,sfm_inferenceQwenAudio_public_cn_20260203190618_0646,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen3-tts-instruct-flash-2026-01-26,sfm_inferenceQwenAudio_public_cn_20260203190705_0914,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen3-tts-vd-2026-01-26,sfm_inferenceQwenAudio_public_cn_20260203190824_0690,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen3-tts-vc-2026-01-22,sfm_inferenceQwenAudio_public_cn_20260203190747_0649,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen3-vl-plus,sfm_inference_public_cn_20251111100341_0937,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-vl-plus-2025-12-19,sfm_inference_public_cn_20251218170842_0098,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-vl-plus-2025-09-23,sfm_inference_public_cn_20251111100343_0693,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-vl-flash,sfm_inference_public_cn_20251111100337_0359,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-vl-flash-2026-01-22,sfm_inference_public_cn_20260122162814_0718,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-vl-flash-2025-10-15,sfm_inference_public_cn_20251111100340_0059,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+wan2.6-t2i,sfm_inference_public_cn_20251215150808_0286,visual,50 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.5-t2i-preview,sfm_inference_public_cn_20251111100537_0146,visual,50 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.2-t2i-plus,sfm_inference_public_cn_20251111100530_0477,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+wan2.2-t2i-flash,sfm_inference_public_cn_20251111100528_0684,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+wanx2.0-t2i-turbo,sfm_inference_public_cn_20251111100549_0427,llm,500 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,500.0,500.0
+wanx2.1-t2i-turbo,sfm_inference_public_cn_20251111100558_0753,llm,500 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,500.0,500.0
+wanx2.1-t2i-plus,sfm_inference_public_cn_20251111100557_0174,llm,500 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,500.0,500.0
+wanx-v1,sfm_inference_public_cn_20251111100547_0615,llm,500 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,500.0,500.0
+qwen-voice-design,sfm_inference_public_cn_20251215144706_0843,speech,10 units,0 units,100%,100,2026-10-21,剩余 55 天,valid,off,True,10.0,10.0
+qwen3-livetranslate-flash,sfm_inference_public_cn_20251203113902_0341,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-livetranslate-flash-2025-12-01,sfm_inference_public_cn_20251203113958_0024,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-omni-flash,sfm_inference_public_cn_20251111100314_0296,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-omni-flash-2025-12-01,sfm_inference_public_cn_20251203113657_0450,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-omni-flash-2025-09-15,sfm_inference_public_cn_20251111100315_0180,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-voice-enrollment,sfm_inference_public_cn_20251127154232_0058,speech,1K units,0 units,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000.0,1000.0
+qwen3-omni-30b-a3b-captioner,sfm_inference_public_cn_20251111100312_0352,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-flash,sfm_inference_public_cn_20251111095939_0977,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-flash-2025-07-28,sfm_inference_public_cn_20251111095940_0877,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-tts,sfm_inference_public_cn_20251111100045_0486,speech,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-tts-latest,sfm_inference_public_cn_20251111100049_0609,speech,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-tts-2025-05-22,sfm_inference_public_cn_20251111100048_0153,speech,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-tts-2025-04-10,sfm_inference_public_cn_20251111100046_0067,speech,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+wanx2.1-vace-plus,sfm_inference_public_cn_20251111100603_0638,llm,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+qwen2.5-omni-7b,sfm_inference_public_cn_20251111100219_0796,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+MiniMax-M2.5,sfm_inference_public_cn_20260221112348_0087,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+MiniMax-M2.1,sfm_inference_public_cn_20260123092603_0882,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-max,sfm_inference_public_cn_20251111100106_0187,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-plus,sfm_inference_public_cn_20251111100125_0157,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-plus,sfm_inference_public_cn_20251111100022_0985,llm,1M tokens,21 tokens,100.0%,100.0,2026-10-21,剩余 55 天,valid,off,True,999979.0,1000000.0
+qwen-plus-latest,sfm_inference_public_cn_20251111100610_0737,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-plus-2025-12-01,sfm_inference_public_cn_20251128181912_0683,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-plus-2025-09-11,sfm_inference_public_cn_20251111100042_0954,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-plus-2025-07-28,sfm_inference_public_cn_20251111100041_0127,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-plus-2025-07-14,sfm_inference_public_cn_20251111100040_0610,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-plus-2025-04-28,sfm_inference_public_cn_20251111100038_0919,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-plus-2025-01-25,sfm_inference_public_cn_20251111100037_0872,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-plus-0112,sfm_inference_public_cn_20251111100023_0927,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-plus-1220,sfm_inference_public_cn_20251111100035_0700,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+wanx-style-repaint-v1,sfm_inference_public_cn_20251111100546_0068,llm,500 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,500.0,500.0
+wanx-sketch-to-image-lite,sfm_inference_public_cn_20251111100544_0301,visual,500 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,500.0,500.0
+wanx-background-generation-v2,sfm_inference_public_cn_20251111100541_0180,llm,500 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,500.0,500.0
+gui-plus,sfm_inference_public_cn_20251126093933_0584,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+gui-plus-2026-02-26,sfm_inference_public_cn_20260304151525_0751,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-turbo,sfm_inference_public_cn_20251111100056_0905,llm,1M tokens,24 tokens,100.0%,100.0,2026-10-21,剩余 55 天,valid,off,True,999976.0,1000000.0
+qvq-plus,sfm_inference_public_cn_20251111095928_0601,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwq-plus,sfm_inference_public_cn_20251111100348_0193,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-long,sfm_inference_public_cn_20251111095947_0841,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-long-latest,sfm_inference_public_cn_20251111095950_0177,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-long-2025-01-25,sfm_inference_public_cn_20251111095949_0825,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-plus-character,sfm_inference_public_cn_20251111100044_0534,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-omni-turbo,sfm_inference_public_cn_20251111100013_0723,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-omni-turbo-latest,sfm_inference_public_cn_20251111100017_0182,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-omni-turbo-2025-03-26,sfm_inference_public_cn_20251111100016_0255,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-omni-turbo-2025-01-19,sfm_inference_public_cn_20251111100014_0421,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-coder-plus,sfm_inference_public_cn_20251111095932_0180,llm,1M tokens,28 tokens,100.0%,100.0,2026-10-21,剩余 55 天,valid,off,True,999972.0,1000000.0
+qwen-math-turbo,sfm_inference_public_cn_20251111095956_0106,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-math-plus,sfm_inference_public_cn_20251111095951_0941,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-math-plus-latest,sfm_inference_public_cn_20251111095955_0868,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-math-plus-0919,sfm_inference_public_cn_20251111095954_0217,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-math-plus-0816,sfm_inference_public_cn_20251111095952_0831,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-max,sfm_inference_public_cn_20251111100000_0962,llm,1M tokens,36 tokens,100.0%,100.0,2026-10-21,剩余 55 天,valid,off,True,999964.0,1000000.0
+qwen-coder-turbo,sfm_inference_public_cn_20251111095936_0366,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+tongyi-xiaomi-analysis-flash,sfm_inferenceDomain_public_cn_20260107194036_0858,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+tongyi-xiaomi-analysis-pro,sfm_inferenceDomain_public_cn_20260107193954_0017,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+z-image-turbo,sfm_inference_public_cn_20251218122749_0900,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+aitryon-plus,sfm_inference_public_cn_20251111095823_0647,llm,400 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,400.0,400.0
+sambert-zhiyuan-v1,sfm_inference_public_cn_20251111100454_0602,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhinan-v1,sfm_inference_public_cn_20251111100433_0122,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhigui-v1,sfm_inference_public_cn_20251111100417_0506,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhichu-v1,sfm_inference_public_cn_20251111100411_0175,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-hanna-v1,sfm_inference_public_cn_20251111100405_0531,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-clara-v1,sfm_inference_public_cn_20251111100400_0635,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-eva-v1,sfm_inference_public_cn_20251111100404_0152,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-cally-v1,sfm_inference_public_cn_20251111100356_0620,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-brian-v1,sfm_inference_public_cn_20251111100355_0931,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhiming-v1,sfm_inference_public_cn_20251111100428_0572,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhina-v1,sfm_inference_public_cn_20251111100431_0372,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-beth-v1,sfm_inference_public_cn_20251111100352_0926,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-camila-v1,sfm_inference_public_cn_20251111100358_0970,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-cindy-v1,sfm_inference_public_cn_20251111100359_0999,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-donna-v1,sfm_inference_public_cn_20251111100402_0923,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-perla-v1,sfm_inference_public_cn_20251111100408_0031,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhide-v1,sfm_inference_public_cn_20251111100414_0922,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhijia-v1,sfm_inference_public_cn_20251111100420_0080,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhilun-v1,sfm_inference_public_cn_20251111100423_0883,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhiqian-v1,sfm_inference_public_cn_20251111100436_0157,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhishu-v1,sfm_inference_public_cn_20251111100439_0131,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhistella-v1,sfm_inference_public_cn_20251111100442_0436,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-indah-v1,sfm_inference_public_cn_20251111100407_0270,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-waan-v1,sfm_inference_public_cn_20251111100410_0271,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhida-v1,sfm_inference_public_cn_20251111100413_0086,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhifei-v1,sfm_inference_public_cn_20251111100416_0183,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhihao-v1,sfm_inference_public_cn_20251111100419_0782,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhijing-v1,sfm_inference_public_cn_20251111100422_0700,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhimiao-emo-v1,sfm_inference_public_cn_20251111100426_0349,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhimao-v1,sfm_inference_public_cn_20251111100425_0180,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhimo-v1,sfm_inference_public_cn_20251111100430_0719,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhiqi-v1,sfm_inference_public_cn_20251111100434_0721,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhiru-v1,sfm_inference_public_cn_20251111100437_0853,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhishuo-v1,sfm_inference_public_cn_20251111100440_0535,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhiting-v1,sfm_inference_public_cn_20251111100443_0409,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhixiang-v1,sfm_inference_public_cn_20251111100447_0280,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhiwei-v1,sfm_inference_public_cn_20251111100445_0847,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhixiao-v1,sfm_inference_public_cn_20251111100448_0944,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhiya-v1,sfm_inference_public_cn_20251111100450_0022,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhiying-v1,sfm_inference_public_cn_20251111100453_0671,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhiye-v1,sfm_inference_public_cn_20251111100451_0495,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-zhiyue-v1,sfm_inference_public_cn_20251111100456_0744,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+sambert-betty-v1,sfm_inference_public_cn_20251111100353_0441,llm,30K chars,0 chars,100%,100,2099-01-01,永不过期,valid,off,True,30000.0,30000.0
+paraformer-8k-v2,sfm_inference_public_cn_20251111095913_0518,llm,36K seconds,0 seconds,100%,100,2099-01-01,永不过期,valid,off,True,36000.0,36000.0
+paraformer-8k-v1,sfm_inference_public_cn_20251111095912_0797,llm,36K seconds,0 seconds,100%,100,2099-01-01,永不过期,valid,off,True,36000.0,36000.0
+paraformer-v2,sfm_inference_public_cn_20251111095921_0462,llm,36K seconds,0 seconds,100%,100,2099-01-01,永不过期,valid,off,True,36000.0,36000.0
+paraformer-v1,sfm_inference_public_cn_20251111095920_0920,llm,36K seconds,0 seconds,100%,100,2099-01-01,永不过期,valid,off,True,36000.0,36000.0
+paraformer-mtl-v1,sfm_inference_public_cn_20251111095914_0674,llm,36K seconds,0 seconds,100%,100,2099-01-01,永不过期,valid,off,True,36000.0,36000.0
+wordart-semantic,sfm_inference_public_cn_20251111100604_0742,llm,500 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,500.0,500.0
+wordart-texture,sfm_inference_public_cn_20251111100606_0134,llm,500 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,500.0,500.0
+gummy-chat-v1,sfm_inference_public_cn_20251111095904_0701,llm,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+emoji-v1,sfm_inference_public_cn_20251111095850_0718,llm,500 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,500.0,500.0
+aitryon-parsing-v1,sfm_inference_public_cn_20251111095821_0392,llm,800 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,800.0,800.0
+animate-anyone-gen2,sfm_inference_public_cn_20251111095827_0114,llm,1.8K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,1800.0,1800.0
+tongyi-intent-detect-v3,sfm_inference_public_cn_20251111100512_0921,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+liveportrait,sfm_inference_public_cn_20251111095907_0692,llm,1.8K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,1800.0,1800.0
+animate-anyone-template-gen2,sfm_inference_public_cn_20251111095829_0739,llm,1.8K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,1800.0,1800.0
+videoretalk,sfm_inference_public_cn_20251111100515_0883,llm,1.8K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,1800.0,1800.0
+emo-v1,sfm_inference_public_cn_20251111095848_0122,llm,1.8K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,1800.0,1800.0
+aitryon-refiner,sfm_inference_public_cn_20251111095825_0203,llm,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+aitryon,sfm_inference_public_cn_20251111095820_0678,llm,400 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,400.0,400.0
+image-out-painting,sfm_inference_public_cn_20251111095906_0555,visual,500 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,500.0,500.0
+video-style-transform,sfm_inference_public_cn_20251111100514_0998,llm,600 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,600.0,600.0
+qvq-max,sfm_inference_public_cn_20251111095923_0109,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-tts-flash,sfm_inference_public_cn_20251111100616_0019,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen3-tts-flash-2025-11-27,sfm_inference_public_cn_20251126092035_0586,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen3-tts-flash-2025-09-18,sfm_inference_public_cn_20251111100618_0528,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+animate-anyone-detect-gen2,sfm_inference_public_cn_20251111095826_0308,llm,200 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,200.0,200.0
+avatar-dialog,sfm_inference_public_cn_20251111095830_0819,llm,600 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,600.0,600.0
+cosyvoice-v3,sfm_inference_public_cn_20251111095835_0073,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+deepseek-v4-flash-0731,sfm_inference_public_cn_20260731232750_0117,llm,1M tokens,0 tokens,100%,100,2026-10-31,剩余 65 天,valid,off,True,1000000.0,1000000.0
+emo-detect-v1,sfm_inference_public_cn_20251111095846_0079,llm,200 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,200.0,200.0
+emoji-detect-v1,sfm_inference_public_cn_20251111095849_0038,llm,200 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,200.0,200.0
+fun-asr-flash-8k-realtime,sfm_inferenceFunAudio_public_cn_20260203105201_0333,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+fun-asr-flash-8k-realtime-2026-01-28,sfm_inferenceFunAudio_public_cn_20260203105305_0267,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+fun-asr-mtl-realtime,sfm_inference_public_cn_20251209170048_0618,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+fun-asr-mtl-realtime-2025-12-10,sfm_inference_public_cn_20251209170212_0431,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+fun-asr-realtime,sfm_inference_public_cn_20251111095857_0536,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+fun-asr-realtime-2025-09-15,sfm_inference_public_cn_20251111095859_0964,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+fun-asr-realtime-2025-11-07,sfm_inference_public_cn_20251114160220_0980,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+fun-cosyvoice-v3.6-flash,sfm_inferenceFunAudio_public_cn_20260706171231_0455,speech,10K chars,0 chars,100%,100,2027-01-19,剩余 145 天,valid,off,True,10000.0,10000.0
+fun-cosyvoice-v3.6-plus,sfm_inferenceFunAudio_public_cn_20260706171326_0435,speech,10K chars,0 chars,100%,100,2027-01-19,剩余 145 天,valid,off,True,10000.0,10000.0
+fun-music-preview,sfm_inferenceFunAudio_public_cn_20260528112105_0966,speech,10K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+fun-music-v1,sfm_inferenceFunAudio_public_cn_20260427140415_0350,speech,10K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+gte-rerank-v2,sfm_inference_public_cn_20251111095903_0243,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+gummy-realtime-v1,sfm_inference_public_cn_20251111095905_0407,llm,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+kimi-k3,sfm_inference_public_cn_20260818202732_0281,llm,1M tokens,0 tokens,100%,100,2026-11-18,剩余 83 天,valid,off,True,1000000.0,1000000.0
+liveportrait-detect,sfm_inference_public_cn_20251111095908_0333,llm,200 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,200.0,200.0
+multimodal-embedding-v1,sfm_inference_public_cn_20260116174318_0110,embedding,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+opennlu-v1,sfm_inference_public_cn_20251111095909_0040,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+paraformer-8k-lite-v1,sfm_inference_public_cn_20251111095910_0691,llm,36K seconds,0 seconds,100%,100,2099-01-01,永不过期,valid,off,True,36000.0,36000.0
+paraformer-realtime-8k-v1,sfm_inference_public_cn_20251111095915_0471,llm,36K seconds,0 seconds,100%,100,2099-01-01,永不过期,valid,off,True,36000.0,36000.0
+paraformer-realtime-8k-v2,sfm_inference_public_cn_20251111095916_0007,llm,36K seconds,0 seconds,100%,100,2099-01-01,永不过期,valid,off,True,36000.0,36000.0
+paraformer-realtime-v1,sfm_inference_public_cn_20251111095917_0019,llm,36K seconds,0 seconds,100%,100,2099-01-01,永不过期,valid,off,True,36000.0,36000.0
+paraformer-realtime-v2,sfm_inference_public_cn_20251111095918_0241,llm,36K seconds,0 seconds,100%,100,2099-01-01,永不过期,valid,off,True,36000.0,36000.0
+qvq-72b-preview,sfm_inference_public_cn_20251111095922_0159,llm,100K tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,100000.0,100000.0
+qvq-max-2025-03-25,sfm_inference_public_cn_20251111095924_0177,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qvq-max-2025-05-15,sfm_inference_public_cn_20251111095926_0725,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qvq-max-latest,sfm_inference_public_cn_20251111095927_0274,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qvq-plus-2025-05-15,sfm_inference_public_cn_20251111095929_0397,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qvq-plus-latest,sfm_inference_public_cn_20251111095931_0513,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-audio-3.0-asr-flash,sfm_inferenceFunAudio_public_cn_20260722173741_0131,speech,36K seconds,0 seconds,100%,100,2026-10-27,剩余 61 天,valid,off,True,36000.0,36000.0
+qwen-audio-3.0-asr-flash-filetrans,sfm_inferenceFunAudio_public_cn_20260722174011_0381,speech,36K seconds,0 seconds,100%,100,2026-10-27,剩余 61 天,valid,off,True,36000.0,36000.0
+qwen-audio-3.0-asr-flash-streaming,sfm_inferenceFunAudio_public_cn_20260722173907_0540,speech,36K seconds,0 seconds,100%,100,2026-10-27,剩余 61 天,valid,off,True,36000.0,36000.0
+qwen-audio-3.0-tts-flash,sfm_inferenceFunAudio_public_cn_20260707193141_0312,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen-audio-3.0-tts-plus,sfm_inferenceFunAudio_public_cn_20260707193053_0888,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen-coder-plus-1106,sfm_inference_public_cn_20251111095933_0158,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-coder-plus-latest,sfm_inference_public_cn_20251111095934_0964,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-coder-turbo-0919,sfm_inference_public_cn_20251111095937_0993,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-coder-turbo-latest,sfm_inference_public_cn_20251111095938_0203,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-image-3.0,sfm_inference_public_cn_20260803165530_0100,visual,10 images,0 images,100%,100,2026-11-03,剩余 68 天,valid,off,True,10.0,10.0
+qwen-image-3.0-pro,sfm_inference_public_cn_20260803165612_0647,visual,10 images,0 images,100%,100,2026-11-03,剩余 68 天,valid,off,True,10.0,10.0
+qwen-image-edit-plus-2025-12-01,sfm_inference_public_cn_20251203151013_0559,visual,100 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,100.0,100.0
+qwen-math-turbo-0919,sfm_inference_public_cn_20251111095957_0666,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-math-turbo-latest,sfm_inference_public_cn_20251111095959_0461,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-max-0403,sfm_inference_public_cn_20251111100002_0589,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-max-0428,sfm_inference_public_cn_20251111100003_0740,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-max-0919,sfm_inference_public_cn_20251111100005_0225,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-max-1201,sfm_inference_public_cn_20251111100007_0722,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-max-2025-01-25,sfm_inference_public_cn_20251111100008_0631,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-max-latest,sfm_inference_public_cn_20251111100609_0237,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-omni-turbo-realtime,sfm_inference_public_cn_20251111100018_0959,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-omni-turbo-realtime-2025-05-08,sfm_inference_public_cn_20251111100019_0800,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-omni-turbo-realtime-latest,sfm_inference_public_cn_20251111100021_0194,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-plus-0723,sfm_inference_public_cn_20251111100025_0376,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-plus-0806,sfm_inference_public_cn_20251111100029_0104,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-plus-0919,sfm_inference_public_cn_20251111100030_0373,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-plus-1125,sfm_inference_public_cn_20251111100032_0151,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-plus-1127,sfm_inference_public_cn_20251111100034_0372,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-tts-realtime,sfm_inference_public_cn_20251111100051_0507,speech,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-tts-realtime-2025-07-15,sfm_inference_public_cn_20251111100052_0670,speech,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-tts-realtime-latest,sfm_inference_public_cn_20251111100053_0625,speech,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-tts-vc-realtime-2025-08-20,sfm_inference_public_cn_20251111100055_0124,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen-turbo-0624,sfm_inference_public_cn_20251111100058_0176,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-turbo-0919,sfm_inference_public_cn_20251111100059_0532,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-turbo-1101,sfm_inference_public_cn_20251111100100_0291,llm,10M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000000.0,10000000.0
+qwen-turbo-2025-02-11,sfm_inference_public_cn_20251111100102_0117,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-turbo-2025-04-28,sfm_inference_public_cn_20251111100103_0116,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-turbo-2025-07-15,sfm_inference_public_cn_20251111100105_0629,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-turbo-latest,sfm_inference_public_cn_20251111100612_0459,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-max-0809,sfm_inference_public_cn_20251111100107_0895,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-max-1030,sfm_inference_public_cn_20251111100109_0938,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-max-1119,sfm_inference_public_cn_20251111100110_0621,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-max-1230,sfm_inference_public_cn_20251111100111_0313,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-max-2025-01-25,sfm_inference_public_cn_20251111100112_0466,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-max-2025-04-02,sfm_inference_public_cn_20251111100114_0654,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-max-2025-04-08,sfm_inference_public_cn_20251111100115_0189,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-max-2025-08-13,sfm_inference_public_cn_20251111100117_0888,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-max-latest,sfm_inference_public_cn_20251111100613_0970,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-plus-0102,sfm_inference_public_cn_20251111100127_0982,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-plus-0809,sfm_inference_public_cn_20251111100128_0189,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-plus-2025-01-25,sfm_inference_public_cn_20251111100130_0614,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-plus-2025-05-07,sfm_inference_public_cn_20251111100131_0380,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-plus-2025-08-15,sfm_inference_public_cn_20251111100132_0865,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen-vl-plus-latest,sfm_inference_public_cn_20251111100134_0884,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen1.5-110b-chat,sfm_inference_public_cn_20251111100136_0131,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen1.5-14b-chat,sfm_inference_public_cn_20251111100138_0752,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen1.5-32b-chat,sfm_inference_public_cn_20251111100139_0069,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen1.5-72b-chat,sfm_inference_public_cn_20251111100141_0430,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen1.5-7b-chat,sfm_inference_public_cn_20251111100142_0945,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2-57b-a14b-instruct,sfm_inference_public_cn_20251111100144_0128,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2-72b-instruct,sfm_inference_public_cn_20251111100145_0461,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2-7b-instruct,sfm_inference_public_cn_20251111100147_0552,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2-vl-72b-instruct,sfm_inference_public_cn_20251111100149_0580,visual,100K tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,100000.0,100000.0
+qwen2.5-14b-instruct,sfm_inference_public_cn_20251111100150_0965,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2.5-14b-instruct-1m,sfm_inference_public_cn_20251111100155_0914,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2.5-32b-instruct,sfm_inference_public_cn_20251111100157_0265,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2.5-3b-instruct,sfm_inference_public_cn_20251111100159_0825,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2.5-72b-instruct,sfm_inference_public_cn_20251111100201_0736,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2.5-7b-instruct,sfm_inference_public_cn_20251111100202_0915,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2.5-7b-instruct-1m,sfm_inference_public_cn_20251111100207_0650,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2.5-coder-14b-instruct,sfm_inference_public_cn_20251111100208_0504,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2.5-coder-32b-instruct,sfm_inference_public_cn_20251111100213_0553,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2.5-coder-7b-instruct,sfm_inference_public_cn_20251111100214_0402,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2.5-math-72b-instruct,sfm_inference_public_cn_20251111100216_0877,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2.5-math-7b-instruct,sfm_inference_public_cn_20251111100218_0083,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2.5-vl-32b-instruct,sfm_inference_public_cn_20251111100221_0652,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2.5-vl-3b-instruct,sfm_inference_public_cn_20251111100222_0360,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2.5-vl-72b-instruct,sfm_inference_public_cn_20251111100224_0821,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2.5-vl-7b-instruct,sfm_inference_public_cn_20251111100225_0371,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen2.5-vl-embedding,sfm_inference_public_cn_20251111100229_0972,embedding,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-0.6b,sfm_inference_public_cn_20251111100231_0661,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-1.7b,sfm_inference_public_cn_20251111100232_0033,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-4b,sfm_inference_public_cn_20251111100245_0920,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-asr-flash-realtime,sfm_inference_public_cn_20251111100248_0726,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+qwen3-asr-flash-realtime-2025-10-27,sfm_inference_public_cn_20251111100249_0084,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+qwen3-asr-flash-realtime-2026-02-10,sfm_inferenceQwenAudio_public_cn_20260209205429_0735,speech,36K seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,36000.0,36000.0
+qwen3-livetranslate-flash-realtime,sfm_inference_public_cn_20251111100301_0247,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-livetranslate-flash-realtime-2025-09-22,sfm_inference_public_cn_20251111100302_0268,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-max-2025-10-30,sfm_inference_public_cn_20251111100307_0803,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-omni-flash-realtime,sfm_inference_public_cn_20251111100317_0051,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-omni-flash-realtime-2025-09-15,sfm_inference_public_cn_20251111100318_0292,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-omni-flash-realtime-2025-12-01,sfm_inference_public_cn_20251203113759_0030,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-rerank,sfm_inference_public_cn_20251111100319_0165,llm,1M tokens,64.6K tokens,93.54%,93.54,2026-10-21,剩余 55 天,valid,off,True,935418.0,1000000.0
+qwen3-tts-flash-realtime,sfm_inference_public_cn_20251111100321_0644,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen3-tts-flash-realtime-2025-09-18,sfm_inference_public_cn_20251111100619_0887,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen3-tts-flash-realtime-2025-11-27,sfm_inference_public_cn_20251126091909_0521,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen3-tts-instruct-flash-realtime,sfm_inferenceQwenAudio_public_cn_20260129184829_0752,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen3-tts-instruct-flash-realtime-2026-01-22,sfm_inferenceQwenAudio_public_cn_20260129184914_0224,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen3-tts-vc-realtime-2025-11-27,sfm_inference_public_cn_20251126092134_0601,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen3-tts-vc-realtime-2026-01-15,sfm_inference_public_cn_20260114110449_0699,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen3-tts-vd-realtime-2025-12-16,sfm_inference_public_cn_20251215144839_0484,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen3-tts-vd-realtime-2026-01-15,sfm_inference_public_cn_20260114110625_0475,speech,10K chars,0 chars,100%,100,2026-10-21,剩余 55 天,valid,off,True,10000.0,10000.0
+qwen3-vl-embedding,sfm_inferenceVector_public_cn_20260123112603_0027,embedding,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3-vl-rerank,sfm_inferenceVector_public_cn_20260128162843_0274,visual,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-livetranslate-flash-realtime,sfm_inferenceDomain_public_cn_20260515224929_0564,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-livetranslate-flash-realtime-2026-05-19,sfm_inferenceDomain_public_cn_20260515225010_0352,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-omni-flash-realtime,sfm_inferenceOmni_public_cn_20260312140644_0053,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-omni-flash-realtime-2026-03-15,sfm_inferenceOmni_public_cn_20260312141210_0741,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-omni-plus-realtime,sfm_inferenceOmni_public_cn_20260312141416_0282,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.5-omni-plus-realtime-2026-03-15,sfm_inferenceOmni_public_cn_20260312111548_0370,multimodal,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+Qwen3.7-通用文本向量,sfm_inferenceVector_public_cn_20260625153940_0723,embedding,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwen3.8-2.4t-a95b,sfm_inference_public_cn_20260812114106_0813,llm,1M tokens,0 tokens,100%,100,2026-11-12,剩余 77 天,valid,off,True,1000000.0,1000000.0
+qwen3.8-27b,sfm_inference_public_cn_20260817160332_0018,llm,1M tokens,0 tokens,100%,100,2026-11-18,剩余 83 天,valid,off,True,1000000.0,1000000.0
+qwen3.8-flash,sfm_inference_public_cn_20260825205539_0674,llm,1M tokens,0 tokens,100%,100,2026-11-25,剩余 90 天,valid,off,True,1000000.0,1000000.0
+qwq-32b,sfm_inference_public_cn_20251111100344_0020,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwq-32b-preview,sfm_inference_public_cn_20251111100346_0236,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwq-plus-2025-03-05,sfm_inference_public_cn_20251111100349_0895,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+qwq-plus-latest,sfm_inference_public_cn_20251111100351_0980,llm,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+sensevoice-v1,sfm_inference_public_cn_20251111100458_0158,speech,36K seconds,0 seconds,100%,100,2099-01-01,永不过期,valid,off,True,36000.0,36000.0
+text-embedding-async-v1,sfm_inference_public_cn_20251111100459_0175,embedding,20M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,20000000.0,20000000.0
+text-embedding-async-v2,sfm_inference_public_cn_20251111100501_0742,embedding,20M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,20000000.0,20000000.0
+text-embedding-v1,sfm_inference_public_cn_20251111100503_0212,embedding,500K tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,500000.0,500000.0
+text-embedding-v2,sfm_inference_public_cn_20251111100504_0331,embedding,500K tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,500000.0,500000.0
+text-embedding-v3,sfm_inference_public_cn_20251111100506_0914,embedding,500K tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,500000.0,500000.0
+text-embedding-v4,sfm_inference_public_cn_20251111100508_0121,embedding,1M tokens,1M tokens,0%,0,2026-10-21,剩余 55 天,exhaust,off,True,0.0,1000000.0
+tongyi-embedding-vision-flash,sfm_inference_public_cn_20251111100509_0473,embedding,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+tongyi-embedding-vision-flash-2026-03-06,sfm_inferenceVector_public_cn_20260318183038_0123,embedding,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+tongyi-embedding-vision-plus,sfm_inference_public_cn_20251111100511_0527,embedding,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+tongyi-embedding-vision-plus-2026-03-06,sfm_inferenceVector_public_cn_20260318183601_0429,embedding,1M tokens,0 tokens,100%,100,2026-10-21,剩余 55 天,valid,off,True,1000000.0,1000000.0
+wan2.2-dancer,sfm_inferenceWan_public_cn_20260330163400_0161,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan2.2-s2v-detect,sfm_inference_public_cn_20251111100526_0813,visual,200 images,0 images,100%,100,2026-10-21,剩余 55 天,valid,off,True,200.0,200.0
+wan2.2-t2v-flash,sfm_inference_public_cn_20251111100532_0359,visual,50 seconds,0 seconds,100%,100,2026-10-21,剩余 55 天,valid,off,True,50.0,50.0
+wan3.0-video,sfm_inferenceWan_public_cn_20260805184003_0613,visual,30 seconds,0 seconds,100%,100,2026-11-05,剩余 70 天,valid,off,True,30.0,30.0
+wan3.0-video-prime,sfm_inferenceWan_public_cn_20260820154840_0163,visual,30 seconds,0 seconds,100%,100,2026-11-21,剩余 86 天,valid,off,True,30.0,30.0
