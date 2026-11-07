@@ -206,6 +206,7 @@ function attachBenchData(
       );
       if (hit) {
         p.raw.bench = { ...(p.raw.bench as Record<string, unknown> | undefined), ...hit[1].bench };
+        if (hit[1].effort) p.raw.effort = hit[1].effort;
         attached.add(hit[0]);
         break;
       }
@@ -267,6 +268,7 @@ export interface ChartPreset {
   label: string;
   x: string;
   y: string;
+  group?: string;
   colorField?: string;
 }
 

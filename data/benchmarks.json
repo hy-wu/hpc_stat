@@ -3442,67 +3442,80 @@
     {
       "label": "FP Fig5 · 成本 vs Pass@1",
       "x": "bench.frontierphysics.res.costUSD.0",
-      "y": "bench.frontierphysics.pass1"
+      "y": "bench.frontierphysics.pass1",
+      "group": "FrontierPhysics"
     },
     {
       "label": "FP Fig5 · 时长 vs Pass@1",
       "x": "bench.frontierphysics.res.timeH.0",
-      "y": "bench.frontierphysics.pass1"
+      "y": "bench.frontierphysics.pass1",
+      "group": "FrontierPhysics"
     },
     {
       "label": "FP Fig15 · 步数 vs Pass@1",
       "x": "bench.frontierphysics.res.steps.0",
-      "y": "bench.frontierphysics.pass1"
+      "y": "bench.frontierphysics.pass1",
+      "group": "FrontierPhysics"
     },
     {
       "label": "FP Fig16 · 输出tokens vs Pass@1",
       "x": "bench.frontierphysics.res.outTokensM.0",
-      "y": "bench.frontierphysics.pass1"
+      "y": "bench.frontierphysics.pass1",
+      "group": "FrontierPhysics"
     },
     {
       "label": "Vals TBS · 每题成本 vs pass@1",
       "x": "bench.tbsvals.costPerTestUSD",
-      "y": "bench.tbsvals.score"
+      "y": "bench.tbsvals.score",
+      "group": "TBS (Vals)"
     },
     {
       "label": "Vals TBS · 每题tokens vs pass@1",
       "x": "bench.tbsvals.tokensPerTestM",
-      "y": "bench.tbsvals.score"
+      "y": "bench.tbsvals.score",
+      "group": "TBS (Vals)"
     },
     {
       "label": "FCS2 · 单次成本 vs Pass rate",
       "x": "bench.fcs2.costRunUSD",
-      "y": "bench.fcs2.pass"
+      "y": "bench.fcs2.pass",
+      "group": "FrontierCS 2"
     },
     {
       "label": "FCS2 · 单次成本 vs FCI",
       "x": "bench.fcs2.costRunUSD",
-      "y": "bench.fcs2.fci"
+      "y": "bench.fcs2.fci",
+      "group": "FrontierCS 2"
     },
     {
       "label": "ASB · 总成本 vs Resolution",
       "x": "bench.asb01.costUSD",
-      "y": "bench.asb01.score"
+      "y": "bench.asb01.score",
+      "group": "ASB 0.1"
     },
     {
       "label": "ASB · Agent耗时 vs Resolution",
       "x": "bench.asb01.agentMin",
-      "y": "bench.asb01.score"
+      "y": "bench.asb01.score",
+      "group": "ASB 0.1"
     },
     {
       "label": "FC Fig2 · Avg.Score vs PassRate",
       "x": "bench.frontierchallenge.avgScore",
-      "y": "bench.frontierchallenge.pass"
+      "y": "bench.frontierchallenge.pass",
+      "group": "FrontierChallenge"
     },
     {
       "label": "LabBench · 中位耗时 vs 通过率",
       "x": "bench.labbench.medianMin",
-      "y": "bench.labbench.score"
+      "y": "bench.labbench.score",
+      "group": "LabBench"
     },
     {
       "label": "FCS v1.0 · tokens vs Score",
       "x": "bench.fcs10agents.avgTokensM",
-      "y": "bench.fcs10agents.score"
+      "y": "bench.fcs10agents.score",
+      "group": "FrontierCS v1"
     }
   ]
 }

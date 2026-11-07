@@ -36,6 +36,7 @@ interface ChartState {
   labelMode: "auto" | "all" | "off";
   renderedLabels: string[][];
   reference: ReferenceLayer;
+  effortLinks: Array<{ x1: number; y1: number; x2: number; y2: number }>;
 }
 
 interface PlotDatum {
@@ -68,7 +69,10 @@ const state: ChartState = {
   labelMode: "auto",
   renderedLabels: [],
   reference: { visible: false, xCut: null, yCut: null, paretoCount: 0 },
+  effortLinks: [],
 };
+
+const EFFORT_RANK: Record<string, number> = { "": 0, low: 1, medium: 2, high: 3, max: 4, xhigh: 5 };
 
 const COLORS = [
   "#111827", "#d46a3d", "#7463d1", "#1677f2", "#1592e6", "#34a853",
@@ -318,7 +322,40 @@ const pointLabelsPlugin = {
   },
 };
 
-Chart.register(...registerables, referenceLayerPlugin, pointLabelsPlugin);
+const effortLinksPlugin = {
+  id: "effort-links",
+  afterDatasetsDraw(chart: Chart) {
+    if (!state.effortLinks.length) return;
+    const { ctx, scales } = chart;
+    const theme = getThemeColors();
+    ctx.save();
+    ctx.strokeStyle = theme.text;
+    ctx.fillStyle = theme.text;
+    ctx.globalAlpha = 0.55;
+    ctx.lineWidth = 1.1;
+    ctx.setLineDash([3, 4]);
+    for (const l of state.effortLinks) {
+      const x1 = scales.x.getPixelForValue(l.x1);
+      const y1 = scales.y.getPixelForValue(l.y1);
+      const x2 = scales.x.getPixelForValue(l.x2);
+      const y2 = scales.y.getPixelForValue(l.y2);
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.stroke();
+      const ang = Math.atan2(y2 - y1, x2 - x1);
+      ctx.beginPath();
+      ctx.moveTo(x2, y2);
+      ctx.lineTo(x2 - 7 * Math.cos(ang - 0.42), y2 - 7 * Math.sin(ang - 0.42));
+      ctx.lineTo(x2 - 7 * Math.cos(ang + 0.42), y2 - 7 * Math.sin(ang + 0.42));
+      ctx.closePath();
+      ctx.fill();
+    }
+    ctx.restore();
+  },
+};
+
+Chart.register(...registerables, referenceLayerPlugin, pointLabelsPlugin, effortLinksPlugin);
 
 function renderChart() {
   const canvas = q<HTMLCanvasElement>("chartCanvas");
@@ -352,6 +389,29 @@ function renderChart() {
   state.reference = { visible: referenceVisible, xCut, yCut, paretoCount: pareto.length };
 
   const plottedById = new Map(plotted.map((d) => [d.id, d]));
+
+  // Connector segments between effort variants of the same model×tool config.
+  state.effortLinks = [];
+  {
+    const byConfig = new Map<string, PlotDatum[]>();
+    for (const d of plotted) {
+      const key = `${String(getNestedValue(d.point.raw, "modelName") ?? "")}|${String(getNestedValue(d.point.raw, "toolId") ?? "")}`;
+      if (!byConfig.has(key)) byConfig.set(key, []);
+      byConfig.get(key)!.push(d);
+    }
+    for (const items of byConfig.values()) {
+      const efforts = new Set(items.map((d) => String(getNestedValue(d.point.raw, "effort") ?? "")));
+      if (efforts.size < 2) continue;
+      items.sort(
+        (a, b) =>
+          (EFFORT_RANK[String(getNestedValue(a.point.raw, "effort") ?? "")] ?? 0) -
+          (EFFORT_RANK[String(getNestedValue(b.point.raw, "effort") ?? "")] ?? 0),
+      );
+      for (let i = 1; i < items.length; i++) {
+        state.effortLinks.push({ x1: items[i - 1].x, y1: items[i - 1].y, x2: items[i].x, y2: items[i].y });
+      }
+    }
+  }
   const groups = new Map<string, ChartPoint[]>();
   for (const datum of plotted) {
     const key = String(getNestedValue(datum.point.raw, colorField) ?? "其他");
@@ -599,12 +659,23 @@ function populatePresetSelect(id: string) {
     sel.closest(".control")?.setAttribute("hidden", "");
     return;
   }
+  const groups = new Map<string, Array<{ p: ChartPreset; i: number }>>();
   state.presets.forEach((p, i) => {
-    const o = document.createElement("option");
-    o.value = String(i);
-    o.textContent = p.label;
-    sel.appendChild(o);
+    const g = p.group ?? "其他";
+    if (!groups.has(g)) groups.set(g, []);
+    groups.get(g)!.push({ p, i });
   });
+  for (const [gname, items] of groups) {
+    const og = document.createElement("optgroup");
+    og.label = gname;
+    for (const { p, i } of items) {
+      const o = document.createElement("option");
+      o.value = String(i);
+      o.textContent = p.label.replace(/^[^·]+·\s*/, "");
+      og.appendChild(o);
+    }
+    sel.appendChild(og);
+  }
 }
 
 function applyPreset(index: number) {
