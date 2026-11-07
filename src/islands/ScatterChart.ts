@@ -601,7 +601,10 @@ function updateSummary(totalPoints: number, filteredPoints: number, totalGroups:
   const refText = reference.visible && reference.xCut !== null && reference.yCut !== null
     ? ` · Pareto ${reference.paretoCount} · 最优象限 x≤${formatAxisValue(reference.xCut, getAxisField(state.xField))}, y≥${formatAxisValue(reference.yCut, getAxisField(state.yField))}`
     : "";
-  el.textContent = `数据点 ${totalPoints}/${filteredPoints}${missingText} · 分组 ${totalGroups}${legendText}${refText}`;
+  const markText = state.points.some((p) => "toolName" in p && p.toolName === "◆")
+    ? " · ◆=裸模型评测（无 agent）"
+    : "";
+  el.textContent = `数据点 ${totalPoints}/${filteredPoints}${missingText} · 分组 ${totalGroups}${legendText}${refText}${markText}`;
 }
 
 function populateSelect(id: string, fields: AxisField[], selected: string) {
@@ -677,9 +680,12 @@ function populatePresetSelect(id: string) {
     const og = document.createElement("optgroup");
     og.label = gname;
     for (const { p, i } of items) {
+      const n = state.points.filter(
+        (pt) => getPointNum(pt, p.x) !== null && getPointNum(pt, p.y) !== null,
+      ).length;
       const o = document.createElement("option");
       o.value = String(i);
-      o.textContent = p.label.replace(/^[^·]+·\s*/, "");
+      o.textContent = `${p.label.replace(/^[^·]+·\s*/, "")}（${n}）`;
       og.appendChild(o);
     }
     sel.appendChild(og);

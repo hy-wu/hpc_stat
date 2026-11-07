@@ -156,7 +156,7 @@ interface BenchmarksFile {
   records: BenchRecord[];
 }
 
-const MODEL_LEVEL_TOOL_NAME = "（模型级评测）";
+const MODEL_LEVEL_TOOL_NAME = "◆";
 
 /** Effort levels that merge into an existing model×tool row instead of a synthetic point. */
 const PRIMARY_EFFORTS = new Set(["", "max", "high"]);

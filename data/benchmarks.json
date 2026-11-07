@@ -652,298 +652,13 @@
       "type": "cli"
     },
     "factory": {
-      "name": "Factory",
-      "vendor": "",
-      "type": "cli"
-    },
-    "cursor-cli": {
-      "name": "Cursor CLI",
-      "vendor": "",
+      "name": "Factory (Droid)",
+      "vendor": "Factory AI",
       "type": "cli"
     },
     "devin-cli": {
       "name": "Devin CLI",
-      "vendor": "",
-      "type": "cli"
-    },
-    "18-50": {
-      "name": "18.50%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "7-00": {
-      "name": "7.00%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "6-50": {
-      "name": "6.50%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "5-50": {
-      "name": "5.50%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "3-00": {
-      "name": "3.00%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "2-50": {
-      "name": "2.50%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "2-00": {
-      "name": "2.00%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "1-50": {
-      "name": "1.50%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "1-00": {
-      "name": "1.00%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "0-50": {
-      "name": "0.50%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "0-00": {
-      "name": "0.00%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "100-00": {
-      "name": "100.00%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "96-89": {
-      "name": "96.89%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "95-06": {
-      "name": "95.06%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "91-17": {
-      "name": "91.17%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "90-78": {
-      "name": "90.78%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "87-61": {
-      "name": "87.61%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "84-33": {
-      "name": "84.33%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "83-06": {
-      "name": "83.06%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "82-61": {
-      "name": "82.61%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "81-89": {
-      "name": "81.89%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "79-83": {
-      "name": "79.83%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "68-89": {
-      "name": "68.89%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "68-44": {
-      "name": "68.44%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "67-83": {
-      "name": "67.83%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "66-94": {
-      "name": "66.94%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "61-78": {
-      "name": "61.78%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "59-33": {
-      "name": "59.33%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "57-72": {
-      "name": "57.72%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "56-94": {
-      "name": "56.94%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "56-56": {
-      "name": "56.56%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "55-56": {
-      "name": "55.56%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "53-83": {
-      "name": "53.83%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "52-50": {
-      "name": "52.50%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "51-83": {
-      "name": "51.83%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "51-61": {
-      "name": "51.61%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "48-94": {
-      "name": "48.94%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "47-67": {
-      "name": "47.67%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "47-61": {
-      "name": "47.61%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "47-28": {
-      "name": "47.28%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "46-33": {
-      "name": "46.33%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "45-28": {
-      "name": "45.28%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "45-00": {
-      "name": "45.00%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "43-94": {
-      "name": "43.94%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "40-56": {
-      "name": "40.56%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "40-28": {
-      "name": "40.28%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "39-33": {
-      "name": "39.33%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "39-06": {
-      "name": "39.06%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "38-06": {
-      "name": "38.06%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "35-06": {
-      "name": "35.06%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "32-72": {
-      "name": "32.72%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "22-83": {
-      "name": "22.83%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "21-78": {
-      "name": "21.78%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "14-94": {
-      "name": "14.94%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "9-33": {
-      "name": "9.33%",
-      "vendor": "",
-      "type": "cli"
-    },
-    "2-44": {
-      "name": "2.44%",
-      "vendor": "",
+      "vendor": "Cognition",
       "type": "cli"
     }
   },
@@ -8135,7 +7850,7 @@
         "tokensPerTestM": 1.93,
         "durationMin": 9.9
       },
-      "tool": "cursor-cli"
+      "tool": "cursor"
     },
     {
       "bench": "vibecode",
@@ -9753,1411 +9468,6 @@
       "tool": "mini-swe-agent"
     },
     {
-      "bench": "programbench",
-      "model": "Claude Opus 5.5",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": 42.66,
-        "source": "vals",
-        "costPerTestUSD": 128900000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "18-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "Claude Fable 5.1",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": 58.52,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "7-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Claude Sonnet 5.5",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": 22.62,
-        "source": "vals",
-        "costPerTestUSD": 134430000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "6-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "GPT-6 Astra",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 11.57,
-        "source": "vals",
-        "costPerTestUSD": 3870000.0,
-        "tokensPerTestM": 27.0
-      },
-      "tool": "5-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "GPT-6.1 Sol",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 2.87,
-        "source": "vals",
-        "costPerTestUSD": 5170000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "3-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Claude Opus 5",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": 60.29,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "3-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Gemini 4 Argon",
-      "vendor": "Google",
-      "source": "vals",
-      "metrics": {
-        "score": 17.66,
-        "source": "vals",
-        "costPerTestUSD": 27020000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "2-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "Claude Haiku 5.5",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": 6.83,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "2-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "Muse Spark 1.3 Max",
-      "vendor": "Meta",
-      "source": "vals",
-      "metrics": {
-        "score": 54.29,
-        "source": "vals",
-        "costPerTestUSD": 54790000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "2-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "Claude Fable 5",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": 75.68,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "2-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "GPT-6 Sol",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 11.67,
-        "source": "vals",
-        "costPerTestUSD": 30850000.0,
-        "tokensPerTestM": 46.0
-      },
-      "tool": "2-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Kimi K3",
-      "vendor": "Moonshot AI",
-      "source": "vals",
-      "metrics": {
-        "score": 70.48,
-        "source": "vals",
-        "costPerTestUSD": 112550000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "2-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "GPT-5.6 Sol",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 15.29,
-        "source": "vals",
-        "tokensPerTestM": 29.0
-      },
-      "tool": "1-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "GLM 5.3",
-      "vendor": "Z.AI",
-      "source": "vals",
-      "metrics": {
-        "score": 21.96,
-        "source": "vals",
-        "costPerTestUSD": 75450000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "1-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "Grok 4.6",
-      "vendor": "xAI",
-      "source": "vals",
-      "metrics": {
-        "score": 16.76,
-        "source": "vals",
-        "costPerTestUSD": 11140000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "1-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Claude Opus 4.8",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": 31.27,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "1-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Gemini 3.8 Flash",
-      "vendor": "Google",
-      "source": "vals",
-      "metrics": {
-        "score": 10.93,
-        "source": "vals",
-        "costPerTestUSD": 45300000.0,
-        "tokensPerTestM": 46.0
-      },
-      "tool": "1-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Grok 4.7",
-      "vendor": "xAI",
-      "source": "vals",
-      "metrics": {
-        "score": 46.49,
-        "source": "vals",
-        "costPerTestUSD": 20290000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "MiMo V2.6 Flash",
-      "vendor": "Xiaomi",
-      "source": "vals",
-      "metrics": {
-        "score": 0.47,
-        "source": "vals",
-        "costPerTestUSD": 77480000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "DeepSeek V4.1 Flash",
-      "vendor": "DeepSeek",
-      "source": "vals",
-      "metrics": {
-        "score": 0.9,
-        "source": "vals",
-        "costPerTestUSD": 72210000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "GPT-5.6 Terra",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 5.38,
-        "source": "vals",
-        "costPerTestUSD": 15200000.0,
-        "tokensPerTestM": 33.0
-      },
-      "tool": "0-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "Muse Spark 1.3",
-      "vendor": "Meta",
-      "source": "vals",
-      "metrics": {
-        "score": 11.56,
-        "source": "vals",
-        "costPerTestUSD": 44980000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "MiMo V2.6 Pro",
-      "vendor": "Xiaomi",
-      "source": "vals",
-      "metrics": {
-        "score": 0.73,
-        "source": "vals",
-        "costPerTestUSD": 41010000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "Inkling 2 Small",
-      "vendor": "Thinking Machines",
-      "source": "vals",
-      "metrics": {
-        "score": 8.46,
-        "source": "vals",
-        "costPerTestUSD": 254520000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "GPT 5.5",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 6.95,
-        "source": "vals",
-        "tokensPerTestM": 22.0
-      },
-      "tool": "0-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "GLM 5.2",
-      "vendor": "Z.AI",
-      "source": "vals",
-      "metrics": {
-        "score": 12.58,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "GPT-6 Luna",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 0.18,
-        "source": "vals",
-        "costPerTestUSD": 7000000.0,
-        "tokensPerTestM": 28.0
-      },
-      "tool": "0-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "Wonder Full",
-      "vendor": "Meta",
-      "source": "vals",
-      "metrics": {
-        "score": 28.65,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "GPT 5.4 (high)",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 2.27,
-        "source": "vals",
-        "tokensPerTestM": 15.0
-      },
-      "tool": "0-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "Muse Spark 1.2",
-      "vendor": "Meta",
-      "source": "vals",
-      "metrics": {
-        "score": 2.47,
-        "source": "vals",
-        "costPerTestUSD": 10200000.0,
-        "tokensPerTestM": 26.0
-      },
-      "tool": "0-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "Claude Sonnet 4.6",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": null,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "Inkling Small",
-      "vendor": "Thinking Machines",
-      "source": "vals",
-      "metrics": {
-        "score": 0.48,
-        "source": "vals",
-        "tokensPerTestM": 28.0
-      },
-      "tool": "0-50"
-    },
-    {
-      "bench": "programbench",
-      "model": "Hy4 Preview",
-      "vendor": "Tencent",
-      "source": "vals",
-      "metrics": {
-        "score": 12.81,
-        "source": "vals",
-        "costPerTestUSD": 42610000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "DeepSeek V4 Pro 0813",
-      "vendor": "DeepSeek",
-      "source": "vals",
-      "metrics": {
-        "score": 3.41,
-        "source": "vals",
-        "costPerTestUSD": 56650000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Claude Sonnet 5",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": 24.36,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Qwen 3.8 Max",
-      "vendor": "Alibaba",
-      "source": "vals",
-      "metrics": {
-        "score": 12.36,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Gemini 3.7 Flash",
-      "vendor": "Google",
-      "source": "vals",
-      "metrics": {
-        "score": 7.13,
-        "source": "vals",
-        "costPerTestUSD": 27070000.0,
-        "tokensPerTestM": 21.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Claude Opus 4.7",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": null,
-        "source": "vals",
-        "tokensPerTestM": 54.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "GPT-5.6 Luna",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 0.94,
-        "source": "vals",
-        "tokensPerTestM": 41.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "DeepSeek V4 Flash 0731",
-      "vendor": "DeepSeek",
-      "source": "vals",
-      "metrics": {
-        "score": 1.29,
-        "source": "vals",
-        "costPerTestUSD": 59360000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "GPT 5.4 (xhigh)",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": null,
-        "source": "vals",
-        "tokensPerTestM": 39.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "GLM 5.3 Flash",
-      "vendor": "Z.AI",
-      "source": "vals",
-      "metrics": {
-        "score": 1.6,
-        "source": "vals",
-        "costPerTestUSD": 44940000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Grok 4.5",
-      "vendor": "xAI",
-      "source": "vals",
-      "metrics": {
-        "score": 4.12,
-        "source": "vals",
-        "tokensPerTestM": 18.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "GPT 5.4 Mini",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": null,
-        "source": "vals",
-        "tokensPerTestM": 53.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Gemini 3.6 Flash",
-      "vendor": "Google",
-      "source": "vals",
-      "metrics": {
-        "score": 5.92,
-        "source": "vals",
-        "tokensPerTestM": 47.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Muse Spark 1.1",
-      "vendor": "Meta",
-      "source": "vals",
-      "metrics": {
-        "score": 13.06,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Gemini 3.5 Flash",
-      "vendor": "Google",
-      "source": "vals",
-      "metrics": {
-        "score": null,
-        "source": "vals",
-        "tokensPerTestM": 18.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "GLM 5.1",
-      "vendor": "Z.AI",
-      "source": "vals",
-      "metrics": {
-        "score": null,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Gemini 3.1 Pro Preview (02/26)",
-      "vendor": "Google",
-      "source": "vals",
-      "metrics": {
-        "score": 2.63,
-        "source": "vals",
-        "tokensPerTestM": 12.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Qwen 3.6 Plus",
-      "vendor": "Alibaba",
-      "source": "vals",
-      "metrics": {
-        "score": null,
-        "source": "vals",
-        "tokensPerTestM": 33.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Qwen 3.8 27B",
-      "vendor": "Alibaba",
-      "source": "vals",
-      "metrics": {
-        "score": 17.99,
-        "source": "vals",
-        "costPerTestUSD": 34950000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Kimi K2.7 Code",
-      "vendor": "Moonshot AI",
-      "source": "vals",
-      "metrics": {
-        "score": 3.19,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Kimi K2.6",
-      "vendor": "Moonshot AI",
-      "source": "vals",
-      "metrics": {
-        "score": null,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Nemotron 3 Ultra",
-      "vendor": "",
-      "source": "vals",
-      "metrics": {
-        "score": null,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "DeepSeek V4",
-      "vendor": "DeepSeek",
-      "source": "vals",
-      "metrics": {
-        "score": null,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Gemini 3 Flash (12/25)",
-      "vendor": "Google",
-      "source": "vals",
-      "metrics": {
-        "score": 0.44,
-        "source": "vals",
-        "tokensPerTestM": 6.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Gemini 3.5 Flash Lite",
-      "vendor": "Google",
-      "source": "vals",
-      "metrics": {
-        "score": 0.34,
-        "source": "vals",
-        "tokensPerTestM": 7.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Claude Haiku 4.5 (Thinking)",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": null,
-        "source": "vals",
-        "tokensPerTestM": 7.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Grok 4.3",
-      "vendor": "xAI",
-      "source": "vals",
-      "metrics": {
-        "score": 0.36,
-        "source": "vals",
-        "tokensPerTestM": 3.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Nemotron 3.5 Lightning",
-      "vendor": "",
-      "source": "vals",
-      "metrics": {
-        "score": 0.22,
-        "source": "vals",
-        "tokensPerTestM": 24.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Laguna XS.2",
-      "vendor": "",
-      "source": "vals",
-      "metrics": {
-        "score": null,
-        "source": "vals",
-        "tokensPerTestM": 25.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Inkling",
-      "vendor": "Thinking Machines",
-      "source": "vals",
-      "metrics": {
-        "score": 4.14,
-        "source": "vals",
-        "costPerTestUSD": 21240000.0,
-        "tokensPerTestM": 45.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Laguna M.1",
-      "vendor": "",
-      "source": "vals",
-      "metrics": {
-        "score": null,
-        "source": "vals",
-        "tokensPerTestM": 0.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "Gemini 3.1 Flash Lite Preview",
-      "vendor": "Google",
-      "source": "vals",
-      "metrics": {
-        "score": 0.06,
-        "source": "vals",
-        "tokensPerTestM": 2.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "programbench",
-      "model": "MiniMax-M2.7",
-      "vendor": "MiniMax",
-      "source": "vals",
-      "metrics": {
-        "score": null,
-        "source": "vals",
-        "tokensPerTestM": 24.0
-      },
-      "tool": "0-00"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Gemini 4 Argon",
-      "vendor": "Google",
-      "source": "vals",
-      "metrics": {
-        "score": 5.31,
-        "source": "vals",
-        "costPerTestUSD": 8220000.0,
-        "tokensPerTestM": 24.0
-      },
-      "tool": "100-00"
-    },
-    {
-      "bench": "ioi2",
-      "model": "GPT-6 Astra",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 6.5,
-        "source": "vals",
-        "costPerTestUSD": 963670.0,
-        "tokensPerTestM": 31.0
-      },
-      "tool": "100-00"
-    },
-    {
-      "bench": "ioi2",
-      "model": "GPT-6.1 Sol",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 1.26,
-        "source": "vals",
-        "costPerTestUSD": 967870.0,
-        "tokensPerTestM": 31.0
-      },
-      "tool": "96-89"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Claude Opus 5.5",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": 4.35,
-        "source": "vals",
-        "costPerTestUSD": 4700000.0,
-        "tokensPerTestM": 17.0
-      },
-      "tool": "95-06"
-    },
-    {
-      "bench": "ioi2",
-      "model": "GPT-5.6 Sol",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 7.98,
-        "source": "vals",
-        "costPerTestUSD": 4500000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "91-17"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Claude Fable 5.1",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": 11.2,
-        "source": "vals",
-        "costPerTestUSD": 6280000.0,
-        "tokensPerTestM": 30.0
-      },
-      "tool": "90-78"
-    },
-    {
-      "bench": "ioi2",
-      "model": "GPT-5.6 Terra",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 8.66,
-        "source": "vals",
-        "costPerTestUSD": 11510000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "87-61"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Claude Opus 5",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": 16.48,
-        "source": "vals",
-        "costPerTestUSD": 16240000.0,
-        "tokensPerTestM": 56.0
-      },
-      "tool": "84-33"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Claude Sonnet 5.5",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": 5.81,
-        "source": "vals",
-        "costPerTestUSD": 18050000.0,
-        "tokensPerTestM": 45.0
-      },
-      "tool": "83-06"
-    },
-    {
-      "bench": "ioi2",
-      "model": "GPT-6 Sol",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 2.7,
-        "source": "vals",
-        "costPerTestUSD": 2780000.0,
-        "tokensPerTestM": 30.0
-      },
-      "tool": "82-61"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Kimi K3.1 Pro",
-      "vendor": "Moonshot AI",
-      "source": "vals",
-      "metrics": {
-        "score": 5.02,
-        "source": "vals",
-        "costPerTestUSD": 9520000.0,
-        "tokensPerTestM": 49.0
-      },
-      "tool": "81-89"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Wonder Full",
-      "vendor": "Meta",
-      "source": "vals",
-      "metrics": {
-        "score": 7.08,
-        "source": "vals",
-        "costPerTestUSD": 7000000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "79-83"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Qwen 3.8 Max",
-      "vendor": "Alibaba",
-      "source": "vals",
-      "metrics": {
-        "score": 9.47,
-        "source": "vals",
-        "costPerTestUSD": 28080000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "68-89"
-    },
-    {
-      "bench": "ioi2",
-      "model": "GLM 5.3",
-      "vendor": "Z.AI",
-      "source": "vals",
-      "metrics": {
-        "score": 7.67,
-        "source": "vals",
-        "costPerTestUSD": 20340000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "68-44"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Gemini 3.7 Flash",
-      "vendor": "Google",
-      "source": "vals",
-      "metrics": {
-        "score": 3.4,
-        "source": "vals",
-        "costPerTestUSD": 7740000.0,
-        "tokensPerTestM": 21.0
-      },
-      "tool": "67-83"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Wonder",
-      "vendor": "Meta",
-      "source": "vals",
-      "metrics": {
-        "score": 4.54,
-        "source": "vals",
-        "costPerTestUSD": 7790000.0,
-        "tokensPerTestM": 25.0
-      },
-      "tool": "66-94"
-    },
-    {
-      "bench": "ioi2",
-      "model": "GPT-5.6 Luna",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 0.58,
-        "source": "vals",
-        "costPerTestUSD": 10370000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "61-78"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Hy4 Preview",
-      "vendor": "Tencent",
-      "source": "vals",
-      "metrics": {
-        "score": 1.35,
-        "source": "vals",
-        "costPerTestUSD": 11660000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "59-33"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Grok 4.7",
-      "vendor": "xAI",
-      "source": "vals",
-      "metrics": {
-        "score": 12.71,
-        "source": "vals",
-        "costPerTestUSD": 10870000.0,
-        "tokensPerTestM": 46.0
-      },
-      "tool": "57-72"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Gemini 3.8 Flash",
-      "vendor": "Google",
-      "source": "vals",
-      "metrics": {
-        "score": 3.98,
-        "source": "vals",
-        "costPerTestUSD": 13610000.0,
-        "tokensPerTestM": 14.0
-      },
-      "tool": "56-94"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Muse Spark 1.3 Max",
-      "vendor": "Meta",
-      "source": "vals",
-      "metrics": {
-        "score": 1.73,
-        "source": "vals",
-        "costPerTestUSD": 4330000.0,
-        "tokensPerTestM": 28.0
-      },
-      "tool": "56-56"
-    },
-    {
-      "bench": "ioi2",
-      "model": "GPT-6 Luna",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 0.2,
-        "source": "vals",
-        "costPerTestUSD": 4460000.0,
-        "tokensPerTestM": 35.0
-      },
-      "tool": "55-56"
-    },
-    {
-      "bench": "ioi2",
-      "model": "GPT 5.3 Codex",
-      "vendor": "OpenAI",
-      "source": "vals",
-      "metrics": {
-        "score": 2.68,
-        "source": "vals",
-        "costPerTestUSD": 4420000.0,
-        "tokensPerTestM": 29.0
-      },
-      "tool": "53-83"
-    },
-    {
-      "bench": "ioi2",
-      "model": "GLM 5.3 Flash",
-      "vendor": "Z.AI",
-      "source": "vals",
-      "metrics": {
-        "score": 0.43,
-        "source": "vals",
-        "costPerTestUSD": 18180000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "52-50"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Gemini 3.1 Pro Preview (02/26)",
-      "vendor": "Google",
-      "source": "vals",
-      "metrics": {
-        "score": 1.25,
-        "source": "vals",
-        "costPerTestUSD": 1280000.0,
-        "tokensPerTestM": 12.0
-      },
-      "tool": "51-83"
-    },
-    {
-      "bench": "ioi2",
-      "model": "DeepSeek V4 Pro 0813",
-      "vendor": "DeepSeek",
-      "source": "vals",
-      "metrics": {
-        "score": 2.15,
-        "source": "vals",
-        "costPerTestUSD": 21440000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "51-61"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Kimi K3",
-      "vendor": "Moonshot AI",
-      "source": "vals",
-      "metrics": {
-        "score": 14.17,
-        "source": "vals",
-        "costPerTestUSD": 21860000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "48-94"
-    },
-    {
-      "bench": "ioi2",
-      "model": "MiMo V2.6 Flash",
-      "vendor": "Xiaomi",
-      "source": "vals",
-      "metrics": {
-        "score": 0.22,
-        "source": "vals",
-        "costPerTestUSD": 20850000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "47-67"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Grok 4.6",
-      "vendor": "xAI",
-      "source": "vals",
-      "metrics": {
-        "score": 8.18,
-        "source": "vals",
-        "costPerTestUSD": 5530000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "47-61"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Claude Haiku 5.5",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": 0.83,
-        "source": "vals",
-        "costPerTestUSD": 5810000.0,
-        "tokensPerTestM": 12.0
-      },
-      "tool": "47-28"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Ember-1",
-      "vendor": "Fireworks AI",
-      "source": "vals",
-      "metrics": {
-        "score": 24.46,
-        "source": "vals",
-        "costPerTestUSD": 56120000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "46-33"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Mistral Large 4 Preview",
-      "vendor": "Mistral",
-      "source": "vals",
-      "metrics": {
-        "score": 2.73,
-        "source": "vals",
-        "costPerTestUSD": 12580000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "45-28"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Claude Sonnet 5",
-      "vendor": "Anthropic",
-      "source": "vals",
-      "metrics": {
-        "score": 12.89,
-        "source": "vals",
-        "costPerTestUSD": 38280000.0,
-        "tokensPerTestM": 59.0
-      },
-      "tool": "45-00"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Muse Spark 1.3",
-      "vendor": "Meta",
-      "source": "vals",
-      "metrics": {
-        "score": 2.36,
-        "source": "vals",
-        "costPerTestUSD": 5070000.0,
-        "tokensPerTestM": 29.0
-      },
-      "tool": "43-94"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Grok 4.5",
-      "vendor": "xAI",
-      "source": "vals",
-      "metrics": {
-        "score": 5.64,
-        "source": "vals",
-        "costPerTestUSD": 6470000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "40-56"
-    },
-    {
-      "bench": "ioi2",
-      "model": "DeepSeek V4.1 Flash",
-      "vendor": "DeepSeek",
-      "source": "vals",
-      "metrics": {
-        "score": 0.24,
-        "source": "vals",
-        "costPerTestUSD": 6710000.0,
-        "tokensPerTestM": 18.0
-      },
-      "tool": "40-28"
-    },
-    {
-      "bench": "ioi2",
-      "model": "MiMo V2.6 Pro",
-      "vendor": "Xiaomi",
-      "source": "vals",
-      "metrics": {
-        "score": 0.84,
-        "source": "vals",
-        "costPerTestUSD": 7100000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "39-33"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Qwen 3.8 27B",
-      "vendor": "Alibaba",
-      "source": "vals",
-      "metrics": {
-        "score": 3.55,
-        "source": "vals",
-        "costPerTestUSD": 17410000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "39-06"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Step 5 Preview",
-      "vendor": "StepFun",
-      "source": "vals",
-      "metrics": {
-        "score": 2.03,
-        "source": "vals",
-        "costPerTestUSD": 14930000.0,
-        "tokensPerTestM": 0.0
-      },
-      "tool": "38-06"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Gemini 3.6 Flash",
-      "vendor": "Google",
-      "source": "vals",
-      "metrics": {
-        "score": 8.67,
-        "source": "vals",
-        "costPerTestUSD": 39910000.0,
-        "tokensPerTestM": 48.0
-      },
-      "tool": "35-06"
-    },
-    {
-      "bench": "ioi2",
-      "model": "DeepSeek V4 Flash 0731",
-      "vendor": "DeepSeek",
-      "source": "vals",
-      "metrics": {
-        "score": 0.37,
-        "source": "vals",
-        "costPerTestUSD": 9120000.0,
-        "tokensPerTestM": 27.0
-      },
-      "tool": "32-72"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Beam 1.0",
-      "vendor": "Reflection",
-      "source": "vals",
-      "metrics": {
-        "score": null,
-        "source": "vals",
-        "costPerTestUSD": 3090000.0,
-        "tokensPerTestM": 7.0
-      },
-      "tool": "22-83"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Muse Spark 1.2",
-      "vendor": "Meta",
-      "source": "vals",
-      "metrics": {
-        "score": 2.64,
-        "source": "vals",
-        "costPerTestUSD": 10550000.0,
-        "tokensPerTestM": 25.0
-      },
-      "tool": "21-78"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Inkling",
-      "vendor": "Thinking Machines",
-      "source": "vals",
-      "metrics": {
-        "score": 1.71,
-        "source": "vals",
-        "costPerTestUSD": 6860000.0,
-        "tokensPerTestM": 30.0
-      },
-      "tool": "14-94"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Inkling Small",
-      "vendor": "Thinking Machines",
-      "source": "vals",
-      "metrics": {
-        "score": 0.34,
-        "source": "vals",
-        "costPerTestUSD": 3550000.0,
-        "tokensPerTestM": 11.0
-      },
-      "tool": "9-33"
-    },
-    {
-      "bench": "ioi2",
-      "model": "Mercury 2.5",
-      "vendor": "Inception",
-      "source": "vals",
-      "metrics": {
-        "score": 0.16,
-        "source": "vals",
-        "costPerTestUSD": 1910000.0,
-        "tokensPerTestM": 4.0
-      },
-      "tool": "2-44"
-    },
-    {
       "bench": "swev",
       "model": "Claude Opus 5",
       "vendor": "Anthropic",
@@ -11500,7 +9810,7 @@
         "score": 79.6,
         "source": "vals"
       },
-      "tool": "cursor-cli"
+      "tool": "cursor"
     },
     {
       "bench": "swev",
@@ -14915,6 +13225,1396 @@
         "source": "vals",
         "tokensPerTestM": 0.018,
         "durationMin": 5.5
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Gemini 4 Argon",
+      "vendor": "Google",
+      "source": "vals",
+      "metrics": {
+        "score": 100.0,
+        "source": "vals",
+        "costPerTestUSD": 5.31,
+        "tokensPerTestM": 8.22,
+        "durationMin": 24.3
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "GPT-6 Astra",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 100.0,
+        "source": "vals",
+        "costPerTestUSD": 6.5,
+        "tokensPerTestM": 0.964,
+        "durationMin": 31.7
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "GPT-6.1 Sol",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 96.89,
+        "source": "vals",
+        "costPerTestUSD": 1.26,
+        "tokensPerTestM": 0.968,
+        "durationMin": 31.5
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Claude Opus 5.5",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 95.06,
+        "source": "vals",
+        "costPerTestUSD": 4.35,
+        "tokensPerTestM": 4.7,
+        "durationMin": 17.2
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "GPT-5.6 Sol",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 91.17,
+        "source": "vals",
+        "costPerTestUSD": 7.98,
+        "tokensPerTestM": 4.5,
+        "durationMin": 62.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Claude Fable 5.1",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 90.78,
+        "source": "vals",
+        "costPerTestUSD": 11.2,
+        "tokensPerTestM": 6.28,
+        "durationMin": 30.1
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "GPT-5.6 Terra",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 87.61,
+        "source": "vals",
+        "costPerTestUSD": 8.66,
+        "tokensPerTestM": 11.51,
+        "durationMin": 83.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Claude Opus 5",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 84.33,
+        "source": "vals",
+        "costPerTestUSD": 16.48,
+        "tokensPerTestM": 16.24,
+        "durationMin": 56.7
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Claude Sonnet 5.5",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 83.06,
+        "source": "vals",
+        "costPerTestUSD": 5.81,
+        "tokensPerTestM": 18.05,
+        "durationMin": 45.9
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "GPT-6 Sol",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 82.61,
+        "source": "vals",
+        "costPerTestUSD": 2.7,
+        "tokensPerTestM": 2.78,
+        "durationMin": 30.6
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Kimi K3.1 Pro",
+      "vendor": "Moonshot AI",
+      "source": "vals",
+      "metrics": {
+        "score": 81.89,
+        "source": "vals",
+        "costPerTestUSD": 5.02,
+        "tokensPerTestM": 9.52,
+        "durationMin": 49.4
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Wonder Full",
+      "vendor": "Meta",
+      "source": "vals",
+      "metrics": {
+        "score": 79.83,
+        "source": "vals",
+        "costPerTestUSD": 7.08,
+        "tokensPerTestM": 7.0,
+        "durationMin": 91.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Qwen 3.8 Max",
+      "vendor": "Alibaba",
+      "source": "vals",
+      "metrics": {
+        "score": 68.89,
+        "source": "vals",
+        "costPerTestUSD": 9.47,
+        "tokensPerTestM": 28.08,
+        "durationMin": 107.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "GLM 5.3",
+      "vendor": "Z.AI",
+      "source": "vals",
+      "metrics": {
+        "score": 68.44,
+        "source": "vals",
+        "costPerTestUSD": 7.67,
+        "tokensPerTestM": 20.34,
+        "durationMin": 106.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Gemini 3.7 Flash",
+      "vendor": "Google",
+      "source": "vals",
+      "metrics": {
+        "score": 67.83,
+        "source": "vals",
+        "costPerTestUSD": 3.4,
+        "tokensPerTestM": 7.74,
+        "durationMin": 21.1
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Wonder",
+      "vendor": "Meta",
+      "source": "vals",
+      "metrics": {
+        "score": 66.94,
+        "source": "vals",
+        "costPerTestUSD": 4.54,
+        "tokensPerTestM": 7.79,
+        "durationMin": 25.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "GPT-5.6 Luna",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 61.78,
+        "source": "vals",
+        "costPerTestUSD": 0.58,
+        "tokensPerTestM": 10.37,
+        "durationMin": 70.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Hy4 Preview",
+      "vendor": "Tencent",
+      "source": "vals",
+      "metrics": {
+        "score": 59.33,
+        "source": "vals",
+        "costPerTestUSD": 1.35,
+        "tokensPerTestM": 11.66,
+        "durationMin": 61.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Grok 4.7",
+      "vendor": "xAI",
+      "source": "vals",
+      "metrics": {
+        "score": 57.72,
+        "source": "vals",
+        "costPerTestUSD": 12.71,
+        "tokensPerTestM": 10.87,
+        "durationMin": 46.8
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Gemini 3.8 Flash",
+      "vendor": "Google",
+      "source": "vals",
+      "metrics": {
+        "score": 56.94,
+        "source": "vals",
+        "costPerTestUSD": 3.98,
+        "tokensPerTestM": 13.61,
+        "durationMin": 14.3
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Muse Spark 1.3 Max",
+      "vendor": "Meta",
+      "source": "vals",
+      "metrics": {
+        "score": 56.56,
+        "source": "vals",
+        "costPerTestUSD": 1.73,
+        "tokensPerTestM": 4.33,
+        "durationMin": 29.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "GPT-6 Luna",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 55.56,
+        "source": "vals",
+        "costPerTestUSD": 0.2,
+        "tokensPerTestM": 4.46,
+        "durationMin": 35.8
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "GPT 5.3 Codex",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 53.83,
+        "source": "vals",
+        "costPerTestUSD": 2.68,
+        "tokensPerTestM": 4.42,
+        "durationMin": 29.9
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "GLM 5.3 Flash",
+      "vendor": "Z.AI",
+      "source": "vals",
+      "metrics": {
+        "score": 52.5,
+        "source": "vals",
+        "costPerTestUSD": 0.43,
+        "tokensPerTestM": 18.18,
+        "durationMin": 92.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Gemini 3.1 Pro Preview (02/26)",
+      "vendor": "Google",
+      "source": "vals",
+      "metrics": {
+        "score": 51.83,
+        "source": "vals",
+        "costPerTestUSD": 1.25,
+        "tokensPerTestM": 1.28,
+        "durationMin": 12.1
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "DeepSeek V4 Pro 0813",
+      "vendor": "DeepSeek",
+      "source": "vals",
+      "metrics": {
+        "score": 51.61,
+        "source": "vals",
+        "costPerTestUSD": 2.15,
+        "tokensPerTestM": 21.44,
+        "durationMin": 67.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Kimi K3",
+      "vendor": "Moonshot AI",
+      "source": "vals",
+      "metrics": {
+        "score": 48.94,
+        "source": "vals",
+        "costPerTestUSD": 14.17,
+        "tokensPerTestM": 21.86,
+        "durationMin": 258.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "MiMo V2.6 Flash",
+      "vendor": "Xiaomi",
+      "source": "vals",
+      "metrics": {
+        "score": 47.67,
+        "source": "vals",
+        "costPerTestUSD": 0.22,
+        "tokensPerTestM": 20.85,
+        "durationMin": 109.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Grok 4.6",
+      "vendor": "xAI",
+      "source": "vals",
+      "metrics": {
+        "score": 47.61,
+        "source": "vals",
+        "costPerTestUSD": 8.18,
+        "tokensPerTestM": 5.53,
+        "durationMin": 237.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Claude Haiku 5.5",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 47.28,
+        "source": "vals",
+        "costPerTestUSD": 0.83,
+        "tokensPerTestM": 5.81,
+        "durationMin": 12.6
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Ember-1",
+      "vendor": "Fireworks AI",
+      "source": "vals",
+      "metrics": {
+        "score": 46.33,
+        "source": "vals",
+        "costPerTestUSD": 24.46,
+        "tokensPerTestM": 56.12,
+        "durationMin": 107.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Mistral Large 4 Preview",
+      "vendor": "Mistral",
+      "source": "vals",
+      "metrics": {
+        "score": 45.28,
+        "source": "vals",
+        "costPerTestUSD": 2.73,
+        "tokensPerTestM": 12.58,
+        "durationMin": 84.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Claude Sonnet 5",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 45.0,
+        "source": "vals",
+        "costPerTestUSD": 12.89,
+        "tokensPerTestM": 38.28,
+        "durationMin": 59.7
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Muse Spark 1.3",
+      "vendor": "Meta",
+      "source": "vals",
+      "metrics": {
+        "score": 43.94,
+        "source": "vals",
+        "costPerTestUSD": 2.36,
+        "tokensPerTestM": 5.07,
+        "durationMin": 29.9
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Grok 4.5",
+      "vendor": "xAI",
+      "source": "vals",
+      "metrics": {
+        "score": 40.56,
+        "source": "vals",
+        "costPerTestUSD": 5.64,
+        "tokensPerTestM": 6.47,
+        "durationMin": 87.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "DeepSeek V4.1 Flash",
+      "vendor": "DeepSeek",
+      "source": "vals",
+      "metrics": {
+        "score": 40.28,
+        "source": "vals",
+        "costPerTestUSD": 0.24,
+        "tokensPerTestM": 6.71,
+        "durationMin": 18.5
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "MiMo V2.6 Pro",
+      "vendor": "Xiaomi",
+      "source": "vals",
+      "metrics": {
+        "score": 39.33,
+        "source": "vals",
+        "costPerTestUSD": 0.84,
+        "tokensPerTestM": 7.1,
+        "durationMin": 146.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Qwen 3.8 27B",
+      "vendor": "Alibaba",
+      "source": "vals",
+      "metrics": {
+        "score": 39.06,
+        "source": "vals",
+        "costPerTestUSD": 3.55,
+        "tokensPerTestM": 17.41,
+        "durationMin": 99.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Step 5 Preview",
+      "vendor": "StepFun",
+      "source": "vals",
+      "metrics": {
+        "score": 38.06,
+        "source": "vals",
+        "costPerTestUSD": 2.03,
+        "tokensPerTestM": 14.93,
+        "durationMin": 80.0
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Gemini 3.6 Flash",
+      "vendor": "Google",
+      "source": "vals",
+      "metrics": {
+        "score": 35.06,
+        "source": "vals",
+        "costPerTestUSD": 8.67,
+        "tokensPerTestM": 39.91,
+        "durationMin": 48.4
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "DeepSeek V4 Flash 0731",
+      "vendor": "DeepSeek",
+      "source": "vals",
+      "metrics": {
+        "score": 32.72,
+        "source": "vals",
+        "costPerTestUSD": 0.37,
+        "tokensPerTestM": 9.12,
+        "durationMin": 27.7
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Beam 1.0",
+      "vendor": "Reflection",
+      "source": "vals",
+      "metrics": {
+        "score": 22.83,
+        "source": "vals",
+        "tokensPerTestM": 3.09,
+        "durationMin": 7.2
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Muse Spark 1.2",
+      "vendor": "Meta",
+      "source": "vals",
+      "metrics": {
+        "score": 21.78,
+        "source": "vals",
+        "costPerTestUSD": 2.64,
+        "tokensPerTestM": 10.55,
+        "durationMin": 25.6
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Inkling",
+      "vendor": "Thinking Machines",
+      "source": "vals",
+      "metrics": {
+        "score": 14.94,
+        "source": "vals",
+        "costPerTestUSD": 1.71,
+        "tokensPerTestM": 6.86,
+        "durationMin": 30.2
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Inkling Small",
+      "vendor": "Thinking Machines",
+      "source": "vals",
+      "metrics": {
+        "score": 9.33,
+        "source": "vals",
+        "costPerTestUSD": 0.34,
+        "tokensPerTestM": 3.55,
+        "durationMin": 11.3
+      }
+    },
+    {
+      "bench": "ioi2",
+      "model": "Mercury 2.5",
+      "vendor": "Inception",
+      "source": "vals",
+      "metrics": {
+        "score": 2.44,
+        "source": "vals",
+        "costPerTestUSD": 0.16,
+        "tokensPerTestM": 1.91,
+        "durationMin": 4.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Claude Opus 5.5",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 18.5,
+        "source": "vals",
+        "costPerTestUSD": 42.66,
+        "tokensPerTestM": 128.9,
+        "durationMin": 144.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Claude Fable 5.1",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 7.0,
+        "source": "vals",
+        "costPerTestUSD": 58.52,
+        "durationMin": 147.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Claude Sonnet 5.5",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 6.5,
+        "source": "vals",
+        "costPerTestUSD": 22.62,
+        "tokensPerTestM": 134.43,
+        "durationMin": 127.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "GPT-6 Astra",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 5.5,
+        "source": "vals",
+        "costPerTestUSD": 11.57,
+        "tokensPerTestM": 3.87,
+        "durationMin": 27.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "GPT-6.1 Sol",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 3.0,
+        "source": "vals",
+        "costPerTestUSD": 2.87,
+        "tokensPerTestM": 5.17,
+        "durationMin": 70.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Claude Opus 5",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 3.0,
+        "source": "vals",
+        "costPerTestUSD": 60.29,
+        "durationMin": 175.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Gemini 4 Argon",
+      "vendor": "Google",
+      "source": "vals",
+      "metrics": {
+        "score": 2.5,
+        "source": "vals",
+        "costPerTestUSD": 17.66,
+        "tokensPerTestM": 27.02,
+        "durationMin": 71.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Claude Haiku 5.5",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 2.5,
+        "source": "vals",
+        "costPerTestUSD": 6.83,
+        "durationMin": 73.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Muse Spark 1.3 Max",
+      "vendor": "Meta",
+      "source": "vals",
+      "metrics": {
+        "score": 2.5,
+        "source": "vals",
+        "costPerTestUSD": 54.29,
+        "tokensPerTestM": 54.79,
+        "durationMin": 328.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Claude Fable 5",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 2.0,
+        "source": "vals",
+        "costPerTestUSD": 75.68,
+        "durationMin": 157.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "GPT-6 Sol",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 2.0,
+        "source": "vals",
+        "costPerTestUSD": 11.67,
+        "tokensPerTestM": 30.85,
+        "durationMin": 46.2
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Kimi K3",
+      "vendor": "Moonshot AI",
+      "source": "vals",
+      "metrics": {
+        "score": 2.0,
+        "source": "vals",
+        "costPerTestUSD": 70.48,
+        "tokensPerTestM": 112.55,
+        "durationMin": 342.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "GPT-5.6 Sol",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 1.5,
+        "source": "vals",
+        "costPerTestUSD": 15.29,
+        "durationMin": 29.4
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "GLM 5.3",
+      "vendor": "Z.AI",
+      "source": "vals",
+      "metrics": {
+        "score": 1.5,
+        "source": "vals",
+        "costPerTestUSD": 21.96,
+        "tokensPerTestM": 75.45,
+        "durationMin": 256.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Grok 4.6",
+      "vendor": "xAI",
+      "source": "vals",
+      "metrics": {
+        "score": 1.0,
+        "source": "vals",
+        "costPerTestUSD": 16.76,
+        "tokensPerTestM": 11.14,
+        "durationMin": 267.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Claude Opus 4.8",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 1.0,
+        "source": "vals",
+        "costPerTestUSD": 31.27,
+        "durationMin": 92.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Gemini 3.8 Flash",
+      "vendor": "Google",
+      "source": "vals",
+      "metrics": {
+        "score": 1.0,
+        "source": "vals",
+        "costPerTestUSD": 10.93,
+        "tokensPerTestM": 45.3,
+        "durationMin": 46.6
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Grok 4.7",
+      "vendor": "xAI",
+      "source": "vals",
+      "metrics": {
+        "score": 0.5,
+        "source": "vals",
+        "costPerTestUSD": 46.49,
+        "tokensPerTestM": 20.29,
+        "durationMin": 218.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "MiMo V2.6 Flash",
+      "vendor": "Xiaomi",
+      "source": "vals",
+      "metrics": {
+        "score": 0.5,
+        "source": "vals",
+        "costPerTestUSD": 0.47,
+        "tokensPerTestM": 77.48,
+        "durationMin": 202.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "DeepSeek V4.1 Flash",
+      "vendor": "DeepSeek",
+      "source": "vals",
+      "metrics": {
+        "score": 0.5,
+        "source": "vals",
+        "costPerTestUSD": 0.9,
+        "tokensPerTestM": 72.21,
+        "durationMin": 62.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "GPT-5.6 Terra",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 0.5,
+        "source": "vals",
+        "costPerTestUSD": 5.38,
+        "tokensPerTestM": 15.2,
+        "durationMin": 33.6
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Muse Spark 1.3",
+      "vendor": "Meta",
+      "source": "vals",
+      "metrics": {
+        "score": 0.5,
+        "source": "vals",
+        "costPerTestUSD": 11.56,
+        "tokensPerTestM": 44.98,
+        "durationMin": 69.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "MiMo V2.6 Pro",
+      "vendor": "Xiaomi",
+      "source": "vals",
+      "metrics": {
+        "score": 0.5,
+        "source": "vals",
+        "costPerTestUSD": 0.73,
+        "tokensPerTestM": 41.01,
+        "durationMin": 180.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Inkling 2 Small",
+      "vendor": "Thinking Machines",
+      "source": "vals",
+      "metrics": {
+        "score": 0.5,
+        "source": "vals",
+        "costPerTestUSD": 8.46,
+        "tokensPerTestM": 254.52,
+        "durationMin": 106.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "GPT 5.5",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 0.5,
+        "source": "vals",
+        "costPerTestUSD": 6.95,
+        "durationMin": 22.1
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "GLM 5.2",
+      "vendor": "Z.AI",
+      "source": "vals",
+      "metrics": {
+        "score": 0.5,
+        "source": "vals",
+        "costPerTestUSD": 12.58,
+        "durationMin": 126.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "GPT-6 Luna",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 0.5,
+        "source": "vals",
+        "costPerTestUSD": 0.18,
+        "tokensPerTestM": 7.0,
+        "durationMin": 28.9
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Wonder Full",
+      "vendor": "Meta",
+      "source": "vals",
+      "metrics": {
+        "score": 0.5,
+        "source": "vals",
+        "costPerTestUSD": 28.65,
+        "durationMin": 364.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "GPT 5.4 (high)",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 0.5,
+        "source": "vals",
+        "costPerTestUSD": 2.27,
+        "durationMin": 16.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Muse Spark 1.2",
+      "vendor": "Meta",
+      "source": "vals",
+      "metrics": {
+        "score": 0.5,
+        "source": "vals",
+        "costPerTestUSD": 2.47,
+        "tokensPerTestM": 10.2,
+        "durationMin": 26.6
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Claude Sonnet 4.6",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 0.5,
+        "source": "vals",
+        "durationMin": 72.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Inkling Small",
+      "vendor": "Thinking Machines",
+      "source": "vals",
+      "metrics": {
+        "score": 0.5,
+        "source": "vals",
+        "costPerTestUSD": 0.48,
+        "durationMin": 28.5
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Hy4 Preview",
+      "vendor": "Tencent",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 12.81,
+        "tokensPerTestM": 42.61,
+        "durationMin": 130.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "DeepSeek V4 Pro 0813",
+      "vendor": "DeepSeek",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 3.41,
+        "tokensPerTestM": 56.65,
+        "durationMin": 83.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Claude Sonnet 5",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 24.36,
+        "durationMin": 91.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Qwen 3.8 Max",
+      "vendor": "Alibaba",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 12.36,
+        "durationMin": 354.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Gemini 3.7 Flash",
+      "vendor": "Google",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 7.13,
+        "tokensPerTestM": 27.07,
+        "durationMin": 21.5
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Claude Opus 4.7",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "durationMin": 54.1
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "GPT-5.6 Luna",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 0.94,
+        "durationMin": 41.6
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "DeepSeek V4 Flash 0731",
+      "vendor": "DeepSeek",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 1.29,
+        "tokensPerTestM": 59.36,
+        "durationMin": 339.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "GPT 5.4 (xhigh)",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "durationMin": 39.8
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "GLM 5.3 Flash",
+      "vendor": "Z.AI",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 1.6,
+        "tokensPerTestM": 44.94,
+        "durationMin": 330.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Grok 4.5",
+      "vendor": "xAI",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 4.12,
+        "durationMin": 19.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "GPT 5.4 Mini",
+      "vendor": "OpenAI",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "durationMin": 53.8
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Gemini 3.6 Flash",
+      "vendor": "Google",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 5.92,
+        "durationMin": 47.5
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Muse Spark 1.1",
+      "vendor": "Meta",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 13.06,
+        "durationMin": 343.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Gemini 3.5 Flash",
+      "vendor": "Google",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "durationMin": 18.4
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "GLM 5.1",
+      "vendor": "Z.AI",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "durationMin": 66.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Gemini 3.1 Pro Preview (02/26)",
+      "vendor": "Google",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 2.63,
+        "durationMin": 12.6
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Qwen 3.6 Plus",
+      "vendor": "Alibaba",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "durationMin": 33.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Qwen 3.8 27B",
+      "vendor": "Alibaba",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 17.99,
+        "tokensPerTestM": 34.95,
+        "durationMin": 357.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Kimi K2.7 Code",
+      "vendor": "Moonshot AI",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 3.19,
+        "durationMin": 64.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Kimi K2.6",
+      "vendor": "Moonshot AI",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "durationMin": 80.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Nemotron 3 Ultra",
+      "vendor": "",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "durationMin": 62.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "DeepSeek V4",
+      "vendor": "DeepSeek",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "durationMin": 63.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Gemini 3 Flash (12/25)",
+      "vendor": "Google",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 0.44,
+        "durationMin": 7.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Gemini 3.5 Flash Lite",
+      "vendor": "Google",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 0.34,
+        "durationMin": 7.2
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Claude Haiku 4.5 (Thinking)",
+      "vendor": "Anthropic",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "durationMin": 7.6
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Grok 4.3",
+      "vendor": "xAI",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 0.36,
+        "durationMin": 3.9
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Nemotron 3.5 Lightning",
+      "vendor": "",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 0.22,
+        "durationMin": 24.4
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Laguna XS.2",
+      "vendor": "",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "durationMin": 25.7
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Inkling",
+      "vendor": "Thinking Machines",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 4.14,
+        "tokensPerTestM": 21.24,
+        "durationMin": 45.6
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Laguna M.1",
+      "vendor": "",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "durationMin": 82.0
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "Gemini 3.1 Flash Lite Preview",
+      "vendor": "Google",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "costPerTestUSD": 0.06,
+        "durationMin": 2.9
+      }
+    },
+    {
+      "bench": "programbench",
+      "model": "MiniMax-M2.7",
+      "vendor": "MiniMax",
+      "source": "vals",
+      "metrics": {
+        "score": 0.0,
+        "source": "vals",
+        "durationMin": 24.3
       }
     }
   ],
