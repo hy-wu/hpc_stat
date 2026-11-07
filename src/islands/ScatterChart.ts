@@ -251,6 +251,14 @@ function buildTooltipExtras(p: ChartPoint): string[] {
   }
   const swe = getPointNum(p, "evals.reportedSweBenchVerified");
   if (swe !== null) extras.push(`SWE-bench Verified: ${formatNumber(swe, 1)}%`);
+  const benchObj = getNestedValue(p.raw, "bench") as Record<string, unknown> | undefined;
+  if (benchObj) {
+    const SRC: Record<string, string> = { official: "官方", vals: "Vals", "self-reported": "自报" };
+    const srcs = [...new Set(
+      Object.values(benchObj).map((m) => String((m as Record<string, unknown>).source ?? "")).filter(Boolean),
+    )].map((s) => SRC[s] ?? s);
+    if (srcs.length) extras.push(`榜单来源: ${srcs.join("/")}`);
+  }
   return extras.slice(0, 5);
 }
 

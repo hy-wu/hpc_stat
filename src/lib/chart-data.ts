@@ -144,6 +144,7 @@ interface BenchRecord {
   vendor: string;
   tool?: string;
   effort?: string;
+  source?: string;
   metrics: Record<string, unknown>;
 }
 
@@ -165,17 +166,25 @@ interface BenchGroup {
   vendor: string;
   toolId: string | null;
   effort: string;
+  source: string;
   bench: Record<string, unknown>;
 }
 
-/** Group benchmark records by normalized model + tool + effort: config → benchId → metrics. */
+/** Group by normalized model + tool + effort + source: config → benchId → metrics. */
 function groupBenchRecords(records: BenchRecord[]): Map<string, BenchGroup> {
   const groups = new Map<string, BenchGroup>();
   for (const rec of records) {
-    const key = `${normalizeModelIdentity(rec.model)}|${rec.tool ?? ""}|${rec.effort ?? ""}`;
+    const key = `${normalizeModelIdentity(rec.model)}|${rec.tool ?? ""}|${rec.effort ?? ""}|${rec.source ?? ""}`;
     let g = groups.get(key);
     if (!g) {
-      g = { model: rec.model, vendor: rec.vendor, toolId: rec.tool ?? null, effort: rec.effort ?? "", bench: {} };
+      g = {
+        model: rec.model,
+        vendor: rec.vendor,
+        toolId: rec.tool ?? null,
+        effort: rec.effort ?? "",
+        source: String(rec.source ?? ""),
+        bench: {},
+      };
       groups.set(key, g);
     }
     g.bench[rec.bench] = rec.metrics;
@@ -229,6 +238,7 @@ function attachBenchData(
       toolId: g.toolId,
       toolName,
       effort: g.effort || undefined,
+      benchSource: g.source || undefined,
       supportStatus: "榜单评测",
       bench: g.bench,
     };
