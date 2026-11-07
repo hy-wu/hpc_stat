@@ -8,6 +8,7 @@ import {
   loadModelToolChartData,
   loadModelHardwareChartData,
   type AxisField,
+  type ChartPreset,
   type MergedModelToolPoint,
   type MergedModelHardwarePoint,
 } from "../lib/chart-data";
@@ -25,6 +26,7 @@ interface ChartState {
   dataType: "model-tools" | "model-hardware";
   points: ChartPoint[];
   axisFields: AxisField[];
+  presets: ChartPreset[];
   xField: string;
   yField: string;
   colorField: string;
@@ -56,6 +58,7 @@ const state: ChartState = {
   dataType: "model-tools",
   points: [],
   axisFields: [],
+  presets: [],
   xField: "costPerTaskUSD",
   yField: "codingAgentScore",
   colorField: "modelVendor",
@@ -588,6 +591,38 @@ function populateColorSelect(id: string, pageType: string) {
   }
 }
 
+function populatePresetSelect(id: string) {
+  const sel = q<HTMLSelectElement>(id);
+  if (!sel) return;
+  sel.innerHTML = '<option value="">手动选轴…</option>';
+  if (!state.presets.length) {
+    sel.closest(".control")?.setAttribute("hidden", "");
+    return;
+  }
+  state.presets.forEach((p, i) => {
+    const o = document.createElement("option");
+    o.value = String(i);
+    o.textContent = p.label;
+    sel.appendChild(o);
+  });
+}
+
+function applyPreset(index: number) {
+  const p = state.presets[index];
+  if (!p) return;
+  state.xField = p.x;
+  state.yField = p.y;
+  if (p.colorField) state.colorField = p.colorField;
+  const xSel = q<HTMLSelectElement>("xAxisSelect");
+  const ySel = q<HTMLSelectElement>("yAxisSelect");
+  const cSel = q<HTMLSelectElement>("colorFieldSelect");
+  if (xSel) xSel.value = state.xField;
+  if (ySel) ySel.value = state.yField;
+  if (cSel) cSel.value = state.colorField;
+  populateFilterSelect("colorFilterSelect");
+  renderChart();
+}
+
 function populateFilterSelect(id: string) {
   const sel = q<HTMLSelectElement>(id);
   if (!sel) return;
@@ -612,8 +647,12 @@ function bindEvents() {
   const colorSel = q<HTMLSelectElement>("colorFieldSelect");
   const filterSel = q<HTMLSelectElement>("colorFilterSelect");
   const labelSel = q<HTMLSelectElement>("labelModeSelect");
+  const presetSel = q<HTMLSelectElement>("chartPresetSelect");
   const searchInput = q<HTMLInputElement>("chartSearchInput");
 
+  presetSel?.addEventListener("change", () => {
+    if (presetSel.value !== "") applyPreset(Number(presetSel.value));
+  });
   xSel?.addEventListener("change", () => {
     state.xField = xSel.value;
     renderChart();
@@ -674,9 +713,10 @@ async function init() {
 
   try {
     if (pageType === "model-tools") {
-      const { points, axisFields } = await loadModelToolChartData();
+      const { points, axisFields, presets } = await loadModelToolChartData();
       state.points = points;
       state.axisFields = axisFields;
+      state.presets = presets;
       state.xField = "costPerTaskUSD";
       state.yField = "codingAgentScore";
     } else {
@@ -698,6 +738,7 @@ async function init() {
   populateSelect("xAxisSelect", state.axisFields, state.xField);
   populateSelect("yAxisSelect", state.axisFields, state.yField);
   populateColorSelect("colorFieldSelect", pageType);
+  populatePresetSelect("chartPresetSelect");
   populateFilterSelect("colorFilterSelect");
 
   bindEvents();

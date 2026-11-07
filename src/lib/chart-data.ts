@@ -151,33 +151,39 @@ interface BenchmarksFile {
   updated: string;
   benchmarks: Record<string, { name: string; url?: string; axes?: BenchAxisDef[] }>;
   tools: Record<string, { name?: string; vendor?: string; type?: string }>;
+  presets?: ChartPreset[];
   records: BenchRecord[];
 }
 
 const MODEL_LEVEL_TOOL_NAME = "（模型级评测）";
 
-function benchKey(rec: BenchRecord): string {
-  return rec.effort ? `${rec.bench}@${rec.effort}` : rec.bench;
+/** Effort levels that merge into an existing model×tool row instead of a synthetic point. */
+const PRIMARY_EFFORTS = new Set(["", "max", "high"]);
+
+interface BenchGroup {
+  model: string;
+  vendor: string;
+  toolId: string | null;
+  effort: string;
+  bench: Record<string, unknown>;
 }
 
-/** Group benchmark records by normalized model + tool pair: pair → benchId(@effort) → metrics. */
-function groupBenchRecords(
-  records: BenchRecord[],
-): Map<string, { model: string; vendor: string; toolId: string | null; bench: Record<string, unknown> }> {
-  const groups = new Map<string, { model: string; vendor: string; toolId: string | null; bench: Record<string, unknown> }>();
+/** Group benchmark records by normalized model + tool + effort: config → benchId → metrics. */
+function groupBenchRecords(records: BenchRecord[]): Map<string, BenchGroup> {
+  const groups = new Map<string, BenchGroup>();
   for (const rec of records) {
-    const key = `${normalizeModelIdentity(rec.model)}|${rec.tool ?? ""}`;
+    const key = `${normalizeModelIdentity(rec.model)}|${rec.tool ?? ""}|${rec.effort ?? ""}`;
     let g = groups.get(key);
     if (!g) {
-      g = { model: rec.model, vendor: rec.vendor, toolId: rec.tool ?? null, bench: {} };
+      g = { model: rec.model, vendor: rec.vendor, toolId: rec.tool ?? null, effort: rec.effort ?? "", bench: {} };
       groups.set(key, g);
     }
-    g.bench[benchKey(rec)] = rec.metrics;
+    g.bench[rec.bench] = rec.metrics;
   }
   return groups;
 }
 
-/** Attach benchmark metrics to existing model×tool points; synthesize points for pairs with no row. */
+/** Attach benchmark metrics to existing model×tool points; synthesize points for configs with no row. */
 function attachBenchData(
   points: MergedModelToolPoint[],
   benchData: BenchmarksFile | null,
@@ -185,7 +191,8 @@ function attachBenchData(
   toolMap: Map<string, Record<string, unknown>>,
 ): MergedModelToolPoint[] {
   if (!benchData?.records?.length) return points;
-  const byPair = groupBenchRecords(benchData.records);
+  const groups = [...groupBenchRecords(benchData.records).entries()];
+  const attached = new Set<string>();
 
   for (const p of points) {
     const toolId = String(p.raw.toolId ?? "");
@@ -194,21 +201,25 @@ function attachBenchData(
       normalizeModelIdentity(String(v ?? "")),
     );
     for (const k of keys) {
-      const g = byPair.get(`${k}|${toolId}`);
-      if (g) {
-        p.raw.bench = { ...(p.raw.bench as Record<string, unknown> | undefined), ...g.bench };
-        byPair.delete(`${k}|${toolId}`);
+      const hit = groups.find(
+        ([key, g]) => g.toolId === toolId && PRIMARY_EFFORTS.has(g.effort) && key.startsWith(`${k}|`) && !attached.has(key),
+      );
+      if (hit) {
+        p.raw.bench = { ...(p.raw.bench as Record<string, unknown> | undefined), ...hit[1].bench };
+        attached.add(hit[0]);
         break;
       }
     }
   }
 
-  for (const [key, g] of byPair) {
+  for (const [key, g] of groups) {
+    if (attached.has(key)) continue;
     const modelRec = getModelRecord(modelMap, g.model);
     const toolRec = g.toolId ? toolMap.get(g.toolId) : undefined;
     const toolName = g.toolId
       ? String(toolRec?.name ?? benchData.tools[g.toolId]?.name ?? g.toolId)
       : MODEL_LEVEL_TOOL_NAME;
+    const displayName = g.effort ? `${g.model} (${g.effort})` : g.model;
     const raw: Record<string, unknown> = {
       ...(modelRec ?? {}),
       modelId: String((modelRec?.id as string) ?? g.model),
@@ -216,12 +227,13 @@ function attachBenchData(
       modelVendor: g.vendor,
       toolId: g.toolId,
       toolName,
+      effort: g.effort || undefined,
       supportStatus: "榜单评测",
       bench: g.bench,
     };
     points.push({
-      id: `bench__${key.replace("|", "__")}`,
-      modelName: g.model,
+      id: `bench__${key.replaceAll("|", "__")}`,
+      modelName: displayName,
       toolName,
       modelVendor: g.vendor,
       supportStatus: "榜单评测",
@@ -231,28 +243,36 @@ function attachBenchData(
   return points;
 }
 
-/** One AxisField per registry axis × effort variant actually present in the records. */
+/** One AxisField per registry axis. */
 function benchmarkAxisFields(benchData: BenchmarksFile | null): AxisField[] {
   if (!benchData?.benchmarks) return [];
   const fields: AxisField[] = [];
   for (const [benchId, meta] of Object.entries(benchData.benchmarks)) {
-    const efforts = [...new Set(
-      benchData.records.filter((r) => r.bench === benchId).map((r) => r.effort ?? ""),
-    )].sort();
     for (const axis of meta.axes ?? []) {
-      for (const effort of efforts) {
-        fields.push({
-          key: `bench.${effort ? `${benchId}@${effort}` : benchId}.${axis.metric}`,
-          label: effort ? `${axis.label} · ${effort}` : axis.label,
-          unit: axis.unit,
-          source: meta.name,
-          scale: axis.scale,
-          direction: axis.direction,
-        });
-      }
+      fields.push({
+        key: `bench.${benchId}.${axis.metric}`,
+        label: axis.label,
+        unit: axis.unit,
+        source: meta.name,
+        scale: axis.scale,
+        direction: axis.direction,
+      });
     }
   }
   return fields;
+}
+
+/** Paper-figure presets: pick X/Y (and optionally color) in one click. */
+export interface ChartPreset {
+  label: string;
+  x: string;
+  y: string;
+  colorField?: string;
+}
+
+function benchmarkPresets(benchData: BenchmarksFile | null): ChartPreset[] {
+  if (!benchData?.presets) return [];
+  return benchData.presets as ChartPreset[];
 }
 
 // ── Data loading ──
@@ -535,6 +555,7 @@ export interface MergedModelHardwarePoint {
 export async function loadModelToolChartData(): Promise<{
   points: MergedModelToolPoint[];
   axisFields: AxisField[];
+  presets: ChartPreset[];
 }> {
   const [toolsRecords, modelsRaw, agentTools, handModels, benchData] = await Promise.all([
     fetchJson<Record<string, unknown>[]>(dataUrl("model-tools.json")),
@@ -600,6 +621,7 @@ export async function loadModelToolChartData(): Promise<{
   return {
     points: attachBenchData(points, benchData, modelMap, toolMap),
     axisFields: [...modelToolAxisFields, ...benchmarkAxisFields(benchData)],
+    presets: benchmarkPresets(benchData),
   };
 }
 

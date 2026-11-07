@@ -245,7 +245,7 @@ h2 {
 }
 
 .chart-container {
-  min-height: 460px;
+  min-height: 640px;
   padding: 8px;
   border: 1px solid var(--line);
   background: var(--panel);
@@ -253,7 +253,7 @@ h2 {
 
 #chartCanvas {
   width: 100% !important;
-  min-height: 440px;
+  min-height: 620px;
 }
 
 /* Unified filter card: wraps control-band + insight-grid + filters-panel-inner */
