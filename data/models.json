@@ -4,9 +4,9 @@
     "name": "Claude Opus 4.7",
     "vendor": "Anthropic",
     "multimodal": "Vision",
-    "copilotMultiplier": 15.0,
+    "copilotMultiplier": 15,
     "performance": "Most capable Claude model",
-    "arenaElo": 1492.0,
+    "arenaElo": 1492,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -21,22 +21,22 @@
     "contextWindow": "1M",
     "pricing": {
       "official": {
-        "in": 5.0,
+        "in": 5,
         "hit": 0.5,
-        "out": 25.0
+        "out": 25
       },
       "cursor": {
-        "in": 5.0,
-        "out": 25.0
+        "in": 5,
+        "out": 25
       },
       "openrouter": {
-        "in": 5.0,
-        "out": 25.0,
+        "in": 5,
+        "out": 25,
         "hit": 0.5
       },
       "deep-infra": {
-        "in": 5.0,
-        "out": 25.0
+        "in": 5,
+        "out": 25
       }
     },
     "verification": {
@@ -160,13 +160,13 @@
       ]
     },
     "llmStats": {
-      "codeArena": 1872.0,
+      "codeArena": 1872,
       "coding": 51.6,
       "longCtx": 26.4,
       "math": 52.2,
       "reasoning": 62.6,
       "search": 31.4,
-      "speed": 52.0,
+      "speed": 52,
       "tools": 39.6,
       "vision": 44.5
     },
@@ -178,9 +178,9 @@
     "name": "Claude Sonnet 4.6",
     "vendor": "Anthropic",
     "multimodal": "Vision",
-    "copilotMultiplier": 1.0,
+    "copilotMultiplier": 1,
     "performance": "Medium",
-    "arenaElo": 1472.0,
+    "arenaElo": 1472,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -189,28 +189,28 @@
     "evals": {
       "browseComp": 74.7,
       "gpqaDiamond": 89.9,
-      "hle": 49.0,
+      "hle": 49,
       "reportedSweBenchVerified": 79.6
     },
     "contextWindow": "200K",
     "pricing": {
       "official": {
-        "in": 3.0,
+        "in": 3,
         "hit": 0.3,
-        "out": 15.0
+        "out": 15
       },
       "cursor": {
-        "in": 3.0,
-        "out": 15.0
+        "in": 3,
+        "out": 15
       },
       "openrouter": {
-        "in": 3.0,
-        "out": 15.0,
+        "in": 3,
+        "out": 15,
         "hit": 0.3
       },
       "deep-infra": {
-        "in": 3.0,
-        "out": 15.0
+        "in": 3,
+        "out": 15
       }
     },
     "verification": {
@@ -331,13 +331,13 @@
       ]
     },
     "llmStats": {
-      "codeArena": 1629.0,
+      "codeArena": 1629,
       "coding": 37.7,
       "longCtx": 26.3,
       "math": 44.2,
       "reasoning": 52.6,
       "search": 24.8,
-      "speed": 142.0,
+      "speed": 142,
       "tools": 29.9,
       "vision": 33.9,
       "writing": 35.6
@@ -350,33 +350,33 @@
     "name": "Claude Sonnet 4.5",
     "vendor": "Anthropic",
     "multimodal": "Vision",
-    "copilotMultiplier": 1.0,
+    "copilotMultiplier": 1,
     "performance": null,
-    "arenaElo": 1455.0,
+    "arenaElo": 1455,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
-      "aime2025": 87.0,
+      "aime2025": 87,
       "gpqaDiamond": 83.4,
-      "terminalBench": 50.0
+      "terminalBench": 50
     },
     "contextWindow": "200K",
     "pricing": {
       "official": {
-        "in": 3.0,
+        "in": 3,
         "hit": 0.3,
-        "out": 15.0
+        "out": 15
       },
       "cursor": {
-        "in": 3.0,
-        "out": 15.0
+        "in": 3,
+        "out": 15
       },
       "openrouter": {
-        "in": 3.0,
-        "out": 15.0,
+        "in": 3,
+        "out": 15,
         "hit": 0.3
       }
     },
@@ -484,12 +484,12 @@
       ]
     },
     "llmStats": {
-      "codeArena": 1163.0,
-      "coding": 32.0,
-      "longCtx": 19.0,
+      "codeArena": 1163,
+      "coding": 32,
+      "longCtx": 19,
       "math": 33.3,
       "reasoning": 40.5,
-      "speed": 125.0,
+      "speed": 125,
       "tools": 33.8,
       "vision": 19.2,
       "writing": 35.3
@@ -504,7 +504,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 0.33,
     "performance": "Fastest Claude model",
-    "arenaElo": 1412.0,
+    "arenaElo": 1412,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -512,29 +512,29 @@
     "math": null,
     "evals": {
       "aime2025": 80.7,
-      "gpqaDiamond": 73.0,
+      "gpqaDiamond": 73,
       "reportedSweBenchVerified": 73.3,
-      "terminalBench": 41.0
+      "terminalBench": 41
     },
     "contextWindow": "200K",
     "pricing": {
       "official": {
-        "in": 1.0,
+        "in": 1,
         "hit": 0.1,
-        "out": 5.0
+        "out": 5
       },
       "cursor": {
-        "in": 1.0,
-        "out": 5.0
+        "in": 1,
+        "out": 5
       },
       "openrouter": {
-        "in": 1.0,
-        "out": 5.0,
+        "in": 1,
+        "out": 5,
         "hit": 0.1
       },
       "deep-infra": {
-        "in": 1.0,
-        "out": 5.0
+        "in": 1,
+        "out": 5
       }
     },
     "verification": {
@@ -651,11 +651,11 @@
       ]
     },
     "llmStats": {
-      "codeArena": 857.0,
+      "codeArena": 857,
       "coding": 25.8,
       "math": 21.3,
       "reasoning": 35.9,
-      "speed": 114.0,
+      "speed": 114,
       "writing": 25.3
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
@@ -668,7 +668,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 7.5,
     "performance": "High",
-    "arenaElo": 1476.0,
+    "arenaElo": 1476,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -688,17 +688,17 @@
     "contextWindow": "1.1M",
     "pricing": {
       "official": {
-        "in": 5.0,
+        "in": 5,
         "hit": 0.5,
-        "out": 30.0
+        "out": 30
       },
       "cursor": {
-        "in": 5.0,
-        "out": 30.0
+        "in": 5,
+        "out": 30
       },
       "openrouter": {
-        "in": 5.0,
-        "out": 30.0,
+        "in": 5,
+        "out": 30,
         "hit": 0.5
       }
     },
@@ -823,13 +823,13 @@
       ]
     },
     "llmStats": {
-      "codeArena": 1848.0,
+      "codeArena": 1848,
       "coding": 53.1,
       "longCtx": 30.6,
       "math": 48.6,
       "reasoning": 62.9,
       "search": 35.6,
-      "speed": 41.0,
+      "speed": 41,
       "tools": 40.4,
       "vision": 46.8,
       "writing": 30.8
@@ -842,9 +842,9 @@
     "name": "GPT-5.4",
     "vendor": "OpenAI",
     "multimodal": "Vision",
-    "copilotMultiplier": 1.0,
+    "copilotMultiplier": 1,
     "performance": "High",
-    "arenaElo": 1465.0,
+    "arenaElo": 1465,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -852,7 +852,7 @@
     "math": null,
     "evals": {
       "mmluPro": 87.5,
-      "gpqaDiamond": 93.0,
+      "gpqaDiamond": 93,
       "terminalBench": 75.1,
       "browseComp": 82.7,
       "hle": 39.8
@@ -862,15 +862,15 @@
       "official": {
         "in": 2.5,
         "hit": 0.25,
-        "out": 15.0
+        "out": 15
       },
       "cursor": {
         "in": 2.5,
-        "out": 15.0
+        "out": 15
       },
       "openrouter": {
         "in": 2.5,
-        "out": 15.0,
+        "out": 15,
         "hit": 0.25
       }
     },
@@ -995,13 +995,13 @@
       ]
     },
     "llmStats": {
-      "codeArena": 1724.0,
+      "codeArena": 1724,
       "coding": 44.3,
       "longCtx": 27.4,
       "math": 47.3,
       "reasoning": 57.9,
-      "search": 32.0,
-      "speed": 217.0,
+      "search": 32,
+      "speed": 217,
       "tools": 36.3,
       "vision": 38.1,
       "writing": 35.5
@@ -1016,7 +1016,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": 0.33,
     "performance": "High",
-    "arenaElo": 1449.0,
+    "arenaElo": 1449,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1029,7 +1029,7 @@
       "caisiOtisAime2025": 90,
       "caisiPumac2024": 93,
       "caisiSmt2025": 92,
-      "gpqaDiamond": 88.0,
+      "gpqaDiamond": 88,
       "hle": 28.2
     },
     "contextWindow": "400K",
@@ -1157,11 +1157,11 @@
       ]
     },
     "llmStats": {
-      "codeArena": 841.0,
+      "codeArena": 841,
       "coding": 35.4,
       "math": 36.4,
       "reasoning": 46.1,
-      "speed": 451.0,
+      "speed": 451,
       "writing": 22.2
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
@@ -1172,7 +1172,7 @@
     "name": "GPT-5.3-Codex",
     "vendor": "OpenAI",
     "multimodal": "Vision",
-    "copilotMultiplier": 1.0,
+    "copilotMultiplier": 1,
     "performance": "High",
     "arenaElo": null,
     "mmlu": null,
@@ -1186,16 +1186,16 @@
       "official": {
         "in": 1.75,
         "hit": 0.175,
-        "out": 14.0
+        "out": 14
       },
       "openrouter": {
         "in": 1.75,
-        "out": 14.0,
+        "out": 14,
         "hit": 0.175
       },
       "cursor": {
         "in": 1.75,
-        "out": 14.0
+        "out": 14
       }
     },
     "verification": {
@@ -1262,12 +1262,12 @@
       ]
     },
     "llmStats": {
-      "codeArena": 1327.0,
+      "codeArena": 1327,
       "coding": 43.9,
       "reasoning": 56.1,
-      "speed": 230.0,
+      "speed": 230,
       "tools": 37.2,
-      "vision": 28.0
+      "vision": 28
     }
   },
   {
@@ -1275,9 +1275,9 @@
     "name": "GPT-5.2-Codex",
     "vendor": "OpenAI",
     "multimodal": "Vision",
-    "copilotMultiplier": 1.0,
+    "copilotMultiplier": 1,
     "performance": "High",
-    "arenaElo": 1402.0,
+    "arenaElo": 1402,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1288,16 +1288,16 @@
     "pricing": {
       "openrouter": {
         "in": 1.75,
-        "out": 14.0,
+        "out": 14,
         "hit": 0.175
       },
       "cursor": {
         "in": 1.75,
-        "out": 14.0
+        "out": 14
       },
       "official": {
         "in": 1.75,
-        "out": 14.0
+        "out": 14
       }
     },
     "verification": {
@@ -1371,10 +1371,10 @@
       ]
     },
     "llmStats": {
-      "codeArena": 1177.0,
+      "codeArena": 1177,
       "coding": 40.2,
       "reasoning": 52.7,
-      "speed": 262.0,
+      "speed": 262,
       "tools": 27.6
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
@@ -1385,35 +1385,35 @@
     "name": "GPT-5.2",
     "vendor": "OpenAI",
     "multimodal": "Vision",
-    "copilotMultiplier": 1.0,
+    "copilotMultiplier": 1,
     "performance": "Medium",
-    "arenaElo": 1435.0,
+    "arenaElo": 1435,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
-      "aime2025": 100.0,
+      "aime2025": 100,
       "browseComp": 65.8,
       "gpqaDiamond": 92.4,
       "hle": 34.5,
-      "reportedSweBenchVerified": 80.0
+      "reportedSweBenchVerified": 80
     },
     "contextWindow": "400K",
     "pricing": {
       "openrouter": {
         "in": 1.75,
-        "out": 14.0,
+        "out": 14,
         "hit": 0.175
       },
       "cursor": {
         "in": 1.75,
-        "out": 14.0
+        "out": 14
       },
       "official": {
         "in": 1.75,
-        "out": 14.0
+        "out": 14
       }
     },
     "verification": {
@@ -1522,12 +1522,12 @@
       ]
     },
     "llmStats": {
-      "codeArena": 1512.0,
+      "codeArena": 1512,
       "coding": 35.7,
       "math": 50.4,
-      "reasoning": 54.0,
+      "reasoning": 54,
       "search": 26.1,
-      "speed": 98.0,
+      "speed": 98,
       "tools": 28.7,
       "vision": 35.7,
       "writing": 33.1
@@ -1540,9 +1540,9 @@
     "name": "GPT-5 mini",
     "vendor": "OpenAI",
     "multimodal": "Vision",
-    "copilotMultiplier": 0.0,
+    "copilotMultiplier": 0,
     "performance": "Medium",
-    "arenaElo": 1390.0,
+    "arenaElo": 1390,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1557,16 +1557,16 @@
     "pricing": {
       "openrouter": {
         "in": 0.25,
-        "out": 2.0,
+        "out": 2,
         "hit": 0.025
       },
       "cursor": {
         "in": 0.25,
-        "out": 2.0
+        "out": 2
       },
       "official": {
         "in": 0.25,
-        "out": 2.0
+        "out": 2
       }
     },
     "verification": {
@@ -1661,10 +1661,10 @@
       ]
     },
     "llmStats": {
-      "codeArena": 1114.0,
+      "codeArena": 1114,
       "math": 33.3,
       "reasoning": 36.9,
-      "speed": 89.0,
+      "speed": 89,
       "vision": 12.8
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
@@ -1675,9 +1675,9 @@
     "name": "GPT-4.1",
     "vendor": "OpenAI",
     "multimodal": "Vision",
-    "copilotMultiplier": 0.0,
+    "copilotMultiplier": 0,
     "performance": null,
-    "arenaElo": 1414.0,
+    "arenaElo": 1414,
     "mmlu": 90.2,
     "humanEval": null,
     "gsm8k": null,
@@ -1694,17 +1694,17 @@
     "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
-        "in": 2.0,
-        "out": 8.0,
+        "in": 2,
+        "out": 8,
         "hit": 0.5
       },
       "cursor": {
-        "in": 2.0,
-        "out": 8.0
+        "in": 2,
+        "out": 8
       },
       "official": {
-        "in": 2.0,
-        "out": 8.0
+        "in": 2,
+        "out": 8
       }
     },
     "verification": {
@@ -1819,11 +1819,11 @@
       ]
     },
     "llmStats": {
-      "codeArena": 715.0,
+      "codeArena": 715,
       "coding": 8.2,
       "math": 20.3,
       "reasoning": 21.7,
-      "speed": 317.0,
+      "speed": 317,
       "writing": 10.7
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
@@ -1836,7 +1836,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "Thinking/non-thinking modes",
-    "arenaElo": 1458.0,
+    "arenaElo": 1458,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -1871,22 +1871,22 @@
         "hit": 0.003625
       },
       "aliyun": {
-        "in": 12.0,
-        "out": 24.0
+        "in": 12,
+        "out": 24
       },
       "baidu": {
-        "in": 12.0,
-        "out": 24.0
+        "in": 12,
+        "out": 24
       },
       "tencent": {
-        "hit": 1.0,
-        "in": 12.0,
-        "out": 24.0
+        "hit": 1,
+        "in": 12,
+        "out": 24
       },
       "officialCny": {
         "hit": 0.025,
-        "in": 3.0,
-        "out": 6.0
+        "in": 3,
+        "out": 6
       },
       "deep-infra": {
         "in": 1.3,
@@ -2063,13 +2063,13 @@
     },
     "notes": "Official discounted price valid on the checked date; DeepSeek states the discount runs until 2026-05-31 15:59 UTC.",
     "llmStats": {
-      "codeArena": 1260.0,
-      "coding": 45.0,
-      "longCtx": 20.0,
+      "codeArena": 1260,
+      "coding": 45,
+      "longCtx": 20,
       "math": 53.8,
       "reasoning": 57.7,
       "search": 33.5,
-      "speed": 81.0,
+      "speed": 81,
       "tools": 35.2,
       "vision": 33.6
     },
@@ -2083,7 +2083,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "Thinking/non-thinking modes",
-    "arenaElo": 1436.0,
+    "arenaElo": 1436,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -2094,7 +2094,7 @@
       "gpqaDiamond": 88.1,
       "liveCodeBench": 91.6,
       "terminalBench": 56.9,
-      "reportedSweBenchVerified": 79.0,
+      "reportedSweBenchVerified": 79,
       "browseComp": 73.2,
       "hle": 45.1,
       "simpleQA": 34.1
@@ -2112,26 +2112,26 @@
         "hit": 0.028
       },
       "aliyun": {
-        "in": 1.0,
-        "out": 2.0
+        "in": 1,
+        "out": 2
       },
       "baidu": {
-        "in": 1.0,
-        "out": 2.0
+        "in": 1,
+        "out": 2
       },
       "tencent": {
         "hit": 0.2,
-        "in": 1.0,
-        "out": 2.0
+        "in": 1,
+        "out": 2
       },
       "siliconflow": {
-        "in": 1.0,
-        "out": 2.0
+        "in": 1,
+        "out": 2
       },
       "officialCny": {
         "hit": 0.02,
-        "in": 1.0,
-        "out": 2.0
+        "in": 1,
+        "out": 2
       },
       "deep-infra": {
         "in": 0.09,
@@ -2301,15 +2301,15 @@
       ]
     },
     "llmStats": {
-      "codeArena": 1226.0,
+      "codeArena": 1226,
       "coding": 38.8,
       "longCtx": 7.9,
       "math": 51.5,
       "reasoning": 52.3,
       "search": 23.9,
-      "speed": 162.0,
+      "speed": 162,
       "tools": 28.3,
-      "vision": 31.0
+      "vision": 31
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
@@ -2321,16 +2321,16 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "Complex reasoning/coding",
-    "arenaElo": 1446.0,
+    "arenaElo": 1446,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
-      "aime2024": 92.0,
-      "aime2025": 83.0,
-      "gpqaDiamond": 83.0,
+      "aime2024": 92,
+      "aime2025": 83,
+      "gpqaDiamond": 83,
       "hle": 17.8,
       "reportedSweBenchVerified": 63.2,
       "simpleQA": 50.8
@@ -2340,20 +2340,20 @@
       "official": {
         "in": 1.25,
         "hit": 0.125,
-        "out": 10.0
+        "out": 10
       },
       "cursor": {
         "in": 1.25,
-        "out": 10.0
+        "out": 10
       },
       "openrouter": {
         "in": 1.25,
-        "out": 10.0,
+        "out": 10,
         "hit": 0.125
       },
       "deep-infra": {
         "in": 1.25,
-        "out": 10.0
+        "out": 10
       }
     },
     "verification": {
@@ -2471,11 +2471,11 @@
     },
     "notes": "Pricing shown is Google's standard <=200K prompt tier; larger prompts use the higher tier.",
     "llmStats": {
-      "codeArena": 943.0,
+      "codeArena": 943,
       "coding": 17.4,
       "math": 31.7,
       "reasoning": 35.5,
-      "speed": 272.0
+      "speed": 272
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
@@ -2487,17 +2487,17 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "Hybrid reasoning",
-    "arenaElo": 1410.0,
+    "arenaElo": 1410,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
-      "aime2024": 88.0,
-      "aime2025": 72.0,
+      "aime2024": 88,
+      "aime2025": 72,
       "gpqaDiamond": 82.8,
-      "hle": 11.0,
+      "hle": 11,
       "reportedSweBenchVerified": 60.4,
       "simpleQA": 26.9
     },
@@ -2636,11 +2636,11 @@
       ]
     },
     "llmStats": {
-      "codeArena": 841.0,
+      "codeArena": 841,
       "coding": 12.4,
       "math": 23.3,
       "reasoning": 28.9,
-      "speed": 463.0
+      "speed": 463
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
@@ -2652,7 +2652,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "17B active / 400B total MoE",
-    "arenaElo": 1327.0,
+    "arenaElo": 1327,
     "mmlu": 85.5,
     "humanEval": null,
     "gsm8k": null,
@@ -2733,8 +2733,8 @@
         }
       ]
     },
-    "params": 400.0,
-    "paramsActive": 17.0,
+    "params": 400,
+    "paramsActive": 17,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
@@ -2745,7 +2745,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "17B active / 109B total MoE",
-    "arenaElo": 1323.0,
+    "arenaElo": 1323,
     "mmlu": 79.6,
     "humanEval": null,
     "gsm8k": null,
@@ -2836,8 +2836,8 @@
         }
       ]
     },
-    "params": 109.0,
-    "paramsActive": 17.0,
+    "params": 109,
+    "paramsActive": 17,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
@@ -2859,9 +2859,9 @@
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
-        "in": 30.0,
-        "hit": 3.0,
-        "out": 150.0
+        "in": 30,
+        "hit": 3,
+        "out": 150
       }
     },
     "verification": {
@@ -3037,10 +3037,10 @@
     },
     "notes": "Gemini 3.1 Flash Lite is Google’s GA high-efficiency multimodal model optimized for low-latency, high-volume workloads.",
     "llmStats": {
-      "codeArena": 860.0,
+      "codeArena": 860,
       "math": 32.1,
-      "reasoning": 42.0,
-      "speed": 373.0
+      "reasoning": 42,
+      "speed": 373
     }
   },
   {
@@ -3051,7 +3051,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1476.0,
+    "arenaElo": 1476,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3061,9 +3061,9 @@
     "contextWindow": "400K",
     "pricing": {
       "openrouter": {
-        "in": 5.0,
+        "in": 5,
         "hit": 0.5,
-        "out": 30.0
+        "out": 30
       }
     },
     "verification": {
@@ -3110,7 +3110,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image->text",
-    "arenaElo": 1442.0,
+    "arenaElo": 1442,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3196,8 +3196,8 @@
     },
     "notes": "Grok 4.3 is a reasoning model from xAI.",
     "llmStats": {
-      "codeArena": 420.0,
-      "speed": 209.0
+      "codeArena": 420,
+      "speed": 209
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
@@ -3210,7 +3210,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1307.0,
+    "arenaElo": 1307,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3257,7 +3257,7 @@
       ]
     },
     "notes": "Granite 4.1 8B is a dense, decoder-only 8-billion-parameter language model from IBM, part of the Granite 4.1 family.",
-    "params": 8.0,
+    "params": 8,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
@@ -3269,7 +3269,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1427.0,
+    "arenaElo": 1427,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3370,8 +3370,8 @@
     "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
-        "in": 0.0,
-        "out": 0.0
+        "in": 0,
+        "out": 0
       }
     },
     "verification": {
@@ -3516,7 +3516,7 @@
     "gpqa": null,
     "math": null,
     "evals": {
-      "gpqaDiamond": 86.0,
+      "gpqaDiamond": 86,
       "hle": 21.4,
       "mmluPro": 85.2,
       "reportedSweBenchVerified": 73.4
@@ -3526,7 +3526,7 @@
       "openrouter": {
         "in": 0.14,
         "hit": 0.05,
-        "out": 1.0
+        "out": 1
       },
       "aliyun": {
         "in": 1.8,
@@ -3594,8 +3594,8 @@
       ]
     },
     "notes": "Qwen3.6-35B-A3B is an open-weight multimodal model from Alibaba Cloud with 35 billion total parameters and 3 billion active parameters per token.",
-    "params": 35.0,
-    "paramsActive": 3.0
+    "params": 35,
+    "paramsActive": 3
   },
   {
     "id": "qwen/qwen3.6-max-preview",
@@ -3605,7 +3605,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1460.0,
+    "arenaElo": 1460,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3619,8 +3619,8 @@
         "out": 6.162
       },
       "aliyun": {
-        "in": 9.0,
-        "out": 54.0
+        "in": 9,
+        "out": 54
       }
     },
     "verification": {
@@ -3679,7 +3679,7 @@
     "math": null,
     "evals": {
       "gpqaDiamond": 87.8,
-      "hle": 24.0,
+      "hle": 24,
       "mmluPro": 86.2,
       "reportedSweBenchVerified": 77.2
     },
@@ -3694,8 +3694,8 @@
         "out": 3.6
       },
       "aliyun": {
-        "in": 3.0,
-        "out": 18.0
+        "in": 3,
+        "out": 18
       },
       "siliconflow": {
         "in": 1.8,
@@ -3786,13 +3786,13 @@
     },
     "notes": "Qwen3.6 27B is a dense 27-billion-parameter language model from the Qwen Team at Alibaba, released in April 2026.",
     "llmStats": {
-      "codeArena": 841.0,
+      "codeArena": 841,
       "coding": 35.5,
       "math": 43.2,
       "reasoning": 46.4,
-      "speed": 119.0
+      "speed": 119
     },
-    "params": 27.0
+    "params": 27
   },
   {
     "id": "openai/gpt-5.5-pro",
@@ -3815,8 +3815,8 @@
     "contextWindow": "1.1M",
     "pricing": {
       "openrouter": {
-        "in": 30.0,
-        "out": 180.0
+        "in": 30,
+        "out": 180
       }
     },
     "verification": {
@@ -3903,7 +3903,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1456.0,
+    "arenaElo": 1456,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -3912,7 +3912,7 @@
     "evals": {
       "browseComp": 84.2,
       "gpqaDiamond": 90.4,
-      "reportedSweBenchVerified": 78.0
+      "reportedSweBenchVerified": 78
     },
     "contextWindow": "262K",
     "pricing": {
@@ -3923,8 +3923,8 @@
       },
       "tencent": {
         "hit": 0.25,
-        "in": 1.0,
-        "out": 4.0
+        "in": 1,
+        "out": 4
       }
     },
     "verification": {
@@ -3992,7 +3992,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1466.0,
+    "arenaElo": 1466,
     "mmlu": 89.4,
     "humanEval": null,
     "gsm8k": 99.6,
@@ -4000,7 +4000,7 @@
     "math": 86.2,
     "evals": {
       "gpqaDiamond": 66.7,
-      "hle": 34.0,
+      "hle": 34,
       "mmluPro": 68.5,
       "reportedSweBenchVerified": 78.9
     },
@@ -4012,8 +4012,8 @@
         "out": 0.87
       },
       "aliyun": {
-        "in": 7.0,
-        "out": 21.0
+        "in": 7,
+        "out": 21
       },
       "xiaomi": {
         "in": 0.435,
@@ -4025,8 +4025,8 @@
       },
       "tencent": {
         "hit": 0.025,
-        "in": 3.0,
-        "out": 6.0
+        "in": 3,
+        "out": 6
       }
     },
     "verification": {
@@ -4132,7 +4132,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+audio+video->text",
-    "arenaElo": 1434.0,
+    "arenaElo": 1434,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4220,9 +4220,9 @@
     "contextWindow": "272K",
     "pricing": {
       "openrouter": {
-        "in": 8.0,
-        "hit": 2.0,
-        "out": 15.0
+        "in": 8,
+        "hit": 2,
+        "out": 15
       }
     },
     "verification": {
@@ -4387,7 +4387,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image->text",
-    "arenaElo": 1461.0,
+    "arenaElo": 1461,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4413,16 +4413,16 @@
       },
       "aliyun": {
         "in": 6.5,
-        "out": 27.0
+        "out": 27
       },
       "tencent": {
         "hit": 1.1,
         "in": 6.5,
-        "out": 27.0
+        "out": 27
       },
       "siliconflow": {
         "in": 6.5,
-        "out": 27.0
+        "out": 27
       },
       "moonshot-ai": {
         "in": 0.589,
@@ -4438,7 +4438,7 @@
       },
       "baidu": {
         "in": 6.5,
-        "out": 27.0
+        "out": 27
       }
     },
     "verification": {
@@ -4574,14 +4574,14 @@
     },
     "notes": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration.",
     "llmStats": {
-      "codeArena": 1492.0,
+      "codeArena": 1492,
       "coding": 45.6,
       "math": 50.7,
       "reasoning": 59.1,
-      "search": 38.0,
-      "speed": 194.0,
+      "search": 38,
+      "speed": 194,
       "tools": 33.4,
-      "vision": 38.0
+      "vision": 38
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
@@ -4604,9 +4604,9 @@
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
-        "in": 30.0,
-        "hit": 3.0,
-        "out": 150.0
+        "in": 30,
+        "hit": 3,
+        "out": 150
       }
     },
     "verification": {
@@ -4639,7 +4639,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1469.0,
+    "arenaElo": 1469,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4662,31 +4662,31 @@
         "out": 4.4
       },
       "aliyun": {
-        "in": 8.0,
-        "out": 28.0
+        "in": 8,
+        "out": 28
       },
       "baidu": {
-        "in": 6.0,
-        "out": 24.0
+        "in": 6,
+        "out": 24
       },
       "tencent": {
         "hit": 0.65,
-        "in": 3.0,
-        "out": 12.0
+        "in": 3,
+        "out": 12
       },
       "zhipu": {
         "hit": 1.3,
-        "in": 6.0,
-        "out": 24.0
+        "in": 6,
+        "out": 24
       },
       "siliconflow": {
-        "in": 6.0,
-        "out": 28.0
+        "in": 6,
+        "out": 28
       },
       "officialCny": {
         "hit": 1.3,
-        "in": 6.0,
-        "out": 24.0
+        "in": 6,
+        "out": 24
       },
       "together-ai": {
         "in": 1.4,
@@ -4821,12 +4821,12 @@
     },
     "notes": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks.",
     "llmStats": {
-      "codeArena": 1458.0,
+      "codeArena": 1458,
       "coding": 45.1,
       "math": 47.2,
-      "reasoning": 55.0,
+      "reasoning": 55,
       "search": 30.1,
-      "speed": 247.0,
+      "speed": 247,
       "tools": 30.6,
       "vision": 39.5
     },
@@ -4841,7 +4841,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1438.0,
+    "arenaElo": 1438,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -4967,16 +4967,16 @@
     },
     "notes": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind.",
     "llmStats": {
-      "codeArena": 1251.0,
+      "codeArena": 1251,
       "longCtx": 15.9,
       "math": 33.1,
       "reasoning": 36.7,
-      "speed": 111.0,
+      "speed": 111,
       "tools": 18.4,
       "vision": 21.1
     },
-    "params": 26.0,
-    "paramsActive": 4.0,
+    "params": 26,
+    "paramsActive": 4,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
@@ -4988,7 +4988,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1451.0,
+    "arenaElo": 1451,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5121,12 +5121,12 @@
     },
     "notes": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output.",
     "llmStats": {
-      "codeArena": 1062.0,
+      "codeArena": 1062,
       "math": 39.9,
       "reasoning": 45.2,
-      "speed": 115.0
+      "speed": 115
     },
-    "params": 31.0,
+    "params": 31,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
@@ -5138,7 +5138,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1444.0,
+    "arenaElo": 1444,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5159,15 +5159,15 @@
       },
       "official": {
         "in": 0.5,
-        "out": 3.0
+        "out": 3
       },
       "aliyun": {
-        "in": 2.0,
-        "out": 12.0
+        "in": 2,
+        "out": 12
       },
       "together-ai": {
         "in": 0.5,
-        "out": 3.0
+        "out": 3
       }
     },
     "verification": {
@@ -5274,14 +5274,14 @@
     },
     "notes": "Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference.",
     "llmStats": {
-      "codeArena": 1111.0,
+      "codeArena": 1111,
       "coding": 43.3,
       "longCtx": 37.3,
       "math": 49.8,
       "reasoning": 52.9,
       "search": 25.2,
-      "speed": 79.0,
-      "tools": 31.0,
+      "speed": 79,
+      "tools": 31,
       "vision": 36.1
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
@@ -5295,7 +5295,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1433.0,
+    "arenaElo": 1433,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5307,22 +5307,22 @@
       "openrouter": {
         "in": 1.2,
         "hit": 0.24,
-        "out": 4.0
+        "out": 4
       },
       "tencent": {
         "hit": 1.2,
-        "in": 5.0,
-        "out": 22.0
+        "in": 5,
+        "out": 22
       },
       "zhipu": {
         "hit": 1.2,
-        "in": 5.0,
-        "out": 22.0
+        "in": 5,
+        "out": 22
       },
       "officialCny": {
         "hit": 1.2,
-        "in": 5.0,
-        "out": 22.0
+        "in": 5,
+        "out": 22
       }
     },
     "verification": {
@@ -5382,7 +5382,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1369.0,
+    "arenaElo": 1369,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5552,8 +5552,8 @@
     "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
-        "in": 0.0,
-        "out": 0.0
+        "in": 0,
+        "out": 0
       }
     },
     "verification": {
@@ -5595,8 +5595,8 @@
     "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
-        "in": 0.0,
-        "out": 0.0
+        "in": 0,
+        "out": 0
       }
     },
     "verification": {
@@ -5707,7 +5707,7 @@
       ]
     },
     "notes": "Reka Edge is an extremely efficient 7B multimodal vision-language model that accepts image/video+text inputs and generates text outputs.",
-    "params": 7.0
+    "params": 7
   },
   {
     "id": "xiaomi/mimo-v2-omni",
@@ -5717,7 +5717,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+audio+video->text",
-    "arenaElo": 1430.0,
+    "arenaElo": 1430,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -5731,11 +5731,11 @@
       "openrouter": {
         "in": 0.4,
         "hit": 0.08,
-        "out": 2.0
+        "out": 2
       },
       "xiaomi": {
         "in": 0.4,
-        "out": 2.0
+        "out": 2
       }
     },
     "verification": {
@@ -5785,7 +5785,7 @@
     },
     "notes": "MiMo-V2-Omni is a frontier omni-modal model that natively processes image, video, and audio inputs within a unified architecture.",
     "llmStats": {
-      "codeArena": 191.0,
+      "codeArena": 191,
       "coding": 28.6,
       "reasoning": 45.5
     },
@@ -5800,25 +5800,25 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1448.0,
+    "arenaElo": 1448,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
-      "reportedSweBenchVerified": 78.0
+      "reportedSweBenchVerified": 78
     },
     "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
-        "in": 1.0,
+        "in": 1,
         "hit": 0.2,
-        "out": 3.0
+        "out": 3
       },
       "xiaomi": {
-        "in": 1.0,
-        "out": 3.0
+        "in": 1,
+        "out": 3
       }
     },
     "verification": {
@@ -5870,9 +5870,9 @@
     },
     "notes": "MiMo-V2-Pro is Xiaomi's flagship foundation model, featuring over 1T total parameters and a 1M context length, deeply optimized for agentic scenarios.",
     "llmStats": {
-      "codeArena": 215.0,
+      "codeArena": 215,
       "coding": 35.4,
-      "reasoning": 52.0,
+      "reasoning": 52,
       "search": 33.1,
       "writing": 28.4
     },
@@ -5887,7 +5887,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1417.0,
+    "arenaElo": 1417,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6007,10 +6007,10 @@
     },
     "notes": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement.",
     "llmStats": {
-      "codeArena": 878.0,
+      "codeArena": 878,
       "coding": 40.1,
       "reasoning": 53.9,
-      "speed": 243.0
+      "speed": 243
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
@@ -6023,7 +6023,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1402.0,
+    "arenaElo": 1402,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6134,11 +6134,11 @@
     },
     "notes": "GPT-5.4 nano is the most lightweight and cost-efficient variant of the GPT-5.4 family, optimized for speed-critical and high-volume tasks.",
     "llmStats": {
-      "codeArena": 727.0,
+      "codeArena": 727,
       "coding": 24.1,
       "math": 33.4,
       "reasoning": 40.1,
-      "speed": 518.0,
+      "speed": 518,
       "writing": 20.9
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
@@ -6162,7 +6162,7 @@
       "aime2025": 83.8,
       "gpqaDiamond": 71.2,
       "liveCodeBench": 63.6,
-      "mmluPro": 78.0
+      "mmluPro": 78
     },
     "contextWindow": "256K",
     "pricing": {
@@ -6247,13 +6247,13 @@
     },
     "notes": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system.",
     "llmStats": {
-      "codeArena": 176.0,
+      "codeArena": 176,
       "coding": 16.1,
       "math": 24.6,
       "reasoning": 24.1,
-      "speed": 577.0
+      "speed": 577
     },
-    "params": 24.0
+    "params": 24
   },
   {
     "id": "z-ai/glm-5-turbo",
@@ -6275,22 +6275,22 @@
       "openrouter": {
         "in": 1.2,
         "hit": 0.24,
-        "out": 4.0
+        "out": 4
       },
       "tencent": {
         "hit": 1.2,
-        "in": 5.0,
-        "out": 22.0
+        "in": 5,
+        "out": 22
       },
       "zhipu": {
         "hit": 1.2,
-        "in": 5.0,
-        "out": 22.0
+        "in": 5,
+        "out": 22
       },
       "officialCny": {
         "hit": 1.2,
-        "in": 5.0,
-        "out": 22.0
+        "in": 5,
+        "out": 22
       }
     },
     "verification": {
@@ -6430,8 +6430,8 @@
       ]
     },
     "notes": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications.",
-    "params": 120.0,
-    "paramsActive": 12.0
+    "params": 120,
+    "paramsActive": 12
   },
   {
     "id": "bytedance-seed/seed-2.0-lite",
@@ -6448,7 +6448,7 @@
     "gpqa": null,
     "math": null,
     "evals": {
-      "aime2025": 93.0,
+      "aime2025": 93,
       "gpqaDiamond": 85.1,
       "reportedSweBenchVerified": 73.5
     },
@@ -6456,11 +6456,11 @@
     "pricing": {
       "openrouter": {
         "in": 0.25,
-        "out": 2.0
+        "out": 2
       },
       "bytedance": {
         "in": 0.25,
-        "out": 2.0
+        "out": 2
       }
     },
     "verification": {
@@ -6532,7 +6532,7 @@
       },
       "siliconflow": {
         "in": 1.5,
-        "out": 12.0
+        "out": 12
       },
       "together-ai": {
         "in": 0.17,
@@ -6590,7 +6590,7 @@
       ]
     },
     "notes": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture.",
-    "params": 9.0
+    "params": 9
   },
   {
     "id": "openai/gpt-5.4-pro",
@@ -6610,8 +6610,8 @@
     "contextWindow": "1.1M",
     "pricing": {
       "openrouter": {
-        "in": 30.0,
-        "out": 180.0
+        "in": 30,
+        "out": 180
       }
     },
     "verification": {
@@ -6643,7 +6643,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1347.0,
+    "arenaElo": 1347,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6651,8 +6651,8 @@
     "math": null,
     "evals": {
       "aime2025": 91.1,
-      "gpqaDiamond": 74.0,
-      "liveCodeBench": 67.0
+      "gpqaDiamond": 74,
+      "liveCodeBench": 67
     },
     "contextWindow": "128K",
     "pricing": {
@@ -6746,11 +6746,11 @@
     },
     "notes": "Mercury 2 is an extremely fast reasoning LLM, and the first reasoning diffusion LLM (dLLM).",
     "llmStats": {
-      "codeArena": 248.0,
+      "codeArena": 248,
       "coding": 19.2,
       "math": 31.7,
       "reasoning": 29.5,
-      "speed": 657.0,
+      "speed": 657,
       "writing": 7.3
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
@@ -6764,7 +6764,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1449.0,
+    "arenaElo": 1449,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6776,15 +6776,15 @@
       "openrouter": {
         "in": 1.75,
         "hit": 0.175,
-        "out": 14.0
+        "out": 14
       },
       "cursor": {
         "in": 1.75,
-        "out": 14.0
+        "out": 14
       },
       "official": {
         "in": 1.75,
-        "out": 14.0
+        "out": 14
       }
     },
     "verification": {
@@ -6858,8 +6858,8 @@
     },
     "notes": "GPT-5.3 Chat is an update to ChatGPT's most-used model that makes everyday conversations smoother, more useful, and more directly helpful.",
     "llmStats": {
-      "codeArena": 590.0,
-      "speed": 276.0
+      "codeArena": 590,
+      "speed": 276
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
@@ -6872,7 +6872,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file+audio+video->text",
-    "arenaElo": 1432.0,
+    "arenaElo": 1432,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -6880,7 +6880,7 @@
     "math": null,
     "evals": {
       "gpqaDiamond": 86.9,
-      "hle": 16.0,
+      "hle": 16,
       "simpleQA": 43.3
     },
     "contextWindow": "1M",
@@ -7033,7 +7033,7 @@
     "pricing": {
       "openrouter": {
         "in": 0.5,
-        "out": 3.0
+        "out": 3
       }
     },
     "verification": {
@@ -7065,14 +7065,14 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1395.0,
+    "arenaElo": 1395,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
-      "browseComp": 61.0,
+      "browseComp": 61,
       "gpqaDiamond": 84.2,
       "hle": 47.4,
       "ifEval": 91.9,
@@ -7084,11 +7084,11 @@
       "openrouter": {
         "in": 0.14,
         "hit": 0.05,
-        "out": 1.0
+        "out": 1
       },
       "official": {
         "in": 0.25,
-        "out": 2.0
+        "out": 2
       },
       "aliyun": {
         "in": 0.4,
@@ -7215,16 +7215,16 @@
     },
     "notes": "The Qwen3.5 Series 35B-A3B is a native vision-language model designed with a hybrid architecture that integrates linear attention mechanisms and a sparse mixture-of-experts model, achieving higher inference efficiency.",
     "llmStats": {
-      "codeArena": 549.0,
+      "codeArena": 549,
       "coding": 16.8,
       "math": 38.7,
-      "reasoning": 39.0,
+      "reasoning": 39,
       "search": 17.8,
-      "speed": 165.0,
+      "speed": 165,
       "writing": 18.8
     },
-    "params": 35.0,
-    "paramsActive": 3.0,
+    "params": 35,
+    "paramsActive": 3,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
@@ -7236,17 +7236,17 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1408.0,
+    "arenaElo": 1408,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
-      "browseComp": 61.0,
+      "browseComp": 61,
       "gpqaDiamond": 85.5,
       "hle": 48.5,
-      "ifEval": 95.0,
+      "ifEval": 95,
       "mmluPro": 86.1,
       "reportedSweBenchVerified": 72.4
     },
@@ -7384,15 +7384,15 @@
     },
     "notes": "The Qwen3.5 27B native vision-language Dense model incorporates a linear attention mechanism, delivering fast response times while balancing inference speed and performance.",
     "llmStats": {
-      "codeArena": 734.0,
+      "codeArena": 734,
       "coding": 22.1,
       "math": 42.6,
       "reasoning": 42.6,
       "search": 20.5,
-      "speed": 69.0,
+      "speed": 69,
       "writing": 22.3
     },
-    "params": 27.0,
+    "params": 27,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
@@ -7404,7 +7404,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1417.0,
+    "arenaElo": 1417,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7416,7 +7416,7 @@
       "hle": 47.5,
       "ifEval": 93.4,
       "mmluPro": 86.7,
-      "reportedSweBenchVerified": 72.0
+      "reportedSweBenchVerified": 72
     },
     "contextWindow": "262K",
     "pricing": {
@@ -7433,12 +7433,12 @@
         "out": 6.4
       },
       "siliconflow": {
-        "in": 2.0,
-        "out": 16.0
+        "in": 2,
+        "out": 16
       },
       "together-ai": {
-        "in": 6.0,
-        "out": 10.0
+        "in": 6,
+        "out": 10
       }
     },
     "verification": {
@@ -7562,16 +7562,16 @@
     },
     "notes": "The Qwen3.5 122B-A10B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency.",
     "llmStats": {
-      "codeArena": 698.0,
+      "codeArena": 698,
       "coding": 26.6,
       "math": 44.4,
       "reasoning": 43.4,
       "search": 22.2,
-      "speed": 104.0,
+      "speed": 104,
       "writing": 24.3
     },
-    "params": 122.0,
-    "paramsActive": 10.0,
+    "params": 122,
+    "paramsActive": 10,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
@@ -7583,7 +7583,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1397.0,
+    "arenaElo": 1397,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7598,12 +7598,12 @@
       },
       "aliyun": {
         "in": 0.2,
-        "out": 2.0
+        "out": 2
       },
       "tencent": {
         "hit": 0.02,
         "in": 0.2,
-        "out": 2.0
+        "out": 2
       }
     },
     "verification": {
@@ -7705,8 +7705,8 @@
       ]
     },
     "notes": "LFM2-24B-A2B is the largest model in the LFM2 family of hybrid architectures designed for efficient on-device deployment.",
-    "params": 24.0,
-    "paramsActive": 2.0
+    "params": 24,
+    "paramsActive": 2
   },
   {
     "id": "google/gemini-3.1-pro-preview-customtools",
@@ -7726,9 +7726,9 @@
     "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
-        "in": 2.0,
+        "in": 2,
         "hit": 0.2,
-        "out": 12.0
+        "out": 12
       }
     },
     "verification": {
@@ -7806,7 +7806,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file+audio+video->text",
-    "arenaElo": 1485.0,
+    "arenaElo": 1485,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -7821,21 +7821,21 @@
     "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
-        "in": 2.0,
+        "in": 2,
         "hit": 0.2,
-        "out": 12.0
+        "out": 12
       },
       "cursor": {
         "in": 2.5,
-        "out": 15.0
+        "out": 15
       },
       "official": {
         "in": 2.5,
-        "out": 15.0
+        "out": 15
       },
       "deep-infra": {
-        "in": 2.0,
-        "out": 12.0
+        "in": 2,
+        "out": 12
       }
     },
     "verification": {
@@ -7942,15 +7942,15 @@
     },
     "notes": "Gemini 3.1 Pro Preview is Google’s frontier reasoning model, delivering enhanced software engineering performance, improved agentic reliability, and more efficient token usage across complex workflows.",
     "llmStats": {
-      "codeArena": 2125.0,
+      "codeArena": 2125,
       "coding": 44.1,
       "longCtx": 13.2,
       "math": 54.8,
-      "reasoning": 59.0,
-      "search": 37.0,
-      "speed": 157.0,
+      "reasoning": 59,
+      "search": 37,
+      "speed": 157,
       "tools": 34.1,
-      "vision": 41.0
+      "vision": 41
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
@@ -8016,14 +8016,14 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1442.0,
+    "arenaElo": 1442,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
-      "browseComp": 69.0,
+      "browseComp": 69,
       "gpqaDiamond": 88.4,
       "hle": 28.7,
       "ifEval": 92.6,
@@ -8046,7 +8046,7 @@
         "out": 7.2
       },
       "siliconflow": {
-        "in": 2.0,
+        "in": 2,
         "out": 1.2
       },
       "together-ai": {
@@ -8179,19 +8179,19 @@
     },
     "notes": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency.",
     "llmStats": {
-      "codeArena": 1192.0,
-      "coding": 31.0,
+      "codeArena": 1192,
+      "coding": 31,
       "longCtx": 38.8,
       "math": 46.7,
       "reasoning": 49.4,
       "search": 25.8,
-      "speed": 57.0,
+      "speed": 57,
       "tools": 22.8,
-      "vision": 29.0,
+      "vision": 29,
       "writing": 28.7
     },
-    "params": 397.0,
-    "paramsActive": 17.0,
+    "params": 397,
+    "paramsActive": 17,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
@@ -8203,7 +8203,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1390.0,
+    "arenaElo": 1390,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -8365,11 +8365,11 @@
     },
     "notes": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity.",
     "llmStats": {
-      "codeArena": 936.0,
+      "codeArena": 936,
       "coding": 38.9,
       "reasoning": 53.1,
-      "search": 27.0,
-      "speed": 559.0
+      "search": 27,
+      "speed": 559
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
@@ -8382,7 +8382,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1457.0,
+    "arenaElo": 1457,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -8400,38 +8400,38 @@
         "out": 2.55
       },
       "official": {
-        "in": 1.0,
+        "in": 1,
         "out": 3.2
       },
       "aliyun": {
-        "in": 6.0,
-        "out": 22.0
+        "in": 6,
+        "out": 22
       },
       "baidu": {
-        "in": 4.0,
-        "out": 18.0
+        "in": 4,
+        "out": 18
       },
       "tencent": {
         "hit": 0.5,
-        "in": 2.0,
-        "out": 9.0
+        "in": 2,
+        "out": 9
       },
       "zhipu": {
-        "hit": 1.0,
-        "in": 4.0,
-        "out": 18.0
+        "hit": 1,
+        "in": 4,
+        "out": 18
       },
       "siliconflow": {
-        "in": 4.0,
-        "out": 22.0
+        "in": 4,
+        "out": 22
       },
       "officialCny": {
-        "hit": 1.0,
-        "in": 4.0,
-        "out": 18.0
+        "hit": 1,
+        "in": 4,
+        "out": 18
       },
       "together-ai": {
-        "in": 1.0,
+        "in": 1,
         "out": 3.2
       }
     },
@@ -8556,11 +8556,11 @@
     },
     "notes": "GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows.",
     "llmStats": {
-      "codeArena": 1581.0,
+      "codeArena": 1581,
       "coding": 37.3,
       "reasoning": 52.1,
       "search": 26.5,
-      "speed": 299.0,
+      "speed": 299,
       "tools": 26.7
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
@@ -8589,7 +8589,7 @@
       },
       "deep-infra": {
         "in": 1.2,
-        "out": 6.0
+        "out": 6
       }
     },
     "verification": {
@@ -8627,7 +8627,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1497.0,
+    "arenaElo": 1497,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -8635,7 +8635,7 @@
     "math": null,
     "evals": {
       "aime2025": 99.8,
-      "browseComp": 84.0,
+      "browseComp": 84,
       "gpqaDiamond": 91.3,
       "hle": 53.1,
       "reportedSweBenchVerified": 80.8
@@ -8643,17 +8643,17 @@
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
-        "in": 5.0,
+        "in": 5,
         "hit": 0.5,
-        "out": 25.0
+        "out": 25
       },
       "cursor": {
-        "in": 5.0,
-        "out": 25.0
+        "in": 5,
+        "out": 25
       },
       "official": {
-        "in": 5.0,
-        "out": 25.0
+        "in": 5,
+        "out": 25
       }
     },
     "verification": {
@@ -8760,13 +8760,13 @@
     },
     "notes": "Opus 4.6 is Anthropic’s strongest model for coding and long-running professional tasks.",
     "llmStats": {
-      "codeArena": 2032.0,
+      "codeArena": 2032,
       "coding": 45.6,
       "longCtx": 36.7,
       "math": 52.4,
       "reasoning": 59.9,
       "search": 38.7,
-      "speed": 82.0,
+      "speed": 82,
       "tools": 35.1,
       "vision": 36.5,
       "writing": 44.6
@@ -8797,8 +8797,8 @@
         "out": 0.8
       },
       "aliyun": {
-        "in": 1.0,
-        "out": 4.0
+        "in": 1,
+        "out": 4
       }
     },
     "verification": {
@@ -8837,7 +8837,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1395.0,
+    "arenaElo": 1395,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -8845,7 +8845,7 @@
     "math": null,
     "evals": {
       "aime2025": 97.3,
-      "browseComp": 69.0,
+      "browseComp": 69,
       "reportedSweBenchVerified": 74.4
     },
     "contextWindow": "66K",
@@ -8964,12 +8964,12 @@
     },
     "notes": "Step 3.5 Flash is StepFun's most capable open-source foundation model.",
     "llmStats": {
-      "codeArena": 565.0,
+      "codeArena": 565,
       "coding": 28.9,
       "math": 47.1,
       "reasoning": 49.8,
       "search": 22.4,
-      "speed": 259.0
+      "speed": 259
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
@@ -8982,7 +8982,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1379.0,
+    "arenaElo": 1379,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -9038,7 +9038,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image->text",
-    "arenaElo": 1450.0,
+    "arenaElo": 1450,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -9062,24 +9062,24 @@
       "official": {
         "hit": 0.1,
         "in": 0.6,
-        "out": 3.0
+        "out": 3
       },
       "aliyun": {
-        "in": 4.0,
-        "out": 21.0
+        "in": 4,
+        "out": 21
       },
       "baidu": {
-        "in": 4.0,
-        "out": 21.0
+        "in": 4,
+        "out": 21
       },
       "tencent": {
         "hit": 0.7,
-        "in": 4.0,
-        "out": 21.0
+        "in": 4,
+        "out": 21
       },
       "siliconflow": {
-        "in": 4.0,
-        "out": 21.0
+        "in": 4,
+        "out": 21
       },
       "moonshot-ai": {
         "in": 0.57,
@@ -9233,7 +9233,7 @@
     },
     "notes": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm.",
     "llmStats": {
-      "codeArena": 1462.0,
+      "codeArena": 1462,
       "coding": 32.5,
       "longCtx": 38.3,
       "math": 47.9,
@@ -9366,7 +9366,7 @@
     "pricing": {
       "openrouter": {
         "in": 0.6,
-        "out": 6.0
+        "out": 6
       }
     },
     "verification": {
@@ -9409,7 +9409,7 @@
     "pricing": {
       "openrouter": {
         "in": 2.5,
-        "out": 10.0
+        "out": 10
       }
     },
     "verification": {
@@ -9484,7 +9484,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1368.0,
+    "arenaElo": 1368,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -9505,12 +9505,12 @@
         "out": 0.4
       },
       "zhipu": {
-        "in": 0.0,
-        "out": 0.0
+        "in": 0,
+        "out": 0
       },
       "officialCny": {
-        "in": 0.0,
-        "out": 0.0
+        "in": 0,
+        "out": 0
       }
     },
     "verification": {
@@ -9603,12 +9603,12 @@
     },
     "notes": "As a 30B-class SOTA model, GLM-4.7-Flash offers a new option that balances performance and efficiency.",
     "llmStats": {
-      "codeArena": 759.0,
-      "coding": 9.0,
+      "codeArena": 759,
+      "coding": 9,
       "math": 29.3,
-      "reasoning": 32.0,
+      "reasoning": 32,
       "search": 3.9,
-      "speed": 38.0
+      "speed": 38
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
@@ -9681,11 +9681,11 @@
     "pricing": {
       "openrouter": {
         "in": 0.25,
-        "out": 2.0
+        "out": 2
       },
       "bytedance": {
         "in": 0.25,
-        "out": 2.0
+        "out": 2
       }
     },
     "verification": {
@@ -9719,20 +9719,20 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1384.0,
+    "arenaElo": 1384,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
-      "aime2025": 81.0,
-      "browseComp": 62.0,
-      "gpqaDiamond": 81.0,
-      "hle": 22.0,
-      "liveCodeBench": 78.0,
-      "mmluPro": 88.0,
-      "reportedSweBenchVerified": 67.0,
+      "aime2025": 81,
+      "browseComp": 62,
+      "gpqaDiamond": 81,
+      "hle": 22,
+      "liveCodeBench": 78,
+      "mmluPro": 88,
+      "reportedSweBenchVerified": 67,
       "terminalBench": 47.9
     },
     "contextWindow": "1M",
@@ -9869,12 +9869,12 @@
     },
     "notes": "MiniMax-M2.1 is a lightweight, state-of-the-art large language model optimized for coding, agentic workflows, and modern application development.",
     "llmStats": {
-      "codeArena": 908.0,
+      "codeArena": 908,
       "coding": 27.6,
       "math": 36.7,
       "reasoning": 41.6,
       "search": 19.1,
-      "speed": 395.0,
+      "speed": 395,
       "writing": 18.2
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
@@ -9888,7 +9888,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1442.0,
+    "arenaElo": 1442,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -9896,7 +9896,7 @@
     "math": null,
     "evals": {
       "aime2025": 95.7,
-      "browseComp": 52.0,
+      "browseComp": 52,
       "gpqaDiamond": 85.7,
       "hle": 42.8,
       "mmluPro": 84.3,
@@ -9915,22 +9915,22 @@
         "out": 2.2
       },
       "aliyun": {
-        "in": 3.0,
-        "out": 14.0
+        "in": 3,
+        "out": 14
       },
       "zhipu": {
         "hit": 0.4,
-        "in": 2.0,
-        "out": 8.0
+        "in": 2,
+        "out": 8
       },
       "siliconflow": {
-        "in": 4.0,
-        "out": 16.0
+        "in": 4,
+        "out": 16
       },
       "officialCny": {
         "hit": 0.4,
-        "in": 2.0,
-        "out": 8.0
+        "in": 2,
+        "out": 8
       }
     },
     "verification": {
@@ -10060,12 +10060,12 @@
     },
     "notes": "GLM-4.7 is Z.ai’s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution.",
     "llmStats": {
-      "codeArena": 1064.0,
+      "codeArena": 1064,
       "coding": 23.2,
       "math": 44.1,
       "reasoning": 44.2,
       "search": 16.8,
-      "speed": 61.0
+      "speed": 61
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
@@ -10078,7 +10078,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file+audio+video->text",
-    "arenaElo": 1473.0,
+    "arenaElo": 1473,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -10088,7 +10088,7 @@
       "aime2025": 99.7,
       "gpqaDiamond": 90.4,
       "hle": 43.5,
-      "reportedSweBenchVerified": 78.0,
+      "reportedSweBenchVerified": 78,
       "simpleQA": 68.7
     },
     "contextWindow": "1M",
@@ -10096,15 +10096,15 @@
       "openrouter": {
         "in": 0.5,
         "hit": 0.05,
-        "out": 3.0
+        "out": 3
       },
       "cursor": {
         "in": 0.5,
-        "out": 3.0
+        "out": 3
       },
       "official": {
         "in": 0.5,
-        "out": 3.0
+        "out": 3
       }
     },
     "verification": {
@@ -10209,12 +10209,12 @@
     },
     "notes": "Gemini 3 Flash Preview is a high speed, high value thinking model designed for agentic workflows, multi turn chat, and coding assistance.",
     "llmStats": {
-      "codeArena": 1703.0,
+      "codeArena": 1703,
       "coding": 31.5,
       "longCtx": 5.3,
       "math": 50.7,
       "reasoning": 49.5,
-      "speed": 600.0,
+      "speed": 600,
       "tools": 24.1,
       "vision": 34.1
     },
@@ -10332,7 +10332,7 @@
     },
     "notes": "MiMo-V2-Flash is an open-source foundation language model developed by Xiaomi.",
     "llmStats": {
-      "codeArena": 793.0,
+      "codeArena": 793,
       "coding": 23.6,
       "math": 38.1,
       "reasoning": 38.7,
@@ -10355,7 +10355,7 @@
     "math": null,
     "evals": {
       "aime2025": 99.2,
-      "gpqaDiamond": 75.0,
+      "gpqaDiamond": 75,
       "hle": 15.5,
       "mmluPro": 78.3,
       "reportedSweBenchVerified": 38.8,
@@ -10463,15 +10463,15 @@
     },
     "notes": "NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems.",
     "llmStats": {
-      "codeArena": 222.0,
+      "codeArena": 222,
       "coding": 2.9,
       "math": 28.1,
       "reasoning": 24.7,
-      "speed": 61.0,
+      "speed": 61,
       "writing": 5.5
     },
-    "params": 30.0,
-    "paramsActive": 3.0
+    "params": 30,
+    "paramsActive": 3
   },
   {
     "id": "openai/gpt-5.2-chat",
@@ -10481,7 +10481,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1435.0,
+    "arenaElo": 1435,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -10493,7 +10493,7 @@
       "openrouter": {
         "in": 1.75,
         "hit": 0.175,
-        "out": 14.0
+        "out": 14
       }
     },
     "verification": {
@@ -10535,7 +10535,7 @@
     "gpqa": null,
     "math": null,
     "evals": {
-      "aime2025": 100.0,
+      "aime2025": 100,
       "browseComp": 77.9,
       "gpqaDiamond": 93.2,
       "hle": 36.6
@@ -10543,8 +10543,8 @@
     "contextWindow": "400K",
     "pricing": {
       "openrouter": {
-        "in": 21.0,
-        "out": 168.0
+        "in": 21,
+        "out": 168
       }
     },
     "verification": {
@@ -10612,15 +10612,15 @@
       "openrouter": {
         "in": 0.4,
         "hit": 0.04,
-        "out": 2.0
+        "out": 2
       },
       "mistral": {
         "in": 0.4,
-        "out": 2.0
+        "out": 2
       },
       "official": {
         "in": 0.4,
-        "out": 2.0
+        "out": 2
       }
     },
     "verification": {
@@ -10646,7 +10646,7 @@
       ]
     },
     "notes": "Devstral 2 is a state-of-the-art open-source model by Mistral AI specializing in agentic coding.",
-    "params": 24.0
+    "params": 24
   },
   {
     "id": "relace/relace-search",
@@ -10666,8 +10666,8 @@
     "contextWindow": "256K",
     "pricing": {
       "openrouter": {
-        "in": 1.0,
-        "out": 3.0
+        "in": 1,
+        "out": 3
       }
     },
     "verification": {
@@ -10699,7 +10699,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+video->text",
-    "arenaElo": 1377.0,
+    "arenaElo": 1377,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -10715,13 +10715,13 @@
       },
       "zhipu": {
         "hit": 0.2,
-        "in": 1.0,
-        "out": 3.0
+        "in": 1,
+        "out": 3
       },
       "officialCny": {
         "hit": 0.2,
-        "in": 1.0,
-        "out": 3.0
+        "in": 1,
+        "out": 3
       }
     },
     "verification": {
@@ -10808,8 +10808,8 @@
       ]
     },
     "notes": "DeepSeek V3.1 Nex-N1 is the flagship release of the Nex-N1 series — a post-trained model designed to highlight agent autonomy, tool use, and real-world productivity.",
-    "params": 671.0,
-    "paramsActive": 37.0
+    "params": 671,
+    "paramsActive": 37
   },
   {
     "id": "essentialai/rnj-1-instruct",
@@ -10922,7 +10922,7 @@
       "openrouter": {
         "in": 1.25,
         "hit": 0.125,
-        "out": 10.0
+        "out": 10
       }
     },
     "verification": {
@@ -10955,16 +10955,16 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file+video->text",
-    "arenaElo": 1337.0,
+    "arenaElo": 1337,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
-      "aime2025": 91.0,
+      "aime2025": 91,
       "gpqaDiamond": 79.6,
-      "liveCodeBench": 71.0,
+      "liveCodeBench": 71,
       "mmluPro": 80.9,
       "reportedSweBenchVerified": 64.5,
       "terminalBench": 32.5
@@ -11114,7 +11114,7 @@
       ]
     },
     "notes": "The largest model in the Ministral 3 family, Ministral 3 14B offers frontier capabilities and performance comparable to its larger Mistral Small 3.2 24B counterpart.",
-    "params": 14.0
+    "params": 14
   },
   {
     "id": "mistralai/ministral-8b-2512",
@@ -11170,7 +11170,7 @@
       ]
     },
     "notes": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities.",
-    "params": 8.0
+    "params": 8
   },
   {
     "id": "mistralai/ministral-3b-2512",
@@ -11226,7 +11226,7 @@
       ]
     },
     "notes": "The smallest model in the Ministral 3 family, Ministral 3 3B is a powerful, efficient tiny language model with vision capabilities.",
-    "params": 3.0
+    "params": 3
   },
   {
     "id": "mistralai/mistral-large-2512",
@@ -11236,7 +11236,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1415.0,
+    "arenaElo": 1415,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -11282,7 +11282,7 @@
       ]
     },
     "notes": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.",
-    "params": 123.0,
+    "params": 123,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
@@ -11344,7 +11344,7 @@
     "gpqa": null,
     "math": null,
     "evals": {
-      "aime2025": 96.0,
+      "aime2025": 96,
       "hle": 30.6,
       "reportedSweBenchVerified": 73.1
     },
@@ -11401,13 +11401,13 @@
     },
     "notes": "DeepSeek-V3.2-Speciale is a high-compute variant of DeepSeek-V3.2 optimized for maximum reasoning and agentic performance.",
     "llmStats": {
-      "codeArena": 832.0,
+      "codeArena": 832,
       "coding": 23.5,
       "math": 46.2,
-      "reasoning": 43.0
+      "reasoning": 43
     },
-    "params": 671.0,
-    "paramsActive": 37.0
+    "params": 671,
+    "paramsActive": 37
   },
   {
     "id": "deepseek/deepseek-v3.2",
@@ -11417,7 +11417,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1425.0,
+    "arenaElo": 1425,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -11429,7 +11429,7 @@
       "gpqaDiamond": 82.4,
       "hle": 40.8,
       "liveCodeBench": 83.3,
-      "mmluPro": 85.0,
+      "mmluPro": 85,
       "reportedSweBenchVerified": 73.1
     },
     "contextWindow": "164K",
@@ -11444,21 +11444,21 @@
         "out": 0.38
       },
       "aliyun": {
-        "in": 2.0,
-        "out": 3.0
+        "in": 2,
+        "out": 3
       },
       "baidu": {
-        "in": 2.0,
-        "out": 3.0
+        "in": 2,
+        "out": 3
       },
       "tencent": {
-        "in": 2.0,
-        "out": 3.0,
+        "in": 2,
+        "out": 3,
         "hit": 0.4
       },
       "siliconflow": {
-        "in": 2.0,
-        "out": 3.0
+        "in": 2,
+        "out": 3
       },
       "deep-infra": {
         "in": 0.26,
@@ -11604,15 +11604,15 @@
     },
     "notes": "DeepSeek-V3.2 is a large language model designed to harmonize high computational efficiency with strong reasoning and agentic tool-use performance.",
     "llmStats": {
-      "codeArena": 464.0,
+      "codeArena": 464,
       "coding": 28.8,
       "math": 39.1,
       "reasoning": 42.3,
       "search": 13.7,
-      "speed": 53.0
+      "speed": 53
     },
-    "params": 671.0,
-    "paramsActive": 37.0,
+    "params": 671,
+    "paramsActive": 37,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
@@ -11624,7 +11624,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1356.0,
+    "arenaElo": 1356,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -11669,7 +11669,7 @@
       ]
     },
     "notes": "INTELLECT-3 is a 106B-parameter Mixture-of-Experts model (12B active) post-trained from GLM-4.5-Air-Base using supervised fine-tuning (SFT) followed by large-scale reinforcement learning (RL).",
-    "params": 32.0,
+    "params": 32,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
@@ -11681,30 +11681,30 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1469.0,
+    "arenaElo": 1469,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
-      "gpqaDiamond": 87.0,
+      "gpqaDiamond": 87,
       "reportedSweBenchVerified": 80.9
     },
     "contextWindow": "200K",
     "pricing": {
       "openrouter": {
-        "in": 5.0,
+        "in": 5,
         "hit": 0.5,
-        "out": 25.0
+        "out": 25
       },
       "cursor": {
-        "in": 5.0,
-        "out": 25.0
+        "in": 5,
+        "out": 25
       },
       "official": {
-        "in": 5.0,
-        "out": 25.0
+        "in": 5,
+        "out": 25
       }
     },
     "verification": {
@@ -11794,11 +11794,11 @@
     },
     "notes": "Claude Opus 4.5 is Anthropic’s frontier reasoning model optimized for complex software engineering, agentic workflows, and long-horizon computer use.",
     "llmStats": {
-      "codeArena": 1614.0,
-      "coding": 41.0,
-      "math": 42.0,
+      "codeArena": 1614,
+      "coding": 41,
+      "math": 42,
       "reasoning": 54.4,
-      "speed": 174.0,
+      "speed": 174,
       "tools": 30.8,
       "vision": 29.9,
       "writing": 35.6
@@ -11814,7 +11814,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1305.0,
+    "arenaElo": 1305,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -11855,7 +11855,7 @@
       ]
     },
     "notes": "Olmo 3 32B Think is a large-scale, 32-billion-parameter model purpose-built for deep reasoning, complex logic chains and advanced instruction-following scenarios.",
-    "params": 32.0,
+    "params": 32,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
@@ -11877,9 +11877,9 @@
     "contextWindow": "66K",
     "pricing": {
       "openrouter": {
-        "in": 2.0,
+        "in": 2,
         "hit": 0.2,
-        "out": 12.0
+        "out": 12
       }
     },
     "verification": {
@@ -11956,8 +11956,8 @@
       ]
     },
     "notes": "Cogito v2.1 671B MoE represents one of the strongest open models globally, matching performance of frontier closed and open models.",
-    "params": 671.0,
-    "paramsActive": 37.0
+    "params": 671,
+    "paramsActive": 37
   },
   {
     "id": "openai/gpt-5.1",
@@ -11967,14 +11967,14 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image+file->text",
-    "arenaElo": 1439.0,
+    "arenaElo": 1439,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
-      "aime2025": 94.0,
+      "aime2025": 94,
       "gpqaDiamond": 88.1,
       "reportedSweBenchVerified": 76.3
     },
@@ -11983,15 +11983,15 @@
       "openrouter": {
         "in": 1.25,
         "hit": 0.125,
-        "out": 10.0
+        "out": 10
       },
       "cursor": {
         "in": 1.25,
-        "out": 10.0
+        "out": 10
       },
       "official": {
         "in": 1.25,
-        "out": 10.0
+        "out": 10
       }
     },
     "verification": {
@@ -12087,12 +12087,12 @@
     },
     "notes": "GPT-5.1 is the latest frontier-grade model in the GPT-5 series, offering stronger general-purpose reasoning, improved instruction adherence, and a more natural conversational style compared to GPT-5.",
     "llmStats": {
-      "codeArena": 1174.0,
+      "codeArena": 1174,
       "coding": 31.8,
       "math": 41.5,
       "reasoning": 48.1,
       "search": 22.2,
-      "speed": 478.0,
+      "speed": 478,
       "tools": 25.3,
       "vision": 35.1,
       "writing": 28.4
@@ -12120,7 +12120,7 @@
       "openrouter": {
         "in": 1.25,
         "hit": 0.125,
-        "out": 10.0
+        "out": 10
       }
     },
     "verification": {
@@ -12153,7 +12153,7 @@
     "multimodal": "Vision",
     "copilotMultiplier": null,
     "performance": "text+image->text",
-    "arenaElo": 1455.0,
+    "arenaElo": 1455,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -12167,15 +12167,15 @@
       "openrouter": {
         "in": 1.25,
         "hit": 0.13,
-        "out": 10.0
+        "out": 10
       },
       "cursor": {
         "in": 1.25,
-        "out": 10.0
+        "out": 10
       },
       "official": {
         "in": 1.25,
-        "out": 10.0
+        "out": 10
       }
     },
     "verification": {
@@ -12246,10 +12246,10 @@
     },
     "notes": "GPT-5.1-Codex is a specialized version of GPT-5.1 optimized for software engineering and coding workflows.",
     "llmStats": {
-      "codeArena": 696.0,
+      "codeArena": 696,
       "coding": 29.4,
       "reasoning": 43.3,
-      "speed": 329.0
+      "speed": 329
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
@@ -12276,7 +12276,7 @@
       "openrouter": {
         "in": 0.25,
         "hit": 0.03,
-        "out": 2.0
+        "out": 2
       }
     },
     "verification": {
@@ -12318,7 +12318,7 @@
     },
     "notes": "GPT-5.1-Codex-Mini is a smaller and faster version of GPT-5.1-Codex",
     "llmStats": {
-      "codeArena": 210.0,
+      "codeArena": 210,
       "math": 0.9,
       "reasoning": 0.6
     },
@@ -12333,7 +12333,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1430.0,
+    "arenaElo": 1430,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -12353,8 +12353,8 @@
         "out": 2.5
       },
       "aliyun": {
-        "in": 4.0,
-        "out": 16.0
+        "in": 4,
+        "out": 16
       },
       "moonshot-ai": {
         "in": 0.6,
@@ -12484,12 +12484,12 @@
     "contextWindow": "200K",
     "pricing": {
       "openrouter": {
-        "in": 3.0,
-        "out": 15.0
+        "in": 3,
+        "out": 15
       },
       "perplexity": {
-        "in": 3.0,
-        "out": 15.0
+        "in": 3,
+        "out": 15
       }
     },
     "verification": {
@@ -12573,7 +12573,7 @@
       ]
     },
     "notes": "Voxtral Small is an enhancement of Mistral Small 3, incorporating state-of-the-art audio input capabilities while retaining best-in-class text performance.",
-    "params": 24.0
+    "params": 24
   },
   {
     "id": "openai/gpt-oss-safeguard-20b",
@@ -12629,7 +12629,7 @@
       ]
     },
     "notes": "gpt-oss-safeguard-20b is a safety reasoning model from OpenAI built upon gpt-oss-20b.",
-    "params": 20.0
+    "params": 20
   },
   {
     "id": "minimax/minimax-m2",
@@ -12639,19 +12639,19 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1346.0,
+    "arenaElo": 1346,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
     "math": null,
     "evals": {
-      "aime2025": 78.0,
-      "browseComp": 44.0,
-      "gpqaDiamond": 78.0,
+      "aime2025": 78,
+      "browseComp": 44,
+      "gpqaDiamond": 78,
       "hle": 12.5,
-      "liveCodeBench": 83.0,
-      "mmluPro": 82.0,
+      "liveCodeBench": 83,
+      "mmluPro": 82,
       "reportedSweBenchVerified": 69.4,
       "terminalBench": 46.3
     },
@@ -12779,12 +12779,12 @@
     },
     "notes": "MiniMax-M2 is a compact, high-efficiency large language model optimized for end-to-end coding and agentic workflows.",
     "llmStats": {
-      "codeArena": 857.0,
+      "codeArena": 857,
       "coding": 23.9,
       "math": 25.9,
       "reasoning": 34.3,
       "search": 5.3,
-      "speed": 368.0,
+      "speed": 368,
       "writing": 19.1
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
@@ -12821,8 +12821,8 @@
         "out": 4.697
       },
       "siliconflow": {
-        "in": 1.0,
-        "out": 4.0
+        "in": 1,
+        "out": 4
       }
     },
     "verification": {
@@ -12886,7 +12886,7 @@
       ]
     },
     "notes": "Qwen3-VL-32B-Instruct is a large-scale multimodal vision-language model designed for high-precision understanding and reasoning across text, images, and video.",
-    "params": 32.0
+    "params": 32
   },
   {
     "id": "ibm-granite/granite-4.0-h-micro",
@@ -12997,7 +12997,7 @@
       "openrouter": {
         "in": 2.5,
         "hit": 0.25,
-        "out": 2.0
+        "out": 2
       }
     },
     "verification": {
@@ -13055,11 +13055,11 @@
       },
       "aliyun": {
         "in": 0.5,
-        "out": 5.0
+        "out": 5
       },
       "siliconflow": {
         "in": 0.5,
-        "out": 5.0
+        "out": 5
       }
     },
     "verification": {
@@ -13156,13 +13156,13 @@
     },
     "notes": "Qwen3-VL-8B-Thinking is the reasoning-optimized variant of the Qwen3-VL-8B multimodal model, designed for advanced visual and textual reasoning across complex scenes, documents, and temporal sequences.",
     "llmStats": {
-      "codeArena": 241.0,
-      "math": 22.0,
+      "codeArena": 241,
+      "math": 22,
       "reasoning": 18.8,
-      "speed": 146.0,
+      "speed": 146,
       "writing": 15.2
     },
-    "params": 8.0
+    "params": 8
   },
   {
     "id": "qwen/qwen3-vl-8b-instruct",
@@ -13195,11 +13195,11 @@
       },
       "aliyun": {
         "in": 0.5,
-        "out": 2.0
+        "out": 2
       },
       "siliconflow": {
         "in": 0.5,
-        "out": 2.0
+        "out": 2
       }
     },
     "verification": {
@@ -13286,13 +13286,13 @@
     },
     "notes": "Qwen3-VL-8B-Instruct is a multimodal vision-language model from the Qwen3-VL series, built for high-fidelity understanding and reasoning across text, images, and video.",
     "llmStats": {
-      "codeArena": 48.0,
+      "codeArena": 48,
       "math": 13.8,
       "reasoning": 12.2,
-      "speed": 203.0,
-      "writing": 12.0
+      "speed": 203,
+      "writing": 12
     },
-    "params": 8.0
+    "params": 8
   },
   {
     "id": "openai/gpt-5-image",
@@ -13312,9 +13312,9 @@
     "contextWindow": "400K",
     "pricing": {
       "openrouter": {
-        "in": 10.0,
+        "in": 10,
         "hit": 1.25,
-        "out": 10.0
+        "out": 10
       }
     },
     "verification": {
@@ -13357,9 +13357,9 @@
     "contextWindow": "200K",
     "pricing": {
       "openrouter": {
-        "in": 10.0,
+        "in": 10,
         "hit": 2.5,
-        "out": 40.0
+        "out": 40
       }
     },
     "verification": {
@@ -13402,9 +13402,9 @@
     "contextWindow": "200K",
     "pricing": {
       "openrouter": {
-        "in": 2.0,
+        "in": 2,
         "hit": 0.5,
-        "out": 8.0
+        "out": 8
       }
     },
     "verification": {
@@ -13437,7 +13437,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1343.0,
+    "arenaElo": 1343,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -13487,7 +13487,7 @@
       ]
     },
     "notes": "Llama-3.3-Nemotron-Super-49B-v1.5 is a 49B-parameter, English-centric reasoning/chat model derived from Meta’s Llama-3.3-70B-Instruct with a 128K context.",
-    "params": 49.0,
+    "params": 49,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
@@ -13539,8 +13539,8 @@
       ]
     },
     "notes": "ERNIE-4.5-21B-A3B-Thinking is Baidu's upgraded lightweight MoE model, refined to boost reasoning depth and quality for top-tier performance in logical puzzles, math, science, coding, text generation, and expert-level aca",
-    "params": 21.0,
-    "paramsActive": 3.0
+    "params": 21,
+    "paramsActive": 3
   },
   {
     "id": "google/gemini-2.5-flash-image",
@@ -13689,8 +13689,8 @@
       ]
     },
     "notes": "Qwen3-VL-30B-A3B-Thinking is a multimodal model that unifies strong text generation with visual understanding for images and videos.",
-    "params": 30.0,
-    "paramsActive": 3.0
+    "params": 30,
+    "paramsActive": 3
   },
   {
     "id": "qwen/qwen3-vl-30b-a3b-instruct",
@@ -13701,7 +13701,7 @@
     "copilotMultiplier": null,
     "performance": "text+image->text",
     "arenaElo": null,
-    "mmlu": 85.0,
+    "mmlu": 85,
     "humanEval": null,
     "gsm8k": null,
     "gpqa": null,
@@ -13711,7 +13711,7 @@
       "gpqaDiamond": 70.4,
       "ifEval": 85.8,
       "mmluPro": 77.8,
-      "simpleQA": 27.0
+      "simpleQA": 27
     },
     "contextWindow": "262K",
     "pricing": {
@@ -13721,7 +13721,7 @@
       },
       "aliyun": {
         "in": 0.75,
-        "out": 3.0
+        "out": 3
       },
       "siliconflow": {
         "in": 0.7,
@@ -13804,8 +13804,8 @@
       ]
     },
     "notes": "Qwen3-VL-30B-A3B-Instruct is a multimodal model that unifies strong text generation with visual understanding for images and videos.",
-    "params": 30.0,
-    "paramsActive": 3.0
+    "params": 30,
+    "paramsActive": 3
   },
   {
     "id": "openai/gpt-5-pro",
@@ -13825,8 +13825,8 @@
     "contextWindow": "400K",
     "pricing": {
       "openrouter": {
-        "in": 15.0,
-        "out": 120.0
+        "in": 15,
+        "out": 120
       }
     },
     "verification": {
@@ -13858,7 +13858,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1425.0,
+    "arenaElo": 1425,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -13867,9 +13867,9 @@
     "evals": {
       "aime2025": 93.9,
       "browseComp": 45.1,
-      "gpqaDiamond": 81.0,
+      "gpqaDiamond": 81,
       "hle": 17.2,
-      "reportedSweBenchVerified": 68.0,
+      "reportedSweBenchVerified": 68,
       "terminalBench": 40.5
     },
     "contextWindow": "205K",
@@ -13877,19 +13877,19 @@
       "openrouter": {
         "in": 0.5,
         "hit": 0.1,
-        "out": 2.0
+        "out": 2
       },
       "aliyun": {
-        "in": 3.0,
-        "out": 14.0
+        "in": 3,
+        "out": 14
       },
       "zhipu": {
         "in": 0.5,
-        "out": 2.0
+        "out": 2
       },
       "officialCny": {
         "in": 0.5,
-        "out": 2.0
+        "out": 2
       }
     },
     "verification": {
@@ -13990,12 +13990,12 @@
     },
     "notes": "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex...",
     "llmStats": {
-      "codeArena": 1144.0,
+      "codeArena": 1144,
       "coding": 20.5,
       "math": 34.5,
       "reasoning": 38.3,
       "search": 7.4,
-      "speed": 104.0,
+      "speed": 104,
       "vision": 13.5
     },
     "arenaEloCheckedAt": "Aug 1, 2026",
@@ -14009,7 +14009,7 @@
     "multimodal": "Text",
     "copilotMultiplier": null,
     "performance": "text->text",
-    "arenaElo": 1423.0,
+    "arenaElo": 1423,
     "mmlu": null,
     "humanEval": null,
     "gsm8k": null,
@@ -14021,7 +14021,7 @@
       "gpqaDiamond": 79.9,
       "hle": 19.8,
       "liveCodeBench": 74.1,
-      "mmluPro": 85.0,
+      "mmluPro": 85,
       "reportedSweBenchVerified": 67.8,
       "simpleQA": 97.1,
       "terminalBench": 37.7
@@ -14033,8 +14033,8 @@
         "out": 0.41
       },
       "aliyun": {
-        "in": 2.0,
-        "out": 3.0
+        "in": 2,
+        "out": 3
       }
     },
     "verification": {
@@ -14145,14 +14145,14 @@
     },
     "notes": "DeepSeek-V3.2-Exp is an experimental large language model released by DeepSeek as an intermediate step between V3.1 and future architectures.",
     "llmStats": {
-      "codeArena": 750.0,
+      "codeArena": 750,
       "coding": 22.3,
       "math": 33.7,
       "reasoning": 36.2,
       "search": 1.9
     },
-    "params": 671.0,
-    "paramsActive": 37.0,
+    "params": 671,
+    "paramsActive": 37,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
@@ -14164,25 +14164,25 @@
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
-        "in": 10.0,
-        "out": 50.0,
-        "hit": 1.0
+        "in": 10,
+        "out": 50,
+        "hit": 1
       },
       "cursor": {
-        "in": 10.0,
-        "out": 50.0
+        "in": 10,
+        "out": 50
       },
       "deep-infra": {
-        "in": 10.0,
-        "out": 50.0
+        "in": 10,
+        "out": 50
       },
       "official": {
-        "in": 10.0,
-        "out": 50.0,
-        "hit": 1.0
+        "in": 10,
+        "out": 50,
+        "hit": 1
       }
     },
-    "arenaElo": 1509.0,
+    "arenaElo": 1509,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "verification": {
@@ -14256,7 +14256,7 @@
     "notes": "Anthropic Mythos-class flagship (Arena text leaderboard #1 as of Aug 2026). Official pricing $10/$50 per MTok, cache hits $1, 1M context. Available via Claude API and OpenRouter.",
     "evals": {
       "hle": 64.5,
-      "reportedSweBenchVerified": 95.0
+      "reportedSweBenchVerified": 95
     }
   },
   {
@@ -14271,7 +14271,7 @@
         "out": null
       }
     },
-    "arenaElo": 1488.0,
+    "arenaElo": 1488,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "verification": {
@@ -14341,16 +14341,16 @@
         "out": null
       },
       "official": {
-        "in": 2.0,
+        "in": 2,
         "hit": 0.2,
-        "out": 12.0
+        "out": 12
       },
       "cursor": {
-        "in": 2.0,
-        "out": 12.0
+        "in": 2,
+        "out": 12
       }
     },
-    "arenaElo": 1486.0,
+    "arenaElo": 1486,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "verification": {
@@ -14441,14 +14441,14 @@
     "notes": "Google pricing page no longer lists gemini-3-pro text separately; priced the same as Gemini 3.1 Pro Preview (<=200K prompts: $2 in / $12 out, cache hits $0.20; >200K doubles). Not on OpenRouter as a text model.",
     "catalogNote": "Not available on OpenRouter; pricing taken from Google Gemini 3.1 Pro Preview tier",
     "evals": {
-      "aime2025": 100.0,
+      "aime2025": 100,
       "gpqaDiamond": 91.9,
       "hle": 45.8,
       "reportedSweBenchVerified": 76.2,
       "simpleQA": 72.1
     },
     "llmStats": {
-      "codeArena": 1579.0,
+      "codeArena": 1579,
       "coding": 33.4,
       "longCtx": 9.8,
       "math": 51.6,
@@ -14465,25 +14465,25 @@
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
-        "in": 5.0,
-        "out": 25.0,
+        "in": 5,
+        "out": 25,
         "hit": 0.5
       },
       "cursor": {
-        "in": 5.0,
-        "out": 25.0
+        "in": 5,
+        "out": 25
       },
       "deep-infra": {
-        "in": 5.0,
-        "out": 25.0
+        "in": 5,
+        "out": 25
       },
       "official": {
-        "in": 5.0,
-        "out": 25.0,
+        "in": 5,
+        "out": 25,
         "hit": 0.5
       }
     },
-    "arenaElo": 1475.0,
+    "arenaElo": 1475,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "verification": {
@@ -14590,7 +14590,7 @@
         "hit": 0.15
       }
     },
-    "arenaElo": 1490.0,
+    "arenaElo": 1490,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "verification": {
@@ -14663,18 +14663,18 @@
     "performance": "text+image+file->text",
     "pricing": {
       "official": {
-        "in": 5.0,
+        "in": 5,
         "hit": 0.5,
-        "out": 30.0
+        "out": 30
       },
       "cursor": {
-        "in": 5.0,
-        "out": 30.0
+        "in": 5,
+        "out": 30
       },
       "openrouter": {
         "hit": 0.5,
-        "in": 5.0,
-        "out": 30.0
+        "in": 5,
+        "out": 30
       }
     },
     "notes": "GPT-5.6 系列旗舰（2026-07-10 发布，日+天体命名体系）：最强推理/高强度代码/科研/网络安全/长时 Agent；7/31 起新增 Fast mode（最高 2.5x 速度、价格翻倍）。Sol 定价与 GPT-5.5 持平。长上下文档（>272K）$10/$45。",
@@ -14733,7 +14733,7 @@
         }
       ]
     },
-    "arenaElo": 1483.0,
+    "arenaElo": 1483,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "evals": {
@@ -14755,18 +14755,18 @@
     "performance": "text+image+file->text",
     "pricing": {
       "official": {
-        "in": 2.0,
+        "in": 2,
         "hit": 0.2,
-        "out": 12.0
+        "out": 12
       },
       "cursor": {
-        "in": 2.0,
-        "out": 12.0
+        "in": 2,
+        "out": 12
       },
       "openrouter": {
         "hit": 0.1,
-        "in": 1.0,
-        "out": 6.0
+        "in": 1,
+        "out": 6
       }
     },
     "notes": "GPT-5.6 均衡主力档：性能对标 GPT-5.5、成本减半；2026-07-31 降价 20% 至 $2/$12。长上下文档（>272K）$4/$18。",
@@ -14825,7 +14825,7 @@
         }
       ]
     },
-    "arenaElo": 1468.0,
+    "arenaElo": 1468,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "evals": {
@@ -14917,7 +14917,7 @@
         }
       ]
     },
-    "arenaElo": 1450.0,
+    "arenaElo": 1450,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "evals": {
@@ -14965,18 +14965,18 @@
     "performance": "text+image+file->text",
     "pricing": {
       "official": {
-        "in": 5.0,
+        "in": 5,
         "hit": 0.5,
-        "out": 25.0
+        "out": 25
       },
       "cursor": {
-        "in": 5.0,
-        "out": 25.0
+        "in": 5,
+        "out": 25
       },
       "openrouter": {
         "hit": 0.5,
-        "in": 5.0,
-        "out": 25.0
+        "in": 5,
+        "out": 25
       }
     },
     "notes": "Anthropic 新一代旗舰（Opus 线）；1M 上下文；另有 Opus 5 Fast 变体（$10/$50）。",
@@ -15035,7 +15035,7 @@
         }
       ]
     },
-    "arenaElo": 1490.0,
+    "arenaElo": 1490,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "evals": {
@@ -15057,13 +15057,13 @@
     "performance": "text+image+file->text",
     "pricing": {
       "official": {
-        "in": 10.0,
-        "hit": 1.0,
-        "out": 50.0
+        "in": 10,
+        "hit": 1,
+        "out": 50
       },
       "cursor": {
-        "in": 10.0,
-        "out": 50.0
+        "in": 10,
+        "out": 50
       }
     },
     "notes": "内部模型（limited availability）：Anthropic 前沿内部模型，仅向 Project Glasswing 受控合作方开放 API；在生物研究与进攻性网络安全方向为最强档（高于 Opus/Fable）。",
@@ -15102,22 +15102,22 @@
     "performance": "text+image+file->text",
     "pricing": {
       "official": {
-        "in": 2.0,
+        "in": 2,
         "hit": 0.2,
-        "out": 10.0
+        "out": 10
       },
       "cursor": {
-        "in": 2.0,
-        "out": 10.0
+        "in": 2,
+        "out": 10
       },
       "deep-infra": {
-        "in": 2.0,
-        "out": 10.0
+        "in": 2,
+        "out": 10
       },
       "openrouter": {
         "hit": 0.2,
-        "in": 2.0,
-        "out": 10.0
+        "in": 2,
+        "out": 10
       }
     },
     "notes": "Sonnet 线新一代主力；早鸟价 $2/$10 至 2026-08-31，2026-09-01 起恢复标准价 $3/$15（缓存命中 $0.30）。",
@@ -15187,7 +15187,7 @@
         }
       ]
     },
-    "arenaElo": 1462.0,
+    "arenaElo": 1462,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "evals": {
@@ -15270,7 +15270,7 @@
         }
       ]
     },
-    "arenaElo": 1483.0,
+    "arenaElo": 1483,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)"
   },
@@ -15290,20 +15290,20 @@
       "official": {
         "in": 1.5,
         "hit": 0.15,
-        "out": 9.0
+        "out": 9
       },
       "cursor": {
         "in": 1.5,
-        "out": 9.0
+        "out": 9
       },
       "deep-infra": {
         "in": 1.5,
-        "out": 9.0
+        "out": 9
       },
       "openrouter": {
         "hit": 0.15,
         "in": 1.5,
-        "out": 9.0
+        "out": 9
       }
     },
     "notes": "Gemini 3.5 Flash：'最具智能的速度型模型'，前沿智能+搜索与 grounding；Batch 档 $0.75/$4.50；另有 Flash-Lite 档。",
@@ -15363,7 +15363,7 @@
         }
       ]
     },
-    "arenaElo": 1476.0,
+    "arenaElo": 1476,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "evals": {
@@ -15377,41 +15377,41 @@
     "aliases": [
       "kimi-k3"
     ],
-    "params": 2800.0,
-    "paramsActive": 104.0,
+    "params": 2800,
+    "paramsActive": 104,
     "contextWindow": "1.0M",
     "multimodal": "Vision",
     "performance": "text+image->text",
     "pricing": {
       "aliyun": {
-        "in": 20.0,
-        "out": 100.0
+        "in": 20,
+        "out": 100
       },
       "moonshot-ai": {
-        "in": 3.0,
-        "out": 15.0
+        "in": 3,
+        "out": 15
       },
       "official": {
-        "in": 3.0,
-        "out": 15.0
+        "in": 3,
+        "out": 15
       },
       "openrouter": {
         "hit": 0.3,
-        "in": 3.0,
-        "out": 15.0
+        "in": 3,
+        "out": 15
       },
       "tencent": {
-        "hit": 2.0,
-        "in": 20.0,
-        "out": 100.0
+        "hit": 2,
+        "in": 20,
+        "out": 100
       },
       "together-ai": {
-        "in": 3.0,
-        "out": 15.0
+        "in": 3,
+        "out": 15
       },
       "officialCny": {
-        "in": 3.0,
-        "out": 15.0
+        "in": 3,
+        "out": 15
       }
     },
     "notes": "2026-07-16 发布、07-27 开放完整权重：迄今最大开放权重模型（官方称首个开放 3T 级）；2.8T MoE、896 专家每 token 激活 16 个（约 104B）、KDA 注意力、1M 上下文、原生视觉；开放权重允许免费商用，可用 Moonshot 官方 API 或自部署。",
@@ -15491,13 +15491,13 @@
         }
       ]
     },
-    "arenaElo": 1485.0,
+    "arenaElo": 1485,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "evals": {
       "browseComp": 91.2,
       "gpqaDiamond": 93.5,
-      "hle": 56.0
+      "hle": 56
     }
   },
   {
@@ -15507,28 +15507,28 @@
     "aliases": [
       "qwen3.8-max"
     ],
-    "params": 2400.0,
-    "paramsActive": 95.0,
+    "params": 2400,
+    "paramsActive": 95,
     "contextWindow": "1M",
     "multimodal": "Vision",
     "performance": "text+image+video->text",
     "pricing": {
       "official": {
-        "in": 2.0,
-        "out": 6.0
+        "in": 2,
+        "out": 6
       },
       "officialCny": {
-        "in": 12.0,
-        "out": 36.0
+        "in": 12,
+        "out": 36
       },
       "aliyun": {
-        "in": 12.0,
-        "out": 36.0
+        "in": 12,
+        "out": 36
       },
       "openrouter": {
         "hit": 0.25,
-        "in": 2.0,
-        "out": 6.0
+        "in": 2,
+        "out": 6
       }
     },
     "notes": "2026-08-03 发布：2.4T MoE、每次推理激活约 95B（约 4%）、1M 上下文、原生多模态（文/图/视频/文档）；Max 级旗舰首次开源（权重 8/10 当周发布），另有 Qwen3.8-27B 稠密轻量版；主打自主编程、企业协同与长周期 Agent。",
@@ -15583,7 +15583,7 @@
         }
       ]
     },
-    "arenaElo": 1496.0,
+    "arenaElo": 1496,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "evals": {
@@ -15598,23 +15598,23 @@
     "aliases": [
       "glm-5.2"
     ],
-    "params": 744.0,
-    "paramsActive": 40.0,
+    "params": 744,
+    "paramsActive": 40,
     "contextWindow": "1.0M",
     "multimodal": "Text",
     "performance": "text->text",
     "pricing": {
       "aliyun": {
-        "in": 8.0,
-        "out": 28.0
+        "in": 8,
+        "out": 28
       },
       "baidu": {
-        "in": 8.0,
-        "out": 28.0
+        "in": 8,
+        "out": 28
       },
       "official": {
         "in": 0.95,
-        "out": 3.0
+        "out": 3
       },
       "openrouter": {
         "hit": 0.14,
@@ -15623,17 +15623,17 @@
       },
       "tencent": {
         "hit": 1.9044,
-        "in": 8.0,
-        "out": 28.0
+        "in": 8,
+        "out": 28
       },
       "together-ai": {
         "in": 1.4,
         "out": 4.4
       },
       "zhipu": {
-        "hit": 2.0,
-        "in": 8.0,
-        "out": 28.0
+        "hit": 2,
+        "in": 8,
+        "out": 28
       }
     },
     "notes": "2026-06-13 发布、06-16 开放权重：MIT 协议开源旗舰；约 744B MoE、每 token 激活约 40B；上下文从 200K 提升至 1M（IndexShare 稀疏注意力 + HiSparse + MTP）；编码/Agent 能力逼近顶级闭源（SWE-bench Pro 62.1、Terminal-Bench 2.1 81.0）；官方 API 支持多模态输入，OpenRouter 托管暂仅文本。",
@@ -15719,7 +15719,7 @@
         }
       ]
     },
-    "arenaElo": 1469.0,
+    "arenaElo": 1469,
     "arenaEloCheckedAt": "Aug 1, 2026",
     "arenaEloSource": "Arena Text Leaderboard (arena.ai, Aug 1, 2026)",
     "evals": {
@@ -15882,7 +15882,7 @@
       "openrouter": {
         "in": 0.95,
         "hit": 0.15,
-        "out": 4.0
+        "out": 4
       }
     },
     "verification": {
@@ -15970,8 +15970,8 @@
     "contextWindow": "66K",
     "pricing": {
       "openrouter": {
-        "in": 0.0,
-        "out": 0.0
+        "in": 0,
+        "out": 0
       }
     },
     "verification": {
@@ -16013,9 +16013,9 @@
     "contextWindow": "500K",
     "pricing": {
       "openrouter": {
-        "in": 2.0,
+        "in": 2,
         "hit": 0.5,
-        "out": 6.0
+        "out": 6
       }
     },
     "verification": {
@@ -16104,7 +16104,7 @@
     "pricing": {
       "openrouter": {
         "in": 0.5,
-        "out": 3.0
+        "out": 3
       }
     },
     "verification": {
@@ -16146,9 +16146,9 @@
     "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
-        "in": 2.0,
+        "in": 2,
         "hit": 0.25,
-        "out": 6.0
+        "out": 6
       }
     },
     "verification": {
@@ -16279,8 +16279,8 @@
     "contextWindow": "512K",
     "pricing": {
       "openrouter": {
-        "in": 0.0,
-        "out": 0.0
+        "in": 0,
+        "out": 0
       }
     },
     "verification": {
@@ -16324,7 +16324,7 @@
       "openrouter": {
         "in": 0.42,
         "hit": 0.085,
-        "out": 3.0
+        "out": 3
       }
     },
     "verification": {
@@ -16865,9 +16865,9 @@
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
-        "in": 10.0,
+        "in": 10,
         "hit": 0.25,
-        "out": 50.0
+        "out": 50
       }
     },
     "verification": {
@@ -17045,9 +17045,9 @@
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
-        "in": 2.0,
+        "in": 2,
         "hit": 0.25,
-        "out": 6.0
+        "out": 6
       }
     },
     "verification": {
@@ -17090,8 +17090,8 @@
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 0.0,
-        "out": 0.0
+        "in": 0,
+        "out": 0
       }
     },
     "verification": {
@@ -17133,9 +17133,9 @@
     "contextWindow": "1.1M",
     "pricing": {
       "openrouter": {
-        "in": 10.0,
-        "hit": 1.0,
-        "out": 50.0
+        "in": 10,
+        "hit": 1,
+        "out": 50
       }
     },
     "verification": {
@@ -17178,9 +17178,9 @@
     "contextWindow": "1.1M",
     "pricing": {
       "openrouter": {
-        "in": 10.0,
-        "hit": 1.0,
-        "out": 50.0
+        "in": 10,
+        "hit": 1,
+        "out": 50
       }
     },
     "verification": {
@@ -17358,9 +17358,9 @@
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
-        "in": 2.0,
+        "in": 2,
         "hit": 0.25,
-        "out": 6.0
+        "out": 6
       }
     },
     "verification": {
@@ -17403,9 +17403,9 @@
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
-        "in": 5.0,
+        "in": 5,
         "hit": 0.5,
-        "out": 30.0
+        "out": 30
       }
     },
     "verification": {
@@ -17896,9 +17896,9 @@
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
-        "in": 4.0,
+        "in": 4,
         "hit": 0.2,
-        "out": 20.0
+        "out": 20
       }
     },
     "verification": {
@@ -17941,9 +17941,9 @@
     "contextWindow": "1.1M",
     "pricing": {
       "openrouter": {
-        "in": 2.0,
+        "in": 2,
         "hit": 0.2,
-        "out": 10.0
+        "out": 10
       }
     },
     "verification": {
@@ -17986,9 +17986,9 @@
     "contextWindow": "1.1M",
     "pricing": {
       "openrouter": {
-        "in": 2.0,
+        "in": 2,
         "hit": 0.2,
-        "out": 10.0
+        "out": 10
       }
     },
     "verification": {
@@ -18211,9 +18211,9 @@
     "contextWindow": "262K",
     "pricing": {
       "openrouter": {
-        "in": 3.0,
+        "in": 3,
         "hit": 0.75,
-        "out": 6.0
+        "out": 6
       }
     },
     "verification": {
@@ -18301,8 +18301,8 @@
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
-        "in": 0.0,
-        "out": 0.0
+        "in": 0,
+        "out": 0
       }
     },
     "verification": {
@@ -18344,9 +18344,9 @@
     "contextWindow": "1M",
     "pricing": {
       "openrouter": {
-        "in": 4.0,
+        "in": 4,
         "hit": 0.5,
-        "out": 12.0
+        "out": 12
       }
     },
     "verification": {
@@ -18434,9 +18434,9 @@
     "contextWindow": "1.0M",
     "pricing": {
       "openrouter": {
-        "in": 3.0,
+        "in": 3,
         "hit": 0.3,
-        "out": 15.0
+        "out": 15
       }
     },
     "verification": {
@@ -18551,8 +18551,8 @@
       "qwen3.8-flash-next",
       "Qwen3.8-Flash-Next"
     ],
-    "params": 125.0,
-    "paramsActive": 6.0,
+    "params": 125,
+    "paramsActive": 6,
     "contextWindow": "262K",
     "multimodal": "Vision",
     "performance": "text+image+video->text",
@@ -19067,6 +19067,618 @@
         {
           "label": "benchmark leaderboards",
           "url": "https://www.vals.ai/benchmarks/terminal-bench-science"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5",
+    "name": "GPT-5",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "o3-pro",
+    "name": "o3-pro",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "o3",
+    "name": "o3",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-flash-lite",
+    "name": "Gemini 2.5 Flash-Lite",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4",
+    "name": "Claude Opus 4",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "o4-mini",
+    "name": "o4-mini",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "deepseek-r1",
+    "name": "DeepSeek R1",
+    "vendor": "DeepSeek",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-3-7",
+    "name": "Claude Sonnet 3.7",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "o1",
+    "name": "o1",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4",
+    "name": "Claude Sonnet 4",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "o3-mini",
+    "name": "o3-mini",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3",
+    "name": "Qwen3",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kimi-k2",
+    "name": "Kimi K2",
+    "vendor": "Moonshot AI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "deepseek-v3",
+    "name": "DeepSeek V3",
+    "vendor": "DeepSeek",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "quasar-alpha",
+    "name": "Quasar Alpha",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "grok-3-beta",
+    "name": "Grok 3 Beta",
+    "vendor": "xAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "optimus-alpha",
+    "name": "Optimus Alpha",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-3-5",
+    "name": "Claude Sonnet 3.5",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "grok-3-mini",
+    "name": "Grok 3 Mini",
+    "vendor": "xAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "deepseek-chat",
+    "name": "DeepSeek Chat",
+    "vendor": "DeepSeek",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4o",
+    "name": "GPT-4o",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4-5-preview",
+    "name": "GPT-4.5 Preview",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-oss-120b",
+    "name": "gpt-oss-120b",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-32b",
+    "name": "Qwen3 32B",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "o1-mini",
+    "name": "o1-mini",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4-1-mini",
+    "name": "GPT-4.1 mini",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-haiku-3-5",
+    "name": "Claude Haiku 3.5",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwq-32b",
+    "name": "QwQ-32B",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen-max",
+    "name": "qwen-max",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "llama-4",
+    "name": "Llama 4",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "yi-lightning",
+    "name": "yi-lightning",
+    "vendor": "01.AI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "codestral",
+    "name": "Codestral",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "openhands-lm-32b",
+    "name": "OpenHands LM 32B",
+    "vendor": "OpenHands",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4-1-nano",
+    "name": "GPT-4.1 nano",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemma-3-27b",
+    "name": "gemma-3-27b",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4o-mini",
+    "name": "GPT-4o mini",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
         }
       ]
     }

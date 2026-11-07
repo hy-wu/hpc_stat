@@ -274,6 +274,87 @@
           "unit": "min"
         }
       ]
+    },
+    "aiderpoly": {
+      "name": "Aider Polyglot",
+      "url": "https://aider.chat/docs/leaderboards/",
+      "updated": "2026-11-07",
+      "note": "225 Exercism coding exercises across 6 languages; percent correct = pass@2",
+      "axes": [
+        {
+          "metric": "score",
+          "label": "Aider 正确率",
+          "unit": "%",
+          "direction": "higher-better"
+        },
+        {
+          "metric": "costUSD",
+          "label": "Aider 总成本",
+          "unit": "USD",
+          "scale": "logarithmic",
+          "direction": "lower-better"
+        },
+        {
+          "metric": "secPerCase",
+          "label": "Aider 秒/题"
+        }
+      ]
+    },
+    "hle": {
+      "name": "Humanity's Last Exam",
+      "url": "https://agi.safe.ai",
+      "updated": "2026-11-07",
+      "note": "模型自报/公开评测分数（来自 models.json evals）",
+      "axes": [
+        {
+          "metric": "score",
+          "label": "Humanity's Last Exam 得分",
+          "unit": "%",
+          "direction": "higher-better"
+        }
+      ]
+    },
+    "gpqa": {
+      "name": "GPQA Diamond",
+      "url": "https://github.com/idavidrein/gpqa",
+      "updated": "2026-11-07",
+      "note": "模型自报/公开评测分数（来自 models.json evals）",
+      "axes": [
+        {
+          "metric": "score",
+          "label": "GPQA Diamond 得分",
+          "unit": "%",
+          "direction": "higher-better"
+        }
+      ]
+    },
+    "swev": {
+      "name": "SWE-bench Verified",
+      "url": "https://www.swebench.com",
+      "updated": "2026-11-07",
+      "note": "模型自报/公开评测分数（来自 models.json evals）",
+      "axes": [
+        {
+          "metric": "score",
+          "label": "SWE-bench Verified 得分",
+          "unit": "%",
+          "direction": "higher-better"
+        }
+      ]
+    },
+    "browsecomp": {
+      "name": "BrowseComp",
+      "url": "https://openai.com/index/browsecomp",
+      "updated": "2026-11-07",
+      "note": "模型自报/公开评测分数（来自 models.json evals）",
+      "axes": [
+        {
+          "metric": "score",
+          "label": "BrowseComp 得分",
+          "unit": "%",
+          "direction": "higher-better"
+        }
+      ]
     }
   },
   "tools": {
@@ -3436,6 +3517,2295 @@
         "durationMin": 242,
         "costPerTestUSD": 11.14
       }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "GPT-5",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 88.0,
+        "costUSD": 29.08,
+        "secPerCase": 194
+      },
+      "effort": "high"
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "GPT-5",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 86.7,
+        "costUSD": 17.69
+      },
+      "effort": "medium"
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "o3-pro",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 84.9,
+        "costUSD": 146.32
+      },
+      "effort": "high"
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Gemini 2.5 Pro",
+      "vendor": "Google",
+      "tool": "aider",
+      "metrics": {
+        "score": 83.1,
+        "costUSD": 49.88
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "GPT-5",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 81.3,
+        "costUSD": 10.37
+      },
+      "effort": "low"
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "o3",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 81.3,
+        "costUSD": 21.23
+      },
+      "effort": "high"
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Grok 4",
+      "vendor": "xAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 79.6,
+        "costUSD": 59.62
+      },
+      "effort": "high"
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Gemini 2.5 Pro",
+      "vendor": "Google",
+      "tool": "aider",
+      "metrics": {
+        "score": 79.1,
+        "costUSD": 45.6
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "o3",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 78.2,
+        "costUSD": 17.55
+      },
+      "effort": "high"
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "o3",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 76.9,
+        "costUSD": 13.75
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Gemini 2.5 Flash-Lite",
+      "vendor": "Google",
+      "tool": "aider",
+      "metrics": {
+        "score": 76.9,
+        "costUSD": 37.41
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "DeepSeek V3.2",
+      "vendor": "DeepSeek",
+      "tool": "aider",
+      "metrics": {
+        "score": 74.2,
+        "costUSD": 1.3
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Claude Opus 4",
+      "vendor": "Anthropic",
+      "tool": "aider",
+      "metrics": {
+        "score": 72.0,
+        "costUSD": 65.75
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "o4-mini",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 72.0,
+        "costUSD": 19.64
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "DeepSeek R1",
+      "vendor": "DeepSeek",
+      "tool": "aider",
+      "metrics": {
+        "score": 71.4,
+        "costUSD": 4.8
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Claude Opus 4",
+      "vendor": "Anthropic",
+      "tool": "aider",
+      "metrics": {
+        "score": 70.7,
+        "costUSD": 68.63
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "DeepSeek V3.2",
+      "vendor": "DeepSeek",
+      "tool": "aider",
+      "metrics": {
+        "score": 70.2,
+        "costUSD": 0.88
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Claude Sonnet 3.7",
+      "vendor": "Anthropic",
+      "tool": "aider",
+      "metrics": {
+        "score": 64.9,
+        "costUSD": 36.83
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "DeepSeek R1",
+      "vendor": "DeepSeek",
+      "tool": "aider",
+      "metrics": {
+        "score": 64.0,
+        "costUSD": 13.29
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "o1",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 61.7,
+        "costUSD": 186.5
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Claude Sonnet 4",
+      "vendor": "Anthropic",
+      "tool": "aider",
+      "metrics": {
+        "score": 61.3,
+        "costUSD": 26.58
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Claude Sonnet 3.7",
+      "vendor": "Anthropic",
+      "tool": "aider",
+      "metrics": {
+        "score": 60.4,
+        "costUSD": 17.72
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "o3-mini",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 60.4,
+        "costUSD": 18.16
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Qwen3",
+      "vendor": "Alibaba",
+      "tool": "aider",
+      "metrics": {
+        "score": 59.6
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Kimi K2",
+      "vendor": "Moonshot AI",
+      "tool": "aider",
+      "metrics": {
+        "score": 59.1,
+        "costUSD": 1.24
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "DeepSeek R1",
+      "vendor": "DeepSeek",
+      "tool": "aider",
+      "metrics": {
+        "score": 56.9,
+        "costUSD": 5.42
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Claude Sonnet 4",
+      "vendor": "Anthropic",
+      "tool": "aider",
+      "metrics": {
+        "score": 56.4,
+        "costUSD": 15.82
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Gemini 2.5 Flash",
+      "vendor": "Google",
+      "tool": "aider",
+      "metrics": {
+        "score": 55.1,
+        "costUSD": 8.56
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "DeepSeek V3",
+      "vendor": "DeepSeek",
+      "tool": "aider",
+      "metrics": {
+        "score": 55.1,
+        "costUSD": 1.12
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Quasar Alpha",
+      "vendor": "",
+      "tool": "aider",
+      "metrics": {
+        "score": 54.7
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "o3-mini",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 53.8,
+        "costUSD": 8.86
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Grok 3 Beta",
+      "vendor": "xAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 53.3,
+        "costUSD": 11.03
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Optimus Alpha",
+      "vendor": "",
+      "tool": "aider",
+      "metrics": {
+        "score": 52.9
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "GPT-4.1",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 52.4,
+        "costUSD": 9.86
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Claude Sonnet 3.5",
+      "vendor": "Anthropic",
+      "tool": "aider",
+      "metrics": {
+        "score": 51.6,
+        "costUSD": 14.41
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Grok 3 Mini",
+      "vendor": "xAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 49.3,
+        "costUSD": 0.73
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "DeepSeek Chat",
+      "vendor": "DeepSeek",
+      "tool": "aider",
+      "metrics": {
+        "score": 48.4,
+        "costUSD": 0.34
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Gemini 2.5 Flash",
+      "vendor": "Google",
+      "tool": "aider",
+      "metrics": {
+        "score": 47.1,
+        "costUSD": 1.85
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "GPT-4o",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 45.3,
+        "costUSD": 19.74
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "GPT-4.5 Preview",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 44.9,
+        "costUSD": 183.18
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Gemini 2.5 Flash",
+      "vendor": "Google",
+      "tool": "aider",
+      "metrics": {
+        "score": 44.0,
+        "costUSD": 1.14
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "gpt-oss-120b",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 41.8,
+        "costUSD": 0.74
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Qwen3 32B",
+      "vendor": "Alibaba",
+      "tool": "aider",
+      "metrics": {
+        "score": 40.0,
+        "costUSD": 0.76
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Grok 3 Mini",
+      "vendor": "xAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 34.7,
+        "costUSD": 0.79
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "o1-mini",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 32.9,
+        "costUSD": 18.58
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "GPT-4.1 mini",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 32.4,
+        "costUSD": 1.99
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Claude Haiku 3.5",
+      "vendor": "Anthropic",
+      "tool": "aider",
+      "metrics": {
+        "score": 28.0,
+        "costUSD": 6.06
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "GPT-4o",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 27.1,
+        "costUSD": 14.37
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "QwQ-32B",
+      "vendor": "Alibaba",
+      "tool": "aider",
+      "metrics": {
+        "score": 26.2
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "GPT-4o",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 23.1,
+        "costUSD": 7.03
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "qwen-max",
+      "vendor": "Alibaba",
+      "tool": "aider",
+      "metrics": {
+        "score": 21.8
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "QwQ-32B",
+      "vendor": "Alibaba",
+      "tool": "aider",
+      "metrics": {
+        "score": 20.9
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "GPT-4o",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 18.2,
+        "costUSD": 6.74
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "DeepSeek Chat",
+      "vendor": "DeepSeek",
+      "tool": "aider",
+      "metrics": {
+        "score": 17.8,
+        "costUSD": 0.51
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Llama 4",
+      "vendor": "Meta",
+      "tool": "aider",
+      "metrics": {
+        "score": 15.6
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "yi-lightning",
+      "vendor": "01.AI",
+      "tool": "aider",
+      "metrics": {
+        "score": 12.9
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "command-a",
+      "vendor": "Cohere",
+      "tool": "aider",
+      "metrics": {
+        "score": 12.0
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "Codestral",
+      "vendor": "Mistral",
+      "tool": "aider",
+      "metrics": {
+        "score": 11.1,
+        "costUSD": 1.98
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "OpenHands LM 32B",
+      "vendor": "OpenHands",
+      "tool": "aider",
+      "metrics": {
+        "score": 10.2
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "GPT-4.1 nano",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 8.9,
+        "costUSD": 0.43
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "gemma-3-27b",
+      "vendor": "Google",
+      "tool": "aider",
+      "metrics": {
+        "score": 4.9
+      }
+    },
+    {
+      "bench": "aiderpoly",
+      "model": "GPT-4o mini",
+      "vendor": "OpenAI",
+      "tool": "aider",
+      "metrics": {
+        "score": 3.6,
+        "costUSD": 0.32
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Claude Opus 4.7",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 54.7
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Claude Sonnet 4.6",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 49.0
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "GPT-5.5",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 52.2
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "GPT-5.4",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 39.8
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "GPT-5.4 mini",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 28.2
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "GPT-5.2",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 34.5
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "GPT-5 mini",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 16.7
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "GPT-4.1",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 5.4
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "DeepSeek V4 Pro",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 48.2
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "DeepSeek V4 Flash",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 45.1
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Gemini 2.5 Pro",
+      "vendor": "Google",
+      "metrics": {
+        "score": 17.8
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Gemini 2.5 Flash",
+      "vendor": "Google",
+      "metrics": {
+        "score": 11.0
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Qwen3.6 35B A3B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 21.4
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Qwen3.6 27B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 24.0
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "GPT-5.5 Pro",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 57.2
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "MiMo-V2.5-Pro",
+      "vendor": "Xiaomi",
+      "metrics": {
+        "score": 34.0
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Kimi K2.6",
+      "vendor": "Moonshot AI",
+      "metrics": {
+        "score": 36.4
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "GLM 5.1",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 52.3
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Gemma 4 26B A4B",
+      "vendor": "Google",
+      "metrics": {
+        "score": 17.2
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Gemma 4 31B",
+      "vendor": "Google",
+      "metrics": {
+        "score": 26.5
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Qwen3.6 Plus",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 28.8
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "GPT-5.4 Nano",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 24.3
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Nemotron 3 Super",
+      "vendor": "NVIDIA",
+      "metrics": {
+        "score": 22.8
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Gemini 3.1 Flash Lite Preview",
+      "vendor": "Google",
+      "metrics": {
+        "score": 16.0
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Qwen3.5-35B-A3B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 47.4
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Qwen3.5-27B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 48.5
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Qwen3.5-122B-A10B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 47.5
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Gemini 3.1 Pro Preview",
+      "vendor": "Google",
+      "metrics": {
+        "score": 51.4
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Qwen3.5 397B A17B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 28.7
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Claude Opus 4.6",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 53.1
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Kimi K2.5",
+      "vendor": "Moonshot AI",
+      "metrics": {
+        "score": 50.2
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "GLM 4.7 Flash",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 14.4
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "MiniMax M2.1",
+      "vendor": "Minimax",
+      "metrics": {
+        "score": 22.0
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "GLM 4.7",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 42.8
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Gemini 3 Flash Preview",
+      "vendor": "Google",
+      "metrics": {
+        "score": 43.5
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "MiMo-V2-Flash",
+      "vendor": "Xiaomi",
+      "metrics": {
+        "score": 22.1
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Nemotron 3 Nano 30B A3B",
+      "vendor": "NVIDIA",
+      "metrics": {
+        "score": 15.5
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "GPT-5.2 Pro",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 36.6
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "DeepSeek V3.2 Speciale",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 30.6
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "DeepSeek V3.2",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 40.8
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "MiniMax M2",
+      "vendor": "Minimax",
+      "metrics": {
+        "score": 12.5
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "GLM 4.6",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 17.2
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "DeepSeek V3.2 Exp",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 19.8
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Claude Fable 5",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 64.5
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Muse Spark",
+      "vendor": "Meta",
+      "metrics": {
+        "score": 58.4
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Gemini 3 Pro",
+      "vendor": "Google",
+      "metrics": {
+        "score": 45.8
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Claude Opus 4.8",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 57.9
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Muse Spark 1.1",
+      "vendor": "Meta",
+      "metrics": {
+        "score": 62.1
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Claude Opus 5",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 64.7
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Claude Sonnet 5",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 57.4
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Gemini 3.5 Flash",
+      "vendor": "Google",
+      "metrics": {
+        "score": 40.2
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Kimi K3",
+      "vendor": "Moonshot AI",
+      "metrics": {
+        "score": 56.0
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "Qwen3.8-Max",
+      "vendor": "Alibaba (Tongyi)",
+      "metrics": {
+        "score": 43.6
+      }
+    },
+    {
+      "bench": "hle",
+      "model": "GLM-5.2",
+      "vendor": "Z.ai (Zhipu)",
+      "metrics": {
+        "score": 54.7
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Claude Opus 4.7",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 94.2
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Claude Sonnet 4.6",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 89.9
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Claude Sonnet 4.5",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 83.4
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Claude Haiku 4.5",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 73.0
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GPT-5.5",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 93.6
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GPT-5.4",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 93.0
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GPT-5.4 mini",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 88.0
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GPT-5.2",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 92.4
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GPT-5 mini",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 82.3
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GPT-4.1",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 66.3
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "DeepSeek V4 Pro",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 90.1
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "DeepSeek V4 Flash",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 88.1
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Gemini 2.5 Pro",
+      "vendor": "Google",
+      "metrics": {
+        "score": 83.0
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Gemini 2.5 Flash",
+      "vendor": "Google",
+      "metrics": {
+        "score": 82.8
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Llama 4 Maverick",
+      "vendor": "Meta",
+      "metrics": {
+        "score": 69.8
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Llama 4 Scout",
+      "vendor": "Meta",
+      "metrics": {
+        "score": 57.2
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Qwen3.6 35B A3B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 86.0
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Qwen3.6 27B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 87.8
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Hy3 preview",
+      "vendor": "Tencent",
+      "metrics": {
+        "score": 90.4
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "MiMo-V2.5-Pro",
+      "vendor": "Xiaomi",
+      "metrics": {
+        "score": 66.7
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Kimi K2.6",
+      "vendor": "Moonshot AI",
+      "metrics": {
+        "score": 90.5
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GLM 5.1",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 86.2
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Gemma 4 26B A4B",
+      "vendor": "Google",
+      "metrics": {
+        "score": 82.3
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Gemma 4 31B",
+      "vendor": "Google",
+      "metrics": {
+        "score": 84.3
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Qwen3.6 Plus",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 90.4
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GPT-5.4 Nano",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 82.8
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Mistral Small 4",
+      "vendor": "Mistral",
+      "metrics": {
+        "score": 71.2
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Nemotron 3 Super",
+      "vendor": "NVIDIA",
+      "metrics": {
+        "score": 82.7
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Seed-2.0-Lite",
+      "vendor": "ByteDance",
+      "metrics": {
+        "score": 85.1
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Qwen3.5-9B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 81.7
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Mercury 2",
+      "vendor": "Inception",
+      "metrics": {
+        "score": 74.0
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Gemini 3.1 Flash Lite Preview",
+      "vendor": "Google",
+      "metrics": {
+        "score": 86.9
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Qwen3.5-35B-A3B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 84.2
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Qwen3.5-27B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 85.5
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Qwen3.5-122B-A10B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 86.6
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Gemini 3.1 Pro Preview",
+      "vendor": "Google",
+      "metrics": {
+        "score": 94.3
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Qwen3.5 397B A17B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 88.4
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Claude Opus 4.6",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 91.3
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Kimi K2.5",
+      "vendor": "Moonshot AI",
+      "metrics": {
+        "score": 87.6
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GLM 4.7 Flash",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 75.2
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "MiniMax M2.1",
+      "vendor": "Minimax",
+      "metrics": {
+        "score": 81.0
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GLM 4.7",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 85.7
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Gemini 3 Flash Preview",
+      "vendor": "Google",
+      "metrics": {
+        "score": 90.4
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "MiMo-V2-Flash",
+      "vendor": "Xiaomi",
+      "metrics": {
+        "score": 83.7
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Nemotron 3 Nano 30B A3B",
+      "vendor": "NVIDIA",
+      "metrics": {
+        "score": 75.0
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GPT-5.2 Pro",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 93.2
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Nova 2 Lite",
+      "vendor": "Amazon",
+      "metrics": {
+        "score": 79.6
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "DeepSeek V3.2",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 82.4
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Claude Opus 4.5",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 87.0
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GPT-5.1",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 88.1
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "MiniMax M2",
+      "vendor": "Minimax",
+      "metrics": {
+        "score": 78.0
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Qwen3 VL 32B Instruct",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 68.9
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Qwen3 VL 8B Thinking",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 69.9
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Qwen3 VL 30B A3B Thinking",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 74.4
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Qwen3 VL 30B A3B Instruct",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 70.4
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GLM 4.6",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 81.0
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "DeepSeek V3.2 Exp",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 79.9
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Muse Spark",
+      "vendor": "Meta",
+      "metrics": {
+        "score": 89.5
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Gemini 3 Pro",
+      "vendor": "Google",
+      "metrics": {
+        "score": 91.9
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Claude Opus 4.8",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 93.6
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GPT-5.6 Sol",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 94.6
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GPT-5.6 Terra",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 92.9
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GPT-5.6 Luna",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 92.3
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Kimi K3",
+      "vendor": "Moonshot AI",
+      "metrics": {
+        "score": 93.5
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "Qwen3.8-Max",
+      "vendor": "Alibaba (Tongyi)",
+      "metrics": {
+        "score": 92.6
+      }
+    },
+    {
+      "bench": "gpqa",
+      "model": "GLM-5.2",
+      "vendor": "Z.ai (Zhipu)",
+      "metrics": {
+        "score": 91.2
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Claude Opus 4.7",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 87.6
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Claude Sonnet 4.6",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 79.6
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Claude Haiku 4.5",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 73.3
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "GPT-5.2",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 80.0
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "GPT-4.1",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 54.6
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "DeepSeek V4 Pro",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 80.6
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "DeepSeek V4 Flash",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 79.0
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Gemini 2.5 Pro",
+      "vendor": "Google",
+      "metrics": {
+        "score": 63.2
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Gemini 2.5 Flash",
+      "vendor": "Google",
+      "metrics": {
+        "score": 60.4
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Mistral Medium 3.5",
+      "vendor": "Mistral",
+      "metrics": {
+        "score": 77.6
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Qwen3.6 35B A3B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 73.4
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Qwen3.6 27B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 77.2
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Hy3 preview",
+      "vendor": "Tencent",
+      "metrics": {
+        "score": 78.0
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "MiMo-V2.5-Pro",
+      "vendor": "Xiaomi",
+      "metrics": {
+        "score": 78.9
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Kimi K2.6",
+      "vendor": "Moonshot AI",
+      "metrics": {
+        "score": 80.2
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Qwen3.6 Plus",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 78.8
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "MiMo-V2-Omni",
+      "vendor": "Xiaomi",
+      "metrics": {
+        "score": 74.8
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "MiMo-V2-Pro",
+      "vendor": "Xiaomi",
+      "metrics": {
+        "score": 78.0
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Nemotron 3 Super",
+      "vendor": "NVIDIA",
+      "metrics": {
+        "score": 53.7
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Seed-2.0-Lite",
+      "vendor": "ByteDance",
+      "metrics": {
+        "score": 73.5
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Qwen3.5-35B-A3B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 69.2
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Qwen3.5-27B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 72.4
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Qwen3.5-122B-A10B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 72.0
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Gemini 3.1 Pro Preview",
+      "vendor": "Google",
+      "metrics": {
+        "score": 80.6
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Qwen3.5 397B A17B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 76.4
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "MiniMax M2.5",
+      "vendor": "Minimax",
+      "metrics": {
+        "score": 80.2
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "GLM 5",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 77.8
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Claude Opus 4.6",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 80.8
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Step 3.5 Flash",
+      "vendor": "Stepfun",
+      "metrics": {
+        "score": 74.4
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Kimi K2.5",
+      "vendor": "Moonshot AI",
+      "metrics": {
+        "score": 76.8
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "GLM 4.7 Flash",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 59.2
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "MiniMax M2.1",
+      "vendor": "Minimax",
+      "metrics": {
+        "score": 67.0
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "GLM 4.7",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 73.8
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Gemini 3 Flash Preview",
+      "vendor": "Google",
+      "metrics": {
+        "score": 78.0
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "MiMo-V2-Flash",
+      "vendor": "Xiaomi",
+      "metrics": {
+        "score": 73.4
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Nemotron 3 Nano 30B A3B",
+      "vendor": "NVIDIA",
+      "metrics": {
+        "score": 38.8
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Nova 2 Lite",
+      "vendor": "Amazon",
+      "metrics": {
+        "score": 64.5
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "DeepSeek V3.2 Speciale",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 73.1
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "DeepSeek V3.2",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 73.1
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Claude Opus 4.5",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 80.9
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "GPT-5.1",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 76.3
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "GPT-5.1-Codex",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 73.7
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "MiniMax M2",
+      "vendor": "Minimax",
+      "metrics": {
+        "score": 69.4
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "GLM 4.6",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 68.0
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "DeepSeek V3.2 Exp",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 67.8
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Claude Fable 5",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 95.0
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Muse Spark",
+      "vendor": "Meta",
+      "metrics": {
+        "score": 77.4
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Gemini 3 Pro",
+      "vendor": "Google",
+      "metrics": {
+        "score": 76.2
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Claude Opus 4.8",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 88.6
+      }
+    },
+    {
+      "bench": "swev",
+      "model": "Claude Sonnet 5",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 85.2
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Claude Opus 4.7",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 79.3
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Claude Sonnet 4.6",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 74.7
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "GPT-5.5",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 84.4
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "GPT-5.4",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 82.7
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "GPT-5.2",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 65.8
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "DeepSeek V4 Pro",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 83.4
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "DeepSeek V4 Flash",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 73.2
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Mistral Medium 3.5",
+      "vendor": "Mistral",
+      "metrics": {
+        "score": 48.6
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "GPT-5.5 Pro",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 90.1
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Hy3 preview",
+      "vendor": "Tencent",
+      "metrics": {
+        "score": 84.2
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Kimi K2.6",
+      "vendor": "Moonshot AI",
+      "metrics": {
+        "score": 86.3
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "GLM 5.1",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 79.3
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Nemotron 3 Super",
+      "vendor": "NVIDIA",
+      "metrics": {
+        "score": 31.3
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Qwen3.5-35B-A3B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 61.0
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Qwen3.5-27B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 61.0
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Qwen3.5-122B-A10B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 63.8
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Gemini 3.1 Pro Preview",
+      "vendor": "Google",
+      "metrics": {
+        "score": 85.9
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Qwen3.5 397B A17B",
+      "vendor": "Alibaba",
+      "metrics": {
+        "score": 69.0
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "MiniMax M2.5",
+      "vendor": "Minimax",
+      "metrics": {
+        "score": 76.3
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "GLM 5",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 75.9
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Claude Opus 4.6",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 84.0
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Step 3.5 Flash",
+      "vendor": "Stepfun",
+      "metrics": {
+        "score": 69.0
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Kimi K2.5",
+      "vendor": "Moonshot AI",
+      "metrics": {
+        "score": 74.9
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "GLM 4.7 Flash",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 42.8
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "MiniMax M2.1",
+      "vendor": "Minimax",
+      "metrics": {
+        "score": 62.0
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "GLM 4.7",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 52.0
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "MiMo-V2-Flash",
+      "vendor": "Xiaomi",
+      "metrics": {
+        "score": 58.3
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "GPT-5.2 Pro",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 77.9
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "DeepSeek V3.2",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 51.4
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "MiniMax M2",
+      "vendor": "Minimax",
+      "metrics": {
+        "score": 44.0
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "GLM 4.6",
+      "vendor": "Zhipu AI",
+      "metrics": {
+        "score": 45.1
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "DeepSeek V3.2 Exp",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score": 40.1
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Claude Opus 4.8",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 84.3
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "GPT-5.6 Sol",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 90.4
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "GPT-5.6 Terra",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 87.5
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "GPT-5.6 Luna",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 83.3
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Claude Opus 5",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 90.8
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Claude Sonnet 5",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 84.7
+      }
+    },
+    {
+      "bench": "browsecomp",
+      "model": "Kimi K3",
+      "vendor": "Moonshot AI",
+      "metrics": {
+        "score": 91.2
+      }
     }
   ],
   "presets": [
@@ -3443,37 +5813,37 @@
       "label": "FP Fig5 · 成本 vs Pass@1",
       "x": "bench.frontierphysics.res.costUSD.0",
       "y": "bench.frontierphysics.pass1",
-      "group": "FrontierPhysics"
+      "group": "FrontierPhysics (arXiv 2611.06910)"
     },
     {
       "label": "FP Fig5 · 时长 vs Pass@1",
       "x": "bench.frontierphysics.res.timeH.0",
       "y": "bench.frontierphysics.pass1",
-      "group": "FrontierPhysics"
+      "group": "FrontierPhysics (arXiv 2611.06910)"
     },
     {
       "label": "FP Fig15 · 步数 vs Pass@1",
       "x": "bench.frontierphysics.res.steps.0",
       "y": "bench.frontierphysics.pass1",
-      "group": "FrontierPhysics"
+      "group": "FrontierPhysics (arXiv 2611.06910)"
     },
     {
       "label": "FP Fig16 · 输出tokens vs Pass@1",
       "x": "bench.frontierphysics.res.outTokensM.0",
       "y": "bench.frontierphysics.pass1",
-      "group": "FrontierPhysics"
+      "group": "FrontierPhysics (arXiv 2611.06910)"
     },
     {
       "label": "Vals TBS · 每题成本 vs pass@1",
       "x": "bench.tbsvals.costPerTestUSD",
       "y": "bench.tbsvals.score",
-      "group": "TBS (Vals)"
+      "group": "Terminal-Bench Science (Vals)"
     },
     {
       "label": "Vals TBS · 每题tokens vs pass@1",
       "x": "bench.tbsvals.tokensPerTestM",
       "y": "bench.tbsvals.score",
-      "group": "TBS (Vals)"
+      "group": "Terminal-Bench Science (Vals)"
     },
     {
       "label": "FCS2 · 单次成本 vs Pass rate",
@@ -3491,13 +5861,13 @@
       "label": "ASB · 总成本 vs Resolution",
       "x": "bench.asb01.costUSD",
       "y": "bench.asb01.score",
-      "group": "ASB 0.1"
+      "group": "Autonomous Science Bench 0.1"
     },
     {
       "label": "ASB · Agent耗时 vs Resolution",
       "x": "bench.asb01.agentMin",
       "y": "bench.asb01.score",
-      "group": "ASB 0.1"
+      "group": "Autonomous Science Bench 0.1"
     },
     {
       "label": "FC Fig2 · Avg.Score vs PassRate",
@@ -3509,13 +5879,25 @@
       "label": "LabBench · 中位耗时 vs 通过率",
       "x": "bench.labbench.medianMin",
       "y": "bench.labbench.score",
-      "group": "LabBench"
+      "group": "LabBench (Gamow Labs)"
     },
     {
       "label": "FCS v1.0 · tokens vs Score",
       "x": "bench.fcs10agents.avgTokensM",
       "y": "bench.fcs10agents.score",
       "group": "FrontierCS v1"
+    },
+    {
+      "label": "Aider Polyglot · 成本 vs 正确率",
+      "x": "bench.aiderpoly.costUSD",
+      "y": "bench.aiderpoly.score",
+      "group": "Aider Polyglot"
+    },
+    {
+      "label": "Aider Polyglot · 耗时 vs 正确率",
+      "x": "bench.aiderpoly.secPerCase",
+      "y": "bench.aiderpoly.score",
+      "group": "Aider Polyglot"
     }
   ]
 }
