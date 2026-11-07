@@ -4,6 +4,8 @@ interface Props {
 }
 const { active } = Astro.props;
 
+const base = String(import.meta.env.BASE_URL ?? "").replace(/\/+$/, "");
+
 const tabs = [
   { href: "index.html", label: "并行计算", id: "gpu" },
   { href: "models.html", label: "大模型", id: "models" },
@@ -19,7 +21,7 @@ const tabs = [
 <nav class="nav-tabs">
   {tabs.map((tab) => (
     <a
-      href={tab.href}
+      href={`${base}/${tab.href}`}
       class:list={["nav-link", { active: tab.id === active }]}
     >
       {tab.label}

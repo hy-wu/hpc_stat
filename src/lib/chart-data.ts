@@ -128,6 +128,133 @@ export const modelHardwareAxisFields: AxisField[] = [
   { key: "avgOutputTps", label: "模型平均输出速度", unit: "tok/s", source: "聚合" },
 ];
 
+// ── Science benchmark leaderboards ──
+
+interface BenchAxisDef {
+  metric: string;
+  label: string;
+  unit?: string;
+  scale?: "linear" | "logarithmic";
+  direction?: "higher-better" | "lower-better";
+}
+
+interface BenchRecord {
+  bench: string;
+  model: string;
+  vendor: string;
+  tool?: string;
+  effort?: string;
+  metrics: Record<string, unknown>;
+}
+
+interface BenchmarksFile {
+  updated: string;
+  benchmarks: Record<string, { name: string; url?: string; axes?: BenchAxisDef[] }>;
+  tools: Record<string, { name?: string; vendor?: string; type?: string }>;
+  records: BenchRecord[];
+}
+
+const MODEL_LEVEL_TOOL_NAME = "（模型级评测）";
+
+function benchKey(rec: BenchRecord): string {
+  return rec.effort ? `${rec.bench}@${rec.effort}` : rec.bench;
+}
+
+/** Group benchmark records by normalized model + tool pair: pair → benchId(@effort) → metrics. */
+function groupBenchRecords(
+  records: BenchRecord[],
+): Map<string, { model: string; vendor: string; toolId: string | null; bench: Record<string, unknown> }> {
+  const groups = new Map<string, { model: string; vendor: string; toolId: string | null; bench: Record<string, unknown> }>();
+  for (const rec of records) {
+    const key = `${normalizeModelIdentity(rec.model)}|${rec.tool ?? ""}`;
+    let g = groups.get(key);
+    if (!g) {
+      g = { model: rec.model, vendor: rec.vendor, toolId: rec.tool ?? null, bench: {} };
+      groups.set(key, g);
+    }
+    g.bench[benchKey(rec)] = rec.metrics;
+  }
+  return groups;
+}
+
+/** Attach benchmark metrics to existing model×tool points; synthesize points for pairs with no row. */
+function attachBenchData(
+  points: MergedModelToolPoint[],
+  benchData: BenchmarksFile | null,
+  modelMap: Map<string, Record<string, unknown>>,
+  toolMap: Map<string, Record<string, unknown>>,
+): MergedModelToolPoint[] {
+  if (!benchData?.records?.length) return points;
+  const byPair = groupBenchRecords(benchData.records);
+
+  for (const p of points) {
+    const toolId = String(p.raw.toolId ?? "");
+    const modelRec = p.raw.__modelRecord as Record<string, unknown> | undefined;
+    const keys = [p.raw.modelId, p.raw.modelName, modelRec?.id, modelRec?.name].map((v) =>
+      normalizeModelIdentity(String(v ?? "")),
+    );
+    for (const k of keys) {
+      const g = byPair.get(`${k}|${toolId}`);
+      if (g) {
+        p.raw.bench = { ...(p.raw.bench as Record<string, unknown> | undefined), ...g.bench };
+        byPair.delete(`${k}|${toolId}`);
+        break;
+      }
+    }
+  }
+
+  for (const [key, g] of byPair) {
+    const modelRec = getModelRecord(modelMap, g.model);
+    const toolRec = g.toolId ? toolMap.get(g.toolId) : undefined;
+    const toolName = g.toolId
+      ? String(toolRec?.name ?? benchData.tools[g.toolId]?.name ?? g.toolId)
+      : MODEL_LEVEL_TOOL_NAME;
+    const raw: Record<string, unknown> = {
+      ...(modelRec ?? {}),
+      modelId: String((modelRec?.id as string) ?? g.model),
+      modelName: g.model,
+      modelVendor: g.vendor,
+      toolId: g.toolId,
+      toolName,
+      supportStatus: "榜单评测",
+      bench: g.bench,
+    };
+    points.push({
+      id: `bench__${key.replace("|", "__")}`,
+      modelName: g.model,
+      toolName,
+      modelVendor: g.vendor,
+      supportStatus: "榜单评测",
+      raw,
+    });
+  }
+  return points;
+}
+
+/** One AxisField per registry axis × effort variant actually present in the records. */
+function benchmarkAxisFields(benchData: BenchmarksFile | null): AxisField[] {
+  if (!benchData?.benchmarks) return [];
+  const fields: AxisField[] = [];
+  for (const [benchId, meta] of Object.entries(benchData.benchmarks)) {
+    const efforts = [...new Set(
+      benchData.records.filter((r) => r.bench === benchId).map((r) => r.effort ?? ""),
+    )].sort();
+    for (const axis of meta.axes ?? []) {
+      for (const effort of efforts) {
+        fields.push({
+          key: `bench.${effort ? `${benchId}@${effort}` : benchId}.${axis.metric}`,
+          label: effort ? `${axis.label} · ${effort}` : axis.label,
+          unit: axis.unit,
+          source: meta.name,
+          scale: axis.scale,
+          direction: axis.direction,
+        });
+      }
+    }
+  }
+  return fields;
+}
+
 // ── Data loading ──
 
 async function fetchJson<T>(url: string): Promise<T> {
@@ -409,11 +536,12 @@ export async function loadModelToolChartData(): Promise<{
   points: MergedModelToolPoint[];
   axisFields: AxisField[];
 }> {
-  const [toolsRecords, modelsRaw, agentTools, handModels] = await Promise.all([
+  const [toolsRecords, modelsRaw, agentTools, handModels, benchData] = await Promise.all([
     fetchJson<Record<string, unknown>[]>(dataUrl("model-tools.json")),
     fetchJson<Record<string, unknown>[]>(dataUrl("models.json")),
     fetchJson<Record<string, unknown>[]>(dataUrl("agent-tools.json")),
     fetchJson<Record<string, unknown>[]>(dataUrl("hand/paratera20260809.json")),
+    fetchJson<BenchmarksFile>(dataUrl("benchmarks.json")).catch(() => null),
   ]);
 
   const models = mergeHandModelRows(modelsRaw, handModels);
@@ -469,7 +597,10 @@ export async function loadModelToolChartData(): Promise<{
     };
   });
 
-  return { points, axisFields: modelToolAxisFields };
+  return {
+    points: attachBenchData(points, benchData, modelMap, toolMap),
+    axisFields: [...modelToolAxisFields, ...benchmarkAxisFields(benchData)],
+  };
 }
 
 /**

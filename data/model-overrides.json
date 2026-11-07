@@ -1839,5 +1839,45 @@
         }
       ]
     }
+  },
+  {
+    "id": "qwen/qwen3.8-flash-next",
+    "name": "Qwen3.8 Flash-Next",
+    "vendor": "Alibaba",
+    "aliases": [
+      "qwen3.8-flash-next",
+      "Qwen3.8-Flash-Next"
+    ],
+    "params": 125.0,
+    "paramsActive": 6.0,
+    "contextWindow": "262K",
+    "multimodal": "Vision",
+    "performance": "text+image+video->text",
+    "evals": {},
+    "pricing": {},
+    "notes": "2026-08-24 开源（qwen-community-1.0），官方称是支撑 Qwen4 的架构的实验性预览。125B 总参 / 每 token 激活 6B，另有 51B n-gram 嵌入表与 4B MTP 层；48 层、hidden 2560、词表 248320；原生 262,144 上下文，可扩展至 1M。架构四项：Hybrid Attention with QSA（Gated DeltaNet + Qwen Sparse Attention，按 micro-block 而非单 token 选块，布局 12×(3×GDN→MoE → 1×QSA→MoE)）、Gated Residual（残差流加宽到 4 支，逐元素读门 + 每支标量写门）、N-gram Embedding（bigram/trigram 在 layer 2，2000 万条表，比 MoE 更适合宿主内存卸载）、Tailored Training Recipe（Muon 与 AdamW 按权重类别分工，依重拟合 scaling law 取消 batch-size warmup）。托管版 qwen3.8-flash 即基于本权重并追加 1M 默认上下文与官方内置工具。",
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-26",
+      "verifiedFields": [
+        "params",
+        "paramsActive",
+        "contextWindow"
+      ],
+      "sources": [
+        {
+          "label": "Qwen3.8-Flash-Next model card",
+          "url": "https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next"
+        },
+        {
+          "label": "Qwen3.8-Flash-Next config.json",
+          "url": "https://modelscope.cn/api/v1/models/Qwen/Qwen3.8-Flash-Next/repo?Revision=master&FilePath=config.json"
+        },
+        {
+          "label": "On the Design of Qwen3.8-Next Architecture (arXiv 2608.30320)",
+          "url": "https://arxiv.org/abs/2608.30320"
+        }
+      ]
+    }
   }
 ]

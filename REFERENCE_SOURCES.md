@@ -97,15 +97,26 @@ This document contains official links to LLM benchmark suites, leaderboards, and
 | **DeepSeek (深度求索)** | DeepSeek Platform | [https://api-docs.deepseek.com/quick_start/pricing](https://api-docs.deepseek.com/quick_start/pricing) | 长期有效 |
 | **SiliconFlow (硅基流动)** | SiliconCloud 推理平台 | [https://siliconflow.cn/zh-cn/pricing](https://siliconflow.cn/zh-cn/pricing) | 2026-08-05 已核验（HTTP 200） |
 
+## 🧬 开源权重与架构来源
+
+| 模型 | 来源 | 核验情况 |
+| :--- | :--- | :--- |
+| **Qwen3.8-Flash-Next** | [ModelScope 模型卡](https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next) | 2026-09-26 已核验（API HTTP 200）：125B 总参 / 6B 激活 + 51B n-gram 嵌入 + 4B MTP，48 层，原生 262,144 上下文可扩展至 1M，qwen-community-1.0，2026-08-24 发布 |
+| **Qwen3.8-Flash-Next** | [config.json](https://modelscope.cn/api/v1/models/Qwen/Qwen3.8-Flash-Next/repo?Revision=master&FilePath=config.json) | 2026-09-26 已核验：`Qwen4ExpForConditionalGeneration`、`full_attention_interval=4`、`hc_count=4`、`num_experts=512`/`num_experts_per_tok=10`、`ngram_vocab_size_base=20000000`、`indexer_*`（QSA）、`max_position_embeddings=262144` |
+| **Qwen3.8-Flash-Next** | [arXiv 2608.30320](https://arxiv.org/abs/2608.30320)《On the Design of Qwen3.8-Next Architecture》 | 2026-09-26 已核验（arxiv.org HTTP 200，2026-08-31 提交）：GDN+全局注意力混合、QSA 微块稀疏、Gated Residual、n-gram 嵌入宿主内存预取、Muon+AdamW 分工 |
+| **Qwen3.8-Flash（托管版）** | [Qwen Cloud 模型页](https://www.qwencloud.com/models/qwen3.8-flash) | 本环境未能直接核验；「托管版基于 Flash-Next 权重 + 1M 默认上下文 + 内置工具」的表述取自上方 ModelScope 模型卡 |
+| Hugging Face 侧权重页 | `https://huggingface.co/Qwen/Qwen3.8-Flash-Next` | 本机 curl 与内置浏览器均不可达（SSL_ERROR_SYSCALL / ERR_PROXY_CONNECTION_FAILED）；仅通过 hf-mirror 检索 API 确认仓库存在（下载量 846,820） |
+
 ## 🗓 数据快照时间线
 
 | 数据集 | 快照日期 | 说明 |
 | :--- | :--- | :--- |
 | `data/models.json` 模型价格/参数 | 2026-08-06（167/167，全量核验通过） | 由 `scripts/enrich_model_data.py --write --online` 生成；2026-08-06 补录 8 月流行波：GPT-5.6 Sol/Terra/Luna、GPT Astra（内部）、Claude Opus 5、Claude Mythos 5（内部）、Claude Sonnet 5、Gemini 3.5/3.6 Flash、Kimi K3（2.8T/104B）、Qwen3.8-Max（2.4T/95B）、GLM-5.2（744B/40B） |
+| `data/models.json` 增量新模型 | 2026-09-26（+64 条，合计 231 条） | 前 63 条取 `https://openrouter.ai/api/v1/models` 当日快照，按 `created >= 2026-08-01` 且 id 未收录筛选；`:batch`/`:free` 档位折进 `notes` 不单独成行，`~*-latest` 滚动别名跳过，仅有 `:free` 档的模型（LFM2.5-2.6B、Dots3-Note Preview、Ling 3.0 Flash Sante）保留并标注。仅核验厂商/名称/模态/上下文/OpenRouter 单价；参数与 Arena Elo 未补。第 64 条 `qwen/qwen3.8-flash-next` 为人工 curated 行（同步写入 `data/model-overrides.json`），来源见上方「开源权重与架构来源」；该模型不在 OpenRouter 上架，脚本会报预期内的 `missingCatalogChecks` 警告，非数据错误 |
 | `data/models.json` Arena Elo | 2026-08-01（arena.ai 文本榜全量快照，386 个模型） | arena.ai 已改为 SSR 表格，脚本 `extract_arena_elo_data` 可直接解析（优先读 `.cache/model-sources/arena_text_leaderboard.json` 浏览器快照）；xhigh/max/high 等模式变体经 `ARENA_ELO_ALIASES` 映射到 API 基础模型；仅 gpt-5.1-codex-mini 仍为 2026-05-21 旧值（已下榜，记录中带警示备注） |
 | `data/agent-tools.json` 工具数据 | 2026-08-06：新增 Google Antigravity、腾讯 WorkBuddy；移除通义灵码（2026-05-20 升级为 Qoder CN），Qoder 更新为国产多模型支持；其余核验于 2026-08-06 / 2026-05-19 | 套餐价格随计划变化，使用前请抽查官方页；Windsurf 已并入 Cognition/Devin 统一订阅体系 |
 | `data/gpus.json` / `data/prices.json` GPU 价格 | 2026-08-05 新增 5 条（RTX 5060/RX 9060 XT/M4 Ultra/B300/MI325X）；其余为 2026-04~2026-05 人工报价快照 | 新增 GPU 价格为 MSRP，二手/市场价需另行更新 |
 | GitHub Stars | 2026-08-06 | 见上方 Agent Coding Tools 备注 |
 
 ---
-*Last Updated: 2026-08-06*
+*Last Updated: 2026-09-26*

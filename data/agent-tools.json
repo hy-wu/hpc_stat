@@ -2964,5 +2964,200 @@
       ]
     },
     "githubStars": null
+  },
+  {
+    "id": "zcode",
+    "name": "ZCode",
+    "vendor": "Z.AI",
+    "categoryTags": [
+      "Vibe Coding CLI"
+    ],
+    "notes": "榜单评测使用的 agent/harness（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": []
+    }
+  },
+  {
+    "id": "muse-code",
+    "name": "Muse Code",
+    "vendor": "Meta",
+    "categoryTags": [
+      "Vibe Coding CLI"
+    ],
+    "notes": "榜单评测使用的 agent/harness（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": []
+    }
+  },
+  {
+    "id": "kimi-code",
+    "name": "Kimi Code",
+    "vendor": "Moonshot AI",
+    "categoryTags": [
+      "Vibe Coding CLI"
+    ],
+    "notes": "榜单评测使用的 agent/harness（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": []
+    }
+  },
+  {
+    "id": "deepseek-harness",
+    "name": "DeepSeek Harness",
+    "vendor": "DeepSeek",
+    "categoryTags": [
+      "评测框架"
+    ],
+    "notes": "榜单评测使用的 agent/harness（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": []
+    }
+  },
+  {
+    "id": "qwen-code",
+    "name": "Qwen Code",
+    "vendor": "Alibaba",
+    "categoryTags": [
+      "Vibe Coding CLI"
+    ],
+    "notes": "榜单评测使用的 agent/harness（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": []
+    }
+  },
+  {
+    "id": "step-code",
+    "name": "Step Code",
+    "vendor": "StepFun",
+    "categoryTags": [
+      "Vibe Coding CLI"
+    ],
+    "notes": "榜单评测使用的 agent/harness（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": []
+    }
+  },
+  {
+    "id": "pi-agent",
+    "name": "Pi",
+    "vendor": "Thinking Machines",
+    "categoryTags": [
+      "Vibe Coding CLI"
+    ],
+    "notes": "榜单评测使用的 agent/harness（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": []
+    }
+  },
+  {
+    "id": "aiwork-code",
+    "name": "AiWork.Code",
+    "vendor": "Ant Digital",
+    "categoryTags": [
+      "Vibe Coding CLI"
+    ],
+    "notes": "榜单评测使用的 agent/harness（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": []
+    }
+  },
+  {
+    "id": "amplio",
+    "name": "Amplio",
+    "vendor": "Google",
+    "categoryTags": [
+      "Vibe Coding CLI"
+    ],
+    "notes": "榜单评测使用的 agent/harness（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": []
+    }
+  },
+  {
+    "id": "mini-swe-agent",
+    "name": "mini-SWE-agent",
+    "vendor": "SWE-agent",
+    "categoryTags": [
+      "评测框架"
+    ],
+    "notes": "榜单评测使用的 agent/harness（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": []
+    }
+  },
+  {
+    "id": "grok-build",
+    "name": "Grok Build",
+    "vendor": "xAI",
+    "categoryTags": [
+      "Vibe Coding CLI"
+    ],
+    "notes": "榜单评测使用的 agent/harness（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": []
+    }
+  },
+  {
+    "id": "frontier-agent",
+    "name": "Frontier Agent",
+    "vendor": "Apodex",
+    "categoryTags": [
+      "Vibe Coding CLI"
+    ],
+    "notes": "榜单评测使用的 agent/harness（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": []
+    }
+  },
+  {
+    "id": "terminus-2",
+    "name": "Terminus 2",
+    "vendor": "Harbor",
+    "categoryTags": [
+      "评测框架"
+    ],
+    "notes": "榜单评测使用的 agent/harness（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-07",
+      "verifiedFields": [],
+      "sources": []
+    }
   }
 ]

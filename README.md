@@ -79,7 +79,7 @@ npm run check
 
 `models.html` 只把 `data/models.json` 中 `verification.verifiedFields` 标记过的字段加粗；没有来源或未核验的字段会以灰色显示。来源可以是官方页面、公开评测页，也可以是人工提供的截图/采购单等明确证据，但要在 `verification.sources` 中写清楚。人工证据类来源（截图、采购单等）的 `url` 允许为空字符串，此时 `label` 必须写清证据形式；空 URL 不代表可以省略来源说明。
 
-数据快照约定：`verification.checkedAt` 表示该条记录最近一次成功核验的日期；页面与文档不得把旧快照数据当作实时值引用。当前模型数据主体快照为 2026-08-06（167 个模型，含 GPT-5.6 Sol/Terra/Luna、Claude Opus 5/Mythos 5、Gemini 3.5/3.6 Flash、Kimi K3、Qwen3.8-Max、GLM-5.2 等），Arena Elo 主体为 2026-08-01 arena.ai 文本榜快照（脚本可直接解析 SSR 表格），GPU 价格为 2026-04~05 人工报价快照，详见 `REFERENCE_SOURCES.md` 的「数据快照时间线」。
+数据快照约定：`verification.checkedAt` 表示该条记录最近一次成功核验的日期；页面与文档不得把旧快照数据当作实时值引用。当前模型数据主体快照为 2026-08-06（167 个模型，含 GPT-5.6 Sol/Terra/Luna、Claude Opus 5/Mythos 5、Gemini 3.5/3.6 Flash、Kimi K3、Qwen3.8-Max、GLM-5.2 等），2026-09-26 按 OpenRouter 上架时间增量并入 8 月以来各厂商新模型 63 条，并人工补录 `qwen/qwen3.8-flash-next`（合计 231 条，含 GPT-6 Astra/Sol/Luna 及各自 Pro、Claude Opus 5.5、Claude Fable 5.1、Gemini 3.7/3.8 Flash、GLM 5.3/Flash/FlashX/Prime、DeepSeek V4.1 Flash、Qwen3.8 Flash/Flash-Next/Omni Flash/27B/2.4T-A95B/Max Prime、Grok 4.6/4.7、MiMo-V2.6 系列、Seed 2.1 Turbo、Hy4 preview、Nemotron 3.5 Lightning 等），Arena Elo 主体为 2026-08-01 arena.ai 文本榜快照（脚本可直接解析 SSR 表格），GPU 价格为 2026-04~05 人工报价快照，详见 `REFERENCE_SOURCES.md` 的「数据快照时间线」。增量行的 `verifiedFields` 只覆盖 OpenRouter 侧可核验的名称/厂商/模态/上下文/单价，参数规模、Arena Elo 与评测字段留空待补。
 
 评测数据不要混用口径：旧的 `MMLU`、`HumanEval`、`GSM8K`、`MATH` 字段只填同名 benchmark；`MMLU-Pro`、`GPQA-Diamond`、`SWE-Bench Verified`、`Terminal-Bench` 等现代评测写入 `evals.*` 字段。
 

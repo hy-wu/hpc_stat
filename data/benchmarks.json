@@ -1,0 +1,3441 @@
+{
+  "updated": "2026-11-07",
+  "benchmarks": {
+    "fcs2": {
+      "name": "FrontierCS 2",
+      "url": "https://frontier-cs.org/",
+      "updated": "2026-11-06",
+      "note": "48 CS R&D tasks; pass requires beating human reference on all metrics of hidden workloads",
+      "axes": [
+        {
+          "metric": "pass",
+          "label": "FCS2 Pass rate",
+          "unit": "%",
+          "direction": "higher-better"
+        },
+        {
+          "metric": "fci",
+          "label": "FCS2 FCI",
+          "direction": "higher-better"
+        },
+        {
+          "metric": "vsHuman",
+          "label": "FCS2 vs 人类参考",
+          "direction": "higher-better"
+        },
+        {
+          "metric": "costRunUSD",
+          "label": "FCS2 单次运行成本",
+          "unit": "USD",
+          "scale": "logarithmic",
+          "direction": "lower-better"
+        }
+      ]
+    },
+    "fcs11": {
+      "name": "FrontierCS v1.1",
+      "url": "https://frontier-cs.org/v1/",
+      "updated": "2026-11-06",
+      "note": "FrontierCS v1 leaderboard, Version 1.1 tab",
+      "axes": [
+        {
+          "metric": "score",
+          "label": "FCS v1.1 Score",
+          "direction": "higher-better"
+        }
+      ]
+    },
+    "fcs10agents": {
+      "name": "FrontierCS v1.0 agents",
+      "url": "https://frontier-cs.org/v1/",
+      "updated": "2026-11-06",
+      "note": "FrontierCS v1 leaderboard, Version 1.0 agents tab",
+      "axes": [
+        {
+          "metric": "score",
+          "label": "FCS v1.0 Score",
+          "direction": "higher-better"
+        },
+        {
+          "metric": "avgSteps",
+          "label": "FCS v1.0 平均步数",
+          "scale": "logarithmic"
+        },
+        {
+          "metric": "avgToolCalls",
+          "label": "FCS v1.0 平均工具调用",
+          "scale": "logarithmic"
+        },
+        {
+          "metric": "avgTokensM",
+          "label": "FCS v1.0 平均 tokens",
+          "unit": "M",
+          "scale": "logarithmic"
+        }
+      ]
+    },
+    "fcs10single": {
+      "name": "FrontierCS v1.0 single attempt",
+      "url": "https://frontier-cs.org/v1/",
+      "updated": "2026-11-06",
+      "note": "Single-attempt; human experts reference Score@1 = 86.99",
+      "humanRefScore1": 86.99,
+      "axes": [
+        {
+          "metric": "score1",
+          "label": "FCS v1.0 Score@1",
+          "direction": "higher-better"
+        },
+        {
+          "metric": "elo",
+          "label": "FCS v1.0 Elo",
+          "direction": "higher-better"
+        }
+      ]
+    },
+    "asb01": {
+      "name": "Autonomous Science Bench 0.1",
+      "url": "https://yibow.me/autonomous-science-bench/leaderboard",
+      "updated": "2026-11-07",
+      "note": "6 budgeted design-build-test-learn campaigns x3 trials; resolution rate",
+      "axes": [
+        {
+          "metric": "score",
+          "label": "ASB Resolution",
+          "unit": "%",
+          "direction": "higher-better"
+        },
+        {
+          "metric": "costUSD",
+          "label": "ASB 总成本",
+          "unit": "USD",
+          "scale": "logarithmic",
+          "direction": "lower-better"
+        },
+        {
+          "metric": "agentMin",
+          "label": "ASB Agent 总耗时",
+          "unit": "min",
+          "scale": "logarithmic"
+        }
+      ]
+    },
+    "frontierphysics": {
+      "name": "FrontierPhysics",
+      "url": "https://arxiv.org/abs/2611.06910",
+      "updated": "2026-11-04",
+      "note": "56 end-to-end physics research tasks x3 rollouts; Pass@1 needs all verifier tests + blocker rubrics",
+      "axes": [
+        {
+          "metric": "pass1",
+          "label": "FP Pass@1",
+          "unit": "%",
+          "direction": "higher-better"
+        },
+        {
+          "metric": "pass3",
+          "label": "FP Pass@3",
+          "unit": "%",
+          "direction": "higher-better"
+        },
+        {
+          "metric": "res.costUSD.0",
+          "label": "FP 平均成本/rollout",
+          "unit": "USD",
+          "scale": "logarithmic",
+          "direction": "lower-better"
+        },
+        {
+          "metric": "res.timeH.0",
+          "label": "FP 平均时长/rollout",
+          "unit": "h",
+          "scale": "logarithmic"
+        },
+        {
+          "metric": "res.steps.0",
+          "label": "FP 平均步数/rollout"
+        },
+        {
+          "metric": "res.toolCalls.0",
+          "label": "FP 平均工具调用/rollout"
+        },
+        {
+          "metric": "res.outTokensM.0",
+          "label": "FP 平均输出 tokens/rollout",
+          "unit": "M"
+        }
+      ]
+    },
+    "physclosure": {
+      "name": "PhysClosureBench",
+      "url": "https://arxiv.org/abs/2610.21767",
+      "updated": "2026-10-15",
+      "note": "50 strong-field/attosecond physics tasks x3 runs; RC4 = complete research closure",
+      "axes": [
+        {
+          "metric": "meanScore",
+          "label": "PCB Atomic Score",
+          "unit": "/10",
+          "direction": "higher-better"
+        },
+        {
+          "metric": "rc4",
+          "label": "PCB RC4 闭环率",
+          "unit": "%",
+          "direction": "higher-better"
+        }
+      ]
+    },
+    "frontierchallenge": {
+      "name": "FrontierChallenge",
+      "url": "https://apodexai.github.io/FrontierAgent/benchmarks/FrontierChallenge/",
+      "updated": "2026-09-09",
+      "note": "97 scientific workflows; Pass Rate needs full deliverable contract",
+      "axes": [
+        {
+          "metric": "pass",
+          "label": "FC Pass Rate",
+          "unit": "%",
+          "direction": "higher-better"
+        },
+        {
+          "metric": "avgScore",
+          "label": "FC Avg. Score",
+          "direction": "higher-better"
+        },
+        {
+          "metric": "hds6.hds6",
+          "label": "FC HDS6",
+          "direction": "higher-better"
+        }
+      ]
+    },
+    "labbench": {
+      "name": "LabBench (Gamow)",
+      "url": "https://gamowlabs.com/labbench-benchmarking-ai-wet-lab-decisions",
+      "updated": "2026-09-28",
+      "note": "20 wet-lab decision tasks, 406 binary criteria tied to recorded lab decisions",
+      "axes": [
+        {
+          "metric": "score",
+          "label": "LabBench 判据通过率",
+          "unit": "%",
+          "direction": "higher-better"
+        },
+        {
+          "metric": "medianMin",
+          "label": "LabBench 中位耗时/题",
+          "unit": "min"
+        }
+      ]
+    },
+    "tbs": {
+      "name": "Terminal-Bench Science 0.1 (official)",
+      "url": "https://www.terminal-bench-science.ai/",
+      "updated": "2026-11-06",
+      "note": "70 research workflows, native agents, 3 trials/task",
+      "axes": [
+        {
+          "metric": "score",
+          "label": "TBS Resolution",
+          "unit": "%",
+          "direction": "higher-better"
+        }
+      ]
+    },
+    "tbsvals": {
+      "name": "Terminal-Bench Science (Vals)",
+      "url": "https://www.vals.ai/benchmarks/terminal-bench-science",
+      "updated": "2026-11-05",
+      "note": "Same 70 tasks, uniform harness (mostly mini-swe-agent), pass@1 single run",
+      "axes": [
+        {
+          "metric": "score",
+          "label": "TBS-Vals pass@1",
+          "unit": "%",
+          "direction": "higher-better"
+        },
+        {
+          "metric": "costPerTestUSD",
+          "label": "TBS-Vals 每题成本",
+          "unit": "USD",
+          "scale": "logarithmic",
+          "direction": "lower-better"
+        },
+        {
+          "metric": "tokensPerTestM",
+          "label": "TBS-Vals 每题 tokens",
+          "unit": "M",
+          "scale": "logarithmic"
+        },
+        {
+          "metric": "durationMin",
+          "label": "TBS-Vals 每题时长",
+          "unit": "min"
+        }
+      ]
+    }
+  },
+  "tools": {
+    "mini-swe-agent": {
+      "name": "mini-SWE-agent",
+      "vendor": "SWE-agent",
+      "type": "eval-harness"
+    },
+    "terminus-2": {
+      "name": "Terminus 2",
+      "vendor": "Harbor",
+      "type": "eval-harness"
+    },
+    "grok-build": {
+      "name": "Grok Build",
+      "vendor": "xAI",
+      "type": "cli"
+    },
+    "kimi-code": {
+      "name": "Kimi Code",
+      "vendor": "Moonshot AI",
+      "type": "cli"
+    },
+    "qwen-code": {
+      "name": "Qwen Code",
+      "vendor": "Alibaba",
+      "type": "cli"
+    },
+    "zcode": {
+      "name": "ZCode",
+      "vendor": "Z.AI",
+      "type": "cli"
+    },
+    "muse-code": {
+      "name": "Muse Code",
+      "vendor": "Meta",
+      "type": "cli"
+    },
+    "step-code": {
+      "name": "Step Code",
+      "vendor": "StepFun",
+      "type": "cli"
+    },
+    "deepseek-harness": {
+      "name": "DeepSeek Harness",
+      "vendor": "DeepSeek",
+      "type": "eval-harness"
+    },
+    "aiwork-code": {
+      "name": "AiWork.Code",
+      "vendor": "Ant Digital",
+      "type": "cli"
+    },
+    "frontier-agent": {
+      "name": "Frontier Agent",
+      "vendor": "Apodex",
+      "type": "cli"
+    },
+    "amplio": {
+      "name": "Amplio",
+      "vendor": "Google",
+      "type": "cli"
+    },
+    "pi-agent": {
+      "name": "Pi",
+      "vendor": "Thinking Machines",
+      "type": "cli"
+    }
+  },
+  "records": [
+    {
+      "bench": "fcs2",
+      "model": "Claude Opus 5.5",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "metrics": {
+        "pass": 58.3,
+        "tasksPassed": 28,
+        "tasksTotal": 48,
+        "fci": 51.3,
+        "fciLo": 42.7,
+        "fciHi": 60.7,
+        "vsHuman": 8.9,
+        "costRunUSD": 20.04
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "Gemini 4 Carbon",
+      "vendor": "Google",
+      "tool": "antigravity",
+      "metrics": {
+        "pass": 54.2,
+        "tasksPassed": 26,
+        "tasksTotal": 48,
+        "fci": 51.0,
+        "fciLo": 40.3,
+        "fciHi": 62.5,
+        "vsHuman": 7.9,
+        "costRunUSD": 39.81
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "Gemini 4 Argon",
+      "vendor": "Google",
+      "tool": "antigravity",
+      "metrics": {
+        "pass": 54.2,
+        "tasksPassed": 26,
+        "tasksTotal": 48,
+        "fci": 48.4,
+        "fciLo": 40.1,
+        "fciHi": 58.4,
+        "vsHuman": 4.6,
+        "costRunUSD": 19.56
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "Claude Sonnet 5.5",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "metrics": {
+        "pass": 50.0,
+        "tasksPassed": 24,
+        "tasksTotal": 48,
+        "fci": 50.7,
+        "fciLo": 40.3,
+        "fciHi": 64.2,
+        "vsHuman": 7.2,
+        "costRunUSD": 16.61
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "GPT-6 Astra",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "metrics": {
+        "pass": 45.8,
+        "tasksPassed": 22,
+        "tasksTotal": 48,
+        "fci": 48.6,
+        "fciLo": 40.3,
+        "fciHi": 59.0,
+        "vsHuman": 6.8,
+        "costRunUSD": 17.48
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "GPT-6.1 Terra",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "metrics": {
+        "pass": 39.6,
+        "tasksPassed": 19,
+        "tasksTotal": 48,
+        "fci": 43.1,
+        "fciLo": 34.5,
+        "fciHi": 54.1,
+        "vsHuman": 5.6,
+        "costRunUSD": 2.78
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "GPT-6.1 Sol",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "metrics": {
+        "pass": 37.5,
+        "tasksPassed": 18,
+        "tasksTotal": 48,
+        "fci": 42.6,
+        "fciLo": 33.8,
+        "fciHi": 52.1,
+        "vsHuman": 7.0,
+        "costRunUSD": 3.15
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "Claude Fable 5.1",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "metrics": {
+        "pass": 35.4,
+        "tasksPassed": 17,
+        "tasksTotal": 48,
+        "fci": 38.9,
+        "fciLo": 28.6,
+        "fciHi": 50.9,
+        "vsHuman": 4.0,
+        "costRunUSD": 26.51
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "GLM-5.3",
+      "vendor": "Z.AI",
+      "tool": "zcode",
+      "metrics": {
+        "pass": 22.9,
+        "tasksPassed": 11,
+        "tasksTotal": 48,
+        "fci": 33.7,
+        "fciLo": 25.3,
+        "fciHi": 42.6,
+        "vsHuman": 1.1,
+        "costRunUSD": 10.34
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "Muse Wonder 1.0",
+      "vendor": "Meta",
+      "tool": "muse-code",
+      "metrics": {
+        "pass": 22.9,
+        "tasksPassed": 11,
+        "tasksTotal": 48,
+        "fci": 33.6,
+        "fciLo": 26.2,
+        "fciHi": 43.3,
+        "vsHuman": 2.8,
+        "costRunUSD": 13.42
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "Kimi K3.1 Pro",
+      "vendor": "Moonshot AI",
+      "tool": "kimi-code",
+      "metrics": {
+        "pass": 20.8,
+        "tasksPassed": 10,
+        "tasksTotal": 48,
+        "fci": 31.3,
+        "fciLo": 22.9,
+        "fciHi": 41.8,
+        "vsHuman": 2.1,
+        "costRunUSD": 7.52
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "Kimi K3",
+      "vendor": "Moonshot AI",
+      "tool": "kimi-code",
+      "metrics": {
+        "pass": 20.8,
+        "tasksPassed": 10,
+        "tasksTotal": 48,
+        "fci": 26.8,
+        "fciLo": 18.1,
+        "fciHi": 37.7,
+        "vsHuman": -2.6,
+        "costRunUSD": 8.47
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "DeepSeek V4.1 Flash 1017",
+      "vendor": "DeepSeek",
+      "tool": "deepseek-harness",
+      "metrics": {
+        "pass": 14.6,
+        "tasksPassed": 7,
+        "tasksTotal": 48,
+        "fci": 26.1,
+        "fciLo": 16.3,
+        "fciHi": 37.0,
+        "vsHuman": -1.4,
+        "costRunUSD": 0.54
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "DeepSeek V4.1 Flash",
+      "vendor": "DeepSeek",
+      "tool": "deepseek-harness",
+      "metrics": {
+        "pass": 12.5,
+        "tasksPassed": 6,
+        "tasksTotal": 48,
+        "fci": 28.4,
+        "fciLo": 18.8,
+        "fciHi": 39.2,
+        "vsHuman": -1.6,
+        "costRunUSD": 0.11
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "GLM-5.3 Flash",
+      "vendor": "Z.AI",
+      "tool": "zcode",
+      "metrics": {
+        "pass": 12.5,
+        "tasksPassed": 6,
+        "tasksTotal": 48,
+        "fci": 24.5,
+        "fciLo": 17.0,
+        "fciHi": 34.5,
+        "vsHuman": -8.4,
+        "costRunUSD": 1.38
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "Muse Spark 1.3",
+      "vendor": "Meta",
+      "tool": "muse-code",
+      "metrics": {
+        "pass": 12.5,
+        "tasksPassed": 6,
+        "tasksTotal": 48,
+        "fci": 21.9,
+        "fciLo": 14.7,
+        "fciHi": 31.6,
+        "vsHuman": -3.3,
+        "costRunUSD": 8.58
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "Qwen3.8 Max",
+      "vendor": "Alibaba",
+      "tool": "qwen-code",
+      "metrics": {
+        "pass": 10.4,
+        "tasksPassed": 5,
+        "tasksTotal": 48,
+        "fci": 23.4,
+        "fciLo": 15.3,
+        "fciHi": 31.9,
+        "vsHuman": -6.2,
+        "costRunUSD": 7.46
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "Step 5 Preview",
+      "vendor": "StepFun",
+      "tool": "step-code",
+      "metrics": {
+        "pass": 10.4,
+        "tasksPassed": 5,
+        "tasksTotal": 48,
+        "fci": 12.1,
+        "fciLo": 0.6,
+        "fciHi": 24.3,
+        "vsHuman": -9.7,
+        "costRunUSD": 8.08
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "Inkling 2 Small",
+      "vendor": "Thinking Machines",
+      "tool": "pi-agent",
+      "metrics": {
+        "pass": 8.3,
+        "tasksPassed": 4,
+        "tasksTotal": 48,
+        "fci": 16.4,
+        "fciLo": 8.8,
+        "fciHi": 24.3,
+        "vsHuman": -9.7,
+        "costRunUSD": 1.29
+      }
+    },
+    {
+      "bench": "fcs2",
+      "model": "MiniMax-M3.1-Flash",
+      "vendor": "MiniMax",
+      "tool": "claude-code",
+      "metrics": {
+        "pass": 8.3,
+        "tasksPassed": 4,
+        "tasksTotal": 48,
+        "fci": 3.3,
+        "fciLo": -8.0,
+        "fciHi": 15.1,
+        "vsHuman": -17.4,
+        "costRunUSD": 1.02
+      }
+    },
+    {
+      "bench": "fcs11",
+      "model": "Claude Opus 5.5",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "effort": "high",
+      "metrics": {
+        "score": 56.52,
+        "submittedBy": "FrontierCS"
+      }
+    },
+    {
+      "bench": "fcs11",
+      "model": "Claude Opus 5.5",
+      "vendor": "Anthropic",
+      "tool": "aiwork-code",
+      "effort": "high",
+      "metrics": {
+        "score": 54.45,
+        "submittedBy": "Ant Digital"
+      }
+    },
+    {
+      "bench": "fcs11",
+      "model": "GPT-6 Astra",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "low",
+      "metrics": {
+        "score": 53.98,
+        "submittedBy": "FrontierCS"
+      }
+    },
+    {
+      "bench": "fcs11",
+      "model": "Claude Sonnet 5.5",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "score": 53.9,
+        "submittedBy": "FrontierCS"
+      }
+    },
+    {
+      "bench": "fcs11",
+      "model": "GPT-6 Sol",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "high",
+      "metrics": {
+        "score": 52.38,
+        "submittedBy": "FrontierCS"
+      }
+    },
+    {
+      "bench": "fcs11",
+      "model": "Gemini 3.7 Flash",
+      "vendor": "Google",
+      "tool": "google-gemini-dev-tools",
+      "effort": "medium",
+      "metrics": {
+        "score": 47.97,
+        "submittedBy": "FrontierCS"
+      }
+    },
+    {
+      "bench": "fcs11",
+      "model": "Gemini 3.8 Flash",
+      "vendor": "Google",
+      "tool": "google-gemini-dev-tools",
+      "effort": "medium",
+      "metrics": {
+        "score": 47.79,
+        "submittedBy": "FrontierCS"
+      }
+    },
+    {
+      "bench": "fcs10agents",
+      "model": "GPT-5.6 Sol",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "metrics": {
+        "score": 76.4,
+        "avgSteps": 57.8,
+        "avgToolCalls": 51.8,
+        "avgTokensM": 1.93
+      }
+    },
+    {
+      "bench": "fcs10agents",
+      "model": "Claude Opus 4.8",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "metrics": {
+        "score": 74.5,
+        "avgSteps": 355.4,
+        "avgToolCalls": 145.7,
+        "avgTokensM": 14.72
+      }
+    },
+    {
+      "bench": "fcs10agents",
+      "model": "GPT-5.5",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "metrics": {
+        "score": 72.1,
+        "avgSteps": 48.3,
+        "avgToolCalls": 55.8,
+        "avgTokensM": 2.02
+      }
+    },
+    {
+      "bench": "fcs10agents",
+      "model": "Gemini 3.1 Pro",
+      "vendor": "Google",
+      "tool": "amplio",
+      "metrics": {
+        "score": 68.9
+      }
+    },
+    {
+      "bench": "fcs10agents",
+      "model": "Qwen3.7 Max",
+      "vendor": "Alibaba",
+      "tool": "claude-code",
+      "metrics": {
+        "score": 61.9,
+        "avgSteps": 133.9,
+        "avgToolCalls": 139.1,
+        "avgTokensM": 13.85
+      }
+    },
+    {
+      "bench": "fcs10agents",
+      "model": "Gemini 3.1 Pro",
+      "vendor": "Google",
+      "tool": "google-gemini-dev-tools",
+      "metrics": {
+        "score": 60.2,
+        "avgSteps": 74.3,
+        "avgToolCalls": 41.6,
+        "avgTokensM": 2.0
+      }
+    },
+    {
+      "bench": "fcs10agents",
+      "model": "Kimi K2.6",
+      "vendor": "Moonshot AI",
+      "metrics": {
+        "score": 46.9,
+        "avgSteps": 67.2,
+        "avgToolCalls": 70.6,
+        "avgTokensM": 6.79
+      }
+    },
+    {
+      "bench": "fcs10agents",
+      "model": "Claude Opus 4.7",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "metrics": {
+        "score": 43.0,
+        "avgSteps": 77.2,
+        "avgToolCalls": 42.2,
+        "avgTokensM": 10.96
+      }
+    },
+    {
+      "bench": "fcs10single",
+      "model": "Gemini 3.0 Pro",
+      "vendor": "Google",
+      "metrics": {
+        "score1": 33.12,
+        "avg5": 34.58,
+        "score5": 56.09,
+        "elo": 1265
+      }
+    },
+    {
+      "bench": "fcs10single",
+      "model": "GPT-5.2 Thinking",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score1": 32.4,
+        "avg5": 33.11,
+        "score5": 47.19,
+        "elo": 1242
+      }
+    },
+    {
+      "bench": "fcs10single",
+      "model": "GPT-5 Thinking",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score1": 23.1,
+        "avg5": 22.58,
+        "score5": 39.73,
+        "elo": 1196
+      }
+    },
+    {
+      "bench": "fcs10single",
+      "model": "DeepSeek 3.2",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "score1": 24.83,
+        "avg5": 23.89,
+        "score5": 41.44,
+        "elo": 1193
+      }
+    },
+    {
+      "bench": "fcs10single",
+      "model": "Grok 4",
+      "vendor": "xAI",
+      "metrics": {
+        "score1": 24.04,
+        "avg5": 22.98,
+        "score5": 36.81,
+        "elo": 1174
+      }
+    },
+    {
+      "bench": "fcs10single",
+      "model": "Gemini 2.5 Pro",
+      "vendor": "Google",
+      "metrics": {
+        "score1": 20.34,
+        "avg5": 19.32,
+        "score5": 36.65,
+        "elo": 1167
+      }
+    },
+    {
+      "bench": "fcs10single",
+      "model": "GPT-5.1 Thinking",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score1": 20.64,
+        "avg5": 21.49,
+        "score5": 34.76,
+        "elo": 1164
+      }
+    },
+    {
+      "bench": "asb01",
+      "model": "GPT-6 Astra",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "metrics": {
+        "score": 72.2,
+        "costUSD": 190.23,
+        "agentMin": 557,
+        "domains": {
+          "biology": {
+            "score": 83.3,
+            "costUSD": 79.59,
+            "agentMin": 243
+          },
+          "chemistry": {
+            "score": 66.7,
+            "costUSD": 57.82,
+            "agentMin": 173
+          },
+          "materials": {
+            "score": 66.7,
+            "costUSD": 52.82,
+            "agentMin": 141
+          }
+        }
+      },
+      "effort": "max"
+    },
+    {
+      "bench": "asb01",
+      "model": "Claude Opus 5.5",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "metrics": {
+        "score": 66.7,
+        "costUSD": 172.91,
+        "agentMin": 1142,
+        "domains": {
+          "biology": {
+            "score": 50.0,
+            "costUSD": 61.38,
+            "agentMin": 330
+          },
+          "chemistry": {
+            "score": 66.7,
+            "costUSD": 56.12,
+            "agentMin": 424
+          },
+          "materials": {
+            "score": 83.3,
+            "costUSD": 55.41,
+            "agentMin": 387
+          }
+        }
+      },
+      "effort": "max"
+    },
+    {
+      "bench": "asb01",
+      "model": "GPT-5.6 Terra",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "metrics": {
+        "score": 44.4,
+        "costUSD": 51.57,
+        "agentMin": 300,
+        "domains": {
+          "biology": {
+            "score": 33.3,
+            "costUSD": 20.93,
+            "agentMin": 116
+          },
+          "chemistry": {
+            "score": 50.0,
+            "costUSD": 15.8,
+            "agentMin": 97
+          },
+          "materials": {
+            "score": 50.0,
+            "costUSD": 14.84,
+            "agentMin": 87
+          }
+        }
+      },
+      "effort": "max"
+    },
+    {
+      "bench": "asb01",
+      "model": "GPT-5.6 Luna",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "metrics": {
+        "score": 27.8,
+        "costUSD": 6.91,
+        "agentMin": 377,
+        "domains": {
+          "biology": {
+            "score": 50.0,
+            "costUSD": 2.4,
+            "agentMin": 135
+          },
+          "chemistry": {
+            "score": 33.3,
+            "costUSD": 2.48,
+            "agentMin": 138
+          },
+          "materials": {
+            "score": 0.0,
+            "costUSD": 2.03,
+            "agentMin": 105
+          }
+        }
+      },
+      "effort": "max"
+    },
+    {
+      "bench": "asb01",
+      "model": "GLM-5.3 Flash",
+      "vendor": "Z.AI",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 11.1,
+        "costUSD": 25.68,
+        "agentMin": 1702,
+        "domains": {
+          "biology": {
+            "score": 0.0,
+            "costUSD": 6.9,
+            "agentMin": 505
+          },
+          "chemistry": {
+            "score": 0.0,
+            "costUSD": 8.98,
+            "agentMin": 489
+          },
+          "materials": {
+            "score": 33.3,
+            "costUSD": 9.8,
+            "agentMin": 708
+          }
+        }
+      }
+    },
+    {
+      "bench": "asb01",
+      "model": "Claude Sonnet 5.5",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "metrics": {
+        "score": 11.1,
+        "costUSD": 7.84,
+        "agentMin": 163,
+        "domains": {
+          "biology": {
+            "score": 0.0,
+            "costUSD": 3.51,
+            "agentMin": 49
+          },
+          "chemistry": {
+            "score": 16.7,
+            "costUSD": 2.47,
+            "agentMin": 68
+          },
+          "materials": {
+            "score": 16.7,
+            "costUSD": 1.86,
+            "agentMin": 46
+          }
+        }
+      },
+      "effort": "high"
+    },
+    {
+      "bench": "asb01",
+      "model": "MiniMax M3",
+      "vendor": "MiniMax",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 5.6,
+        "costUSD": 28.37,
+        "agentMin": 747,
+        "domains": {
+          "biology": {
+            "score": 16.7,
+            "costUSD": 7.83,
+            "agentMin": 238
+          },
+          "chemistry": {
+            "score": 0.0,
+            "costUSD": 11.35,
+            "agentMin": 262
+          },
+          "materials": {
+            "score": 0.0,
+            "costUSD": 9.19,
+            "agentMin": 248
+          }
+        }
+      }
+    },
+    {
+      "bench": "asb01",
+      "model": "Qwen3.8 27B",
+      "vendor": "Alibaba",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 5.6,
+        "costUSD": 21.89,
+        "agentMin": 1118,
+        "domains": {
+          "biology": {
+            "score": 0.0,
+            "costUSD": 10.33,
+            "agentMin": 522
+          },
+          "chemistry": {
+            "score": 16.7,
+            "costUSD": 6.98,
+            "agentMin": 340
+          },
+          "materials": {
+            "score": 0.0,
+            "costUSD": 4.58,
+            "agentMin": 256
+          }
+        }
+      }
+    },
+    {
+      "bench": "asb01",
+      "model": "Claude Haiku 4.5",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "metrics": {
+        "score": 0.0,
+        "costUSD": 7.62,
+        "agentMin": 88,
+        "domains": {
+          "biology": {
+            "score": 0.0,
+            "costUSD": 2.41,
+            "agentMin": 27
+          },
+          "chemistry": {
+            "score": 0.0,
+            "costUSD": 2.76,
+            "agentMin": 30
+          },
+          "materials": {
+            "score": 0.0,
+            "costUSD": 2.45,
+            "agentMin": 31
+          }
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "Claude Opus 5.5",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "pass1": 27.4,
+        "pass3": 44.6,
+        "tasks3of3": 8,
+        "tasksAny": 25,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            219,
+            204,
+            371
+          ],
+          "steps": [
+            191,
+            168,
+            339
+          ],
+          "timeH": [
+            2.44,
+            2.06,
+            5.38
+          ],
+          "costUSD": [
+            26.95,
+            24.86,
+            51.89
+          ],
+          "outTokensM": [
+            0.38,
+            0.39
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "GPT-6 Astra",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "max",
+      "metrics": {
+        "pass1": 23.2,
+        "pass3": 30.4,
+        "tasks3of3": 9,
+        "tasksAny": 17,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            194,
+            111,
+            585
+          ],
+          "steps": [
+            108,
+            61,
+            335
+          ],
+          "timeH": [
+            1.73,
+            1.05,
+            5.28
+          ],
+          "costUSD": [
+            26.91,
+            15.24,
+            90.77
+          ],
+          "outTokensM": [
+            0.18,
+            0.13
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "GPT-6 Astra",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "xhigh",
+      "metrics": {
+        "pass1": 19.6,
+        "pass3": 30.4,
+        "tasks3of3": 4,
+        "tasksAny": 17,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            78,
+            65,
+            172
+          ],
+          "steps": [
+            86,
+            65,
+            197
+          ],
+          "timeH": [
+            1.24,
+            0.75,
+            3.72
+          ],
+          "costUSD": [
+            19.21,
+            11.6,
+            56.87
+          ],
+          "outTokensM": [
+            0.11,
+            0.09
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "GPT-6.1 Sol",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "max",
+      "metrics": {
+        "pass1": 19.6,
+        "pass3": 30.4,
+        "tasks3of3": 6,
+        "tasksAny": 17,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            281,
+            170,
+            882
+          ],
+          "steps": [
+            158,
+            90,
+            583
+          ],
+          "timeH": [
+            1.79,
+            1.17,
+            5.21
+          ],
+          "costUSD": [
+            5.33,
+            3.2,
+            17.51
+          ],
+          "outTokensM": [
+            0.21,
+            0.15
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "GPT-6.1 Terra",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "max",
+      "metrics": {
+        "pass1": 14.3,
+        "pass3": 21.4,
+        "tasks3of3": 4,
+        "tasksAny": 12,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            203,
+            124,
+            461
+          ],
+          "steps": [
+            203,
+            119,
+            553
+          ],
+          "timeH": [
+            1.14,
+            0.65,
+            3.9
+          ],
+          "costUSD": [
+            3.46,
+            1.23,
+            14.25
+          ],
+          "outTokensM": [
+            0.12,
+            0.09
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "GPT-6 Sol",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "max",
+      "metrics": {
+        "pass1": 14.3,
+        "pass3": 28.6,
+        "tasks3of3": 2,
+        "tasksAny": 16,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            179,
+            114,
+            501
+          ],
+          "steps": [
+            194,
+            110,
+            634
+          ],
+          "timeH": [
+            1.08,
+            0.63,
+            3.57
+          ],
+          "costUSD": [
+            6.38,
+            3.22,
+            22.09
+          ],
+          "outTokensM": [
+            0.11,
+            0.08
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "Claude Fable 5.1",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "pass1": 11.3,
+        "pass3": 21.4,
+        "tasks3of3": 3,
+        "tasksAny": 12,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            134,
+            128,
+            230
+          ],
+          "steps": [
+            81,
+            66,
+            190
+          ],
+          "timeH": [
+            1.87,
+            1.58,
+            4.4
+          ],
+          "costUSD": [
+            32.63,
+            26.42,
+            48.65
+          ],
+          "outTokensM": [
+            0.27,
+            0.27
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "Claude Opus 5",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "pass1": 9.5,
+        "pass3": 17.9,
+        "tasks3of3": 1,
+        "tasksAny": 10,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            163,
+            116,
+            425
+          ],
+          "steps": [
+            156,
+            105,
+            422
+          ],
+          "timeH": [
+            2.4,
+            1.35,
+            7.58
+          ],
+          "costUSD": [
+            56.77,
+            32.85,
+            163.37
+          ],
+          "outTokensM": [
+            0.3,
+            0.22
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "Gemini 4 Argon",
+      "vendor": "Google",
+      "tool": "antigravity",
+      "effort": "high",
+      "metrics": {
+        "pass1": 8.3,
+        "pass3": 17.9,
+        "tasks3of3": 1,
+        "tasksAny": 10,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            132,
+            122,
+            225
+          ],
+          "steps": [
+            123,
+            119,
+            207
+          ],
+          "timeH": [
+            1.61,
+            1.41,
+            3.2
+          ],
+          "costUSD": [
+            8.87,
+            7.1,
+            17.39
+          ],
+          "outTokensM": [
+            0.31,
+            0.28
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "GPT-5.6 Sol",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "max",
+      "metrics": {
+        "pass1": 7.1,
+        "pass3": 12.5,
+        "tasks3of3": 2,
+        "tasksAny": 7,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            117,
+            89,
+            260
+          ],
+          "steps": [
+            154,
+            106,
+            401
+          ],
+          "timeH": [
+            0.97,
+            0.62,
+            2.77
+          ],
+          "costUSD": [
+            10.35,
+            6.93,
+            29.21
+          ],
+          "outTokensM": [
+            0.09,
+            0.09
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "Kimi K3.1 Pro",
+      "vendor": "Moonshot AI",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "pass1": 6.5,
+        "pass3": 12.5,
+        "tasks3of3": 1,
+        "tasksAny": 7,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            238,
+            195,
+            530
+          ],
+          "steps": [
+            187,
+            140,
+            450
+          ],
+          "timeH": [
+            1.52,
+            1.01,
+            4.08
+          ],
+          "costUSD": [
+            9.6,
+            7.03,
+            24.43
+          ],
+          "outTokensM": [
+            0.17,
+            0.13
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "Grok 4.7",
+      "vendor": "xAI",
+      "tool": "grok-build",
+      "effort": "xhigh",
+      "metrics": {
+        "pass1": 4.2,
+        "pass3": 10.7,
+        "tasks3of3": 0,
+        "tasksAny": 6,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            239,
+            212,
+            523
+          ],
+          "steps": [
+            169,
+            140,
+            374
+          ],
+          "timeH": [
+            2.75,
+            2.32,
+            6.4
+          ],
+          "costUSD": [
+            12.19,
+            10.13,
+            27.34
+          ],
+          "outTokensM": [
+            0.17,
+            0.14
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "Claude Haiku 5.5",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "pass1": 4.2,
+        "pass3": 10.7,
+        "tasks3of3": 0,
+        "tasksAny": 6,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            224,
+            187,
+            476
+          ],
+          "steps": [
+            214,
+            176,
+            451
+          ],
+          "timeH": [
+            2.5,
+            1.79,
+            6.39
+          ],
+          "costUSD": [
+            6.66,
+            5.13,
+            15.27
+          ],
+          "outTokensM": [
+            0.56,
+            0.52
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "GPT-5.6 Sol",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "xhigh",
+      "metrics": {
+        "pass1": 4.2,
+        "pass3": 8.9,
+        "tasks3of3": 0,
+        "tasksAny": 5,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            44,
+            34,
+            102
+          ],
+          "steps": [
+            66,
+            55,
+            168
+          ],
+          "timeH": [
+            0.42,
+            0.27,
+            1.33
+          ],
+          "costUSD": [
+            2.79,
+            1.77,
+            8.43
+          ],
+          "outTokensM": [
+            0.04,
+            0.03
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "GLM-5.3",
+      "vendor": "Z.AI",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "pass1": 4.2,
+        "pass3": 8.9,
+        "tasks3of3": 0,
+        "tasksAny": 5,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            347,
+            261,
+            1015
+          ],
+          "steps": [
+            324,
+            242,
+            994
+          ],
+          "timeH": [
+            3.14,
+            2.46,
+            7.02
+          ],
+          "costUSD": [
+            12.81,
+            10.05,
+            33.4
+          ],
+          "outTokensM": [
+            0.57,
+            0.47
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "GPT-5.6 Terra",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "max",
+      "metrics": {
+        "pass1": 3.6,
+        "pass3": 7.1,
+        "tasks3of3": 1,
+        "tasksAny": 4,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            139,
+            98,
+            419
+          ],
+          "steps": [
+            165,
+            110,
+            501
+          ],
+          "timeH": [
+            1.15,
+            0.73,
+            3.89
+          ],
+          "costUSD": [
+            5.8,
+            3.73,
+            16.81
+          ],
+          "outTokensM": [
+            0.1,
+            0.09
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "GPT-5.6 Luna",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "max",
+      "metrics": {
+        "pass1": 3.6,
+        "pass3": 3.6,
+        "tasks3of3": 2,
+        "tasksAny": 2,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            150,
+            103,
+            401
+          ],
+          "steps": [
+            197,
+            124,
+            525
+          ],
+          "timeH": [
+            1.04,
+            0.57,
+            3.44
+          ],
+          "costUSD": [
+            0.68,
+            0.42,
+            1.78
+          ],
+          "outTokensM": [
+            0.11,
+            0.09
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "DeepSeek V4.1 Flash",
+      "vendor": "DeepSeek",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "pass1": 3.6,
+        "pass3": 5.4,
+        "tasks3of3": 1,
+        "tasksAny": 3,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            191,
+            166,
+            404
+          ],
+          "steps": [
+            178,
+            159,
+            394
+          ],
+          "timeH": [
+            1.17,
+            0.83,
+            3.13
+          ],
+          "costUSD": [
+            0.65,
+            0.54,
+            1.34
+          ],
+          "outTokensM": [
+            0.26,
+            0.24
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "Kimi K3",
+      "vendor": "Moonshot AI",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "pass1": 2.4,
+        "pass3": 5.4,
+        "tasks3of3": 0,
+        "tasksAny": 3,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            159,
+            123,
+            358
+          ],
+          "steps": [
+            153,
+            122,
+            382
+          ],
+          "timeH": [
+            1.91,
+            1.24,
+            5.51
+          ],
+          "costUSD": [
+            9.33,
+            6.64,
+            22.04
+          ],
+          "outTokensM": [
+            0.21,
+            0.16
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "Grok 4.6",
+      "vendor": "xAI",
+      "tool": "grok-build",
+      "effort": "xhigh",
+      "metrics": {
+        "pass1": 2.4,
+        "pass3": 3.6,
+        "tasks3of3": 1,
+        "tasksAny": 2,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            141,
+            122,
+            315
+          ],
+          "steps": [
+            83,
+            71,
+            179
+          ],
+          "timeH": [
+            1.63,
+            1.27,
+            4.02
+          ],
+          "costUSD": [
+            9.21,
+            7.35,
+            19.75
+          ],
+          "outTokensM": [
+            0.08,
+            0.06
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "GPT-5.6 Luna",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "xhigh",
+      "metrics": {
+        "pass1": 1.8,
+        "pass3": 3.6,
+        "tasks3of3": 0,
+        "tasksAny": 2,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            98,
+            72,
+            224
+          ],
+          "steps": [
+            141,
+            90,
+            414
+          ],
+          "timeH": [
+            0.75,
+            0.39,
+            2.18
+          ],
+          "costUSD": [
+            0.41,
+            0.24,
+            1.1
+          ],
+          "outTokensM": [
+            0.07,
+            0.06
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "MiMo V2.6 Pro",
+      "vendor": "Xiaomi",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "pass1": 1.2,
+        "pass3": 3.6,
+        "tasks3of3": 0,
+        "tasksAny": 2,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            202,
+            148,
+            497
+          ],
+          "steps": [
+            182,
+            133,
+            434
+          ],
+          "timeH": [
+            3.01,
+            2.13,
+            7.47
+          ],
+          "costUSD": [
+            0.66,
+            0.47,
+            1.56
+          ],
+          "outTokensM": [
+            0.28,
+            0.2
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "GPT-5.6 Terra",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "xhigh",
+      "metrics": {
+        "pass1": 1.2,
+        "pass3": 1.8,
+        "tasks3of3": 0,
+        "tasksAny": 1,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            48,
+            42,
+            93
+          ],
+          "steps": [
+            70,
+            52,
+            168
+          ],
+          "timeH": [
+            0.58,
+            0.31,
+            2.02
+          ],
+          "costUSD": [
+            2.22,
+            1.53,
+            5.92
+          ],
+          "outTokensM": [
+            0.06,
+            0.06
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "DeepSeek V4 Pro",
+      "vendor": "DeepSeek",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "pass1": 0.6,
+        "pass3": 1.8,
+        "tasks3of3": 0,
+        "tasksAny": 1,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            97,
+            66,
+            237
+          ],
+          "steps": [
+            90,
+            63,
+            214
+          ],
+          "timeH": [
+            2.1,
+            2.0,
+            5.01
+          ],
+          "costUSD": [
+            7.82,
+            5.86,
+            20.95
+          ],
+          "outTokensM": [
+            0.23,
+            0.19
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "Gemini 3.8 Flash",
+      "vendor": "Google",
+      "tool": "antigravity",
+      "effort": "high",
+      "metrics": {
+        "pass1": 0.0,
+        "pass3": 0.0,
+        "tasks3of3": 0,
+        "tasksAny": 0,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            197,
+            157,
+            433
+          ],
+          "steps": [
+            207,
+            165,
+            447
+          ],
+          "timeH": [
+            0.45,
+            0.36,
+            1.06
+          ],
+          "costUSD": [
+            3.69,
+            2.73,
+            8.38
+          ],
+          "outTokensM": [
+            0.2,
+            0.16
+          ]
+        }
+      }
+    },
+    {
+      "bench": "frontierphysics",
+      "model": "Mistral Large 4",
+      "vendor": "Mistral",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "pass1": 0.0,
+        "pass3": 0.0,
+        "tasks3of3": 0,
+        "tasksAny": 0,
+        "tasksTotal": 56,
+        "res": {
+          "toolCalls": [
+            244,
+            205,
+            634
+          ],
+          "steps": [
+            205,
+            173,
+            562
+          ],
+          "timeH": [
+            4.82,
+            4.02,
+            9.25
+          ],
+          "costUSD": [
+            10.67,
+            9.29,
+            24.39
+          ],
+          "outTokensM": [
+            0.88,
+            0.69
+          ]
+        }
+      }
+    },
+    {
+      "bench": "physclosure",
+      "model": "Claude Opus 5",
+      "vendor": "Anthropic",
+      "metrics": {
+        "meanScore": 6.29,
+        "median": 6.75,
+        "rc4": 32.7,
+        "rc4Any": 50.0,
+        "rc4All3": 18.0,
+        "dims": {
+          "f": 85.6,
+          "o": 60.1,
+          "i": 54.6,
+          "m": 52.8,
+          "v": 84.0
+        }
+      }
+    },
+    {
+      "bench": "physclosure",
+      "model": "GPT-5.6 Sol",
+      "vendor": "OpenAI",
+      "metrics": {
+        "meanScore": 5.83,
+        "median": 6.0,
+        "rc4": 22.7,
+        "rc4Any": 40.0,
+        "rc4All3": 10.0,
+        "dims": {
+          "f": 83.8,
+          "o": 60.5,
+          "i": 47.9,
+          "m": 46.0,
+          "v": 74.2
+        }
+      }
+    },
+    {
+      "bench": "physclosure",
+      "model": "Kimi K3",
+      "vendor": "Moonshot AI",
+      "metrics": {
+        "meanScore": 5.17,
+        "median": 5.0,
+        "rc4": 19.3,
+        "rc4Any": 40.0,
+        "rc4All3": 4.0,
+        "dims": {
+          "f": 77.4,
+          "o": 49.7,
+          "i": 43.4,
+          "m": 40.9,
+          "v": 68.4
+        }
+      }
+    },
+    {
+      "bench": "physclosure",
+      "model": "DeepSeek V4.1 Flash",
+      "vendor": "DeepSeek",
+      "metrics": {
+        "meanScore": 4.5,
+        "median": 4.0,
+        "rc4": 10.7,
+        "rc4Any": 24.0,
+        "rc4All3": 0.0,
+        "dims": {
+          "f": 67.2,
+          "o": 37.3,
+          "i": 35.2,
+          "m": 35.7,
+          "v": 71.3
+        }
+      }
+    },
+    {
+      "bench": "physclosure",
+      "model": "Qwen3.8 Max",
+      "vendor": "Alibaba",
+      "metrics": {
+        "meanScore": 3.46,
+        "median": 2.0,
+        "rc4": 7.3,
+        "rc4Any": 14.0,
+        "rc4All3": 2.0,
+        "dims": {
+          "f": 62.3,
+          "o": 28.7,
+          "i": 24.1,
+          "m": 25.9,
+          "v": 54.7
+        }
+      }
+    },
+    {
+      "bench": "physclosure",
+      "model": "GLM-5.3 Flash",
+      "vendor": "Z.AI",
+      "metrics": {
+        "meanScore": 3.28,
+        "median": 2.25,
+        "rc4": 5.3,
+        "rc4Any": 12.0,
+        "rc4All3": 0.0,
+        "dims": {
+          "f": 56.7,
+          "o": 23.7,
+          "i": 20.3,
+          "m": 23.3,
+          "v": 65.6
+        }
+      }
+    },
+    {
+      "bench": "physclosure",
+      "model": "Gemini 3.1 Pro",
+      "vendor": "Google",
+      "metrics": {
+        "meanScore": 2.85,
+        "median": 2.5,
+        "rc4": 0.7,
+        "rc4Any": 2.0,
+        "rc4All3": 0.0,
+        "dims": {
+          "f": 61.9,
+          "o": 22.7,
+          "i": 13.7,
+          "m": 15.3,
+          "v": 47.8
+        }
+      }
+    },
+    {
+      "bench": "frontierchallenge",
+      "model": "GPT-5.6 Sol",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "metrics": {
+        "pass": 20.6,
+        "passMedium": 39.1,
+        "passHard": 14.9,
+        "tasksPassed": 20,
+        "tasksTotal": 97,
+        "avgScore": 87.9,
+        "hds6": {
+          "hds6": 3.67,
+          "c": 3.874,
+          "e": 3.919,
+          "a": 3.431,
+          "s": 3.341,
+          "t": 3.641,
+          "r": 3.533
+        }
+      }
+    },
+    {
+      "bench": "frontierchallenge",
+      "model": "Grok 4.6",
+      "vendor": "xAI",
+      "tool": "claude-code",
+      "metrics": {
+        "pass": 20.6,
+        "passMedium": 43.5,
+        "passHard": 13.5,
+        "tasksPassed": 20,
+        "tasksTotal": 97,
+        "avgScore": 86.6,
+        "hds6": {
+          "hds6": 3.562,
+          "c": 3.777,
+          "e": 3.853,
+          "a": 3.436,
+          "s": 3.196,
+          "t": 3.523,
+          "r": 3.338
+        }
+      }
+    },
+    {
+      "bench": "frontierchallenge",
+      "model": "Kimi K3",
+      "vendor": "Moonshot AI",
+      "tool": "claude-code",
+      "metrics": {
+        "pass": 17.5,
+        "passMedium": 39.1,
+        "passHard": 10.8,
+        "tasksPassed": 17,
+        "tasksTotal": 97,
+        "avgScore": 85.5,
+        "hds6": {
+          "hds6": 3.496,
+          "c": 3.776,
+          "e": 3.815,
+          "a": 3.316,
+          "s": 2.996,
+          "t": 3.523,
+          "r": 3.252
+        }
+      }
+    },
+    {
+      "bench": "frontierchallenge",
+      "model": "Claude Opus 5",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "metrics": {
+        "pass": 17.5,
+        "passMedium": 39.1,
+        "passHard": 10.8,
+        "tasksPassed": 17,
+        "tasksTotal": 97,
+        "avgScore": 84.9,
+        "hds6": {
+          "hds6": 3.768,
+          "c": 3.89,
+          "e": 3.951,
+          "a": 3.823,
+          "s": 3.508,
+          "t": 3.704,
+          "r": 3.653
+        }
+      }
+    },
+    {
+      "bench": "frontierchallenge",
+      "model": "GPT-5.6 Terra",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "metrics": {
+        "pass": 15.5,
+        "passMedium": 39.1,
+        "passHard": 8.1,
+        "tasksPassed": 15,
+        "tasksTotal": 97,
+        "avgScore": 84.7,
+        "hds6": {
+          "hds6": 3.612,
+          "c": 3.818,
+          "e": 3.876,
+          "a": 3.413,
+          "s": 3.184,
+          "t": 3.582,
+          "r": 3.56
+        }
+      },
+      "effort": "max"
+    },
+    {
+      "bench": "frontierchallenge",
+      "model": "Qwen3.8 Max",
+      "vendor": "Alibaba",
+      "tool": "claude-code",
+      "metrics": {
+        "pass": 15.5,
+        "passMedium": 34.8,
+        "passHard": 9.5,
+        "tasksPassed": 15,
+        "tasksTotal": 97,
+        "hds6": {
+          "hds6": 3.624,
+          "c": 3.845,
+          "e": 3.842,
+          "a": 3.472,
+          "s": 3.186,
+          "t": 3.601,
+          "r": 3.607
+        }
+      }
+    },
+    {
+      "bench": "frontierchallenge",
+      "model": "DeepSeek V4 Pro 0813",
+      "vendor": "DeepSeek",
+      "tool": "claude-code",
+      "metrics": {
+        "pass": 13.4,
+        "passMedium": 30.4,
+        "passHard": 8.1,
+        "tasksPassed": 13,
+        "tasksTotal": 97,
+        "hds6": {
+          "hds6": 3.536,
+          "c": 3.787,
+          "e": 3.857,
+          "a": 3.367,
+          "s": 3.003,
+          "t": 3.536,
+          "r": 3.427
+        }
+      }
+    },
+    {
+      "bench": "frontierchallenge",
+      "model": "DeepSeek V4 Flash 0731",
+      "vendor": "DeepSeek",
+      "tool": "claude-code",
+      "metrics": {
+        "pass": 12.4,
+        "passMedium": 34.8,
+        "passHard": 5.4,
+        "tasksPassed": 12,
+        "tasksTotal": 97,
+        "hds6": {
+          "hds6": 3.506,
+          "c": 3.774,
+          "e": 3.767,
+          "a": 3.226,
+          "s": 3.056,
+          "t": 3.488,
+          "r": 3.434
+        }
+      }
+    },
+    {
+      "bench": "frontierchallenge",
+      "model": "Apodex 1.1",
+      "vendor": "Apodex",
+      "tool": "frontier-agent",
+      "metrics": {
+        "pass": 12.4,
+        "passMedium": 30.4,
+        "passHard": 6.8,
+        "tasksPassed": 12,
+        "tasksTotal": 97,
+        "avgScore": 74.5
+      }
+    },
+    {
+      "bench": "frontierchallenge",
+      "model": "Gemini 3.7 Flash",
+      "vendor": "Google",
+      "tool": "claude-code",
+      "metrics": {
+        "pass": 10.3,
+        "passMedium": 21.7,
+        "passHard": 6.8,
+        "tasksPassed": 10,
+        "tasksTotal": 97,
+        "hds6": {
+          "hds6": 3.016,
+          "c": 3.258,
+          "e": 3.451,
+          "a": 2.854,
+          "s": 2.438,
+          "t": 3.098,
+          "r": 2.499
+        }
+      }
+    },
+    {
+      "bench": "frontierchallenge",
+      "model": "Apodex 1.1",
+      "vendor": "Apodex",
+      "tool": "claude-code",
+      "metrics": {
+        "pass": 10.3,
+        "passMedium": 30.4,
+        "passHard": 4.1,
+        "tasksPassed": 10,
+        "tasksTotal": 97,
+        "avgScore": 71.8,
+        "hds6": {
+          "hds6": 3.293,
+          "c": 3.46,
+          "e": 3.544,
+          "a": 3.262,
+          "s": 2.853,
+          "t": 3.304,
+          "r": 3.3
+        }
+      }
+    },
+    {
+      "bench": "frontierchallenge",
+      "model": "Qwen3.5-397B-A17B",
+      "vendor": "Alibaba",
+      "tool": "claude-code",
+      "metrics": {
+        "pass": 4.1,
+        "passMedium": 13.0,
+        "passHard": 1.4,
+        "tasksPassed": 4,
+        "tasksTotal": 97,
+        "hds6": {
+          "hds6": 2.643,
+          "c": 2.822,
+          "e": 2.998,
+          "a": 2.341,
+          "s": 2.185,
+          "t": 2.683,
+          "r": 2.41
+        }
+      }
+    },
+    {
+      "bench": "frontierchallenge",
+      "model": "GLM-5.2",
+      "vendor": "Z.AI",
+      "tool": "claude-code",
+      "metrics": {
+        "pass": 3.1,
+        "passMedium": 4.3,
+        "passHard": 2.7,
+        "tasksPassed": 3,
+        "tasksTotal": 97,
+        "hds6": {
+          "hds6": 3.152,
+          "c": 3.302,
+          "e": 3.532,
+          "a": 3.176,
+          "s": 2.652,
+          "t": 3.232,
+          "r": 2.95
+        }
+      }
+    },
+    {
+      "bench": "labbench",
+      "model": "GPT-6 Astra",
+      "vendor": "OpenAI",
+      "metrics": {
+        "score": 40.8,
+        "ciLo": 34,
+        "ciHi": 48,
+        "medianMin": 5.0,
+        "skills": {
+          "methodReconstruction": 50,
+          "measurementSemantics": 56,
+          "evidentialStatus": 51,
+          "comparisonBaseline": 48,
+          "confoundsDataQuality": 37,
+          "scopeGeneralization": 48,
+          "quantitativeReading": 45,
+          "coreDecision": 52,
+          "evidenceIntegration": 47,
+          "experimentDesign": 3
+        }
+      }
+    },
+    {
+      "bench": "labbench",
+      "model": "Claude Opus 5.5",
+      "vendor": "Anthropic",
+      "metrics": {
+        "score": 40.5,
+        "ciLo": 33,
+        "ciHi": 49,
+        "medianMin": 34.6,
+        "skills": {
+          "methodReconstruction": 43,
+          "measurementSemantics": 44,
+          "evidentialStatus": 49,
+          "comparisonBaseline": 50,
+          "confoundsDataQuality": 52,
+          "scopeGeneralization": 52,
+          "quantitativeReading": 42,
+          "coreDecision": 43,
+          "evidenceIntegration": 53,
+          "experimentDesign": 9
+        }
+      }
+    },
+    {
+      "bench": "labbench",
+      "model": "Grok 4.7",
+      "vendor": "xAI",
+      "metrics": {
+        "score": 29.6,
+        "ciLo": 23,
+        "ciHi": 37,
+        "medianMin": 14.2,
+        "skills": {
+          "methodReconstruction": 38,
+          "measurementSemantics": 40,
+          "evidentialStatus": 44,
+          "comparisonBaseline": 32,
+          "confoundsDataQuality": 44,
+          "scopeGeneralization": 24,
+          "quantitativeReading": 40,
+          "coreDecision": 30,
+          "evidenceIntegration": 22,
+          "experimentDesign": 0
+        }
+      }
+    },
+    {
+      "bench": "labbench",
+      "model": "Muse Spark 1.3",
+      "vendor": "Meta",
+      "metrics": {
+        "score": 28.2,
+        "ciLo": 23,
+        "ciHi": 34,
+        "medianMin": 4.5,
+        "skills": {
+          "methodReconstruction": 33,
+          "measurementSemantics": 33,
+          "evidentialStatus": 39,
+          "comparisonBaseline": 35,
+          "confoundsDataQuality": 33,
+          "scopeGeneralization": 31,
+          "quantitativeReading": 31,
+          "coreDecision": 26,
+          "evidenceIntegration": 36,
+          "experimentDesign": 3
+        }
+      }
+    },
+    {
+      "bench": "labbench",
+      "model": "Gemini 3.8 Flash",
+      "vendor": "Google",
+      "metrics": {
+        "score": 18.4,
+        "ciLo": 13,
+        "ciHi": 24,
+        "medianMin": 13.3,
+        "skills": {
+          "methodReconstruction": 38,
+          "measurementSemantics": 28,
+          "evidentialStatus": 12,
+          "comparisonBaseline": 30,
+          "confoundsDataQuality": 15,
+          "scopeGeneralization": 21,
+          "quantitativeReading": 16,
+          "coreDecision": 17,
+          "evidenceIntegration": 11,
+          "experimentDesign": 3
+        }
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "GPT-6 Astra",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "max",
+      "metrics": {
+        "score": 68.1
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "Claude Opus 5.5",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "score": 63.3
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "Claude Fable 5.1",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "score": 40.0
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "Claude Opus 5",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "score": 30.0
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "GPT-5.6 Sol",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "max",
+      "metrics": {
+        "score": 22.4
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "Claude Fable 5",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "score": 21.4
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "DeepSeek V4.1 Flash 1017",
+      "vendor": "DeepSeek",
+      "tool": "openai-codex",
+      "effort": "max",
+      "metrics": {
+        "score": 15.7
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "Grok 4.7",
+      "vendor": "xAI",
+      "tool": "grok-build",
+      "effort": "xhigh",
+      "metrics": {
+        "score": 14.3
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "Gemini 3.8 Flash",
+      "vendor": "Google",
+      "tool": "mini-swe-agent",
+      "effort": "high",
+      "metrics": {
+        "score": 12.4
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "Claude Opus 4.8",
+      "vendor": "Anthropic",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "score": 10.5
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "GPT-5.6 Terra",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "max",
+      "metrics": {
+        "score": 8.6
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "GLM-5.3",
+      "vendor": "Z.AI",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "score": 8.1
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "Kimi K3",
+      "vendor": "Moonshot AI",
+      "tool": "claude-code",
+      "effort": "max",
+      "metrics": {
+        "score": 7.1
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "Grok 4.6",
+      "vendor": "xAI",
+      "tool": "grok-build",
+      "effort": "xhigh",
+      "metrics": {
+        "score": 7.1
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "Gemini 3.7 Flash",
+      "vendor": "Google",
+      "tool": "mini-swe-agent",
+      "effort": "high",
+      "metrics": {
+        "score": 5.7
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "DeepSeek V4 Pro 0813",
+      "vendor": "DeepSeek",
+      "tool": "openai-codex",
+      "effort": "max",
+      "metrics": {
+        "score": 3.8
+      }
+    },
+    {
+      "bench": "tbs",
+      "model": "GPT-5.6 Luna",
+      "vendor": "OpenAI",
+      "tool": "openai-codex",
+      "effort": "max",
+      "metrics": {
+        "score": 3.3
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "GPT-6 Astra",
+      "vendor": "OpenAI",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 62.86,
+        "tokensPerTestM": 5.94,
+        "durationMin": 109,
+        "costPerTestUSD": 20.8
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "GPT-6.1 Sol",
+      "vendor": "OpenAI",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 52.86,
+        "tokensPerTestM": 4.99,
+        "durationMin": 83,
+        "costPerTestUSD": 3.44
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Claude Opus 5.5",
+      "vendor": "Anthropic",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 47.14,
+        "tokensPerTestM": 26.38,
+        "durationMin": 148,
+        "costPerTestUSD": 19.12
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Claude Sonnet 5.5",
+      "vendor": "Anthropic",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 47.14,
+        "tokensPerTestM": 130.65,
+        "durationMin": 166,
+        "costPerTestUSD": 19.57
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Gemini 4 Argon",
+      "vendor": "Google",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 44.29,
+        "tokensPerTestM": 32.18,
+        "durationMin": 106,
+        "costPerTestUSD": 44.9
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Claude Fable 5.1",
+      "vendor": "Anthropic",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 40.0,
+        "tokensPerTestM": 20.34,
+        "durationMin": 156,
+        "costPerTestUSD": 38.01
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Muse Wonder Full",
+      "vendor": "Meta",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 37.14,
+        "tokensPerTestM": 53.29,
+        "durationMin": 215,
+        "costPerTestUSD": 22.81
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Kimi K3.1 Pro",
+      "vendor": "Moonshot AI",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 31.43,
+        "tokensPerTestM": 33.15,
+        "durationMin": 57.9,
+        "costPerTestUSD": 8.58
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "GPT-6 Sol",
+      "vendor": "OpenAI",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 30.0,
+        "tokensPerTestM": 15.94,
+        "durationMin": 82,
+        "costPerTestUSD": 5.82
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Claude Opus 5",
+      "vendor": "Anthropic",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 27.14,
+        "tokensPerTestM": 46.71,
+        "durationMin": 132,
+        "costPerTestUSD": 32.54
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Muse Wonder",
+      "vendor": "Meta",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 22.86,
+        "tokensPerTestM": 63.6,
+        "durationMin": 93,
+        "costPerTestUSD": 19.61
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "GPT-5.6 Sol",
+      "vendor": "OpenAI",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 20.0,
+        "tokensPerTestM": 9.55,
+        "durationMin": 104,
+        "costPerTestUSD": 7.32
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Claude Fable 5",
+      "vendor": "Anthropic",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 15.71,
+        "tokensPerTestM": 37.38,
+        "durationMin": 119,
+        "costPerTestUSD": 51.99
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Qwen3.8 Max",
+      "vendor": "Alibaba",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 12.86,
+        "tokensPerTestM": 55.24,
+        "durationMin": 204,
+        "costPerTestUSD": 16.68
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Grok 4.6",
+      "vendor": "xAI",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 11.43,
+        "tokensPerTestM": 7.53,
+        "durationMin": 78,
+        "costPerTestUSD": 4.82
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Muse Spark 1.3 Max",
+      "vendor": "Meta",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 10.0,
+        "tokensPerTestM": 28.83,
+        "durationMin": 84,
+        "costPerTestUSD": 6.09
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Grok 4.7",
+      "vendor": "xAI",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 10.0,
+        "tokensPerTestM": 16.72,
+        "durationMin": 93,
+        "costPerTestUSD": 17.04
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Claude Haiku 5.5",
+      "vendor": "Anthropic",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 10.0,
+        "tokensPerTestM": 71.3,
+        "durationMin": 94,
+        "costPerTestUSD": 4.52
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "GPT-5.6 Terra",
+      "vendor": "OpenAI",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 10.0,
+        "tokensPerTestM": 13.47,
+        "durationMin": 124,
+        "costPerTestUSD": 5.19
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Gemini 3.8 Flash",
+      "vendor": "Google",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 8.57,
+        "tokensPerTestM": 19.48,
+        "durationMin": 55.2,
+        "costPerTestUSD": 5.64
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Gemini 3.7 Flash",
+      "vendor": "Google",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 7.14,
+        "tokensPerTestM": 18.53,
+        "durationMin": 80,
+        "costPerTestUSD": 7.19
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Gemini 3.5 Flash",
+      "vendor": "Google",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 5.71,
+        "tokensPerTestM": 9.18,
+        "durationMin": 61,
+        "costPerTestUSD": 3.8
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "GLM-5.3",
+      "vendor": "Z.AI",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 5.71,
+        "tokensPerTestM": 53.01,
+        "durationMin": 165,
+        "costPerTestUSD": 15.63
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Claude Sonnet 5",
+      "vendor": "Anthropic",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 5.71,
+        "tokensPerTestM": 122.6,
+        "durationMin": 186,
+        "costPerTestUSD": 30.3
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Ember 1",
+      "vendor": "Fireworks AI",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 5.71,
+        "tokensPerTestM": 79.92,
+        "durationMin": 203,
+        "costPerTestUSD": 30.76
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Muse Spark 1.3",
+      "vendor": "Meta",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 4.29,
+        "tokensPerTestM": 20.98,
+        "durationMin": 68,
+        "costPerTestUSD": 4.41
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "GPT-6 Luna",
+      "vendor": "OpenAI",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 4.29,
+        "tokensPerTestM": 11.16,
+        "durationMin": 76,
+        "costPerTestUSD": 0.24
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "DeepSeek V4 Flash 0731",
+      "vendor": "DeepSeek",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 4.29,
+        "tokensPerTestM": 52.08,
+        "durationMin": 94,
+        "costPerTestUSD": 1.1
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Gemini 3.6 Flash",
+      "vendor": "Google",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 4.29,
+        "tokensPerTestM": 13.11,
+        "durationMin": 112,
+        "costPerTestUSD": 4.39
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Claude Opus 4.8",
+      "vendor": "Anthropic",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 4.29,
+        "tokensPerTestM": 26.14,
+        "durationMin": 115,
+        "costPerTestUSD": 23.14
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "DeepSeek V4 Pro 0813",
+      "vendor": "DeepSeek",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 4.29,
+        "tokensPerTestM": 82.01,
+        "durationMin": 136,
+        "costPerTestUSD": 4.63
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "MiMo V2.6 Flash",
+      "vendor": "Xiaomi",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 4.29,
+        "tokensPerTestM": 30.58,
+        "durationMin": 239,
+        "costPerTestUSD": 0.24
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Inkling 2 Small",
+      "vendor": "Thinking Machines",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 2.86,
+        "tokensPerTestM": 204.99,
+        "durationMin": 148,
+        "costPerTestUSD": 5.55
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Step 5 Preview",
+      "vendor": "StepFun",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 2.86,
+        "tokensPerTestM": 58.9,
+        "durationMin": 150,
+        "costPerTestUSD": 4.25
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "MiMo V2.6 Pro",
+      "vendor": "Xiaomi",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 2.86,
+        "tokensPerTestM": 40.53,
+        "durationMin": 192,
+        "costPerTestUSD": 0.62
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "GLM-5.3 Flash",
+      "vendor": "Z.AI",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 2.86,
+        "tokensPerTestM": 27.84,
+        "durationMin": 208,
+        "costPerTestUSD": 0.52
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Gemini 3.1 Pro Preview",
+      "vendor": "Google",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 1.43,
+        "tokensPerTestM": 12.32,
+        "durationMin": 44,
+        "costPerTestUSD": 5.91
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Beam 1.0",
+      "vendor": "Reflection",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 1.43,
+        "tokensPerTestM": 26.04,
+        "durationMin": 78
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Hy4 Preview",
+      "vendor": "Tencent",
+      "tool": "terminus-2",
+      "metrics": {
+        "score": 1.43,
+        "tokensPerTestM": 28.19,
+        "durationMin": 228,
+        "costPerTestUSD": 2.14
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Kimi K3",
+      "vendor": "Moonshot AI",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 1.43,
+        "tokensPerTestM": 50.69,
+        "durationMin": 289,
+        "costPerTestUSD": 21.3
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Mercury 2.5",
+      "vendor": "Inception",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 0.0,
+        "tokensPerTestM": 3.71,
+        "durationMin": 28.2,
+        "costPerTestUSD": 0.18
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "GPT-5.6 Luna",
+      "vendor": "OpenAI",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 0.0,
+        "tokensPerTestM": 16.24,
+        "durationMin": 123,
+        "costPerTestUSD": 0.58
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "DeepSeek V4.1 Flash",
+      "vendor": "DeepSeek",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 0.0,
+        "tokensPerTestM": 25.46,
+        "durationMin": 177,
+        "costPerTestUSD": 0.47
+      }
+    },
+    {
+      "bench": "tbsvals",
+      "model": "Qwen3.8 27B",
+      "vendor": "Alibaba",
+      "tool": "mini-swe-agent",
+      "metrics": {
+        "score": 0.0,
+        "tokensPerTestM": 140.97,
+        "durationMin": 242,
+        "costPerTestUSD": 11.14
+      }
+    }
+  ]
+}
