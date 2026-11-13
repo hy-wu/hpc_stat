@@ -1,0 +1,135 @@
+---
+import Base from "../layouts/Base.astro";
+import InsightGrid from "../components/workbench/InsightGrid.astro";
+import TablePanel from "../components/workbench/TablePanel.astro";
+---
+
+<Base title="国内订阅对比" active="subscriptions">
+  <div class="filter-card">
+    <section class="control-band">
+      <div class="search-block">
+        <label for="globalSearch">搜索订阅</label>
+        <input id="globalSearch" type="search" placeholder="产品、厂商、档位、模型、额度口径、备注..." />
+      </div>
+      <div class="control">
+        <label for="categoryFilter">类别</label>
+        <select id="categoryFilter"></select>
+      </div>
+      <div class="control">
+        <label for="vendorFilter">厂商</label>
+        <select id="vendorFilter"></select>
+      </div>
+      <div class="control">
+        <label for="billingFilter">计费方式</label>
+        <select id="billingFilter"></select>
+      </div>
+      <div class="control">
+        <label for="familyFilter">模型家族</label>
+        <select id="familyFilter"></select>
+      </div>
+      <div class="control">
+        <label for="verifiedFilter">核实状态</label>
+        <select id="verifiedFilter"></select>
+      </div>
+      <div class="control">
+        <label for="sortField">排序字段</label>
+        <select id="sortField"></select>
+      </div>
+      <button class="ghost-button" id="sortDirectionButton" type="button">升序</button>
+      <button class="ghost-button" id="resetFiltersButton" type="button">重置</button>
+    </section>
+    <section class="filters-panel-inner">
+      <div class="panel-head">
+        <h2>字段筛选</h2>
+        <button class="text-button" id="addRuleButton" type="button">添加条件</button>
+      </div>
+      <div id="filterRules" class="rules"></div>
+    </section>
+  </div>
+
+  <InsightGrid metrics={[
+    { id: "visibleCount", label: "筛选套餐档" },
+    { id: "freeCount", label: "含免费项" },
+    { id: "vendorCount", label: "覆盖厂商" },
+    { id: "familyCount", label: "模型家族" },
+  ]} />
+
+  <TablePanel
+    title="订阅/按量明细表"
+    pickerLabel="列设置"
+  >
+    <span slot="legend" class="preset-hint">
+      覆盖：C 端助手会员、编程 Agent 订阅、API/模型平台、GPU 算力租赁 · 月价为连续包月或折算价 · 数据核实至 2026-11-13，各家改版频繁，下单以官网为准
+    </span>
+  </TablePanel>
+
+  <section class="table-panel">
+    <div class="panel-head">
+      <h2>模型家族 × 套餐覆盖矩阵</h2>
+      <div class="table-tools">
+        <span class="preset-hint">✓ 已确认 · ◐ 待核实 · 算力租赁类不参与</span>
+      </div>
+    </div>
+    <div class="chart-summary" id="matrixSummary"></div>
+    <div class="heat-wrap">
+      <table id="heatTable">
+        <thead id="familyMatrixHead"></thead>
+        <tbody id="familyMatrixBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="table-panel">
+    <div class="panel-head">
+      <h2>月价 × 额度 散点（log-log）</h2>
+      <div class="table-tools">
+        <select id="quotaMetricSelect" style="width:auto">
+          <option value="qMonth" selected>额度/月≈</option>
+          <option value="qWeek">额度/周</option>
+          <option value="q5h">额度/5小时</option>
+        </select>
+      </div>
+    </div>
+    <div class="chart-summary" id="subChartSummary"></div>
+    <section class="chart-container" aria-label="订阅价格与额度散点图">
+      <div class="chart-canvas-wrap">
+        <canvas id="subChartCanvas" role="img" aria-label="订阅套餐月价与额度散点图"></canvas>
+      </div>
+    </section>
+  </section>
+
+  <div data-flat-page="subscriptions"></div>
+  <script>
+    import "../islands/FlatTable";
+    import "../islands/Subscriptions";
+  </script>
+
+  <style is:global>
+    #heatTable .fam-cat-row td {
+      background: var(--panel);
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--ink);
+      padding: 4px 8px;
+    }
+    #heatTable td.fam-tier {
+      min-width: 110px;
+      font-weight: 400;
+    }
+    #heatTable .fam-price {
+      display: block;
+      font-size: 10px;
+      color: var(--muted);
+      font-weight: 400;
+    }
+    #heatTable td.fam-yes {
+      background: rgba(39, 174, 96, 0.22);
+      color: #1e8e4f;
+      font-weight: 700;
+    }
+    #heatTable td.fam-guess {
+      background: rgba(242, 153, 74, 0.18);
+      color: #c9762a;
+    }
+  </style>
+</Base>

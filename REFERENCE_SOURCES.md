@@ -107,6 +107,30 @@ This document contains official links to LLM benchmark suites, leaderboards, and
 | **Qwen3.8-Flash（托管版）** | [Qwen Cloud 模型页](https://www.qwencloud.com/models/qwen3.8-flash) | 本环境未能直接核验；「托管版基于 Flash-Next 权重 + 1M 默认上下文 + 内置工具」的表述取自上方 ModelScope 模型卡 |
 | Hugging Face 侧权重页 | `https://huggingface.co/Qwen/Qwen3.8-Flash-Next` | 本机 curl 与内置浏览器均不可达（SSL_ERROR_SYSCALL / ERR_PROXY_CONNECTION_FAILED）；仅通过 hf-mirror 检索 API 确认仓库存在（下载量 846,820） |
 
+## 🇨🇳 国内订阅与算力价格（subscriptions.json）
+
+`data/subscriptions.json` 收录国内 C 端助手会员、编程 Agent 订阅、API/模型平台、GPU 算力租赁四大类套餐的价格、额度口径与模型覆盖。逐行 `source`/`asOf`/`verified` 字段为权威依据，下表为各来源的批量核验备注。
+
+| 类别 | 主要来源 | 核验情况 |
+| :--- | :--- | :--- |
+| 豆包专业版（68/200/500 档、7 天额度） | [App Store 价目整理](https://aistacknav.com/doubao-pro-membership-price-guide/)、[IT之家签到额度](https://www.ithome.com/1/020/224.htm) | 2026-10-30 已核验（第三方） |
+| Kimi 会员（Go/Plus/Pro/Max/Ultra） | [Kimi 帮助中心·套餐价格](https://www.kimi.com/help/membership/membership-pricing) | 2026-10-19 官方页面截图口径 |
+| 千问 App 办公助理会员 | [潮新闻](https://tidenews.com.cn/news.html?id=3526741)、[IT之家双11活动](https://www.ithome.com/1/025/610.htm) | 2026-11-11 已核验（媒体） |
+| GLM Coding Plan（积分制 V3） | [官方套餐概览](https://docs.bigmodel.cn/cn/coding-plan/overview)、[订阅页](https://www.bigmodel.cn/glm-coding?plantype=personal) | 2026-10-13 官方已核验 |
+| Trae CN / Trae 国际版 | [trae.cn/pricing](https://www.trae.cn/pricing)、[docs.trae.ai](https://docs.trae.ai/ide/new-plans-and-billing?_lang=zh) | 2026-11 官方已核验 |
+| Qoder CN（原通义灵码） | [计费说明](https://docs.qoder.cn/product-overview/billing-description) | 2026-11 官方已核验 |
+| 文心快码 Comate | [百度智能云产品定价](https://cloud.baidu.com/doc/COMATE/s/rlnvnio4a) | 2026-11-11 官方已核验 |
+| CodeBuddy（Buddy AI） | [codebuddy.cn/pricing](https://www.codebuddy.cn/pricing/)、[定价文档](https://www.codebuddy.cn/docs/ide/Account/pricing) | 2026-07-01 新版订阅官方已核验 |
+| MiniMax M Plan / Agent | [minimax.io/m-plan](https://www.minimax.io/m-plan)、[官方公告](https://www.minimax.cn/news/mini-pricemax-performance%E5%85%B3%E4%BA%8Eapi%E7%BC%96%E7%A8%8B%E5%A5%97%E9%A4%90%E5%92%8Cagent) | 2026-10-19 官方已核验；Agent 价为 2025-11 公告 |
+| 百炼 Coding Plan / Token Plan | [Coding Plan 概述](https://docs.bailian.console.aliyun.com/zh/model-studio/coding-plan)、[Token Plan 个人版](https://help.aliyun.com/zh/model-studio/token-plan-personal-overview) | 2026-11-09 官方已核验（当日降价/额度上调） |
+| 千帆 Token Plan（编程） | [千帆产品页](https://cloud.baidu.com/product/qianfan.html) | 2026-11 官方已核验 |
+| 讯飞星火（编程版/星辰 MaaS/Token Plan） | [CreditsPlan 讯飞星火](https://creditsplan.cn/brands/iflytek-spark/)、[星火定价页](https://xinghuo.xfyun.cn/pricing) | 2026-10-29 第三方已核验（额度细节待补） |
+| DeepSeek API（峰谷价） | [官方定价](https://api-docs.deepseek.com/zh-cn/quick_start/pricing.md) | 2026-11-13 官方已核验 |
+| 硅基流动 / 火山方舟 / 智谱开放平台 / Kimi 开放平台 / 百度千帆 | 各自官方定价页（见逐行 source） | 2026-10 ~ 2026-11 官方已核验 |
+| GPU 算力租赁时价 | [GPU算力雷达（国内 13 平台实时比价）](https://rentgpu.link/china)、[GPU价网](https://gpuprice.cn/)、各平台官网 | 2026-11-13 实时抓取价；标「参考价」的挂单待核实 |
+| 免费/无会员确认：文小言、腾讯元宝、DeepSeek、清言/AutoGLM | 新浪/AI Stack Nav 等 | 2025-04 ~ 2026-10 已核验（媒体/官方） |
+| 待核实项：小米 MiMo 四档、智谱清言会员档、讯飞 Token Plan 额度、混元 API | 单一二手来源 | 标记 `verified: 待核`，以 App 内/控制台为准 |
+
 ## 🗓 数据快照时间线
 
 | 数据集 | 快照日期 | 说明 |
@@ -115,6 +139,7 @@ This document contains official links to LLM benchmark suites, leaderboards, and
 | `data/models.json` 增量新模型 | 2026-09-26（+64 条，合计 231 条） | 前 63 条取 `https://openrouter.ai/api/v1/models` 当日快照，按 `created >= 2026-08-01` 且 id 未收录筛选；`:batch`/`:free` 档位折进 `notes` 不单独成行，`~*-latest` 滚动别名跳过，仅有 `:free` 档的模型（LFM2.5-2.6B、Dots3-Note Preview、Ling 3.0 Flash Sante）保留并标注。仅核验厂商/名称/模态/上下文/OpenRouter 单价；参数与 Arena Elo 未补。第 64 条 `qwen/qwen3.8-flash-next` 为人工 curated 行（同步写入 `data/model-overrides.json`），来源见上方「开源权重与架构来源」；该模型不在 OpenRouter 上架，脚本会报预期内的 `missingCatalogChecks` 警告，非数据错误 |
 | `data/models.json` Arena Elo | 2026-08-01（arena.ai 文本榜全量快照，386 个模型） | arena.ai 已改为 SSR 表格，脚本 `extract_arena_elo_data` 可直接解析（优先读 `.cache/model-sources/arena_text_leaderboard.json` 浏览器快照）；xhigh/max/high 等模式变体经 `ARENA_ELO_ALIASES` 映射到 API 基础模型；仅 gpt-5.1-codex-mini 仍为 2026-05-21 旧值（已下榜，记录中带警示备注） |
 | `data/agent-tools.json` 工具数据 | 2026-08-06：新增 Google Antigravity、腾讯 WorkBuddy；移除通义灵码（2026-05-20 升级为 Qoder CN），Qoder 更新为国产多模型支持；其余核验于 2026-08-06 / 2026-05-19 | 套餐价格随计划变化，使用前请抽查官方页；Windsurf 已并入 Cognition/Devin 统一订阅体系 |
+| `data/subscriptions.json` 国内订阅 | 2026-11-13（90 档 / 4 类 / 28 厂商） | 新收录：C 端助手、编程订阅、API 平台、算力租赁；各行带 source/asOf/verified，详见上方「国内订阅与算力价格」 |
 | `data/gpus.json` / `data/prices.json` GPU 价格 | 2026-08-05 新增 5 条（RTX 5060/RX 9060 XT/M4 Ultra/B300/MI325X）；其余为 2026-04~2026-05 人工报价快照 | 新增 GPU 价格为 MSRP，二手/市场价需另行更新 |
 | GitHub Stars | 2026-08-06 | 见上方 Agent Coding Tools 备注 |
 

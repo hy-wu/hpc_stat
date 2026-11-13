@@ -168,6 +168,7 @@ function getPageConfig(pageId: string): FlatPageConfig {
     case "gpu": return gpuConfig();
     case "models": return modelsConfig();
     case "agent-tools": return agentToolsConfig();
+    case "subscriptions": return subscriptionsConfig();
     default: throw new Error(`Unknown flat page: ${pageId}`);
   }
 }
@@ -682,6 +683,50 @@ function agentToolsConfig(): FlatPageConfig {
       const logoHtml = renderCompanyMark(logoUrl);
       return `<span class="tool-name-cell ${cls}" title="${verified ? escapeAttr(sourceTitle) : "未核验"}">${logoHtml}${escapeHtml(getValueAsText(val))}</span>`;
     },
+  };
+}
+
+function subscriptionsConfig(): FlatPageConfig {
+  return {
+    pageId: "subscriptions",
+    dataUrl: dataUrl("subscriptions.json"),
+    fieldsUrl: dataUrl("subscription-fields.json"),
+    ruleEngineOptions: { invalidNumberBehavior: "reject", booleanSupport: true },
+    defaultSortField: "category",
+    defaultSortDirection: "asc",
+    filters: [
+      { selectId: "categoryFilter", key: "category", allLabel: "全部类别" },
+      { selectId: "vendorFilter", key: "vendor", allLabel: "全部厂商" },
+      { selectId: "billingFilter", key: "billing", allLabel: "全部计费", flatArrays: true },
+      { selectId: "familyFilter", key: "families", allLabel: "全部模型家族", flatArrays: true },
+      { selectId: "verifiedFilter", key: "verified", allLabel: "全部核实状态" },
+    ],
+    summaryMetrics: [
+      { id: "visibleCount", compute: (rows) => String(rows.length) },
+      {
+        id: "freeCount",
+        compute: (rows) => String(rows.filter((r) => {
+          const b = r.billing;
+          return Array.isArray(b) && (b as unknown[]).includes("免费");
+        }).length),
+      },
+      {
+        id: "vendorCount",
+        compute: (rows) => String(new Set(rows.map((r) => String(r.vendor ?? ""))).size),
+      },
+      {
+        id: "familyCount",
+        compute: (rows) => {
+          const set = new Set<string>();
+          for (const r of rows) {
+            for (const f of [r.families, r.familiesGuess]) {
+              if (Array.isArray(f)) for (const v of f as unknown[]) set.add(String(v));
+            }
+          }
+          return String(set.size);
+        },
+      },
+    ],
   };
 }
 
