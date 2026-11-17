@@ -1,407 +1,220 @@
-/**
- * Client-side island: 订阅对比页附加可视化
- * 1) 模型家族 × 套餐 覆盖矩阵
- * 2) 月价 × 额度 散点图（Chart.js, log-log）
- */
-
-import { Chart, registerables } from "chart.js";
-import { dataUrl } from "../lib/data-url";
+import { Chart, registerables, type ChartDataset, type Plugin } from "chart.js";
 import { escapeHtml, escapeAttr } from "../lib/escape";
+import {
+  groupCoverage, productKey, SUBSCRIPTION_FAMILIES as FAMILIES, type Subscription, type SubscriptionSelection,
+} from "../lib/subscriptions";
 
 Chart.register(...registerables);
 
-interface SubRow {
-  id: string;
-  category: string;
-  vendor: string;
-  product: string;
-  tier: string;
-  priceText: string;
-  monthlyCny: number | null;
-  hourlyCny?: number | null;
-  billing?: string[];
-  quotaText?: string;
-  q5h?: number | null;
-  qWeek?: number | null;
-  qMonth?: number | null;
-  quotaUnit?: string;
-  families?: string[];
-  familiesGuess?: string[];
-  modelCount?: number;
-  models?: string;
-  perks?: string;
-  verified?: string;
-  asOf?: string;
-  source?: string;
-  notes?: string;
+const CATEGORIES = ["C端助手", "编程订阅", "API平台"];
+const METRICS = { qMonth: "额度/月≈", qWeek: "额度/周", q5h: "额度/5小时" };
+type Metric = keyof typeof METRICS;
+type Point = { x: number; y: number; row: Subscription };
+type PlanDataset = ChartDataset<"scatter", Point[]> & { productId: string };
+
+let rows: Subscription[] = [];
+let chart: Chart<"scatter", Point[]> | null = null;
+const hiddenProducts = new Set<string>();
+const productColors = new Map<string, string>();
+const COLORS = ["#3289c7", "#d16d32", "#32a377", "#c24b7d", "#a49324", "#7968c7", "#bf4a40",
+  "#288f98", "#b47d25", "#5375bb", "#9a62a6", "#638c36", "#cc6780", "#597f83", "#997456", "#8f733d"];
+let labelMode = "auto";
+
+function q<T extends HTMLElement = HTMLElement>(id: string): T {
+  return document.getElementById(id) as T;
 }
 
-const FAMILY_ORDER: Array<{ key: string; label: string }> = [
-  { key: "doubao", label: "豆包·Seed" },
-  { key: "qwen", label: "千问 Qwen" },
-  { key: "glm", label: "GLM 智谱" },
-  { key: "kimi", label: "Kimi" },
-  { key: "deepseek", label: "DeepSeek" },
-  { key: "minimax", label: "MiniMax" },
-  { key: "ernie", label: "文心 ERNIE" },
-  { key: "hunyuan", label: "混元" },
-  { key: "spark", label: "星火" },
-  { key: "skywork", label: "天工" },
-  { key: "mimo", label: "MiMo" },
-  { key: "claude", label: "Claude" },
-  { key: "gpt", label: "GPT" },
-  { key: "gemini", label: "Gemini" },
-  { key: "thirdparty", label: "第三方聚合" },
-  { key: "auto", label: "Auto 路由" },
-];
-
-const CATEGORY_ORDER = ["C端助手", "编程订阅", "API平台"];
-const CATEGORY_COLORS: Record<string, string> = {
-  "C端助手": "#2f80ed",
-  "编程订阅": "#27ae60",
-  "API平台": "#f2994a",
-  "算力租赁": "#9b51e0",
-};
-
-const QUOTA_METRICS = [
-  { key: "qMonth", label: "额度/月≈" },
-  { key: "qWeek", label: "额度/周" },
-  { key: "q5h", label: "额度/5小时" },
-] as const;
-
-let rows: SubRow[] = [];
-let chart: Chart | null = null;
-
-function q<T extends HTMLElement>(id: string): T | null {
-  return document.getElementById(id) as T | null;
-}
-
-async function load(): Promise<void> {
-  const res = await fetch(dataUrl("subscriptions.json"));
-  rows = (await res.json()) as SubRow[];
-  renderMatrix();
-  renderChart();
-  bindControls();
-}
-
-// ── 模型家族 × 套餐覆盖矩阵 ──
-interface MatrixRow {
-  product: string;
-  vendor: string;
-  tiers: SubRow[];
-  tierLabel: string;
-  priceLabel: string;
-  families: Set<string>;
-  familiesGuess: Set<string>;
-}
-
-function coverageSignature(r: SubRow): string {
-  return [...(r.families ?? [])].sort().join(",") + "|" + [...(r.familiesGuess ?? [])].sort().join(",");
-}
-
-function priceRangeLabel(tiers: SubRow[]): string {
-  const prices = tiers
-    .map((t) => t.monthlyCny)
-    .filter((v): v is number => typeof v === "number");
-  if (prices.length >= 2) {
+function priceLabel(tiers: Subscription[]): string {
+  const prices = tiers.map((t) => t.monthlyCny);
+  if (prices.every((v): v is number => typeof v === "number" && Number.isFinite(v))) {
     const min = Math.min(...prices);
     const max = Math.max(...prices);
-    if (min === max) return `¥${min}/月`;
-    return `¥${min}–¥${max}/月`;
+    return min === max ? (min === 0 ? "免费" : `¥${min}/月`) : `¥${min}–${max}/月`;
   }
-  const texts = [...new Set(tiers.map((t) => t.priceText))];
-  return texts.join(" / ");
+  return [...new Set(tiers.map((t) => t.priceText))].join(" / ");
 }
-
-/** 同产品且覆盖签名完全一致的档位合并为一行 */
-function collapseRows(catRows: SubRow[]): MatrixRow[] {
-  const byProduct = new Map<string, SubRow[]>();
-  for (const r of catRows) {
-    const key = `${r.vendor}::${r.product}`;
-    const list = byProduct.get(key) ?? [];
-    list.push(r);
-    byProduct.set(key, list);
-  }
-  const merged: MatrixRow[] = [];
-  for (const productRows of byProduct.values()) {
-    const bySig = new Map<string, SubRow[]>();
-    for (const r of productRows) {
-      const sig = coverageSignature(r);
-      const list = bySig.get(sig) ?? [];
-      list.push(r);
-      bySig.set(sig, list);
-    }
-    for (const tiers of bySig.values()) {
-      const first = tiers[0];
-      merged.push({
-        product: first.product,
-        vendor: first.vendor,
-        tiers,
-        tierLabel: tiers.map((t) => t.tier).join(" / "),
-        priceLabel: priceRangeLabel(tiers),
-        families: new Set(first.families ?? []),
-        familiesGuess: new Set(first.familiesGuess ?? []),
-      });
-    }
-  }
-  return merged;
-}
-
-let mergeSameCoverage = true;
 
 function renderMatrix(): void {
-  const tbody = q("familyMatrixBody");
-  const summary = q("matrixSummary");
-  if (!tbody) return;
-
-  const plans = rows.filter(
-    (r) =>
-      r.category !== "算力租赁" &&
-      ((r.families && r.families.length > 0) || (r.familiesGuess && r.familiesGuess.length > 0)),
-  );
-
-  // 只保留实际被引用的家族列
-  const usedFamilies = new Set<string>();
-  for (const r of plans) {
-    (r.families ?? []).forEach((f) => usedFamilies.add(f));
-    (r.familiesGuess ?? []).forEach((f) => usedFamilies.add(f));
-  }
-  const cols = FAMILY_ORDER.filter((f) => usedFamilies.has(f.key));
-
-  // 表头
-  const thead = q("familyMatrixHead");
-  if (thead) {
-    thead.innerHTML = `<tr>
-      <th class="heat-model-col">套餐（按类别分组）</th>
-      <th>档位</th>
-      ${cols.map((c) => `<th class="heat-bench-col"><span>${escapeHtml(c.label)}</span></th>`).join("")}
-    </tr>`;
-  }
-
+  const plans = rows.filter((r) => r.category !== "算力租赁" &&
+    ((r.families?.length ?? 0) + (r.familiesGuess?.length ?? 0) > 0));
+  const used = new Set(plans.flatMap((r) => [...(r.families ?? []), ...(r.familiesGuess ?? [])]));
+  const cols = FAMILIES.filter(([key]) => used.has(key));
+  q("heatTable").style.setProperty("--family-count", String(cols.length));
+  q("familyMatrixHead").innerHTML = `<tr>
+    <th scope="col" class="heat-model-col">产品 / 厂商</th><th scope="col">档位与月价</th>
+    ${cols.map(([, name]) => `<th scope="col" class="heat-bench-col"><span>${escapeHtml(name)}</span></th>`).join("")}
+  </tr>`;
+  let count = 0;
   let html = "";
-  let rowCount = 0;
-  let mergedCount = 0;
-  for (const cat of CATEGORY_ORDER) {
-    const catRows = plans.filter((r) => r.category === cat);
-    if (!catRows.length) continue;
-    const display = mergeSameCoverage ? collapseRows(catRows) : catRows.map((r) => ({
-      product: r.product,
-      vendor: r.vendor,
-      tiers: [r],
-      tierLabel: r.tier,
-      priceLabel: r.priceText,
-      families: new Set(r.families ?? []),
-      familiesGuess: new Set(r.familiesGuess ?? []),
-    }));
-    mergedCount += catRows.length - display.length;
-    rowCount += display.length;
-    html += `<tr class="fam-cat-row"><td colspan="${2 + cols.length}">${escapeHtml(cat)} · ${display.length} 行 / ${catRows.length} 档</td></tr>`;
-    for (const m of display) {
-      const cells = cols.map((c) => {
-        const title = `${m.product} ${m.tierLabel} · ${c.label}`;
-        if (m.families.has(c.key)) {
-          return `<td class="heat-cell fam-yes" title="${escapeAttr(title)}">✓</td>`;
-        }
-        if (m.familiesGuess.has(c.key)) {
-          return `<td class="heat-cell fam-guess" title="${escapeAttr(title + "（待核实）")}">◐</td>`;
-        }
-        return `<td class="heat-cell fam-no"></td>`;
-      });
-      const mergedTip = m.tiers.length > 1 ? ` title="${escapeAttr(m.tiers.map((t) => `${t.tier}：${t.priceText}`).join("；"))}"` : "";
+  for (const category of CATEGORIES) {
+    const subset = plans.filter((r) => r.category === category);
+    if (!subset.length) continue;
+    const groups = q<HTMLInputElement>("mergeCoverageToggle").checked
+      ? groupCoverage(subset) : subset.map((r) => [r]);
+    count += groups.length;
+    html += `<tr class="fam-cat-row"><th scope="rowgroup" colspan="${cols.length + 2}">${escapeHtml(category)}
+      <span>${groups.length} 行 / ${subset.length} 档</span></th></tr>`;
+    for (const tiers of groups) {
+      const first = tiers[0];
+      const tierContent = tiers.length > 1
+        ? `<details class="tier-details"><summary>${tiers.length} 档 · ${escapeHtml(priceLabel(tiers))}</summary>
+            <ul>${tiers.map((t) => `<li><span>${escapeHtml(t.tier)}</span><span>${escapeHtml(t.priceText)}</span></li>`).join("")}</ul></details>`
+        : `<span>${escapeHtml(first.tier)}</span><small>${escapeHtml(first.priceText)}</small>`;
       html += `<tr>
-        <td class="heat-model-col" title="${escapeAttr(m.vendor)}">${escapeHtml(m.product)}</td>
-        <td class="fam-tier"${mergedTip}>${escapeHtml(m.tierLabel)}<span class="fam-price">${escapeHtml(m.priceLabel)}</span></td>
-        ${cells.join("")}
+        <th scope="row" class="heat-model-col">${escapeHtml(first.product)}<small>${escapeHtml(first.vendor)}</small></th>
+        <td class="fam-tier">${tierContent}</td>
+        ${cols.map(([key, name]) => {
+          const state = first.families?.includes(key) ? "yes" : first.familiesGuess?.includes(key) ? "guess" : "no";
+          const text = state === "yes" ? "已确认覆盖" : state === "guess" ? "待核实" : "未收录覆盖";
+          return `<td class="heat-cell fam-${state}" title="${escapeAttr(`${first.product} · ${name}：${text}`)}"
+            aria-label="${escapeAttr(`${name}：${text}`)}">${state === "yes" ? "✓" : state === "guess" ? "◐" : "·"}</td>`;
+        }).join("")}
       </tr>`;
     }
   }
-  tbody.innerHTML = html;
-
-  if (summary) {
-    const multi = plans.filter((r) => ((r.families ?? []).length + (r.familiesGuess ?? []).length) >= 3);
-    const top = multi
-      .sort((a, b) => ((b.families ?? []).length + (b.familiesGuess ?? []).length) - ((a.families ?? []).length + (a.familiesGuess ?? []).length))
-      .slice(0, 3)
-      .map((r) => `${r.product}·${r.tier}`);
-    const mergeNote = mergeSameCoverage && mergedCount > 0 ? ` · 已缩并 ${mergedCount} 档同覆盖档位` : "";
-    summary.innerHTML = `✓ 已确认覆盖　◐ 待核实　·　多模型覆盖最广：${top.map(escapeHtml).join("、")}${mergeNote}`;
-  }
+  q("familyMatrixBody").innerHTML = html ||
+    `<tr><td colspan="${cols.length + 2}" class="empty-state">当前筛选没有可展示的模型覆盖。算力租赁请查看明细表。</td></tr>`;
+  q("matrixSummary").textContent = `${plans.length} 档套餐 → ${count} 行覆盖组合 · ${cols.length} 个模型家族 · 同产品、同覆盖的档位合并，点击档数查看价格`;
 }
 
-// ── 月价 × 额度散点图 ──
-interface PlotPoint {
-  x: number;
-  y: number;
-  row: SubRow;
+// Stable product colors keep line, points and legend in sync across all filters.
+function productColor(id: string): string {
+  return productColors.get(id) ?? COLORS[0];
 }
 
-interface PointDataset {
-  label: string;
-  data: Array<{ x: number; y: number }>;
-  backgroundColor: string;
-  borderColor: string;
-  borderWidth: number;
-  pointRadius: number;
-  pointHoverRadius: number;
-  _rows: PlotPoint[];
+function shortName(name: string): string {
+  return name.replace(/（[^）]*）/g, "").replace(" App 办公助理会员", "").trim();
 }
 
-function hexAlpha(hex: string, alpha: number): string {
-  const m = hex.match(/^#([0-9a-f]{6})$/i);
-  if (!m) return hex;
-  const v = parseInt(m[1], 16);
-  return `rgba(${(v >> 16) & 255},${(v >> 8) & 255},${v & 255},${alpha})`;
-}
-
-/** 在点上绘制「产品·档位」标签，贪心避让已占用区域 */
-let chartSummaryBase = "";
-
-const planLabelPlugin = {
-  id: "planLabels",
-  afterDatasetsDraw(c: Chart) {
-    const ctx = c.ctx;
-    const area = c.chartArea;
+const labelsPlugin: Plugin<"scatter"> = {
+  id: "subscriptionLabels",
+  afterDatasetsDraw(c) {
+    const { ctx, chartArea: area } = c;
+    const mode = labelMode === "auto" ? (c.width < 600 ? "products" : "tiers") : labelMode;
+    const ink = getComputedStyle(document.documentElement).getPropertyValue("--ink").trim();
+    const paper = getComputedStyle(document.documentElement).getPropertyValue("--panel").trim();
+    const occupied: Array<{ x: number; y: number; w: number; h: number }> = [];
+    const points = c.data.datasets.flatMap((_, i) => c.isDatasetVisible(i)
+      ? c.getDatasetMeta(i).data.map((el) => ({ x: el.x, y: el.y })) : []);
+    let skipped = 0;
     ctx.save();
-    ctx.font = "10px system-ui, sans-serif";
+    ctx.font = "11px 'PingFang SC', 'Microsoft YaHei', sans-serif";
     ctx.textBaseline = "middle";
-    const ink = getComputedStyle(document.documentElement).getPropertyValue("--ink").trim() || "#333";
-    const occupied: Array<[number, number, number, number]> = [];
-    let skippedLabels = 0;
-
     c.data.datasets.forEach((ds, di) => {
-      const rowsOfDs = (ds as unknown as PointDataset)._rows;
-      if (!rowsOfDs) return;
+      if (!c.isDatasetVisible(di) || mode === "none") return;
       const meta = c.getDatasetMeta(di);
-      if (meta.hidden) return;
-      meta.data.forEach((el, ei) => {
-        const p = rowsOfDs[ei];
-        if (!p) return;
-        const { x: px, y: py } = el as unknown as { x: number; y: number };
-        const label = `${p.row.product} ${p.row.tier}`;
-        const w = ctx.measureText(label).width;
-        const candidates: Array<[number, number]> = [
-          [px + 8, py - 7],
-          [px + 8, py + 7],
-          [px - w - 8, py - 7],
-          [px - w - 8, py + 7],
-        ];
-        for (const [lx, ly] of candidates) {
-          const x1 = lx;
-          const y1 = ly - 6;
-          const x2 = lx + w;
-          const y2 = ly + 6;
-          if (x1 < area.left || x2 > area.right || y1 < area.top || y2 > area.bottom) continue;
-          if (occupied.some(([a1, b1, a2, b2]) => !(x2 < a1 || x1 > a2 || y2 < b1 || y1 > b2))) continue;
-          ctx.fillStyle = ink;
-          ctx.fillText(label, lx, ly);
-          occupied.push([x1, y1, x2, y2]);
+      meta.data.forEach((el, pi) => {
+        if (mode === "products" && pi !== ds.data.length - 1) return;
+        const point = ds.data[pi] as Point;
+        const text = pi === ds.data.length - 1
+          ? `${shortName(point.row.product)}${mode === "tiers" ? ` · ${point.row.tier}` : ""}`
+          : point.row.tier;
+        const w = ctx.measureText(text).width + 8;
+        const h = 17;
+        const { x, y } = el;
+        const offsets = [[9, -22], [9, 6], [-w - 9, -22], [-w - 9, 6], [-w / 2, -32], [-w / 2, 15]];
+        for (const [dx, dy] of offsets) {
+          const box = { x: x + dx, y: y + dy, w, h };
+          if (box.x < area.left || box.x + w > area.right || box.y < area.top || box.y + h > area.bottom) continue;
+          if (occupied.some((b) => box.x < b.x + b.w + 3 && box.x + w + 3 > b.x &&
+            box.y < b.y + b.h + 2 && box.y + h + 2 > b.y)) continue;
+          if (points.some((p) => p.x + 5 > box.x && p.x - 5 < box.x + w &&
+            p.y + 5 > box.y && p.y - 5 < box.y + h)) continue;
+          ctx.fillStyle = paper || "#fff";
+          ctx.globalAlpha = 0.92;
+          ctx.fillRect(box.x, box.y, w, h);
+          ctx.globalAlpha = 1;
+          ctx.fillStyle = ink || "#333";
+          ctx.fillText(text, box.x + 4, box.y + h / 2);
+          occupied.push(box);
           return;
         }
-        skippedLabels++;
+        skipped++;
       });
     });
     ctx.restore();
-    const el = q("subChartSummary");
-    if (el && chartSummaryBase) {
-      el.textContent = chartSummaryBase + (skippedLabels > 0 ? ` · ${skippedLabels} 个标签因重叠省略` : "");
-    }
+    q("chartLabelStatus").textContent = skipped ? `${skipped} 个密集标签已避让隐藏，悬停查看完整档位` : "";
   },
 };
 
 function renderChart(): void {
-  const canvas = q<HTMLCanvasElement>("subChartCanvas");
-  const metricSelect = q<HTMLSelectElement>("quotaMetricSelect");
-  const summary = q("subChartSummary");
-  if (!canvas) return;
-
-  const metricKey = (metricSelect?.value ?? "qMonth") as "qMonth" | "qWeek" | "q5h";
-  const metricLabel = QUOTA_METRICS.find((m) => m.key === metricKey)?.label ?? "额度/月≈";
-
-  const byCat = new Map<string, PlotPoint[]>();
-  let skipped = 0;
-  for (const r of rows) {
-    const y = r[metricKey];
-    const x = r.monthlyCny;
-    if (typeof y !== "number" || y <= 0 || typeof x !== "number") {
-      skipped++;
-      continue;
+  const metric = q<HTMLSelectElement>("quotaMetricSelect").value as Metric;
+  const units = [...new Set(rows.filter((r) => (r[metric] ?? 0) > 0 &&
+    typeof r.monthlyCny === "number").map((r) => r.quotaUnit ?? "未标注"))].sort();
+  const select = q<HTMLSelectElement>("quotaUnitSelect");
+  const previous = select.value;
+  select.innerHTML = `<option value="">全部单位（仅总览）</option>` +
+    units.map((u) => `<option value="${escapeAttr(u)}">${escapeHtml(u)}</option>`).join("");
+  select.value = units.includes(previous) ? previous : "";
+  const unit = select.value;
+  const includeFree = q<HTMLInputElement>("includeFreeToggle").checked;
+  const groups = new Map<string, Point[]>();
+  let freeCount = 0;
+  for (const row of rows) {
+    const x = row.monthlyCny;
+    const y = row[metric];
+    if (typeof x !== "number" || !Number.isFinite(x) || x < 0 ||
+      typeof y !== "number" || !Number.isFinite(y) || y <= 0 ||
+      (unit && (row.quotaUnit ?? "未标注") !== unit)) continue;
+    if (x === 0) {
+      freeCount++;
+      if (!includeFree) continue;
     }
-    const list = byCat.get(r.category) ?? [];
-    list.push({ x: Math.max(x, 0.4), y, row: r });
-    byCat.set(r.category, list);
+    // Never connect plans with different quota units, even within a product.
+    const key = JSON.stringify([productKey(row), row.quotaUnit]);
+    const list = groups.get(key) ?? [];
+    list.push({ x: x === 0 ? 0.4 : x, y, row });
+    groups.set(key, list);
   }
-
-  // 同一产品的档位连线（>=2 点才有线）
-  const byProduct = new Map<string, { cat: string; pts: PlotPoint[] }>();
-  for (const [cat, pts] of byCat) {
-    for (const p of pts) {
-      const key = `${p.row.vendor}::${p.row.product}`;
-      const g = byProduct.get(key) ?? { cat, pts: [] };
-      g.pts.push(p);
-      byProduct.set(key, g);
-    }
-  }
-  const lineDatasets = [...byProduct.values()]
-    .filter((g) => g.pts.length >= 2)
-    .map((g) => ({
-      type: "line" as const,
-      label: "",
-      data: [...g.pts].sort((a, b) => a.x - b.x).map((p) => ({ x: p.x, y: p.y })),
-      borderColor: hexAlpha(CATEGORY_COLORS[g.cat] ?? "#888", 0.45),
-      borderWidth: 1.5,
-      borderDash: [4, 3],
-      pointRadius: 0,
-      fill: false,
-      tension: 0,
-    }));
-
-  const pointDatasets: PointDataset[] = [...byCat.entries()].map(([cat, pts]) => ({
-    label: `${cat}（${pts.length}）`,
-    data: pts.map((p) => ({ x: p.x, y: p.y })),
-    backgroundColor: CATEGORY_COLORS[cat] ?? "#888",
-    borderColor: "#ffffff",
-    borderWidth: 1,
-    pointRadius: 6,
-    pointHoverRadius: 8,
-    _rows: pts,
-  }));
-
-  const datasets = [...lineDatasets, ...pointDatasets];
-  const totalPlotted = [...byCat.values()].reduce((s, l) => s + l.length, 0);
-  chartSummaryBase = `${metricLabel}：图上 ${totalPlotted} 档 · ${lineDatasets.length} 条产品档位折线 · ${skipped} 档无该口径数据未显示（免费价按 ¥0.4 占位；各产品额度口径不同，仅供量级比较）`;
-  if (summary) summary.textContent = chartSummaryBase;
-
-  if (chart) chart.destroy();
-  chart = new Chart(canvas, {
+  const datasets: PlanDataset[] = [...groups.entries()].map(([id, data]) => {
+    data.sort((a, b) => a.x - b.x || a.y - b.y);
+    const color = productColor(productKey(data[0].row));
+    return {
+      productId: id,
+      label: shortName(data[0].row.product),
+      data, showLine: true, tension: 0, borderWidth: 1.7,
+      borderColor: color, backgroundColor: color,
+      pointRadius: 4.5, pointHoverRadius: 7, pointHitRadius: 6,
+      hidden: hiddenProducts.has(id),
+    };
+  });
+  chart?.destroy();
+  chart = null;
+  const total = datasets.reduce((n, ds) => n + ds.data.length, 0);
+  q("subChartSummary").textContent = `${total} 档 · ${datasets.length} 组产品曲线 · ${freeCount} 档免费/试用${includeFree ? "已纳入" : "默认不纳入"} · 同色为同产品，按月价连接`;
+  q("chartUnitNote").textContent = unit
+    ? `当前单位：${unit}。同名“积分 / Credits”在不同产品间也不等值，不代表统一购买力。`
+    : "总览混合了积分、Credits、请求次数和额度倍数；纵轴数值不等值，不能据此判断跨产品性价比。建议先选额度单位，再比较同一产品的档位。";
+  q("chartEmpty").hidden = total > 0;
+  q("chartCanvasWrap").hidden = total === 0;
+  q("chartLabelStatus").textContent = "";
+  renderLegend(datasets);
+  if (!total) return;
+  const points = datasets.flatMap((ds) => ds.data);
+  const styles = getComputedStyle(document.documentElement);
+  const muted = styles.getPropertyValue("--muted").trim();
+  const line = styles.getPropertyValue("--line").trim();
+  chart = new Chart<"scatter", Point[]>(q<HTMLCanvasElement>("subChartCanvas"), {
     type: "scatter",
-    data: { datasets: datasets as never },
+    data: { datasets },
+    plugins: [labelsPlugin],
     options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      interaction: { mode: "nearest", intersect: false },
+      responsive: true, maintainAspectRatio: false, animation: false,
+      layout: { padding: { top: 24, right: 28, bottom: 8 } },
+      interaction: { mode: "nearest", intersect: true },
       plugins: {
-        legend: {
-          position: "top",
-          labels: { boxWidth: 12, filter: (item) => item.text !== "" },
-        },
+        legend: { display: false },
         tooltip: {
-          filter: (item) => Boolean((datasets[item.datasetIndex] as PointDataset)._rows),
           callbacks: {
-            title(items) {
-              const ds = datasets[items[0].datasetIndex] as PointDataset;
-              const r = ds._rows?.[items[0].dataIndex]?.row;
-              return r ? `${r.product} · ${r.tier}` : "";
+            title: (items) => {
+              const row = (items[0]?.raw as Point | undefined)?.row;
+              return row ? wrapText(`${row.product} · ${row.tier}`) : "";
             },
-            label(item) {
-              const ds = datasets[item.datasetIndex] as PointDataset;
-              const r = ds._rows?.[item.dataIndex]?.row;
-              if (!r) return "";
-              return [
-                `价格：${r.priceText}`,
-                `额度：${r.quotaText ?? "—"}`,
-                `模型：${r.models ?? "—"}`,
-                `核实：${r.verified ?? "—"}（${r.asOf ?? "—"}）`,
-              ];
+            label: (item) => {
+              const { row } = item.raw as Point;
+              return [`月价：${row.priceText}`, `${METRICS[metric]}：${row[metric]?.toLocaleString()} ${row.quotaUnit ?? ""}`,
+                `原始口径：${row.quotaText ?? "未披露"}`,
+                `核实：${row.verified ?? "未标注"} · ${row.asOf ?? "未标注"}`].flatMap(wrapText);
             },
           },
         },
@@ -409,37 +222,89 @@ function renderChart(): void {
       scales: {
         x: {
           type: "logarithmic",
-          title: { display: true, text: "月价 ¥（log，免费按 0.4 占位）" },
-          min: 0.3,
-          ticks: {
-            callback: (v) => {
-              const n = Number(v);
-              return [0.4, 1, 5, 10, 20, 50, 100, 200, 500, 1000, 2000].includes(n)
-                ? n === 0.4 ? "免费" : `¥${n}`
-                : "";
-            },
-          },
+          suggestedMin: Math.min(...points.map((p) => p.x)) / 1.4,
+          suggestedMax: Math.max(...points.map((p) => p.x)) * 1.5,
+          grid: { color: line },
+          title: { display: true, color: muted, text: includeFree ? "月价 ¥ · 对数轴（免费按 0.4 占位）" : "月价 ¥ · 对数轴" },
+          ticks: { color: muted, maxTicksLimit: 9, callback: (v) => Number(v) === 0.4 ? "免费" : `¥${Number(v).toLocaleString()}` },
         },
         y: {
           type: "logarithmic",
-          title: { display: true, text: metricLabel },
+          suggestedMin: Math.min(...points.map((p) => p.y)) / 1.5,
+          suggestedMax: Math.max(...points.map((p) => p.y)) * 1.6,
+          grid: { color: line },
+          title: { display: true, color: muted, text: `${METRICS[metric]}${unit ? ` · ${unit}` : " · 混合单位"}` },
+          ticks: { color: muted, maxTicksLimit: 8, callback: (v) => Number(v).toLocaleString() },
         },
       },
     },
-    plugins: [planLabelPlugin],
   });
 }
 
-function bindControls(): void {
-  q<HTMLSelectElement>("quotaMetricSelect")?.addEventListener("change", () => renderChart());
-  q<HTMLInputElement>("mergeCoverageToggle")?.addEventListener("change", (e) => {
-    mergeSameCoverage = (e.target as HTMLInputElement).checked;
-    renderMatrix();
-  });
+function wrapText(text: string): string[] {
+  const width = q("subChartCanvas").clientWidth;
+  const limit = Math.max(12, Math.min(38, Math.floor((width - 36) / 12)));
+  return text.match(new RegExp(`.{1,${limit}}`, "gu")) ?? [];
 }
 
-load().catch((err) => {
-  console.error("subscriptions page data load failed:", err);
-  const summary = q("matrixSummary");
-  if (summary) summary.textContent = "数据加载失败。";
+function renderLegend(datasets: PlanDataset[]): void {
+  q("productLegend").innerHTML = datasets.map((ds) => `<button type="button" class="product-chip"
+    data-product-id="${escapeAttr(ds.productId)}" aria-pressed="${!ds.hidden}"
+    title="${escapeAttr(`${ds.data[0].row.product} · ${ds.data[0].row.quotaUnit}，点击显示/隐藏`)}">
+    <span class="product-dot" style="background:${escapeAttr(String(ds.borderColor))}"></span>
+    ${escapeHtml(ds.label)}<small>${ds.data.length}</small></button>`).join("");
+}
+
+q("productLegend").addEventListener("click", (event) => {
+  const button = (event.target as HTMLElement).closest<HTMLButtonElement>("[data-product-id]");
+  if (!button || !chart) return;
+  const id = button.dataset.productId!;
+  if (hiddenProducts.has(id)) hiddenProducts.delete(id); else hiddenProducts.add(id);
+  const index = chart.data.datasets.findIndex((ds) => (ds as PlanDataset).productId === id);
+  chart.setDatasetVisibility(index, !hiddenProducts.has(id));
+  button.setAttribute("aria-pressed", String(!hiddenProducts.has(id)));
+  chart.update();
+});
+q("showAllProducts").addEventListener("click", () => {
+  hiddenProducts.clear();
+  renderChart();
+});
+q("mergeCoverageToggle").addEventListener("change", renderMatrix);
+for (const id of ["quotaMetricSelect", "quotaUnitSelect", "includeFreeToggle"]) {
+  q(id).addEventListener("change", renderChart);
+}
+q("chartLabelMode").addEventListener("change", (event) => {
+  labelMode = (event.target as HTMLSelectElement).value;
+  chart?.draw();
+});
+document.addEventListener("subscriptions:selection", (event) => {
+  const detail = (event as CustomEvent<SubscriptionSelection>).detail;
+  rows = detail.rows;
+  const plottable = detail.allRows.filter((r) => typeof r.monthlyCny === "number" &&
+    Object.keys(METRICS).some((metric) => (r[metric as Metric] ?? 0) > 0));
+  [...new Set(plottable.map(productKey))].sort().forEach((key, index) => {
+    productColors.set(key, COLORS[index % COLORS.length]);
+  });
+  renderMatrix();
+  renderChart();
+});
+document.addEventListener("subscriptions:error", () => {
+  const message = "订阅数据加载失败，请刷新页面重试。";
+  q("matrixSummary").textContent = message;
+  q("subChartSummary").textContent = message;
+  q("chartCanvasWrap").hidden = true;
+});
+new MutationObserver(() => {
+  if (!chart) return;
+  const styles = getComputedStyle(document.documentElement);
+  for (const axis of ["x", "y"]) {
+    const scale = chart.options.scales?.[axis];
+    if (!scale) continue;
+    if (scale.ticks) scale.ticks.color = styles.getPropertyValue("--muted").trim();
+    if (scale.title) scale.title.color = styles.getPropertyValue("--muted").trim();
+    if (scale.grid) scale.grid.color = styles.getPropertyValue("--line").trim();
+  }
+  chart.update("none");
+}).observe(document.documentElement, {
+  attributes: true, attributeFilter: ["data-theme", "class"],
 });

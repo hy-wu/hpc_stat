@@ -15,6 +15,7 @@ import { buildCsv, downloadBlob } from "../lib/csv";
 import { escapeHtml, escapeAttr } from "../lib/escape";
 import { getToneClass } from "../matrix/cells";
 import { dataUrl } from "../lib/data-url";
+import { SUBSCRIPTION_FAMILIES } from "../lib/subscriptions";
 import type { FieldDef } from "../types/fields";
 import type { FilterRule, SortDirection } from "../types/common";
 
@@ -157,6 +158,7 @@ async function init() {
     }
   } catch (err) {
     console.error(`Failed to load ${pageId}:`, err);
+    if (pageId === "subscriptions") document.dispatchEvent(new Event("subscriptions:error"));
     const tbody = q("tableBody");
     if (tbody) tbody.innerHTML = `<tr><td colspan="99" class="muted" style="text-align:center;padding:24px">数据加载失败。</td></tr>`;
   }
@@ -694,11 +696,21 @@ function subscriptionsConfig(): FlatPageConfig {
     ruleEngineOptions: { invalidNumberBehavior: "reject", booleanSupport: true },
     defaultSortField: "category",
     defaultSortDirection: "asc",
+    enrichRows: (rows) => rows.map((row) => ({
+      ...row,
+      _coverageFamilies: [...new Set([
+        ...(Array.isArray(row.families) ? row.families : []),
+        ...(Array.isArray(row.familiesGuess) ? row.familiesGuess : []),
+      ])],
+    })),
     filters: [
       { selectId: "categoryFilter", key: "category", allLabel: "全部类别" },
       { selectId: "vendorFilter", key: "vendor", allLabel: "全部厂商" },
       { selectId: "billingFilter", key: "billing", allLabel: "全部计费", flatArrays: true },
-      { selectId: "familyFilter", key: "families", allLabel: "全部模型家族", flatArrays: true },
+      {
+        selectId: "familyFilter", key: "_coverageFamilies", allLabel: "全部模型家族（含待核）", flatArrays: true,
+        labelFn: (value) => SUBSCRIPTION_FAMILIES.find(([key]) => key === value)?.[1] ?? value,
+      },
       { selectId: "verifiedFilter", key: "verified", allLabel: "全部核实状态" },
     ],
     summaryMetrics: [
@@ -917,6 +929,11 @@ function render() {
 
   renderSummary(filtered);
   renderTable(sorted, activeFields);
+  if (state.config?.pageId === "subscriptions") {
+    document.dispatchEvent(new CustomEvent("subscriptions:selection", {
+      detail: { rows: filtered, allRows: state.allRows },
+    }));
+  }
 }
 
 function renderSummary(rows: Record<string, unknown>[]) {

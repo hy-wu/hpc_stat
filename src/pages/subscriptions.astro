@@ -5,6 +5,19 @@ import TablePanel from "../components/workbench/TablePanel.astro";
 ---
 
 <Base title="国内订阅对比" active="subscriptions">
+  <div class="subscriptions-page">
+  <header class="subscription-intro">
+    <div>
+      <p class="section-kicker">国内 AI / 算力 · 订阅观察</p>
+      <h2>先看档位，再核对覆盖与额度</h2>
+      <p>助手会员、编程订阅、API 平台与 GPU 租赁。顶部筛选同步作用于三个视图，图表控件仅调整图表。</p>
+    </div>
+    <nav aria-label="订阅页视图">
+      <a href="#price-quota">价格与额度 ↗</a>
+      <a href="#model-coverage">模型覆盖 ↗</a>
+      <a href="#plan-details">套餐明细 ↗</a>
+    </nav>
+  </header>
   <div class="filter-card">
     <section class="control-band">
       <div class="search-block">
@@ -38,13 +51,14 @@ import TablePanel from "../components/workbench/TablePanel.astro";
       <button class="ghost-button" id="sortDirectionButton" type="button">升序</button>
       <button class="ghost-button" id="resetFiltersButton" type="button">重置</button>
     </section>
-    <section class="filters-panel-inner">
+    <details class="filters-panel-inner advanced-filters">
+      <summary>高级字段筛选</summary>
       <div class="panel-head">
         <h2>字段筛选</h2>
         <button class="text-button" id="addRuleButton" type="button">添加条件</button>
       </div>
       <div id="filterRules" class="rules"></div>
-    </section>
+    </details>
   </div>
 
   <InsightGrid metrics={[
@@ -54,18 +68,50 @@ import TablePanel from "../components/workbench/TablePanel.astro";
     { id: "familyCount", label: "模型家族" },
   ]} />
 
-  <TablePanel
-    title="订阅/按量明细表"
-    pickerLabel="列设置"
-  >
-    <span slot="legend" class="preset-hint">
-      覆盖：C 端助手会员、编程 Agent 订阅、API/模型平台、GPU 算力租赁 · 月价为连续包月或折算价 · 数据核实至 2026-11-13，各家改版频繁，下单以官网为准
-    </span>
-  </TablePanel>
-
-  <section class="table-panel">
+  <section class="table-panel subscription-chart" id="price-quota" aria-labelledby="chartTitle">
     <div class="panel-head">
-      <h2>模型家族 × 套餐覆盖矩阵</h2>
+      <h2 id="chartTitle"><span class="section-number">01</span> 月价 × 额度 <small>对数坐标</small></h2>
+      <span class="preset-hint">点击产品图例隐藏 / 显示整条曲线</span>
+    </div>
+    <div class="subscription-chart-controls">
+      <label for="quotaMetricSelect">额度窗口
+        <select id="quotaMetricSelect">
+          <option value="qMonth" selected>额度/月≈</option>
+          <option value="qWeek">额度/周</option>
+          <option value="q5h">额度/5小时</option>
+        </select>
+      </label>
+      <label for="quotaUnitSelect">额度单位
+        <select id="quotaUnitSelect"><option value="">全部单位（仅总览）</option></select>
+      </label>
+      <label for="chartLabelMode">点位标签
+        <select id="chartLabelMode">
+          <option value="auto">自适应标签</option>
+          <option value="tiers">档位名称</option>
+          <option value="products">仅产品末端</option>
+          <option value="none">不显示</option>
+        </select>
+      </label>
+      <label class="toggle-inline" for="includeFreeToggle">
+        <input id="includeFreeToggle" type="checkbox" /> 纳入免费 / 试用
+      </label>
+      <button id="showAllProducts" class="text-button" type="button">显示全部产品</button>
+    </div>
+    <p class="quota-warning" id="chartUnitNote">不同产品额度单位不等值，请勿直接比较跨产品性价比。</p>
+    <div class="product-legend" id="productLegend" role="group" aria-label="产品曲线显示控制"></div>
+    <div class="chart-summary" id="subChartSummary">正在加载套餐数据…</div>
+    <section class="chart-container" aria-label="订阅价格与额度散点图">
+      <div class="empty-state" id="chartEmpty" hidden>当前筛选没有可绘制的价格与额度数据。可切换额度窗口、纳入免费档，或重置顶部筛选；按量 API / GPU 价格请查看套餐明细。</div>
+      <div class="chart-canvas-wrap" id="chartCanvasWrap">
+        <canvas id="subChartCanvas" role="img" aria-label="订阅套餐月价与额度散点图"></canvas>
+      </div>
+    </section>
+    <div class="chart-footnote"><span>折线只连接同产品、同额度单位的档位；月额度可能为折算值，原始限制见悬停提示。</span><span id="chartLabelStatus"></span></div>
+  </section>
+
+  <section class="table-panel subscription-matrix" id="model-coverage" aria-labelledby="matrixTitle">
+    <div class="panel-head">
+      <h2 id="matrixTitle"><span class="section-number">02</span> 模型家族 × 套餐覆盖</h2>
       <div class="table-tools">
         <label class="toggle-inline" for="mergeCoverageToggle">
           <input id="mergeCoverageToggle" type="checkbox" checked /> 缩并同覆盖档位
@@ -73,8 +119,8 @@ import TablePanel from "../components/workbench/TablePanel.astro";
         <span class="preset-hint">✓ 已确认 · ◐ 待核实 · 算力租赁类不参与</span>
       </div>
     </div>
-    <div class="chart-summary" id="matrixSummary"></div>
-    <div class="heat-wrap">
+    <div class="chart-summary" id="matrixSummary">正在加载覆盖数据…</div>
+    <div class="heat-wrap" role="region" aria-label="模型覆盖矩阵，可横向滚动" tabindex="0">
       <table id="heatTable">
         <thead id="familyMatrixHead"></thead>
         <tbody id="familyMatrixBody"></tbody>
@@ -82,66 +128,168 @@ import TablePanel from "../components/workbench/TablePanel.astro";
     </div>
   </section>
 
-  <section class="table-panel">
-    <div class="panel-head">
-      <h2>月价 × 额度 散点（log-log）</h2>
-      <div class="table-tools">
-        <select id="quotaMetricSelect" style="width:auto">
-          <option value="qMonth" selected>额度/月≈</option>
-          <option value="qWeek">额度/周</option>
-          <option value="q5h">额度/5小时</option>
-        </select>
-      </div>
-    </div>
-    <div class="chart-summary" id="subChartSummary"></div>
-    <section class="chart-container" aria-label="订阅价格与额度散点图">
-      <div class="chart-canvas-wrap">
-        <canvas id="subChartCanvas" role="img" aria-label="订阅套餐月价与额度散点图"></canvas>
-      </div>
-    </section>
-  </section>
+  <div id="plan-details" class="subscription-details">
+    <TablePanel title="03 · 订阅 / 按量明细表" pickerLabel="列设置">
+      <span slot="legend" class="preset-hint">
+        月价为连续包月或折算价 · 数据核实至 2026-11-13 · 不同产品额度不可直接横比，下单以官网为准
+      </span>
+    </TablePanel>
+  </div>
 
   <div data-flat-page="subscriptions"></div>
+  </div>
   <script>
     import "../islands/FlatTable";
     import "../islands/Subscriptions";
   </script>
 
   <style is:global>
-    .toggle-inline {
+    .subscriptions-page {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-width: 0;
+    }
+    .subscriptions-page > * { min-width: 0; }
+    .subscriptions-page [id] { scroll-margin-top: 72px; }
+    .subscription-intro {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 10px 2px;
+    }
+    .subscription-intro h2 { margin: 3px 0 5px; font-size: 22px; letter-spacing: -0.5px; }
+    .subscription-intro p { margin: 0; color: var(--muted); font-size: 12px; }
+    .subscription-intro .section-kicker { color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1px; }
+    .subscription-intro nav { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; }
+    .subscription-intro a { color: var(--accent); text-decoration: none; }
+    .subscriptions-page .table-panel { padding: 16px; }
+    .subscriptions-page .panel-head { flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
+    .subscriptions-page .panel-head h2 { display: flex; align-items: center; gap: 8px; }
+    .subscriptions-page .panel-head h2 small { color: var(--muted); font-size: 11px; font-weight: 400; }
+    .section-number { font-size: 11px; color: var(--accent); font-variant-numeric: tabular-nums; border-right: 1px solid var(--line); padding-right: 8px; }
+    .advanced-filters { padding: 10px 12px; }
+    .advanced-filters > summary { cursor: pointer; font-size: 12px; color: var(--muted); }
+    .advanced-filters[open] > summary { margin-bottom: 12px; }
+    .subscription-chart-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      gap: 12px;
+      padding: 12px;
+      background: var(--input-bg);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+    .subscription-chart-controls > label:not(.toggle-inline) { display: grid; gap: 5px; min-width: 150px; }
+    .subscription-chart-controls select { min-height: 32px; }
+    .subscriptions-page .toggle-inline {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 7px;
       font-size: 12px;
       color: var(--muted);
       cursor: pointer;
-      margin-right: 8px;
+      white-space: nowrap;
+      min-height: 32px;
+      flex: 0 0 auto;
     }
-    #heatTable .fam-cat-row td {
-      background: var(--panel);
+    .subscriptions-page input[type="checkbox"] {
+      width: 15px;
+      height: 15px;
+      min-height: 0;
+      padding: 0;
+      margin: 0;
+      flex: 0 0 15px;
+      accent-color: var(--accent);
+    }
+    .quota-warning { margin: 12px 0; padding: 9px 12px; font-size: 12px; line-height: 1.6; color: var(--ink); border-left: 3px solid var(--accent); background: var(--accent-soft); }
+    .product-legend { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+    .product-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid var(--line);
+      background: var(--input-bg);
+      color: var(--ink);
+      border-radius: 5px;
+      font-size: 11px;
+      padding: 5px 8px;
+      min-height: 30px;
+    }
+    .product-chip small { color: var(--muted); }
+    .product-chip[aria-pressed="false"] { opacity: 0.45; text-decoration: line-through; }
+    .product-chip:hover, .product-chip:focus-visible { border-color: var(--accent); }
+    .product-dot { width: 16px; height: 3px; border-radius: 2px; flex: 0 0 16px; }
+    .subscription-chart .chart-container { padding: 0; border: 0; }
+    .subscription-chart .chart-canvas-wrap { height: 560px; }
+    .subscription-chart canvas { width: 100% !important; height: 100% !important; }
+    .subscriptions-page .chart-summary { margin: 6px 0 12px; font-size: 12px; color: var(--muted); }
+    .chart-footnote { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; color: var(--muted); font-size: 11px; border-top: 1px solid var(--line); padding-top: 10px; }
+    .subscriptions-page .empty-state { padding: 40px 24px; text-align: center; color: var(--muted); white-space: normal; }
+    .subscription-matrix .heat-wrap { max-height: 560px; }
+    .subscriptions-page #heatTable { table-layout: fixed; width: 100%; min-width: calc(430px + var(--family-count, 16) * 58px); }
+    .subscriptions-page #heatTable th, .subscriptions-page #heatTable td { padding: 8px 6px; }
+    .subscriptions-page #heatTable thead th { top: 0; z-index: 4; }
+    .subscriptions-page #heatTable .heat-model-col { width: 210px; max-width: none; white-space: normal; overflow-wrap: anywhere; }
+    .subscriptions-page #heatTable thead .heat-model-col { z-index: 5; }
+    .subscriptions-page #heatTable tbody th.heat-model-col { top: auto; z-index: 2; font-size: 12px; }
+    .subscriptions-page #heatTable th:nth-child(2) { width: 220px; }
+    .subscriptions-page #heatTable .heat-bench-col { height: 54px; min-width: 48px; text-align: center; vertical-align: middle; }
+    .subscriptions-page #heatTable .heat-bench-col span { writing-mode: horizontal-tb; transform: none; white-space: normal; overflow-wrap: anywhere; max-height: none; font-size: 11px; }
+    .subscriptions-page #heatTable .fam-cat-row th {
+      position: static;
+      background: var(--input-bg);
       font-weight: 700;
       font-size: 12px;
       color: var(--ink);
-      padding: 4px 8px;
+      padding: 7px 10px;
     }
-    #heatTable td.fam-tier {
-      min-width: 110px;
-      font-weight: 400;
-    }
-    #heatTable .fam-price {
+    .fam-cat-row span { color: var(--muted); font-weight: 400; margin-left: 12px; }
+    .subscriptions-page #heatTable td.fam-tier { white-space: normal; font-size: 12px; }
+    .subscriptions-page #heatTable small {
       display: block;
-      font-size: 10px;
+      font-size: 11px;
       color: var(--muted);
       font-weight: 400;
     }
-    #heatTable td.fam-yes {
-      background: rgba(39, 174, 96, 0.22);
-      color: #1e8e4f;
+    .tier-details summary { cursor: pointer; color: var(--ink); }
+    .tier-details ul { margin: 8px 0 0; padding: 0; list-style: none; }
+    .tier-details li { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; padding: 5px 0; border-top: 1px solid var(--line); font-size: 11px; }
+    .tier-details li span:last-child { color: var(--muted); }
+    .subscriptions-page #heatTable .fam-no { color: var(--line); }
+    .subscriptions-page #heatTable td.fam-yes {
+      background: rgba(39, 174, 96, 0.15);
+      color: #269b63;
       font-weight: 700;
+      font-size: 14px;
     }
-    #heatTable td.fam-guess {
-      background: rgba(242, 153, 74, 0.18);
-      color: #c9762a;
+    .subscriptions-page #heatTable td.fam-guess {
+      background: rgba(242, 153, 74, 0.14);
+      color: #c48b3c;
+      font-size: 14px;
+    }
+    .subscription-details .table-wrap { min-height: 220px; max-height: 560px; }
+    .subscription-details #gpuTable td { max-width: 300px; white-space: normal; overflow-wrap: anywhere; }
+    .subscription-details #gpuTable { min-width: 1600px; }
+    @media (max-width: 700px) {
+      .subscription-intro h2 { font-size: 19px; }
+      .subscriptions-page .table-panel { padding: 10px; }
+      .subscription-chart-controls { gap: 10px; }
+      .subscription-chart-controls > label:not(.toggle-inline) { flex: 1 1 120px; min-width: 0; }
+      .subscription-chart .chart-canvas-wrap { height: 400px; }
+      .product-legend { max-height: 132px; overflow: auto; padding: 2px; }
+      .subscriptions-page #heatTable { min-width: calc(345px + var(--family-count, 16) * 55px); }
+      .subscriptions-page #heatTable .heat-model-col { width: 155px; }
+      .subscriptions-page #heatTable th:nth-child(2) { width: 190px; }
+      .subscriptions-page .control { flex-basis: 130px; }
+      .subscriptions-page .control-band { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+      .subscriptions-page .search-block { grid-column: 1 / -1; }
+      .subscriptions-page .control-band input,
+      .subscriptions-page .control-band select,
+      .subscriptions-page .control-band > button { min-height: 32px; width: 100%; }
     }
   </style>
 </Base>
