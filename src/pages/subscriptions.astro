@@ -67,6 +67,9 @@ import TablePanel from "../components/workbench/TablePanel.astro";
     <div class="panel-head">
       <h2>模型家族 × 套餐覆盖矩阵</h2>
       <div class="table-tools">
+        <label class="toggle-inline" for="mergeCoverageToggle">
+          <input id="mergeCoverageToggle" type="checkbox" checked /> 缩并同覆盖档位
+        </label>
         <span class="preset-hint">✓ 已确认 · ◐ 待核实 · 算力租赁类不参与</span>
       </div>
     </div>
@@ -105,6 +108,15 @@ import TablePanel from "../components/workbench/TablePanel.astro";
   </script>
 
   <style is:global>
+    .toggle-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: var(--muted);
+      cursor: pointer;
+      margin-right: 8px;
+    }
     #heatTable .fam-cat-row td {
       background: var(--panel);
       font-weight: 700;
