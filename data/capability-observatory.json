@@ -1,0 +1,677 @@
+{
+  "metadata": {
+    "title": "GPT 跨代能力观察",
+    "collected_at": "2026-11-19",
+    "status": "research seed; historical metrics require row-level re-verification",
+    "warning": "非完整样本；快照数据未完成统一复核"
+  },
+  "models": [
+    "GPT-5.6 Luna",
+    "GPT-5.6 Terra",
+    "GPT-5.6 Sol",
+    "GPT-6 Luna",
+    "GPT-6 Sol",
+    "GPT-6 Astra",
+    "GPT-6.1 Terra",
+    "GPT-6.1 Sol",
+    "GPT-6.2 Sol",
+    "GPT-6.2 Astra"
+  ],
+  "results": [
+    {
+      "model": "GPT-6 Astra",
+      "suite": "LiveBench 2.0",
+      "metric": "overall",
+      "value": 84.5,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6 Astra",
+      "suite": "LiveBench 2.0",
+      "metric": "reasoning",
+      "value": 92.7,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6 Astra",
+      "suite": "LiveBench 2.0",
+      "metric": "design",
+      "value": 80,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6 Astra",
+      "suite": "LiveBench 2.0",
+      "metric": "browser",
+      "value": 91.3,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Astra",
+      "suite": "LiveBench 2.0",
+      "metric": "overall",
+      "value": 84.9,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Astra",
+      "suite": "LiveBench 2.0",
+      "metric": "reasoning",
+      "value": 91.6,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Astra",
+      "suite": "LiveBench 2.0",
+      "metric": "design",
+      "value": 82.8,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Astra",
+      "suite": "LiveBench 2.0",
+      "metric": "browser",
+      "value": 93,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "suite": "LiveBench 2.0",
+      "metric": "overall",
+      "value": 81.4,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "suite": "LiveBench 2.0",
+      "metric": "reasoning",
+      "value": 92.6,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "suite": "LiveBench 2.0",
+      "metric": "design",
+      "value": 79.6,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "suite": "LiveBench 2.0",
+      "metric": "browser",
+      "value": 93.3,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Sol",
+      "suite": "LiveBench 2.0",
+      "metric": "overall",
+      "value": 80.3,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Sol",
+      "suite": "LiveBench 2.0",
+      "metric": "reasoning",
+      "value": 90.6,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Sol",
+      "suite": "LiveBench 2.0",
+      "metric": "design",
+      "value": 80,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Sol",
+      "suite": "LiveBench 2.0",
+      "metric": "browser",
+      "value": 88.2,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "suite": "LiveBench 2.0",
+      "metric": "overall",
+      "value": 78.8,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "suite": "LiveBench 2.0",
+      "metric": "reasoning",
+      "value": 88.7,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "suite": "LiveBench 2.0",
+      "metric": "design",
+      "value": 79.7,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "suite": "LiveBench 2.0",
+      "metric": "browser",
+      "value": 93.1,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6 Luna",
+      "suite": "LiveBench 2.0",
+      "metric": "overall",
+      "value": 60.4,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6 Luna",
+      "suite": "LiveBench 2.0",
+      "metric": "reasoning",
+      "value": 81.8,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6 Luna",
+      "suite": "LiveBench 2.0",
+      "metric": "design",
+      "value": 76.1,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6 Luna",
+      "suite": "LiveBench 2.0",
+      "metric": "browser",
+      "value": 70.3,
+      "unit": "score/100",
+      "source": "S01",
+      "effort": "max",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6 Astra",
+      "suite": "API pricing",
+      "metric": "input",
+      "value": 10,
+      "unit": "USD/1M tokens",
+      "source": "S03",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6 Astra",
+      "suite": "API pricing",
+      "metric": "cached_input",
+      "value": 1,
+      "unit": "USD/1M tokens",
+      "source": "S03",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6 Astra",
+      "suite": "API pricing",
+      "metric": "output",
+      "value": 50,
+      "unit": "USD/1M tokens",
+      "source": "S03",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Astra",
+      "suite": "API pricing",
+      "metric": "input",
+      "value": 8,
+      "unit": "USD/1M tokens",
+      "source": "S03",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Astra",
+      "suite": "API pricing",
+      "metric": "cached_input",
+      "value": 0.4,
+      "unit": "USD/1M tokens",
+      "source": "S03",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Astra",
+      "suite": "API pricing",
+      "metric": "output",
+      "value": 40,
+      "unit": "USD/1M tokens",
+      "source": "S03",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "suite": "API pricing",
+      "metric": "input",
+      "value": 2,
+      "unit": "USD/1M tokens",
+      "source": "S03",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "suite": "API pricing",
+      "metric": "cached_input",
+      "value": 0.1,
+      "unit": "USD/1M tokens",
+      "source": "S03",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "suite": "API pricing",
+      "metric": "output",
+      "value": 10,
+      "unit": "USD/1M tokens",
+      "source": "S03",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Sol",
+      "suite": "API pricing",
+      "metric": "input",
+      "value": 2,
+      "unit": "USD/1M tokens",
+      "source": "S03",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Sol",
+      "suite": "API pricing",
+      "metric": "cached_input",
+      "value": 0.1,
+      "unit": "USD/1M tokens",
+      "source": "S03",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Sol",
+      "suite": "API pricing",
+      "metric": "output",
+      "value": 10,
+      "unit": "USD/1M tokens",
+      "source": "S03",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6 Astra",
+      "suite": "Artificial Analysis v5",
+      "metric": "intelligence_index",
+      "value": 57,
+      "unit": "index points",
+      "source": "S02",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Astra",
+      "suite": "Artificial Analysis v5",
+      "metric": "intelligence_index",
+      "value": 62,
+      "unit": "index points",
+      "source": "S02",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "suite": "Artificial Analysis v5",
+      "metric": "intelligence_index",
+      "value": 55,
+      "unit": "index points",
+      "source": "S02",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Sol",
+      "suite": "Artificial Analysis v5",
+      "metric": "intelligence_index",
+      "value": 57,
+      "unit": "index points",
+      "source": "S02",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Astra",
+      "suite": "Artificial Analysis",
+      "metric": "AA-3D",
+      "value": 1318,
+      "unit": "Elo",
+      "source": "S02",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Sol",
+      "suite": "Artificial Analysis",
+      "metric": "AA-3D",
+      "value": 1259,
+      "unit": "Elo",
+      "source": "S02",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Astra",
+      "suite": "Artificial Analysis",
+      "metric": "AA-Robotics v0.1",
+      "value": 79,
+      "unit": "index",
+      "source": "S02",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Sol",
+      "suite": "Artificial Analysis",
+      "metric": "AA-Robotics v0.1",
+      "value": 78,
+      "unit": "index",
+      "source": "S02",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Astra",
+      "suite": "Artificial Analysis",
+      "metric": "AA-Omniscience hallucination rate",
+      "value": 59,
+      "unit": "%",
+      "source": "S02",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "model": "GPT-6.2 Sol",
+      "suite": "Artificial Analysis",
+      "metric": "AA-Omniscience hallucination rate",
+      "value": 55,
+      "unit": "%",
+      "source": "S02",
+      "status": "snapshot-needs-recheck"
+    }
+  ],
+  "relative": [
+    {
+      "old_model": "GPT-6 Astra",
+      "new_model": "GPT-6.2 Astra",
+      "metric": "Agents Last Exam",
+      "delta": 5.2,
+      "unit": "pp",
+      "source": "S03",
+      "provenance": "vendor",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "old_model": "GPT-6 Astra",
+      "new_model": "GPT-6.2 Astra",
+      "metric": "Terminal-Bench-Science 0.1",
+      "delta": 9,
+      "unit": "pp",
+      "source": "S03",
+      "provenance": "vendor",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "old_model": "GPT-6 Astra",
+      "new_model": "GPT-6.2 Astra",
+      "metric": "Internal GDPval v2",
+      "delta": 6.2,
+      "unit": "pp",
+      "source": "S03",
+      "provenance": "vendor",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "old_model": "GPT-6.1 Sol",
+      "new_model": "GPT-6.2 Sol",
+      "metric": "Internal GDPval v2",
+      "delta": 5.3,
+      "unit": "pp",
+      "source": "S03",
+      "provenance": "vendor",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "old_model": "GPT-6.1 Sol",
+      "new_model": "GPT-6.2 Sol",
+      "metric": "AA Coding Agent Index",
+      "delta": -3,
+      "unit": "points",
+      "source": "S02",
+      "provenance": "independent",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "old_model": "GPT-6.1 Sol",
+      "new_model": "GPT-6.2 Sol",
+      "metric": "SWE-Atlas-QnA-AA",
+      "delta": -14,
+      "unit": "points",
+      "source": "S02",
+      "provenance": "independent",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "old_model": "GPT-6 Astra",
+      "new_model": "GPT-6.2 Astra",
+      "metric": "AA Coding Agent Index",
+      "delta": 0,
+      "unit": "points",
+      "source": "S02",
+      "provenance": "independent",
+      "status": "snapshot-needs-recheck"
+    },
+    {
+      "old_model": "GPT-5.6 Sol",
+      "new_model": "GPT-6 Astra",
+      "metric": "GDPval-AA v2",
+      "delta": -45,
+      "unit": "Elo (approx.)",
+      "source": "S08",
+      "provenance": "independent",
+      "status": "snapshot-needs-recheck"
+    }
+  ],
+  "feedback": [
+    {
+      "model": "GPT-6.1 Sol",
+      "category": "长程规划/理解",
+      "sentiment": "negative",
+      "summary": "用户认为相比 5.6 Sol，部分任务理解与规划需要更多修正。",
+      "source": "S04"
+    },
+    {
+      "model": "GPT-6.2 Astra",
+      "category": "任务边界",
+      "sentiment": "negative",
+      "summary": "用户报告在范围控制和指令保持上遇到问题。",
+      "source": "S05"
+    },
+    {
+      "model": "GPT-6.2 Sol",
+      "category": "Blender 建模",
+      "sentiment": "positive",
+      "summary": "用户发布与 6.1 Sol 的建模对照。",
+      "source": "S06"
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "category": "延迟",
+      "sentiment": "negative",
+      "summary": "用户报告相较旧 Sol 反应变慢；环境条件未知。",
+      "source": "S07"
+    },
+    {
+      "model": "GPT-6.2 Astra",
+      "category": "工程/Agent",
+      "sentiment": "mixed",
+      "summary": "性能改善与指令遵循争议并存；需扩大样本。",
+      "source": "S03"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "title": "LiveBench 2.0 leaderboard",
+      "url": "https://livebench.ai/",
+      "grade": "B",
+      "type": "dynamic leaderboard",
+      "limitations": "动态榜单；历史筛选器、推理强度与日期需复核"
+    },
+    {
+      "id": "S02",
+      "title": "Artificial Analysis GPT-6.2 release analysis",
+      "url": "https://artificialanalysis.ai/articles/openai-has-the-2-model-in-the-intelligence-index-with-the-release-of-gpt-6-2-astra-and-gpt-6-2-sol/",
+      "grade": "B",
+      "type": "independent analysis",
+      "limitations": "不同 AA 子指数不可直接合并"
+    },
+    {
+      "id": "S03",
+      "title": "OpenAI GPT-6.2 release",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+      "grade": "B",
+      "type": "vendor announcement",
+      "limitations": "厂商选择性披露，需独立复核"
+    },
+    {
+      "id": "S04",
+      "title": "Reddit r/codex — 6.1 Sol vs 5.6 Sol",
+      "url": "https://www.reddit.com/r/codex/comments/1xtptls/gpt_61_sol_still_seems_worse_than_56_sol/",
+      "grade": "C",
+      "type": "community report",
+      "limitations": "单例经验，无随机抽样"
+    },
+    {
+      "id": "S05",
+      "title": "Reddit r/codex — 6.2 Astra scope",
+      "url": "https://www.reddit.com/r/codex/comments/1xzd1mc/62_astra_so_far_unable_to_understand_how_far_it/",
+      "grade": "C",
+      "type": "community report",
+      "limitations": "经验报告，任务环境未知"
+    },
+    {
+      "id": "S06",
+      "title": "Reddit r/codex — Blender comparison",
+      "url": "https://www.reddit.com/r/codex/comments/1xze2ku/gpt_61_sol_vs_gpt_62_sol_both_on_medium_effort/",
+      "grade": "C",
+      "type": "community report",
+      "limitations": "定性侧向比较；不可推算群体胜率"
+    },
+    {
+      "id": "S07",
+      "title": "Reddit r/codex — Sol latency",
+      "url": "https://www.reddit.com/r/codex/comments/1x4yte1/gpt61_sol_is_46x_slower_than_gpt56_sol_are_we/",
+      "grade": "C",
+      "type": "community report",
+      "limitations": "延迟受服务负载和环境影响"
+    },
+    {
+      "id": "S08",
+      "title": "Artificial Analysis GPT-6 Astra",
+      "url": "https://artificialanalysis.ai/articles/benchmarking-gpt-6-astra",
+      "grade": "B",
+      "type": "independent analysis",
+      "limitations": "部分差异是近似值"
+    },
+    {
+      "id": "S09",
+      "title": "OpenAI GPT-6.2 system card",
+      "url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol",
+      "grade": "B",
+      "type": "vendor evaluation",
+      "limitations": "不等同于独立跨版本盲测"
+    },
+    {
+      "id": "S10",
+      "title": "Artificial Analysis model comparison",
+      "url": "https://artificialanalysis.ai/models/comparisons",
+      "grade": "B",
+      "type": "dynamic comparison",
+      "limitations": "动态页面，不能代表历史冻结快照"
+    },
+    {
+      "id": "S11",
+      "title": "Arena leaderboard",
+      "url": "https://arena.ai/leaderboard",
+      "grade": "D",
+      "type": "candidate source",
+      "limitations": "当前缺少同一配置历史模型精确交叉记录"
+    },
+    {
+      "id": "S12",
+      "title": "SWE-bench",
+      "url": "https://www.swebench.com/",
+      "grade": "D",
+      "type": "candidate source",
+      "limitations": "需要版本及 harness 对齐"
+    }
+  ]
+}

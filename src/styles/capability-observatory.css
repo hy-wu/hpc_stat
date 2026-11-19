@@ -1,0 +1,38 @@
+/* Capability Observatory — uses the shared hpc_stat design tokens. */
+.obs-toolbar{margin-bottom:0}
+.obs-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--line)}
+.obs-stat{display:flex;align-items:baseline;gap:8px;padding:7px 12px;border-right:1px solid var(--line)}
+.obs-stat:last-child{border:0}.obs-stat strong{font-size:16px;font-variant-numeric:tabular-nums}.obs-stat span{font-size:11px;color:var(--muted)}
+.obs-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:8px}
+.obs-grid>.table-panel{min-width:0}
+.obs-matrix,.obs-sources{grid-column:1/-1}
+.obs-grid table{border-collapse:collapse;width:100%;font-size:12px}
+.obs-grid th,.obs-grid td{padding:5px 8px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+.obs-grid th{position:sticky;top:0;z-index:1;background:var(--th-bg);color:var(--th-color)}
+.obs-grid td:first-child{font-weight:650}.obs-grid tr:hover td{outline:1px solid var(--accent-soft)}
+.obs-grid .table-wrap{max-height:450px;overflow:auto}
+.obs-grid td.obs-num{text-align:right;font-variant-numeric:tabular-nums}
+.obs-grid small{display:block;font-size:10px;color:var(--muted)}
+.obs-missing{color:var(--muted)}.obs-delta-row{display:grid;grid-template-columns:74px minmax(0,1fr) 54px;align-items:center;gap:7px;padding:6px 0;font-size:12px;border-bottom:1px solid var(--line)}
+.obs-track{height:12px;border-radius:3px;background:var(--rule-bg);position:relative;overflow:hidden}
+.obs-track:after{content:"";position:absolute;left:50%;height:100%;width:1px;background:var(--muted)}
+.obs-bar{position:absolute;top:1px;height:10px;border-radius:2px;background:var(--good)}
+.obs-bar.negative{background:var(--warn)}
+.obs-positive{color:var(--good)}.obs-negative{color:var(--warn)}.obs-relative{display:flex;gap:5px;flex-wrap:wrap;padding-top:8px}
+.obs-chip{border:1px solid var(--line);border-radius:4px;padding:4px 6px;font-size:11px;background:var(--rule-bg)}
+.obs-chip a,.obs-grid a{color:var(--accent-strong)}
+.obs-cost-controls{display:flex;gap:6px;flex-wrap:wrap}
+.obs-cost-controls label{flex:1 1 95px}.obs-cost-controls input{margin-top:3px}
+.obs-plot{width:100%;min-height:190px}.obs-plot svg{display:block;width:100%;height:auto;max-height:245px}
+.obs-feedback-item{padding:7px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:120px minmax(0,1fr) 56px;gap:9px;align-items:start;font-size:12px}
+.obs-feedback-item p{margin:2px 0;color:var(--muted);font-size:12px}
+.obs-pill{font-size:10px;border:1px solid var(--line);border-radius:4px;padding:2px 4px;text-align:center}
+.obs-footnote{font-size:11px;color:var(--muted);padding:4px 8px}
+.obs-lanes{display:grid;gap:7px;margin-bottom:10px}
+.obs-lanes>div{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:5px;align-items:center}
+.obs-lanes span{border:1px solid var(--line);border-radius:5px;padding:7px 3px;text-align:center;background:var(--rule-bg);font-size:12px;font-weight:700}
+.obs-lanes b{color:var(--muted)}
+.obs-hypothesis details{font-size:11px;color:var(--muted)}
+.obs-hypothesis details p{margin-bottom:0}
+@media(max-width:1050px){.obs-grid{grid-template-columns:1fr}.obs-matrix,.obs-sources{grid-column:auto}}
+@media(max-width:650px){.obs-stats{grid-template-columns:repeat(2,1fr)}.obs-feedback-item{grid-template-columns:90px minmax(0,1fr)}.obs-feedback-item .obs-pill{grid-column:2;justify-self:start}.obs-lanes span{font-size:10px}}

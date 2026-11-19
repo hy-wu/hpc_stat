@@ -1,0 +1,56 @@
+---
+import Base from "../layouts/Base.astro";
+import "../styles/capability-observatory.css";
+---
+<Base title="GPT 跨代能力观察" active="capability-observatory">
+  <div class="filter-card obs-toolbar">
+    <section class="control-band">
+      <div class="search-block"><label for="obsSearch">模型 / 指标搜索</label><input id="obsSearch" type="search" placeholder="Astra / Sol / reasoning / Agent…" /></div>
+      <div class="control"><label for="obsSuite">评测体系</label><select id="obsSuite"><option value="LiveBench 2.0">LiveBench 2.0</option><option value="Artificial Analysis v5">Artificial Analysis v5</option><option value="Artificial Analysis">AA 专项</option></select></div>
+      <div class="control"><label for="obsPair">版本对照</label><select id="obsPair"><option value="GPT-6 Astra|GPT-6.2 Astra">6 Astra → 6.2 Astra</option><option value="GPT-6.1 Sol|GPT-6.2 Sol">6.1 Sol → 6.2 Sol</option><option value="GPT-5.6 Sol|GPT-6 Astra">5.6 Sol → 6 Astra</option></select></div>
+      <button class="ghost-button" id="obsReset" type="button">重置</button>
+      <button class="ghost-button" id="obsExport" type="button">导出 CSV</button>
+    </section>
+    <div class="obs-stats" id="obsStats" aria-live="polite"></div>
+  </div>
+  <div class="obs-grid">
+    <section class="table-panel obs-matrix">
+      <div class="panel-head"><h2>模型 × 能力 · 原始指标矩阵</h2><span class="preset-hint">单列相对强度着色 · 缺失值不估算 · 悬停查看来源</span></div>
+      <div class="table-wrap" id="obsMatrix"></div>
+    </section>
+    <section class="table-panel obs-delta">
+      <div class="panel-head"><h2>同体系跨代差值</h2><span class="preset-hint">百分点 / 原始单位</span></div>
+      <div id="obsDeltaBars"></div>
+      <div class="obs-relative" id="obsRelative"></div>
+    </section>
+    <section class="table-panel obs-cost">
+      <div class="panel-head"><h2>质量—成本前沿 · API 场景</h2><span class="preset-hint">非实测任务成本；推理开销另计</span></div>
+      <div class="obs-cost-controls">
+        <label>输入 (M token)<input id="obsInput" type="number" min="0" step="0.1" value="1"/></label>
+        <label>输出 (M token)<input id="obsOutput" type="number" min="0" step="0.1" value="0.2"/></label>
+        <label>缓存比例<input id="obsCache" type="number" min="0" max="1" step="0.1" value="0.5"/></label>
+      </div>
+      <div id="obsCostPlot" class="obs-plot"></div>
+      <div class="table-wrap" id="obsCostTable"></div>
+    </section>
+    <section class="table-panel obs-feedback">
+      <div class="panel-head"><h2>用户反馈 · 证据样本</h2><span class="preset-hint">定性事件，不推断好评率</span></div>
+      <div id="obsFeedbackList"></div>
+    </section>
+    <section class="table-panel obs-sources">
+      <div class="panel-head"><h2>证据审计</h2><span class="preset-hint">B 动态/官方资料 · C 社区单例 · D 待采集</span></div>
+      <div class="table-wrap" id="obsSources"></div>
+    </section>
+    <section class="table-panel obs-hypothesis">
+      <div class="panel-head"><h2>等能力线 · 待验证假说</h2><span class="preset-hint">非训练谱系，非已证实排名</span></div>
+      <div class="obs-lanes">
+        <div><span>5.6 Luna</span><b>→</b><span>6.1 Terra</span><b>→</b><span>6.2 Sol</span></div>
+        <div><span>5.6 Terra</span><b>→</b><span>6.1 Sol</span><b>→</b><span>6.2 Astra</span></div>
+        <div><span>5.6 Sol</span><b>→</b><span>6 Astra</span><b>→</b><span>Bel ?</span></div>
+      </div>
+      <details><summary>实验限制与下一步</summary><p>数据是研究性快照，不是完整普查。LiveBench 历史过滤、推理档位及 API 定价尚待逐行复核；不同榜单绝不直接平均。需要补充同模型、同推理预算、无工具的语义理解与抽象推理盲测，以及重复采样置信区间。参见 <code>research/capability-observatory/methodology.md</code>。</p></details>
+    </section>
+  </div>
+  <div class="obs-footnote">研究性历史快照 · 2026-11-19 · 数据缺失不补值 · 所有指标可追溯至来源 ID · <a href="https://github.com/hy-wu/hpc_stat/tree/research/gpt-capability-observatory-2026-11/data">仓库数据</a></div>
+  <script>import "../islands/CapabilityObservatory";</script>
+</Base>
