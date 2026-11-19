@@ -1,6 +1,11 @@
-import snapshot from "../../data/capability-observatory.json";
+type Result = {model:string;suite:string;metric:string;value:number;unit:string;source:string;status:string;effort?:string};
+type Snapshot = {models:string[];results:Result[];relative:{old_model:string;new_model:string;metric:string;delta:number;unit:string;source:string}[];feedback:{model:string;category:string;sentiment:string;summary:string;source:string}[];sources:{id:string;title:string;url:string;grade:string;type:string;limitations:string}[]};
 
-type Result = (typeof snapshot.results)[number];
+void (async () => {
+  const base = String(import.meta.env.BASE_URL || "/").replace(/\\/?$/, "/");
+  const response = await fetch(base + "data/capability-observatory.json");
+  if (!response.ok) throw new Error("Unable to load capability data (HTTP " + response.status + ")");
+  const snapshot = (await response.json()) as Snapshot;
 const root = (id: string) => document.getElementById(id) as HTMLElement;
 const esc = (v: unknown) => String(v ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c] || c));
 const src = (id: string) => snapshot.sources.find(s => s.id === id);
@@ -92,3 +97,9 @@ root("obsPair").addEventListener("change", updateDelta);
 root("obsReset").addEventListener("click",()=>{(root("obsSearch") as HTMLInputElement).value="";(root("obsSuite") as HTMLSelectElement).value="LiveBench 2.0";(root("obsPair") as HTMLSelectElement).selectedIndex=0;updateMatrix();updateDelta();});
 root("obsExport").addEventListener("click",exportCSV);
 updateMatrix();updateDelta();updateCost();updateFeedback();updateSources();
+
+})().catch((error: unknown) => {
+  console.error("[Capability Observatory] data load failed", error);
+  const el = document.getElementById("obsMatrix");
+  if (el) el.textContent = "研究数据加载失败，请检查 /hpc_stat/data/capability-observatory.json 是否可访问。";
+});
