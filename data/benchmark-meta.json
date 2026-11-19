@@ -1,0 +1,1958 @@
+{
+  "updated": "2026-11-10",
+  "note": "榜单元数据：论文/链接/题目构成/运行方式/自测难度。records 覆盖与成本统计由页面运行时从 benchmarks.json 计算。缺失字段表示未核实，不要随意编造。",
+  "selfRunLevels": {
+    "easy": "题集公开 + 判分简单，纯 API 即可",
+    "medium": "公开或可获取，但需要开源 harness / docker / 判分器",
+    "hard": "需重基础设施（联网、私有评测器、湿实验）或需联系主办方",
+    "no": "私有题集 / 提交制 / 众包投票，无法自行复现"
+  },
+  "meta": {
+    "fcs2": {
+      "venue": "官方榜",
+      "links": [
+        {
+          "label": "FrontierCS 主页",
+          "url": "https://frontier-cs.org/"
+        }
+      ],
+      "domain": "CS 前沿研发",
+      "itemSource": "隐藏 workloads（提交制）",
+      "numItems": "48 任务",
+      "numItemsNum": 48,
+      "capabilities": "端到端研发 · 超人类参考",
+      "evalMode": "pass rate + FCI + vs 人类参考",
+      "runMode": "官方托管评测",
+      "toolDeps": "各家 coding agent（claude-code / codex / antigravity…）",
+      "envDeps": "官方私有环境",
+      "agentScope": "agent × 模型",
+      "selfRun": "no",
+      "selfRunNote": "隐藏 workloads，需向主办方提交",
+      "aggregators": [
+        "官方"
+      ],
+      "otherInfo": "记录带整轮成本 costRunUSD；pass 需全部指标超人类参考",
+      "released": "2026",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 1,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "sensitive": "敏感研发",
+      "refusalNote": "隐藏 workloads 可能含敏感任务；官方未公布拒答口径",
+      "refusal": "未公布",
+      "listUpdated": "滚动更新"
+    },
+    "fcs11": {
+      "venue": "官方榜",
+      "links": [
+        {
+          "label": "FrontierCS v1",
+          "url": "https://frontier-cs.org/v1/"
+        }
+      ],
+      "domain": "CS 前沿研发",
+      "itemSource": "隐藏 workloads（提交制）",
+      "numItems": "—",
+      "capabilities": "端到端研发",
+      "evalMode": "Score",
+      "runMode": "官方托管评测",
+      "toolDeps": "各家 coding agent",
+      "envDeps": "官方私有环境",
+      "agentScope": "agent × 模型",
+      "selfRun": "no",
+      "aggregators": [
+        "官方"
+      ],
+      "otherInfo": "v1.1 版本页",
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 1,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusal": "未公布",
+      "listUpdated": "滚动更新"
+    },
+    "fcs10agents": {
+      "venue": "官方榜",
+      "links": [
+        {
+          "label": "FrontierCS v1",
+          "url": "https://frontier-cs.org/v1/"
+        }
+      ],
+      "domain": "CS 前沿研发",
+      "itemSource": "隐藏 workloads（提交制）",
+      "numItems": "—",
+      "capabilities": "端到端研发 · 多步工具调用",
+      "evalMode": "Score + 平均步数/工具调用/tokens",
+      "runMode": "官方托管评测",
+      "toolDeps": "各家 coding agent",
+      "envDeps": "官方私有环境",
+      "agentScope": "agent × 模型",
+      "selfRun": "no",
+      "aggregators": [
+        "官方"
+      ],
+      "otherInfo": "带 avgSteps / avgToolCalls / avgTokensM 遥测",
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 1,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusal": "未公布",
+      "listUpdated": "已归档（v1.0）"
+    },
+    "fcs10single": {
+      "venue": "官方榜",
+      "links": [
+        {
+          "label": "FrontierCS v1",
+          "url": "https://frontier-cs.org/v1/"
+        }
+      ],
+      "domain": "CS 前沿研发",
+      "itemSource": "隐藏 workloads（提交制）",
+      "numItems": "—",
+      "capabilities": "端到端研发",
+      "evalMode": "Score@1 + Elo",
+      "runMode": "官方托管评测（单次尝试）",
+      "toolDeps": "无（单次尝试口径）",
+      "envDeps": "官方私有环境",
+      "agentScope": "裸模型单次尝试",
+      "selfRun": "no",
+      "aggregators": [
+        "官方"
+      ],
+      "otherInfo": "人类专家参考 Score@1 = 86.99",
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 2,
+        "tools": 2,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusal": "未公布",
+      "listUpdated": "已归档（v1.0）"
+    },
+    "asb01": {
+      "venue": "官方榜",
+      "links": [
+        {
+          "label": "ASB leaderboard",
+          "url": "https://yibow.me/autonomous-science-bench/leaderboard"
+        }
+      ],
+      "domain": "自主科研闭环",
+      "itemSource": "design-build-test-learn campaigns",
+      "numItems": "6 campaigns ×3 trials",
+      "numItemsNum": 18,
+      "capabilities": "科研闭环 · 预算约束",
+      "evalMode": "resolution rate",
+      "runMode": "官方托管评测",
+      "toolDeps": "agent harness（claude-code / codex / mini-swe-agent）",
+      "envDeps": "官方私有环境",
+      "agentScope": "特设 agent × 模型",
+      "selfRun": "no",
+      "aggregators": [
+        "官方"
+      ],
+      "otherInfo": "带整轮成本 costUSD",
+      "released": "2026",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 1,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusal": "未公布",
+      "listUpdated": "滚动更新"
+    },
+    "frontierphysics": {
+      "venue": "arXiv 预印本",
+      "arxiv": "2611.06910",
+      "domain": "物理研究（端到端）",
+      "itemSource": "物理研究任务",
+      "numItems": "56 任务 ×3 rollouts",
+      "numItemsNum": 56,
+      "capabilities": "物理研究 · 验证器测试 + rubrics",
+      "evalMode": "Pass@1（全部 verifier + blocker rubrics）",
+      "runMode": "官方托管评测",
+      "toolDeps": "agent harness",
+      "envDeps": "官方私有环境",
+      "agentScope": "agent × 模型",
+      "selfRun": "no",
+      "aggregators": [
+        "官方"
+      ],
+      "released": "2026",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 2,
+        "image": 2,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusalNote": "物理研究题；官方未公布拒答口径",
+      "refusal": "未公布",
+      "listUpdated": "滚动更新"
+    },
+    "physclosure": {
+      "venue": "arXiv 预印本",
+      "arxiv": "2610.21767",
+      "domain": "强场/阿秒物理",
+      "itemSource": "物理研究任务",
+      "numItems": "50 任务 ×3 runs",
+      "numItemsNum": 50,
+      "capabilities": "物理研究闭环 RC4",
+      "evalMode": "RC（research closure）分级",
+      "runMode": "官方托管评测",
+      "toolDeps": "无（模型级记录）",
+      "envDeps": "官方私有环境",
+      "agentScope": "裸模型/提交制",
+      "selfRun": "no",
+      "aggregators": [
+        "官方"
+      ],
+      "released": "2026",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 2,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusal": "未公布",
+      "listUpdated": "滚动更新"
+    },
+    "frontierchallenge": {
+      "venue": "官方榜",
+      "links": [
+        {
+          "label": "FrontierChallenge",
+          "url": "https://apodexai.github.io/FrontierAgent/benchmarks/FrontierChallenge/"
+        }
+      ],
+      "domain": "科学工作流",
+      "itemSource": "科学工作流任务",
+      "numItems": "97 工作流",
+      "numItemsNum": 97,
+      "capabilities": "完整交付物契约",
+      "evalMode": "Pass Rate（交付物契约）",
+      "runMode": "官方托管评测",
+      "toolDeps": "agent harness",
+      "envDeps": "官方私有环境",
+      "agentScope": "agent × 模型",
+      "selfRun": "no",
+      "aggregators": [
+        "官方"
+      ],
+      "released": "2026",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 2,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusal": "未公布",
+      "listUpdated": "滚动更新"
+    },
+    "labbench": {
+      "venue": "官方榜（Gamow Labs）",
+      "links": [
+        {
+          "label": "LabBench 页",
+          "url": "https://gamowlabs.com/labbench-benchmarking-ai-wet-lab-decisions"
+        }
+      ],
+      "domain": "湿实验决策",
+      "itemSource": "真实记录的实验决策",
+      "numItems": "20 任务 / 406 二元判据",
+      "numItemsNum": 20,
+      "capabilities": "湿实验决策",
+      "evalMode": "判据通过率",
+      "runMode": "官方托管评测",
+      "toolDeps": "—",
+      "envDeps": "官方私有环境",
+      "agentScope": "裸模型/提交制",
+      "selfRun": "no",
+      "aggregators": [
+        "官方"
+      ],
+      "released": "2026",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 2,
+        "image": 2,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "sensitive": "生物实验",
+      "refusalNote": "湿实验决策题；拒答可能计为判据未通过",
+      "refusal": "计错",
+      "listUpdated": "滚动更新"
+    },
+    "tbs": {
+      "venue": "官方榜",
+      "links": [
+        {
+          "label": "TBS 官网",
+          "url": "https://www.terminal-bench-science.ai/"
+        }
+      ],
+      "domain": "终端科学工作流",
+      "itemSource": "研究工作流任务",
+      "numItems": "70 工作流 ×3 trials",
+      "numItemsNum": 70,
+      "capabilities": "终端操作 · 科研流程",
+      "evalMode": "pass（3 trials）",
+      "runMode": "docker/终端环境 + 原生 agent",
+      "toolDeps": "native agents",
+      "envDeps": "docker 沙箱",
+      "agentScope": "agent × 模型",
+      "selfRun": "medium",
+      "selfRunNote": "任务官方定义，需搭 docker harness",
+      "aggregators": [
+        "官方",
+        "Vals（对应榜）"
+      ],
+      "released": "2026",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 1,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "sensitive": "网安操作",
+      "refusalNote": "终端工作流可能含网安操作；拒答影响 pass",
+      "refusal": "计错",
+      "listUpdated": "滚动更新"
+    },
+    "tbsvals": {
+      "venue": "Vals 榜",
+      "links": [
+        {
+          "label": "Vals TBS",
+          "url": "https://www.vals.ai/benchmarks/terminal-bench-science"
+        }
+      ],
+      "domain": "终端科学工作流",
+      "itemSource": "同 TBS 70 任务",
+      "numItems": "70 任务（pass@1 单次）",
+      "numItemsNum": 70,
+      "capabilities": "终端操作 · 科研流程",
+      "evalMode": "pass@1",
+      "runMode": "Vals 统一 harness",
+      "toolDeps": "mini-swe-agent 等统一 harness",
+      "envDeps": "docker 沙箱",
+      "agentScope": "统一 agent × 模型",
+      "selfRun": "medium",
+      "selfRunNote": "mini-swe-agent 开源，需 docker",
+      "aggregators": [
+        "Vals"
+      ],
+      "otherInfo": "带 tokensPerTestM / costPerTestUSD",
+      "released": "2026",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 1,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "sensitive": "网安操作",
+      "refusalNote": "同 TBS；Vals 未公布拒答口径",
+      "refusal": "未公布",
+      "listUpdated": "滚动更新"
+    },
+    "aiderpoly": {
+      "venue": "官方榜（aider）",
+      "github": "Aider-AI/aider",
+      "issues": "Aider-AI/aider/issues",
+      "links": [
+        {
+          "label": "leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ],
+      "domain": "多语言编程练习",
+      "itemSource": "Exercism 公开题",
+      "numItems": "225 题 / 6 语言",
+      "numItemsNum": 225,
+      "capabilities": "代码生成 · 多语言",
+      "evalMode": "percent correct（pass@2）",
+      "runMode": "aider 开源 harness",
+      "toolDeps": "aider CLI",
+      "envDeps": "本地仓库 + 测试环境",
+      "agentScope": "特设 agent（aider）× 模型",
+      "selfRun": "easy",
+      "selfRunNote": "开源 harness，官方公布整轮成本（中位 ~$7）",
+      "aggregators": [
+        "官方",
+        "Epoch"
+      ],
+      "otherInfo": "记录含 costUSD 整轮成本与 secPerCase",
+      "released": "2024",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusalNote": "纯编程题；拒答计为未通过",
+      "refusal": "计错",
+      "listUpdated": "滚动更新"
+    },
+    "hle": {
+      "venue": "arXiv 预印本（CAIS × Scale AI）",
+      "arxiv": "2501.14249",
+      "huggingface": "cais/hle",
+      "links": [
+        {
+          "label": "agi.safe.ai",
+          "url": "https://agi.safe.ai"
+        }
+      ],
+      "domain": "多学科前沿问答",
+      "itemSource": "专家出题（含多模态）",
+      "numItems": "~2,500 题",
+      "numItemsNum": 2500,
+      "capabilities": "知识 · 推理 · 部分多模态",
+      "evalMode": "准确率（judge 判分）",
+      "runMode": "纯问答 + judge",
+      "toolDeps": "判分 judge 模型",
+      "envDeps": "无",
+      "agentScope": "裸模型",
+      "selfRun": "medium",
+      "selfRunNote": "题集公开但量大，建议抽样 + judge 判分",
+      "aggregators": [
+        "AA",
+        "Epoch",
+        "模型自报"
+      ],
+      "otherInfo": "本站记录全部来自模型自报",
+      "released": "2025-01",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 2,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "sensitive": "生化",
+      "refusalNote": "含生化等敏感题；各自报 harness 口径不一，多数计为错误",
+      "refusal": "计错",
+      "listUpdated": "静态题集"
+    },
+    "gpqa": {
+      "venue": "NeurIPS 2023 D&B",
+      "arxiv": "2311.12022",
+      "github": "idavidrein/gpqa",
+      "huggingface": "Idavidrein/gpqa",
+      "issues": "idavidrein/gpqa/issues",
+      "domain": "研究生级科学 MCQ",
+      "itemSource": "专家编写选择题（Google-proof）",
+      "numItems": "198（Diamond）/ 448 全集",
+      "numItemsNum": 198,
+      "capabilities": "科学推理 · 知识",
+      "evalMode": "准确率",
+      "runMode": "纯问答判分",
+      "toolDeps": "无",
+      "envDeps": "无",
+      "agentScope": "裸模型",
+      "selfRun": "easy",
+      "selfRunNote": "HF 公开，中位 ~$1/题",
+      "aggregators": [
+        "AA",
+        "Epoch",
+        "Vals",
+        "模型自报"
+      ],
+      "released": "2023-11",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "sensitive": "生化",
+      "refusalNote": "含生物/化学题；主流 harness 将拒答计为错误",
+      "refusal": "计错",
+      "listUpdated": "静态题集"
+    },
+    "swev": {
+      "venue": "ICLR 2024（Verified: OpenAI 合作子集）",
+      "arxiv": "2310.06770",
+      "github": "SWE-bench/swe-bench",
+      "huggingface": "princeton-nlp/SWE-bench_Verified",
+      "issues": "SWE-bench/swe-bench/issues",
+      "links": [
+        {
+          "label": "swebench.com",
+          "url": "https://www.swebench.com"
+        }
+      ],
+      "domain": "真实软工 issue 修复",
+      "itemSource": "GitHub PR/issue",
+      "numItems": "500 任务",
+      "numItemsNum": 500,
+      "capabilities": "软件工程 · 长上下文 · 工具",
+      "evalMode": "resolve rate（单 trial）",
+      "runMode": "agent harness + 每题 docker",
+      "toolDeps": "SWE-agent / mini-swe-agent / 各家 agent",
+      "envDeps": "docker（每实例镜像）",
+      "agentScope": "agent × 模型",
+      "selfRun": "medium",
+      "selfRunNote": "数据公开，docker 基础设施重；中位 ~$0.5/题，可抽样",
+      "aggregators": [
+        "官方",
+        "AA",
+        "Epoch",
+        "Vals",
+        "模型自报"
+      ],
+      "released": "2023-10（Verified 2024-08）",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 1,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "sensitive": "网安",
+      "refusalNote": "issue 修复偶涉安全代码；拒答计为未解决",
+      "refusal": "计错",
+      "listUpdated": "滚动更新"
+    },
+    "browsecomp": {
+      "venue": "arXiv 预印本（OpenAI）",
+      "arxiv": "2504.12516",
+      "huggingface": "openai/browsecomp",
+      "links": [
+        {
+          "label": "OpenAI 发布页",
+          "url": "https://openai.com/index/browsecomp"
+        }
+      ],
+      "domain": "联网检索问答",
+      "itemSource": "高难度可检索问题",
+      "numItems": "1,266 题",
+      "numItemsNum": 1266,
+      "capabilities": "浏览检索 · 持久查找",
+      "evalMode": "准确率",
+      "runMode": "浏览 agent + 判分",
+      "toolDeps": "搜索/浏览工具",
+      "envDeps": "联网",
+      "agentScope": "浏览 agent × 模型",
+      "selfRun": "hard",
+      "selfRunNote": "题集公开，但需浏览/搜索基础设施",
+      "aggregators": [
+        "模型自报"
+      ],
+      "otherInfo": "本站记录全部来自模型自报",
+      "released": "2025-04",
+      "modalities": {
+        "text": 1,
+        "search": 1,
+        "code": 0,
+        "tools": 0,
+        "image": 2,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "sensitive": "敏感检索",
+      "refusalNote": "敏感话题检索可能触发拒答/fallback；自报口径",
+      "refusal": "自报",
+      "listUpdated": "静态题集"
+    },
+    "vibecode": {
+      "venue": "Vals 榜",
+      "links": [
+        {
+          "label": "Vals Vibe Code",
+          "url": "https://www.vals.ai/benchmarks/vibe-code"
+        }
+      ],
+      "domain": "多语言 vibe coding",
+      "itemSource": "编码任务集",
+      "numItems": "—",
+      "capabilities": "代码生成 · 多语言",
+      "evalMode": "通过率",
+      "runMode": "统一 OpenHands harness",
+      "toolDeps": "OpenHands",
+      "envDeps": "docker 沙箱",
+      "agentScope": "统一 agent × 模型",
+      "selfRun": "medium",
+      "selfRunNote": "OpenHands 开源；需确认题集获取",
+      "aggregators": [
+        "Vals"
+      ],
+      "otherInfo": "带 tokensPerTestM / costPerTestUSD",
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 1,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusal": "未公布",
+      "listUpdated": "滚动更新"
+    },
+    "tb4": {
+      "venue": "Vals 榜",
+      "links": [
+        {
+          "label": "Vals TB4",
+          "url": "https://www.vals.ai/benchmarks/terminal-bench-4"
+        }
+      ],
+      "domain": "终端 agentic 任务",
+      "itemSource": "Terminal-Bench 4.0 任务",
+      "numItems": "—",
+      "capabilities": "终端操作 · agentic",
+      "evalMode": "pass@1",
+      "runMode": "统一 mini-SWE-agent harness",
+      "toolDeps": "mini-swe-agent",
+      "envDeps": "docker 沙箱",
+      "agentScope": "统一 agent × 模型",
+      "selfRun": "medium",
+      "selfRunNote": "terminal-bench 开源，docker 环境",
+      "aggregators": [
+        "Vals",
+        "官方（tb4official 对应）"
+      ],
+      "otherInfo": "带 tokensPerTestM / costPerTestUSD",
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 1,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "sensitive": "网安操作",
+      "refusalNote": "终端任务可能含网安操作；拒答影响 pass@1",
+      "refusal": "计错",
+      "listUpdated": "滚动更新"
+    },
+    "programbench": {
+      "venue": "Vals 榜",
+      "links": [
+        {
+          "label": "Vals ProgramBench",
+          "url": "https://www.vals.ai/benchmarks/programbench"
+        }
+      ],
+      "domain": "从零构建软件工件",
+      "itemSource": "软件构建任务",
+      "numItems": "—",
+      "capabilities": "工程构建",
+      "evalMode": "评分",
+      "runMode": "Vals harness（模型级记录）",
+      "toolDeps": "—",
+      "envDeps": "docker 沙箱",
+      "agentScope": "统一 harness × 模型",
+      "selfRun": "medium",
+      "aggregators": [
+        "Vals"
+      ],
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 1,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusal": "未公布",
+      "listUpdated": "滚动更新"
+    },
+    "ioi2": {
+      "venue": "Vals 榜",
+      "links": [
+        {
+          "label": "Vals IOI",
+          "url": "https://www.vals.ai/benchmarks/ioi"
+        },
+        {
+          "label": "IOI 官网",
+          "url": "https://ioinformatics.org/"
+        }
+      ],
+      "domain": "竞赛编程",
+      "itemSource": "IOI 历届竞赛题（公开）",
+      "numItems": "—",
+      "capabilities": "算法竞赛 · 长时推理",
+      "evalMode": "竞赛分",
+      "runMode": "Vals harness + 评测器",
+      "toolDeps": "竞赛评测器（special judge）",
+      "envDeps": "代码执行沙箱",
+      "agentScope": "统一 harness × 模型",
+      "selfRun": "medium",
+      "selfRunNote": "题目公开，需对接 IOI 评测器",
+      "aggregators": [
+        "Vals"
+      ],
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusalNote": "竞赛题无敏感内容；超时/拒答计 0 分",
+      "refusal": "计0",
+      "listUpdated": "滚动更新"
+    },
+    "biomystery": {
+      "venue": "Vals 榜",
+      "links": [
+        {
+          "label": "Vals BioMysteryBench",
+          "url": "https://www.vals.ai/benchmarks/biomysterybench"
+        }
+      ],
+      "domain": "生物数据调查",
+      "itemSource": "生物学谜题数据",
+      "numItems": "—",
+      "capabilities": "agentic 数据调查",
+      "evalMode": "评分",
+      "runMode": "Vals agent harness",
+      "toolDeps": "agent harness",
+      "envDeps": "数据分析环境",
+      "agentScope": "统一 agent × 模型",
+      "selfRun": "medium",
+      "aggregators": [
+        "Vals"
+      ],
+      "otherInfo": "带 tokensPerTestM / costPerTestUSD",
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 2,
+        "image": 3,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "sensitive": "生物",
+      "refusalNote": "生物调查题可能触发拒答；Vals 未公布口径",
+      "refusal": "未公布",
+      "listUpdated": "滚动更新"
+    },
+    "mysterymech": {
+      "venue": "Vals 榜",
+      "links": [
+        {
+          "label": "Vals MysteryMechanism",
+          "url": "https://www.vals.ai/benchmarks/mysterymechanism"
+        }
+      ],
+      "domain": "机制发现",
+      "itemSource": "机制发现任务",
+      "numItems": "—",
+      "capabilities": "机制发现 · 推理",
+      "evalMode": "评分",
+      "runMode": "Vals agent harness",
+      "toolDeps": "agent harness",
+      "envDeps": "—",
+      "agentScope": "统一 agent × 模型",
+      "selfRun": "medium",
+      "aggregators": [
+        "Vals"
+      ],
+      "otherInfo": "带 tokensPerTestM / costPerTestUSD",
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 2,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "sensitive": "机制分析",
+      "refusalNote": "机制发现题可能涉敏感系统；口径待查",
+      "refusal": "待查",
+      "listUpdated": "滚动更新"
+    },
+    "cursorbench": {
+      "venue": "官方榜（Cursor）",
+      "links": [
+        {
+          "label": "CursorBench",
+          "url": "https://cursor.com/cursorbench"
+        }
+      ],
+      "domain": "真实编码会话",
+      "itemSource": "Cursor 真实会话（模糊多文件任务）",
+      "numItems": "—",
+      "capabilities": "真实软工 · 模糊任务",
+      "evalMode": "score（多 effort 档）",
+      "runMode": "Cursor 内部 harness",
+      "toolDeps": "Cursor",
+      "envDeps": "Cursor 环境",
+      "agentScope": "特设 agent × 模型",
+      "selfRun": "no",
+      "selfRunNote": "私有会话数据 + Cursor harness",
+      "aggregators": [
+        "官方"
+      ],
+      "otherInfo": "带 costPerTaskUSD / tokensPerTask / stepsPerTask",
+      "released": "2026",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 1,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusal": "未公布",
+      "listUpdated": "滚动更新"
+    },
+    "otisaime": {
+      "venue": "Epoch 内部评测",
+      "links": [
+        {
+          "label": "Epoch 页",
+          "url": "https://epoch.ai/benchmarks/otis-mock-aime-2024-2025"
+        }
+      ],
+      "domain": "竞赛数学",
+      "itemSource": "mock AIME 题集（Epoch 私有）",
+      "numItems": "—",
+      "capabilities": "竞赛数学推理",
+      "evalMode": "解题率",
+      "runMode": "Epoch 内部 harness",
+      "toolDeps": "无",
+      "envDeps": "无",
+      "agentScope": "裸模型",
+      "selfRun": "no",
+      "selfRunNote": "私有题集；可用公开 AIME 原题近似替代",
+      "aggregators": [
+        "Epoch"
+      ],
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusalNote": "数学题；拒答/无答案计 0",
+      "refusal": "计0",
+      "listUpdated": "随 Epoch 更新"
+    },
+    "chesspuzzles": {
+      "venue": "Epoch 内部评测",
+      "links": [
+        {
+          "label": "Epoch 页",
+          "url": "https://epoch.ai/benchmarks/chess-puzzles"
+        }
+      ],
+      "domain": "棋局谜题",
+      "itemSource": "棋局残局谜题（Epoch 私有）",
+      "numItems": "—",
+      "capabilities": "棋类推理",
+      "evalMode": "解题率",
+      "runMode": "Epoch 内部 harness",
+      "toolDeps": "无",
+      "envDeps": "无",
+      "agentScope": "裸模型",
+      "selfRun": "no",
+      "aggregators": [
+        "Epoch"
+      ],
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 3,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusal": "计0",
+      "refusalNote": "棋局谜题；拒答/无合法着法计 0",
+      "listUpdated": "随 Epoch 更新"
+    },
+    "mysterygame": {
+      "venue": "Epoch 内部评测",
+      "links": [
+        {
+          "label": "Epoch 页",
+          "url": "https://epoch.ai/benchmarks/mystery-game-puzzles"
+        }
+      ],
+      "domain": "推理谜题游戏",
+      "itemSource": "推理谜题（Epoch 私有）",
+      "numItems": "—",
+      "capabilities": "推理 · 谜题",
+      "evalMode": "解题率",
+      "runMode": "Epoch 内部 harness",
+      "toolDeps": "无",
+      "envDeps": "无",
+      "agentScope": "裸模型",
+      "selfRun": "no",
+      "aggregators": [
+        "Epoch"
+      ],
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusal": "计0",
+      "refusalNote": "推理谜题；拒答计为未解出",
+      "listUpdated": "随 Epoch 更新"
+    },
+    "fm13v2": {
+      "venue": "Epoch 收录（FrontierMath）",
+      "arxiv": "2411.04872",
+      "links": [
+        {
+          "label": "Epoch 页",
+          "url": "https://epoch.ai/benchmarks/frontiermath-tiers-1-3-v2"
+        }
+      ],
+      "domain": "研究级数学",
+      "itemSource": "FrontierMath 私有题集 T1–3",
+      "numItems": "—",
+      "capabilities": "数学研究推理",
+      "evalMode": "解题率",
+      "runMode": "Epoch 内部 harness",
+      "toolDeps": "无",
+      "envDeps": "无",
+      "agentScope": "裸模型",
+      "selfRun": "no",
+      "selfRunNote": "私有题集防污染",
+      "aggregators": [
+        "Epoch"
+      ],
+      "released": "2024-11",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 2,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusalNote": "数学题；拒答计为未解出",
+      "refusal": "计0",
+      "listUpdated": "v2 版"
+    },
+    "fmt4v2": {
+      "venue": "Epoch 收录（FrontierMath）",
+      "arxiv": "2411.04872",
+      "links": [
+        {
+          "label": "Epoch 页",
+          "url": "https://epoch.ai/benchmarks/frontiermath-tier-4-v2"
+        }
+      ],
+      "domain": "研究级数学（Tier 4）",
+      "itemSource": "FrontierMath 私有题集 T4",
+      "numItems": "—",
+      "capabilities": "数学研究推理（最难档）",
+      "evalMode": "解题率",
+      "runMode": "Epoch 内部 harness",
+      "toolDeps": "无",
+      "envDeps": "无",
+      "agentScope": "裸模型",
+      "selfRun": "no",
+      "aggregators": [
+        "Epoch"
+      ],
+      "released": "2024-11",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 2,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusalNote": "数学题；拒答计为未解出",
+      "refusal": "计0",
+      "listUpdated": "v2 版"
+    },
+    "arcagi1": {
+      "venue": "ARC Prize 官方（Epoch 收录）",
+      "arxiv": "2412.04604",
+      "github": "fchollet/ARC-AGI",
+      "issues": "fchollet/ARC-AGI/issues",
+      "links": [
+        {
+          "label": "ARC Prize",
+          "url": "https://arcprize.org/"
+        }
+      ],
+      "domain": "网格抽象推理",
+      "itemSource": "ARC 公开任务集",
+      "numItems": "400 eval 任务",
+      "numItemsNum": 400,
+      "capabilities": "抽象推理 · few-shot 归纳",
+      "evalMode": "pass@2",
+      "runMode": "纯 prompt（网格 IO）",
+      "toolDeps": "无",
+      "envDeps": "无",
+      "agentScope": "裸模型",
+      "selfRun": "easy",
+      "selfRunNote": "GitHub 公开，中位 ~$0.2/任务",
+      "aggregators": [
+        "ARC Prize",
+        "Epoch"
+      ],
+      "released": "2019",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 3,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusalNote": "纯网格推理；拒答计为未通过",
+      "refusal": "计错",
+      "listUpdated": "随 ARC Prize 赛季"
+    },
+    "arcagi2": {
+      "venue": "ARC Prize 官方（Epoch 收录）",
+      "arxiv": "2505.11831",
+      "github": "arcprize/ARC-AGI-2",
+      "issues": "arcprize/ARC-AGI-2/issues",
+      "links": [
+        {
+          "label": "ARC Prize",
+          "url": "https://arcprize.org/"
+        }
+      ],
+      "domain": "网格抽象推理（更难）",
+      "itemSource": "ARC-AGI-2 公开任务集",
+      "numItems": "120+ eval 任务",
+      "numItemsNum": 120,
+      "capabilities": "抽象推理 · few-shot 归纳",
+      "evalMode": "pass@2",
+      "runMode": "纯 prompt（网格 IO）",
+      "toolDeps": "无",
+      "envDeps": "无",
+      "agentScope": "裸模型",
+      "selfRun": "easy",
+      "selfRunNote": "GitHub 公开，effort 覆盖最全",
+      "aggregators": [
+        "ARC Prize",
+        "Epoch"
+      ],
+      "released": "2025-03",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 3,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusalNote": "纯网格推理；拒答计为未通过",
+      "refusal": "计错",
+      "listUpdated": "随 ARC Prize 赛季"
+    },
+    "scicode": {
+      "venue": "NeurIPS 2024 D&B（Epoch 收录）",
+      "arxiv": "2407.13168",
+      "github": "SciCode-AI/SciCode",
+      "issues": "SciCode-AI/SciCode/issues",
+      "domain": "科学计算代码",
+      "itemSource": "科学计算问题（论文/教材）",
+      "numItems": "80 题 / 338 子步",
+      "numItemsNum": 80,
+      "capabilities": "科学编程 · 推导实现",
+      "evalMode": "AA implementation 分",
+      "runMode": "纯问答 + 测试判分",
+      "toolDeps": "测试判分器",
+      "envDeps": "Python 执行环境",
+      "agentScope": "裸模型",
+      "selfRun": "medium",
+      "selfRunNote": "GitHub 公开，需配执行环境",
+      "aggregators": [
+        "AA",
+        "Epoch"
+      ],
+      "released": "2024-07",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusalNote": "科学计算题；拒答计为未通过",
+      "refusal": "计错",
+      "listUpdated": "随 Epoch 更新"
+    },
+    "critpt": {
+      "venue": "Epoch 收录",
+      "links": [
+        {
+          "label": "Epoch 页",
+          "url": "https://epoch.ai/benchmarks/critpt"
+        }
+      ],
+      "domain": "物理前沿推理",
+      "itemSource": "物理前沿问题",
+      "numItems": "—",
+      "capabilities": "物理推理 · 研究品味",
+      "evalMode": "评分",
+      "runMode": "Epoch 内部 harness",
+      "toolDeps": "无",
+      "envDeps": "无",
+      "agentScope": "裸模型",
+      "selfRun": "no",
+      "aggregators": [
+        "Epoch"
+      ],
+      "otherInfo": "部分记录带 costUSD",
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 2,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusalNote": "物理推理题；拒答计低分（Epoch 收录口径）",
+      "refusal": "降分",
+      "listUpdated": "随 Epoch 更新"
+    },
+    "weirdml": {
+      "venue": "官方榜（Epoch 收录）",
+      "links": [
+        {
+          "label": "WeirdML",
+          "url": "https://weirdml.com/"
+        },
+        {
+          "label": "Epoch 页",
+          "url": "https://epoch.ai/benchmarks/weirdml"
+        }
+      ],
+      "domain": "非常规 ML 任务",
+      "itemSource": "非常规机器学习任务",
+      "numItems": "—",
+      "capabilities": "ML 工程 · 非常规求解",
+      "evalMode": "score + 代码行数",
+      "runMode": "官方 harness（整轮）",
+      "toolDeps": "—",
+      "envDeps": "ML 执行环境",
+      "agentScope": "agent/模型",
+      "selfRun": "medium",
+      "selfRunNote": "题集公开（weirdml.com），需执行环境",
+      "aggregators": [
+        "官方",
+        "Epoch"
+      ],
+      "otherInfo": "带 costPerRunUSD 整轮成本",
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 0,
+        "image": 3,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusalNote": "非常规任务可能触发 fallback；官方按 score 计",
+      "refusal": "降分",
+      "listUpdated": "滚动更新"
+    },
+    "webdevarena": {
+      "venue": "LMArena WebDev（Epoch 收录）",
+      "links": [
+        {
+          "label": "Epoch 页",
+          "url": "https://epoch.ai/benchmarks/webdev-arena"
+        }
+      ],
+      "domain": "Web 开发竞技场",
+      "itemSource": "众包用户对战",
+      "numItems": "—",
+      "capabilities": "前端/Web 开发 · 人类偏好",
+      "evalMode": "Elo（众包投票）",
+      "runMode": "众包对战",
+      "toolDeps": "—",
+      "envDeps": "—",
+      "agentScope": "裸模型（人类评判）",
+      "selfRun": "no",
+      "selfRunNote": "众包 Elo，不可自测",
+      "aggregators": [
+        "LMArena",
+        "Epoch"
+      ],
+      "released": "2024",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 3,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusal": "降分",
+      "refusalNote": "拒答输出差，被人类投票自然压低 Elo",
+      "listUpdated": "实时 Elo"
+    },
+    "gdpdf": {
+      "venue": "Surge AI（Epoch 收录）",
+      "links": [
+        {
+          "label": "Epoch 页",
+          "url": "https://epoch.ai/benchmarks/gdp-pdf"
+        }
+      ],
+      "domain": "文档理解",
+      "itemSource": "GDP.pdf 文档集",
+      "numItems": "—",
+      "capabilities": "文档理解 · 抽取",
+      "evalMode": "评分",
+      "runMode": "Surge AI 评测",
+      "toolDeps": "—",
+      "envDeps": "—",
+      "agentScope": "裸模型",
+      "selfRun": "no",
+      "aggregators": [
+        "Surge AI",
+        "Epoch"
+      ],
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 1,
+        "pdf": 1,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusalNote": "文档题；拒答计低分",
+      "refusal": "降分",
+      "listUpdated": "随 Epoch 更新"
+    },
+    "lmca": {
+      "venue": "Epoch 收录",
+      "links": [
+        {
+          "label": "Epoch 页",
+          "url": "https://epoch.ai/benchmarks/lmca"
+        }
+      ],
+      "domain": "—",
+      "itemSource": "Epoch 收录评测",
+      "numItems": "—",
+      "capabilities": "—",
+      "evalMode": "评分",
+      "runMode": "Epoch 内部 harness",
+      "toolDeps": "—",
+      "envDeps": "—",
+      "agentScope": "—",
+      "selfRun": "no",
+      "aggregators": [
+        "Epoch"
+      ],
+      "otherInfo": "元数据待补充",
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "listUpdated": "随 Epoch 更新"
+    },
+    "dtbench": {
+      "venue": "Epoch 收录",
+      "links": [
+        {
+          "label": "Epoch 页",
+          "url": "https://epoch.ai/benchmarks/dtbench"
+        }
+      ],
+      "domain": "决策任务",
+      "itemSource": "决策任务集",
+      "numItems": "—",
+      "capabilities": "决策 · 推理",
+      "evalMode": "评分",
+      "runMode": "Epoch 内部 harness",
+      "toolDeps": "—",
+      "envDeps": "—",
+      "agentScope": "—",
+      "selfRun": "no",
+      "aggregators": [
+        "Epoch"
+      ],
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 0,
+        "pdf": 3,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "listUpdated": "随 Epoch 更新"
+    },
+    "deepswe": {
+      "venue": "Epoch 收录",
+      "links": [
+        {
+          "label": "Epoch 页",
+          "url": "https://epoch.ai/benchmarks/deepswe"
+        }
+      ],
+      "domain": "软件工程",
+      "itemSource": "软工任务集",
+      "numItems": "—",
+      "capabilities": "软工 · agentic",
+      "evalMode": "score + pass4 + 95%CI",
+      "runMode": "Epoch harness",
+      "toolDeps": "agent harness",
+      "envDeps": "执行环境",
+      "agentScope": "agent × 模型",
+      "selfRun": "no",
+      "aggregators": [
+        "Epoch"
+      ],
+      "otherInfo": "带 effort / cost / tokens / steps",
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 1,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusal": "待查",
+      "listUpdated": "随 Epoch 更新"
+    },
+    "simplebench": {
+      "venue": "官方榜（Epoch 收录）",
+      "links": [
+        {
+          "label": "Epoch 页",
+          "url": "https://epoch.ai/benchmarks/simplebench"
+        }
+      ],
+      "domain": "常识/简单推理",
+      "itemSource": "SimpleBench 题集",
+      "numItems": "~200 题",
+      "numItemsNum": 200,
+      "capabilities": "常识推理 · 难题反直觉",
+      "evalMode": "AVG@5",
+      "runMode": "纯问答",
+      "toolDeps": "无",
+      "envDeps": "无",
+      "agentScope": "裸模型",
+      "selfRun": "easy",
+      "selfRunNote": "题集公开，每题 5 次取均值",
+      "aggregators": [
+        "官方",
+        "Epoch"
+      ],
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusalNote": "含误导性题；拒答计入 AVG@5 分母",
+      "refusal": "分母",
+      "listUpdated": "随 Epoch 更新"
+    },
+    "gso": {
+      "venue": "Epoch 收录",
+      "links": [
+        {
+          "label": "Epoch 页",
+          "url": "https://epoch.ai/benchmarks/gso-bench"
+        }
+      ],
+      "domain": "优化求解",
+      "itemSource": "优化任务集",
+      "numItems": "—",
+      "capabilities": "全局优化",
+      "evalMode": "OPT@1 / OPT@10",
+      "runMode": "Epoch harness",
+      "toolDeps": "—",
+      "envDeps": "—",
+      "agentScope": "—",
+      "selfRun": "no",
+      "aggregators": [
+        "Epoch"
+      ],
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "listUpdated": "随 Epoch 更新"
+    },
+    "drbench": {
+      "venue": "Epoch 收录",
+      "links": [
+        {
+          "label": "Epoch 页",
+          "url": "https://epoch.ai/benchmarks/deepresearchbench"
+        }
+      ],
+      "domain": "深度研究",
+      "itemSource": "深度研究任务",
+      "numItems": "—",
+      "capabilities": "研究检索 · 报告生成",
+      "evalMode": "评分",
+      "runMode": "研究 agent + judge",
+      "toolDeps": "搜索/浏览工具",
+      "envDeps": "联网",
+      "agentScope": "研究 agent × 模型",
+      "selfRun": "hard",
+      "selfRunNote": "需联网检索 + judge 判分",
+      "aggregators": [
+        "Epoch"
+      ],
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 1,
+        "code": 0,
+        "tools": 2,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "sensitive": "敏感话题",
+      "refusalNote": "深度研究题可能触发拒答；口径待查",
+      "refusal": "待查",
+      "listUpdated": "随 Epoch 更新"
+    },
+    "alebench": {
+      "venue": "Sakana AI（Epoch 收录）",
+      "arxiv": "2506.09050",
+      "github": "SakanaAI/ALE-Bench",
+      "issues": "SakanaAI/ALE-Bench/issues",
+      "links": [
+        {
+          "label": "Epoch 页",
+          "url": "https://epoch.ai/benchmarks/ale-bench"
+        }
+      ],
+      "domain": "算法竞赛（启发式）",
+      "itemSource": "AtCoder heuristic 竞赛题",
+      "numItems": "—",
+      "capabilities": "算法优化 · 迭代改进",
+      "evalMode": "score（对 AtCoder 名次折算）",
+      "runMode": "代码生成 + 执行评分",
+      "toolDeps": "评测执行器",
+      "envDeps": "代码执行环境",
+      "agentScope": "agent/模型",
+      "selfRun": "medium",
+      "selfRunNote": "GitHub 公开，需执行评分环境",
+      "aggregators": [
+        "官方",
+        "Epoch"
+      ],
+      "otherInfo": "带 costUSD / totalTokensK / outputTokensK",
+      "released": "2025-06",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "refusal": "计0",
+      "refusalNote": "拒答→无有效提交，按竞赛分计 0",
+      "listUpdated": "随 Epoch 更新"
+    },
+    "tb4official": {
+      "venue": "官方榜（Laude Institute）",
+      "github": "laude-institute/terminal-bench",
+      "issues": "laude-institute/terminal-bench/issues",
+      "links": [
+        {
+          "label": "tbench.ai",
+          "url": "https://www.tbench.ai/leaderboard/terminal-bench/4.0"
+        }
+      ],
+      "domain": "终端 agentic 任务",
+      "itemSource": "Terminal-Bench 4.0 任务集",
+      "numItems": "—",
+      "capabilities": "终端操作 · agentic",
+      "evalMode": "score + 95%CI + 总 tokens/成本",
+      "runMode": "terminal-bench harness（docker）",
+      "toolDeps": "terminal-bench + agent",
+      "envDeps": "docker 沙箱",
+      "agentScope": "agent × 模型（多档位）",
+      "selfRun": "medium",
+      "selfRunNote": "harness 开源，docker 环境重",
+      "aggregators": [
+        "官方",
+        "Vals（对应榜）"
+      ],
+      "otherInfo": "带 tokensB / costKUSD 整轮统计",
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 1,
+        "tools": 1,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "sensitive": "网安操作",
+      "refusalNote": "终端任务可能含网安操作；拒答影响 score",
+      "refusal": "计错",
+      "listUpdated": "滚动更新"
+    },
+    "benchleader": {
+      "venue": "汇总站",
+      "links": [
+        {
+          "label": "BenchLeader",
+          "url": "https://www.benchleader.com"
+        }
+      ],
+      "domain": "复合指数",
+      "itemSource": "聚合其他榜单",
+      "numItems": "—",
+      "capabilities": "综合（含分类分/价格/速度）",
+      "evalMode": "model@effort 复合指数",
+      "runMode": "汇总（非评测）",
+      "toolDeps": "—",
+      "envDeps": "—",
+      "agentScope": "—",
+      "selfRun": "no",
+      "selfRunNote": "本身是汇总站",
+      "aggregators": [
+        "BenchLeader（本站来源）"
+      ],
+      "released": "2026",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "listUpdated": "滚动更新"
+    },
+    "aaeffort": {
+      "venue": "汇总站（temperature2 × AA）",
+      "links": [
+        {
+          "label": "temperature2 effort",
+          "url": "https://temperature2.com/models/effort/"
+        }
+      ],
+      "domain": "智能指数 effort 阶梯",
+      "itemSource": "Artificial Analysis 数据",
+      "numItems": "—",
+      "capabilities": "综合智能 · effort 端点",
+      "evalMode": "AA 智能指数 + 首答等待倍数",
+      "runMode": "汇总（非评测）",
+      "toolDeps": "—",
+      "envDeps": "—",
+      "agentScope": "—",
+      "selfRun": "no",
+      "aggregators": [
+        "AA",
+        "temperature2"
+      ],
+      "released": "2025",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 0
+      },
+      "openOnly": false,
+      "listUpdated": "滚动更新"
+    },
+    "videomme": {
+      "venue": "NeurIPS 2024 D&B",
+      "arxiv": "2405.21075",
+      "github": "BradyFU/Video-MME",
+      "huggingface": "lmms-lab/Video-MME",
+      "issues": "BradyFU/Video-MME/issues",
+      "links": [
+        {
+          "label": "项目页",
+          "url": "https://video-mme.github.io/"
+        }
+      ],
+      "released": "2024-05",
+      "listUpdated": "静态题集",
+      "openOnly": false,
+      "domain": "视频理解",
+      "itemSource": "YouTube 视频 + 人工标注 MCQ",
+      "numItems": "900 视频 / 2,700 题",
+      "numItemsNum": 2700,
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 1,
+        "audio": 3
+      },
+      "capabilities": "视频理解 · 时序推理",
+      "evalMode": "准确率",
+      "runMode": "帧采样 + 问答",
+      "toolDeps": "视频解码",
+      "envDeps": "FFmpeg/帧提取",
+      "agentScope": "多模态模型",
+      "selfRun": "medium",
+      "selfRunNote": "题集公开，需视频下载与帧采样管线",
+      "aggregators": [
+        "官方",
+        "lmms-eval"
+      ],
+      "otherInfo": "可选字幕轨（audio ³）"
+    },
+    "longvideobench": {
+      "venue": "arXiv 预印本",
+      "arxiv": "2407.15754",
+      "github": "longvideobench/LongVideoBench",
+      "huggingface": "longvideobench/LongVideoBench",
+      "issues": "longvideobench/LongVideoBench/issues",
+      "links": [
+        {
+          "label": "项目页",
+          "url": "https://longvideobench.github.io/"
+        }
+      ],
+      "released": "2024-07",
+      "listUpdated": "静态题集",
+      "openOnly": false,
+      "domain": "长视频理解",
+      "itemSource": "长视频 + 引用上下文 MCQ",
+      "numItems": "~3,763 视频 / 3,337 题",
+      "numItemsNum": 3337,
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 1,
+        "audio": 0
+      },
+      "capabilities": "长视频 · 上下文引用",
+      "evalMode": "准确率",
+      "runMode": "帧采样 + 问答",
+      "toolDeps": "视频解码",
+      "envDeps": "FFmpeg/帧提取",
+      "agentScope": "多模态模型",
+      "selfRun": "medium",
+      "selfRunNote": "题集公开，视频量大下载成本高",
+      "aggregators": [
+        "官方",
+        "lmms-eval"
+      ]
+    },
+    "mvbench": {
+      "venue": "CVPR 2024",
+      "arxiv": "2311.17005",
+      "github": "OpenGVLab/Ask-Anything",
+      "huggingface": "OpenGVLab/MVBench",
+      "issues": "OpenGVLab/Ask-Anything/issues",
+      "released": "2023-11",
+      "listUpdated": "静态题集",
+      "openOnly": false,
+      "domain": "视频时序理解",
+      "itemSource": "公开视频数据集改造 20 类任务",
+      "numItems": "~4,000 QA",
+      "numItemsNum": 4000,
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 1,
+        "audio": 0
+      },
+      "capabilities": "视频时序 · 动作/因果理解",
+      "evalMode": "准确率",
+      "runMode": "帧采样 + 问答",
+      "toolDeps": "视频解码",
+      "envDeps": "FFmpeg/帧提取",
+      "agentScope": "多模态模型",
+      "selfRun": "medium",
+      "aggregators": [
+        "官方",
+        "lmms-eval"
+      ]
+    },
+    "audiobench": {
+      "venue": "arXiv 预印本",
+      "arxiv": "2406.16020",
+      "github": "AudioLLMs/AudioBench",
+      "huggingface": "AudioLLMs",
+      "issues": "AudioLLMs/AudioBench/issues",
+      "released": "2024-06",
+      "listUpdated": "滚动更新",
+      "openOnly": false,
+      "domain": "音频理解",
+      "itemSource": "语音/环境声/音乐多任务汇总",
+      "numItems": "多子集",
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 1
+      },
+      "capabilities": "音频理解 · 指令跟随",
+      "evalMode": "多指标综合分",
+      "runMode": "音频输入 + 生成/判分",
+      "toolDeps": "音频解码",
+      "envDeps": "音频处理（torchaudio 等）",
+      "agentScope": "音频/多模态模型",
+      "selfRun": "medium",
+      "selfRunNote": "开源 harness，需音频处理环境",
+      "aggregators": [
+        "官方"
+      ]
+    },
+    "dynamicsuperb": {
+      "venue": "ICLR 2025",
+      "arxiv": "2404.13116",
+      "github": "dynamic-superb/dynamic-superb",
+      "huggingface": "DynamicSuperb",
+      "issues": "dynamic-superb/dynamic-superb/issues",
+      "released": "2024-04",
+      "listUpdated": "持续扩展",
+      "openOnly": false,
+      "domain": "语音指令",
+      "itemSource": "社区贡献的语音处理任务",
+      "numItems": "180+ 任务",
+      "numItemsNum": 180,
+      "modalities": {
+        "text": 1,
+        "search": 0,
+        "code": 0,
+        "tools": 0,
+        "image": 0,
+        "pdf": 0,
+        "video": 0,
+        "audio": 1
+      },
+      "capabilities": "语音指令 · 可扩展任务集",
+      "evalMode": "任务指标综合",
+      "runMode": "音频输入 + 任务指标",
+      "toolDeps": "音频解码",
+      "envDeps": "音频处理",
+      "agentScope": "音频/多模态模型",
+      "selfRun": "medium",
+      "selfRunNote": "开源，任务集持续扩充",
+      "aggregators": [
+        "官方"
+      ]
+    }
+  }
+}

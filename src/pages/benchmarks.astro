@@ -1,0 +1,91 @@
+---
+import Base from "../layouts/Base.astro";
+import InsightGrid from "../components/workbench/InsightGrid.astro";
+---
+
+<Base title="榜单对比" active="benchmarks">
+  <div class="filter-card">
+    <section class="control-band">
+      <div class="search-block">
+        <label for="benchSearch">搜索榜单</label>
+        <input id="benchSearch" type="search" placeholder="榜单名、主题、能力维度、来源..." />
+      </div>
+      <div class="control">
+        <label for="domainFilter">任务主题</label>
+        <select id="domainFilter"></select>
+      </div>
+      <div class="control">
+        <label for="runModeFilter">运行方式</label>
+        <select id="runModeFilter"></select>
+      </div>
+      <div class="control">
+        <label for="selfRunFilter">自测难度</label>
+        <select id="selfRunFilter"></select>
+      </div>
+      <div class="control">
+        <label for="aggFilter">收录/复现</label>
+        <select id="aggFilter"></select>
+      </div>
+      <button class="ghost-button" id="benchResetButton" type="button">重置</button>
+    </section>
+    <InsightGrid metrics={[
+      { id: "statBenchCount", label: "榜单" },
+      { id: "statRecordCount", label: "站内记录" },
+      { id: "statModelCount", label: "覆盖模型" },
+      { id: "statSelfRun", label: "可自行复测" },
+    ]} />
+  </div>
+
+  <section class="table-panel">
+    <div class="panel-head">
+      <h2>榜单元数据对比</h2>
+      <div class="table-tools">
+        <span class="preset-hint">点击表头排序 · 需求角标 ¹必需 ²回退 ³可选 · 拒答 计错/计0/降分/分母/未公布 · — 未核实</span>
+        <button class="text-button" id="toggleColumnsButton" type="button">列设置</button>
+      </div>
+    </div>
+    <div class="column-picker" id="columnPicker" hidden></div>
+    <div class="table-wrap bench-wrap">
+      <table id="benchTable">
+        <thead id="benchTableHead"></thead>
+        <tbody id="benchTableBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="table-panel">
+    <div class="panel-head">
+      <h2>模型 × 榜单 · 单题耗费热力图</h2>
+      <div class="table-tools">
+        <select id="heatMetricSelect" style="width:auto">
+          <option value="cost" selected>估算单题成本 $</option>
+          <option value="tokens">单题 tokens (M)</option>
+        </select>
+        <input id="heatModelSearch" type="search" placeholder="过滤模型..." style="width:160px" />
+      </div>
+    </div>
+    <div class="chart-summary" id="heatSummary"></div>
+    <div class="heat-wrap">
+      <table id="heatTable"></table>
+    </div>
+  </section>
+
+  <section class="table-panel">
+    <div class="panel-head">
+      <h2>单题成本分布 histogram</h2>
+      <div class="table-tools">
+        <select id="histMetricSelect" style="width:auto">
+          <option value="cost" selected>估算单题成本 $</option>
+          <option value="tokens">单题 tokens (M)</option>
+        </select>
+      </div>
+    </div>
+    <div class="chart-summary" id="histSummary"></div>
+    <div id="benchHistograms" class="hist-grid"></div>
+  </section>
+
+  <div data-benchmarks-page></div>
+  <script>
+    import "../islands/Benchmarks";
+  </script>
+</Base>

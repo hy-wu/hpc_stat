@@ -40,7 +40,10 @@ import Base from "../layouts/Base.astro";
   <div class="chart-summary" id="chartSummary" aria-live="polite">加载数据…</div>
 
   <section class="chart-container" aria-label="模型与硬件显存-吞吐散点图">
-    <canvas id="chartCanvas" role="img" aria-label="带数据标签、硬件显存轴和吞吐标签的模型与硬件散点图"></canvas>
+    <div id="chartLegend" aria-hidden="true"></div>
+    <div class="chart-canvas-wrap">
+      <canvas id="chartCanvas" role="img" aria-label="带数据标签、硬件显存轴和吞吐标签的模型与硬件散点图"></canvas>
+    </div>
   </section>
 
   <div data-chart-page="model-hardware"></div>

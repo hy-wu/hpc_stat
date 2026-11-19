@@ -21127,5 +21127,4969 @@
         }
       ]
     }
+  },
+  {
+    "id": "kimi-k3-1-pro-together",
+    "name": "Kimi K3.1 PRO Together",
+    "vendor": "Moonshot AI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "doubao-seed-evolving",
+    "name": "Doubao Seed Evolving",
+    "vendor": "ByteDance",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-large-4-0-oss",
+    "name": "Mistral Large 4 0 OSS",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "doubao-seed-1-6-thinking",
+    "name": "Doubao-Seed-1.6 (thinking)",
+    "vendor": "ByteDance",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "doubao-seed-2-1-turbo-260628",
+    "name": "Doubao Seed 2.1 Turbo 260628",
+    "vendor": "ByteDance",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "doubao-seed-2-0-lite-260428",
+    "name": "Doubao Seed 2.0 LITE 260428",
+    "vendor": "ByteDance",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "doubao-seed-2-0-pro-260215",
+    "name": "Doubao Seed 2.0 PRO 260215",
+    "vendor": "ByteDance",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "doubao-seed-2-1-pro-260628",
+    "name": "Doubao Seed 2.1 PRO 260628",
+    "vendor": "ByteDance",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "muse-spark-open-816b-a42b",
+    "name": "Muse Spark OPEN 816B A42b",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-large-4-0",
+    "name": "Mistral Large 4 0",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "seed-oss-36b-instruct",
+    "name": "Seed OSS 36B Instruct",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-30b-a3b-thinking-2507",
+    "name": "QWEN3 30B A3b Thinking 2507",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-30b-a3b-instruct-2507",
+    "name": "QWEN3 30B A3b Instruct 2507",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-30b-a3b",
+    "name": "QWEN3 30B A3b",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen2-5-7b-instruct",
+    "name": "Qwen2.5 7B Instruct",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-small-3-1-2503",
+    "name": "Mistral Small 3.1 2503",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-small-3-2501",
+    "name": "Mistral Small 3 2501",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "magistral-small-1-2",
+    "name": "Magistral Small 1.2",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "llama-3-2-1b-instruct",
+    "name": "Llama 3.2 1B Instruct",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "granite-4-0-1b",
+    "name": "Granite 4.0 1B",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-4b-instruct-2507",
+    "name": "QWEN3 4B Instruct 2507",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-4b",
+    "name": "QWEN3 4B",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-14b",
+    "name": "QWEN3 14B",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-1-7b",
+    "name": "QWEN3 1.7b",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-small-3-2-2506",
+    "name": "Mistral Small 3.2 2506",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "granite-4-0-350m",
+    "name": "Granite 4.0 350M",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemma-3-4b-it",
+    "name": "Gemma 3 4B IT",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemma-3-1b-it",
+    "name": "Gemma 3 1B IT",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemma-3-12b-it",
+    "name": "Gemma 3 12B IT",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "deepseek-r1-distill-qwen-32b",
+    "name": "DeepSeek R1 Distill Qwen 32B",
+    "vendor": "DeepSeek",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "deepseek-r1-distill-qwen-1-5b",
+    "name": "DeepSeek R1 Distill Qwen 1.5b",
+    "vendor": "DeepSeek",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "deepseek-r1-0528-qwen3-8b",
+    "name": "DeepSeek R1 0528 QWEN3 8B",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "llama-3-1-8b-instruct",
+    "name": "Llama 3.1 8B Instruct",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-8b",
+    "name": "QWEN3 8B",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemma-3-27b-it",
+    "name": "Gemma 3 27B IT",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-4-mini-2026-03-17",
+    "name": "GPT 5.4 MINI 2026 03 17",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "o3-2025-04-16",
+    "name": "O3 2025 04 16",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-1-2025-11-13",
+    "name": "GPT 5.1 2025 11 13",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen-3-6-plus-2026-04-02",
+    "name": "Qwen 3.6 Plus (2026-04-02)",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "o4-mini-2025-04-16",
+    "name": "O4 MINI 2025 04 16",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen-3-6-flash-2026-04-16",
+    "name": "Qwen 3.6 Flash (2026-04-16)",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-7-flash",
+    "name": "Qwen3.7 Flash",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-4-nano-2026-03-17",
+    "name": "GPT 5.4 NANO 2026 03 17",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-mini-2025-08-07",
+    "name": "GPT 5 MINI 2025 08 07",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemma-4-31b-it",
+    "name": "Gemma 4 31B IT",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemma-4-26b-a4b-it",
+    "name": "Gemma 4 26B A4b IT",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-6-no-thinking",
+    "name": "Claude Opus 4.6 (no thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-5-no-thinking",
+    "name": "Claude Sonnet 5 (no thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-6-no-thinking",
+    "name": "Claude Sonnet 4.6 (no thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-7-no-thinking",
+    "name": "Claude Opus 4.7 (no thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "magistral-small-2506",
+    "name": "Magistral Small 2506",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-5-instant",
+    "name": "GPT-5.5 Instant",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "o1-2024-12-17",
+    "name": "O1 2024 12 17",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-2025-08-07",
+    "name": "GPT 5 2025 08 07",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "o3-mini-2025-01-31",
+    "name": "O3 MINI 2025 01 31",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-4-2026-03-05",
+    "name": "GPT 5.4 2026 03 05",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-nano-2025-08-07",
+    "name": "GPT 5 NANO 2025 08 07",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-2-2025-12-11",
+    "name": "GPT 5.2 2025 12 11",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "grok-4-20-0309-reasoning",
+    "name": "Grok 4.20 0309 Reasoning",
+    "vendor": "xAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-5-pro-pre-release",
+    "name": "GPT 5.5 PRO PRE Release",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-5-pre-release",
+    "name": "GPT 5.5 PRE Release",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-4-pro-2026-03-05",
+    "name": "GPT 5.4 PRO 2026 03 05",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-6-32k-thinking",
+    "name": "Claude Sonnet 4.6 (32k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-6-32k-thinking",
+    "name": "Claude Opus 4.6 (32k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-6-64k-thinking",
+    "name": "Claude Opus 4.6 (64k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kimi-k2-5-fireworks",
+    "name": "Kimi K2.5 (Fireworks)",
+    "vendor": "Moonshot AI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-235b-a22b-thinking-2507",
+    "name": "QWEN3 235B A22b Thinking 2507",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-5-16k-thinking",
+    "name": "Claude Opus 4.5 (16k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-5-32k-thinking",
+    "name": "Claude Opus 4.5 (32k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-5-no-thinking",
+    "name": "Claude Opus 4.5 (no thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-3-pro-preview",
+    "name": "Gemini 3 Pro Preview",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kimi-k2-thinking-turbo",
+    "name": "Kimi K2 Thinking Turbo",
+    "vendor": "Moonshot AI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-5-16k-thinking",
+    "name": "Claude Sonnet 4.5 (16k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-5-59k-thinking",
+    "name": "Claude Sonnet 4.5 (59k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4-mar-2023",
+    "name": "GPT-4 (Mar 2023)",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-haiku-4-5-20251001-32k",
+    "name": "Claude Haiku 4 5 20251001 32K",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-5-32k-thinking",
+    "name": "Claude Sonnet 4.5 (32k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-haiku-4-5-20251001",
+    "name": "Claude Haiku 4 5 20251001",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-max-instruct",
+    "name": "Qwen3-Max-Instruct",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-5-no-thinking",
+    "name": "Claude Sonnet 4.5 (no thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-1-20250805-27k",
+    "name": "Claude OPUS 4 1 20250805 27K",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-1-20250805-16k",
+    "name": "Claude OPUS 4 1 20250805 16K",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-1-20250805",
+    "name": "Claude OPUS 4 1 20250805",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-pro-preview-jun-2025",
+    "name": "Gemini 2.5 Pro Preview (Jun 2025)",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-235b-a22b",
+    "name": "QWEN3 235B A22b",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "deepseek-r1-may-2025",
+    "name": "DeepSeek-R1 (May 2025)",
+    "vendor": "DeepSeek",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-3-7-sonnet-64k-thinking",
+    "name": "Claude 3.7 Sonnet (64k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "grok-3-mini-beta",
+    "name": "Grok 3 MINI BETA",
+    "vendor": "xAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-20250514-59k",
+    "name": "Claude Sonnet 4 20250514 59K",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-20250514-32k",
+    "name": "Claude Sonnet 4 20250514 32K",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-20250514-16k",
+    "name": "Claude Sonnet 4 20250514 16K",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-20250514",
+    "name": "Claude Sonnet 4 20250514",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-medium-2505",
+    "name": "Mistral Medium 2505",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwq-plus",
+    "name": "QwQ PLUS",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "llama-4-scout-17b-16e-instruct",
+    "name": "Llama 4 Scout 17B 16E Instruct",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "llama-4-maverick-fp8",
+    "name": "Llama 4 Maverick (FP8)",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen-turbo-2024-11-01",
+    "name": "Qwen Turbo 2024 11 01",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen-plus-2025-01-25",
+    "name": "Qwen PLUS 2025 01 25",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen-max-2025-01-25",
+    "name": "Qwen MAX 2025 01 25",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "deepseek-v3-mar-2025",
+    "name": "DeepSeek-V3 (Mar 2025)",
+    "vendor": "DeepSeek",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-pro-exp-mar-2025",
+    "name": "Gemini 2.5 Pro Exp (Mar 2025)",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-small-2503",
+    "name": "Mistral Small 2503",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-3-5-haiku-oct-2024",
+    "name": "Claude 3.5 Haiku (Oct 2024)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-1-5-flash-8b-001",
+    "name": "Gemini 1.5 Flash 8B 001",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "deepseek-r1-distill-qwen-14b",
+    "name": "DeepSeek R1 Distill Qwen 14B",
+    "vendor": "DeepSeek",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-3-7-sonnet-32k-thinking",
+    "name": "Claude 3.7 Sonnet (32k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "deepseek-r1-distill-llama-70b",
+    "name": "DeepSeek R1 Distill Llama 70B",
+    "vendor": "DeepSeek",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4-5-preview-feb-2025",
+    "name": "GPT-4.5 Preview (Feb 2025)",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4-turbo-2024-04-09",
+    "name": "GPT 4 Turbo 2024 04 09",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-3-7-sonnet-16k-thinking",
+    "name": "Claude 3.7 Sonnet (16k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-large-2411",
+    "name": "Mistral Large 2411",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-3-7-sonnet-20250219",
+    "name": "Claude 3 7 Sonnet 20250219",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "o1-mini-2024-09-12",
+    "name": "O1 MINI 2024 09 12",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-0-pro-exp-feb-2025",
+    "name": "Gemini 2.0 Pro Exp (Feb 2025)",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-0-flash-thinking-exp",
+    "name": "Gemini 2.0 Flash Thinking Exp",
+    "vendor": "Google DeepMind,Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-0-flash-feb-2025",
+    "name": "Gemini 2.0 Flash (Feb 2025)",
+    "vendor": "Google DeepMind,Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4o-nov-2024",
+    "name": "GPT-4o (Nov 2024)",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "phi-4",
+    "name": "Phi 4",
+    "vendor": "Microsoft Research",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "phi-3-medium-128k-instruct",
+    "name": "Phi 3 Medium 128K Instruct",
+    "vendor": "Microsoft",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-small-2501",
+    "name": "Mistral Small 2501",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen2-5-32b-instruct",
+    "name": "Qwen2.5 32B Instruct",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-1-5-flash-may-2024",
+    "name": "Gemini 1.5 Flash (May 2024)",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-2-0",
+    "name": "Claude 2.0",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-3-opus-20240229",
+    "name": "Claude 3 OPUS 20240229",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4o-aug-2024",
+    "name": "GPT-4o (Aug 2024)",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "o1-preview",
+    "name": "o1-preview",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-3-sonnet-20240229",
+    "name": "Claude 3 Sonnet 20240229",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-3-5-sonnet-oct-2024",
+    "name": "Claude 3.5 Sonnet (Oct 2024)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4-turbo-preview-january-2024",
+    "name": "GPT-4 Turbo Preview (January 2024)",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-2-1",
+    "name": "Claude 2.1",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemma-2-27b-it",
+    "name": "Gemma 2 27B IT",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-3-haiku-20240307",
+    "name": "Claude 3 Haiku 20240307",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-3-5-sonnet-jun-2024",
+    "name": "Claude 3.5 Sonnet (Jun 2024)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4o-may-2024",
+    "name": "GPT-4o (May 2024)",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4-jun-2023",
+    "name": "GPT-4 (Jun 2023)",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemma-2-9b-it",
+    "name": "Gemma 2 9B IT",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-3-5-turbo-nov-2023",
+    "name": "GPT-3.5 Turbo (Nov 2023)",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-1-5-pro-001",
+    "name": "Gemini 1.5 PRO 001",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4-turbo-preview-nov-2023",
+    "name": "GPT-4 Turbo Preview (Nov 2023)",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4o-mini-2024-07-18",
+    "name": "GPT 4O MINI 2024 07 18",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-3-5-turbo-jan-2024",
+    "name": "GPT-3.5 Turbo (Jan 2024)",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "llama-3-1-70b-instruct",
+    "name": "Llama 3.1 70B Instruct",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "llama-3-1-405b-instruct",
+    "name": "Llama 3.1 405B Instruct",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "yi-1-5-34b-chat",
+    "name": "Yi 1.5 34B CHAT",
+    "vendor": "01.AI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "yi-34b-chat",
+    "name": "Yi 34B CHAT",
+    "vendor": "01.AI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "grok-2-1212",
+    "name": "Grok 2 1212",
+    "vendor": "xAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen2-72b-instruct",
+    "name": "QWEN2 72B Instruct",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen1-5-72b-chat",
+    "name": "Qwen1.5 72B CHAT",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen1-5-32b-chat",
+    "name": "Qwen1.5 32B CHAT",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "hermes-2-theta-llama-3-70b",
+    "name": "Hermes 2 Theta Llama 3 70B",
+    "vendor": "Nous Research,Arcee AI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "llama-2-70b-chat-hf",
+    "name": "Llama 2 70B CHAT HF",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "meta-llama-3-70b-instruct",
+    "name": "META Llama 3 70B Instruct",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "meta-llama-3-8b-instruct",
+    "name": "META Llama 3 8B Instruct",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-7b-instruct-v0-3",
+    "name": "Mistral 7B Instruct V0.3",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "deepseek-llm-67b-chat",
+    "name": "DeepSeek LLM 67B CHAT",
+    "vendor": "DeepSeek",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mixtral-8x7b-instruct-v0-1",
+    "name": "Mixtral 8x7b Instruct V0.1",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen2-5-72b-instruct",
+    "name": "Qwen2.5 72B Instruct",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "wizardlm-2-8x22b",
+    "name": "Wizardlm 2 8x22b",
+    "vendor": "Microsoft",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dbrx-instruct",
+    "name": "DBRX Instruct",
+    "vendor": "Databricks",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-1-0-pro-001",
+    "name": "Gemini 1.0 PRO 001",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "ministral-3b-2410",
+    "name": "Ministral 3B 2410",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-large-2402",
+    "name": "Mistral Large 2402",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "open-mixtral-8x22b",
+    "name": "OPEN Mixtral 8x22b",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "ministral-8b-2410",
+    "name": "Ministral 8B 2410",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-large-2407",
+    "name": "Mistral Large 2407",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "open-mixtral-8x7b",
+    "name": "OPEN Mixtral 8x7b",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "open-mistral-7b",
+    "name": "OPEN Mistral 7B",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "open-mistral-nemo-2407",
+    "name": "OPEN Mistral NEMO 2407",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "llama-3-2-90b-vision-instruct",
+    "name": "Llama 3.2 90B Vision Instruct",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "llama-3-1-tulu-3-70b-dpo",
+    "name": "Llama 3.1 TULU 3 70B DPO",
+    "vendor": "Allen Institute for AI,University of Washington",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "eurus-2-7b-prime",
+    "name": "Eurus 2 7B Prime",
+    "vendor": "Tsinghua University,University of Illinois Urbana-Champaign (UIUC),Shanghai AI Lab,Peking University,Shanghai Jiao Tong University,CUHK Shenzhen Research Institute",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "llama-3-3-70b-instruct",
+    "name": "Llama 3.3 70B Instruct",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "grok-4-0709",
+    "name": "Grok 4 0709",
+    "vendor": "xAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://github.com/idavidrein/gpqa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "unknown-model",
+    "name": "",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "openhands-lm-32b-v0-1",
+    "name": "Openhands LM 32B V0.1",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "o3-pro-2025-06-10",
+    "name": "O3 PRO 2025 06 10",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-flash-preview-05-20-23k",
+    "name": "Gemini 2.5 Flash Preview 05 20 23K",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-flash-preview-05-20",
+    "name": "Gemini 2.5 Flash Preview 05 20",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chatgpt-4o-03-27-2025",
+    "name": "Chatgpt 4O 03 27 2025",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-flash-preview-apr-2025",
+    "name": "Gemini 2.5 Flash Preview (Apr 2025)",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen2-5-coder-32b-instruct",
+    "name": "Qwen2.5 Coder 32B Instruct",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-exp-1206",
+    "name": "Gemini EXP 1206",
+    "vendor": "Google DeepMind,Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "c4ai-command-a-03-2025",
+    "name": "C4ai Command A 03 2025",
+    "vendor": "Cohere",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-0-flash-exp",
+    "name": "Gemini 2.0 Flash EXP",
+    "vendor": "Google DeepMind,Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "deepseek-v2-5",
+    "name": "DeepSeek V2.5",
+    "vendor": "DeepSeek",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "chatgpt-4o-01-29-2025",
+    "name": "Chatgpt 4O 01 29 2025",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "codestral-2501",
+    "name": "Codestral 2501",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-pro-preview-mar-2025",
+    "name": "Gemini 2.5 Pro Preview (Mar 2025)",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-235b-a22b-instruct-2507",
+    "name": "QWEN3 235B A22b Instruct 2507",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kimi-k2-0905-novita",
+    "name": "Kimi K2 0905 (Novita)",
+    "vendor": "Moonshot AI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://aider.chat/docs/leaderboards/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-5-4b",
+    "name": "Qwen3.5 4B",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/otis-mock-aime-2024-2025"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-6-astra-pro-max",
+    "name": "GPT-6 Astra (pro, max)",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/chess-puzzles"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-pro-2025-10-06",
+    "name": "GPT 5 PRO 2025 10 06",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/chess-puzzles"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-6-sol-pro-max",
+    "name": "GPT-5.6 Sol (pro, max)",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/chess-puzzles"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-haiku-4-5-59k-thinking",
+    "name": "Claude Haiku 4.5 (59k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/chess-puzzles"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-5-59k-thinking",
+    "name": "Claude Opus 4.5 (59k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/chess-puzzles"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-5-48k-thinking",
+    "name": "Claude Sonnet 4.5 (48k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/mystery-game-puzzles"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-1-20250805-24k",
+    "name": "Claude OPUS 4 1 20250805 24K",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/mystery-game-puzzles"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-5-48k-thinking",
+    "name": "Claude Opus 4.5 (48k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/mystery-game-puzzles"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-1-20250805-32k",
+    "name": "Claude OPUS 4 1 20250805 32K",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/frontiermath-tiers-1-3-v2"
+        }
+      ]
+    }
+  },
+  {
+    "id": "ai-co-mathematician",
+    "name": "AI co-mathematician",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/frontiermath-tier-4-v2"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-3-deep-think",
+    "name": "Gemini 3 Deep Think",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-6-120k-thinking",
+    "name": "Claude Opus 4.6 (120k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-5-64k-thinking",
+    "name": "Claude Opus 4.5 (64k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-opus-4-5-8k-thinking",
+    "name": "Claude Opus 4.5 (8k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "deepseek-v3-2-thinking-novita",
+    "name": "DeepSeek-V3.2 (Thinking; Novita)",
+    "vendor": "DeepSeek",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "grok-4-fast",
+    "name": "Grok 4 FAST",
+    "vendor": "xAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-5-8k-thinking",
+    "name": "Claude Sonnet 4.5 (8k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-pro-16k",
+    "name": "Gemini 2.5 PRO 16K",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tiny-recursion-model",
+    "name": "TINY Recursion Model",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-haiku-4-5-20251001-16k",
+    "name": "Claude Haiku 4 5 20251001 16K",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-pro-32k",
+    "name": "Gemini 2.5 PRO 32K",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-flash-preview-05-20-16k",
+    "name": "Gemini 2.5 Flash Preview 05 20 16K",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-flash-preview-04-17-24k-thinking",
+    "name": "Gemini 2.5 Flash Preview 04 17 (24k thinking)",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-5-1k-thinking",
+    "name": "Claude Sonnet 4.5 (1k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-pro-8k",
+    "name": "Gemini 2.5 PRO 8K",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-20250514-8k",
+    "name": "Claude Sonnet 4 20250514 8K",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-20250514-1k",
+    "name": "Claude Sonnet 4 20250514 1K",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "codex-mini-2025-05-16",
+    "name": "Codex MINI 2025 05 16",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-flash-preview-05-20-8k",
+    "name": "Gemini 2.5 Flash Preview 05 20 8K",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-haiku-4-5-20251001-8k",
+    "name": "Claude Haiku 4 5 20251001 8K",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "o1-pro",
+    "name": "o1 Pro",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-3-7-sonnet-8k-thinking",
+    "name": "Claude 3.7 Sonnet (8k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-haiku-4-5-20251001-1k",
+    "name": "Claude Haiku 4 5 20251001 1K",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-flash-preview-05-20-1k",
+    "name": "Gemini 2.5 Flash Preview 05 20 1K",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-3-7-sonnet-1k-thinking",
+    "name": "Claude 3.7 Sonnet (1k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "magistral-medium-2506",
+    "name": "Magistral Medium 2506",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/arc-agi-1"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nova-2-0-pro-preview",
+    "name": "Nova 2.0 PRO Preview",
+    "vendor": "Amazon",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/scicode"
+        }
+      ]
+    }
+  },
+  {
+    "id": "step-3-7-flash",
+    "name": "Step 3.7 Flash",
+    "vendor": "StepFun",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/scicode"
+        }
+      ]
+    }
+  },
+  {
+    "id": "magistral-medium-1-2",
+    "name": "Magistral Medium 1.2",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/scicode"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-medium-2508",
+    "name": "Mistral Medium 2508",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/scicode"
+        }
+      ]
+    }
+  },
+  {
+    "id": "devstral-small-2",
+    "name": "Devstral Small 2",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/scicode"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-small-3-2",
+    "name": "Mistral Small 3.2",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/scicode"
+        }
+      ]
+    }
+  },
+  {
+    "id": "granite-4-1-30b",
+    "name": "Granite 4.1 30B",
+    "vendor": "IBM",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/scicode"
+        }
+      ]
+    }
+  },
+  {
+    "id": "deepseek-v3-1-terminus",
+    "name": "DeepSeek-V3.1-Terminus",
+    "vendor": "DeepSeek",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/scicode"
+        }
+      ]
+    }
+  },
+  {
+    "id": "muse-glimmer",
+    "name": "Muse Glimmer",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/scicode"
+        }
+      ]
+    }
+  },
+  {
+    "id": "llama-4-maverick-17b-128e-instruct",
+    "name": "Llama 4 Maverick 17B 128E Instruct",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/critpt"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemma-3-270m-it",
+    "name": "Gemma 3 270M IT",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/critpt"
+        }
+      ]
+    }
+  },
+  {
+    "id": "amazon-nova-micro-v1-0",
+    "name": "Amazon.nova Micro V1:0",
+    "vendor": "Amazon",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/critpt"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-5-2b",
+    "name": "Qwen3.5 2B",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/critpt"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-5-0-8b",
+    "name": "Qwen3.5 0.8b",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/critpt"
+        }
+      ]
+    }
+  },
+  {
+    "id": "llama-3-2-11b-vision-instruct",
+    "name": "Llama 3.2 11B Vision Instruct",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/critpt"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nvidia-nemotron-nano-9b-v2",
+    "name": "Nvidia Nemotron NANO 9B V2",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/critpt"
+        }
+      ]
+    }
+  },
+  {
+    "id": "reka-flash-3",
+    "name": "Reka Flash 3",
+    "vendor": "Reka AI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/critpt"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-codex",
+    "name": "GPT-5-codex",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/weirdml"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-flash-preview-09-2025-16k",
+    "name": "Gemini 2.5 Flash Preview 09 2025 16K",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/weirdml"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-coder-480b-a35b-instruct",
+    "name": "QWEN3 Coder 480B A35b Instruct",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/weirdml"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-flash-preview-04-17-16k-thinking",
+    "name": "Gemini 2.5 Flash Preview 04 17 (16k thinking)",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/weirdml"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-chat",
+    "name": "GPT 5 CHAT",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/weirdml"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kimi-k2-0711-preview",
+    "name": "Kimi K2 0711 Preview",
+    "vendor": "Moonshot AI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/weirdml"
+        }
+      ]
+    }
+  },
+  {
+    "id": "deepseek-v3-1",
+    "name": "DeepSeek V3.1",
+    "vendor": "DeepSeek",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/weirdml"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kimi-k2-instruct-0905",
+    "name": "Kimi K2 Instruct 0905",
+    "vendor": "Moonshot AI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/weirdml"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-flash-lite-preview-06-17-16k",
+    "name": "Gemini 2.5 Flash LITE Preview 06 17 16K",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/weirdml"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-5-flash-lite-preview-06-17-default-thinking-length",
+    "name": "gemini-2.5-flash-lite-preview-06-17 (Default thinking length)",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/weirdml"
+        }
+      ]
+    }
+  },
+  {
+    "id": "grok-code-fast-1",
+    "name": "Grok CODE FAST 1",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/weirdml"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mixtral-8x22b-instruct-v0-1",
+    "name": "Mixtral 8x22b Instruct V0.1",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/weirdml"
+        }
+      ]
+    }
+  },
+  {
+    "id": "grok-4-1",
+    "name": "Grok 4 1",
+    "vendor": "xAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/webdev-arena"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen-plus-2025-04-28",
+    "name": "Qwen PLUS 2025 04 28",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/lmca"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-4-turbo",
+    "name": "GPT 4 Turbo",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/lmca"
+        }
+      ]
+    }
+  },
+  {
+    "id": "c4ai-command-r-plus-08-2024",
+    "name": "C4ai Command R PLUS 08 2024",
+    "vendor": "Cohere,Cohere Labs (formerly Cohere for AI)",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/lmca"
+        }
+      ]
+    }
+  },
+  {
+    "id": "c4ai-command-r-08-2024",
+    "name": "C4ai Command R 08 2024",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/lmca"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemma-2-27b",
+    "name": "Gemma 2 27B",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/lmca"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-medium-2312",
+    "name": "Mistral Medium 2312",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/dtbench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-small-2402",
+    "name": "Mistral Small 2402",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/dtbench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gemini-2-0-flash-lite",
+    "name": "Gemini 2.0 Flash LITE",
+    "vendor": "Google",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/dtbench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-small-2409",
+    "name": "Mistral Small 2409",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/dtbench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mistral-nemo-instruct-2407",
+    "name": "Mistral NEMO Instruct 2407",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/dtbench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-instant-1-2",
+    "name": "Claude Instant 1.2",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/dtbench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "llama-2-13b-chat",
+    "name": "Llama 2 13B CHAT",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/dtbench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "llama-2-70b-chat",
+    "name": "Llama 2 70B CHAT",
+    "vendor": "Meta",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/dtbench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-6-sol-pro-xhigh",
+    "name": "GPT-5.6 Sol (pro, xhigh)",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/simplebench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gpt-5-6-sol-pro-unknown-thinking",
+    "name": "GPT-5.6 Sol (pro, unknown thinking)",
+    "vendor": "OpenAI",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/simplebench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-5-12k-thinking",
+    "name": "Claude Sonnet 4.5 (12k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/simplebench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "glm-4-7-novita",
+    "name": "GLM-4.7 (Novita)",
+    "vendor": "Z.ai (Zhipu AI)",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/simplebench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-3-7-sonnet-12k-thinking",
+    "name": "Claude 3.7 Sonnet (12k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/simplebench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-20250514-12k",
+    "name": "Claude Sonnet 4 20250514 12K",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/simplebench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "glm-4-5-air",
+    "name": "GLM 4.5 AIR",
+    "vendor": "Z.ai (Zhipu AI),Tsinghua University",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/gso-bench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-5-2k-thinking",
+    "name": "Claude Sonnet 4.5 (2k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/deepresearchbench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-sonnet-4-20250514-2k",
+    "name": "Claude Sonnet 4 20250514 2K",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/deepresearchbench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "claude-3-7-sonnet-2k-thinking",
+    "name": "Claude 3.7 Sonnet (2k thinking)",
+    "vendor": "Anthropic",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/deepresearchbench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-coder-plus",
+    "name": "QWEN3 Coder PLUS",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/ale-bench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "amazon-nova-lite-v1-0",
+    "name": "Amazon.nova LITE V1:0",
+    "vendor": "Amazon",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/ale-bench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "codestral-2508",
+    "name": "Codestral 2508",
+    "vendor": "Mistral",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://epoch.ai/benchmarks/ale-bench"
+        }
+      ]
+    }
+  },
+  {
+    "id": "opus-5-5",
+    "name": "Opus 5.5",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://www.tbench.ai/leaderboard/terminal-bench/4.0"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sonnet-5-5",
+    "name": "Sonnet 5.5",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://www.tbench.ai/leaderboard/terminal-bench/4.0"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fable-5-1",
+    "name": "Fable 5.1",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://www.tbench.ai/leaderboard/terminal-bench/4.0"
+        }
+      ]
+    }
+  },
+  {
+    "id": "opus-5",
+    "name": "Opus 5",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://www.tbench.ai/leaderboard/terminal-bench/4.0"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fable-5",
+    "name": "Fable 5",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://www.tbench.ai/leaderboard/terminal-bench/4.0"
+        }
+      ]
+    }
+  },
+  {
+    "id": "opus-4-8",
+    "name": "Opus 4.8",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://www.tbench.ai/leaderboard/terminal-bench/4.0"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sonnet-5",
+    "name": "Sonnet 5",
+    "vendor": "",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://www.tbench.ai/leaderboard/terminal-bench/4.0"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-6-max",
+    "name": "Qwen3.6 max",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://www.benchleader.com"
+        }
+      ]
+    }
+  },
+  {
+    "id": "qwen3-7",
+    "name": "Qwen3.7",
+    "vendor": "Alibaba",
+    "notes": "榜单评测收录模型（stub，待补数据）",
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-11-08",
+      "verifiedFields": [],
+      "sources": [
+        {
+          "label": "benchmark leaderboards",
+          "url": "https://www.benchleader.com"
+        }
+      ]
+    }
   }
 ]

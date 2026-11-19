@@ -7,6 +7,7 @@
 - `/agent-tools.html`：AI IDE、vibe coding CLI、云端 coding agent、IDE 插件的接入方式、能力、价格与核验状态宽表。
 - `/model-tools.html`：模型在各 Agent 工具中的接入方式、价格消耗口径、能力适配与评价的稀疏关联表。
 - `/model-hardware.html`：可自托管模型在各加速硬件上的部署方式、量化精度、显存需求与适配评分的稀疏关联表。
+- `/subscriptions.html`：国内 AI 与算力套餐的价格、额度和模型覆盖对比；公开 API 等值的采集和展示计划见 [TODO.md](TODO.md)。
 
 ## 功能
 

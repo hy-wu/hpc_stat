@@ -9,5 +9,6 @@ dist/
 .astro/
 public/data/
 .qoder/
+.qoder.history
 .DS_Store
 .opencode*
