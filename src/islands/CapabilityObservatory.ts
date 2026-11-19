@@ -2,7 +2,7 @@ type Result = {model:string;suite:string;metric:string;value:number;unit:string;
 type Snapshot = {models:string[];results:Result[];relative:{old_model:string;new_model:string;metric:string;delta:number;unit:string;source:string}[];feedback:{model:string;category:string;sentiment:string;summary:string;source:string}[];sources:{id:string;title:string;url:string;grade:string;type:string;limitations:string}[]};
 
 void (async () => {
-  const base = String(import.meta.env.BASE_URL || "/").replace(/\\/?$/, "/");
+  const base = String(import.meta.env.BASE_URL || "/").replace(/\/+$/, "") + "/";
   const response = await fetch(base + "data/capability-observatory.json");
   if (!response.ok) throw new Error("Unable to load capability data (HTTP " + response.status + ")");
   const snapshot = (await response.json()) as Snapshot;
